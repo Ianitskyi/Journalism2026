@@ -9,70 +9,124 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="wrap">
 
-  <div class="eyebrow">Вступ 2026 · Журналістика</div>
-  <h1>Топ ЗВО України за середнім конкурсним балом</h1>
-
-  <div class="status-row">
-    <span class="dot"></span>
-    <span>Станом на</span>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">Ж</span>
+      <span class="brand-text">Журфак<span class="accent-dot">.</span>Рейтинг</span>
+    </a>
+    <a class="topbar-link" href="https://mylovanov.media" target="_blank" rel="noopener">за мотивами mylovanov.media ↗</a>
   </div>
-  <div class="asof" id="asof-date">—</div>
+</header>
 
-  <p class="source-line">
-    Джерело: Єдина державна електронна база з питань освіти (<strong>ЄДЕБО</strong>) —
-    <strong id="source-count">—</strong> заяв на <span id="degree-word">бакалаврат</span> зі спеціальності «Журналістика».
-  </p>
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">Вступна кампанія 2026 · спеціальність 061 «Журналістика»</div>
+    <h1>Хто набирає найбільше балів на журналістику</h1>
+    <p class="lede">
+      Рейтинг закладів вищої освіти України за середнім конкурсним балом вступників —
+      окремо бакалаврат, окремо магістратура. Та сама методика підрахунку, що й у
+      mylovanov.media, звужена до однієї спеціальності.
+    </p>
+    <div class="hero-status">
+      <span class="dot"></span>
+      <span>Оновлено</span>
+      <strong id="asof-date">—</strong>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
 
   <div class="test-banner">
-    ⚠️ Це демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>,
-    а не реальна вибірка ЄДЕБО. Список університетів реальний. Деталі підключення живих даних — у README.
+    ⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>,
+    а не реальна вибірка ЄДЕБО. Список університетів — справжній. Деталі підключення живих даних — у README.
   </div>
 
-  <div class="tabs">
-    <button class="pill active" data-degree="bachelor">Бакалавр</button>
-    <button class="pill" data-degree="master">Магістр</button>
-  </div>
+  <div class="layout">
+    <div class="layout-main">
 
-  <div class="date-card">
-    <span class="date-icon">🗓️</span>
-    <span class="date-label">Станом на день</span>
-    <input type="range" id="date-slider" step="1" />
-    <span class="date-current" id="date-current">—</span>
-  </div>
-
-  <p class="caption" id="caption"></p>
-
-  <div class="card">
-    <div class="card-head">
-      <div class="card-icon">📊</div>
-      <div>
-        <div class="card-title">Середній конкурсний бал</div>
-        <div class="card-subtitle" id="card-subtitle"></div>
+      <div class="stats-row" id="stats-row">
+        <div class="stat-tile" id="stat-bachelor">
+          <div class="stat-label">Заяв · бакалаврат</div>
+          <div class="stat-value" id="stat-apps-bachelor">—</div>
+        </div>
+        <div class="stat-tile" id="stat-master">
+          <div class="stat-label">Заяв · магістратура</div>
+          <div class="stat-value" id="stat-apps-master">—</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-label">ЗВО в рейтингу</div>
+          <div class="stat-value" id="stat-count">—</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-label">Найвищий бал</div>
+          <div class="stat-value accent" id="stat-topscore">—</div>
+        </div>
       </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>ВНЗ</th>
-          <th class="num">Бал</th>
-          <th class="num">Заяв</th>
-        </tr>
-      </thead>
-      <tbody id="rank-body"></tbody>
-    </table>
-    <button class="show-all" id="show-all"></button>
-  </div>
 
-  <div class="info-box">
-    <div class="info-icon">i</div>
-    <p>
-      <strong>КБ (конкурсний бал)</strong> — зважена оцінка для вступу на спеціальність «Журналістика» в Україні.
-      Поєднує результати НМТ (українська мова, історія України або математика, іноземна мова) з коефіцієнтами МОН
-      України та галузевими пріоритетами закладу освіти.
-    </p>
+      <div class="controls">
+        <div class="tabs" id="tabs" role="tablist">
+          <span class="tabs-indicator" id="tabs-indicator"></span>
+          <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true">Бакалавр</button>
+          <button class="pill" data-degree="master" role="tab" aria-selected="false">Магістр</button>
+        </div>
+        <div class="date-chips" id="date-chips"></div>
+      </div>
+
+      <p class="caption" id="caption"></p>
+
+      <div class="podium" id="podium"></div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">📊</div>
+          <div>
+            <div class="card-title">Повний рейтинг</div>
+            <div class="card-subtitle" id="card-subtitle"></div>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>ВНЗ</th>
+              <th class="num">Δ</th>
+              <th class="num">Бал</th>
+              <th class="num">Заяв</th>
+            </tr>
+          </thead>
+          <tbody id="rank-body"></tbody>
+        </table>
+        <button class="show-all" id="show-all"></button>
+      </div>
+
+    </div>
+
+    <aside class="layout-side">
+      <div class="side-card info-box">
+        <div class="info-icon">i</div>
+        <p>
+          <strong>КБ (конкурсний бал)</strong> — зважена оцінка для вступу на спеціальність «Журналістика» в Україні.
+          Поєднує результати НМТ (українська мова, історія України або математика, іноземна мова) з коефіцієнтами МОН
+          України та галузевими пріоритетами закладу освіти.
+        </p>
+      </div>
+
+      <div class="side-card legend-box">
+        <div class="legend-title">Як читати Δ</div>
+        <div class="legend-row"><span class="delta up">▲ 2</span> піднявся на 2 місця за добу</div>
+        <div class="legend-row"><span class="delta down">▼ 1</span> опустився на 1 місце</div>
+        <div class="legend-row"><span class="delta new">NEW</span> вперше в рейтингу цього дня</div>
+      </div>
+
+      <div class="side-card source-box">
+        <div class="legend-title">Джерело</div>
+        <p>Єдина державна електронна база з питань освіти (<strong>ЄДЕБО</strong>), рейтингові списки вступників по конкурсних пропозиціях спеціальності «Журналістика».</p>
+        <a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua ↗</a>
+      </div>
+    </aside>
   </div>
 
   <footer class="site-footer">
@@ -80,7 +134,8 @@
     Наразі показано тестові дані — дашборд ще не підключено до живого фіда.
   </footer>
 
-</div>
+</main>
+
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
 </body>

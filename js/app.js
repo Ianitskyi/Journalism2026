@@ -21,44 +21,124 @@ function fmtDateFull(dateStr) {
   return d.toLocaleDateString("uk-UA", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" });
 }
 
+function fmtDateShort(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  return d.toLocaleDateString("uk-UA", { day: "2-digit", month: "2-digit", timeZone: "UTC" });
+}
+
 function fmtTime(isoStr) {
   const d = new Date(isoStr);
   return d.toLocaleTimeString("uk-UA", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Europe/Kyiv" });
 }
 
+function snapshotAt(index) {
+  return DB.snapshots[DB.dates[index]];
+}
+
 function currentSnapshot() {
-  return DB.snapshots[DB.dates[state.dateIndex]];
+  return snapshotAt(state.dateIndex);
+}
+
+function prevRankMap() {
+  if (state.dateIndex === 0) return null;
+  const prev = snapshotAt(state.dateIndex - 1)[state.degree];
+  const map = new Map();
+  for (const r of prev) map.set(r.id, r.rank);
+  return map;
+}
+
+function deltaMarkup(row, prevMap) {
+  if (!prevMap) return `<span class="delta flat">—</span>`;
+  const prevRank = prevMap.get(row.id);
+  if (prevRank == null) return `<span class="delta new">NEW</span>`;
+  const diff = prevRank - row.rank;
+  if (diff > 0) return `<span class="delta up">▲ ${diff}</span>`;
+  if (diff < 0) return `<span class="delta down">▼ ${Math.abs(diff)}</span>`;
+  return `<span class="delta flat">—</span>`;
+}
+
+function renderStats(snap, rows) {
+  document.getElementById("stat-apps-bachelor").textContent = UAH_NUM.format(snap.totalApplications.bachelor);
+  document.getElementById("stat-apps-master").textContent = UAH_NUM.format(snap.totalApplications.master);
+  document.getElementById("stat-count").textContent = rows.length;
+  document.getElementById("stat-topscore").textContent = rows.length ? rows[0].score.toFixed(1) : "—";
+
+  document.getElementById("stat-bachelor").classList.toggle("dim", state.degree !== "bachelor");
+  document.getElementById("stat-master").classList.toggle("dim", state.degree !== "master");
+}
+
+function renderDateChips() {
+  const wrap = document.getElementById("date-chips");
+  wrap.innerHTML = "";
+  DB.dates.forEach((date, i) => {
+    const btn = document.createElement("button");
+    btn.className = "date-chip" + (i === state.dateIndex ? " active" : "");
+    btn.textContent = i === DB.dates.length - 1 ? "Сьогодні" : fmtDateShort(date);
+    btn.addEventListener("click", () => {
+      state.dateIndex = i;
+      render();
+    });
+    wrap.appendChild(btn);
+  });
+  const active = wrap.querySelector(".date-chip.active");
+  if (active) {
+    const left = active.offsetLeft;
+    const right = left + active.offsetWidth;
+    if (left < wrap.scrollLeft) {
+      wrap.scrollLeft = left - 8;
+    } else if (right > wrap.scrollLeft + wrap.clientWidth) {
+      wrap.scrollLeft = right - wrap.clientWidth + 8;
+    }
+  }
+}
+
+function renderPodium(rows) {
+  const podium = document.getElementById("podium");
+  podium.innerHTML = "";
+  if (!rows.length) return;
+  const top3 = rows.slice(0, 3);
+  for (const r of top3) {
+    const card = document.createElement("div");
+    card.className = `podium-card rank-${r.rank}`;
+    card.innerHTML = `
+      <div class="podium-medal">${r.rank}</div>
+      <div class="podium-logo" style="background:hsl(${r.hue} 62% 46%)">${r.short.slice(0, 2).toUpperCase()}</div>
+      <div class="podium-name">${r.name}</div>
+      <div class="podium-score">${r.score.toFixed(1)}</div>
+      <div class="podium-apps">${UAH_NUM.format(r.applications)} заяв</div>
+    `;
+    podium.appendChild(card);
+  }
 }
 
 function render() {
   const snap = currentSnapshot();
   const rows = snap[state.degree];
   const meta = DEGREE_META[state.degree];
+  const prevMap = prevRankMap();
 
   document.getElementById("asof-date").textContent = `${fmtDateFull(snap.date)}, ${fmtTime(snap.asOf)}`;
-  document.getElementById("source-count").textContent =
-    UAH_NUM.format(snap.totalApplications[state.degree]);
-  document.getElementById("degree-word").textContent =
-    state.degree === "bachelor" ? "бакалаврат" : "магістратуру";
-
-  document.getElementById("date-current").textContent = fmtDateUA(snap.date);
-  document.getElementById("date-slider").value = state.dateIndex;
 
   document.getElementById("caption").textContent =
     `Станом на ${fmtDateUA(snap.date)}. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`;
 
   document.getElementById("card-subtitle").textContent = meta.label;
 
+  renderStats(snap, rows);
+  renderPodium(rows);
+
+  const rest = rows.slice(3);
   const tbody = document.getElementById("rank-body");
   tbody.innerHTML = "";
 
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="3"><div class="empty-state">Немає даних для цього дня.</div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state">Немає даних для цього дня.</div></td></tr>`;
+  } else if (!rest.length) {
+    tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state">Це весь рейтинг — топ-3 показано вище.</div></td></tr>`;
   } else {
-    const visible = state.expanded ? rows : rows.slice(0, 10);
+    const visible = state.expanded ? rest : rest.slice(0, 7);
     for (const r of visible) {
       const tr = document.createElement("tr");
-      if (r.rank === 1) tr.className = "top";
       tr.innerHTML = `
         <td><div class="rank">${r.rank}</div></td>
         <td>
@@ -67,6 +147,7 @@ function render() {
             <div class="univ-name">${r.name}</div>
           </div>
         </td>
+        <td class="num delta-cell">${deltaMarkup(r, prevMap)}</td>
         <td class="num"><div class="score">${r.score.toFixed(1)}</div></td>
         <td class="num"><div class="applications">${UAH_NUM.format(r.applications)}</div></td>
       `;
@@ -75,7 +156,7 @@ function render() {
   }
 
   const showAllBtn = document.getElementById("show-all");
-  if (rows.length > 10) {
+  if (rest.length > 7) {
     showAllBtn.style.display = "block";
     showAllBtn.textContent = state.expanded
       ? "Згорнути ↑"
@@ -83,27 +164,23 @@ function render() {
   } else {
     showAllBtn.style.display = "none";
   }
+
+  renderDateChips();
 }
 
 function initTabs() {
-  document.querySelectorAll("[data-degree]").forEach((btn) => {
+  const indicator = document.getElementById("tabs-indicator");
+  document.querySelectorAll("[data-degree]").forEach((btn, i) => {
     btn.addEventListener("click", () => {
       state.degree = btn.dataset.degree;
       state.expanded = false;
-      document.querySelectorAll("[data-degree]").forEach((b) => b.classList.toggle("active", b === btn));
+      document.querySelectorAll("[data-degree]").forEach((b, j) => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      indicator.style.transform = `translateX(${i * 100}%)`;
       render();
     });
-  });
-}
-
-function initSlider() {
-  const slider = document.getElementById("date-slider");
-  slider.min = 0;
-  slider.max = DB.dates.length - 1;
-  slider.value = state.dateIndex;
-  slider.addEventListener("input", (e) => {
-    state.dateIndex = Number(e.target.value);
-    render();
   });
 }
 
@@ -115,6 +192,5 @@ function initShowAll() {
 }
 
 initTabs();
-initSlider();
 initShowAll();
 render();
