@@ -6,6 +6,7 @@
     "diagnose-edbo": "node scripts/diagnose-edbo.mjs",
     "diagnose-promedia": "node scripts/diagnose-promedia.mjs",
     "diagnose-edbo-history": "node scripts/diagnose-edbo-history.mjs",
+    "diagnose-edbo-history-search": "node scripts/diagnose-edbo-history-search.mjs",
     "diagnose-datagovua": "node scripts/diagnose-datagovua.mjs"
   },
   "devDependencies": {

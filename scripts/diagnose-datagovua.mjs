@@ -3,85 +3,80 @@
  * Перевірка, чи МОН/ЄДЕБО публікують рейтингові списки вступників як
  * відкритий датасет на data.gov.ua — щоб не залежати від Cloudflare-захисту
  * vstup.edbo.gov.ua (див. README). data.gov.ua зазвичай побудований на CKAN,
- * який має відкритий пошуковий API (/api/3/action/package_search) без
- * анти-бот захисту, тож спершу пробуємо його напряму, а якщо не спрацює —
- * падаємо назад на пошук по UI headless-браузером.
+ * який має відкритий пошуковий API (/api/3/action/package_search).
+ *
+ * Використовує нативний fetch з AbortSignal.timeout — попередня версія на
+ * Playwright context.request зависла на кілька хвилин без спрацювання
+ * власного timeout (ймовірно проблема мережі/DNS на рівні раннера), тож тут
+ * жорсткий контроль через AbortController, який точно перериває запит.
  */
 
-import { chromium } from "playwright";
 import { writeFile, mkdir } from "node:fs/promises";
 
 const OUT_DIR = new URL("../diagnostics-datagovua/", import.meta.url).pathname;
-const QUERIES = ["ЄДЕБО", "вступ", "конкурсний бал", "рейтинг вступників", "edbo", "інфоресурс"];
+const QUERIES = ["ЄДЕБО", "вступ рейтинг", "конкурсний бал"];
+const TIMEOUT_MS = 12_000;
 
 function log(line) {
   console.log(line);
 }
 
+async function fetchWithTimeout(url, ms) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(new Error(`hard timeout ${ms}ms`)), ms);
+  try {
+    const resp = await fetch(url, { signal: controller.signal });
+    const text = await resp.text();
+    return { status: resp.status, ok: resp.ok, text };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
-  const browser = await chromium.launch();
-  const context = await browser.newContext({ viewport: { width: 1400, height: 1000 } });
-
-  // ---------- 1) пробуємо CKAN API напряму ----------
-  log("=== Пробую CKAN package_search API напряму ===");
+  log("=== Пробую CKAN package_search API напряму (fetch + AbortSignal) ===");
   const apiResults = {};
+
   for (const q of QUERIES) {
     const apiUrl = `https://data.gov.ua/api/3/action/package_search?q=${encodeURIComponent(q)}&rows=15`;
+    log(`\n--- Запит "${q}" → ${apiUrl} ---`);
     try {
-      const resp = await context.request.get(apiUrl, { timeout: 20_000 });
-      const status = resp.status();
+      const { status, ok, text } = await fetchWithTimeout(apiUrl, TIMEOUT_MS);
       let body = null;
       try {
-        body = await resp.json();
+        body = JSON.parse(text);
       } catch {
-        body = await resp.text().catch(() => null);
+        body = text.slice(0, 500);
       }
-      apiResults[q] = { status, ok: resp.ok(), body };
-      log(`\n--- Запит "${q}" → ${apiUrl} (status ${status}) ---`);
-      if (resp.ok() && body?.result) {
+      apiResults[q] = { status, ok, body };
+      log(`status ${status}`);
+      if (ok && body?.result) {
         log(`count: ${body.result.count}`);
         for (const pkg of (body.result.results || []).slice(0, 10)) {
           log(`- [${pkg.name}] "${pkg.title}" — org: ${pkg.organization?.title || "?"} — resources: ${(pkg.resources || []).map((r) => r.format).join(",")}`);
         }
       } else {
-        log(JSON.stringify(body).slice(0, 500));
+        log(typeof body === "string" ? body : JSON.stringify(body).slice(0, 500));
       }
     } catch (err) {
       apiResults[q] = { error: err.message };
-      log(`Помилка запиту "${q}": ${err.message}`);
+      log(`Помилка/таймаут запиту "${q}": ${err.message}`);
     }
   }
+
   await writeFile(`${OUT_DIR}api-results.json`, JSON.stringify(apiResults, null, 2), "utf8");
 
-  // ---------- 2) fallback: пошук по UI ----------
-  log("\n=== Fallback: відкриваю data.gov.ua/uk та пробую пошук по UI ===");
-  const page = await context.newPage();
+  // Базова перевірка досяжності самого хоста (для діагностики, чи це
+  // проблема мережі раннера, чи специфічно CKAN API)
+  log("\n=== Перевірка досяжності https://data.gov.ua/ (простий GET) ===");
   try {
-    await page.goto(`https://data.gov.ua/uk/dataset?q=${encodeURIComponent("ЄДЕБО вступ рейтинг")}`, {
-      waitUntil: "load",
-      timeout: 30_000
-    });
+    const { status } = await fetchWithTimeout("https://data.gov.ua/", TIMEOUT_MS);
+    log(`status ${status}`);
   } catch (err) {
-    log(`Навігація по UI не вдалась: ${err.message}`);
+    log(`Помилка/таймаут: ${err.message}`);
   }
-  await page.waitForTimeout(3000);
-  await page.screenshot({ path: `${OUT_DIR}screenshot-search.png`, fullPage: true }).catch(() => {});
-
-  const bodyText = await page.evaluate(() => document.body?.innerText?.slice(0, 3000) || "").catch(() => "");
-  log(`\n=== ТЕКСТ СТОРІНКИ ПОШУКУ (перші 3000 símvolів) ===\n${bodyText}`);
-
-  const links = await page
-    .evaluate(() =>
-      Array.from(document.querySelectorAll("a[href*='/dataset/']"))
-        .map((a) => ({ text: a.textContent.trim().slice(0, 100), href: a.href }))
-        .filter((l) => l.text)
-    )
-    .catch(() => []);
-  log(`\n=== ПОСИЛАННЯ НА ДАТАСЕТИ (${links.length}) ===\n${JSON.stringify(links.slice(0, 30), null, 2)}`);
-
-  await browser.close();
 
   const summary = [
     `## Розвідка data.gov.ua`,
@@ -89,9 +84,7 @@ async function main() {
     ...QUERIES.map((q) => {
       const r = apiResults[q];
       return `- "${q}": ${r?.error ? `помилка: ${r.error}` : `status ${r.status}, count ${r.body?.result?.count ?? "?"}`}`;
-    }),
-    ``,
-    `Посилань на датасети зі сторінки пошуку UI: ${links.length}`
+    })
   ].join("\n");
 
   log("\n" + summary);

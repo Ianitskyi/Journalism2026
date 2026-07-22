@@ -24,13 +24,14 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: npm run diagnose-edbo-history
+      - run: npm run diagnose-edbo-history-search
       - run: npm run diagnose-datagovua
+        timeout-minutes: 3
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: edbo-history-diagnostics
-          path: diagnostics-history/
+          name: edbo-history-search-diagnostics
+          path: diagnostics-history-search/
           retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
