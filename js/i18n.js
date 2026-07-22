@@ -41,6 +41,7 @@ const I18N = {
     },
     year: {
       label: "Рік вступу",
+      current: "{year} · зараз",
       today: "Сьогодні"
     },
     caption: {
@@ -49,12 +50,17 @@ const I18N = {
     },
     table: {
       institution: "Заклад",
-      score: "Середній бал допущених",
+      score: "Середній бал",
       applications: "Подано заяв",
       admitted: "Допущено",
+      trend2021: "Зміна балу з 2021",
       fullRanking: "Повний рейтинг",
       year: "Рік",
       rank: "Ранг"
+    },
+    systemChart: {
+      appsTitle: "Динаміка кількості заяв (2021–2025)",
+      scoreTitle: "Динаміка середнього конкурсного балу (2021–2025)"
     },
     methodology: {
       kicker: "Про рейтинг",
@@ -92,11 +98,23 @@ const I18N = {
       compareNone: "— не порівнювати —",
       compareVs: "{a} проти {b}",
       subtitlePlain: "середній конкурсний бал допущених до конкурсу",
-      admittedAverage: "Середній бал допущених",
+      admittedAverage: "Середній бал",
       rankingByYear: "Рейтинг по роках",
       noChartData: "Немає даних для побудови графіка.",
       chartAriaLabel: "Динаміка балу по роках",
-      metricRank: "Ранг ({year})"
+      metricRank: "Ранг ({year})",
+      analysis: {
+        scoreUp: "З {from} по {to} середній конкурсний бал зріс на {diff} бала — з {fromVal} до {toVal}.",
+        scoreDown: "З {from} по {to} середній конкурсний бал знизився на {diff} бала — з {fromVal} до {toVal}.",
+        scoreFlat: "З {from} по {to} середній конкурсний бал залишився приблизно на тому ж рівні (~{value}).",
+        appsUp: "Кількість поданих заяв зросла на {pct}% — з {fromVal} до {toVal}.",
+        appsDown: "Кількість поданих заяв скоротилася на {pct}% — з {fromVal} до {toVal}.",
+        appsFlat: "Кількість поданих заяв залишилася приблизно на тому ж рівні (~{value}).",
+        rankBetter: "Порівняно з іншими закладами позиція в рейтингу покращилася — з #{from} до #{to} місця.",
+        rankWorse: "Порівняно з іншими закладами позиція в рейтингу погіршилася — з #{from} до #{to} місця.",
+        rankSame: "Позиція в рейтингу порівняно з іншими закладами не змінилася — #{value} місце.",
+        insufficientData: "Замало історичних даних для аналізу динаміки."
+      }
     }
   },
 
@@ -135,6 +153,7 @@ const I18N = {
     },
     year: {
       label: "Admission year",
+      current: "{year} · current",
       today: "Today"
     },
     caption: {
@@ -143,12 +162,17 @@ const I18N = {
     },
     table: {
       institution: "Institution",
-      score: "Average score of admitted",
+      score: "Average score",
       applications: "Applications submitted",
       admitted: "Admitted",
+      trend2021: "Score change since 2021",
       fullRanking: "Full ranking",
       year: "Year",
       rank: "Rank"
+    },
+    systemChart: {
+      appsTitle: "Application trend (2021–2025)",
+      scoreTitle: "Average competitive score trend (2021–2025)"
     },
     methodology: {
       kicker: "About the ranking",
@@ -186,11 +210,23 @@ const I18N = {
       compareNone: "— don't compare —",
       compareVs: "{a} vs {b}",
       subtitlePlain: "average competitive score of candidates admitted to the competition",
-      admittedAverage: "Average score of admitted",
+      admittedAverage: "Average score",
       rankingByYear: "Ranking by year",
       noChartData: "No data to build a chart.",
       chartAriaLabel: "Score trend by year",
-      metricRank: "Rank ({year})"
+      metricRank: "Rank ({year})",
+      analysis: {
+        scoreUp: "From {from} to {to}, the average competitive score rose by {diff} points — from {fromVal} to {toVal}.",
+        scoreDown: "From {from} to {to}, the average competitive score fell by {diff} points — from {fromVal} to {toVal}.",
+        scoreFlat: "From {from} to {to}, the average competitive score stayed roughly the same (~{value}).",
+        appsUp: "Submitted applications grew by {pct}% — from {fromVal} to {toVal}.",
+        appsDown: "Submitted applications dropped by {pct}% — from {fromVal} to {toVal}.",
+        appsFlat: "Submitted applications stayed roughly the same (~{value}).",
+        rankBetter: "Relative to other institutions, its ranking position improved — from #{from} to #{to}.",
+        rankWorse: "Relative to other institutions, its ranking position declined — from #{from} to #{to}.",
+        rankSame: "Its ranking position relative to other institutions stayed unchanged — #{value}.",
+        insufficientData: "Not enough historical data to analyze the trend."
+      }
     }
   }
 };
