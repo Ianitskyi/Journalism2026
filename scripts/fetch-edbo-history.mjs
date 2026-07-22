@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /*
  * Реальні дані ЄДЕБО для архівних (завершених) вступних кампаній
- * vstup<рік>.edbo.gov.ua (2018–2025) — спеціальність 061 "Журналістика"
- * (код C7 у новій класифікації спеціалізацій, використаній на сайті).
+ * vstup<рік>.edbo.gov.ua (2018–2025) — спеціальність 061 "Журналістика".
+ * Код спеціальності різний за роками: 2018-2024 — "061" (стара
+ * класифікація), 2025 — "C7" (нова літерна класифікація спеціалізацій,
+ * якою сайт перейшов саме з цього року) — див. specialityFor() нижче.
  *
  * ВАЖЛИВО: живий поточний рік (vstup.edbo.gov.ua, зараз 2026) захищений
  * Cloudflare Turnstile саме на цьому ендпоінті — цей скрипт його НЕ чіпає.
@@ -25,7 +27,13 @@
 import { writeFile, mkdir } from "node:fs/promises";
 
 const YEARS = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
-const SPECIALITY = "C7"; // Журналістика
+/* Код спеціальності "Журналістика" різний залежно від року: сайт перейшов
+   на нову літерну класифікацію спеціалізацій лише з 2025 року (перевірено
+   diagnose-edbo-spec-codes.mjs — 2018-2024 усі мають
+   <option value="061">Журналістика</option>, і лише 2025 використовує C7). */
+function specialityFor(year) {
+  return year >= 2025 ? "C7" : "061";
+}
 const QUALIFICATIONS = { bachelor: "1", master: "2" };
 const EDUCATION_BASE = { bachelor: "40", master: "" }; // 40 = Повна загальна середня освіта
 
@@ -122,11 +130,11 @@ async function postForm(base, path, data) {
   return resp.json();
 }
 
-async function fetchLevelData(base, level) {
+async function fetchLevelData(base, level, year) {
   const uniResp = await postForm(base, "/offers-universities/", {
     qualification: QUALIFICATIONS[level],
     education_base: EDUCATION_BASE[level],
-    speciality: SPECIALITY,
+    speciality: specialityFor(year),
     region: "",
     education_form: "",
     course: ""
@@ -194,13 +202,13 @@ async function fetchYear(year) {
   const base = `https://vstup${year}.edbo.gov.ua`;
   log(`\n=== ${year} (${base}) ===`);
 
-  const bachelor = await fetchLevelData(base, "bachelor").catch((err) => {
+  const bachelor = await fetchLevelData(base, "bachelor", year).catch((err) => {
     log(`  бакалавр: помилка — ${err.message}`);
     return [];
   });
   log(`  бакалавр: ${bachelor.length} ЗВО у рейтингу`);
 
-  const master = await fetchLevelData(base, "master").catch((err) => {
+  const master = await fetchLevelData(base, "master", year).catch((err) => {
     log(`  магістр: помилка — ${err.message}`);
     return [];
   });
