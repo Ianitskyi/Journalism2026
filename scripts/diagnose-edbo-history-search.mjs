@@ -45,12 +45,12 @@ async function main() {
       request.resourceType() === "fetch" ||
       request.resourceType() === "document" ||
       (entry.contentType && entry.contentType.includes("json"));
-    if (looksInteresting && response.ok() && request.method() !== "GET" || entry.resourceType === "document") {
+    if (looksInteresting && response.ok()) {
       try {
         const body = await response.text();
         if (body) {
           entry.bodyLength = body.length;
-          entry.bodyPreview = body.slice(0, 300);
+          entry.bodyPreview = body.slice(0, entry.resourceType === "document" ? 300 : 1500);
         }
       } catch {
         /* ігноруємо */
@@ -110,7 +110,10 @@ async function main() {
       }
     }
   }
-  await page.waitForTimeout(800);
+  // даємо offers_search_form.js (побачений у мережевому лозі минулого разу
+  // як лениво-завантажений скрипт) час довантажитись і навісити обробники,
+  // інакше клік по "Пошук" стається до реєстрації submit-хендлера
+  await page.waitForTimeout(3000);
 
   // ---------- 3) тиснемо реальну кнопку відправки форми ----------
   try {
@@ -127,7 +130,7 @@ async function main() {
     log(`Клік по кнопці пошуку не вдався: ${err.message}`);
   }
 
-  await page.waitForTimeout(4000);
+  await page.waitForTimeout(9000);
   await page.screenshot({ path: `${OUT_DIR}screenshot-results.png`, fullPage: true }).catch(() => {});
 
   const bodyText = await page.evaluate(() => document.body?.innerText || "").catch(() => "");
