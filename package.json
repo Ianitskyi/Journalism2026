@@ -8,7 +8,8 @@
     "diagnose-edbo-history": "node scripts/diagnose-edbo-history.mjs",
     "diagnose-edbo-history-search": "node scripts/diagnose-edbo-history-search.mjs",
     "diagnose-datagovua": "node scripts/diagnose-datagovua.mjs",
-    "diagnose-edbo-fetch-js": "node scripts/diagnose-edbo-fetch-js.mjs"
+    "diagnose-edbo-fetch-js": "node scripts/diagnose-edbo-fetch-js.mjs",
+    "diagnose-edbo-api": "node scripts/diagnose-edbo-api.mjs"
   },
   "devDependencies": {
     "playwright": "^1.47.0"
