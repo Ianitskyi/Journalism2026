@@ -1,11 +1,12 @@
 name: Diagnose EDBO data source
 
 # Розвідувальний workflow: запускається лише вручну. Відкриває
-# vstup.edbo.gov.ua й promedia.report headless-браузером у середовищі з
-# повним доступом в інтернет (на відміну від агентської сесії) і друкує
-# знайдене прямо в лог джоба (мережевий лог, текст сторінки, кольори й
-# шрифти CSS) — щоб зрозуміти реальний контракт даних і дизайн, перш ніж
-# писати робочий scripts/fetch-edbo.mjs чи підправляти css/style.css.
+# vstup.edbo.gov.ua (поточний рік і архівні vstup<рік>), data.gov.ua й
+# promedia.report headless-браузером у середовищі з повним доступом в
+# інтернет (на відміну від агентської сесії) і друкує знайдене прямо в лог
+# джоба (мережевий лог, текст сторінки, кольори й шрифти CSS) — щоб
+# зрозуміти реальний контракт даних і дизайн, перш ніж писати робочий
+# scripts/fetch-edbo.mjs чи підправляти css/style.css.
 # HTML/скріншоти/тіла відповідей додатково зберігаються як артефакт.
 on:
   workflow_dispatch: {}
@@ -23,17 +24,17 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: npm run diagnose-edbo
-      - run: npm run diagnose-promedia
+      - run: npm run diagnose-edbo-history
+      - run: npm run diagnose-datagovua
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: edbo-diagnostics
-          path: diagnostics/
+          name: edbo-history-diagnostics
+          path: diagnostics-history/
           retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: promedia-diagnostics
-          path: diagnostics-promedia/
+          name: datagovua-diagnostics
+          path: diagnostics-datagovua/
           retention-days: 14

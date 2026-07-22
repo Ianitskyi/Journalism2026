@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "diagnose-edbo": "node scripts/diagnose-edbo.mjs",
-    "diagnose-promedia": "node scripts/diagnose-promedia.mjs"
+    "diagnose-promedia": "node scripts/diagnose-promedia.mjs",
+    "diagnose-edbo-history": "node scripts/diagnose-edbo-history.mjs",
+    "diagnose-datagovua": "node scripts/diagnose-datagovua.mjs"
   },
   "devDependencies": {
     "playwright": "^1.47.0"
