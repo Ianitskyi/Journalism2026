@@ -157,35 +157,40 @@ async function fetchLevelData(base, level, year) {
     }
   }
 
-  // агрегуємо по uid (заклад освіти): сумарні заяви, середньозважений бал
+  // Агрегуємо по uid (заклад освіти): усі подані заяви, допущені до
+  // конкурсу та середній бал допущених. st.c.ka стосується саме допущених,
+  // тому ваговим коефіцієнтом є st.c.a, а не загальна кількість st.c.t.
   const byUid = new Map();
   for (const offer of offersById.values()) {
     const stats = offer.st && offer.st.c;
-    if (!stats || !stats.t || !stats.ka) continue;
+    if (!stats || !stats.t) continue;
     const t = Number(stats.t);
+    const a = Number(stats.a);
     const ka = Number(stats.ka);
-    if (!Number.isFinite(t) || !Number.isFinite(ka) || t <= 0) continue;
+    if (!Number.isFinite(t) || !Number.isFinite(a) || t <= 0 || a < 0) continue;
 
     const uid = offer.uid;
     if (!byUid.has(uid)) {
-      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applications: 0 });
+      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applications: 0, admitted: 0 });
     }
     const rec = byUid.get(uid);
-    rec.weightedScoreSum += ka * t;
+    if (a > 0 && Number.isFinite(ka)) rec.weightedScoreSum += ka * a;
     rec.applications += t;
+    rec.admitted += a;
   }
 
   const rows = [];
   for (const rec of byUid.values()) {
-    if (rec.applications < MIN_APPLICATIONS[level]) continue;
+    if (rec.applications < MIN_APPLICATIONS[level] || rec.admitted <= 0) continue;
     const slug = UID_TO_SLUG[rec.uid];
     rows.push({
       id: slug || `edbo${rec.uid}`,
       name: rec.name,
       short: shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
-      score: Math.round((rec.weightedScoreSum / rec.applications) * 10) / 10,
-      applications: rec.applications
+      score: Math.round((rec.weightedScoreSum / rec.admitted) * 10) / 10,
+      applications: rec.applications,
+      admitted: rec.admitted
     });
   }
 
@@ -196,6 +201,10 @@ async function fetchLevelData(base, level, year) {
 
 function sumApps(rows) {
   return rows.reduce((s, r) => s + r.applications, 0);
+}
+
+function sumAdmitted(rows) {
+  return rows.reduce((s, r) => s + (r.admitted || 0), 0);
 }
 
 async function fetchYear(year) {
@@ -220,16 +229,13 @@ async function fetchYear(year) {
     final: true,
     bachelor,
     master,
-    // "пріоритет 1" зрізи поки не підключено — потрібен окремий контракт
-    // (не помічено відповідного поля в st.* з поточного дослідження);
-    // лишаємо порожніми, щоб не показувати вигадані дані
-    bachelorP1: [],
-    masterP1: [],
     totalApplications: {
       bachelor: sumApps(bachelor),
-      master: sumApps(master),
-      bachelorP1: 0,
-      masterP1: 0
+      master: sumApps(master)
+    },
+    totalAdmitted: {
+      bachelor: sumAdmitted(bachelor),
+      master: sumAdmitted(master)
     }
   };
 }

@@ -11,6 +11,7 @@
     "diagnose-edbo-fetch-js": "node scripts/diagnose-edbo-fetch-js.mjs",
     "diagnose-edbo-api": "node scripts/diagnose-edbo-api.mjs",
     "fetch-edbo-history": "node scripts/fetch-edbo-history.mjs",
+    "fetch-edbo-current": "node scripts/fetch-edbo-current.mjs",
     "diagnose-edbo-spec-codes": "node scripts/diagnose-edbo-spec-codes.mjs"
   },
   "devDependencies": {

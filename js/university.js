@@ -26,8 +26,7 @@ function buildTrend(id, degree) {
   return DB.years.map((year) => {
     const snap = yearSnapshot(year);
     const row = (snap[degree] || []).find((r) => r.id === id) || null;
-    const rowP1 = (snap[degree + "P1"] || []).find((r) => r.id === id) || null;
-    return { year, row, rowP1 };
+    return { year, row };
   });
 }
 
@@ -135,6 +134,7 @@ function renderComparePanel(meta, trend, compareMeta, compareTrend) {
         <div class="compare-metric"><span>${t("uni.metricRank", { year: latest ? latest.year : "—" })}</span><span>${latest ? "#" + latest.row.rank : "—"}</span></div>
         <div class="compare-metric"><span>${t("table.score")}</span><span>${latest ? latest.row.score.toFixed(1) : "—"}</span></div>
         <div class="compare-metric"><span>${t("table.applications")}</span><span>${latest ? numFmt().format(latest.row.applications) : "—"}</span></div>
+        <div class="compare-metric"><span>${t("table.admitted")}</span><span>${latest ? numFmt().format(latest.row.admitted || 0) : "—"}</span></div>
       </div>
     `;
   }
@@ -212,12 +212,10 @@ function render() {
   } else {
     subtitle = t("uni.subtitlePlain");
     legendItems = [
-      { cls: "", color: "var(--accent-dark)", label: t("view.all") },
-      { cls: "dashed", color: "var(--gold)", label: t("view.p1") }
+      { cls: "", color: "var(--accent-dark)", label: t("uni.admittedAverage") }
     ];
     document.getElementById("chart-wrap").innerHTML = buildChartSVG(trend, [
-      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: t("view.all") },
-      { getVal: (x) => x.rowP1 ? x.rowP1.score : null, lineClass: "chart-line-p1", dotClass: "chart-dot-p1", label: t("view.p1") }
+      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: t("uni.admittedAverage") }
     ]);
   }
 
@@ -241,7 +239,7 @@ function render() {
     if (!entry.row) {
       tr.innerHTML = `
         <td><strong>${entry.year}</strong></td>
-        <td class="num" colspan="3"><span class="applications">${t("empty.outOfRanking")}</span></td>
+        <td class="num" colspan="4"><span class="applications">${t("empty.outOfRanking")}</span></td>
       `;
     } else {
       tr.innerHTML = `
@@ -249,6 +247,7 @@ function render() {
         <td class="num"><div class="score">#${entry.row.rank}</div></td>
         <td class="num"><div class="score">${entry.row.score.toFixed(1)}</div></td>
         <td class="num"><div class="applications">${numFmt().format(entry.row.applications)}</div></td>
+        <td class="num"><div class="applications">${numFmt().format(entry.row.admitted || 0)}</div></td>
       `;
     }
     tbody.appendChild(tr);

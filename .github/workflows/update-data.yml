@@ -1,13 +1,12 @@
 name: Update EDBO data
 
-# Заготовка. Наразі запускається лише вручну (workflow_dispatch), поки не
-# підтверджено реальний контракт vstup.edbo.gov.ua у scripts/fetch-edbo.mjs.
-# Коли скрипт перевірений і працює — розкоментуйте schedule нижче для
-# щоденного автооновлення.
+# Пошук нових пропозицій захищений Turnstile. Розклад можна вмикати лише
+# після того, як людина збере повний data/2026-offers.json через ручний capture
+# і успішно перевірить кілька запусків scripts/fetch-edbo-current.mjs.
 on:
   workflow_dispatch: {}
   # schedule:
-  #   - cron: "0 21 * * *" # щодня о 00:00 за Києвом (влітку UTC+3)
+  #   - cron: "0 21 * * *" # 00:00 за Києвом у період літнього часу
 
 permissions:
   contents: write
@@ -20,10 +19,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/fetch-edbo.mjs
+      - run: node scripts/fetch-edbo-current.mjs
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Оновлення даних ЄДЕБО"
+          git diff --cached --quiet || git commit -m "Оновлення даних ЄДЕБО 2026"
           git push

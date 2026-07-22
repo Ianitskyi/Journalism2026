@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,500;0,600;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&display=swap");
 
 :root {
   --ink: #0d0c5c;
@@ -27,12 +27,6 @@
   --shadow-sm: 0 6px 18px -10px rgba(23, 19, 33, 0.22);
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-/* латинська кирилиця Playfair Display занадто грайлива для довгих
-   англійських заголовків — для EN використовуємо спокійніший Lora */
-html[lang="en"] {
-  --serif: "Lora", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -134,9 +128,9 @@ a { color: inherit; }
 }
 
 .hero h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(32px, 5vw, 50px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -410,6 +404,19 @@ a { color: inherit; }
   font-size: 13.5px;
   margin: 0 0 22px;
 }
+
+.live-disclaimer {
+  margin: -10px 0 22px;
+  padding: 14px 16px;
+  border: 1px solid #e5c36d;
+  border-radius: var(--radius-md);
+  background: #fff8df;
+  color: #6b4d05;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.live-disclaimer[hidden] { display: none; }
 
 .sort-row {
   display: flex;
@@ -765,7 +772,42 @@ td {
 
 .source-box a:hover { text-decoration: underline; }
 
-/* ---------- footer / empty ---------- */
+/* ---------- methodology / footer / empty ---------- */
+
+.methodology {
+  margin: 42px 0 28px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.methodology-kicker {
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.methodology h2 {
+  margin: 7px 0 24px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.1;
+}
+
+.methodology-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.methodology-grid article { min-width: 0; }
+.methodology-grid h3 { margin: 0 0 9px; font-size: 16px; }
+.methodology-grid p { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.methodology-grid p:last-child { margin-bottom: 0; }
+.methodology-grid strong { color: var(--text); }
 
 .site-footer {
   text-align: center;
@@ -861,9 +903,9 @@ td {
 }
 
 .uni-hero h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(22px, 4vw, 30px);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.15;
   margin: 0;
 }
@@ -934,10 +976,8 @@ td {
 }
 
 .chart-line-all { stroke: var(--accent-dark); }
-.chart-line-p1 { stroke: var(--gold); stroke-dasharray: 6 5; }
 
 .chart-dot-all { fill: var(--accent-dark); }
-.chart-dot-p1 { fill: var(--gold); }
 
 .chart-axis-label {
   fill: var(--muted);
@@ -1049,6 +1089,7 @@ td {
   .stats-row { grid-template-columns: repeat(4, 1fr); }
   .controls { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
   .date-chips { min-width: 0; }
+  .methodology-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 960px) {
@@ -1062,14 +1103,13 @@ td {
   .podium-name { font-size: 12px; min-height: 30px; }
   .podium-score { font-size: 21px; }
   .rank-1 .podium-score { font-size: 24px; }
-  thead th:nth-child(3) { display: none; }
-  td.num.delta-cell { display: none; }
+  thead th:nth-child(5), td:nth-child(5) { display: none; }
 
   table { table-layout: fixed; }
   th, td { padding-left: 10px; padding-right: 10px; }
   thead th:nth-child(1), td:nth-child(1) { width: 40px; }
-  thead th:nth-child(4), td:nth-child(4) { width: 62px; }
-  thead th:nth-child(5), td:nth-child(5) { width: 80px; }
+  thead th:nth-child(3), td:nth-child(3) { width: 70px; }
+  thead th:nth-child(4), td:nth-child(4) { width: 74px; }
   thead th { padding-left: 4px; padding-right: 4px; font-size: 9.5px; letter-spacing: 0.02em; }
   .univ-logo { width: 26px; height: 26px; font-size: 10px; }
   .univ-cell { gap: 8px; }
@@ -1081,6 +1121,6 @@ td {
   .hero { padding-left: 16px; padding-right: 16px; }
   .topbar-inner { padding-left: 16px; padding-right: 16px; }
   th, td { padding-left: 6px; padding-right: 6px; }
-  thead th:nth-child(4), td:nth-child(4) { width: 50px; }
-  thead th:nth-child(5), td:nth-child(5) { width: 48px; }
+  thead th:nth-child(3), td:nth-child(3) { width: 56px; }
+  thead th:nth-child(4), td:nth-child(4) { width: 54px; }
 }
