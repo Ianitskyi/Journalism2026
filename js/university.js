@@ -185,7 +185,7 @@ function render() {
   if (compareMeta) {
     subtitle = `${meta.short} проти ${compareMeta.short}`;
     legendItems = [
-      { cls: "", color: "var(--accent)", label: meta.name },
+      { cls: "", color: "var(--accent-dark)", label: meta.name },
       { cls: "", color: "var(--ink-soft)", label: compareMeta.name }
     ];
 
@@ -202,7 +202,7 @@ function render() {
   } else {
     subtitle = "суцільна — усі заяви, пунктир — лише пріоритет 1";
     legendItems = [
-      { cls: "", color: "var(--accent)", label: "Усі заяви" },
+      { cls: "", color: "var(--accent-dark)", label: "Усі заяви" },
       { cls: "dashed", color: "var(--gold)", label: "Пріоритет 1" }
     ];
     document.getElementById("chart-wrap").innerHTML = buildChartSVG(trend, [
