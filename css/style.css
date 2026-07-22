@@ -47,6 +47,35 @@ body {
 
 a { color: inherit; }
 
+/* ---------- utility bar ---------- */
+
+.utility-bar {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  transition: border-color .15s, color .15s;
+}
+
+.home-btn:hover { border-color: var(--ink); color: var(--ink); }
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -740,13 +769,20 @@ td {
 
 .uni-wrap { margin-top: 28px; }
 
+.page-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
 .back-link {
   display: inline-block;
   color: var(--muted);
   text-decoration: none;
   font-weight: 700;
   font-size: 13.5px;
-  margin-bottom: 18px;
 }
 
 .back-link:hover { color: var(--ink); }
