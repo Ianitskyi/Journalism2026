@@ -189,10 +189,63 @@ a { color: inherit; }
   align-items: start;
 }
 
+.layout-main, .layout-side {
+  min-width: 0;
+}
+
 .layout-side {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+/* ---------- year selector ---------- */
+
+.year-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.year-row-label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  flex: none;
+}
+
+.year-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.year-chips::-webkit-scrollbar { display: none; }
+
+.year-chip {
+  flex: none;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: border-color .15s, color .15s, background .15s;
+}
+
+.year-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+.year-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 /* ---------- stat tiles ---------- */
@@ -211,6 +264,7 @@ a { color: inherit; }
   padding: 16px 18px;
   box-shadow: var(--shadow-sm);
   transition: opacity .2s;
+  min-width: 0;
 }
 
 .stat-tile.dim { opacity: 0.45; }
@@ -339,6 +393,7 @@ a { color: inherit; }
   box-shadow: var(--shadow-sm);
   padding: 20px 14px 18px;
   text-align: center;
+  min-width: 0;
   order: 2;
 }
 
@@ -520,6 +575,8 @@ td {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.25;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .delta {
@@ -680,4 +737,21 @@ td {
   .rank-1 .podium-score { font-size: 24px; }
   thead th:nth-child(3) { display: none; }
   td.num.delta-cell { display: none; }
+
+  table { table-layout: fixed; }
+  th, td { padding-left: 10px; padding-right: 10px; }
+  thead th:nth-child(1), td:nth-child(1) { width: 40px; }
+  thead th:nth-child(4), td:nth-child(4) { width: 56px; }
+  thead th:nth-child(5), td:nth-child(5) { width: 54px; }
+  .univ-logo { width: 26px; height: 26px; font-size: 10px; }
+  .univ-cell { gap: 8px; }
+}
+
+@media (max-width: 360px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .topbar-inner { padding-left: 16px; padding-right: 16px; }
+  th, td { padding-left: 6px; padding-right: 6px; }
+  thead th:nth-child(4), td:nth-child(4) { width: 50px; }
+  thead th:nth-child(5), td:nth-child(5) { width: 48px; }
 }

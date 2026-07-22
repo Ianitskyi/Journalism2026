@@ -5,7 +5,8 @@ const DEGREE_META = {
 
 const state = {
   degree: "bachelor",
-  dateIndex: DB.dates.length - 1,
+  year: DB.currentYear,
+  dateIndex: DB.byYear[DB.currentYear].dates.length - 1,
   expanded: false
 };
 
@@ -31,8 +32,13 @@ function fmtTime(isoStr) {
   return d.toLocaleTimeString("uk-UA", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Europe/Kyiv" });
 }
 
+function activeYearData() {
+  return DB.byYear[state.year];
+}
+
 function snapshotAt(index) {
-  return DB.snapshots[DB.dates[index]];
+  const yearData = activeYearData();
+  return yearData.snapshots[yearData.dates[index]];
 }
 
 function currentSnapshot() {
@@ -67,13 +73,39 @@ function renderStats(snap, rows) {
   document.getElementById("stat-master").classList.toggle("dim", state.degree !== "master");
 }
 
+function renderYearChips() {
+  const wrap = document.getElementById("year-chips");
+  wrap.innerHTML = "";
+  DB.years.forEach((year) => {
+    const btn = document.createElement("button");
+    btn.className = "year-chip" + (year === state.year ? " active" : "");
+    btn.textContent = year === DB.currentYear ? `${year} · зараз` : String(year);
+    btn.addEventListener("click", () => {
+      if (state.year === year) return;
+      state.year = year;
+      state.dateIndex = DB.byYear[year].dates.length - 1;
+      state.expanded = false;
+      render();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
 function renderDateChips() {
   const wrap = document.getElementById("date-chips");
+  const yearData = activeYearData();
   wrap.innerHTML = "";
-  DB.dates.forEach((date, i) => {
+
+  if (yearData.dates.length <= 1) {
+    wrap.style.display = "none";
+    return;
+  }
+  wrap.style.display = "flex";
+
+  yearData.dates.forEach((date, i) => {
     const btn = document.createElement("button");
     btn.className = "date-chip" + (i === state.dateIndex ? " active" : "");
-    btn.textContent = i === DB.dates.length - 1 ? "Сьогодні" : fmtDateShort(date);
+    btn.textContent = i === yearData.dates.length - 1 ? "Сьогодні" : fmtDateShort(date);
     btn.addEventListener("click", () => {
       state.dateIndex = i;
       render();
@@ -112,15 +144,18 @@ function renderPodium(rows) {
 }
 
 function render() {
+  const yearData = activeYearData();
   const snap = currentSnapshot();
   const rows = snap[state.degree];
   const meta = DEGREE_META[state.degree];
   const prevMap = prevRankMap();
+  const isFinal = yearData.dates.length <= 1;
 
   document.getElementById("asof-date").textContent = `${fmtDateFull(snap.date)}, ${fmtTime(snap.asOf)}`;
 
-  document.getElementById("caption").textContent =
-    `Станом на ${fmtDateUA(snap.date)}. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`;
+  document.getElementById("caption").textContent = isFinal
+    ? `Підсумкові дані вступної кампанії ${state.year} року. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`
+    : `Станом на ${fmtDateUA(snap.date)}. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`;
 
   document.getElementById("card-subtitle").textContent = meta.label;
 
@@ -165,6 +200,7 @@ function render() {
     showAllBtn.style.display = "none";
   }
 
+  renderYearChips();
   renderDateChips();
 }
 

@@ -8,10 +8,17 @@
    що реально готують журналістів, але БАЛИ й КІЛЬКІСТЬ ЗАЯВ
    для кожного з них у цьому файлі — випадково згенеровані і не
    відображають реальний стан вступної кампанії.
+
+   Дані по роках: 2026 — поточна кампанія з щоденною історією (як і
+   раніше); 2021–2025 — по одному підсумковому знімку на рік
+   (кампанія завершена, проміжної історії немає). Всі числа так само
+   згенеровані, а не взяті з ЄДЕБО.
    ========================================================= */
 
 const TODAY = "2026-07-21";
+const CURRENT_YEAR = 2026;
 const HISTORY_DAYS = 7;
+const PAST_YEARS = [2021, 2022, 2023, 2024, 2025];
 
 /* base-профіль ЗВО: score/applications — стартові орієнтири для генератора,
    не реальні цифри */
@@ -114,11 +121,54 @@ function buildSnapshots() {
   return snapshots;
 }
 
+/* підсумковий (єдиний) знімок для завершеної кампанії минулих років:
+   бал і кількість заяв поступово нижчі, чим давніший рік */
+function buildYearFinalList(unis, year, minApps) {
+  const yearsAgo = CURRENT_YEAR - year;
+  const rows = unis.map((u) => {
+    const rnd = mulberry32(hashStr(u.id) ^ (year * 40503));
+    const drift = (rnd() - 0.5) * 2.4;
+    const score = Math.max(100, u.baseScore - yearsAgo * 1.7 + drift);
+    const appsFactor = Math.max(0.3, 1 - yearsAgo * 0.1 + (rnd() - 0.5) * 0.08);
+    const applications = Math.round(u.baseApps * appsFactor);
+    return { id: u.id, name: u.name, short: u.short, hue: u.hue, score: Math.round(score * 10) / 10, applications };
+  })
+  .filter((r) => r.applications >= minApps)
+  .sort((a, b) => b.score - a.score)
+  .map((r, i) => ({ ...r, rank: i + 1 }));
+  return rows;
+}
+
+function buildYearFinalSnapshot(year) {
+  const date = `${year}-08-05`;
+  const bachelor = buildYearFinalList(BACHELOR_UNIS, year, MIN_APPLICATIONS.bachelor);
+  const master = buildYearFinalList(MASTER_UNIS, year, MIN_APPLICATIONS.master);
+  return {
+    date,
+    asOf: `${date}T18:00:00+03:00`,
+    final: true,
+    bachelor,
+    master,
+    totalApplications: {
+      bachelor: bachelor.reduce((s, r) => s + r.applications, 0),
+      master: master.reduce((s, r) => s + r.applications, 0)
+    }
+  };
+}
+
 const SNAPSHOTS = buildSnapshots();
 const SNAPSHOT_DATES = Object.keys(SNAPSHOTS).sort();
 
+const BY_YEAR = {};
+for (const year of PAST_YEARS) {
+  const snap = buildYearFinalSnapshot(year);
+  BY_YEAR[year] = { dates: [snap.date], snapshots: { [snap.date]: snap } };
+}
+BY_YEAR[CURRENT_YEAR] = { dates: SNAPSHOT_DATES, snapshots: SNAPSHOTS };
+
 const DB = {
-  snapshots: SNAPSHOTS,
-  dates: SNAPSHOT_DATES,
+  years: [...PAST_YEARS, CURRENT_YEAR],
+  currentYear: CURRENT_YEAR,
+  byYear: BY_YEAR,
   minApplications: MIN_APPLICATIONS
 };
