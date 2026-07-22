@@ -44,12 +44,6 @@
 
 <main class="wrap">
 
-  <div class="test-banner">
-    <span data-i18n-html="banner.demo">⚠️ Дані за <strong>2018–2025 роки — реальні</strong>, зібрані з архівів ЄДЕБО.
-    Поточна кампанія <strong>2026 року поки що демонстраційна</strong> (згенеровані тестові цифри) —
-    живий фід ще підключається. Деталі — у README.</span>
-  </div>
-
   <div class="layout">
     <div class="layout-main">
 
@@ -89,7 +83,6 @@
       </div>
 
       <p class="caption" id="caption"></p>
-      <div class="live-disclaimer" id="live-disclaimer" data-i18n-html="disclaimer.liveHtml"></div>
 
       <div class="sort-row">
         <span class="sort-row-label" data-i18n="sort.label">Сортувати за</span>
@@ -145,16 +138,39 @@
     </aside>
   </div>
 
+  <section class="methodology charts-section" id="charts">
+    <div class="methodology-kicker" data-i18n="charts.kicker">Топ-10</div>
+    <h2 data-i18n="charts.title">Порівняння та динаміка</h2>
+
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-card-title" data-i18n="charts.barTitle">Топ-10 за середнім балом допущених</div>
+        <div class="chart-bars" id="chart-bar"></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-title" data-i18n="charts.bubbleTitle">Топ-10 за кількістю поданих заяв</div>
+        <div class="chart-bubbles" id="chart-bubble"></div>
+      </div>
+
+      <div class="chart-card chart-card-wide">
+        <div class="chart-card-title" data-i18n="charts.lineTitle">Динаміка середнього бала топ-10 за роками</div>
+        <div class="chart-plot" id="chart-line"></div>
+        <div class="chart-legend" id="chart-line-legend"></div>
+      </div>
+
+      <div class="chart-card chart-card-wide">
+        <div class="chart-card-title" data-i18n="charts.areaTitle">Динаміка кількості заяв топ-10 за роками</div>
+        <div class="chart-plot" id="chart-area"></div>
+        <div class="chart-legend" id="chart-area-legend"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="methodology" id="methodology">
     <div class="methodology-kicker" data-i18n="methodology.kicker">Про рейтинг</div>
     <h2 data-i18n="methodology.title">Методологія, обмеження та припущення</h2>
     <div class="methodology-grid" data-i18n-html="methodology.bodyHtml"></div>
-  </section>
-
-  <section class="methodology" id="faq">
-    <div class="methodology-kicker" data-i18n="faq.kicker">Питання, що часто виникають</div>
-    <h2 data-i18n="faq.title">FAQ</h2>
-    <div class="methodology-grid" data-i18n-html="faq.bodyHtml"></div>
   </section>
 
   <footer class="site-footer">

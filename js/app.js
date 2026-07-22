@@ -138,6 +138,150 @@ function renderPodium(rows) {
   }
 }
 
+/* ---------- діаграми топ-10 ---------- */
+
+function renderBarChart(rawRows) {
+  const top = [...rawRows].sort((a, b) => b.score - a.score).slice(0, 10);
+  const max = top.length ? top[0].score : 1;
+  document.getElementById("chart-bar").innerHTML = top.map((r) => `
+    <div class="bar-row">
+      <span class="bar-label">${uniShort(r)}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, (r.score / max) * 100).toFixed(1)}%; background:hsl(${r.hue} 62% 46%)"></div></div>
+      <span class="bar-value">${r.score.toFixed(1)}</span>
+    </div>
+  `).join("");
+}
+
+function renderBubbleChart(rawRows) {
+  const top = [...rawRows].sort((a, b) => b.applications - a.applications).slice(0, 10);
+  const max = top.length ? top[0].applications : 1;
+  const minD = 56, maxD = 148;
+  document.getElementById("chart-bubble").innerHTML = top.map((r) => {
+    const d = minD + (maxD - minD) * Math.sqrt(r.applications / max);
+    return `
+      <div class="bubble" style="width:${d.toFixed(0)}px; height:${d.toFixed(0)}px; background:hsl(${r.hue} 62% 46%)" title="${uniShort(r)}: ${numFmt().format(r.applications)}">
+        <span class="bubble-label">${uniShort(r)}</span>
+        <span class="bubble-value">${numFmt().format(r.applications)}</span>
+      </div>
+    `;
+  }).join("");
+}
+
+/* останній (актуальний) знімок конкретного року — для 2026 це найновіший
+   день кампанії, для минулих років — єдиний підсумковий знімок */
+function yearSnapshot(year) {
+  const yd = DB.byYear[year];
+  return yd.snapshots[yd.dates[yd.dates.length - 1]];
+}
+
+function buildUniTrend(id, degree) {
+  return DB.years.map((year) => {
+    const snap = yearSnapshot(year);
+    const row = (snap[degree] || []).find((r) => r.id === id) || null;
+    return { year, row };
+  });
+}
+
+/* multi-series SVG-графік: по одній лінії (і опційно площі під нею) на
+   заклад освіти з top10; area:true рахує yMin від 0 і додає заливку під
+   лінією — для метрики "кількість заяв", де важлива саме площа */
+function buildMultiSeriesSVG(top10, degree, metricKey, area) {
+  const seriesData = top10.map((u) => ({ id: u.id, short: uniShort(u), hue: u.hue, trend: buildUniTrend(u.id, degree) }));
+
+  const values = [];
+  seriesData.forEach((s) => s.trend.forEach((x) => { if (x.row) values.push(x.row[metricKey]); }));
+  if (!values.length) return `<div class="chart-empty">${t("empty.noDataDay")}</div>`;
+
+  const w = 720, h = 260, padL = 40, padR = 16, padT = 16, padB = 30;
+  const min = Math.min(...values), max = Math.max(...values);
+  const range = Math.max(1, max - min);
+  const yMin = area ? 0 : min - range * 0.1;
+  const yMax = max + range * 0.1;
+  const years = DB.years;
+  const n = years.length;
+  const xFor = (i) => padL + (n === 1 ? 0.5 : i / (n - 1)) * (w - padL - padR);
+  const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
+  const baselineY = h - padB;
+
+  function pathFor(trend) {
+    let d = "";
+    let started = false;
+    trend.forEach((x, i) => {
+      const v = x.row ? x.row[metricKey] : null;
+      if (v == null) { started = false; return; }
+      d += `${started ? "L" : "M"}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)} `;
+      started = true;
+    });
+    return d.trim();
+  }
+
+  function areaPathFor(trend) {
+    const pts = [];
+    trend.forEach((x, i) => { const v = x.row ? x.row[metricKey] : null; if (v != null) pts.push([xFor(i), yFor(v)]); });
+    if (pts.length < 2) return "";
+    let d = `M${pts[0][0].toFixed(1)},${baselineY.toFixed(1)} `;
+    pts.forEach(([x, y]) => { d += `L${x.toFixed(1)},${y.toFixed(1)} `; });
+    d += `L${pts[pts.length - 1][0].toFixed(1)},${baselineY.toFixed(1)} Z`;
+    return d;
+  }
+
+  const labels = years.map((y, i) =>
+    `<text class="chart-axis-label" x="${xFor(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">${y}</text>`
+  ).join("");
+
+  const baseline = `<line class="chart-baseline" x1="${padL}" y1="${baselineY.toFixed(1)}" x2="${w - padR}" y2="${baselineY.toFixed(1)}" />`;
+
+  const areas = !area ? "" : seriesData.map((s) => {
+    const d = areaPathFor(s.trend);
+    return d ? `<path d="${d}" fill="hsl(${s.hue} 65% 55%)" opacity="0.14" stroke="none" />` : "";
+  }).join("");
+
+  const paths = seriesData.map((s) => {
+    const d = pathFor(s.trend);
+    return d ? `<path class="chart-line" d="${d}" fill="none" stroke="hsl(${s.hue} 62% 46%)" />` : "";
+  }).join("");
+
+  const dots = seriesData.map((s) => s.trend.map((x, i) => {
+    if (!x.row) return "";
+    const v = x.row[metricKey];
+    const cx = xFor(i).toFixed(1), cy = yFor(v).toFixed(1);
+    const label = `${s.short} · ${x.year}: ${numFmt().format(v)}`;
+    return `<circle cx="${cx}" cy="${cy}" r="3" fill="hsl(${s.hue} 62% 46%)"><title>${label}</title></circle>`;
+  }).join("")).join("");
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img">
+      ${baseline}
+      ${areas}
+      ${paths}
+      ${dots}
+      ${labels}
+    </svg>
+  `;
+}
+
+function renderChartLegend(containerId, top10) {
+  document.getElementById(containerId).innerHTML = top10.map((u) => `
+    <span class="chart-legend-item" style="color:hsl(${u.hue} 62% 40%)">
+      <span class="chart-legend-swatch" style="background:hsl(${u.hue} 62% 46%)"></span>${uniShort(u)}
+    </span>
+  `).join("");
+}
+
+function renderCharts(rawRows) {
+  const byScore = [...rawRows].sort((a, b) => b.score - a.score).slice(0, 10);
+  const byApps = [...rawRows].sort((a, b) => b.applications - a.applications).slice(0, 10);
+
+  renderBarChart(rawRows);
+  renderBubbleChart(rawRows);
+
+  document.getElementById("chart-line").innerHTML = buildMultiSeriesSVG(byScore, state.degree, "score", false);
+  renderChartLegend("chart-line-legend", byScore);
+
+  document.getElementById("chart-area").innerHTML = buildMultiSeriesSVG(byApps, state.degree, "applications", true);
+  renderChartLegend("chart-area-legend", byApps);
+}
+
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
@@ -151,7 +295,6 @@ function render() {
   document.getElementById("caption").textContent = isFinal
     ? t("caption.final", { year: state.year, minApps })
     : t("caption.live", { date: fmtDateUA(snap.date), minApps });
-  document.getElementById("live-disclaimer").hidden = isFinal;
 
   document.getElementById("card-subtitle").textContent =
     t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");
@@ -161,6 +304,7 @@ function render() {
 
   renderStats(snap, rows);
   renderPodium(rows);
+  renderCharts(rawRows);
 
   const rest = rows.slice(3);
   const tbody = document.getElementById("rank-body");
