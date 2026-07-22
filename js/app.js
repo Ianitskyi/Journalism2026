@@ -28,19 +28,9 @@ function fmtDateUA(dateStr) {
   return d.toLocaleDateString(localeTag(), { day: "2-digit", month: "2-digit", timeZone: "UTC" });
 }
 
-function fmtDateFull(dateStr) {
-  const d = new Date(dateStr + "T00:00:00Z");
-  return d.toLocaleDateString(localeTag(), { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" });
-}
-
 function fmtDateShort(dateStr) {
   const d = new Date(dateStr + "T00:00:00Z");
   return d.toLocaleDateString(localeTag(), { day: "2-digit", month: "2-digit", timeZone: "UTC" });
-}
-
-function fmtTime(isoStr) {
-  const d = new Date(isoStr);
-  return d.toLocaleTimeString(localeTag(), { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Europe/Kyiv" });
 }
 
 function activeYearData() {
@@ -62,9 +52,6 @@ function renderStats(snap, rows) {
   document.getElementById("stat-admitted").textContent =
     numFmt().format(snap.totalAdmitted?.[state.degree] ?? rows.reduce((sum, row) => sum + (row.admitted || 0), 0));
   document.getElementById("stat-count").textContent = rows.length;
-  const topScore = rows.length ? Math.max(...rows.map((r) => r.score)) : null;
-  document.getElementById("stat-topscore").textContent = topScore != null ? topScore.toFixed(1) : "—";
-
 }
 
 function renderYearChips() {
@@ -118,26 +105,6 @@ function renderDateChips() {
   }
 }
 
-function renderPodium(rows) {
-  const podium = document.getElementById("podium");
-  podium.innerHTML = "";
-  if (!rows.length) return;
-  const top3 = rows.slice(0, 3);
-  for (const r of top3) {
-    const card = document.createElement("a");
-    card.href = `university.html?id=${encodeURIComponent(r.id)}`;
-    card.className = `podium-card rank-${r.rank}`;
-    card.innerHTML = `
-      <div class="podium-medal">${r.rank}</div>
-      <div class="podium-logo" style="background:hsl(${r.hue} 62% 46%)">${uniShort(r).slice(0, 2).toUpperCase()}</div>
-      <div class="podium-name">${uniName(r)}</div>
-      <div class="podium-score">${r.score.toFixed(1)}</div>
-      <div class="podium-apps">${numFmt().format(r.applications)} ${t("unit.submitted")} · ${numFmt().format(r.admitted || 0)} ${t("unit.admitted")}</div>
-    `;
-    podium.appendChild(card);
-  }
-}
-
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
@@ -145,8 +112,6 @@ function render() {
   const rows = sortedRows(rawRows, state.sortBy);
   const isFinal = state.year !== DB.currentYear;
   const minApps = DB.minApplications[state.degree];
-
-  document.getElementById("asof-date").textContent = `${fmtDateFull(snap.date)}, ${fmtTime(snap.asOf)}`;
 
   document.getElementById("caption").textContent = isFinal
     ? t("caption.final", { year: state.year, minApps })
@@ -159,18 +124,15 @@ function render() {
   document.getElementById("th-apps").classList.toggle("sort-active", state.sortBy === "applications");
 
   renderStats(snap, rows);
-  renderPodium(rows);
 
-  const rest = rows.slice(3);
+  const VISIBLE_ROWS = 10;
   const tbody = document.getElementById("rank-body");
   tbody.innerHTML = "";
 
   if (!rows.length) {
     tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
-  } else if (!rest.length) {
-    tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state">${t("empty.allShown")}</div></td></tr>`;
   } else {
-    const visible = state.expanded ? rest : rest.slice(0, 7);
+    const visible = state.expanded ? rows : rows.slice(0, VISIBLE_ROWS);
     for (const r of visible) {
       const tr = document.createElement("tr");
       tr.innerHTML = `
@@ -190,7 +152,7 @@ function render() {
   }
 
   const showAllBtn = document.getElementById("show-all");
-  if (rest.length > 7) {
+  if (rows.length > VISIBLE_ROWS) {
     showAllBtn.style.display = "block";
     showAllBtn.textContent = state.expanded
       ? t("showAll.collapse")

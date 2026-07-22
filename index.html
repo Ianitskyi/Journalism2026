@@ -31,14 +31,8 @@
     <div class="eyebrow" data-i18n="hero.eyebrow">Вступна кампанія 2026 · спеціальність 061 «Журналістика»</div>
     <h1 data-i18n="hero.title">Рейтинг журфаків України</h1>
     <p class="lede" data-i18n="hero.lede">
-      Рейтинг факультетів і програм журналістики за середнім конкурсним балом вступників —
-      окремо бакалаврат, окремо магістратура.
+      Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом допущених до конкурсу.
     </p>
-    <div class="hero-status">
-      <span class="dot"></span>
-      <span data-i18n="hero.updated">Оновлено</span>
-      <strong id="asof-date">—</strong>
-    </div>
   </div>
 </section>
 
@@ -50,6 +44,17 @@
       <div class="year-row">
         <span class="year-row-label" data-i18n="year.label">Рік вступу</span>
         <div class="year-chips" id="year-chips"></div>
+      </div>
+
+      <div class="controls">
+        <div class="tabs-stack">
+          <div class="tabs" id="tabs" role="tablist">
+            <span class="tabs-indicator" id="tabs-indicator"></span>
+            <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true" data-i18n="degree.bachelor">Бакалавр</button>
+            <button class="pill" data-degree="master" role="tab" aria-selected="false" data-i18n="degree.master">Магістр</button>
+          </div>
+        </div>
+        <div class="date-chips" id="date-chips"></div>
       </div>
 
       <div class="stats-row" id="stats-row">
@@ -65,21 +70,6 @@
           <div class="stat-label" data-i18n="stats.count">Журфаків у рейтингу</div>
           <div class="stat-value" id="stat-count">—</div>
         </div>
-        <div class="stat-tile">
-          <div class="stat-label" data-i18n="stats.topScore">Найвищий середній бал допущених</div>
-          <div class="stat-value accent" id="stat-topscore">—</div>
-        </div>
-      </div>
-
-      <div class="controls">
-        <div class="tabs-stack">
-          <div class="tabs" id="tabs" role="tablist">
-            <span class="tabs-indicator" id="tabs-indicator"></span>
-            <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true" data-i18n="degree.bachelor">Бакалавр</button>
-            <button class="pill" data-degree="master" role="tab" aria-selected="false" data-i18n="degree.master">Магістр</button>
-          </div>
-        </div>
-        <div class="date-chips" id="date-chips"></div>
       </div>
 
       <p class="caption" id="caption"></p>
@@ -92,8 +82,6 @@
           <button class="pill" data-sort="applications" role="tab" aria-selected="false" data-i18n="sort.applications">Заявами</button>
         </div>
       </div>
-
-      <div class="podium" id="podium"></div>
 
       <div class="card">
         <div class="card-head">

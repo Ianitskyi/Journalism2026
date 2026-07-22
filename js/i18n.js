@@ -21,14 +21,12 @@ const I18N = {
     hero: {
       eyebrow: "Вступна кампанія 2026 · спеціальність C7 «Журналістика»",
       title: "Рейтинг журфаків України",
-      lede: "Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом допущених до конкурсу — окремо бакалаврат, окремо магістратура.",
-      updated: "Оновлено"
+      lede: "Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом допущених до конкурсу."
     },
     stats: {
       submitted: "Подано заяв",
       admitted: "Допущено до конкурсу",
-      count: "Журфаків у рейтингу",
-      topScore: "Найвищий середній бал допущених"
+      count: "Журфаків у рейтингу"
     },
     degree: {
       bachelor: "Бакалавр",
@@ -59,7 +57,6 @@ const I18N = {
       year: "Рік",
       rank: "Ранг"
     },
-    unit: { applications: "заяв", submitted: "подано", admitted: "допущено" },
     methodology: {
       kicker: "Про рейтинг",
       title: "Методологія, обмеження та припущення",
@@ -67,7 +64,6 @@ const I18N = {
     },
     empty: {
       noDataDay: "Немає даних для цього дня.",
-      allShown: "Це весь рейтинг — топ-3 показано вище.",
       uniNotFound: "Такий заклад освіти не знайдено.",
       backToRating: "Повернутись до рейтингу →",
       outOfRanking: "поза рейтингом (менше мінімуму заяв)"
@@ -129,14 +125,12 @@ const I18N = {
     hero: {
       eyebrow: "2026 admissions campaign · major C7 “Journalism”",
       title: "Ukrainian Journalism Schools Ranking",
-      lede: "Ranking of journalism faculties and programs by submitted applications and the average competitive score of candidates admitted to the competition — bachelor's and master's shown separately.",
-      updated: "Updated"
+      lede: "Ranking of journalism faculties and programs by submitted applications and the average competitive score of candidates admitted to the competition."
     },
     stats: {
       submitted: "Applications submitted",
       admitted: "Admitted to competition",
-      count: "Schools in ranking",
-      topScore: "Highest admitted average"
+      count: "Schools in ranking"
     },
     degree: {
       bachelor: "Bachelor's",
@@ -167,7 +161,6 @@ const I18N = {
       year: "Year",
       rank: "Rank"
     },
-    unit: { applications: "applications", submitted: "submitted", admitted: "admitted" },
     methodology: {
       kicker: "About the ranking",
       title: "Methodology, limitations and assumptions",
@@ -175,7 +168,6 @@ const I18N = {
     },
     empty: {
       noDataDay: "No data for this day.",
-      allShown: "This is the entire ranking — top 3 shown above.",
       uniNotFound: "This institution was not found.",
       backToRating: "Back to ranking →",
       outOfRanking: "outside ranking (below minimum applications)"
