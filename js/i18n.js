@@ -63,6 +63,14 @@ const I18N = {
       rank: "Ранг"
     },
     unit: { applications: "заяв", submitted: "подано", admitted: "допущено" },
+    charts: {
+      kicker: "Топ-10",
+      title: "Порівняння та динаміка",
+      barTitle: "Топ-10 за середнім балом допущених",
+      bubbleTitle: "Топ-10 за кількістю поданих заяв",
+      lineTitle: "Динаміка середнього бала топ-10 за роками",
+      areaTitle: "Динаміка кількості заяв топ-10 за роками"
+    },
     methodology: {
       kicker: "Про рейтинг",
       title: "Методологія, обмеження та припущення",
@@ -174,6 +182,14 @@ const I18N = {
       rank: "Rank"
     },
     unit: { applications: "applications", submitted: "submitted", admitted: "admitted" },
+    charts: {
+      kicker: "Top 10",
+      title: "Comparisons and trends",
+      barTitle: "Top 10 by average admitted score",
+      bubbleTitle: "Top 10 by submitted applications",
+      lineTitle: "Top 10 average score over the years",
+      areaTitle: "Top 10 application counts over the years"
+    },
     methodology: {
       kicker: "About the ranking",
       title: "Methodology, limitations and assumptions",
