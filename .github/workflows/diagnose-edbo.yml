@@ -25,15 +25,3 @@ jobs:
       - run: npm install
       - run: npm run diagnose-edbo-api
         timeout-minutes: 2
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: edbo-history-search-diagnostics
-          path: diagnostics-history-search/
-          retention-days: 14
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: datagovua-diagnostics
-          path: diagnostics-datagovua/
-          retention-days: 14
