@@ -175,7 +175,7 @@ function render() {
   const rawRows = snap[rowsKey(state.degree, state.view)];
   const rows = sortedRows(rawRows, state.sortBy);
   const prevMap = prevRankMap();
-  const isFinal = yearData.dates.length <= 1;
+  const isFinal = state.year !== DB.currentYear;
   const minApps = state.view === "p1"
     ? DB.minApplicationsP1[state.degree]
     : DB.minApplications[state.degree];

@@ -174,9 +174,7 @@ async function main() {
 
   await mkdir("data", { recursive: true });
   await writeFile(`data/${date}.json`, JSON.stringify(snapshot, null, 2), "utf8");
-  const index = JSON.parse(await readFile("data/2026-index.json", "utf8"));
-  const dates = [...new Set([...index, date])].sort();
-  await writeFile("data/2026-index.json", JSON.stringify(dates, null, 2) + "\n", "utf8");
+  await writeFile("data/2026-index.json", JSON.stringify([date], null, 2) + "\n", "utf8");
   console.log(`Записано data/${date}.json`);
 }
 

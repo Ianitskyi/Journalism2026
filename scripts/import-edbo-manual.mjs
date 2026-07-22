@@ -172,11 +172,7 @@ function rebuildLevel(snapshot, level) {
 
 async function updateCurrentIndex(date) {
   const file = path.join("data", "2026-index.json");
-  let dates = [];
-  try {
-    dates = JSON.parse(await readFile(file, "utf8"));
-  } catch {}
-  dates = [...new Set([...dates, date])].filter((value) => /^2026-\d{2}-\d{2}$/.test(value)).sort();
+  const dates = /^2026-\d{2}-\d{2}$/.test(date) ? [date] : [];
   await writeFile(file, JSON.stringify(dates, null, 2) + "\n", "utf8");
 }
 

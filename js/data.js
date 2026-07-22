@@ -9,8 +9,8 @@
    для кожного з них у цьому файлі — випадково згенеровані і не
    відображають реальний стан вступної кампанії.
 
-   Дані по роках: 2026 — поточна кампанія з щоденною історією (як і
-   раніше); 2021–2025 — по одному підсумковому знімку на рік
+   Дані по роках: 2026 — лише найсвіжіший знімок поточної кампанії;
+   2021–2025 — по одному підсумковому знімку на рік
    (кампанія завершена, проміжної історії немає). Всі числа так само
    згенеровані, а не взяті з ЄДЕБО.
 
@@ -20,9 +20,10 @@
    а не запасним варіантом.
    ========================================================= */
 
-const TODAY = "2026-07-21";
+const TODAY = new Intl.DateTimeFormat("sv-SE", {
+  timeZone: "Europe/Kyiv", year: "numeric", month: "2-digit", day: "2-digit"
+}).format(new Date());
 const CURRENT_YEAR = 2026;
-const HISTORY_DAYS = 7;
 const PAST_YEARS = [2021, 2022, 2023, 2024, 2025];
 
 /* base-профіль закладу: score/applications — стартові орієнтири для генератора,
@@ -96,12 +97,6 @@ function hashStr(s) {
   return h;
 }
 
-function dateMinusDays(dateStr, n) {
-  const d = new Date(dateStr + "T00:00:00Z");
-  d.setUTCDate(d.getUTCDate() - n);
-  return d.toISOString().slice(0, 10);
-}
-
 const round1 = (n) => Math.round(n * 10) / 10;
 
 function sumApps(rows) {
@@ -126,15 +121,15 @@ function rankBoth(base, minApps, minAppsP1) {
   return { all, p1 };
 }
 
-function buildDayList(unis, dayIndex, minApps, minAppsP1) {
+function buildDayList(unis, daySeed, minApps, minAppsP1) {
   const base = unis.map((u) => {
-    const rnd = mulberry32(hashStr(u.id) ^ (dayIndex * 2654435761));
+    const rnd = mulberry32(hashStr(u.id) ^ (daySeed * 2654435761));
     const drift = (rnd() - 0.5) * 1.4;                 // невеликий денний шум бала
-    const growth = 1 + (HISTORY_DAYS - dayIndex) * 0.05 + rnd() * 0.03; // заяви ростуть ближче до "сьогодні"
-    const score = Math.max(100, u.baseScore + drift - (HISTORY_DAYS - dayIndex) * 0.15);
+    const growth = 1 + rnd() * 0.03;
+    const score = Math.max(100, u.baseScore + drift);
     const applications = Math.round(u.baseApps * growth);
 
-    const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (dayIndex * 2654435761));
+    const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (daySeed * 2654435761));
     const share = priority1Share(u.baseScore);
     const p1Applications = Math.round(applications * share * (0.9 + rndP1() * 0.2));
     const p1Score = Math.max(100, score + (rndP1() - 0.5) * 2.0);
@@ -149,15 +144,13 @@ function buildDayList(unis, dayIndex, minApps, minAppsP1) {
 }
 
 function buildSnapshots() {
-  const snapshots = {};
-  for (let i = 0; i <= HISTORY_DAYS; i++) {
-    const date = dateMinusDays(TODAY, i);
-    const dayIndex = HISTORY_DAYS - i; // 0 = найдавніший, HISTORY_DAYS = сьогодні
-    const bachelor = buildDayList(BACHELOR_UNIS, dayIndex, MIN_APPLICATIONS.bachelor, MIN_APPLICATIONS_P1.bachelor);
-    const master = buildDayList(MASTER_UNIS, dayIndex, MIN_APPLICATIONS.master, MIN_APPLICATIONS_P1.master);
-    snapshots[date] = {
-      date,
-      asOf: date === TODAY ? `${date}T23:30:00+03:00` : `${date}T23:59:00+03:00`,
+  const daySeed = Number(TODAY.replaceAll("-", ""));
+  const bachelor = buildDayList(BACHELOR_UNIS, daySeed, MIN_APPLICATIONS.bachelor, MIN_APPLICATIONS_P1.bachelor);
+  const master = buildDayList(MASTER_UNIS, daySeed, MIN_APPLICATIONS.master, MIN_APPLICATIONS_P1.master);
+  return {
+    [TODAY]: {
+      date: TODAY,
+      asOf: `${TODAY}T23:30:00+03:00`,
       bachelor: bachelor.all,
       master: master.all,
       bachelorP1: bachelor.p1,
@@ -168,9 +161,8 @@ function buildSnapshots() {
         bachelorP1: sumApps(bachelor.p1),
         masterP1: sumApps(master.p1)
       }
-    };
-  }
-  return snapshots;
+    }
+  };
 }
 
 /* підсумковий (єдиний) знімок для завершеної кампанії минулих років:
@@ -281,28 +273,14 @@ async function loadRealCurrentData() {
       .filter((date) => /^2026-\d{2}-\d{2}$/.test(date))
       .sort();
     if (!dates.length) return;
-
-    const results = await Promise.allSettled(
-      dates.map(async (date) => {
-        const resp = await fetch(`data/${date}.json`);
-        if (!resp.ok) throw new Error(`${date}: HTTP ${resp.status}`);
-        return resp.json();
-      })
-    );
-
-    const snapshots = {};
-    for (const result of results) {
-      if (result.status === "fulfilled" && result.value?.date) {
-        snapshots[result.value.date] = result.value;
-      } else if (result.status === "rejected") {
-        console.warn("Не вдалось завантажити знімок ЄДЕБО 2026:", result.reason);
-      }
-    }
-
-    const loadedDates = Object.keys(snapshots).sort();
-    if (!loadedDates.length) return;
-
-    BY_YEAR[CURRENT_YEAR] = { dates: loadedDates, snapshots };
+    const latestDate = dates.at(-1);
+    const resp = await fetch(`data/${latestDate}.json`);
+    if (!resp.ok) throw new Error(`${latestDate}: HTTP ${resp.status}`);
+    const snapshot = await resp.json();
+    BY_YEAR[CURRENT_YEAR] = {
+      dates: [snapshot.date],
+      snapshots: { [snapshot.date]: snapshot }
+    };
     if (typeof window !== "undefined") {
       window.dispatchEvent(new CustomEvent("edbo-data-updated"));
     }
