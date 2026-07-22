@@ -87,6 +87,27 @@ async function main() {
     log(`Опції зі словом "журналіст": ${JSON.stringify(journalismOptions)}`);
   }
 
+  // ---------- діагностика: усі <form> на сторінці ----------
+  const forms = await page.evaluate(() =>
+    Array.from(document.querySelectorAll("form")).map((f, i) => ({
+      index: i,
+      id: f.id || null,
+      action: f.action || null,
+      method: f.method || null,
+      containsJournalismSelect: !!f.querySelector("select") && Array.from(f.querySelectorAll("option")).some((o) => /журналіст/i.test(o.textContent)),
+      buttons: Array.from(f.querySelectorAll('button, input[type="submit"], input[type="button"]')).map((b) => ({
+        tag: b.tagName.toLowerCase(),
+        type: b.type,
+        text: (b.textContent || b.value || "").trim().slice(0, 60)
+      }))
+    }))
+  );
+  log(`\n=== <form> на сторінці (${forms.length}) ===`);
+  log(JSON.stringify(forms, null, 2));
+
+  const targetFormIndex = forms.findIndex((f) => f.containsJournalismSelect);
+  log(`\ntargetFormIndex (форма зі спеціальністю) = ${targetFormIndex}`);
+
   const selectLocators = page.locator("select");
 
   if (levelSelectIndex >= 0) {
@@ -115,16 +136,16 @@ async function main() {
   // інакше клік по "Пошук" стається до реєстрації submit-хендлера
   await page.waitForTimeout(3000);
 
-  // ---------- 3) тиснемо реальну кнопку відправки форми ----------
+  // ---------- 3) тиснемо кнопку саме в потрібній формі (не першу-ліпшу) ----------
   try {
-    const submitBtn = page.locator('button[type="submit"], input[type="submit"]').first();
-    if (await submitBtn.count()) {
-      await submitBtn.click({ timeout: 5000 });
-      log("Клікнув submit-кнопку форми");
+    if (targetFormIndex >= 0) {
+      const formLocator = page.locator("form").nth(targetFormIndex);
+      const btn = formLocator.locator('button, input[type="submit"], input[type="button"]').last();
+      const btnText = await btn.textContent().catch(() => "");
+      await btn.click({ timeout: 5000 });
+      log(`Клікнув кнопку "${btnText?.trim()}" у формі #${targetFormIndex}`);
     } else {
-      const searchBtn = page.getByRole("button", { name: /^пошук$/i }).first();
-      await searchBtn.click({ timeout: 5000 });
-      log("Клікнув кнопку 'Пошук' (getByRole)");
+      log("Форму зі спеціальністю не знайдено — пропускаю клік");
     }
   } catch (err) {
     log(`Клік по кнопці пошуку не вдався: ${err.message}`);
