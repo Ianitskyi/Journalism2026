@@ -42,8 +42,8 @@
     <div class="layout-main">
 
       <div class="year-row">
-        <span class="year-row-label" data-i18n="year.label">Рік вступу</span>
-        <div class="year-chips" id="year-chips"></div>
+        <label class="year-row-label" for="year-select" data-i18n="year.label">Рік вступу</label>
+        <select class="year-select" id="year-select"></select>
       </div>
 
       <div class="controls">
@@ -107,23 +107,6 @@
       </div>
 
     </div>
-
-    <aside class="layout-side">
-      <div class="side-card info-box">
-        <div class="info-icon">i</div>
-        <p data-i18n-html="info.kbHtml">
-          <strong>КБ (конкурсний бал)</strong> — зважена оцінка для вступу на спеціальність «Журналістика» в Україні.
-          Поєднує результати НМТ (українська мова, історія України або математика, іноземна мова) з коефіцієнтами МОН
-          України та галузевими пріоритетами закладу освіти.
-        </p>
-      </div>
-
-      <div class="side-card source-box">
-        <div class="legend-title" data-i18n="source.title">Джерело</div>
-        <p data-i18n-html="source.html">Єдина державна електронна база з питань освіти (<strong>ЄДЕБО</strong>), рейтингові списки вступників по конкурсних пропозиціях спеціальності «Журналістика».</p>
-        <a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener" data-i18n="source.link">vstup.edbo.gov.ua ↗</a>
-      </div>
-    </aside>
   </div>
 
   <section class="methodology" id="methodology">
@@ -137,8 +120,7 @@
       <span data-i18n="footer.initiative">Ініціатива</span>
       <img src="img/promedia-wordmark.svg" alt="ГО «ПроМедіа»" class="footer-logo" />
     </a>
-    <span data-i18n-html="footer.dataSourceHtml">Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).</span><br />
-    <span data-i18n="footer.dataSourceNote">Наразі показано тестові дані — дашборд ще не підключено до живого фіда.</span>
+    <span data-i18n-html="footer.dataSourceHtml">Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).</span>
   </footer>
 
 </main>

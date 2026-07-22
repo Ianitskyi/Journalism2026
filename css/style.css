@@ -160,14 +160,8 @@ a { color: inherit; }
   align-items: start;
 }
 
-.layout-main, .layout-side {
+.layout-main {
   min-width: 0;
-}
-
-.layout-side {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 /* ---------- year selector ---------- */
@@ -188,37 +182,19 @@ a { color: inherit; }
   flex: none;
 }
 
-.year-chips {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  min-width: 0;
-}
-
-.year-chips::-webkit-scrollbar { display: none; }
-
-.year-chip {
-  flex: none;
-  border: 1.5px solid var(--border);
-  background: var(--card);
-  color: var(--text);
+.year-select {
   font-family: inherit;
+  font-size: 13.5px;
   font-weight: 700;
-  font-size: 13px;
-  padding: 7px 14px;
+  color: var(--text);
+  background: var(--card);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-pill);
+  padding: 7px 14px;
   cursor: pointer;
-  transition: border-color .15s, color .15s, background .15s;
 }
 
-.year-chip:hover { border-color: var(--ink); color: var(--ink); }
-
-.year-chip.active {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
+.year-select:hover { border-color: var(--ink); }
 
 /* ---------- stat tiles ---------- */
 
@@ -545,48 +521,6 @@ td {
 
 /* ---------- side cards ---------- */
 
-.side-card {
-  background: var(--card);
-  border-radius: var(--radius-md);
-  padding: 18px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
-}
-
-.info-box { display: flex; gap: 12px; }
-
-.info-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: #fff;
-  font-weight: 800;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-}
-
-.info-box p {
-  margin: 0;
-  font-size: 13.5px;
-  color: var(--text);
-  line-height: 1.55;
-}
-
-.info-box strong { color: var(--ink); }
-
-.legend-title {
-  font-weight: 800;
-  font-size: 12.5px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-
 .legend-row {
   display: flex;
   align-items: center;
@@ -597,24 +531,6 @@ td {
 }
 
 .legend-row:last-child { margin-bottom: 0; }
-
-.source-box p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.55;
-  margin: 0 0 10px;
-}
-
-.source-box strong { color: var(--text); }
-
-.source-box a {
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 13px;
-  text-decoration: none;
-}
-
-.source-box a:hover { text-decoration: underline; }
 
 /* ---------- methodology / footer / empty ---------- */
 
@@ -934,11 +850,6 @@ td {
   .controls { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
   .date-chips { min-width: 0; }
   .methodology-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (min-width: 960px) {
-  .layout { grid-template-columns: minmax(0, 1fr) 300px; }
-  .layout-side { position: sticky; top: 24px; }
 }
 
 @media (max-width: 480px) {

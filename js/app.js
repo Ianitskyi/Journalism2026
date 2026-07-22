@@ -54,21 +54,20 @@ function renderStats(snap, rows) {
   document.getElementById("stat-count").textContent = rows.length;
 }
 
-function renderYearChips() {
-  const wrap = document.getElementById("year-chips");
-  wrap.innerHTML = "";
-  DB.years.forEach((year) => {
-    const btn = document.createElement("button");
-    btn.className = "year-chip" + (year === state.year ? " active" : "");
-    btn.textContent = year === DB.currentYear ? t("year.current", { year }) : String(year);
-    btn.addEventListener("click", () => {
-      if (state.year === year) return;
-      state.year = year;
-      state.dateIndex = DB.byYear[year].dates.length - 1;
-      state.expanded = false;
-      render();
-    });
-    wrap.appendChild(btn);
+function renderYearSelect() {
+  const select = document.getElementById("year-select");
+  select.innerHTML = DB.years.map((year) => `<option value="${year}">${year}</option>`).join("");
+  select.value = String(state.year);
+}
+
+function initYearSelect() {
+  document.getElementById("year-select").addEventListener("change", (e) => {
+    const year = Number(e.target.value);
+    if (state.year === year) return;
+    state.year = year;
+    state.dateIndex = DB.byYear[year].dates.length - 1;
+    state.expanded = false;
+    render();
   });
 }
 
@@ -118,7 +117,7 @@ function render() {
     : t("caption.live", { date: fmtDateUA(snap.date), minApps });
 
   document.getElementById("card-subtitle").textContent =
-    t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");
+    `${t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel")} · ${state.year}`;
 
   document.getElementById("th-score").classList.toggle("sort-active", state.sortBy === "score");
   document.getElementById("th-apps").classList.toggle("sort-active", state.sortBy === "applications");
@@ -161,7 +160,7 @@ function render() {
     showAllBtn.style.display = "none";
   }
 
-  renderYearChips();
+  renderYearSelect();
   renderDateChips();
 }
 
@@ -224,6 +223,7 @@ function initShowAll() {
 initTabs();
 initSortTabs();
 initShowAll();
+initYearSelect();
 window.onLangChange = () => { render(); resyncIndicators(); };
 window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
 render();
