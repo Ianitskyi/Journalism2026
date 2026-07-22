@@ -42,11 +42,20 @@ function hashHue(uid) {
   return PALETTE_HUES[uid % PALETTE_HUES.length];
 }
 
+const SHORT_NAME_STOPWORDS = new Set([
+  "національний", "державний", "приватний", "вищий", "вищої", "заклад", "закладу",
+  "освіти", "освіта", "університет", "університету", "інститут", "інституту",
+  "академія", "академії", "коледж", "навчальний", "навчальної", "імені", "ім",
+  "та", "і", "в", "у", "з", "до", "на", "як", "або", "the", "of", "for"
+]);
+
 function shortName(name) {
-  // проста евристика: беремо великі літери зі слів довші за 2 символи
-  const skip = new Set(["ім", "ім.", "та", "і", "в", "у", "з", "до", "на", "«", "»", "\"", "(", ")"]);
-  const words = name.replace(/[«»"']/g, "").split(/\s+/).filter((w) => w.length > 2 && !skip.has(w.toLowerCase()));
-  const letters = words
+  // евристика: беремо великі літери зі значущих слів (пропускаючи типові
+  // "національний університет..." тощо, щоб абревіатура була відрізняльною)
+  const cleaned = name.replace(/[«»""''"'()]/g, " ");
+  const words = cleaned.split(/\s+/).filter((w) => w.length > 1 && !SHORT_NAME_STOPWORDS.has(w.toLowerCase()));
+  const source = words.length ? words : cleaned.split(/\s+/).filter(Boolean);
+  const letters = source
     .slice(0, 4)
     .map((w) => w[0])
     .join("")

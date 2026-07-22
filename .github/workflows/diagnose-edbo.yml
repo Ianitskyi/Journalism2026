@@ -1,18 +1,15 @@
 name: Diagnose EDBO data source
 
-# Розвідувальний workflow: запускається лише вручну. Відкриває
-# vstup.edbo.gov.ua (поточний рік і архівні vstup<рік>), data.gov.ua й
-# promedia.report headless-браузером у середовищі з повним доступом в
-# інтернет (на відміну від агентської сесії) і друкує знайдене прямо в лог
-# джоба (мережевий лог, текст сторінки, кольори й шрифти CSS) — щоб
-# зрозуміти реальний контракт даних і дизайн, перш ніж писати робочий
-# scripts/fetch-edbo.mjs чи підправляти css/style.css.
-# HTML/скріншоти/тіла відповідей додатково зберігаються як артефакт.
+# Спершу — розвідувальний workflow (Playwright-скрипти в scripts/diagnose-*),
+# тепер основне призначення: наповнення data/ реальними історичними даними
+# ЄДЕБО через scripts/fetch-edbo-history.mjs (архівні vstup<рік>.edbo.gov.ua,
+# 2018–2025 — НЕ захищені Cloudflare, на відміну від живого поточного року,
+# перевірено diagnose-edbo-history.mjs). Запускається лише вручну.
 on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   diagnose:
@@ -23,5 +20,11 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run fetch-edbo-history -- 2025
-        timeout-minutes: 3
+      - run: npm run fetch-edbo-history
+        timeout-minutes: 5
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Реальні історичні дані ЄДЕБО (2018-2025), спец. 061 Журналістика"
+          git push
