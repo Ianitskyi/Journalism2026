@@ -103,14 +103,18 @@ function sumApps(rows) {
   return rows.reduce((s, r) => s + r.applications, 0);
 }
 
+function sumAdmitted(rows) {
+  return rows.reduce((s, r) => s + (r.admitted || 0), 0);
+}
+
 /* рахує "усі заяви" та "лише пріоритет 1" одним проходом і повертає обидва
    незалежно відсортовані й проранжовані списки */
 function rankBoth(base, minApps, minAppsP1) {
   const all = base
     .filter((r) => r.applications >= minApps)
     .sort((a, b) => b.score - a.score)
-    .map(({ id, name, short, nameEn, shortEn, hue, score, applications }, i) =>
-      ({ id, name, short, nameEn, shortEn, hue, score, applications, rank: i + 1 }));
+    .map(({ id, name, short, nameEn, shortEn, hue, score, applications, admitted }, i) =>
+      ({ id, name, short, nameEn, shortEn, hue, score, applications, admitted, rank: i + 1 }));
 
   const p1 = base
     .filter((r) => r.p1Applications >= minAppsP1)
@@ -128,6 +132,7 @@ function buildDayList(unis, daySeed, minApps, minAppsP1) {
     const growth = 1 + rnd() * 0.03;
     const score = Math.max(100, u.baseScore + drift);
     const applications = Math.round(u.baseApps * growth);
+    const admitted = Math.round(applications * (0.72 + rnd() * 0.2));
 
     const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (daySeed * 2654435761));
     const share = priority1Share(u.baseScore);
@@ -136,7 +141,7 @@ function buildDayList(unis, daySeed, minApps, minAppsP1) {
 
     return {
       id: u.id, name: u.name, short: u.short, nameEn: u.nameEn, shortEn: u.shortEn, hue: u.hue,
-      score: round1(score), applications,
+      score: round1(score), applications, admitted,
       p1Score: round1(p1Score), p1Applications
     };
   });
@@ -160,6 +165,10 @@ function buildSnapshots() {
         master: sumApps(master.all),
         bachelorP1: sumApps(bachelor.p1),
         masterP1: sumApps(master.p1)
+      },
+      totalAdmitted: {
+        bachelor: sumAdmitted(bachelor.all),
+        master: sumAdmitted(master.all)
       }
     }
   };
@@ -175,6 +184,7 @@ function buildYearFinalList(unis, year, minApps, minAppsP1) {
     const score = Math.max(100, u.baseScore - yearsAgo * 1.7 + drift);
     const appsFactor = Math.max(0.3, 1 - yearsAgo * 0.1 + (rnd() - 0.5) * 0.08);
     const applications = Math.round(u.baseApps * appsFactor);
+    const admitted = Math.round(applications * (0.72 + rnd() * 0.2));
 
     const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (year * 40503));
     const share = priority1Share(u.baseScore);
@@ -183,7 +193,7 @@ function buildYearFinalList(unis, year, minApps, minAppsP1) {
 
     return {
       id: u.id, name: u.name, short: u.short, nameEn: u.nameEn, shortEn: u.shortEn, hue: u.hue,
-      score: round1(score), applications,
+      score: round1(score), applications, admitted,
       p1Score: round1(p1Score), p1Applications
     };
   });
@@ -207,6 +217,10 @@ function buildYearFinalSnapshot(year) {
       master: sumApps(master.all),
       bachelorP1: sumApps(bachelor.p1),
       masterP1: sumApps(master.p1)
+    },
+    totalAdmitted: {
+      bachelor: sumAdmitted(bachelor.all),
+      master: sumAdmitted(master.all)
     }
   };
 }
@@ -223,7 +237,7 @@ for (const year of PAST_YEARS) {
 }
 BY_YEAR[CURRENT_YEAR] = { dates: SNAPSHOT_DATES, snapshots: SNAPSHOTS };
 
-/* реальні дані ЄДЕБО за 2018–2025 (див. README, розділ "Підключення
+/* реальні дані ЄДЕБО за 2021–2025 (див. README, розділ "Підключення
    реальних даних ЄДЕБО") — зібрані scripts/fetch-edbo-history.mjs з
    архівних vstup<рік>.edbo.gov.ua. Підвантажуються асинхронно й заміняють
    згенерований запасний варіант вище; якщо конкретний рік не завантажився

@@ -94,7 +94,7 @@ function rankBoth(entries) {
   const all = entries
     .filter((e) => e.applications >= (MIN_APPLICATIONS[e._level] ?? 0))
     .sort((a, b) => b.score - a.score)
-    .map(({ id, name, short, hue, score, applications }, i) => ({ id, name, short, hue, score, applications, rank: i + 1 }));
+    .map(({ id, name, short, hue, score, applications, admitted }, i) => ({ id, name, short, hue, score, applications, admitted, rank: i + 1 }));
 
   const p1 = entries
     .filter((e) => e.p1Applications != null && e.p1Applications >= (MIN_APPLICATIONS_P1[e._level] ?? 0))
@@ -106,6 +106,10 @@ function rankBoth(entries) {
 
 function sumApps(rows) {
   return rows.reduce((s, r) => s + r.applications, 0);
+}
+
+function sumAdmitted(rows) {
+  return rows.reduce((s, r) => s + (r.admitted || 0), 0);
 }
 
 function shortName(name) {
@@ -139,13 +143,15 @@ function rebuildLevel(snapshot, level) {
         _level: level,
         weightedScoreSum: 0,
         applications: 0,
+        admitted: 0,
         p1ScoreSum: 0,
         p1Applications: 0
       });
     }
     const row = grouped.get(meta.id);
-    row.weightedScoreSum += Number(offer.averageScore) * Number(offer.applications);
+    row.weightedScoreSum += Number(offer.averageScore) * Number(offer.admitted);
     row.applications += Number(offer.applications);
+    row.admitted += Number(offer.admitted);
     for (const score of offer.priority1Scores || []) {
       row.p1ScoreSum += Number(score);
       row.p1Applications += 1;
@@ -158,8 +164,9 @@ function rebuildLevel(snapshot, level) {
     short: row.short,
     hue: row.hue,
     _level: level,
-    score: round1(row.weightedScoreSum / row.applications),
+    score: round1(row.weightedScoreSum / row.admitted),
     applications: row.applications,
+    admitted: row.admitted,
     ...(row.p1Applications ? {
       p1Score: round1(row.p1ScoreSum / row.p1Applications),
       p1Applications: row.p1Applications
@@ -220,8 +227,8 @@ async function main() {
       if (!offer.offerId || !["bachelor", "master"].includes(offer.level)) {
         throw new Error("Capture не містить коректних offerId/level.");
       }
-      if (!Number.isFinite(Number(offer.applications)) || !Number.isFinite(Number(offer.averageScore))) {
-        throw new Error(`Capture пропозиції ${offer.offerId} не містить applications/averageScore.`);
+      if (!Number.isFinite(Number(offer.applications)) || !Number.isFinite(Number(offer.admitted)) || !Number.isFinite(Number(offer.averageScore))) {
+        throw new Error(`Capture пропозиції ${offer.offerId} не містить applications/admitted/averageScore.`);
       }
       const list = snapshot._offers[offer.level] || [];
       snapshot._offers[offer.level] = [...list.filter((item) => item.offerId !== offer.offerId), offer];
@@ -239,6 +246,10 @@ async function main() {
       master: sumApps(snapshot.master || []),
       bachelorP1: sumApps(snapshot.bachelorP1 || []),
       masterP1: sumApps(snapshot.masterP1 || [])
+    };
+    snapshot.totalAdmitted = {
+      bachelor: sumAdmitted(snapshot.bachelor || []),
+      master: sumAdmitted(snapshot.master || [])
     };
 
     await writeFile(outFile, JSON.stringify(snapshot, null, 2), "utf8");
@@ -317,6 +328,7 @@ async function main() {
     _level: level,
     score: mean(scores),
     applications: scores.length,
+    admitted: scores.length,
     ...(p1Scores.length ? { p1Score: mean(p1Scores), p1Applications: p1Scores.length } : {})
   };
   snapshot._entries[level].push(entry);
@@ -329,6 +341,10 @@ async function main() {
     master: sumApps(snapshot.master || []),
     bachelorP1: sumApps(snapshot.bachelorP1 || []),
     masterP1: sumApps(snapshot.masterP1 || [])
+  };
+  snapshot.totalAdmitted = {
+    bachelor: sumAdmitted(snapshot.bachelor || []),
+    master: sumAdmitted(snapshot.master || [])
   };
   snapshot.asOf = new Date().toISOString().replace(/\.\d+Z$/, "+03:00");
 

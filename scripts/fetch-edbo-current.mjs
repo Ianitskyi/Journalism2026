@@ -6,7 +6,8 @@
  * намагається його викликати або обходити. Початковий список offerId людина
  * створює через edbo-capture.bookmarklet.js + import-edbo-manual.mjs.
  * Публічні GET /offer/<id> перевірено: вони працюють без cookies і містять
- * готові rqs_total/rqs_kv_avg та список заяв із konkurs_value/priority.
+ * готові rqs_total/rqs_allowed/rqs_kv_avg та список заяв із
+ * konkurs_value/priority.
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -61,8 +62,9 @@ async function fetchOffer(manifestEntry) {
   const html = await response.text();
   const offerId = field(html, "university_specialities_id");
   const applications = field(html, "rqs_total");
+  const admitted = field(html, "rqs_allowed");
   const averageScore = field(html, "rqs_kv_avg");
-  if (offerId !== Number(manifestEntry.offerId) || applications == null || averageScore == null) {
+  if (offerId !== Number(manifestEntry.offerId) || applications == null || admitted == null || averageScore == null) {
     throw new Error(`offer ${manifestEntry.offerId}: у HTML немає очікуваної статистики`);
   }
 
@@ -77,6 +79,7 @@ async function fetchOffer(manifestEntry) {
     universityId: field(html, "university_id") ?? manifestEntry.universityId,
     universityName: stringField(html, "university_name") ?? manifestEntry.universityName,
     applications,
+    admitted,
     averageScore,
     priority1Scores
   };
@@ -96,13 +99,15 @@ function rank(offers, level) {
         hue: slug ? SLUG_HUE[slug] : PALETTE_HUES[Math.abs(uid) % PALETTE_HUES.length],
         weighted: 0,
         applications: 0,
+        admitted: 0,
         p1Sum: 0,
         p1Applications: 0
       });
     }
     const row = grouped.get(id);
-    row.weighted += offer.averageScore * offer.applications;
+    row.weighted += offer.averageScore * offer.admitted;
     row.applications += offer.applications;
+    row.admitted += offer.admitted;
     for (const score of offer.priority1Scores) {
       row.p1Sum += score;
       row.p1Applications += 1;
@@ -110,11 +115,12 @@ function rank(offers, level) {
   }
 
   const all = [...grouped.values()]
-    .filter((row) => row.applications >= MIN_APPLICATIONS[level])
+    .filter((row) => row.applications >= MIN_APPLICATIONS[level] && row.admitted > 0)
     .map((row) => ({
       id: row.id, name: row.name, short: row.short, hue: row.hue,
-      score: Math.round((row.weighted / row.applications) * 10) / 10,
-      applications: row.applications
+      score: Math.round((row.weighted / row.admitted) * 10) / 10,
+      applications: row.applications,
+      admitted: row.admitted
     }))
     .sort((a, b) => b.score - a.score)
     .map((row, index) => ({ ...row, rank: index + 1 }));
@@ -139,6 +145,7 @@ function kyivDate() {
 }
 
 const sumApps = (rows) => rows.reduce((sum, row) => sum + row.applications, 0);
+const sumAdmitted = (rows) => rows.reduce((sum, row) => sum + (row.admitted || 0), 0);
 
 async function main() {
   const manifest = JSON.parse(await readFile("data/2026-offers.json", "utf8"));
@@ -165,6 +172,9 @@ async function main() {
     totalApplications: {
       bachelor: sumApps(bachelor.all), master: sumApps(master.all),
       bachelorP1: sumApps(bachelor.p1), masterP1: sumApps(master.p1)
+    },
+    totalAdmitted: {
+      bachelor: sumAdmitted(bachelor.all), master: sumAdmitted(master.all)
     },
     _offers: {
       bachelor: offers.filter((offer) => offer.level === "bachelor"),

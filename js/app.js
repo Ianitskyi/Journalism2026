@@ -1,15 +1,10 @@
 const state = {
   degree: "bachelor",
-  view: "all", // "all" | "p1"
   sortBy: "score", // "score" | "applications"
   year: DB.currentYear,
   dateIndex: DB.byYear[DB.currentYear].dates.length - 1,
   expanded: false
 };
-
-function rowsKey(degree, view) {
-  return view === "p1" ? degree + "P1" : degree;
-}
 
 function uniName(row) {
   return getLang() === "en" ? (row.nameEn || row.name) : row.name;
@@ -61,41 +56,15 @@ function currentSnapshot() {
   return snapshotAt(state.dateIndex);
 }
 
-function prevRankMap() {
-  if (state.dateIndex === 0) return null;
-  const prevRaw = snapshotAt(state.dateIndex - 1)[rowsKey(state.degree, state.view)];
-  const prev = sortedRows(prevRaw, state.sortBy);
-  const map = new Map();
-  for (const r of prev) map.set(r.id, r.rank);
-  return map;
-}
-
-function deltaMarkup(row, prevMap) {
-  if (!prevMap) return `<span class="delta flat">—</span>`;
-  const prevRank = prevMap.get(row.id);
-  if (prevRank == null) return `<span class="delta new">NEW</span>`;
-  const diff = prevRank - row.rank;
-  if (diff > 0) return `<span class="delta up">▲ ${diff}</span>`;
-  if (diff < 0) return `<span class="delta down">▼ ${Math.abs(diff)}</span>`;
-  return `<span class="delta flat">—</span>`;
-}
-
 function renderStats(snap, rows) {
-  document.getElementById("stat-apps-bachelor").textContent =
-    numFmt().format(snap.totalApplications[rowsKey("bachelor", state.view)]);
-  document.getElementById("stat-apps-master").textContent =
-    numFmt().format(snap.totalApplications[rowsKey("master", state.view)]);
+  document.getElementById("stat-submitted").textContent =
+    numFmt().format(snap.totalApplications[state.degree] || 0);
+  document.getElementById("stat-admitted").textContent =
+    numFmt().format(snap.totalAdmitted?.[state.degree] ?? rows.reduce((sum, row) => sum + (row.admitted || 0), 0));
   document.getElementById("stat-count").textContent = rows.length;
   const topScore = rows.length ? Math.max(...rows.map((r) => r.score)) : null;
   document.getElementById("stat-topscore").textContent = topScore != null ? topScore.toFixed(1) : "—";
 
-  document.getElementById("stat-bachelor-label").textContent =
-    t(state.view === "p1" ? "stats.appsBachelorP1" : "stats.appsBachelor");
-  document.getElementById("stat-master-label").textContent =
-    t(state.view === "p1" ? "stats.appsMasterP1" : "stats.appsMaster");
-
-  document.getElementById("stat-bachelor").classList.toggle("dim", state.degree !== "bachelor");
-  document.getElementById("stat-master").classList.toggle("dim", state.degree !== "master");
 }
 
 function renderYearChips() {
@@ -163,7 +132,7 @@ function renderPodium(rows) {
       <div class="podium-logo" style="background:hsl(${r.hue} 62% 46%)">${uniShort(r).slice(0, 2).toUpperCase()}</div>
       <div class="podium-name">${uniName(r)}</div>
       <div class="podium-score">${r.score.toFixed(1)}</div>
-      <div class="podium-apps">${numFmt().format(r.applications)} ${t("unit.applications")}</div>
+      <div class="podium-apps">${numFmt().format(r.applications)} ${t("unit.submitted")} · ${numFmt().format(r.admitted || 0)} ${t("unit.admitted")}</div>
     `;
     podium.appendChild(card);
   }
@@ -172,24 +141,20 @@ function renderPodium(rows) {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
-  const rawRows = snap[rowsKey(state.degree, state.view)];
+  const rawRows = snap[state.degree];
   const rows = sortedRows(rawRows, state.sortBy);
-  const prevMap = prevRankMap();
   const isFinal = state.year !== DB.currentYear;
-  const minApps = state.view === "p1"
-    ? DB.minApplicationsP1[state.degree]
-    : DB.minApplications[state.degree];
+  const minApps = DB.minApplications[state.degree];
 
   document.getElementById("asof-date").textContent = `${fmtDateFull(snap.date)}, ${fmtTime(snap.asOf)}`;
 
-  const scopeNote = state.view === "p1" ? t("caption.p1Note") : "";
   document.getElementById("caption").textContent = isFinal
-    ? t("caption.final", { year: state.year, minApps, scopeNote })
-    : t("caption.live", { date: fmtDateUA(snap.date), minApps, scopeNote });
+    ? t("caption.final", { year: state.year, minApps })
+    : t("caption.live", { date: fmtDateUA(snap.date), minApps });
+  document.getElementById("live-disclaimer").hidden = isFinal;
 
   document.getElementById("card-subtitle").textContent =
-    t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel") +
-    (state.view === "p1" ? t("view.p1Suffix") : "");
+    t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");
 
   document.getElementById("th-score").classList.toggle("sort-active", state.sortBy === "score");
   document.getElementById("th-apps").classList.toggle("sort-active", state.sortBy === "applications");
@@ -217,9 +182,9 @@ function render() {
             <div class="univ-name">${uniName(r)}</div>
           </a>
         </td>
-        <td class="num delta-cell">${deltaMarkup(r, prevMap)}</td>
         <td class="num"><div class="score">${r.score.toFixed(1)}</div></td>
         <td class="num"><div class="applications">${numFmt().format(r.applications)}</div></td>
+        <td class="num"><div class="applications">${numFmt().format(r.admitted || 0)}</div></td>
       `;
       tbody.appendChild(tr);
     }
@@ -266,24 +231,6 @@ function initTabs() {
   syncIndicator(indicator, buttons.find((b) => b.classList.contains("active")));
 }
 
-function initViewTabs() {
-  const indicator = document.getElementById("view-tabs-indicator");
-  const buttons = [...document.querySelectorAll("[data-view]")];
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      state.view = btn.dataset.view;
-      state.expanded = false;
-      buttons.forEach((b) => {
-        b.classList.toggle("active", b === btn);
-        b.setAttribute("aria-selected", b === btn ? "true" : "false");
-      });
-      syncIndicator(indicator, btn);
-      render();
-    });
-  });
-  syncIndicator(indicator, buttons.find((b) => b.classList.contains("active")));
-}
-
 function initSortTabs() {
   const indicator = document.getElementById("sort-tabs-indicator");
   const buttons = [...document.querySelectorAll("[data-sort]")];
@@ -303,7 +250,6 @@ function initSortTabs() {
 
 function resyncIndicators() {
   syncIndicator(document.getElementById("tabs-indicator"), document.querySelector("#tabs .pill.active"));
-  syncIndicator(document.getElementById("view-tabs-indicator"), document.querySelector("#view-tabs .pill.active"));
   syncIndicator(document.getElementById("sort-tabs-indicator"), document.querySelector("#sort-tabs .pill.active"));
 }
 
@@ -315,7 +261,6 @@ function initShowAll() {
 }
 
 initTabs();
-initViewTabs();
 initSortTabs();
 initShowAll();
 window.onLangChange = () => { render(); resyncIndicators(); };

@@ -13,28 +13,30 @@ const I18N = {
     },
     meta: {
       indexTitle: "Рейтинг журфаків України. Вступ 2026",
-      indexDesc: "Рейтинг журфаків України за середнім конкурсним балом вступників на спеціальність «Журналістика» — бакалаврат і магістратура. Дані ЄДЕБО.",
+      indexDesc: "Рейтинг журфаків України за кількістю заяв і середнім конкурсним балом допущених до конкурсу на спеціальність «Журналістика». Дані ЄДЕБО.",
       uniTitleSuffix: "Журфак.Рейтинг",
       uniDefaultTitle: "Динаміка журфаку — Рейтинг журфаків України",
       uniDesc: "Динаміка популярності журфаку або програми журналістики: середній конкурсний бал і кількість заяв по роках."
     },
     hero: {
-      eyebrow: "Вступна кампанія 2026 · спеціальність 061 «Журналістика»",
+      eyebrow: "Вступна кампанія 2026 · спеціальність C7 «Журналістика»",
       title: "Рейтинг журфаків України",
-      lede: "Рейтинг факультетів і програм журналістики за середнім конкурсним балом вступників — окремо бакалаврат, окремо магістратура.",
+      lede: "Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом допущених до конкурсу — окремо бакалаврат, окремо магістратура.",
       updated: "Оновлено"
     },
     banner: {
-      demo: "⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>, а не реальна вибірка ЄДЕБО. Список університетів — справжній. Деталі підключення живих даних — у README.",
+      demo: "Дані за <strong>2021–2025 роки — реальні підсумкові дані ЄДЕБО</strong>. Для поточного 2026 року до завершення підключення показано демонстраційний fallback; стан даних завжди зазначено під обраним роком.",
       demoUni: "⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>, а не реальна вибірка ЄДЕБО. Деталі — у README."
     },
     stats: {
+      submitted: "Подано заяв",
+      admitted: "Допущено до конкурсу",
       appsBachelor: "Заяв · бакалаврат",
       appsBachelorP1: "Заяв · бакалаврат (пріоритет 1)",
       appsMaster: "Заяв · магістратура",
       appsMasterP1: "Заяв · магістратура (пріоритет 1)",
       count: "Журфаків у рейтингу",
-      topScore: "Найвищий бал"
+      topScore: "Найвищий середній бал допущених"
     },
     degree: {
       bachelor: "Бакалавр",
@@ -49,8 +51,8 @@ const I18N = {
     },
     sort: {
       label: "Сортувати за",
-      score: "Балом",
-      applications: "Заявами"
+      score: "Середнім балом допущених",
+      applications: "Кількістю заяв"
     },
     hint: "«Пріоритет 1» — рейтинг лише по заявах, де журналістика в цьому закладі вказана вступником як перший, свідомий вибір (а не запасний варіант).",
     year: {
@@ -59,19 +61,28 @@ const I18N = {
       today: "Сьогодні"
     },
     caption: {
-      final: "Підсумкові дані вступної кампанії {year} року. Заклади освіти щонайменше з {minApps} заявами.{scopeNote}",
-      live: "Станом на {date}. Заклади освіти щонайменше з {minApps} заявами.{scopeNote}",
+      final: "Підсумкові дані вступної кампанії {year} року. Усі пріоритети; заклади освіти щонайменше з {minApps} поданими заявами.",
+      live: "Станом на {date}. Усі пріоритети; заклади освіти щонайменше з {minApps} поданими заявами.",
       p1Note: " Лише заяви з пріоритетом №1."
     },
     table: {
       institution: "Заклад",
-      score: "Бал",
-      applications: "Заяв",
+      score: "Середній бал допущених",
+      applications: "Подано заяв",
+      admitted: "Допущено",
       fullRanking: "Повний рейтинг",
       year: "Рік",
       rank: "Ранг"
     },
-    unit: { applications: "заяв" },
+    unit: { applications: "заяв", submitted: "подано", admitted: "допущено" },
+    disclaimer: {
+      liveHtml: "<strong>2026 рік — поточні, незавершені дані.</strong> Кількість заяв, кількість допущених і середній бал можуть змінюватися протягом кампанії. Коректно зіставляти 2026 рік із підсумковими даними попередніх років можна буде лише після завершення вступної кампанії та фіксації фінального знімка."
+    },
+    methodology: {
+      kicker: "Про рейтинг",
+      title: "Методологія, обмеження та припущення",
+      bodyHtml: "<article><h3>Що ми вимірюємо</h3><p>Для кожного закладу освіти окремо агрегуємо конкурсні пропозиції спеціальності «Журналістика»: код 061 у 2021–2024 роках і відповідний код C7 з 2025 року. Бакалаврат і магістратуру не змішуємо.</p><p>Показуємо три показники: <strong>усі подані заяви</strong> незалежно від пріоритету; <strong>заяви, допущені до конкурсу</strong>; <strong>середній конкурсний бал допущених</strong>.</p></article><article><h3>Як рахуємо рейтинг</h3><p>Є два незалежні сортування: за кількістю всіх поданих заяв і за середнім балом допущених. Якщо ЗВО має кілька конкурсних пропозицій, кількість заяв і допущених підсумовуємо, а середній бал обчислюємо як зважене середнє, де вага — кількість допущених у кожній пропозиції.</p><p>До таблиці потрапляють ЗВО, що мають щонайменше встановлений для рівня мінімум поданих заяв. Це зменшує випадкові стрибки середнього бала на дуже малих вибірках.</p></article><article><h3>Як читати числа</h3><p>Одна людина може подати кілька заяв до різних ЗВО або програм, тому «подано заяв» — це не кількість унікальних вступників. Показник описує попит на програму, а середній бал допущених — конкурсний профіль її допущених кандидатів. Це не рейтинг фактично зарахованих студентів.</p><p>Рейтинг не вимірює якість викладання, репутацію, працевлаштування чи додану цінність програми й не доводить причинно-наслідкових зв’язків.</p></article><article><h3>Порівнянність років</h3><p>Архівні роки подано за фінальними даними кампаній; 2026 рік — оперативний зріз, доки кампанія триває. Його слід порівнювати з минулими роками лише після фіналізації.</p><p>Навіть фінальні значення треба трактувати обережно: між роками змінювалися правила вступу, формула та коефіцієнти конкурсного бала, дозволена кількість заяв, перелік і структура програм, форми навчання та класифікація спеціальностей. Ми припускаємо, що агреговані поля ЄДЕБО мають однаковий зміст у межах порівнюваних кампаній.</p></article>"
+    },
     empty: {
       noDataDay: "Немає даних для цього дня.",
       allShown: "Це весь рейтинг — топ-3 показано вище.",
@@ -99,8 +110,8 @@ const I18N = {
     },
     footer: {
       initiative: "Ініціатива",
-      dataSourceHtml: "Джерело даних (після підключення): ЄДЕБО (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>).",
-      dataSourceNote: "Наразі показано тестові дані — дашборд ще не підключено до живого фіда."
+      dataSourceHtml: "Джерело даних: ЄДЕБО (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>).",
+      dataSourceNote: "Архівні кампанії показано за фінальними даними; статус поточного року зазначено в рейтингу."
     },
     uni: {
       eyebrow: "Динаміка популярності · спеціальність «Журналістика»",
@@ -112,7 +123,8 @@ const I18N = {
       compareLabel: "Порівняти з",
       compareNone: "— не порівнювати —",
       compareVs: "{a} проти {b}",
-      subtitlePlain: "суцільна — усі заяви, пунктир — лише пріоритет 1",
+      subtitlePlain: "середній конкурсний бал допущених до конкурсу",
+      admittedAverage: "Середній бал допущених",
       rankingByYear: "Рейтинг по роках",
       noChartData: "Немає даних для побудови графіка.",
       chartAriaLabel: "Динаміка балу по роках",
@@ -127,28 +139,30 @@ const I18N = {
     },
     meta: {
       indexTitle: "Ukrainian Journalism Schools Ranking. Admissions 2026",
-      indexDesc: "Ranking of Ukrainian journalism schools by average competitive score of applicants to the Journalism major — bachelor's and master's. Data from EDBO.",
+      indexDesc: "Ranking of Ukrainian journalism schools by application count and average competitive score of candidates admitted to the competition. EDBO data.",
       uniTitleSuffix: "Journalism School Ranking",
       uniDefaultTitle: "Journalism Program Trends — Ukrainian Journalism Schools Ranking",
       uniDesc: "Popularity trend of a journalism school or program: average competitive score and number of applications by year."
     },
     hero: {
-      eyebrow: "2026 admissions campaign · major 061 “Journalism”",
+      eyebrow: "2026 admissions campaign · major C7 “Journalism”",
       title: "Ukrainian Journalism Schools Ranking",
-      lede: "Ranking of journalism faculties and programs by applicants' average competitive score — bachelor's and master's shown separately.",
+      lede: "Ranking of journalism faculties and programs by submitted applications and the average competitive score of candidates admitted to the competition — bachelor's and master's shown separately.",
       updated: "Updated"
     },
     banner: {
-      demo: "⚠️ Demo version: the scores and application counts below are <strong>generated test data</strong>, not a real EDBO sample. The list of universities is real. See README for details on connecting live data.",
+      demo: "<strong>2021–2025 use real final EDBO data.</strong> Until the current 2026 connection is complete, that year uses a demo fallback; the status is always stated below the selected year.",
       demoUni: "⚠️ Demo version: the scores and application counts below are <strong>generated test data</strong>, not a real EDBO sample. See README for details."
     },
     stats: {
+      submitted: "Applications submitted",
+      admitted: "Admitted to competition",
       appsBachelor: "Applications · bachelor's",
       appsBachelorP1: "Applications · bachelor's (priority 1)",
       appsMaster: "Applications · master's",
       appsMasterP1: "Applications · master's (priority 1)",
       count: "Schools in ranking",
-      topScore: "Highest score"
+      topScore: "Highest admitted average"
     },
     degree: {
       bachelor: "Bachelor's",
@@ -163,8 +177,8 @@ const I18N = {
     },
     sort: {
       label: "Sort by",
-      score: "Score",
-      applications: "Applications"
+      score: "Admitted average score",
+      applications: "Application count"
     },
     hint: "“Priority 1” ranks only applications where the applicant listed journalism at this school as their first, deliberate choice (not a fallback option).",
     year: {
@@ -173,19 +187,28 @@ const I18N = {
       today: "Today"
     },
     caption: {
-      final: "Final data for the {year} admissions campaign. Institutions with at least {minApps} applications.{scopeNote}",
-      live: "As of {date}. Institutions with at least {minApps} applications.{scopeNote}",
+      final: "Final data for the {year} admissions campaign. All priorities; institutions with at least {minApps} submitted applications.",
+      live: "As of {date}. All priorities; institutions with at least {minApps} submitted applications.",
       p1Note: " Priority 1 applications only."
     },
     table: {
       institution: "Institution",
-      score: "Score",
-      applications: "Applications",
+      score: "Average score of admitted",
+      applications: "Applications submitted",
+      admitted: "Admitted",
       fullRanking: "Full ranking",
       year: "Year",
       rank: "Rank"
     },
-    unit: { applications: "applications" },
+    unit: { applications: "applications", submitted: "submitted", admitted: "admitted" },
+    disclaimer: {
+      liveHtml: "<strong>2026 figures are live and incomplete.</strong> Submitted and admitted application counts and the average score may change during the campaign. A sound comparison with final historical figures will only be possible after the 2026 campaign closes and a final snapshot is fixed."
+    },
+    methodology: {
+      kicker: "About the ranking",
+      title: "Methodology, limitations and assumptions",
+      bodyHtml: "<article><h3>What we measure</h3><p>For each institution, we aggregate competitive offers in Journalism: code 061 in 2021–2024 and its successor C7 from 2025. Bachelor's and master's data are kept separate.</p><p>We show three measures: <strong>all submitted applications</strong>, regardless of priority; <strong>applications admitted to the competition</strong>; and the <strong>average competitive score of admitted applications</strong>.</p></article><article><h3>How rankings are calculated</h3><p>There are two independent sort orders: all submitted applications and average score of admitted applications. If an institution has several competitive offers, submitted and admitted counts are summed. Its score is a weighted average, using the admitted count for each offer as the weight.</p><p>An institution enters the table only after reaching the level-specific minimum number of submitted applications. This limits volatility caused by very small samples.</p></article><article><h3>How to interpret the figures</h3><p>One person may submit several applications to different institutions or programs. “Applications submitted” is therefore not a count of unique people. It indicates demand, while the admitted average describes the competitive profile of eligible candidates. This is not a ranking of students who ultimately enrolled.</p><p>The ranking does not measure teaching quality, reputation, employment outcomes or program value added, and it does not establish causality.</p></article><article><h3>Comparability across years</h3><p>Historical years use final campaign data. The 2026 figures are a live snapshot while admissions remain open and should be compared with earlier years only after finalisation.</p><p>Even final values require caution: admission rules, score formulas and coefficients, application limits, program structures, study modes and speciality classifications changed over time. We assume that the selected aggregate EDBO fields retain comparable meanings within the campaigns shown.</p></article>"
+    },
     empty: {
       noDataDay: "No data for this day.",
       allShown: "This is the entire ranking — top 3 shown above.",
@@ -213,8 +236,8 @@ const I18N = {
     },
     footer: {
       initiative: "An initiative by",
-      dataSourceHtml: "Data source (once connected): EDBO (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>).",
-      dataSourceNote: "Currently showing test data — the dashboard is not yet connected to a live feed."
+      dataSourceHtml: "Data source: EDBO (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>).",
+      dataSourceNote: "Archived campaigns use final figures; the current year's status is stated in the ranking."
     },
     uni: {
       eyebrow: "Popularity trend · Journalism major",
@@ -226,7 +249,8 @@ const I18N = {
       compareLabel: "Compare with",
       compareNone: "— don't compare —",
       compareVs: "{a} vs {b}",
-      subtitlePlain: "solid — all applications, dashed — priority 1 only",
+      subtitlePlain: "average competitive score of candidates admitted to the competition",
+      admittedAverage: "Average score of admitted",
       rankingByYear: "Ranking by year",
       noChartData: "No data to build a chart.",
       chartAriaLabel: "Score trend by year",

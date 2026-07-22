@@ -60,19 +60,19 @@
 
       <div class="stats-row" id="stats-row">
         <div class="stat-tile" id="stat-bachelor">
-          <div class="stat-label" id="stat-bachelor-label">Заяв · бакалаврат</div>
-          <div class="stat-value" id="stat-apps-bachelor">—</div>
+          <div class="stat-label" data-i18n="stats.submitted">Подано заяв</div>
+          <div class="stat-value" id="stat-submitted">—</div>
         </div>
         <div class="stat-tile" id="stat-master">
-          <div class="stat-label" id="stat-master-label">Заяв · магістратура</div>
-          <div class="stat-value" id="stat-apps-master">—</div>
+          <div class="stat-label" data-i18n="stats.admitted">Допущено до конкурсу</div>
+          <div class="stat-value" id="stat-admitted">—</div>
         </div>
         <div class="stat-tile">
           <div class="stat-label" data-i18n="stats.count">Журфаків у рейтингу</div>
           <div class="stat-value" id="stat-count">—</div>
         </div>
         <div class="stat-tile">
-          <div class="stat-label" data-i18n="stats.topScore">Найвищий бал</div>
+          <div class="stat-label" data-i18n="stats.topScore">Найвищий середній бал допущених</div>
           <div class="stat-value accent" id="stat-topscore">—</div>
         </div>
       </div>
@@ -84,17 +84,12 @@
             <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true" data-i18n="degree.bachelor">Бакалавр</button>
             <button class="pill" data-degree="master" role="tab" aria-selected="false" data-i18n="degree.master">Магістр</button>
           </div>
-          <div class="tabs tabs-sm" id="view-tabs" role="tablist">
-            <span class="tabs-indicator" id="view-tabs-indicator"></span>
-            <button class="pill active" data-view="all" role="tab" aria-selected="true" data-i18n="view.all">Усі заяви</button>
-            <button class="pill" data-view="p1" role="tab" aria-selected="false" data-i18n="view.p1">Пріоритет 1</button>
-          </div>
         </div>
         <div class="date-chips" id="date-chips"></div>
       </div>
 
       <p class="caption" id="caption"></p>
-      <p class="view-hint" data-i18n="hint">«Пріоритет 1» — рейтинг лише по заявах, де журналістика в цьому закладі вказана вступником як перший, свідомий вибір (а не запасний варіант).</p>
+      <div class="live-disclaimer" id="live-disclaimer" data-i18n-html="disclaimer.liveHtml"></div>
 
       <div class="sort-row">
         <span class="sort-row-label" data-i18n="sort.label">Сортувати за</span>
@@ -120,9 +115,9 @@
             <tr>
               <th></th>
               <th data-i18n="table.institution">Заклад</th>
-              <th class="num">Δ</th>
-              <th class="num" id="th-score" data-i18n="table.score">Бал</th>
-              <th class="num" id="th-apps" data-i18n="table.applications">Заяв</th>
+              <th class="num" id="th-score" data-i18n="table.score">Середній бал допущених</th>
+              <th class="num" id="th-apps" data-i18n="table.applications">Подано заяв</th>
+              <th class="num" data-i18n="table.admitted">Допущено</th>
             </tr>
           </thead>
           <tbody id="rank-body"></tbody>
@@ -142,13 +137,6 @@
         </p>
       </div>
 
-      <div class="side-card legend-box">
-        <div class="legend-title" data-i18n="legend.title">Як читати Δ</div>
-        <div class="legend-row"><span class="delta up">▲ 2</span> <span data-i18n="legend.up">піднявся на 2 місця за добу</span></div>
-        <div class="legend-row"><span class="delta down">▼ 1</span> <span data-i18n="legend.down">опустився на 1 місце</span></div>
-        <div class="legend-row"><span class="delta new">NEW</span> <span data-i18n="legend.new">вперше в рейтингу цього дня</span></div>
-      </div>
-
       <div class="side-card source-box">
         <div class="legend-title" data-i18n="source.title">Джерело</div>
         <p data-i18n-html="source.html">Єдина державна електронна база з питань освіти (<strong>ЄДЕБО</strong>), рейтингові списки вступників по конкурсних пропозиціях спеціальності «Журналістика».</p>
@@ -156,6 +144,12 @@
       </div>
     </aside>
   </div>
+
+  <section class="methodology" id="methodology">
+    <div class="methodology-kicker" data-i18n="methodology.kicker">Про рейтинг</div>
+    <h2 data-i18n="methodology.title">Методологія, обмеження та припущення</h2>
+    <div class="methodology-grid" data-i18n-html="methodology.bodyHtml"></div>
+  </section>
 
   <footer class="site-footer">
     <a class="footer-brand" href="https://promedia.report" target="_blank" rel="noopener">

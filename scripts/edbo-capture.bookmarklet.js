@@ -6,7 +6,8 @@
  * 3. Вставляє цей файл і натискає Enter.
  *
  * Скрипт не робить мережевих запитів. Він завантажує HTML і структурований
- * JSON з уже показаними в браузері даними: готовими rqs_total/rqs_kv_avg,
+ * JSON з уже показаними в браузері даними: готовими
+ * rqs_total/rqs_allowed/rqs_kv_avg,
  * конкурсними балами та пріоритетами. JSON можна передати в
  * scripts/import-edbo-manual.mjs через --capture.
  */
@@ -86,6 +87,7 @@
       universityName,
       level,
       applications: numberFromRsc(html, "rqs_total") ?? scores.length,
+      admitted: numberFromRsc(html, "rqs_allowed") ?? scores.length,
       averageScore: numberFromRsc(html, "rqs_kv_avg") ??
         (scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : null),
       scores,
@@ -99,7 +101,8 @@
   if (capture.offer) {
     console.log(
       `Збережено пропозицію ${capture.offer.offerId}: ` +
-      `${capture.offer.applications} заяв, середній бал ${capture.offer.averageScore}.`
+      `${capture.offer.applications} заяв, допущено ${capture.offer.admitted}, ` +
+      `середній бал допущених ${capture.offer.averageScore}.`
     );
   } else {
     console.warn("HTML збережено, але це не сторінка /offer/<id>. Відкрий «До списку вступників» і повтори.");
