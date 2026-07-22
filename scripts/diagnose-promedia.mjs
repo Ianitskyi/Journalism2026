@@ -153,6 +153,24 @@ async function main() {
   const bodyText = await page.evaluate(() => document.body.innerText.replace(/\s+/g, " ").slice(0, 1500)).catch(() => "");
   log(`\n=== ПЕРШІ 1500 СИМВОЛІВ ТЕКСТУ СТОРІНКИ ===\n${bodyText}`);
 
+  // ---------- лого: сирий SVG хедер-лінка й футер-лого ----------
+  const headerLogoOuterHtml = await page.evaluate(() => {
+    const el = document.querySelector("a.logo, .logo a, header .logo, a[class*=logo]");
+    return el ? el.outerHTML.slice(0, 4000) : null;
+  }).catch((err) => `помилка: ${err.message}`);
+  log(`\n=== outerHTML елемента хедер-лого (.logo) ===\n${headerLogoOuterHtml}`);
+
+  const footerLogoSrc = images.find((i) => /logo-footer/i.test(i.src))?.src;
+  if (footerLogoSrc) {
+    try {
+      const resp = await context.request.get(footerLogoSrc, { timeout: 15_000 });
+      const svgText = await resp.text();
+      log(`\n=== СИРИЙ SVG ${footerLogoSrc} (${svgText.length} символів) ===\n${svgText}`);
+    } catch (err) {
+      log(`Не вдалось завантажити footer-лого: ${err.message}`);
+    }
+  }
+
   const html = await page.content().catch(() => "");
   await writeFile(OUT_DIR + "page.html", html, "utf8");
 
