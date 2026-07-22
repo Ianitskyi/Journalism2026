@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install
+      - run: npm run diagnose-edbo-fetch-js
       - run: npx playwright install --with-deps chromium
       - run: npm run diagnose-edbo-history-search
       - run: npm run diagnose-datagovua
