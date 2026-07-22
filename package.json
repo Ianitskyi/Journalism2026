@@ -1,0 +1,11 @@
+{
+  "name": "journalism2026-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "diagnose-edbo": "node scripts/diagnose-edbo.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

@@ -16,6 +16,7 @@
       <span class="brand-mark">Ж</span>
       <span class="brand-text">Журфак<span class="accent-dot">.</span>Рейтинг</span>
     </a>
+    <span class="topbar-org">Ініціатива ГО «ПроМедіа»</span>
   </div>
 </header>
 
@@ -52,11 +53,11 @@
 
       <div class="stats-row" id="stats-row">
         <div class="stat-tile" id="stat-bachelor">
-          <div class="stat-label">Заяв · бакалаврат</div>
+          <div class="stat-label" id="stat-bachelor-label">Заяв · бакалаврат</div>
           <div class="stat-value" id="stat-apps-bachelor">—</div>
         </div>
         <div class="stat-tile" id="stat-master">
-          <div class="stat-label">Заяв · магістратура</div>
+          <div class="stat-label" id="stat-master-label">Заяв · магістратура</div>
           <div class="stat-value" id="stat-apps-master">—</div>
         </div>
         <div class="stat-tile">
@@ -70,15 +71,32 @@
       </div>
 
       <div class="controls">
-        <div class="tabs" id="tabs" role="tablist">
-          <span class="tabs-indicator" id="tabs-indicator"></span>
-          <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true">Бакалавр</button>
-          <button class="pill" data-degree="master" role="tab" aria-selected="false">Магістр</button>
+        <div class="tabs-stack">
+          <div class="tabs" id="tabs" role="tablist">
+            <span class="tabs-indicator" id="tabs-indicator"></span>
+            <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true">Бакалавр</button>
+            <button class="pill" data-degree="master" role="tab" aria-selected="false">Магістр</button>
+          </div>
+          <div class="tabs tabs-sm" id="view-tabs" role="tablist">
+            <span class="tabs-indicator" id="view-tabs-indicator"></span>
+            <button class="pill active" data-view="all" role="tab" aria-selected="true">Усі заяви</button>
+            <button class="pill" data-view="p1" role="tab" aria-selected="false">Пріоритет 1</button>
+          </div>
         </div>
         <div class="date-chips" id="date-chips"></div>
       </div>
 
       <p class="caption" id="caption"></p>
+      <p class="view-hint">«Пріоритет 1» — рейтинг лише по заявах, де журналістика в цьому ЗВО вказана вступником як перший, свідомий вибір (а не запасний варіант).</p>
+
+      <div class="sort-row">
+        <span class="sort-row-label">Сортувати за</span>
+        <div class="tabs tabs-sm" id="sort-tabs" role="tablist">
+          <span class="tabs-indicator" id="sort-tabs-indicator"></span>
+          <button class="pill active" data-sort="score" role="tab" aria-selected="true">Балом</button>
+          <button class="pill" data-sort="applications" role="tab" aria-selected="false">Заявами</button>
+        </div>
+      </div>
 
       <div class="podium" id="podium"></div>
 
@@ -96,8 +114,8 @@
               <th></th>
               <th>ВНЗ</th>
               <th class="num">Δ</th>
-              <th class="num">Бал</th>
-              <th class="num">Заяв</th>
+              <th class="num" id="th-score">Бал</th>
+              <th class="num" id="th-apps">Заяв</th>
             </tr>
           </thead>
           <tbody id="rank-body"></tbody>
@@ -133,6 +151,7 @@
   </div>
 
   <footer class="site-footer">
+    Ініціатива ГО «ПроМедіа».<br />
     Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).<br />
     Наразі показано тестові дані — дашборд ще не підключено до живого фіда.
   </footer>

@@ -5,12 +5,27 @@ const DEGREE_META = {
 
 const state = {
   degree: "bachelor",
+  view: "all", // "all" | "p1"
+  sortBy: "score", // "score" | "applications"
   year: DB.currentYear,
   dateIndex: DB.byYear[DB.currentYear].dates.length - 1,
   expanded: false
 };
 
 const UAH_NUM = new Intl.NumberFormat("uk-UA");
+
+function rowsKey(degree, view) {
+  return view === "p1" ? degree + "P1" : degree;
+}
+
+/* повертає новий масив, відсортований і проранжований за обраним
+   критерієм — сирі дані завжди зберігають ранг за балом, тож для
+   сортування за кількістю заяв ранги рахуємо наново */
+function sortedRows(rawRows, sortBy) {
+  return [...rawRows]
+    .sort((a, b) => b[sortBy] - a[sortBy])
+    .map((r, i) => ({ ...r, rank: i + 1 }));
+}
 
 function fmtDateUA(dateStr) {
   const d = new Date(dateStr + "T00:00:00Z");
@@ -47,7 +62,8 @@ function currentSnapshot() {
 
 function prevRankMap() {
   if (state.dateIndex === 0) return null;
-  const prev = snapshotAt(state.dateIndex - 1)[state.degree];
+  const prevRaw = snapshotAt(state.dateIndex - 1)[rowsKey(state.degree, state.view)];
+  const prev = sortedRows(prevRaw, state.sortBy);
   const map = new Map();
   for (const r of prev) map.set(r.id, r.rank);
   return map;
@@ -64,10 +80,18 @@ function deltaMarkup(row, prevMap) {
 }
 
 function renderStats(snap, rows) {
-  document.getElementById("stat-apps-bachelor").textContent = UAH_NUM.format(snap.totalApplications.bachelor);
-  document.getElementById("stat-apps-master").textContent = UAH_NUM.format(snap.totalApplications.master);
+  document.getElementById("stat-apps-bachelor").textContent =
+    UAH_NUM.format(snap.totalApplications[rowsKey("bachelor", state.view)]);
+  document.getElementById("stat-apps-master").textContent =
+    UAH_NUM.format(snap.totalApplications[rowsKey("master", state.view)]);
   document.getElementById("stat-count").textContent = rows.length;
-  document.getElementById("stat-topscore").textContent = rows.length ? rows[0].score.toFixed(1) : "—";
+  const topScore = rows.length ? Math.max(...rows.map((r) => r.score)) : null;
+  document.getElementById("stat-topscore").textContent = topScore != null ? topScore.toFixed(1) : "—";
+
+  document.getElementById("stat-bachelor-label").textContent =
+    state.view === "p1" ? "Заяв · бакалаврат (пріоритет 1)" : "Заяв · бакалаврат";
+  document.getElementById("stat-master-label").textContent =
+    state.view === "p1" ? "Заяв · магістратура (пріоритет 1)" : "Заяв · магістратура";
 
   document.getElementById("stat-bachelor").classList.toggle("dim", state.degree !== "bachelor");
   document.getElementById("stat-master").classList.toggle("dim", state.degree !== "master");
@@ -130,7 +154,8 @@ function renderPodium(rows) {
   if (!rows.length) return;
   const top3 = rows.slice(0, 3);
   for (const r of top3) {
-    const card = document.createElement("div");
+    const card = document.createElement("a");
+    card.href = `university.html?id=${encodeURIComponent(r.id)}`;
     card.className = `podium-card rank-${r.rank}`;
     card.innerHTML = `
       <div class="podium-medal">${r.rank}</div>
@@ -146,18 +171,27 @@ function renderPodium(rows) {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
-  const rows = snap[state.degree];
+  const rawRows = snap[rowsKey(state.degree, state.view)];
+  const rows = sortedRows(rawRows, state.sortBy);
   const meta = DEGREE_META[state.degree];
   const prevMap = prevRankMap();
   const isFinal = yearData.dates.length <= 1;
+  const minApps = state.view === "p1"
+    ? DB.minApplicationsP1[state.degree]
+    : DB.minApplications[state.degree];
 
   document.getElementById("asof-date").textContent = `${fmtDateFull(snap.date)}, ${fmtTime(snap.asOf)}`;
 
+  const scopeNote = state.view === "p1" ? " Лише заяви з пріоритетом №1." : "";
   document.getElementById("caption").textContent = isFinal
-    ? `Підсумкові дані вступної кампанії ${state.year} року. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`
-    : `Станом на ${fmtDateUA(snap.date)}. Заклади освіти щонайменше з ${DB.minApplications[state.degree]} заявами.`;
+    ? `Підсумкові дані вступної кампанії ${state.year} року. Заклади освіти щонайменше з ${minApps} заявами.${scopeNote}`
+    : `Станом на ${fmtDateUA(snap.date)}. Заклади освіти щонайменше з ${minApps} заявами.${scopeNote}`;
 
-  document.getElementById("card-subtitle").textContent = meta.label;
+  document.getElementById("card-subtitle").textContent =
+    meta.label + (state.view === "p1" ? " · пріоритет 1" : "");
+
+  document.getElementById("th-score").classList.toggle("sort-active", state.sortBy === "score");
+  document.getElementById("th-apps").classList.toggle("sort-active", state.sortBy === "applications");
 
   renderStats(snap, rows);
   renderPodium(rows);
@@ -177,10 +211,10 @@ function render() {
       tr.innerHTML = `
         <td><div class="rank">${r.rank}</div></td>
         <td>
-          <div class="univ-cell">
+          <a class="univ-cell" href="university.html?id=${encodeURIComponent(r.id)}">
             <div class="univ-logo" style="background:hsl(${r.hue} 62% 46%)">${r.short.slice(0, 2).toUpperCase()}</div>
             <div class="univ-name">${r.name}</div>
-          </div>
+          </a>
         </td>
         <td class="num delta-cell">${deltaMarkup(r, prevMap)}</td>
         <td class="num"><div class="score">${r.score.toFixed(1)}</div></td>
@@ -210,7 +244,38 @@ function initTabs() {
     btn.addEventListener("click", () => {
       state.degree = btn.dataset.degree;
       state.expanded = false;
-      document.querySelectorAll("[data-degree]").forEach((b, j) => {
+      document.querySelectorAll("[data-degree]").forEach((b) => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      indicator.style.transform = `translateX(${i * 100}%)`;
+      render();
+    });
+  });
+}
+
+function initViewTabs() {
+  const indicator = document.getElementById("view-tabs-indicator");
+  document.querySelectorAll("[data-view]").forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      state.view = btn.dataset.view;
+      state.expanded = false;
+      document.querySelectorAll("[data-view]").forEach((b) => {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      indicator.style.transform = `translateX(${i * 100}%)`;
+      render();
+    });
+  });
+}
+
+function initSortTabs() {
+  const indicator = document.getElementById("sort-tabs-indicator");
+  document.querySelectorAll("[data-sort]").forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      state.sortBy = btn.dataset.sort;
+      document.querySelectorAll("[data-sort]").forEach((b) => {
         b.classList.toggle("active", b === btn);
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
       });
@@ -228,5 +293,7 @@ function initShowAll() {
 }
 
 initTabs();
+initViewTabs();
+initSortTabs();
 initShowAll();
 render();

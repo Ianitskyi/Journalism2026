@@ -94,6 +94,17 @@ a { color: inherit; }
 
 .accent-dot { color: var(--accent); }
 
+.topbar-org {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .topbar-org { display: none; }
+}
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -296,6 +307,24 @@ a { color: inherit; }
   margin-bottom: 14px;
 }
 
+.tabs-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tabs-sm {
+  transform: scale(0.92);
+  transform-origin: left center;
+}
+
+.view-hint {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: -14px 0 18px;
+}
+
 .tabs {
   position: relative;
   display: inline-flex;
@@ -376,6 +405,22 @@ a { color: inherit; }
   margin: 0 0 22px;
 }
 
+.sort-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sort-row-label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  flex: none;
+}
+
 /* ---------- podium ---------- */
 
 .podium {
@@ -395,7 +440,18 @@ a { color: inherit; }
   text-align: center;
   min-width: 0;
   order: 2;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s, box-shadow .15s;
 }
+
+.podium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -18px rgba(23, 19, 33, 0.3);
+}
+
+.podium-card.rank-1:hover { transform: translateY(-12px); }
 
 .podium-card.rank-1 {
   order: 1;
@@ -527,6 +583,8 @@ thead th {
 
 thead th.num, td.num { text-align: right; }
 
+thead th.sort-active { color: var(--accent); }
+
 tbody tr {
   border-top: 1px solid var(--border);
   transition: background .12s;
@@ -556,6 +614,8 @@ td {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .univ-logo {
@@ -717,6 +777,203 @@ td {
   font-size: 14px;
 }
 
+/* ---------- university page ---------- */
+
+.uni-wrap { margin-top: 28px; }
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 18px;
+}
+
+.back-link:hover { color: var(--accent); }
+
+.uni-not-found {
+  background: var(--card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.uni-not-found a { color: var(--accent); font-weight: 700; text-decoration: none; }
+
+.uni-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.uni-hero-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.uni-hero-eyebrow {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.uni-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.uni-stats-row { margin: 22px 0; }
+
+.trend-up { color: var(--green); }
+.trend-down { color: var(--red); }
+
+.chart-card { padding: 22px 18px 18px; }
+
+.chart-wrap { padding: 4px 0 0; }
+
+.chart-empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.chart-svg { width: 100%; height: auto; overflow: visible; }
+
+.chart-baseline { stroke: var(--border); stroke-width: 1; }
+
+.chart-line {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-line-all { stroke: var(--accent); }
+.chart-line-p1 { stroke: var(--gold); stroke-dasharray: 6 5; }
+
+.chart-dot-all { fill: var(--accent); }
+.chart-dot-p1 { fill: var(--gold); }
+
+.chart-axis-label {
+  fill: var(--muted);
+  font-size: 11px;
+  font-family: var(--sans);
+  font-weight: 600;
+}
+
+.chart-line-compare { stroke: var(--ink-soft); }
+.chart-dot-compare { fill: var(--ink-soft); }
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 4px 4px 0;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.chart-legend-swatch {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  flex: none;
+}
+
+.chart-legend-swatch.dashed {
+  background: repeating-linear-gradient(90deg, currentColor 0 6px, transparent 6px 10px);
+}
+
+.compare-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px 14px;
+  flex-wrap: wrap;
+}
+
+.compare-label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.compare-select {
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 7px 14px;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.compare-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.compare-col {
+  background: var(--card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 16px 18px;
+  min-width: 0;
+}
+
+.compare-col-name {
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+.compare-col.is-primary .compare-col-name { color: var(--accent); }
+
+.compare-metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 5px 0;
+  border-top: 1px solid var(--border);
+}
+
+.compare-metric:first-of-type { border-top: none; }
+
+.compare-metric span:first-child { color: var(--muted); }
+.compare-metric span:last-child { font-weight: 700; }
+
 /* ---------- responsive ---------- */
 
 @media (min-width: 620px) {
@@ -745,6 +1002,7 @@ td {
   thead th:nth-child(5), td:nth-child(5) { width: 54px; }
   .univ-logo { width: 26px; height: 26px; font-size: 10px; }
   .univ-cell { gap: 8px; }
+  .compare-panel { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 360px) {

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Динаміка ЗВО — Журфак.Рейтинг</title>
+<meta name="description" content="Динаміка популярності закладу вищої освіти на спеціальності «Журналістика»: середній конкурсний бал і кількість заяв по роках." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Ж</span>
+      <span class="brand-text">Журфак<span class="accent-dot">.</span>Рейтинг</span>
+    </a>
+    <span class="topbar-org">Ініціатива ГО «ПроМедіа»</span>
+  </div>
+</header>
+
+<main class="wrap uni-wrap">
+
+  <a class="back-link" href="index.html">← До рейтингу</a>
+
+  <div class="test-banner">
+    ⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>,
+    а не реальна вибірка ЄДЕБО. Деталі — у README.
+  </div>
+
+  <div id="uni-not-found" class="empty-state uni-not-found" style="display:none">
+    Такий заклад освіти не знайдено. <a href="index.html">Повернутись до рейтингу →</a>
+  </div>
+
+  <div id="uni-content">
+
+    <div class="uni-hero">
+      <div class="uni-hero-logo" id="uni-logo">—</div>
+      <div>
+        <div class="uni-hero-eyebrow">Динаміка популярності · спеціальність «Журналістика»</div>
+        <h1 id="uni-name">—</h1>
+      </div>
+    </div>
+
+    <div class="tabs" id="uni-degree-tabs" role="tablist">
+      <span class="tabs-indicator" id="uni-degree-indicator"></span>
+      <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true">Бакалавр</button>
+      <button class="pill" data-degree="master" role="tab" aria-selected="false">Магістр</button>
+    </div>
+
+    <div class="stats-row uni-stats-row">
+      <div class="stat-tile">
+        <div class="stat-label">Найкращий ранг</div>
+        <div class="stat-value accent" id="uni-best-rank">—</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Ранг зараз</div>
+        <div class="stat-value" id="uni-current-rank">—</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Бал зараз</div>
+        <div class="stat-value" id="uni-current-score">—</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Зміна балу з 2021</div>
+        <div class="stat-value" id="uni-trend">—</div>
+      </div>
+    </div>
+
+    <div class="card chart-card">
+      <div class="card-head chart-card-head">
+        <div class="card-icon">📈</div>
+        <div>
+          <div class="card-title">Середній конкурсний бал по роках</div>
+          <div class="card-subtitle" id="chart-subtitle"></div>
+        </div>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">Порівняти з</span>
+        <select class="compare-select" id="compare-select">
+          <option value="">— не порівнювати —</option>
+        </select>
+      </div>
+      <div class="chart-wrap" id="chart-wrap"></div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+
+    <div class="compare-panel" id="compare-panel" style="display:none"></div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">📊</div>
+        <div>
+          <div class="card-title">Рейтинг по роках</div>
+          <div class="card-subtitle" id="uni-table-subtitle"></div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Рік</th>
+            <th class="num">Ранг</th>
+            <th class="num">Бал</th>
+            <th class="num">Заяв</th>
+          </tr>
+        </thead>
+        <tbody id="uni-year-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    Ініціатива ГО «ПроМедіа».<br />
+    Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).<br />
+    Наразі показано тестові дані — дашборд ще не підключено до живого фіда.
+  </footer>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/university.js"></script>
+</body>
+</html>

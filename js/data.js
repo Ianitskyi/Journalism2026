@@ -13,6 +13,11 @@
    раніше); 2021–2025 — по одному підсумковому знімку на рік
    (кампанія завершена, проміжної історії немає). Всі числа так само
    згенеровані, а не взяті з ЄДЕБО.
+
+   Кожен знімок містить два незалежно проранжовані зрізи: "усі заяви"
+   (bachelor/master) та "лише заяви з пріоритетом №1" (bachelorP1/
+   masterP1) — коли цей ЗВО був свідомим першим вибором вступника,
+   а не запасним варіантом.
    ========================================================= */
 
 const TODAY = "2026-07-21";
@@ -62,6 +67,16 @@ const MASTER_UNIS = [
 
 /* мінімальна кількість заяв, щоб ЗВО потрапив у рейтинг */
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };
+/* те саме, але для заяв із пріоритетом №1 (їх завжди менше за загальну кількість) */
+const MIN_APPLICATIONS_P1 = { bachelor: 8, master: 5 };
+
+/* частка заяв, де ЗВО вказаний пріоритетом №1: залежить від "престижності"
+   (базового балу) — популярніші ЗВО частіше є свідомим першим вибором,
+   а не запасним варіантом */
+function priority1Share(baseScore) {
+  const s = 0.22 + (baseScore - 100) / 280;
+  return Math.min(0.62, Math.max(0.22, s));
+}
 
 /* ---------- детермінований генератор тестових знімків ---------- */
 function mulberry32(seed) {
@@ -85,19 +100,49 @@ function dateMinusDays(dateStr, n) {
   return d.toISOString().slice(0, 10);
 }
 
-function buildDayList(unis, dayIndex, minApps) {
-  const rows = unis.map((u) => {
+const round1 = (n) => Math.round(n * 10) / 10;
+
+function sumApps(rows) {
+  return rows.reduce((s, r) => s + r.applications, 0);
+}
+
+/* рахує "усі заяви" та "лише пріоритет 1" одним проходом і повертає обидва
+   незалежно відсортовані й проранжовані списки */
+function rankBoth(base, minApps, minAppsP1) {
+  const all = base
+    .filter((r) => r.applications >= minApps)
+    .sort((a, b) => b.score - a.score)
+    .map(({ id, name, short, hue, score, applications }, i) => ({ id, name, short, hue, score, applications, rank: i + 1 }));
+
+  const p1 = base
+    .filter((r) => r.p1Applications >= minAppsP1)
+    .sort((a, b) => b.p1Score - a.p1Score)
+    .map(({ id, name, short, hue, p1Score, p1Applications }, i) =>
+      ({ id, name, short, hue, score: p1Score, applications: p1Applications, rank: i + 1 }));
+
+  return { all, p1 };
+}
+
+function buildDayList(unis, dayIndex, minApps, minAppsP1) {
+  const base = unis.map((u) => {
     const rnd = mulberry32(hashStr(u.id) ^ (dayIndex * 2654435761));
     const drift = (rnd() - 0.5) * 1.4;                 // невеликий денний шум бала
     const growth = 1 + (HISTORY_DAYS - dayIndex) * 0.05 + rnd() * 0.03; // заяви ростуть ближче до "сьогодні"
     const score = Math.max(100, u.baseScore + drift - (HISTORY_DAYS - dayIndex) * 0.15);
     const applications = Math.round(u.baseApps * growth);
-    return { id: u.id, name: u.name, short: u.short, hue: u.hue, score: Math.round(score * 10) / 10, applications };
-  })
-  .filter((r) => r.applications >= minApps)
-  .sort((a, b) => b.score - a.score)
-  .map((r, i) => ({ ...r, rank: i + 1 }));
-  return rows;
+
+    const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (dayIndex * 2654435761));
+    const share = priority1Share(u.baseScore);
+    const p1Applications = Math.round(applications * share * (0.9 + rndP1() * 0.2));
+    const p1Score = Math.max(100, score + (rndP1() - 0.5) * 2.0);
+
+    return {
+      id: u.id, name: u.name, short: u.short, hue: u.hue,
+      score: round1(score), applications,
+      p1Score: round1(p1Score), p1Applications
+    };
+  });
+  return rankBoth(base, minApps, minAppsP1);
 }
 
 function buildSnapshots() {
@@ -105,16 +150,20 @@ function buildSnapshots() {
   for (let i = 0; i <= HISTORY_DAYS; i++) {
     const date = dateMinusDays(TODAY, i);
     const dayIndex = HISTORY_DAYS - i; // 0 = найдавніший, HISTORY_DAYS = сьогодні
-    const bachelor = buildDayList(BACHELOR_UNIS, dayIndex, MIN_APPLICATIONS.bachelor);
-    const master = buildDayList(MASTER_UNIS, dayIndex, MIN_APPLICATIONS.master);
+    const bachelor = buildDayList(BACHELOR_UNIS, dayIndex, MIN_APPLICATIONS.bachelor, MIN_APPLICATIONS_P1.bachelor);
+    const master = buildDayList(MASTER_UNIS, dayIndex, MIN_APPLICATIONS.master, MIN_APPLICATIONS_P1.master);
     snapshots[date] = {
       date,
       asOf: date === TODAY ? `${date}T23:30:00+03:00` : `${date}T23:59:00+03:00`,
-      bachelor,
-      master,
+      bachelor: bachelor.all,
+      master: master.all,
+      bachelorP1: bachelor.p1,
+      masterP1: master.p1,
       totalApplications: {
-        bachelor: bachelor.reduce((s, r) => s + r.applications, 0),
-        master: master.reduce((s, r) => s + r.applications, 0)
+        bachelor: sumApps(bachelor.all),
+        master: sumApps(master.all),
+        bachelorP1: sumApps(bachelor.p1),
+        masterP1: sumApps(master.p1)
       }
     };
   }
@@ -123,35 +172,46 @@ function buildSnapshots() {
 
 /* підсумковий (єдиний) знімок для завершеної кампанії минулих років:
    бал і кількість заяв поступово нижчі, чим давніший рік */
-function buildYearFinalList(unis, year, minApps) {
+function buildYearFinalList(unis, year, minApps, minAppsP1) {
   const yearsAgo = CURRENT_YEAR - year;
-  const rows = unis.map((u) => {
+  const base = unis.map((u) => {
     const rnd = mulberry32(hashStr(u.id) ^ (year * 40503));
     const drift = (rnd() - 0.5) * 2.4;
     const score = Math.max(100, u.baseScore - yearsAgo * 1.7 + drift);
     const appsFactor = Math.max(0.3, 1 - yearsAgo * 0.1 + (rnd() - 0.5) * 0.08);
     const applications = Math.round(u.baseApps * appsFactor);
-    return { id: u.id, name: u.name, short: u.short, hue: u.hue, score: Math.round(score * 10) / 10, applications };
-  })
-  .filter((r) => r.applications >= minApps)
-  .sort((a, b) => b.score - a.score)
-  .map((r, i) => ({ ...r, rank: i + 1 }));
-  return rows;
+
+    const rndP1 = mulberry32(hashStr(u.id + ":p1") ^ (year * 40503));
+    const share = priority1Share(u.baseScore);
+    const p1Applications = Math.round(applications * share * (0.9 + rndP1() * 0.2));
+    const p1Score = Math.max(100, score + (rndP1() - 0.5) * 2.4);
+
+    return {
+      id: u.id, name: u.name, short: u.short, hue: u.hue,
+      score: round1(score), applications,
+      p1Score: round1(p1Score), p1Applications
+    };
+  });
+  return rankBoth(base, minApps, minAppsP1);
 }
 
 function buildYearFinalSnapshot(year) {
   const date = `${year}-08-05`;
-  const bachelor = buildYearFinalList(BACHELOR_UNIS, year, MIN_APPLICATIONS.bachelor);
-  const master = buildYearFinalList(MASTER_UNIS, year, MIN_APPLICATIONS.master);
+  const bachelor = buildYearFinalList(BACHELOR_UNIS, year, MIN_APPLICATIONS.bachelor, MIN_APPLICATIONS_P1.bachelor);
+  const master = buildYearFinalList(MASTER_UNIS, year, MIN_APPLICATIONS.master, MIN_APPLICATIONS_P1.master);
   return {
     date,
     asOf: `${date}T18:00:00+03:00`,
     final: true,
-    bachelor,
-    master,
+    bachelor: bachelor.all,
+    master: master.all,
+    bachelorP1: bachelor.p1,
+    masterP1: master.p1,
     totalApplications: {
-      bachelor: bachelor.reduce((s, r) => s + r.applications, 0),
-      master: master.reduce((s, r) => s + r.applications, 0)
+      bachelor: sumApps(bachelor.all),
+      master: sumApps(master.all),
+      bachelorP1: sumApps(bachelor.p1),
+      masterP1: sumApps(master.p1)
     }
   };
 }
@@ -170,5 +230,6 @@ const DB = {
   years: [...PAST_YEARS, CURRENT_YEAR],
   currentYear: CURRENT_YEAR,
   byYear: BY_YEAR,
-  minApplications: MIN_APPLICATIONS
+  minApplications: MIN_APPLICATIONS,
+  minApplicationsP1: MIN_APPLICATIONS_P1
 };
