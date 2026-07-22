@@ -1,32 +1,14 @@
 /*
- * Bookmarklet/консольний скрипт для РУЧНОГО імпорту даних ЄДЕБО.
+ * Консольний скрипт для РУЧНОГО збереження вже відкритої сторінки ЄДЕБО.
  *
- * Навіщо: реальний пошук на vstup.edbo.gov.ua захищений Cloudflare Turnstile
- * (див. README, розділ "Підключення реальних даних ЄДЕБО") — автоматичний
- * headless-скрипт отримує капчу замість даних. Але коли пошук робить
- * ЖИВА ЛЮДИНА у звичайному браузері (Turnstile проходить як завжди), сторінка
- * з результатами відкрита нормально — і ось цей скрипт лише ЗБЕРІГАЄ те, що
- * вже показано в браузері. Жодного обходу захисту тут немає: дані вже
- * доступні тобі як звичайному користувачу, скрипт просто економить
- * копіювання вручну.
+ * 1. Людина сама проходить Turnstile і знаходить потрібну пропозицію.
+ * 2. На сторінці /offer/<id> відкриває DevTools -> Console.
+ * 3. Вставляє цей файл і натискає Enter.
  *
- * ЯК КОРИСТУВАТИСЬ:
- * 1. Зайди на https://vstup.edbo.gov.ua у звичайному браузері, пройди пошук:
- *    відкрий "Конкурсні пропозиції" → обери Спеціальність "Журналістика" (061),
- *    Освітній рівень (бакалавр або магістр), Регіон "усі" → "Пошук".
- * 2. Відкрий DevTools → Console (F12) на сторінці з результатами.
- * 3. Встав увесь вміст цього файлу в консоль і натисни Enter.
- * 4. Браузер завантажить (download) два файли:
- *      edbo-capture-<timestamp>.html  — повний HTML сторінки як є
- *      edbo-capture-<timestamp>.json  — best-effort здогад по "рядках" з
- *                                        числами, що схожі на бал/кількість
- * 5. Якщо це сторінка зі списком конкурсних пропозицій — повтори для кожного
- *    рівня (бакалавр/магістр). Якщо це вже рейтинговий список абітурієнтів
- *    конкретної пропозиції — збережи так само для кожної пропозиції ЗВО.
- * 6. Віддай збережені .html файли (або мені, або
- *    node scripts/import-edbo-manual.mjs) для перетворення в data/*.json.
- *
- * Скрипт нічого нікуди не відправляє — тільки завантажує файли локально.
+ * Скрипт не робить мережевих запитів. Він завантажує HTML і структурований
+ * JSON з уже показаними в браузері даними: готовими rqs_total/rqs_kv_avg,
+ * конкурсними балами та пріоритетами. JSON можна передати в
+ * scripts/import-edbo-manual.mjs через --capture.
  */
 (function () {
   function download(filename, content, mime) {
@@ -41,34 +23,85 @@
     setTimeout(() => URL.revokeObjectURL(url), 5000);
   }
 
+  function numberFromRsc(html, field) {
+    const normalized = html.replace(/\\"/g, '"');
+    const match = normalized.match(new RegExp(`"${field}":"?(-?\\d+(?:\\.\\d+)?)`));
+    return match ? Number(match[1]) : null;
+  }
+
+  const html = document.documentElement.outerHTML;
+  const normalizedRsc = html.replace(/\\"/g, '"');
   const ts = new Date().toISOString().replace(/[:.]/g, "-");
+  const offerId = numberFromRsc(html, "university_specialities_id") ||
+    Number(location.pathname.match(/^\/offer\/(\d+)/)?.[1] || 0) || null;
+  const universityId = numberFromRsc(html, "university_id");
+  const qualificationGroupId = numberFromRsc(html, "qualification_group_id");
 
-  // 1) повний HTML сторінки — найнадійніше джерело, парситься пізніше
-  download(`edbo-capture-${ts}.html`, document.documentElement.outerHTML, "text/html");
+  const main = document.querySelector("main");
+  const mainText = (main?.innerText || "").replace(/\s+/g, " ");
+  const level = qualificationGroupId === 1 || /БАКАЛАВР/i.test(mainText)
+    ? "bachelor"
+    : qualificationGroupId === 2 || /МАГІСТР/i.test(mainText)
+      ? "master"
+      : null;
 
-  // 2) best-effort здогад: шукаємо елементи, чий текст містить число
-  // схоже на конкурсний бал (100-200, 1-3 знаки після коми) — типові
-  // "листові" елементи (без дітей-блоків), щоб не хапати контейнери
-  const scoreLike = /\b(1[0-9]{2}(?:[.,]\d{1,3})?)\b/;
-  const candidates = [];
-  document.querySelectorAll("body *").forEach((el) => {
-    if (el.children.length > 2) return; // пропускаємо контейнери
-    const text = (el.textContent || "").trim().replace(/\s+/g, " ");
-    if (!text || text.length > 200) return;
-    if (scoreLike.test(text)) {
-      candidates.push({
-        tag: el.tagName.toLowerCase(),
-        className: (el.className || "").toString().slice(0, 80),
-        text
-      });
-    }
-  });
+  const rows = [...document.querySelectorAll("table tbody tr")];
+  const applicantRows = rows
+    .map((row) => [...row.querySelectorAll("td")].map((cell) => cell.innerText.trim()))
+    .filter((cells) => cells.length >= 7 && /^\d+$/.test(cells[0] || ""));
 
-  download(
-    `edbo-capture-${ts}.json`,
-    JSON.stringify({ url: location.href, capturedAt: new Date().toISOString(), candidates }, null, 2),
-    "application/json"
-  );
+  const visibleScores = applicantRows
+    .map((cells) => Number((cells[6] || "").replace(",", ".")))
+    .filter((value) => Number.isFinite(value) && value >= 100 && value <= 200);
+  const visiblePriority1Scores = applicantRows
+    .filter((cells) => /^1(?:\s|$)/.test(cells[3] || ""))
+    .map((cells) => Number((cells[6] || "").replace(",", ".")))
+    .filter((value) => Number.isFinite(value) && value >= 100 && value <= 200);
 
-  console.log(`Збережено edbo-capture-${ts}.html і .json. Кандидатів з числами: ${candidates.length}`);
+  // HTML Next.js містить усі заяви, навіть якщо таблиця показує лише одну
+  // сторінку. Беремо повний набір із RSC, а DOM лишаємо як fallback.
+  const rscScores = [];
+  const rscPriority1Scores = [];
+  const requestPattern = /"konkurs_value":([0-9.]+),"priority":(\d+|null)/g;
+  for (const match of normalizedRsc.matchAll(requestPattern)) {
+    const score = Number(match[1]);
+    if (!Number.isFinite(score) || score < 100 || score > 200) continue;
+    rscScores.push(score);
+    if (match[2] === "1") rscPriority1Scores.push(score);
+  }
+  const scores = rscScores.length ? rscScores : visibleScores;
+  const priority1Scores = rscScores.length ? rscPriority1Scores : visiblePriority1Scores;
+
+  const universityName = [...document.querySelectorAll("main div, main span")]
+    .map((el) => el.textContent?.trim() || "")
+    .find((text) => /університет|академія|інститут/i.test(text) && text.length < 250) || null;
+
+  const capture = {
+    schemaVersion: 1,
+    url: location.href,
+    capturedAt: new Date().toISOString(),
+    offer: offerId ? {
+      offerId,
+      universityId,
+      universityName,
+      level,
+      applications: numberFromRsc(html, "rqs_total") ?? scores.length,
+      averageScore: numberFromRsc(html, "rqs_kv_avg") ??
+        (scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : null),
+      scores,
+      priority1Scores
+    } : null
+  };
+
+  download(`edbo-capture-${ts}.html`, html, "text/html");
+  download(`edbo-capture-${ts}.json`, JSON.stringify(capture, null, 2), "application/json");
+
+  if (capture.offer) {
+    console.log(
+      `Збережено пропозицію ${capture.offer.offerId}: ` +
+      `${capture.offer.applications} заяв, середній бал ${capture.offer.averageScore}.`
+    );
+  } else {
+    console.warn("HTML збережено, але це не сторінка /offer/<id>. Відкрий «До списку вступників» і повтори.");
+  }
 })();

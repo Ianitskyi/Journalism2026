@@ -52,6 +52,15 @@ const UNIVERSITIES = {
   npu:      { name: "НПУ ім. М. П. Драгоманова",                      short: "НПУ",         hue: 330 }
 };
 
+const UID_TO_SLUG = {
+  41: "knu", 282: "lnu", 79: "naukma", 244: "ucu", 28: "onu",
+  62: "karazin", 111: "dnu", 73: "znu", 44: "vnu", 207: "uzhnu",
+  101: "cnu", 6945: "kubg", 246: "donnu", 198: "cpu", 81: "lnu-shev",
+  19: "mdu", 61: "chnu", 168: "sumdu", 6704: "npu"
+};
+
+const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300, 260, 18, 100, 220, 280, 170, 330];
+
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };
 const MIN_APPLICATIONS_P1 = { bachelor: 8, master: 5 };
 
@@ -99,6 +108,78 @@ function sumApps(rows) {
   return rows.reduce((s, r) => s + r.applications, 0);
 }
 
+function shortName(name) {
+  const words = name.replace(/["'«»“”()]/g, " ").split(/\s+/).filter((word) => word.length > 2);
+  return (words.slice(0, 4).map((word) => word[0]).join("") || name.slice(0, 4)).toUpperCase();
+}
+
+function metaForCapturedOffer(offer) {
+  const slug = UID_TO_SLUG[offer.universityId];
+  if (slug && UNIVERSITIES[slug]) return { id: slug, ...UNIVERSITIES[slug] };
+  const uid = Number(offer.universityId) || 0;
+  const name = offer.universityName || `Заклад ЄДЕБО ${uid || "без id"}`;
+  return {
+    id: uid ? `edbo${uid}` : `manual-${Buffer.from(name).toString("hex").slice(0, 12)}`,
+    name,
+    short: shortName(name),
+    hue: PALETTE_HUES[Math.abs(uid) % PALETTE_HUES.length]
+  };
+}
+
+function rebuildLevel(snapshot, level) {
+  const manualEntries = snapshot._entries?.[level] || [];
+  const offers = snapshot._offers?.[level] || [];
+  const grouped = new Map();
+
+  for (const offer of offers) {
+    const meta = metaForCapturedOffer(offer);
+    if (!grouped.has(meta.id)) {
+      grouped.set(meta.id, {
+        ...meta,
+        _level: level,
+        weightedScoreSum: 0,
+        applications: 0,
+        p1ScoreSum: 0,
+        p1Applications: 0
+      });
+    }
+    const row = grouped.get(meta.id);
+    row.weightedScoreSum += Number(offer.averageScore) * Number(offer.applications);
+    row.applications += Number(offer.applications);
+    for (const score of offer.priority1Scores || []) {
+      row.p1ScoreSum += Number(score);
+      row.p1Applications += 1;
+    }
+  }
+
+  const capturedEntries = [...grouped.values()].map((row) => ({
+    id: row.id,
+    name: row.name,
+    short: row.short,
+    hue: row.hue,
+    _level: level,
+    score: round1(row.weightedScoreSum / row.applications),
+    applications: row.applications,
+    ...(row.p1Applications ? {
+      p1Score: round1(row.p1ScoreSum / row.p1Applications),
+      p1Applications: row.p1Applications
+    } : {})
+  }));
+
+  const capturedIds = new Set(capturedEntries.map((entry) => entry.id));
+  return rankBoth([...manualEntries.filter((entry) => !capturedIds.has(entry.id)), ...capturedEntries]);
+}
+
+async function updateCurrentIndex(date) {
+  const file = path.join("data", "2026-index.json");
+  let dates = [];
+  try {
+    dates = JSON.parse(await readFile(file, "utf8"));
+  } catch {}
+  dates = [...new Set([...dates, date])].filter((value) => /^2026-\d{2}-\d{2}$/.test(value)).sort();
+  await writeFile(file, JSON.stringify(dates, null, 2) + "\n", "utf8");
+}
+
 async function loadSnapshot(file, date) {
   try {
     const raw = await readFile(file, "utf8");
@@ -113,7 +194,8 @@ async function loadSnapshot(file, date) {
       masterP1: [],
       // _entries зберігає сирі агреговані рядки (до ранжування), щоб можна
       // було дописувати нові ЗВО в той самий знімок кількома запусками
-      _entries: { bachelor: [], master: [] }
+      _entries: { bachelor: [], master: [] },
+      _offers: { bachelor: [], master: [] }
     };
   }
 }
@@ -124,6 +206,68 @@ async function main() {
   const date = args.date || new Date().toISOString().slice(0, 10);
   const level = args.level;
   const universityId = args.university;
+
+  if (args.capture) {
+    const captureFiles = String(args.capture).split(",").map((value) => value.trim()).filter(Boolean);
+    const captures = await Promise.all(captureFiles.map(async (file) => JSON.parse(await readFile(file, "utf8"))));
+    const offers = captures.map((capture) => capture.offer).filter(Boolean);
+    if (!offers.length) throw new Error("У capture-файлах немає поля offer. Запускай консольний скрипт на сторінці /offer/<id>.");
+
+    const outDir = "data";
+    const outFile = path.join(outDir, `${date}.json`);
+    await mkdir(outDir, { recursive: true });
+    const snapshot = await loadSnapshot(outFile, date);
+    snapshot._entries ||= { bachelor: [], master: [] };
+    snapshot._offers ||= { bachelor: [], master: [] };
+
+    for (const offer of offers) {
+      if (!offer.offerId || !["bachelor", "master"].includes(offer.level)) {
+        throw new Error("Capture не містить коректних offerId/level.");
+      }
+      if (!Number.isFinite(Number(offer.applications)) || !Number.isFinite(Number(offer.averageScore))) {
+        throw new Error(`Capture пропозиції ${offer.offerId} не містить applications/averageScore.`);
+      }
+      const list = snapshot._offers[offer.level] || [];
+      snapshot._offers[offer.level] = [...list.filter((item) => item.offerId !== offer.offerId), offer];
+    }
+
+    for (const currentLevel of ["bachelor", "master"]) {
+      const ranked = rebuildLevel(snapshot, currentLevel);
+      snapshot[currentLevel] = ranked.all;
+      snapshot[`${currentLevel}P1`] = ranked.p1;
+    }
+    snapshot.date = date;
+    snapshot.asOf = new Date().toISOString();
+    snapshot.totalApplications = {
+      bachelor: sumApps(snapshot.bachelor || []),
+      master: sumApps(snapshot.master || []),
+      bachelorP1: sumApps(snapshot.bachelorP1 || []),
+      masterP1: sumApps(snapshot.masterP1 || [])
+    };
+
+    await writeFile(outFile, JSON.stringify(snapshot, null, 2), "utf8");
+    const manifestFile = path.join("data", "2026-offers.json");
+    let manifest = { offers: [] };
+    try {
+      manifest = JSON.parse(await readFile(manifestFile, "utf8"));
+    } catch {}
+    for (const offer of offers) {
+      manifest.offers = [
+        ...(manifest.offers || []).filter((item) => item.offerId !== offer.offerId),
+        {
+          offerId: offer.offerId,
+          level: offer.level,
+          universityId: offer.universityId,
+          universityName: offer.universityName
+        }
+      ];
+    }
+    manifest.offers.sort((a, b) => a.offerId - b.offerId);
+    await writeFile(manifestFile, JSON.stringify(manifest, null, 2) + "\n", "utf8");
+    await updateCurrentIndex(date);
+    console.log(`Імпортовано ${offers.length} capture-файл(ів) → ${outFile}`);
+    return;
+  }
 
   if (!level || !["bachelor", "master"].includes(level)) {
     console.error("Потрібен --level bachelor|master");
@@ -193,6 +337,7 @@ async function main() {
   snapshot.asOf = new Date().toISOString().replace(/\.\d+Z$/, "+03:00");
 
   await writeFile(outFile, JSON.stringify(snapshot, null, 2), "utf8");
+  await updateCurrentIndex(date);
 
   console.log(
     `Записано ${universityId} (${level}): бал ${entry.score}, заяв ${entry.applications}` +

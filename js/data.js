@@ -269,6 +269,50 @@ async function loadRealHistoricalData() {
 
 loadRealHistoricalData();
 
+/* Реальні щоденні знімки поточної кампанії. Список файлів веде ручний
+   імпортер у data/2026-index.json. Якщо індексу або знімків ще немає,
+   лишається детермінований демо-fallback із buildSnapshots(). */
+async function loadRealCurrentData() {
+  try {
+    const indexResp = await fetch(`data/${CURRENT_YEAR}-index.json`);
+    if (!indexResp.ok) throw new Error(`HTTP ${indexResp.status}`);
+
+    const dates = (await indexResp.json())
+      .filter((date) => /^2026-\d{2}-\d{2}$/.test(date))
+      .sort();
+    if (!dates.length) return;
+
+    const results = await Promise.allSettled(
+      dates.map(async (date) => {
+        const resp = await fetch(`data/${date}.json`);
+        if (!resp.ok) throw new Error(`${date}: HTTP ${resp.status}`);
+        return resp.json();
+      })
+    );
+
+    const snapshots = {};
+    for (const result of results) {
+      if (result.status === "fulfilled" && result.value?.date) {
+        snapshots[result.value.date] = result.value;
+      } else if (result.status === "rejected") {
+        console.warn("Не вдалось завантажити знімок ЄДЕБО 2026:", result.reason);
+      }
+    }
+
+    const loadedDates = Object.keys(snapshots).sort();
+    if (!loadedDates.length) return;
+
+    BY_YEAR[CURRENT_YEAR] = { dates: loadedDates, snapshots };
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("edbo-data-updated"));
+    }
+  } catch (err) {
+    console.warn("Реальних знімків ЄДЕБО за 2026 рік ще немає, лишаю демо-fallback:", err);
+  }
+}
+
+loadRealCurrentData();
+
 const DB = {
   years: [...PAST_YEARS, CURRENT_YEAR],
   currentYear: CURRENT_YEAR,
