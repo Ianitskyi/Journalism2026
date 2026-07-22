@@ -976,10 +976,8 @@ td {
 }
 
 .chart-line-all { stroke: var(--accent-dark); }
-.chart-line-p1 { stroke: var(--gold); stroke-dasharray: 6 5; }
 
 .chart-dot-all { fill: var(--accent-dark); }
-.chart-dot-p1 { fill: var(--gold); }
 
 .chart-axis-label {
   fill: var(--muted);

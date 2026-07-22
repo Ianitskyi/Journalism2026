@@ -236,21 +236,15 @@ async function loadRealHistoricalData() {
 
 loadRealHistoricalData();
 
-/* Реальні щоденні знімки поточної кампанії. Список файлів веде ручний
-   імпортер у data/2026-index.json. Якщо індексу або знімків ще немає,
+/* Реальний знімок поточної кампанії — єдиний файл data/2026-current.json,
+   який щоразу перезаписується скриптами fetch-edbo-current.mjs /
+   import-edbo-manual.mjs. Попередні дні свідомо не зберігаються: нас
+   цікавлять лише останні дані станом на сьогодні. Якщо файла ще немає,
    лишається детермінований демо-fallback із buildSnapshots(). */
 async function loadRealCurrentData() {
   try {
-    const indexResp = await fetch(`data/${CURRENT_YEAR}-index.json`);
-    if (!indexResp.ok) throw new Error(`HTTP ${indexResp.status}`);
-
-    const dates = (await indexResp.json())
-      .filter((date) => /^2026-\d{2}-\d{2}$/.test(date))
-      .sort();
-    if (!dates.length) return;
-    const latestDate = dates.at(-1);
-    const resp = await fetch(`data/${latestDate}.json`);
-    if (!resp.ok) throw new Error(`${latestDate}: HTTP ${resp.status}`);
+    const resp = await fetch(`data/${CURRENT_YEAR}-current.json`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const snapshot = await resp.json();
     BY_YEAR[CURRENT_YEAR] = {
       dates: [snapshot.date],
@@ -260,7 +254,7 @@ async function loadRealCurrentData() {
       window.dispatchEvent(new CustomEvent("edbo-data-updated"));
     }
   } catch (err) {
-    console.warn("Реальних знімків ЄДЕБО за 2026 рік ще немає, лишаю демо-fallback:", err);
+    console.warn("Реального знімка ЄДЕБО за 2026 рік ще немає, лишаю демо-fallback:", err);
   }
 }
 

@@ -205,8 +205,8 @@ function render() {
 }
 
 /* позиціонує повзунок-індикатор по фактичних пікселях активної кнопки —
-   ширини вкладок нерівні між мовами (напр. "All applications" довше за
-   "Усі заяви"), тож фіксовані 50%/translateX тут не підходять */
+   ширини вкладок нерівні між мовами (напр. "Bachelor's" довше за
+   "Бакалавр"), тож фіксовані 50%/translateX тут не підходять */
 function syncIndicator(indicator, activeBtn) {
   if (!indicator || !activeBtn) return;
   indicator.style.left = `${activeBtn.offsetLeft}px`;

@@ -156,9 +156,8 @@ async function main() {
   };
 
   await mkdir("data", { recursive: true });
-  await writeFile(`data/${date}.json`, JSON.stringify(snapshot, null, 2), "utf8");
-  await writeFile("data/2026-index.json", JSON.stringify([date], null, 2) + "\n", "utf8");
-  console.log(`Записано data/${date}.json`);
+  await writeFile("data/2026-current.json", JSON.stringify(snapshot, null, 2), "utf8");
+  console.log(`Записано data/2026-current.json (${date})`);
 }
 
 main().catch((error) => {

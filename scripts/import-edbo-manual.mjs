@@ -10,7 +10,9 @@
  * конкурсних балів (звичайний copy-paste, без жодної автоматизації доступу)
  * у текстовий файл — по одному числу на рядок (або через кому/пробіл).
  * Цей скрипт рахує середній бал і кількість заяв із цього файлу й
- * оновлює/створює знімок data/<дата>.json у форматі, який очікує js/app.js.
+ * оновлює/створює єдиний знімок data/2026-current.json у форматі, який
+ * очікує js/app.js. Попередні дні свідомо не зберігаються — файл завжди
+ * перезаписується найсвіжішими даними.
  *
  * Приклад:
  *   node scripts/import-edbo-manual.mjs \
@@ -158,12 +160,6 @@ function rebuildLevel(snapshot, level) {
   return rankAll([...manualEntries.filter((entry) => !capturedIds.has(entry.id)), ...capturedEntries]);
 }
 
-async function updateCurrentIndex(date) {
-  const file = path.join("data", "2026-index.json");
-  const dates = /^2026-\d{2}-\d{2}$/.test(date) ? [date] : [];
-  await writeFile(file, JSON.stringify(dates, null, 2) + "\n", "utf8");
-}
-
 async function loadSnapshot(file, date) {
   try {
     const raw = await readFile(file, "utf8");
@@ -196,7 +192,7 @@ async function main() {
     if (!offers.length) throw new Error("У capture-файлах немає поля offer. Запускай консольний скрипт на сторінці /offer/<id>.");
 
     const outDir = "data";
-    const outFile = path.join(outDir, `${date}.json`);
+    const outFile = path.join(outDir, "2026-current.json");
     await mkdir(outDir, { recursive: true });
     const snapshot = await loadSnapshot(outFile, date);
     snapshot._entries ||= { bachelor: [], master: [] };
@@ -246,7 +242,6 @@ async function main() {
     }
     manifest.offers.sort((a, b) => a.offerId - b.offerId);
     await writeFile(manifestFile, JSON.stringify(manifest, null, 2) + "\n", "utf8");
-    await updateCurrentIndex(date);
     console.log(`Імпортовано ${offers.length} capture-файл(ів) → ${outFile}`);
     return;
   }
@@ -282,7 +277,7 @@ async function main() {
 
   const uni = UNIVERSITIES[universityId];
   const outDir = "data";
-  const outFile = path.join(outDir, `${date}.json`);
+  const outFile = path.join(outDir, "2026-current.json");
   await mkdir(outDir, { recursive: true });
 
   const snapshot = await loadSnapshot(outFile, date);
@@ -313,7 +308,6 @@ async function main() {
   snapshot.asOf = new Date().toISOString().replace(/\.\d+Z$/, "+03:00");
 
   await writeFile(outFile, JSON.stringify(snapshot, null, 2), "utf8");
-  await updateCurrentIndex(date);
 
   console.log(`Записано ${universityId} (${level}): бал ${entry.score}, заяв ${entry.applications}\n→ ${outFile}`);
 }
