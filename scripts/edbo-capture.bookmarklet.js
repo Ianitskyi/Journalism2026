@@ -7,9 +7,8 @@
  *
  * Скрипт не робить мережевих запитів. Він завантажує HTML і структурований
  * JSON з уже показаними в браузері даними: готовими
- * rqs_total/rqs_allowed/rqs_kv_avg,
- * конкурсними балами та пріоритетами. JSON можна передати в
- * scripts/import-edbo-manual.mjs через --capture.
+ * rqs_total/rqs_allowed/rqs_kv_avg та конкурсними балами. JSON можна
+ * передати в scripts/import-edbo-manual.mjs через --capture.
  */
 (function () {
   function download(filename, content, mime) {
@@ -54,24 +53,17 @@
   const visibleScores = applicantRows
     .map((cells) => Number((cells[6] || "").replace(",", ".")))
     .filter((value) => Number.isFinite(value) && value >= 100 && value <= 200);
-  const visiblePriority1Scores = applicantRows
-    .filter((cells) => /^1(?:\s|$)/.test(cells[3] || ""))
-    .map((cells) => Number((cells[6] || "").replace(",", ".")))
-    .filter((value) => Number.isFinite(value) && value >= 100 && value <= 200);
 
   // HTML Next.js містить усі заяви, навіть якщо таблиця показує лише одну
   // сторінку. Беремо повний набір із RSC, а DOM лишаємо як fallback.
   const rscScores = [];
-  const rscPriority1Scores = [];
-  const requestPattern = /"konkurs_value":([0-9.]+),"priority":(\d+|null)/g;
+  const requestPattern = /"konkurs_value":([0-9.]+)/g;
   for (const match of normalizedRsc.matchAll(requestPattern)) {
     const score = Number(match[1]);
     if (!Number.isFinite(score) || score < 100 || score > 200) continue;
     rscScores.push(score);
-    if (match[2] === "1") rscPriority1Scores.push(score);
   }
   const scores = rscScores.length ? rscScores : visibleScores;
-  const priority1Scores = rscScores.length ? rscPriority1Scores : visiblePriority1Scores;
 
   const universityName = [...document.querySelectorAll("main div, main span")]
     .map((el) => el.textContent?.trim() || "")
@@ -90,8 +82,7 @@
       admitted: numberFromRsc(html, "rqs_allowed") ?? scores.length,
       averageScore: numberFromRsc(html, "rqs_kv_avg") ??
         (scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : null),
-      scores,
-      priority1Scores
+      scores
     } : null
   };
 

@@ -15,8 +15,7 @@
  * Приклад:
  *   node scripts/import-edbo-manual.mjs \
  *     --date 2026-07-22 --level bachelor --university knu \
- *     --scores scores/knu-bachelor.txt \
- *     [--priority1-scores scores/knu-bachelor-p1.txt]
+ *     --scores scores/knu-bachelor.txt
  *
  * Файл зі скорами: будь-який текст, з якого витягуються всі числа виду
  * 100-200(.xx) — зайві пробіли/розділові знаки не заважають.
@@ -62,7 +61,6 @@ const UID_TO_SLUG = {
 const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300, 260, 18, 100, 220, 280, 170, 330];
 
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };
-const MIN_APPLICATIONS_P1 = { bachelor: 8, master: 5 };
 
 function parseArgs(argv) {
   const args = {};
@@ -90,18 +88,11 @@ function extractScores(text) {
 
 const round1 = (n) => Math.round(n * 10) / 10;
 
-function rankBoth(entries) {
-  const all = entries
+function rankAll(entries) {
+  return entries
     .filter((e) => e.applications >= (MIN_APPLICATIONS[e._level] ?? 0))
     .sort((a, b) => b.score - a.score)
     .map(({ id, name, short, hue, score, applications, admitted }, i) => ({ id, name, short, hue, score, applications, admitted, rank: i + 1 }));
-
-  const p1 = entries
-    .filter((e) => e.p1Applications != null && e.p1Applications >= (MIN_APPLICATIONS_P1[e._level] ?? 0))
-    .sort((a, b) => b.p1Score - a.p1Score)
-    .map(({ id, name, short, hue, p1Score, p1Applications }, i) => ({ id, name, short, hue, score: p1Score, applications: p1Applications, rank: i + 1 }));
-
-  return { all, p1 };
 }
 
 function sumApps(rows) {
@@ -143,19 +134,13 @@ function rebuildLevel(snapshot, level) {
         _level: level,
         weightedScoreSum: 0,
         applications: 0,
-        admitted: 0,
-        p1ScoreSum: 0,
-        p1Applications: 0
+        admitted: 0
       });
     }
     const row = grouped.get(meta.id);
     row.weightedScoreSum += Number(offer.averageScore) * Number(offer.admitted);
     row.applications += Number(offer.applications);
     row.admitted += Number(offer.admitted);
-    for (const score of offer.priority1Scores || []) {
-      row.p1ScoreSum += Number(score);
-      row.p1Applications += 1;
-    }
   }
 
   const capturedEntries = [...grouped.values()].map((row) => ({
@@ -166,15 +151,11 @@ function rebuildLevel(snapshot, level) {
     _level: level,
     score: round1(row.weightedScoreSum / row.admitted),
     applications: row.applications,
-    admitted: row.admitted,
-    ...(row.p1Applications ? {
-      p1Score: round1(row.p1ScoreSum / row.p1Applications),
-      p1Applications: row.p1Applications
-    } : {})
+    admitted: row.admitted
   }));
 
   const capturedIds = new Set(capturedEntries.map((entry) => entry.id));
-  return rankBoth([...manualEntries.filter((entry) => !capturedIds.has(entry.id)), ...capturedEntries]);
+  return rankAll([...manualEntries.filter((entry) => !capturedIds.has(entry.id)), ...capturedEntries]);
 }
 
 async function updateCurrentIndex(date) {
@@ -193,8 +174,6 @@ async function loadSnapshot(file, date) {
       asOf: `${date}T00:00:00+03:00`,
       bachelor: [],
       master: [],
-      bachelorP1: [],
-      masterP1: [],
       // _entries зберігає сирі агреговані рядки (до ранжування), щоб можна
       // було дописувати нові ЗВО в той самий знімок кількома запусками
       _entries: { bachelor: [], master: [] },
@@ -235,17 +214,13 @@ async function main() {
     }
 
     for (const currentLevel of ["bachelor", "master"]) {
-      const ranked = rebuildLevel(snapshot, currentLevel);
-      snapshot[currentLevel] = ranked.all;
-      snapshot[`${currentLevel}P1`] = ranked.p1;
+      snapshot[currentLevel] = rebuildLevel(snapshot, currentLevel);
     }
     snapshot.date = date;
     snapshot.asOf = new Date().toISOString();
     snapshot.totalApplications = {
       bachelor: sumApps(snapshot.bachelor || []),
-      master: sumApps(snapshot.master || []),
-      bachelorP1: sumApps(snapshot.bachelorP1 || []),
-      masterP1: sumApps(snapshot.masterP1 || [])
+      master: sumApps(snapshot.master || [])
     };
     snapshot.totalAdmitted = {
       bachelor: sumAdmitted(snapshot.bachelor || []),
@@ -303,12 +278,6 @@ async function main() {
     return;
   }
 
-  let p1Scores = [];
-  if (args["priority1-scores"]) {
-    const p1Raw = await readFile(args["priority1-scores"], "utf8");
-    p1Scores = extractScores(p1Raw);
-  }
-
   const mean = (arr) => round1(arr.reduce((s, x) => s + x, 0) / arr.length);
 
   const uni = UNIVERSITIES[universityId];
@@ -328,19 +297,14 @@ async function main() {
     _level: level,
     score: mean(scores),
     applications: scores.length,
-    admitted: scores.length,
-    ...(p1Scores.length ? { p1Score: mean(p1Scores), p1Applications: p1Scores.length } : {})
+    admitted: scores.length
   };
   snapshot._entries[level].push(entry);
 
-  const ranked = rankBoth(snapshot._entries[level]);
-  snapshot[level] = ranked.all;
-  snapshot[`${level}P1`] = ranked.p1;
+  snapshot[level] = rankAll(snapshot._entries[level]);
   snapshot.totalApplications = {
     bachelor: sumApps(snapshot.bachelor || []),
-    master: sumApps(snapshot.master || []),
-    bachelorP1: sumApps(snapshot.bachelorP1 || []),
-    masterP1: sumApps(snapshot.masterP1 || [])
+    master: sumApps(snapshot.master || [])
   };
   snapshot.totalAdmitted = {
     bachelor: sumAdmitted(snapshot.bachelor || []),
@@ -351,11 +315,7 @@ async function main() {
   await writeFile(outFile, JSON.stringify(snapshot, null, 2), "utf8");
   await updateCurrentIndex(date);
 
-  console.log(
-    `Записано ${universityId} (${level}): бал ${entry.score}, заяв ${entry.applications}` +
-      (entry.p1Score ? `, пріоритет-1 бал ${entry.p1Score} / заяв ${entry.p1Applications}` : "") +
-      `\n→ ${outFile}`
-  );
+  console.log(`Записано ${universityId} (${level}): бал ${entry.score}, заяв ${entry.applications}\n→ ${outFile}`);
 }
 
 main().catch((err) => {

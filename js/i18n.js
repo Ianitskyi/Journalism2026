@@ -31,10 +31,6 @@ const I18N = {
     stats: {
       submitted: "Подано заяв",
       admitted: "Допущено до конкурсу",
-      appsBachelor: "Заяв · бакалаврат",
-      appsBachelorP1: "Заяв · бакалаврат (пріоритет 1)",
-      appsMaster: "Заяв · магістратура",
-      appsMasterP1: "Заяв · магістратура (пріоритет 1)",
       count: "Журфаків у рейтингу",
       topScore: "Найвищий середній бал допущених"
     },
@@ -44,26 +40,19 @@ const I18N = {
       bachelorLabel: "бакалаврат · денна форма",
       masterLabel: "магістратура · денна форма"
     },
-    view: {
-      all: "Усі заяви",
-      p1: "Пріоритет 1",
-      p1Suffix: " · пріоритет 1"
-    },
     sort: {
       label: "Сортувати за",
       score: "Середнім балом допущених",
       applications: "Кількістю заяв"
     },
-    hint: "«Пріоритет 1» — рейтинг лише по заявах, де журналістика в цьому закладі вказана вступником як перший, свідомий вибір (а не запасний варіант).",
     year: {
       label: "Рік вступу",
       current: "{year} · зараз",
       today: "Сьогодні"
     },
     caption: {
-      final: "Підсумкові дані вступної кампанії {year} року. Усі пріоритети; заклади освіти щонайменше з {minApps} поданими заявами.",
-      live: "Станом на {date}. Усі пріоритети; заклади освіти щонайменше з {minApps} поданими заявами.",
-      p1Note: " Лише заяви з пріоритетом №1."
+      final: "Підсумкові дані вступної кампанії {year} року. Усі подані заяви незалежно від пріоритету; заклади освіти щонайменше з {minApps} поданими заявами.",
+      live: "Станом на {date}. Усі подані заяви незалежно від пріоритету; заклади освіти щонайменше з {minApps} поданими заявами."
     },
     table: {
       institution: "Заклад",
@@ -157,10 +146,6 @@ const I18N = {
     stats: {
       submitted: "Applications submitted",
       admitted: "Admitted to competition",
-      appsBachelor: "Applications · bachelor's",
-      appsBachelorP1: "Applications · bachelor's (priority 1)",
-      appsMaster: "Applications · master's",
-      appsMasterP1: "Applications · master's (priority 1)",
       count: "Schools in ranking",
       topScore: "Highest admitted average"
     },
@@ -170,26 +155,19 @@ const I18N = {
       bachelorLabel: "bachelor's · full-time",
       masterLabel: "master's · full-time"
     },
-    view: {
-      all: "All applications",
-      p1: "Priority 1",
-      p1Suffix: " · priority 1"
-    },
     sort: {
       label: "Sort by",
       score: "Admitted average score",
       applications: "Application count"
     },
-    hint: "“Priority 1” ranks only applications where the applicant listed journalism at this school as their first, deliberate choice (not a fallback option).",
     year: {
       label: "Admission year",
       current: "{year} · current",
       today: "Today"
     },
     caption: {
-      final: "Final data for the {year} admissions campaign. All priorities; institutions with at least {minApps} submitted applications.",
-      live: "As of {date}. All priorities; institutions with at least {minApps} submitted applications.",
-      p1Note: " Priority 1 applications only."
+      final: "Final data for the {year} admissions campaign. All submitted applications regardless of priority; institutions with at least {minApps} submitted applications.",
+      live: "As of {date}. All submitted applications regardless of priority; institutions with at least {minApps} submitted applications."
     },
     table: {
       institution: "Institution",

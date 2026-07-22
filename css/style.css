@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,500;0,600;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&display=swap");
 
 :root {
   --ink: #0d0c5c;
@@ -27,12 +27,6 @@
   --shadow-sm: 0 6px 18px -10px rgba(23, 19, 33, 0.22);
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-/* латинська кирилиця Playfair Display занадто грайлива для довгих
-   англійських заголовків — для EN використовуємо спокійніший Lora */
-html[lang="en"] {
-  --serif: "Lora", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -134,9 +128,9 @@ a { color: inherit; }
 }
 
 .hero h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(32px, 5vw, 50px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -909,9 +903,9 @@ td {
 }
 
 .uni-hero h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(22px, 4vw, 30px);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.15;
   margin: 0;
 }

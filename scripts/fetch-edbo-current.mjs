@@ -6,8 +6,9 @@
  * намагається його викликати або обходити. Початковий список offerId людина
  * створює через edbo-capture.bookmarklet.js + import-edbo-manual.mjs.
  * Публічні GET /offer/<id> перевірено: вони працюють без cookies і містять
- * готові rqs_total/rqs_allowed/rqs_kv_avg та список заяв із
- * konkurs_value/priority.
+ * готові rqs_total/rqs_allowed/rqs_kv_avg. Рейтинг рахуємо за всіма поданими
+ * заявами незалежно від пріоритету — це показник попиту, а не кількість
+ * унікальних вступників.
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -34,7 +35,6 @@ const SLUG_SHORT = {
 };
 const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300, 260, 18, 100, 220, 280, 170, 330];
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };
-const MIN_APPLICATIONS_P1 = { bachelor: 8, master: 5 };
 
 function field(html, name) {
   const normalized = html.replace(/\\"/g, '"');
@@ -68,11 +68,6 @@ async function fetchOffer(manifestEntry) {
     throw new Error(`offer ${manifestEntry.offerId}: у HTML немає очікуваної статистики`);
   }
 
-  const priority1Scores = [];
-  const priorityPattern = /"konkurs_value":([0-9.]+),"priority":1(?:,|})/g;
-  const normalized = html.replace(/\\"/g, '"');
-  for (const match of normalized.matchAll(priorityPattern)) priority1Scores.push(Number(match[1]));
-
   return {
     offerId,
     level: manifestEntry.level,
@@ -80,8 +75,7 @@ async function fetchOffer(manifestEntry) {
     universityName: stringField(html, "university_name") ?? manifestEntry.universityName,
     applications,
     admitted,
-    averageScore,
-    priority1Scores
+    averageScore
   };
 }
 
@@ -99,22 +93,16 @@ function rank(offers, level) {
         hue: slug ? SLUG_HUE[slug] : PALETTE_HUES[Math.abs(uid) % PALETTE_HUES.length],
         weighted: 0,
         applications: 0,
-        admitted: 0,
-        p1Sum: 0,
-        p1Applications: 0
+        admitted: 0
       });
     }
     const row = grouped.get(id);
     row.weighted += offer.averageScore * offer.admitted;
     row.applications += offer.applications;
     row.admitted += offer.admitted;
-    for (const score of offer.priority1Scores) {
-      row.p1Sum += score;
-      row.p1Applications += 1;
-    }
   }
 
-  const all = [...grouped.values()]
+  return [...grouped.values()]
     .filter((row) => row.applications >= MIN_APPLICATIONS[level] && row.admitted > 0)
     .map((row) => ({
       id: row.id, name: row.name, short: row.short, hue: row.hue,
@@ -124,18 +112,6 @@ function rank(offers, level) {
     }))
     .sort((a, b) => b.score - a.score)
     .map((row, index) => ({ ...row, rank: index + 1 }));
-
-  const p1 = [...grouped.values()]
-    .filter((row) => row.p1Applications >= MIN_APPLICATIONS_P1[level])
-    .map((row) => ({
-      id: row.id, name: row.name, short: row.short, hue: row.hue,
-      score: Math.round((row.p1Sum / row.p1Applications) * 10) / 10,
-      applications: row.p1Applications
-    }))
-    .sort((a, b) => b.score - a.score)
-    .map((row, index) => ({ ...row, rank: index + 1 }));
-
-  return { all, p1 };
 }
 
 function kyivDate() {
@@ -165,16 +141,13 @@ async function main() {
   const snapshot = {
     date,
     asOf: new Date().toISOString(),
-    bachelor: bachelor.all,
-    master: master.all,
-    bachelorP1: bachelor.p1,
-    masterP1: master.p1,
+    bachelor,
+    master,
     totalApplications: {
-      bachelor: sumApps(bachelor.all), master: sumApps(master.all),
-      bachelorP1: sumApps(bachelor.p1), masterP1: sumApps(master.p1)
+      bachelor: sumApps(bachelor), master: sumApps(master)
     },
     totalAdmitted: {
-      bachelor: sumAdmitted(bachelor.all), master: sumAdmitted(master.all)
+      bachelor: sumAdmitted(bachelor), master: sumAdmitted(master)
     },
     _offers: {
       bachelor: offers.filter((offer) => offer.level === "bachelor"),

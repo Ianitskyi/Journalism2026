@@ -229,16 +229,9 @@ async function fetchYear(year) {
     final: true,
     bachelor,
     master,
-    // "пріоритет 1" зрізи поки не підключено — потрібен окремий контракт
-    // (не помічено відповідного поля в st.* з поточного дослідження);
-    // лишаємо порожніми, щоб не показувати вигадані дані
-    bachelorP1: [],
-    masterP1: [],
     totalApplications: {
       bachelor: sumApps(bachelor),
-      master: sumApps(master),
-      bachelorP1: 0,
-      masterP1: 0
+      master: sumApps(master)
     },
     totalAdmitted: {
       bachelor: sumAdmitted(bachelor),
