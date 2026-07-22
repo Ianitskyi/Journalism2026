@@ -188,37 +188,19 @@ a { color: inherit; }
   flex: none;
 }
 
-.year-chips {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  min-width: 0;
-}
-
-.year-chips::-webkit-scrollbar { display: none; }
-
-.year-chip {
-  flex: none;
-  border: 1.5px solid var(--border);
-  background: var(--card);
-  color: var(--text);
+.year-select {
   font-family: inherit;
+  font-size: 13.5px;
   font-weight: 700;
-  font-size: 13px;
-  padding: 7px 14px;
+  color: var(--text);
+  background: var(--card);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-pill);
+  padding: 7px 14px;
   cursor: pointer;
-  transition: border-color .15s, color .15s, background .15s;
 }
 
-.year-chip:hover { border-color: var(--ink); color: var(--ink); }
-
-.year-chip.active {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
+.year-select:hover { border-color: var(--ink); }
 
 /* ---------- stat tiles ---------- */
 
