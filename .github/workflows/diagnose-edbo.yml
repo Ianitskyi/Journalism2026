@@ -23,5 +23,5 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run diagnose-edbo-api
-        timeout-minutes: 2
+      - run: npm run fetch-edbo-history -- 2025
+        timeout-minutes: 3
