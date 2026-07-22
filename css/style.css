@@ -108,7 +108,7 @@ a { color: inherit; }
 .topbar-org:hover { color: rgba(255, 255, 255, 0.85); }
 
 .topbar-logo {
-  height: 20px;
+  height: 22px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
@@ -123,8 +123,7 @@ a { color: inherit; }
 
 .hero {
   background:
-    radial-gradient(circle at 15% 0%, rgba(255, 172, 51, 0.35), transparent 55%),
-    radial-gradient(circle at 90% 20%, rgba(88, 82, 200, 0.3), transparent 45%),
+    radial-gradient(circle at 12% 0%, rgba(255, 172, 51, 0.28), transparent 50%),
     var(--ink);
   color: #fff;
   padding: 44px 24px 64px;
@@ -265,12 +264,12 @@ a { color: inherit; }
   transition: border-color .15s, color .15s, background .15s;
 }
 
-.year-chip:hover { border-color: var(--accent-dark); color: var(--accent-dark); }
+.year-chip:hover { border-color: var(--ink); color: var(--ink); }
 
 .year-chip.active {
-  background: var(--accent);
-  border-color: var(--accent-dark);
-  color: var(--ink);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
 }
 
 /* ---------- stat tiles ---------- */
@@ -356,7 +355,7 @@ a { color: inherit; }
   bottom: 4px;
   left: 4px;
   width: calc(50% - 4px);
-  background: var(--accent);
+  background: var(--ink);
   border-radius: var(--radius-pill);
   transition: transform .25s cubic-bezier(.4,0,.2,1);
   z-index: 0;
@@ -377,9 +376,9 @@ a { color: inherit; }
   transition: color .15s;
 }
 
-.pill.active { color: var(--ink); }
+.pill.active { color: #fff; }
 
-.pill:not(.active):hover { color: var(--accent-dark); }
+.pill:not(.active):hover { color: var(--ink); }
 
 .date-chips {
   display: flex;
@@ -405,7 +404,7 @@ a { color: inherit; }
   transition: border-color .15s, color .15s, background .15s;
 }
 
-.date-chip:hover { border-color: var(--accent-dark); color: var(--accent-dark); }
+.date-chip:hover { border-color: var(--ink); color: var(--ink); }
 
 .date-chip.active {
   background: var(--ink);
@@ -597,7 +596,7 @@ thead th {
 
 thead th.num, td.num { text-align: right; }
 
-thead th.sort-active { color: var(--accent-dark); }
+thead th.sort-active { color: var(--ink); }
 
 tbody tr {
   border-top: 1px solid var(--border);
@@ -697,7 +696,7 @@ td {
   margin-top: 6px;
 }
 
-.show-all:hover { color: var(--accent-dark); }
+.show-all:hover { color: var(--ink); }
 
 /* ---------- side cards ---------- */
 
@@ -715,8 +714,8 @@ td {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--ink);
+  color: #fff;
   font-weight: 800;
   font-size: 13px;
   display: flex;
@@ -732,7 +731,7 @@ td {
   line-height: 1.55;
 }
 
-.info-box strong { color: var(--accent-dark); }
+.info-box strong { color: var(--ink); }
 
 .legend-title {
   font-weight: 800;
@@ -764,7 +763,7 @@ td {
 .source-box strong { color: var(--text); }
 
 .source-box a {
-  color: var(--accent-dark);
+  color: var(--ink);
   font-weight: 700;
   font-size: 13px;
   text-decoration: none;
@@ -782,7 +781,7 @@ td {
   padding-top: 10px;
 }
 
-.site-footer a { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
+.site-footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
 
 .footer-brand {
   display: flex;
@@ -820,7 +819,7 @@ td {
   margin-bottom: 18px;
 }
 
-.back-link:hover { color: var(--accent-dark); }
+.back-link:hover { color: var(--ink); }
 
 .uni-not-found {
   background: var(--card);
@@ -828,7 +827,7 @@ td {
   box-shadow: var(--shadow-sm);
 }
 
-.uni-not-found a { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
+.uni-not-found a { color: var(--ink); font-weight: 700; text-decoration: none; }
 
 .uni-hero {
   display: flex;
