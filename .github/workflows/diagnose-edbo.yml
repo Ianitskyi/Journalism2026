@@ -20,11 +20,5 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run fetch-edbo-history
-        timeout-minutes: 5
-      - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Реальні історичні дані ЄДЕБО (2018-2025), спец. 061 Журналістика"
-          git push
+      - run: npm run diagnose-edbo-spec-codes
+        timeout-minutes: 2
