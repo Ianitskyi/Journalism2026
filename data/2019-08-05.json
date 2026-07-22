@@ -1,0 +1,15 @@
+{
+  "date": "2019-08-05",
+  "asOf": "2019-08-05T18:00:00+03:00",
+  "final": true,
+  "bachelor": [],
+  "master": [],
+  "bachelorP1": [],
+  "masterP1": [],
+  "totalApplications": {
+    "bachelor": 0,
+    "master": 0,
+    "bachelorP1": 0,
+    "masterP1": 0
+  }
+}
