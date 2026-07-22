@@ -189,7 +189,7 @@ function render() {
       { cls: "", color: "var(--ink-soft)", label: compareMeta.name }
     ];
 
-    // об'єднуємо роки основного і порівнюваного ЗВО в один спільний ряд для графіка
+    // об'єднуємо роки основного і порівнюваного закладу в один спільний ряд для графіка
     const combined = DB.years.map((year, i) => ({
       year,
       row: trend[i].row,

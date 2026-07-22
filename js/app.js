@@ -229,7 +229,7 @@ function render() {
     showAllBtn.style.display = "block";
     showAllBtn.textContent = state.expanded
       ? "Згорнути ↑"
-      : `Показати всі ${rows.length} ВНЗ →`;
+      : `Показати всі ${rows.length} закладів →`;
   } else {
     showAllBtn.style.display = "none";
   }
