@@ -14,6 +14,17 @@ function uniShort(row) {
   return getLang() === "en" ? (row.shortEn || row.short) : row.short;
 }
 
+/* середній бал закладу за 2021 рік (підсумковий знімок) — база для
+   стовпця "Зміна балу з 2021" у таблиці; null, якщо закладу тоді не було
+   в рейтингу цього рівня */
+function scoreIn2021(id, degree) {
+  const yd = DB.byYear[2021];
+  if (!yd) return null;
+  const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
+  const row = (snap[degree] || []).find((r) => r.id === id);
+  return row ? row.score : null;
+}
+
 /* повертає новий масив, відсортований і проранжований за обраним
    критерієм — сирі дані завжди зберігають ранг за балом, тож для
    сортування за кількістю заяв ранги рахуємо наново */
@@ -54,20 +65,21 @@ function renderStats(snap, rows) {
   document.getElementById("stat-count").textContent = rows.length;
 }
 
-function renderYearSelect() {
-  const select = document.getElementById("year-select");
-  select.innerHTML = DB.years.map((year) => `<option value="${year}">${year}</option>`).join("");
-  select.value = String(state.year);
-}
-
-function initYearSelect() {
-  document.getElementById("year-select").addEventListener("change", (e) => {
-    const year = Number(e.target.value);
-    if (state.year === year) return;
-    state.year = year;
-    state.dateIndex = DB.byYear[year].dates.length - 1;
-    state.expanded = false;
-    render();
+function renderYearChips() {
+  const wrap = document.getElementById("year-chips");
+  wrap.innerHTML = "";
+  DB.years.forEach((year) => {
+    const btn = document.createElement("button");
+    btn.className = "year-chip" + (year === state.year ? " active" : "");
+    btn.textContent = year === DB.currentYear ? t("year.current", { year }) : String(year);
+    btn.addEventListener("click", () => {
+      if (state.year === year) return;
+      state.year = year;
+      state.dateIndex = DB.byYear[year].dates.length - 1;
+      state.expanded = false;
+      render();
+    });
+    wrap.appendChild(btn);
   });
 }
 
@@ -104,6 +116,104 @@ function renderDateChips() {
   }
 }
 
+/* ---------- діаграми динаміки по системі в цілому (2021-2025) ---------- */
+
+/* останній (підсумковий для минулих років) знімок конкретного року */
+function yearSnapshot(year) {
+  const yd = DB.byYear[year];
+  return yd.snapshots[yd.dates[yd.dates.length - 1]];
+}
+
+/* сумарна кількість заяв і зважений середній бал (вага — кількість
+   допущених) по всій системі за рік і рівень — рахуємо лише за
+   завершені кампанії (без поточного 2026 року) */
+function systemWideTrend(degree) {
+  return PAST_YEARS.map((year) => {
+    const snap = yearSnapshot(year);
+    const rows = snap[degree] || [];
+    const applications = snap.totalApplications?.[degree] ?? rows.reduce((s, r) => s + r.applications, 0);
+    const admitted = snap.totalAdmitted?.[degree] ?? rows.reduce((s, r) => s + (r.admitted || 0), 0);
+    const weightedScoreSum = rows.reduce((s, r) => s + r.score * (r.admitted || 0), 0);
+    const avgScore = admitted > 0 ? weightedScoreSum / admitted : null;
+    return { year, applications, avgScore };
+  });
+}
+
+/* дволінійний SVG-графік (бакалавр/магістр) по роках для однієї метрики */
+function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
+  const values = [...bachelorSeries, ...masterSeries].map((d) => d[valueKey]).filter((v) => v != null);
+  if (!values.length) return `<div class="chart-empty">${t("empty.noDataDay")}</div>`;
+
+  const w = 640, h = 220, padL = 44, padR = 12, padT = 16, padB = 30;
+  const min = Math.min(...values), max = Math.max(...values);
+  const range = Math.max(1, max - min);
+  const yMin = min - range * 0.1, yMax = max + range * 0.1;
+  const years = PAST_YEARS;
+  const n = years.length;
+  const xFor = (i) => padL + (n === 1 ? 0.5 : i / (n - 1)) * (w - padL - padR);
+  const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
+  const baselineY = h - padB;
+
+  function pathFor(series) {
+    let d = "";
+    let started = false;
+    series.forEach((point, i) => {
+      const v = point[valueKey];
+      if (v == null) { started = false; return; }
+      d += `${started ? "L" : "M"}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)} `;
+      started = true;
+    });
+    return d.trim();
+  }
+
+  function dotsFor(series, cls, label) {
+    return series.map((point, i) => {
+      const v = point[valueKey];
+      if (v == null) return "";
+      const cx = xFor(i).toFixed(1), cy = yFor(v).toFixed(1);
+      const formatted = valueKey === "applications" ? numFmt().format(Math.round(v)) : v.toFixed(1);
+      return `<circle class="${cls}" cx="${cx}" cy="${cy}" r="4"><title>${label} · ${point.year}: ${formatted}</title></circle>`;
+    }).join("");
+  }
+
+  const labels = years.map((y, i) =>
+    `<text class="chart-axis-label" x="${xFor(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">${y}</text>`
+  ).join("");
+
+  const baseline = `<line class="chart-baseline" x1="${padL}" y1="${baselineY}" x2="${w - padR}" y2="${baselineY}" />`;
+  const bachelorLabel = t("degree.bachelor");
+  const masterLabel = t("degree.master");
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img">
+      ${baseline}
+      <path class="chart-line chart-line-all" d="${pathFor(bachelorSeries)}" fill="none" />
+      <path class="chart-line chart-line-compare" d="${pathFor(masterSeries)}" fill="none" />
+      ${dotsFor(bachelorSeries, "chart-dot-all", bachelorLabel)}
+      ${dotsFor(masterSeries, "chart-dot-compare", masterLabel)}
+      ${labels}
+    </svg>
+  `;
+}
+
+function renderSystemChartLegend(containerId) {
+  document.getElementById(containerId).innerHTML = `
+    <span class="chart-legend-item" style="color:var(--accent-dark)"><span class="chart-legend-swatch" style="background:var(--accent-dark)"></span>${t("degree.bachelor")}</span>
+    <span class="chart-legend-item" style="color:var(--ink-soft)"><span class="chart-legend-swatch" style="background:var(--ink-soft)"></span>${t("degree.master")}</span>
+  `;
+}
+
+function renderSystemCharts() {
+  const bachelorApps = systemWideTrend("bachelor");
+  const masterApps = systemWideTrend("master");
+
+  document.getElementById("system-chart-apps").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "applications");
+  renderSystemChartLegend("system-chart-apps-legend");
+
+  document.getElementById("system-chart-score").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "avgScore");
+  renderSystemChartLegend("system-chart-score-legend");
+}
+
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
@@ -129,10 +239,17 @@ function render() {
   tbody.innerHTML = "";
 
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
   } else {
     const visible = state.expanded ? rows : rows.slice(0, VISIBLE_ROWS);
     for (const r of visible) {
+      const baseline2021 = scoreIn2021(r.id, state.degree);
+      const trendDiff = baseline2021 != null ? Math.round((r.score - baseline2021) * 10) / 10 : null;
+      const trendHtml = trendDiff == null
+        ? "—"
+        : `${trendDiff > 0 ? "+" : ""}${trendDiff.toFixed(1)}`;
+      const trendClass = trendDiff == null ? "" : trendDiff > 0 ? "trend-up" : trendDiff < 0 ? "trend-down" : "";
+
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td><div class="rank">${r.rank}</div></td>
@@ -145,6 +262,7 @@ function render() {
         <td class="num"><div class="score">${r.score.toFixed(1)}</div></td>
         <td class="num"><div class="applications">${numFmt().format(r.applications)}</div></td>
         <td class="num"><div class="applications">${numFmt().format(r.admitted || 0)}</div></td>
+        <td class="num"><div class="${trendClass}">${trendHtml}</div></td>
       `;
       tbody.appendChild(tr);
     }
@@ -160,7 +278,7 @@ function render() {
     showAllBtn.style.display = "none";
   }
 
-  renderYearSelect();
+  renderYearChips();
   renderDateChips();
 }
 
@@ -223,7 +341,7 @@ function initShowAll() {
 initTabs();
 initSortTabs();
 initShowAll();
-initYearSelect();
-window.onLangChange = () => { render(); resyncIndicators(); };
-window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
+window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); };
+window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); renderSystemCharts(); });
 render();
+renderSystemCharts();

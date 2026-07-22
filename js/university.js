@@ -142,6 +142,55 @@ function renderComparePanel(meta, trend, compareMeta, compareTrend) {
   panel.innerHTML = colHTML(meta, trend, true) + colHTML(compareMeta, compareTrend, false);
 }
 
+/* короткий аналітичний висновок про динаміку закладу: рахується виключно
+   з реальних даних, які вже є в системі (бал/заяви по роках, ранг) —
+   без жодних вигаданих фактів про сам заклад */
+function buildAnalysisText(first, latest) {
+  if (!first || !latest || first.year === latest.year) {
+    return t("uni.analysis.insufficientData");
+  }
+
+  const scoreDiff = Math.round((latest.row.score - first.row.score) * 10) / 10;
+  let scoreSentence;
+  if (Math.abs(scoreDiff) < 0.1) {
+    scoreSentence = t("uni.analysis.scoreFlat", { from: first.year, to: latest.year, value: latest.row.score.toFixed(1) });
+  } else if (scoreDiff > 0) {
+    scoreSentence = t("uni.analysis.scoreUp", {
+      from: first.year, to: latest.year, diff: Math.abs(scoreDiff).toFixed(1),
+      fromVal: first.row.score.toFixed(1), toVal: latest.row.score.toFixed(1)
+    });
+  } else {
+    scoreSentence = t("uni.analysis.scoreDown", {
+      from: first.year, to: latest.year, diff: Math.abs(scoreDiff).toFixed(1),
+      fromVal: first.row.score.toFixed(1), toVal: latest.row.score.toFixed(1)
+    });
+  }
+
+  const appsPct = first.row.applications > 0
+    ? Math.round(((latest.row.applications - first.row.applications) / first.row.applications) * 100)
+    : 0;
+  let appsSentence;
+  if (Math.abs(appsPct) < 3) {
+    appsSentence = t("uni.analysis.appsFlat", { value: numFmt().format(latest.row.applications) });
+  } else if (appsPct > 0) {
+    appsSentence = t("uni.analysis.appsUp", { pct: appsPct, fromVal: numFmt().format(first.row.applications), toVal: numFmt().format(latest.row.applications) });
+  } else {
+    appsSentence = t("uni.analysis.appsDown", { pct: Math.abs(appsPct), fromVal: numFmt().format(first.row.applications), toVal: numFmt().format(latest.row.applications) });
+  }
+
+  const rankDiff = first.row.rank - latest.row.rank; // позитивне значення = покращення (менший ранг = вище місце)
+  let rankSentence;
+  if (rankDiff === 0) {
+    rankSentence = t("uni.analysis.rankSame", { value: latest.row.rank });
+  } else if (rankDiff > 0) {
+    rankSentence = t("uni.analysis.rankBetter", { from: first.row.rank, to: latest.row.rank });
+  } else {
+    rankSentence = t("uni.analysis.rankWorse", { from: first.row.rank, to: latest.row.rank });
+  }
+
+  return `${scoreSentence} ${appsSentence} ${rankSentence}`;
+}
+
 function render() {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -186,6 +235,8 @@ function render() {
     trendEl.textContent = "—";
     trendEl.className = "stat-value";
   }
+
+  document.getElementById("uni-analysis").textContent = buildAnalysisText(first, latest);
 
   renderCompareOptions(meta);
   const compareMeta = state.compareId ? findUniMeta(state.compareId) : null;
