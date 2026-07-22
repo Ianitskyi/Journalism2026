@@ -151,7 +151,6 @@ function render() {
   document.getElementById("caption").textContent = isFinal
     ? t("caption.final", { year: state.year, minApps })
     : t("caption.live", { date: fmtDateUA(snap.date), minApps });
-  document.getElementById("live-disclaimer").hidden = isFinal;
 
   document.getElementById("card-subtitle").textContent =
     t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");

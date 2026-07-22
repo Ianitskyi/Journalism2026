@@ -25,7 +25,6 @@ const I18N = {
       updated: "Оновлено"
     },
     banner: {
-      demo: "Дані за <strong>2021–2025 роки — реальні підсумкові дані ЄДЕБО</strong>. Для поточного 2026 року до завершення підключення показано демонстраційний fallback; стан даних завжди зазначено під обраним роком.",
       demoUni: "⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>, а не реальна вибірка ЄДЕБО. Деталі — у README."
     },
     stats: {
@@ -64,9 +63,6 @@ const I18N = {
       rank: "Ранг"
     },
     unit: { applications: "заяв", submitted: "подано", admitted: "допущено" },
-    disclaimer: {
-      liveHtml: "<strong>2026 рік — поточні, незавершені дані.</strong> Кількість заяв, кількість допущених і середній бал можуть змінюватися протягом кампанії. Коректно зіставляти 2026 рік із підсумковими даними попередніх років можна буде лише після завершення вступної кампанії та фіксації фінального знімка."
-    },
     methodology: {
       kicker: "Про рейтинг",
       title: "Методологія, обмеження та припущення",
@@ -140,7 +136,6 @@ const I18N = {
       updated: "Updated"
     },
     banner: {
-      demo: "<strong>2021–2025 use real final EDBO data.</strong> Until the current 2026 connection is complete, that year uses a demo fallback; the status is always stated below the selected year.",
       demoUni: "⚠️ Demo version: the scores and application counts below are <strong>generated test data</strong>, not a real EDBO sample. See README for details."
     },
     stats: {
@@ -179,9 +174,6 @@ const I18N = {
       rank: "Rank"
     },
     unit: { applications: "applications", submitted: "submitted", admitted: "admitted" },
-    disclaimer: {
-      liveHtml: "<strong>2026 figures are live and incomplete.</strong> Submitted and admitted application counts and the average score may change during the campaign. A sound comparison with final historical figures will only be possible after the 2026 campaign closes and a final snapshot is fixed."
-    },
     methodology: {
       kicker: "About the ranking",
       title: "Methodology, limitations and assumptions",

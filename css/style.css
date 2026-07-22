@@ -405,19 +405,6 @@ a { color: inherit; }
   margin: 0 0 22px;
 }
 
-.live-disclaimer {
-  margin: -10px 0 22px;
-  padding: 14px 16px;
-  border: 1px solid #e5c36d;
-  border-radius: var(--radius-md);
-  background: #fff8df;
-  color: #6b4d05;
-  font-size: 13.5px;
-  line-height: 1.55;
-}
-
-.live-disclaimer[hidden] { display: none; }
-
 .sort-row {
   display: flex;
   align-items: center;
