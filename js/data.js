@@ -224,10 +224,50 @@ const SNAPSHOT_DATES = Object.keys(SNAPSHOTS).sort();
 
 const BY_YEAR = {};
 for (const year of PAST_YEARS) {
+  // запасний варіант (згенеровані дані), поки не підвантажились реальні —
+  // одразу перезаписується нижче через loadRealHistoricalData()
   const snap = buildYearFinalSnapshot(year);
   BY_YEAR[year] = { dates: [snap.date], snapshots: { [snap.date]: snap } };
 }
 BY_YEAR[CURRENT_YEAR] = { dates: SNAPSHOT_DATES, snapshots: SNAPSHOTS };
+
+/* реальні дані ЄДЕБО за 2018–2025 (див. README, розділ "Підключення
+   реальних даних ЄДЕБО") — зібрані scripts/fetch-edbo-history.mjs з
+   архівних vstup<рік>.edbo.gov.ua. Підвантажуються асинхронно й заміняють
+   згенерований запасний варіант вище; якщо конкретний рік не завантажився
+   (наприклад, немає мережі), лишається згенерований fallback, і про це
+   попереджається в консолі. Після заміни розсилається подія
+   "edbo-data-updated", щоб app.js/university.js могли перерендерити вже
+   відкриту сторінку, якщо запит завершився вже після першого рендеру. */
+async function loadRealHistoricalData() {
+  const results = await Promise.allSettled(
+    PAST_YEARS.map(async (year) => {
+      const date = `${year}-08-05`;
+      const resp = await fetch(`data/${date}.json`);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const snap = await resp.json();
+      return { year, snap };
+    })
+  );
+
+  let anyUpdated = false;
+  results.forEach((r, i) => {
+    const year = PAST_YEARS[i];
+    if (r.status === "fulfilled") {
+      const { snap } = r.value;
+      BY_YEAR[year] = { dates: [snap.date], snapshots: { [snap.date]: snap } };
+      anyUpdated = true;
+    } else {
+      console.warn(`Не вдалось завантажити реальні дані ЄДЕБО за ${year} рік, лишаю згенерований fallback:`, r.reason);
+    }
+  });
+
+  if (anyUpdated && typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent("edbo-data-updated"));
+  }
+}
+
+loadRealHistoricalData();
 
 const DB = {
   years: [...PAST_YEARS, CURRENT_YEAR],

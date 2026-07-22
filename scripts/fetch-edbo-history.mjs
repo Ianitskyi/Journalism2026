@@ -29,10 +29,49 @@ const SPECIALITY = "C7"; // Журналістика
 const QUALIFICATIONS = { bachelor: "1", master: "2" };
 const EDUCATION_BASE = { bachelor: "40", master: "" }; // 40 = Повна загальна середня освіта
 
+/* Мапа "EDBO uid → наш слаг" для ЗВО, що вже є у статичному списку
+   BACHELOR_UNIS/MASTER_UNIS (js/data.js) з демо-даними за 2026 рік. Без
+   цієї мапи university.js (сторінка ЗВО, графік динаміки по роках) не
+   зміг би з'єднати реальні 2018-2025 з демо-2026 для того самого закладу,
+   бо шукає рядки по `id` зі статичного списку, а не по назві. uid взято з
+   реальних відповідей /offers-universities/ за 2025 рік — стабільний
+   внутрішній ідентифікатор ЗВО в ЄДЕБО, не має змінюватись між роками.
+   Заклади поза цим списком отримують id `edbo<uid>` — без "наскрізної"
+   історії з демо-2026, але самі по собі коректні. */
+const UID_TO_SLUG = {
+  41: "knu",       // Київський нац. ун-т ім. Тараса Шевченка
+  282: "lnu",      // Львівський нац. ун-т ім. Івана Франка
+  79: "naukma",    // НаУКМА
+  244: "ucu",      // Український католицький університет
+  28: "onu",       // Одеський нац. ун-т ім. І. І. Мечникова
+  62: "karazin",   // Харківський нац. ун-т ім. В. Н. Каразіна
+  111: "dnu",      // Дніпровський нац. ун-т ім. Олеся Гончара
+  73: "znu",       // Запорізький нац. ун-т
+  44: "vnu",       // Волинський нац. ун-т ім. Лесі Українки
+  207: "uzhnu",    // Ужгородський нац. ун-т
+  101: "cnu",      // Черкаський нац. ун-т ім. Б. Хмельницького
+  6945: "kubg",    // Київський ун-т ім. Бориса Грінченка (нині "столичний")
+  246: "donnu",    // Донецький нац. ун-т ім. Василя Стуса
+  198: "cpu",      // Класичний приватний університет
+  81: "lnu-shev",  // Луганський нац. ун-т ім. Т. Шевченка
+  19: "mdu",       // Маріупольський державний ун-т
+  61: "chnu",      // Чернівецький нац. ун-т ім. Юрія Федьковича
+  168: "sumdu",    // Сумський державний університет
+  6704: "npu"      // НПУ ім. М. П. Драгоманова (нині Укр. держ. ун-т ім. Драгоманова)
+};
+
 /* мінімальна кількість заяв, щоб заклад потрапив у рейтинг (як у data.js) */
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };
 
 const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300, 260, 18, 100, 220, 280, 170, 330, 210, 30, 240, 60, 130];
+
+/* ті самі відтінки, що й у BACHELOR_UNIS/MASTER_UNIS (js/data.js), щоб
+   колір ЗВО в таблиці не "стрибав" між демо-2026 і реальними роками */
+const SLUG_HUE = {
+  knu: 350, lnu: 205, naukma: 268, ucu: 140, onu: 24, karazin: 12, dnu: 60,
+  znu: 90, vnu: 200, uzhnu: 150, cnu: 45, kubg: 300, donnu: 260, cpu: 18,
+  "lnu-shev": 100, mdu: 220, chnu: 280, sumdu: 170, npu: 330
+};
 
 function log(line) {
   console.log(line);
@@ -131,11 +170,12 @@ async function fetchLevelData(base, level) {
   const rows = [];
   for (const rec of byUid.values()) {
     if (rec.applications < MIN_APPLICATIONS[level]) continue;
+    const slug = UID_TO_SLUG[rec.uid];
     rows.push({
-      id: `edbo${rec.uid}`,
+      id: slug || `edbo${rec.uid}`,
       name: rec.name,
       short: shortName(rec.name),
-      hue: hashHue(rec.uid),
+      hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
       score: Math.round((rec.weightedScoreSum / rec.applications) * 10) / 10,
       applications: rec.applications
     });

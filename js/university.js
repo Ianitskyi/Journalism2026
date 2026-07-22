@@ -335,4 +335,5 @@ initDegreeTabs();
 initCompareSelect();
 initChartTooltip();
 window.onLangChange = () => { render(); resyncIndicators(); };
+window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
 render();
