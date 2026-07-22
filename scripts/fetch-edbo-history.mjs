@@ -52,10 +52,13 @@ const SHORT_NAME_STOPWORDS = new Set([
 function shortName(name) {
   // евристика: беремо великі літери зі значущих слів (пропускаючи типові
   // "національний університет..." тощо, щоб абревіатура була відрізняльною)
-  const cleaned = name.replace(/[«»""''"'()]/g, " ");
+  const cleaned = name.replace(/["'«»“”‘’()]/g, " ");
   const words = cleaned.split(/\s+/).filter((w) => w.length > 1 && !SHORT_NAME_STOPWORDS.has(w.toLowerCase()));
   const source = words.length ? words : cleaned.split(/\s+/).filter(Boolean);
-  const letters = source
+  // якщо значущих слів мало (напр. "Києво-Могилянська"), розбиваємо ще й по
+  // дефісу, щоб абревіатура не звелась до однієї літери
+  const parts = source.length >= 3 ? source : source.flatMap((w) => w.split("-"));
+  const letters = parts
     .slice(0, 4)
     .map((w) => w[0])
     .join("")
