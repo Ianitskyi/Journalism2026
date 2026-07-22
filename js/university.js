@@ -1,5 +1,3 @@
-const UAH_NUM = new Intl.NumberFormat("uk-UA");
-
 const state = { degree: "bachelor", compareId: null };
 
 function findUniMeta(id) {
@@ -7,12 +5,14 @@ function findUniMeta(id) {
   const m = MASTER_UNIS.find((u) => u.id === id);
   const src = b || m;
   if (!src) return null;
-  return { id, name: src.name, short: src.short, hue: src.hue, hasBachelor: !!b, hasMaster: !!m };
+  const name = getLang() === "en" ? (src.nameEn || src.name) : src.name;
+  const short = getLang() === "en" ? (src.shortEn || src.short) : src.short;
+  return { id, name, short, hue: src.hue, hasBachelor: !!b, hasMaster: !!m };
 }
 
 function allUniMetas() {
   const ids = new Set([...BACHELOR_UNIS, ...MASTER_UNIS].map((u) => u.id));
-  return [...ids].map(findUniMeta).sort((a, b) => a.name.localeCompare(b.name, "uk"));
+  return [...ids].map(findUniMeta).sort((a, b) => a.name.localeCompare(b.name, getLang() === "en" ? "en" : "uk"));
 }
 
 /* останній (актуальний) знімок конкретного року — для 2026 це найновіший
@@ -31,14 +31,18 @@ function buildTrend(id, degree) {
   });
 }
 
-/* series: [{ getVal(t)->number|null, lineClass, dotClass }] — до 2 ліній на графіку */
+function escapeAttr(str) {
+  return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+
+/* series: [{ getVal(t)->number|null, lineClass, dotClass, label }] — до 2 ліній на графіку */
 function buildChartSVG(trend, series) {
   const values = [];
   trend.forEach((t) => series.forEach((s) => {
     const v = s.getVal(t);
     if (v != null) values.push(v);
   }));
-  if (!values.length) return `<div class="chart-empty">Немає даних для побудови графіка.</div>`;
+  if (!values.length) return `<div class="chart-empty">${t("uni.noChartData")}</div>`;
 
   const w = 640, h = 220, padL = 34, padR = 12, padT = 16, padB = 30;
   const min = Math.min(...values), max = Math.max(...values);
@@ -60,11 +64,17 @@ function buildChartSVG(trend, series) {
     return d.trim();
   }
 
-  function dotsFor(getVal, cls) {
+  function dotsFor(getVal, cls, label) {
     return trend.map((t, i) => {
       const v = getVal(t);
       if (v == null) return "";
-      return `<circle class="${cls}" cx="${xFor(i).toFixed(1)}" cy="${yFor(v).toFixed(1)}" r="4"><title>${t.year}: ${v.toFixed(1)}</title></circle>`;
+      const cx = xFor(i).toFixed(1);
+      const cy = yFor(v).toFixed(1);
+      const tooltipText = label ? `${label} · ${t.year}: ${v.toFixed(1)}` : `${t.year}: ${v.toFixed(1)}`;
+      return `
+        <circle class="${cls}" cx="${cx}" cy="${cy}" r="4"></circle>
+        <circle class="chart-dot-hit" cx="${cx}" cy="${cy}" r="11" tabindex="0" role="img" aria-label="${escapeAttr(tooltipText)}" data-tooltip="${escapeAttr(tooltipText)}"></circle>
+      `;
     }).join("");
   }
 
@@ -79,10 +89,10 @@ function buildChartSVG(trend, series) {
     return d ? `<path class="chart-line ${s.lineClass}" d="${d}" fill="none" />` : "";
   }).join("");
 
-  const dots = series.map((s) => dotsFor(s.getVal, s.dotClass)).join("");
+  const dots = series.map((s) => dotsFor(s.getVal, s.dotClass, s.label)).join("");
 
   return `
-    <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="Динаміка балу по роках">
+    <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="${t("uni.chartAriaLabel")}">
       ${baseline}
       ${paths}
       ${dots}
@@ -94,7 +104,7 @@ function buildChartSVG(trend, series) {
 function renderCompareOptions(meta) {
   const select = document.getElementById("compare-select");
   const current = state.compareId;
-  select.innerHTML = `<option value="">— не порівнювати —</option>`;
+  select.innerHTML = `<option value="">${t("uni.compareNone")}</option>`;
   allUniMetas()
     .filter((u) => u.id !== meta.id && (state.degree === "bachelor" ? u.hasBachelor : u.hasMaster))
     .forEach((u) => {
@@ -116,15 +126,15 @@ function renderComparePanel(meta, trend, compareMeta, compareTrend) {
   }
   panel.style.display = "grid";
 
-  function colHTML(m, t, isPrimary) {
-    const withData = t.filter((x) => x.row);
+  function colHTML(m, trendData, isPrimary) {
+    const withData = trendData.filter((x) => x.row);
     const latest = [...withData].reverse()[0] || null;
     return `
       <div class="compare-col ${isPrimary ? "is-primary" : ""}">
         <div class="compare-col-name">${m.name}</div>
-        <div class="compare-metric"><span>Ранг (${latest ? latest.year : "—"})</span><span>${latest ? "#" + latest.row.rank : "—"}</span></div>
-        <div class="compare-metric"><span>Бал</span><span>${latest ? latest.row.score.toFixed(1) : "—"}</span></div>
-        <div class="compare-metric"><span>Заяв</span><span>${latest ? UAH_NUM.format(latest.row.applications) : "—"}</span></div>
+        <div class="compare-metric"><span>${t("uni.metricRank", { year: latest ? latest.year : "—" })}</span><span>${latest ? "#" + latest.row.rank : "—"}</span></div>
+        <div class="compare-metric"><span>${t("table.score")}</span><span>${latest ? latest.row.score.toFixed(1) : "—"}</span></div>
+        <div class="compare-metric"><span>${t("table.applications")}</span><span>${latest ? numFmt().format(latest.row.applications) : "—"}</span></div>
       </div>
     `;
   }
@@ -143,7 +153,7 @@ function render() {
     return;
   }
 
-  document.title = `${meta.name} — Журфак.Рейтинг`;
+  document.title = `${meta.name} — ${t("meta.uniTitleSuffix")}`;
 
   // якщо для обраного рівня немає даних узагалі — переключитись на доступний
   if (state.degree === "master" && !meta.hasMaster) state.degree = "bachelor";
@@ -183,7 +193,7 @@ function render() {
 
   let legendItems, subtitle;
   if (compareMeta) {
-    subtitle = `${meta.short} проти ${compareMeta.short}`;
+    subtitle = t("uni.compareVs", { a: meta.short, b: compareMeta.short });
     legendItems = [
       { cls: "", color: "var(--accent-dark)", label: meta.name },
       { cls: "", color: "var(--ink-soft)", label: compareMeta.name }
@@ -196,18 +206,18 @@ function render() {
       compareRow: compareTrend[i].row
     }));
     document.getElementById("chart-wrap").innerHTML = buildChartSVG(combined, [
-      { getVal: (t) => t.row ? t.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all" },
-      { getVal: (t) => t.compareRow ? t.compareRow.score : null, lineClass: "chart-line-compare", dotClass: "chart-dot-compare" }
+      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: meta.short },
+      { getVal: (x) => x.compareRow ? x.compareRow.score : null, lineClass: "chart-line-compare", dotClass: "chart-dot-compare", label: compareMeta.short }
     ]);
   } else {
-    subtitle = "суцільна — усі заяви, пунктир — лише пріоритет 1";
+    subtitle = t("uni.subtitlePlain");
     legendItems = [
-      { cls: "", color: "var(--accent-dark)", label: "Усі заяви" },
-      { cls: "dashed", color: "var(--gold)", label: "Пріоритет 1" }
+      { cls: "", color: "var(--accent-dark)", label: t("view.all") },
+      { cls: "dashed", color: "var(--gold)", label: t("view.p1") }
     ];
     document.getElementById("chart-wrap").innerHTML = buildChartSVG(trend, [
-      { getVal: (t) => t.row ? t.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all" },
-      { getVal: (t) => t.rowP1 ? t.rowP1.score : null, lineClass: "chart-line-p1", dotClass: "chart-dot-p1" }
+      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: t("view.all") },
+      { getVal: (x) => x.rowP1 ? x.rowP1.score : null, lineClass: "chart-line-p1", dotClass: "chart-dot-p1", label: t("view.p1") }
     ]);
   }
 
@@ -222,42 +232,96 @@ function render() {
   renderComparePanel(meta, trend, compareMeta, compareTrend);
 
   document.getElementById("uni-table-subtitle").textContent =
-    state.degree === "bachelor" ? "бакалаврат · денна форма" : "магістратура · денна форма";
+    t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");
 
   const tbody = document.getElementById("uni-year-body");
   tbody.innerHTML = "";
-  [...trend].reverse().forEach((t) => {
+  [...trend].reverse().forEach((entry) => {
     const tr = document.createElement("tr");
-    if (!t.row) {
+    if (!entry.row) {
       tr.innerHTML = `
-        <td><strong>${t.year}</strong></td>
-        <td class="num" colspan="3"><span class="applications">поза рейтингом (менше мінімуму заяв)</span></td>
+        <td><strong>${entry.year}</strong></td>
+        <td class="num" colspan="3"><span class="applications">${t("empty.outOfRanking")}</span></td>
       `;
     } else {
       tr.innerHTML = `
-        <td><strong>${t.year}</strong></td>
-        <td class="num"><div class="score">#${t.row.rank}</div></td>
-        <td class="num"><div class="score">${t.row.score.toFixed(1)}</div></td>
-        <td class="num"><div class="applications">${UAH_NUM.format(t.row.applications)}</div></td>
+        <td><strong>${entry.year}</strong></td>
+        <td class="num"><div class="score">#${entry.row.rank}</div></td>
+        <td class="num"><div class="score">${entry.row.score.toFixed(1)}</div></td>
+        <td class="num"><div class="applications">${numFmt().format(entry.row.applications)}</div></td>
       `;
     }
     tbody.appendChild(tr);
   });
 }
 
+/* позиціонує повзунок-індикатор по фактичних пікселях активної кнопки —
+   ширини вкладок нерівні між мовами, тож фіксовані 50%/translateX не підходять */
+function syncIndicator(indicator, activeBtn) {
+  if (!indicator || !activeBtn) return;
+  indicator.style.left = `${activeBtn.offsetLeft}px`;
+  indicator.style.width = `${activeBtn.offsetWidth}px`;
+}
+
 function initDegreeTabs() {
   const indicator = document.getElementById("uni-degree-indicator");
-  document.querySelectorAll("#uni-degree-tabs [data-degree]").forEach((btn, i) => {
+  const buttons = [...document.querySelectorAll("#uni-degree-tabs [data-degree]")];
+  buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       state.degree = btn.dataset.degree;
-      document.querySelectorAll("#uni-degree-tabs [data-degree]").forEach((b) => {
+      buttons.forEach((b) => {
         b.classList.toggle("active", b === btn);
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
       });
-      indicator.style.transform = `translateX(${i * 100}%)`;
+      syncIndicator(indicator, btn);
       render();
     });
   });
+  syncIndicator(indicator, buttons.find((b) => b.classList.contains("active")));
+}
+
+function resyncIndicators() {
+  syncIndicator(document.getElementById("uni-degree-indicator"), document.querySelector("#uni-degree-tabs .pill.active"));
+}
+
+function initChartTooltip() {
+  const plot = document.querySelector(".chart-plot");
+  const tooltip = document.getElementById("chart-tooltip");
+  if (!plot || !tooltip) return;
+
+  function show(target) {
+    const text = target.dataset.tooltip;
+    if (!text) return;
+    tooltip.textContent = text;
+    tooltip.classList.add("visible");
+
+    const plotRect = plot.getBoundingClientRect();
+    const dotRect = target.getBoundingClientRect();
+    const centerX = dotRect.left + dotRect.width / 2 - plotRect.left;
+    const halfW = tooltip.offsetWidth / 2;
+    const clampedX = Math.min(Math.max(centerX, halfW + 4), plotRect.width - halfW - 4);
+
+    tooltip.style.left = `${clampedX}px`;
+    tooltip.style.top = `${dotRect.top - plotRect.top}px`;
+  }
+
+  function hide() {
+    tooltip.classList.remove("visible");
+  }
+
+  plot.addEventListener("mouseover", (e) => {
+    const target = e.target.closest(".chart-dot-hit");
+    if (target) show(target);
+  });
+  plot.addEventListener("mouseout", (e) => {
+    const target = e.target.closest(".chart-dot-hit");
+    if (target && !target.contains(e.relatedTarget)) hide();
+  });
+  plot.addEventListener("focusin", (e) => {
+    const target = e.target.closest(".chart-dot-hit");
+    if (target) show(target);
+  });
+  plot.addEventListener("focusout", hide);
 }
 
 function initCompareSelect() {
@@ -269,4 +333,6 @@ function initCompareSelect() {
 
 initDegreeTabs();
 initCompareSelect();
+initChartTooltip();
+window.onLangChange = () => { render(); resyncIndicators(); };
 render();

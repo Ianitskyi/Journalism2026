@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Динаміка журфаку — Рейтинг журфаків України</title>
-<meta name="description" content="Динаміка популярності журфаку або програми журналістики: середній конкурсний бал і кількість заяв по роках." />
+<title data-i18n="meta.uniDefaultTitle">Динаміка журфаку — Рейтинг журфаків України</title>
+<meta name="description" content="Динаміка популярності журфаку або програми журналістики: середній конкурсний бал і кількість заяв по роках." data-i18n-content="meta.uniDesc" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -13,17 +13,21 @@
 <main class="wrap uni-wrap">
 
   <div class="page-nav-row">
-    <a class="home-btn" href="https://promedia.report">← ПроМедіа</a>
-    <a class="back-link" href="index.html">← До рейтингу</a>
+    <a class="home-btn" href="https://promedia.report" data-i18n="nav.promedia">← ПроМедіа</a>
+    <a class="back-link" href="index.html" data-i18n="nav.backToRating">← До рейтингу</a>
+    <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language / Мова">
+      <button class="lang-btn" data-lang="uk" type="button">UA</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
   </div>
 
   <div class="test-banner">
-    ⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>,
-    а не реальна вибірка ЄДЕБО. Деталі — у README.
+    <span data-i18n-html="banner.demoUni">⚠️ Демонстраційна версія: бали й кількість заяв нижче — <strong>згенеровані тестові дані</strong>,
+    а не реальна вибірка ЄДЕБО. Деталі — у README.</span>
   </div>
 
   <div id="uni-not-found" class="empty-state uni-not-found" style="display:none">
-    Такий заклад освіти не знайдено. <a href="index.html">Повернутись до рейтингу →</a>
+    <span data-i18n="empty.uniNotFound">Такий заклад освіти не знайдено.</span> <a href="index.html" data-i18n="empty.backToRating">Повернутись до рейтингу →</a>
   </div>
 
   <div id="uni-content">
@@ -31,32 +35,32 @@
     <div class="uni-hero">
       <div class="uni-hero-logo" id="uni-logo">—</div>
       <div>
-        <div class="uni-hero-eyebrow">Динаміка популярності · спеціальність «Журналістика»</div>
+        <div class="uni-hero-eyebrow" data-i18n="uni.eyebrow">Динаміка популярності · спеціальність «Журналістика»</div>
         <h1 id="uni-name">—</h1>
       </div>
     </div>
 
     <div class="tabs" id="uni-degree-tabs" role="tablist">
       <span class="tabs-indicator" id="uni-degree-indicator"></span>
-      <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true">Бакалавр</button>
-      <button class="pill" data-degree="master" role="tab" aria-selected="false">Магістр</button>
+      <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true" data-i18n="degree.bachelor">Бакалавр</button>
+      <button class="pill" data-degree="master" role="tab" aria-selected="false" data-i18n="degree.master">Магістр</button>
     </div>
 
     <div class="stats-row uni-stats-row">
       <div class="stat-tile">
-        <div class="stat-label">Найкращий ранг</div>
+        <div class="stat-label" data-i18n="uni.bestRank">Найкращий ранг</div>
         <div class="stat-value accent" id="uni-best-rank">—</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-label">Ранг зараз</div>
+        <div class="stat-label" data-i18n="uni.currentRank">Ранг зараз</div>
         <div class="stat-value" id="uni-current-rank">—</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-label">Бал зараз</div>
+        <div class="stat-label" data-i18n="uni.currentScore">Бал зараз</div>
         <div class="stat-value" id="uni-current-score">—</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-label">Зміна балу з 2021</div>
+        <div class="stat-label" data-i18n="uni.trendSince">Зміна балу з 2021</div>
         <div class="stat-value" id="uni-trend">—</div>
       </div>
     </div>
@@ -65,17 +69,20 @@
       <div class="card-head chart-card-head">
         <div class="card-icon">📈</div>
         <div>
-          <div class="card-title">Середній конкурсний бал по роках</div>
+          <div class="card-title" data-i18n="uni.chartTitle">Середній конкурсний бал по роках</div>
           <div class="card-subtitle" id="chart-subtitle"></div>
         </div>
       </div>
       <div class="compare-row">
-        <span class="compare-label">Порівняти з</span>
+        <span class="compare-label" data-i18n="uni.compareLabel">Порівняти з</span>
         <select class="compare-select" id="compare-select">
-          <option value="">— не порівнювати —</option>
+          <option value="" data-i18n="uni.compareNone">— не порівнювати —</option>
         </select>
       </div>
-      <div class="chart-wrap" id="chart-wrap"></div>
+      <div class="chart-plot">
+        <div class="chart-wrap" id="chart-wrap"></div>
+        <div class="chart-tooltip" id="chart-tooltip"></div>
+      </div>
       <div class="chart-legend" id="chart-legend"></div>
     </div>
 
@@ -85,17 +92,17 @@
       <div class="card-head">
         <div class="card-icon">📊</div>
         <div>
-          <div class="card-title">Рейтинг по роках</div>
+          <div class="card-title" data-i18n="uni.rankingByYear">Рейтинг по роках</div>
           <div class="card-subtitle" id="uni-table-subtitle"></div>
         </div>
       </div>
       <table>
         <thead>
           <tr>
-            <th>Рік</th>
-            <th class="num">Ранг</th>
-            <th class="num">Бал</th>
-            <th class="num">Заяв</th>
+            <th data-i18n="table.year">Рік</th>
+            <th class="num" data-i18n="table.rank">Ранг</th>
+            <th class="num" data-i18n="table.score">Бал</th>
+            <th class="num" data-i18n="table.applications">Заяв</th>
           </tr>
         </thead>
         <tbody id="uni-year-body"></tbody>
@@ -106,15 +113,16 @@
 
   <footer class="site-footer">
     <a class="footer-brand" href="https://promedia.report" target="_blank" rel="noopener">
-      <span>Ініціатива</span>
+      <span data-i18n="footer.initiative">Ініціатива</span>
       <img src="img/promedia-wordmark.svg" alt="ГО «ПроМедіа»" class="footer-logo" />
     </a>
-    Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).<br />
-    Наразі показано тестові дані — дашборд ще не підключено до живого фіда.
+    <span data-i18n-html="footer.dataSourceHtml">Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).</span><br />
+    <span data-i18n="footer.dataSourceNote">Наразі показано тестові дані — дашборд ще не підключено до живого фіда.</span>
   </footer>
 
 </main>
 
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/university.js"></script>
 </body>

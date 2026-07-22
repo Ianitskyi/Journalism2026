@@ -27,42 +27,44 @@ const PAST_YEARS = [2021, 2022, 2023, 2024, 2025];
 
 /* base-профіль закладу: score/applications — стартові орієнтири для генератора,
    не реальні цифри */
+/* nameEn/shortEn — орієнтовні усталені англійські назви/абревіатури для
+   EN-версії сайту; не офіційний переклад, потребує звірки з самими ЗВО */
 const BACHELOR_UNIS = [
-  { id: "knu",       name: "КНУ ім. Тараса Шевченка (Інститут журналістики)", short: "КНУ",        hue: 350, baseScore: 178.4, baseApps: 640 },
-  { id: "lnu",       name: "Львівський нац. ун-т ім. Івана Франка",           short: "ЛНУ",         hue: 205, baseScore: 162.1, baseApps: 410 },
-  { id: "naukma",    name: "НаУКМА (Могилянська школа журналістики)",        short: "НаУКМА",      hue: 268, baseScore: 174.8, baseApps: 260 },
-  { id: "ucu",       name: "Український католицький університет",           short: "УКУ",         hue: 140, baseScore: 168.9, baseApps: 150 },
-  { id: "onu",       name: "Одеський нац. ун-т ім. І. І. Мечникова",         short: "ОНУ",         hue: 24,  baseScore: 151.6, baseApps: 220 },
-  { id: "karazin",   name: "Харківський нац. ун-т ім. В. Н. Каразіна",       short: "ХНУ",         hue: 12,  baseScore: 149.2, baseApps: 300 },
-  { id: "dnu",       name: "Дніпровський нац. ун-т ім. Олеся Гончара",       short: "ДНУ",         hue: 60,  baseScore: 144.7, baseApps: 190 },
-  { id: "znu",       name: "Запорізький нац. ун-т",                          short: "ЗНУ",         hue: 90,  baseScore: 141.3, baseApps: 130 },
-  { id: "pnu",       name: "Прикарпатський нац. ун-т ім. В. Стефаника",      short: "ПНУ",         hue: 320, baseScore: 139.8, baseApps: 95  },
-  { id: "vnu",       name: "Волинський нац. ун-т ім. Лесі Українки",         short: "ВНУ",         hue: 200, baseScore: 138.4, baseApps: 80  },
-  { id: "uzhnu",     name: "Ужгородський нац. ун-т",                         short: "УжНУ",        hue: 150, baseScore: 136.9, baseApps: 70  },
-  { id: "cnu",       name: "Черкаський нац. ун-т ім. Б. Хмельницького",      short: "ЧНУ",         hue: 45,  baseScore: 135.2, baseApps: 60  },
-  { id: "kubg",      name: "Київський ун-т ім. Бориса Грінченка",            short: "КУБГ",        hue: 300, baseScore: 143.5, baseApps: 175 },
-  { id: "donnu",     name: "Донецький нац. ун-т ім. Василя Стуса (Вінниця)", short: "ДонНУ",       hue: 260, baseScore: 137.6, baseApps: 65  },
-  { id: "cpu",       name: "Класичний приватний університет (Запоріжжя)",   short: "КПУ",         hue: 18,  baseScore: 131.0, baseApps: 40  },
-  { id: "lnu-shev",  name: "Луганський нац. ун-т ім. Т. Шевченка (Полтава)", short: "ЛНУ ім.Ш.",  hue: 100, baseScore: 133.8, baseApps: 35  },
-  { id: "mdu",       name: "Маріупольський державний ун-т (Київ)",           short: "МДУ",         hue: 220, baseScore: 134.9, baseApps: 45  },
-  { id: "chnu",      name: "Чернівецький нац. ун-т ім. Юрія Федьковича",     short: "ЧернНУ",      hue: 280, baseScore: 140.1, baseApps: 85  },
-  { id: "sumdu",     name: "Сумський державний університет",                 short: "СумДУ",       hue: 170, baseScore: 132.4, baseApps: 55  },
-  { id: "npu",       name: "НПУ ім. М. П. Драгоманова",                      short: "НПУ",         hue: 330, baseScore: 145.9, baseApps: 120 }
+  { id: "knu",       name: "КНУ ім. Тараса Шевченка (Інститут журналістики)", short: "КНУ",        nameEn: "Taras Shevchenko National University of Kyiv (Institute of Journalism)", shortEn: "KNU",    hue: 350, baseScore: 178.4, baseApps: 640 },
+  { id: "lnu",       name: "Львівський нац. ун-т ім. Івана Франка",           short: "ЛНУ",         nameEn: "Ivan Franko National University of Lviv",                                shortEn: "LNU",    hue: 205, baseScore: 162.1, baseApps: 410 },
+  { id: "naukma",    name: "НаУКМА (Могилянська школа журналістики)",        short: "НаУКМА",      nameEn: "National University of Kyiv-Mohyla Academy (Mohyla School of Journalism)", shortEn: "NaUKMA", hue: 268, baseScore: 174.8, baseApps: 260 },
+  { id: "ucu",       name: "Український католицький університет",           short: "УКУ",         nameEn: "Ukrainian Catholic University",                                          shortEn: "UCU",    hue: 140, baseScore: 168.9, baseApps: 150 },
+  { id: "onu",       name: "Одеський нац. ун-т ім. І. І. Мечникова",         short: "ОНУ",         nameEn: "Odesa I. I. Mechnikov National University",                              shortEn: "ONU",    hue: 24,  baseScore: 151.6, baseApps: 220 },
+  { id: "karazin",   name: "Харківський нац. ун-т ім. В. Н. Каразіна",       short: "ХНУ",         nameEn: "V. N. Karazin Kharkiv National University",                              shortEn: "KhNU",   hue: 12,  baseScore: 149.2, baseApps: 300 },
+  { id: "dnu",       name: "Дніпровський нац. ун-т ім. Олеся Гончара",       short: "ДНУ",         nameEn: "Oles Honchar Dnipro National University",                                shortEn: "DNU",    hue: 60,  baseScore: 144.7, baseApps: 190 },
+  { id: "znu",       name: "Запорізький нац. ун-т",                          short: "ЗНУ",         nameEn: "Zaporizhzhia National University",                                       shortEn: "ZNU",    hue: 90,  baseScore: 141.3, baseApps: 130 },
+  { id: "pnu",       name: "Прикарпатський нац. ун-т ім. В. Стефаника",      short: "ПНУ",         nameEn: "Vasyl Stefanyk Precarpathian National University",                       shortEn: "PNU",    hue: 320, baseScore: 139.8, baseApps: 95  },
+  { id: "vnu",       name: "Волинський нац. ун-т ім. Лесі Українки",         short: "ВНУ",         nameEn: "Lesya Ukrainka Volyn National University",                               shortEn: "VNU",    hue: 200, baseScore: 138.4, baseApps: 80  },
+  { id: "uzhnu",     name: "Ужгородський нац. ун-т",                         short: "УжНУ",        nameEn: "Uzhhorod National University",                                           shortEn: "UzhNU",  hue: 150, baseScore: 136.9, baseApps: 70  },
+  { id: "cnu",       name: "Черкаський нац. ун-т ім. Б. Хмельницького",      short: "ЧНУ",         nameEn: "Bohdan Khmelnytsky National University of Cherkasy",                     shortEn: "CNU",    hue: 45,  baseScore: 135.2, baseApps: 60  },
+  { id: "kubg",      name: "Київський ун-т ім. Бориса Грінченка",            short: "КУБГ",        nameEn: "Borys Grinchenko Kyiv University",                                       shortEn: "BGKU",   hue: 300, baseScore: 143.5, baseApps: 175 },
+  { id: "donnu",     name: "Донецький нац. ун-т ім. Василя Стуса (Вінниця)", short: "ДонНУ",       nameEn: "Vasyl' Stus Donetsk National University (Vinnytsia)",                    shortEn: "DonNU",  hue: 260, baseScore: 137.6, baseApps: 65  },
+  { id: "cpu",       name: "Класичний приватний університет (Запоріжжя)",   short: "КПУ",         nameEn: "Classic Private University (Zaporizhzhia)",                              shortEn: "CPU",    hue: 18,  baseScore: 131.0, baseApps: 40  },
+  { id: "lnu-shev",  name: "Луганський нац. ун-т ім. Т. Шевченка (Полтава)", short: "ЛНУ ім.Ш.",  nameEn: "Taras Shevchenko National University of Luhansk (Poltava)",              shortEn: "LSNU",   hue: 100, baseScore: 133.8, baseApps: 35  },
+  { id: "mdu",       name: "Маріупольський державний ун-т (Київ)",           short: "МДУ",         nameEn: "Mariupol State University (Kyiv)",                                       shortEn: "MSU",    hue: 220, baseScore: 134.9, baseApps: 45  },
+  { id: "chnu",      name: "Чернівецький нац. ун-т ім. Юрія Федьковича",     short: "ЧернНУ",      nameEn: "Yuriy Fedkovych Chernivtsi National University",                         shortEn: "ChNU",   hue: 280, baseScore: 140.1, baseApps: 85  },
+  { id: "sumdu",     name: "Сумський державний університет",                 short: "СумДУ",       nameEn: "Sumy State University",                                                   shortEn: "SumSU",  hue: 170, baseScore: 132.4, baseApps: 55  },
+  { id: "npu",       name: "НПУ ім. М. П. Драгоманова",                      short: "НПУ",         nameEn: "M. P. Drahomanov Ukrainian State University",                            shortEn: "NPU",    hue: 330, baseScore: 145.9, baseApps: 120 }
 ];
 
 const MASTER_UNIS = [
-  { id: "knu",     name: "КНУ ім. Тараса Шевченка (Інститут журналістики)", short: "КНУ",    hue: 350, baseScore: 172.0, baseApps: 210 },
-  { id: "lnu",     name: "Львівський нац. ун-т ім. Івана Франка",           short: "ЛНУ",     hue: 205, baseScore: 158.4, baseApps: 140 },
-  { id: "naukma",  name: "НаУКМА (Могилянська школа журналістики)",        short: "НаУКМА",  hue: 268, baseScore: 169.3, baseApps: 95  },
-  { id: "ucu",     name: "Український католицький університет",           short: "УКУ",     hue: 140, baseScore: 164.2, baseApps: 60  },
-  { id: "karazin", name: "Харківський нац. ун-т ім. В. Н. Каразіна",       short: "ХНУ",     hue: 12,  baseScore: 146.8, baseApps: 90  },
-  { id: "onu",     name: "Одеський нац. ун-т ім. І. І. Мечникова",         short: "ОНУ",     hue: 24,  baseScore: 147.5, baseApps: 70  },
-  { id: "dnu",     name: "Дніпровський нац. ун-т ім. Олеся Гончара",       short: "ДНУ",     hue: 60,  baseScore: 141.6, baseApps: 55  },
-  { id: "kubg",    name: "Київський ун-т ім. Бориса Грінченка",            short: "КУБГ",    hue: 300, baseScore: 140.2, baseApps: 65  },
-  { id: "znu",     name: "Запорізький нац. ун-т",                          short: "ЗНУ",     hue: 90,  baseScore: 137.9, baseApps: 40  },
-  { id: "npu",     name: "НПУ ім. М. П. Драгоманова",                      short: "НПУ",     hue: 330, baseScore: 142.7, baseApps: 50  },
-  { id: "uzhnu",   name: "Ужгородський нац. ун-т",                         short: "УжНУ",    hue: 150, baseScore: 133.5, baseApps: 25  },
-  { id: "chnu",    name: "Чернівецький нац. ун-т ім. Юрія Федьковича",     short: "ЧернНУ",  hue: 280, baseScore: 136.0, baseApps: 30  }
+  { id: "knu",     name: "КНУ ім. Тараса Шевченка (Інститут журналістики)", short: "КНУ",    nameEn: "Taras Shevchenko National University of Kyiv (Institute of Journalism)", shortEn: "KNU",    hue: 350, baseScore: 172.0, baseApps: 210 },
+  { id: "lnu",     name: "Львівський нац. ун-т ім. Івана Франка",           short: "ЛНУ",     nameEn: "Ivan Franko National University of Lviv",                                shortEn: "LNU",    hue: 205, baseScore: 158.4, baseApps: 140 },
+  { id: "naukma",  name: "НаУКМА (Могилянська школа журналістики)",        short: "НаУКМА",  nameEn: "National University of Kyiv-Mohyla Academy (Mohyla School of Journalism)", shortEn: "NaUKMA", hue: 268, baseScore: 169.3, baseApps: 95  },
+  { id: "ucu",     name: "Український католицький університет",           short: "УКУ",     nameEn: "Ukrainian Catholic University",                                          shortEn: "UCU",    hue: 140, baseScore: 164.2, baseApps: 60  },
+  { id: "karazin", name: "Харківський нац. ун-т ім. В. Н. Каразіна",       short: "ХНУ",     nameEn: "V. N. Karazin Kharkiv National University",                              shortEn: "KhNU",   hue: 12,  baseScore: 146.8, baseApps: 90  },
+  { id: "onu",     name: "Одеський нац. ун-т ім. І. І. Мечникова",         short: "ОНУ",     nameEn: "Odesa I. I. Mechnikov National University",                              shortEn: "ONU",    hue: 24,  baseScore: 147.5, baseApps: 70  },
+  { id: "dnu",     name: "Дніпровський нац. ун-т ім. Олеся Гончара",       short: "ДНУ",     nameEn: "Oles Honchar Dnipro National University",                                shortEn: "DNU",    hue: 60,  baseScore: 141.6, baseApps: 55  },
+  { id: "kubg",    name: "Київський ун-т ім. Бориса Грінченка",            short: "КУБГ",    nameEn: "Borys Grinchenko Kyiv University",                                       shortEn: "BGKU",   hue: 300, baseScore: 140.2, baseApps: 65  },
+  { id: "znu",     name: "Запорізький нац. ун-т",                          short: "ЗНУ",     nameEn: "Zaporizhzhia National University",                                       shortEn: "ZNU",    hue: 90,  baseScore: 137.9, baseApps: 40  },
+  { id: "npu",     name: "НПУ ім. М. П. Драгоманова",                      short: "НПУ",     nameEn: "M. P. Drahomanov Ukrainian State University",                            shortEn: "NPU",    hue: 330, baseScore: 142.7, baseApps: 50  },
+  { id: "uzhnu",   name: "Ужгородський нац. ун-т",                         short: "УжНУ",    nameEn: "Uzhhorod National University",                                           shortEn: "UzhNU",  hue: 150, baseScore: 133.5, baseApps: 25  },
+  { id: "chnu",    name: "Чернівецький нац. ун-т ім. Юрія Федьковича",     short: "ЧернНУ",  nameEn: "Yuriy Fedkovych Chernivtsi National University",                         shortEn: "ChNU",   hue: 280, baseScore: 136.0, baseApps: 30  }
 ];
 
 /* мінімальна кількість заяв, щоб заклад потрапив у рейтинг */
@@ -112,13 +114,14 @@ function rankBoth(base, minApps, minAppsP1) {
   const all = base
     .filter((r) => r.applications >= minApps)
     .sort((a, b) => b.score - a.score)
-    .map(({ id, name, short, hue, score, applications }, i) => ({ id, name, short, hue, score, applications, rank: i + 1 }));
+    .map(({ id, name, short, nameEn, shortEn, hue, score, applications }, i) =>
+      ({ id, name, short, nameEn, shortEn, hue, score, applications, rank: i + 1 }));
 
   const p1 = base
     .filter((r) => r.p1Applications >= minAppsP1)
     .sort((a, b) => b.p1Score - a.p1Score)
-    .map(({ id, name, short, hue, p1Score, p1Applications }, i) =>
-      ({ id, name, short, hue, score: p1Score, applications: p1Applications, rank: i + 1 }));
+    .map(({ id, name, short, nameEn, shortEn, hue, p1Score, p1Applications }, i) =>
+      ({ id, name, short, nameEn, shortEn, hue, score: p1Score, applications: p1Applications, rank: i + 1 }));
 
   return { all, p1 };
 }
@@ -137,7 +140,7 @@ function buildDayList(unis, dayIndex, minApps, minAppsP1) {
     const p1Score = Math.max(100, score + (rndP1() - 0.5) * 2.0);
 
     return {
-      id: u.id, name: u.name, short: u.short, hue: u.hue,
+      id: u.id, name: u.name, short: u.short, nameEn: u.nameEn, shortEn: u.shortEn, hue: u.hue,
       score: round1(score), applications,
       p1Score: round1(p1Score), p1Applications
     };
@@ -187,7 +190,7 @@ function buildYearFinalList(unis, year, minApps, minAppsP1) {
     const p1Score = Math.max(100, score + (rndP1() - 0.5) * 2.4);
 
     return {
-      id: u.id, name: u.name, short: u.short, hue: u.hue,
+      id: u.id, name: u.name, short: u.short, nameEn: u.nameEn, shortEn: u.shortEn, hue: u.hue,
       score: round1(score), applications,
       p1Score: round1(p1Score), p1Applications
     };
