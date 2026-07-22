@@ -77,9 +77,9 @@ a { color: inherit; }
   border-radius: 9px;
   background: var(--accent);
   color: var(--ink);
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 16px;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,24 +107,33 @@ a { color: inherit; }
 
 .topbar-org:hover { color: rgba(255, 255, 255, 0.85); }
 
-.topbar-logo {
-  height: 22px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+.topbar-logo-chip {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 7px;
+  padding: 4px 9px;
+  line-height: 0;
 }
 
-@media (max-width: 480px) {
+.topbar-logo {
+  height: 15px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 400px) {
+  .topbar-org { display: none; }
+}
+
+@media (min-width: 401px) and (max-width: 480px) {
   .topbar-org span { display: none; }
 }
 
 /* ---------- hero ---------- */
 
 .hero {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(255, 172, 51, 0.28), transparent 50%),
-    var(--ink);
+  background: var(--ink);
   color: #fff;
   padding: 44px 24px 64px;
 }
@@ -326,9 +335,11 @@ a { color: inherit; }
   gap: 8px;
 }
 
-.tabs-sm {
-  transform: scale(0.92);
-  transform-origin: left center;
+.tabs-sm { padding: 3px; }
+
+.tabs-sm .pill {
+  padding: 7px 13px;
+  font-size: 12.5px;
 }
 
 .view-hint {
