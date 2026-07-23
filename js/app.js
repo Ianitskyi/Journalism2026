@@ -71,7 +71,7 @@ function renderYearChips() {
   DB.years.forEach((year) => {
     const btn = document.createElement("button");
     btn.className = "year-chip" + (year === state.year ? " active" : "");
-    btn.textContent = year === DB.currentYear ? t("year.current", { year }) : String(year);
+    btn.textContent = String(year);
     btn.addEventListener("click", () => {
       if (state.year === year) return;
       state.year = year;
@@ -116,19 +116,20 @@ function renderDateChips() {
   }
 }
 
-/* ---------- діаграми динаміки по системі в цілому (2021-2025) ---------- */
+/* ---------- діаграми динаміки по системі в цілому (усі роки) ---------- */
 
-/* останній (підсумковий для минулих років) знімок конкретного року */
+/* останній знімок конкретного року — для минулих років це єдиний
+   підсумковий знімок, для поточного (2026) — найсвіжіший оперативний
+   зріз, доки кампанія не завершена (деталі — у методології) */
 function yearSnapshot(year) {
   const yd = DB.byYear[year];
   return yd.snapshots[yd.dates[yd.dates.length - 1]];
 }
 
 /* сумарна кількість заяв і зважений середній бал (вага — кількість
-   допущених) по всій системі за рік і рівень — рахуємо лише за
-   завершені кампанії (без поточного 2026 року) */
+   допущених) по всій системі за рік і рівень, за всі роки, що є в DB */
 function systemWideTrend(degree) {
-  return PAST_YEARS.map((year) => {
+  return DB.years.map((year) => {
     const snap = yearSnapshot(year);
     const rows = snap[degree] || [];
     const applications = snap.totalApplications?.[degree] ?? rows.reduce((s, r) => s + r.applications, 0);
@@ -148,7 +149,7 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
   const min = Math.min(...values), max = Math.max(...values);
   const range = Math.max(1, max - min);
   const yMin = min - range * 0.1, yMax = max + range * 0.1;
-  const years = PAST_YEARS;
+  const years = DB.years;
   const n = years.length;
   const xFor = (i) => padL + (n === 1 ? 0.5 : i / (n - 1)) * (w - padL - padR);
   const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
@@ -206,10 +207,13 @@ function renderSystemChartLegend(containerId) {
 function renderSystemCharts() {
   const bachelorApps = systemWideTrend("bachelor");
   const masterApps = systemWideTrend("master");
+  const yearVars = { from: DB.years[0], to: DB.years[DB.years.length - 1] };
 
+  document.getElementById("system-chart-apps-title").textContent = t("systemChart.appsTitle", yearVars);
   document.getElementById("system-chart-apps").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "applications");
   renderSystemChartLegend("system-chart-apps-legend");
 
+  document.getElementById("system-chart-score-title").textContent = t("systemChart.scoreTitle", yearVars);
   document.getElementById("system-chart-score").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "avgScore");
   renderSystemChartLegend("system-chart-score-legend");
 }
