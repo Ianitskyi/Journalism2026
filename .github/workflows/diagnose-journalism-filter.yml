@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/diagnose-journalism-filter.mjs
+      - run: node scripts/diagnose-archived-offer-page.mjs
         timeout-minutes: 5
