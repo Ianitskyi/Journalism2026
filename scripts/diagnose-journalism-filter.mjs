@@ -15,7 +15,7 @@
  *    і друкує порівняльну таблицю.
  */
 
-const YEARS = [2025];
+const YEARS = [2021, 2025];
 const QUALIFICATIONS = { bachelor: "1", master: "2" };
 const EDUCATION_BASE = { bachelor: "40", master: "" };
 function specialityFor(year) {
@@ -75,13 +75,13 @@ function main() {
         const offers = await fetchOffers(base, level, year);
         console.log(`Отримано ${offers.length} пропозицій.`);
 
-        // 1) сирий дамп для НаУКМА (uid 79), якщо є в цьому рівні/році —
-        // щоб побачити реальні назви полів і значення
+        // 1) короткий дамп для НаУКМА (uid 79), якщо є в цьому рівні/році —
+        // spn підтверджено як фактична назва освітньої програми
         const naukma = offers.filter((o) => o.uid === 79);
         if (naukma.length) {
-          console.log(`\n[RAW DUMP] НаУКМА (uid=79), ${naukma.length} пропозицій:`);
+          console.log(`\n[НаУКМА, uid=79] ${naukma.length} пропозицій:`);
           for (const o of naukma) {
-            console.log(JSON.stringify(o));
+            console.log(`   spn="${o.spn}" заяв=${o.st?.c?.t}`);
           }
         }
 
@@ -95,9 +95,11 @@ function main() {
 
           const uid = offer.uid;
           if (!byUid.has(uid)) byUid.set(uid, { uid, name: offer.un, offers: [] });
-          // припущення (перевіряється сирим дампом вище): qn — назва
-          // освітньої програми/спеціалізації
-          const programName = offer.qn ?? offer.ssn ?? "";
+          // підтверджено сирим дампом: spn — фактична назва освітньої
+          // програми (напр. "Зв'язки з громадськістю" для НаУКМА під C7);
+          // qn — лише рівень ("Бакалавр"/"Магістр"), ssn — завжди назва
+          // спеціальності ("Журналістика"), обидва непридатні для фільтра
+          const programName = offer.spn ?? "";
           byUid.get(uid).offers.push({ programName, applications: t });
         }
 

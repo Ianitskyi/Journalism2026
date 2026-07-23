@@ -29,6 +29,12 @@
     return match ? Number(match[1]) : null;
   }
 
+  function stringFromRsc(html, field) {
+    const normalized = html.replace(/\\"/g, '"');
+    const match = normalized.match(new RegExp(`"${field}":"([^"]*)"`));
+    return match ? match[1].replace(/\\n/g, " ") : null;
+  }
+
   const html = document.documentElement.outerHTML;
   const normalizedRsc = html.replace(/\\"/g, '"');
   const ts = new Date().toISOString().replace(/[:.]/g, "-");
@@ -77,6 +83,7 @@
       offerId,
       universityId,
       universityName,
+      programName: stringFromRsc(html, "spn"),
       level,
       applications: numberFromRsc(html, "rqs_total") ?? scores.length,
       admitted: numberFromRsc(html, "rqs_allowed") ?? scores.length,

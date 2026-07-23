@@ -68,20 +68,29 @@ async function fetchOffer(manifestEntry) {
     throw new Error(`offer ${manifestEntry.offerId}: у HTML немає очікуваної статистики`);
   }
 
+  // programName (spn у архівному API) — назва освітньої програми, потрібна
+  // для фільтра "лише журналістика". Поле НЕ перевірено на живій сторінці
+  // /offer/<id> (вона захищена Turnstile, скрипт це не обходить) — якщо
+  // spn там не існує/названо інакше, programName буде null і offer просто
+  // не потрапить у фільтр rank() нижче, доки хтось не перевірить руками.
   return {
     offerId,
     level: manifestEntry.level,
     universityId: field(html, "university_id") ?? manifestEntry.universityId,
     universityName: stringField(html, "university_name") ?? manifestEntry.universityName,
+    programName: stringField(html, "spn"),
     applications,
     admitted,
     averageScore
   };
 }
 
+const JOURNALISM_RE = /журналіст/i;
+
 function rank(offers, level) {
   const grouped = new Map();
   for (const offer of offers.filter((item) => item.level === level)) {
+    if (!JOURNALISM_RE.test(offer.programName || "")) continue;
     const uid = Number(offer.universityId);
     const slug = UID_TO_SLUG[uid];
     const id = slug || `edbo${uid}`;
@@ -92,22 +101,26 @@ function rank(offers, level) {
         short: slug ? SLUG_SHORT[slug] : shortName(offer.universityName),
         hue: slug ? SLUG_HUE[slug] : PALETTE_HUES[Math.abs(uid) % PALETTE_HUES.length],
         weighted: 0,
-        applications: 0,
-        admitted: 0
+        applicationsTotal: 0,
+        admitted: 0,
+        programCount: 0
       });
     }
     const row = grouped.get(id);
     row.weighted += offer.averageScore * offer.applications;
-    row.applications += offer.applications;
+    row.applicationsTotal += offer.applications;
     row.admitted += offer.admitted;
+    row.programCount += 1;
   }
 
   return [...grouped.values()]
-    .filter((row) => row.applications >= MIN_APPLICATIONS[level] && row.admitted > 0)
+    .filter((row) => row.applicationsTotal >= MIN_APPLICATIONS[level] && row.admitted > 0 && row.programCount > 0)
     .map((row) => ({
       id: row.id, name: row.name, short: row.short, hue: row.hue,
-      score: Math.round((row.weighted / row.applications) * 10) / 10,
-      applications: row.applications,
+      score: Math.round((row.weighted / row.applicationsTotal) * 10) / 10,
+      applications: Math.round((row.applicationsTotal / row.programCount) * 10) / 10,
+      applicationsTotal: row.applicationsTotal,
+      programCount: row.programCount,
       admitted: row.admitted
     }))
     .sort((a, b) => b.score - a.score)
@@ -120,7 +133,7 @@ function kyivDate() {
   }).format(new Date());
 }
 
-const sumApps = (rows) => rows.reduce((sum, row) => sum + row.applications, 0);
+const sumApps = (rows) => rows.reduce((sum, row) => sum + row.applicationsTotal, 0);
 const sumAdmitted = (rows) => rows.reduce((sum, row) => sum + (row.admitted || 0), 0);
 
 async function main() {
