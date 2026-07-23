@@ -12,14 +12,14 @@ const I18N = {
       backToRating: "← До рейтингу"
     },
     meta: {
-      indexTitle: "Рейтинг журфаків України. Вступ 2026",
+      indexTitle: "Рейтинг журфаків України. Вступ на «Журналістику»",
       indexDesc: "Рейтинг журфаків України за кількістю поданих заяв і середнім конкурсним балом вступників на спеціальність «Журналістика». Дані ЄДЕБО.",
       uniTitleSuffix: "Журфак.Рейтинг",
       uniDefaultTitle: "Динаміка журфаку — Рейтинг журфаків України",
       uniDesc: "Динаміка популярності журфаку або програми журналістики: середній конкурсний бал і кількість заяв по роках."
     },
     hero: {
-      eyebrow: "Вступна кампанія 2026 · спеціальність C7 «Журналістика»",
+      eyebrow: "Вступна кампанія · спеціальність C7 «Журналістика»",
       title: "Рейтинг журфаків України",
       lede: "Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом вступників."
     },
@@ -130,14 +130,14 @@ const I18N = {
       backToRating: "← Back to ranking"
     },
     meta: {
-      indexTitle: "Ukrainian Journalism Schools Ranking. Admissions 2026",
+      indexTitle: "Ukrainian Journalism Schools Ranking. Journalism Admissions",
       indexDesc: "Ranking of Ukrainian journalism schools by submitted application count and average competitive score of applicants. EDBO data.",
       uniTitleSuffix: "Journalism School Ranking",
       uniDefaultTitle: "Journalism Program Trends — Ukrainian Journalism Schools Ranking",
       uniDesc: "Popularity trend of a journalism school or program: average competitive score and number of applications by year."
     },
     hero: {
-      eyebrow: "2026 admissions campaign · major C7 “Journalism”",
+      eyebrow: "Admissions campaign · major C7 “Journalism”",
       title: "Ukrainian Journalism Schools Ranking",
       lede: "Ranking of journalism faculties and programs by submitted applications and the average competitive score of applicants."
     },
