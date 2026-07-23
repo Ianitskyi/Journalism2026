@@ -1,0 +1,20 @@
+name: Diagnose journalism-only program filter
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Запускає
+# scripts/diagnose-journalism-filter.mjs на раннері з доступом до архівних
+# vstup<рік>.edbo.gov.ua, щоб подивитись у логах, як виглядатиме рейтинг,
+# якщо рахувати середню кількість заяв лише по програмах зі словом
+# "журналістика" в назві, а не по всіх програмах під спеціальністю C7/061.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/diagnose-journalism-filter.mjs
+        timeout-minutes: 5
