@@ -103,17 +103,18 @@ function rank(offers, level) {
         weighted: 0,
         applicationsTotal: 0,
         admitted: 0,
-        programCount: 0
+        programNames: new Set()
       });
     }
     const row = grouped.get(id);
     row.weighted += offer.averageScore * offer.applications;
     row.applicationsTotal += offer.applications;
     row.admitted += offer.admitted;
-    row.programCount += 1;
+    row.programNames.add(offer.programName);
   }
 
   return [...grouped.values()]
+    .map((row) => ({ ...row, programCount: row.programNames.size }))
     .filter((row) => row.applicationsTotal >= MIN_APPLICATIONS[level] && row.admitted > 0 && row.programCount > 0)
     .map((row) => ({
       id: row.id, name: row.name, short: row.short, hue: row.hue,

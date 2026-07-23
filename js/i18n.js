@@ -23,6 +23,9 @@ const I18N = {
       title: "Рейтинг журфаків України",
       lede: "Рейтинг університетів за кількістю поданих заяв на програми з журналістики і середнім конкурсним балом вступників."
     },
+    beta: {
+      noticeHtml: "Увага! Рейтинг існує у beta-режимі. Ми приймаємо ваші зауваження та одразу оновлюємо методологію. Пропозиції пишіть на <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
+    },
     stats: {
       submitted: "Подано заяв",
       count: "Журфаків у рейтингу"
@@ -140,6 +143,9 @@ const I18N = {
       eyebrow: "Major C7 “Journalism”, journalism programs",
       title: "Ukrainian Journalism Schools Ranking",
       lede: "Ranking of universities by submitted applications to journalism programs and the average competitive score of applicants."
+    },
+    beta: {
+      noticeHtml: "Note: this ranking is in beta. We welcome your feedback and update the methodology accordingly. Send suggestions to <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
     },
     stats: {
       submitted: "Applications submitted",

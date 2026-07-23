@@ -141,14 +141,14 @@ function rebuildLevel(snapshot, level) {
         weightedScoreSum: 0,
         applicationsTotal: 0,
         admitted: 0,
-        programCount: 0
+        programNames: new Set()
       });
     }
     const row = grouped.get(meta.id);
     row.weightedScoreSum += Number(offer.averageScore) * Number(offer.applications);
     row.applicationsTotal += Number(offer.applications);
     row.admitted += Number(offer.admitted);
-    row.programCount += 1;
+    row.programNames.add(offer.programName);
   }
 
   const capturedEntries = [...grouped.values()].map((row) => ({
@@ -158,9 +158,9 @@ function rebuildLevel(snapshot, level) {
     hue: row.hue,
     _level: level,
     score: round1(row.weightedScoreSum / row.applicationsTotal),
-    applications: round1(row.applicationsTotal / row.programCount),
+    applications: round1(row.applicationsTotal / row.programNames.size),
     applicationsTotal: row.applicationsTotal,
-    programCount: row.programCount,
+    programCount: row.programNames.size,
     admitted: row.admitted
   }));
 

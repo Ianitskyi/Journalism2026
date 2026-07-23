@@ -104,6 +104,24 @@ a { color: inherit; }
 
 .lang-btn:not(.active):hover { color: var(--ink); }
 
+/* ---------- beta banner ---------- */
+
+.beta-banner {
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  border-bottom: 1px solid var(--accent);
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.beta-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* ---------- hero ---------- */
 
 .hero {
