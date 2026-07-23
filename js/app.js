@@ -8,8 +8,14 @@ const state = {
   expanded: false
 };
 
-function uniName(row) {
-  return getLang() === "en" ? (row.nameEn || row.name) : row.name;
+/* registry — опційний реєстр (DB.allUniversitiesMeta()) для рядків реальних
+   даних, які самі по собі не несуть nameEn (лише плейсхолдер-рядки й
+   кураторський демо-2026 мають його прямо на об'єкті) */
+function uniName(row, registry) {
+  if (getLang() !== "en") return row.name;
+  if (row.nameEn) return row.nameEn;
+  const meta = registry && registry.get(row.id);
+  return (meta && meta.nameEn) || row.name;
 }
 
 /* значення показника закладу за попередній (щодо year) рік — потрібне,
@@ -247,6 +253,7 @@ function render() {
   const rawRows = snap[state.degree];
   const rows = sortedRows(rawRows, state.sortBy);
   const displayRows = [...rows, ...placeholderRows(rows, state.degree)];
+  const uniRegistry = DB.allUniversitiesMeta();
   const isFinal = state.year !== DB.currentYear;
   const minApps = DB.minApplications[state.degree];
 
@@ -281,7 +288,7 @@ function render() {
         <td><div class="rank">${r.rank || "—"}</div></td>
         <td>
           <a class="univ-cell" href="university.html?id=${encodeURIComponent(r.id)}">
-            <div class="univ-name">${uniName(r)}</div>
+            <div class="univ-name">${uniName(r, uniRegistry)}</div>
           </a>
         </td>
         <td class="num"><div class="score ${scoreCls}">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
