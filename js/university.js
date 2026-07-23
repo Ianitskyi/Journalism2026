@@ -262,8 +262,8 @@ function render() {
   const compareMetas = state.compareIds.map((id) => id && findUniMeta(id)).filter(Boolean);
   const compareTrends = compareMetas.map((m) => buildTrend(m.id, state.degree));
   const COMPARE_STYLES = [
-    { lineClass: "chart-line-compare", dotClass: "chart-dot-compare", color: "var(--ink-soft)" },
-    { lineClass: "chart-line-compare2", dotClass: "chart-dot-compare2", color: "var(--green)" }
+    { lineClass: "chart-line-compare", dotClass: "chart-dot-compare", barClass: "chart-bar-compare", color: "var(--ink-soft)" },
+    { lineClass: "chart-line-compare2", dotClass: "chart-dot-compare2", barClass: "chart-bar-compare2", color: "var(--green)" }
   ];
 
   // об'єднуємо роки основного й усіх порівнюваних закладів в один спільний
@@ -276,8 +276,9 @@ function render() {
       }))
     : null;
 
-  function renderMetricChart(chartId, legendId, metricKey, plainLabel) {
-    const formatValue = metricKey === "applications" ? (v) => numFmt().format(Math.round(v)) : (v) => v.toFixed(1);
+  function renderMetricChart(chartId, legendId, metricKey, plainLabel, chartType) {
+    const formatValue = metricKey === "applications" ? (v) => numFmt().format(Math.round(v * 10) / 10) : (v) => v.toFixed(1);
+    const build = chartType === "bar" ? buildBarChartSVG : buildChartSVG;
     let legendItems, chartHtml;
     if (compareMetas.length) {
       legendItems = [
@@ -285,19 +286,20 @@ function render() {
         ...compareMetas.map((m, i) => ({ color: COMPARE_STYLES[i].color, label: m.name }))
       ];
       const series = [
-        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: meta.short },
+        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", barClass: "chart-bar-all", label: meta.short },
         ...compareMetas.map((m, i) => ({
           getVal: (x) => x.compareRows[i] ? x.compareRows[i][metricKey] : null,
           lineClass: COMPARE_STYLES[i].lineClass,
           dotClass: COMPARE_STYLES[i].dotClass,
+          barClass: COMPARE_STYLES[i].barClass,
           label: m.short
         }))
       ];
-      chartHtml = buildChartSVG(combined, series, formatValue);
+      chartHtml = build(combined, series, formatValue);
     } else {
       legendItems = [{ color: "var(--accent-dark)", label: plainLabel }];
-      chartHtml = buildChartSVG(trend, [
-        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: plainLabel }
+      chartHtml = build(trend, [
+        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", barClass: "chart-bar-all", label: plainLabel }
       ], formatValue);
     }
     document.getElementById(chartId).innerHTML = chartHtml;
@@ -315,10 +317,10 @@ function render() {
   };
 
   document.getElementById("chart-subtitle").textContent = compareSubtitle() || t("uni.subtitlePlain");
-  renderMetricChart("chart-wrap", "chart-legend", "score", t("uni.admittedAverage"));
+  renderMetricChart("chart-wrap", "chart-legend", "score", t("uni.admittedAverage"), "bar");
 
   document.getElementById("chart-apps-subtitle").textContent = compareSubtitle() || t("uni.appsSubtitlePlain");
-  renderMetricChart("chart-wrap-apps", "chart-legend-apps", "applications", t("table.applications"));
+  renderMetricChart("chart-wrap-apps", "chart-legend-apps", "applications", t("table.applications"), "line");
 
   renderComparePanel(meta, trend, compareMetas, compareTrends);
 
@@ -344,6 +346,65 @@ function render() {
     }
     tbody.appendChild(tr);
   });
+}
+
+/* стовпчикова версія графіка — навмисно без лінії між роками: формула
+   конкурсного бала змінювалась рік від року, тож безперервна крива
+   натякала б на порівнянність, якої насправді нема (див. методологію).
+   Групує до 3 стовпчиків (заклад + до 2 порівнянь) на рік. */
+function buildBarChartSVG(trend, series, formatValue = (v) => v.toFixed(1)) {
+  const values = [];
+  trend.forEach((t) => series.forEach((s) => {
+    const v = s.getVal(t);
+    if (v != null) values.push(v);
+  }));
+  if (!values.length) return `<div class="chart-empty">${t("uni.noChartData")}</div>`;
+
+  const w = 640, h = 220, padL = 46, padR = 12, padT = 16, padB = 30;
+  const min = Math.min(...values), max = Math.max(...values);
+  const range = Math.max(1, max - min);
+  const yMin = min - range * 0.15, yMax = max + range * 0.15;
+  const n = trend.length;
+  const baselineY = h - padB;
+  const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
+
+  const groupWidth = (w - padL - padR) / n;
+  const seriesCount = series.length;
+  const barGap = 4;
+  const groupPadding = groupWidth * 0.12;
+  const barsAreaWidth = Math.max(4, groupWidth - groupPadding * 2 - barGap * (seriesCount - 1));
+  const barWidth = Math.max(2, barsAreaWidth / seriesCount);
+  const groupStartFor = (i) => padL + i * groupWidth + groupPadding;
+
+  const bars = trend.map((pt, i) => series.map((s, j) => {
+    const v = s.getVal(pt);
+    if (v == null) return "";
+    const barX = groupStartFor(i) + j * (barWidth + barGap);
+    const barY = yFor(v);
+    const barH = Math.max(0, baselineY - barY);
+    const tooltipText = s.label ? `${s.label} · ${pt.year}: ${formatValue(v)}` : `${pt.year}: ${formatValue(v)}`;
+    return `
+      <rect class="chart-bar ${s.barClass}" x="${barX.toFixed(1)}" y="${barY.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barH.toFixed(1)}" rx="2"></rect>
+      <rect class="chart-dot-hit" x="${barX.toFixed(1)}" y="${padT}" width="${barWidth.toFixed(1)}" height="${(baselineY - padT).toFixed(1)}" tabindex="0" role="img" aria-label="${escapeAttr(tooltipText)}" data-tooltip="${escapeAttr(tooltipText)}"></rect>
+    `;
+  }).join("")).join("");
+
+  const groupSpan = barWidth * seriesCount + barGap * (seriesCount - 1);
+  const labels = trend.map((pt, i) =>
+    `<text class="chart-axis-label" x="${(groupStartFor(i) + groupSpan / 2).toFixed(1)}" y="${h - 8}" text-anchor="middle">${pt.year}</text>`
+  ).join("");
+
+  const yAxis = buildYAxisSVG(yMin, yMax, { w, h, padL, padR, padT, padB, formatValue });
+  const baseline = `<line class="chart-baseline" x1="${padL}" y1="${baselineY}" x2="${w - padR}" y2="${baselineY}" />`;
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="${t("uni.chartAriaLabel")}">
+      ${yAxis}
+      ${baseline}
+      ${bars}
+      ${labels}
+    </svg>
+  `;
 }
 
 /* позиціонує повзунок-індикатор по фактичних пікселях активної кнопки —

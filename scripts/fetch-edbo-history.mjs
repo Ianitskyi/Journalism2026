@@ -172,12 +172,23 @@ async function fetchLevelData(base, level, year) {
     }
   }
 
-  // Агрегуємо по uid (заклад освіти): усі подані заяви, допущені до
-  // конкурсу та середній бал по всіх поданих заявах. Вагового коефіцієнта
-  // для середнього балу — st.c.t (усі подані заяви), а не st.c.a
-  // (допущені), щоб рейтинг послідовно спирався на подані заяви.
+  // Заклад освіти може подавати спеціальність «Журналістика» під різними
+  // освітніми програмами (spn) — деякі з них реально називаються інакше
+  // («Зв'язки з громадськістю», «Медіакомунікації» тощо). Рахуємо рейтинг
+  // лише за програмами, у назві яких справді є «журналіст…» (у будь-якій
+  // формі), а не за всіма програмами під спеціальністю. Заклад, у якого
+  // жодна програма не названа «журналістика», у рейтинг не потрапляє.
+  //
+  // Агрегуємо по uid (заклад освіти): усі подані заяви й допущені по
+  // відфільтрованих програмах, кількість самих програм — щоб рахувати
+  // середню кількість заяв на ОДНУ програму (applicationsTotal —
+  // сумарна кількість, лишається окремо для системних агрегатів).
+  // Ваговий коефіцієнт для середнього балу — st.c.t (усі подані заяви),
+  // а не st.c.a (допущені).
+  const JOURNALISM_RE = /журналіст/i;
   const byUid = new Map();
   for (const offer of offersById.values()) {
+    if (!JOURNALISM_RE.test(offer.spn || "")) continue;
     const stats = offer.st && offer.st.c;
     if (!stats || !stats.t) continue;
     const t = Number(stats.t);
@@ -187,25 +198,28 @@ async function fetchLevelData(base, level, year) {
 
     const uid = offer.uid;
     if (!byUid.has(uid)) {
-      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applications: 0, admitted: 0 });
+      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programCount: 0 });
     }
     const rec = byUid.get(uid);
     if (Number.isFinite(ka)) rec.weightedScoreSum += ka * t;
-    rec.applications += t;
+    rec.applicationsTotal += t;
     rec.admitted += a;
+    rec.programCount += 1;
   }
 
   const rows = [];
   for (const rec of byUid.values()) {
-    if (rec.applications < MIN_APPLICATIONS[level] || rec.admitted <= 0) continue;
+    if (rec.applicationsTotal < MIN_APPLICATIONS[level] || rec.admitted <= 0 || rec.programCount <= 0) continue;
     const slug = UID_TO_SLUG[rec.uid];
     rows.push({
       id: slug || `edbo${rec.uid}`,
       name: NAME_OVERRIDE[rec.uid] || rec.name,
       short: (slug && SLUG_SHORT_OVERRIDE[slug]) || shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
-      score: Math.round((rec.weightedScoreSum / rec.applications) * 10) / 10,
-      applications: rec.applications,
+      score: Math.round((rec.weightedScoreSum / rec.applicationsTotal) * 10) / 10,
+      applications: Math.round((rec.applicationsTotal / rec.programCount) * 10) / 10,
+      applicationsTotal: rec.applicationsTotal,
+      programCount: rec.programCount,
       admitted: rec.admitted
     });
   }
@@ -216,7 +230,7 @@ async function fetchLevelData(base, level, year) {
 }
 
 function sumApps(rows) {
-  return rows.reduce((s, r) => s + r.applications, 0);
+  return rows.reduce((s, r) => s + r.applicationsTotal, 0);
 }
 
 function sumAdmitted(rows) {

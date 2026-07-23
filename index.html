@@ -28,10 +28,10 @@
 
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="eyebrow" data-i18n="hero.eyebrow">Спеціальність C7 «Журналістика»</div>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Спеціальність C7 «Журналістика», програми з журналістики</div>
     <h1 data-i18n="hero.title">Рейтинг журфаків України</h1>
     <p class="lede" data-i18n="hero.lede">
-      Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом вступників.
+      Рейтинг університетів за кількістю поданих заяв на програми з журналістики і середнім конкурсним балом вступників.
     </p>
   </div>
 </section>
@@ -103,7 +103,7 @@
               <th></th>
               <th data-i18n="table.institution">Заклад</th>
               <th class="num" id="th-score" data-i18n="table.score">Середній бал</th>
-              <th class="num" id="th-apps" data-i18n="table.applications">Подано заяв</th>
+              <th class="num" id="th-apps" data-i18n="table.applications">Заяв на програму</th>
             </tr>
           </thead>
           <tbody id="rank-body"></tbody>
@@ -111,34 +111,18 @@
         <button class="show-all" id="show-all"></button>
       </div>
 
-      <div class="charts-row">
-        <div class="card chart-card">
-          <div class="card-head chart-card-head">
-            <div>
-              <div class="card-title" id="system-chart-apps-title">Динаміка кількості заяв</div>
-              <div class="card-subtitle" data-i18n="systemChart.scopeNote">Дані в цілому по системі (усі заклади в рейтингу)</div>
-            </div>
+      <div class="card chart-card">
+        <div class="card-head chart-card-head">
+          <div>
+            <div class="card-title" id="system-chart-apps-title">Динаміка заяв на одну програму з журналістики</div>
+            <div class="card-subtitle" data-i18n="systemChart.scopeNote">Дані в цілому по системі (усі заклади в рейтингу)</div>
           </div>
-          <div class="chart-plot">
-            <div class="chart-wrap" id="system-chart-apps"></div>
-            <div class="chart-tooltip"></div>
-          </div>
-          <div class="chart-legend" id="system-chart-apps-legend"></div>
         </div>
-
-        <div class="card chart-card">
-          <div class="card-head chart-card-head">
-            <div>
-              <div class="card-title" id="system-chart-score-title">Динаміка середнього конкурсного балу</div>
-              <div class="card-subtitle" data-i18n="systemChart.scopeNote">Дані в цілому по системі (усі заклади в рейтингу)</div>
-            </div>
-          </div>
-          <div class="chart-plot">
-            <div class="chart-wrap" id="system-chart-score"></div>
-            <div class="chart-tooltip"></div>
-          </div>
-          <div class="chart-legend" id="system-chart-score-legend"></div>
+        <div class="chart-plot">
+          <div class="chart-wrap" id="system-chart-apps"></div>
+          <div class="chart-tooltip"></div>
         </div>
+        <div class="chart-legend" id="system-chart-apps-legend"></div>
       </div>
 
     </div>

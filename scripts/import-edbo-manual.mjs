@@ -93,13 +93,14 @@ const round1 = (n) => Math.round(n * 10) / 10;
 
 function rankAll(entries) {
   return entries
-    .filter((e) => e.applications >= (MIN_APPLICATIONS[e._level] ?? 0))
+    .filter((e) => (e.applicationsTotal ?? e.applications) >= (MIN_APPLICATIONS[e._level] ?? 0))
     .sort((a, b) => b.score - a.score)
-    .map(({ id, name, short, hue, score, applications, admitted }, i) => ({ id, name, short, hue, score, applications, admitted, rank: i + 1 }));
+    .map(({ id, name, short, hue, score, applications, applicationsTotal, programCount, admitted }, i) =>
+      ({ id, name, short, hue, score, applications, applicationsTotal, programCount, admitted, rank: i + 1 }));
 }
 
 function sumApps(rows) {
-  return rows.reduce((s, r) => s + r.applications, 0);
+  return rows.reduce((s, r) => s + (r.applicationsTotal ?? r.applications), 0);
 }
 
 function sumAdmitted(rows) {
@@ -124,9 +125,11 @@ function metaForCapturedOffer(offer) {
   };
 }
 
+const JOURNALISM_RE = /журналіст/i;
+
 function rebuildLevel(snapshot, level) {
   const manualEntries = snapshot._entries?.[level] || [];
-  const offers = snapshot._offers?.[level] || [];
+  const offers = (snapshot._offers?.[level] || []).filter((offer) => JOURNALISM_RE.test(offer.programName || ""));
   const grouped = new Map();
 
   for (const offer of offers) {
@@ -136,14 +139,16 @@ function rebuildLevel(snapshot, level) {
         ...meta,
         _level: level,
         weightedScoreSum: 0,
-        applications: 0,
-        admitted: 0
+        applicationsTotal: 0,
+        admitted: 0,
+        programCount: 0
       });
     }
     const row = grouped.get(meta.id);
     row.weightedScoreSum += Number(offer.averageScore) * Number(offer.applications);
-    row.applications += Number(offer.applications);
+    row.applicationsTotal += Number(offer.applications);
     row.admitted += Number(offer.admitted);
+    row.programCount += 1;
   }
 
   const capturedEntries = [...grouped.values()].map((row) => ({
@@ -152,8 +157,10 @@ function rebuildLevel(snapshot, level) {
     short: row.short,
     hue: row.hue,
     _level: level,
-    score: round1(row.weightedScoreSum / row.applications),
-    applications: row.applications,
+    score: round1(row.weightedScoreSum / row.applicationsTotal),
+    applications: round1(row.applicationsTotal / row.programCount),
+    applicationsTotal: row.applicationsTotal,
+    programCount: row.programCount,
     admitted: row.admitted
   }));
 

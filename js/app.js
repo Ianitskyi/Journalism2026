@@ -149,16 +149,19 @@ function yearSnapshot(year) {
   return yd.snapshots[yd.dates[yd.dates.length - 1]];
 }
 
-/* сумарна кількість заяв і зважений середній бал (вага — кількість
-   поданих заяв) по всій системі за рік і рівень, за всі роки, що є в DB */
+/* середня кількість заяв на одну програму з журналістики по всій системі
+   за рік і рівень (сума заяв по всіх закладах / сума кількості програм
+   по всіх закладах), за всі роки, що є в DB. Середній бал тут навмисно
+   не рахуємо — формула конкурсного бала змінювалась рік від року, тож
+   безперервна крива по роках була б оманливою (див. методологію) */
 function systemWideTrend(degree) {
   return DB.years.map((year) => {
     const snap = yearSnapshot(year);
     const rows = snap[degree] || [];
-    const applications = snap.totalApplications?.[degree] ?? rows.reduce((s, r) => s + r.applications, 0);
-    const weightedScoreSum = rows.reduce((s, r) => s + r.score * r.applications, 0);
-    const avgScore = applications > 0 ? weightedScoreSum / applications : null;
-    return { year, applications, avgScore };
+    const totalApps = rows.reduce((s, r) => s + (r.applicationsTotal ?? r.applications ?? 0), 0);
+    const totalPrograms = rows.reduce((s, r) => s + (r.programCount ?? (r.applications != null ? 1 : 0)), 0);
+    const avgApplicationsPerProgram = totalPrograms > 0 ? totalApps / totalPrograms : null;
+    return { year, avgApplicationsPerProgram };
   });
 }
 
@@ -176,7 +179,7 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
   const xFor = (i) => padL + (n === 1 ? 0.5 : i / (n - 1)) * (w - padL - padR);
   const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
   const baselineY = h - padB;
-  const formatValue = valueKey === "applications" ? (v) => numFmt().format(Math.round(v)) : (v) => v.toFixed(1);
+  const formatValue = (v) => numFmt().format(Math.round(v * 10) / 10);
 
   function pathFor(series) {
     let d = "";
@@ -234,17 +237,13 @@ function renderSystemChartLegend(containerId) {
 }
 
 function renderSystemCharts() {
-  const bachelorApps = systemWideTrend("bachelor");
-  const masterApps = systemWideTrend("master");
+  const bachelorTrend = systemWideTrend("bachelor");
+  const masterTrend = systemWideTrend("master");
   const yearVars = { from: DB.years[0], to: DB.years[DB.years.length - 1] };
 
   document.getElementById("system-chart-apps-title").textContent = t("systemChart.appsTitle", yearVars);
-  document.getElementById("system-chart-apps").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "applications");
+  document.getElementById("system-chart-apps").innerHTML = buildSystemChartSVG(bachelorTrend, masterTrend, "avgApplicationsPerProgram");
   renderSystemChartLegend("system-chart-apps-legend");
-
-  document.getElementById("system-chart-score-title").textContent = t("systemChart.scoreTitle", yearVars);
-  document.getElementById("system-chart-score").innerHTML = buildSystemChartSVG(bachelorApps, masterApps, "avgScore");
-  renderSystemChartLegend("system-chart-score-legend");
 }
 
 function render() {
