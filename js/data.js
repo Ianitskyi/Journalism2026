@@ -280,7 +280,7 @@ const UNI_NAME_EN = {
   edbo404: { name: "Viacheslav Chornovil Halych Vocational College", short: "HVC" },
   edbo216: { name: "Ukrainian State University of Chemical Technology", short: "USUCT" },
   edbo6540: { name: "State Tax University", short: "STU" },
-  edbo6594: { name: "State University of Trade and Economics", short: "SUTE" },
+  edbo6594: { name: "State University of Trade and Economics (Kyiv)", short: "SUTE" },
   edbo208: { name: "Zhytomyr Polytechnic State University", short: "ZPSU" },
   edbo5780: { name: "State University of Intelligent Technologies and Telecommunications", short: "SUITT" },
   edbo109: { name: "Ivan Franko Zhytomyr State University", short: "ZSU" },
