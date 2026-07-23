@@ -4,12 +4,12 @@
   "final": true,
   "bachelor": [],
   "master": [],
-  "bachelorP1": [],
-  "masterP1": [],
   "totalApplications": {
     "bachelor": 0,
-    "master": 0,
-    "bachelorP1": 0,
-    "masterP1": 0
+    "master": 0
+  },
+  "totalAdmitted": {
+    "bachelor": 0,
+    "master": 0
   }
 }
