@@ -281,18 +281,25 @@ function t(key, vars) {
   return str;
 }
 
+// Якщо ключа немає у словнику (напр. через розсинхрон кешу — новий HTML
+// із старим закешованим i18n.js, або навпаки), лишаємо як є вже написаний
+// у HTML фолбек-текст замість того, щоб показати користувачу сирий ключ.
 function applyStaticI18n() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    el.textContent = t(el.dataset.i18n);
+    const value = tRaw(el.dataset.i18n);
+    if (value != null) el.textContent = value;
   });
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    el.innerHTML = t(el.dataset.i18nHtml);
+    const value = tRaw(el.dataset.i18nHtml);
+    if (value != null) el.innerHTML = value;
   });
   document.querySelectorAll("[data-i18n-content]").forEach((el) => {
-    el.setAttribute("content", t(el.dataset.i18nContent));
+    const value = tRaw(el.dataset.i18nContent);
+    if (value != null) el.setAttribute("content", value);
   });
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-    el.setAttribute("placeholder", t(el.dataset.i18nPlaceholder));
+    const value = tRaw(el.dataset.i18nPlaceholder);
+    if (value != null) el.setAttribute("placeholder", value);
   });
 }
 
