@@ -242,41 +242,44 @@ function render() {
   const compareMeta = state.compareId ? findUniMeta(state.compareId) : null;
   const compareTrend = compareMeta ? buildTrend(compareMeta.id, state.degree) : null;
 
-  let legendItems, subtitle;
-  if (compareMeta) {
-    subtitle = t("uni.compareVs", { a: meta.short, b: compareMeta.short });
-    legendItems = [
-      { cls: "", color: "var(--accent-dark)", label: meta.name },
-      { cls: "", color: "var(--ink-soft)", label: compareMeta.name }
-    ];
+  // об'єднуємо роки основного і порівнюваного закладу в один спільний ряд —
+  // спільний для обох графіків (бал і кількість заяв)
+  const combined = compareMeta
+    ? DB.years.map((year, i) => ({ year, row: trend[i].row, compareRow: compareTrend[i].row }))
+    : null;
 
-    // об'єднуємо роки основного і порівнюваного закладу в один спільний ряд для графіка
-    const combined = DB.years.map((year, i) => ({
-      year,
-      row: trend[i].row,
-      compareRow: compareTrend[i].row
-    }));
-    document.getElementById("chart-wrap").innerHTML = buildChartSVG(combined, [
-      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: meta.short },
-      { getVal: (x) => x.compareRow ? x.compareRow.score : null, lineClass: "chart-line-compare", dotClass: "chart-dot-compare", label: compareMeta.short }
-    ]);
-  } else {
-    subtitle = t("uni.subtitlePlain");
-    legendItems = [
-      { cls: "", color: "var(--accent-dark)", label: t("uni.admittedAverage") }
-    ];
-    document.getElementById("chart-wrap").innerHTML = buildChartSVG(trend, [
-      { getVal: (x) => x.row ? x.row.score : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: t("uni.admittedAverage") }
-    ]);
+  function renderMetricChart(chartId, legendId, metricKey, plainLabel) {
+    let legendItems, chartHtml;
+    if (compareMeta) {
+      legendItems = [
+        { color: "var(--accent-dark)", label: meta.name },
+        { color: "var(--ink-soft)", label: compareMeta.name }
+      ];
+      chartHtml = buildChartSVG(combined, [
+        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: meta.short },
+        { getVal: (x) => x.compareRow ? x.compareRow[metricKey] : null, lineClass: "chart-line-compare", dotClass: "chart-dot-compare", label: compareMeta.short }
+      ]);
+    } else {
+      legendItems = [{ color: "var(--accent-dark)", label: plainLabel }];
+      chartHtml = buildChartSVG(trend, [
+        { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: plainLabel }
+      ]);
+    }
+    document.getElementById(chartId).innerHTML = chartHtml;
+    document.getElementById(legendId).innerHTML = legendItems.map((li) => `
+      <span class="chart-legend-item" style="color:${li.color}">
+        <span class="chart-legend-swatch" style="background:${li.color}"></span>${li.label}
+      </span>
+    `).join("");
   }
 
+  const subtitle = compareMeta ? t("uni.compareVs", { a: meta.short, b: compareMeta.short }) : t("uni.subtitlePlain");
   document.getElementById("chart-subtitle").textContent = subtitle;
+  renderMetricChart("chart-wrap", "chart-legend", "score", t("uni.admittedAverage"));
 
-  document.getElementById("chart-legend").innerHTML = legendItems.map((li) => `
-    <span class="chart-legend-item" style="color:${li.color}">
-      <span class="chart-legend-swatch ${li.cls}"></span>${li.label}
-    </span>
-  `).join("");
+  const appsSubtitle = compareMeta ? t("uni.compareVs", { a: meta.short, b: compareMeta.short }) : t("uni.appsSubtitlePlain");
+  document.getElementById("chart-apps-subtitle").textContent = appsSubtitle;
+  renderMetricChart("chart-wrap-apps", "chart-legend-apps", "applications", t("table.applications"));
 
   renderComparePanel(meta, trend, compareMeta, compareTrend);
 
@@ -334,44 +337,48 @@ function resyncIndicators() {
   syncIndicator(document.getElementById("uni-degree-indicator"), document.querySelector("#uni-degree-tabs .pill.active"));
 }
 
-function initChartTooltip() {
-  const plot = document.querySelector(".chart-plot");
-  const tooltip = document.getElementById("chart-tooltip");
-  if (!plot || !tooltip) return;
+/* налаштовує підказки для кожного .chart-plot окремо (тултип — вкладений
+   у нього .chart-tooltip) — сторінка може мати кілька незалежних
+   графіків (бал, кількість заяв), кожен зі своєю підказкою */
+function initChartTooltips() {
+  document.querySelectorAll(".chart-plot").forEach((plot) => {
+    const tooltip = plot.querySelector(".chart-tooltip");
+    if (!tooltip) return;
 
-  function show(target) {
-    const text = target.dataset.tooltip;
-    if (!text) return;
-    tooltip.textContent = text;
-    tooltip.classList.add("visible");
+    function show(target) {
+      const text = target.dataset.tooltip;
+      if (!text) return;
+      tooltip.textContent = text;
+      tooltip.classList.add("visible");
 
-    const plotRect = plot.getBoundingClientRect();
-    const dotRect = target.getBoundingClientRect();
-    const centerX = dotRect.left + dotRect.width / 2 - plotRect.left;
-    const halfW = tooltip.offsetWidth / 2;
-    const clampedX = Math.min(Math.max(centerX, halfW + 4), plotRect.width - halfW - 4);
+      const plotRect = plot.getBoundingClientRect();
+      const dotRect = target.getBoundingClientRect();
+      const centerX = dotRect.left + dotRect.width / 2 - plotRect.left;
+      const halfW = tooltip.offsetWidth / 2;
+      const clampedX = Math.min(Math.max(centerX, halfW + 4), plotRect.width - halfW - 4);
 
-    tooltip.style.left = `${clampedX}px`;
-    tooltip.style.top = `${dotRect.top - plotRect.top}px`;
-  }
+      tooltip.style.left = `${clampedX}px`;
+      tooltip.style.top = `${dotRect.top - plotRect.top}px`;
+    }
 
-  function hide() {
-    tooltip.classList.remove("visible");
-  }
+    function hide() {
+      tooltip.classList.remove("visible");
+    }
 
-  plot.addEventListener("mouseover", (e) => {
-    const target = e.target.closest(".chart-dot-hit");
-    if (target) show(target);
+    plot.addEventListener("mouseover", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target) show(target);
+    });
+    plot.addEventListener("mouseout", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target && !target.contains(e.relatedTarget)) hide();
+    });
+    plot.addEventListener("focusin", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target) show(target);
+    });
+    plot.addEventListener("focusout", hide);
   });
-  plot.addEventListener("mouseout", (e) => {
-    const target = e.target.closest(".chart-dot-hit");
-    if (target && !target.contains(e.relatedTarget)) hide();
-  });
-  plot.addEventListener("focusin", (e) => {
-    const target = e.target.closest(".chart-dot-hit");
-    if (target) show(target);
-  });
-  plot.addEventListener("focusout", hide);
 }
 
 function initCompareSelect() {
@@ -383,7 +390,7 @@ function initCompareSelect() {
 
 initDegreeTabs();
 initCompareSelect();
-initChartTooltip();
+initChartTooltips();
 window.onLangChange = () => { render(); resyncIndicators(); };
 window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
 render();

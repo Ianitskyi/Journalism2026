@@ -41,7 +41,6 @@ const I18N = {
     },
     year: {
       label: "Рік вступу",
-      current: "{year} · зараз",
       today: "Сьогодні"
     },
     caption: {
@@ -59,8 +58,9 @@ const I18N = {
       rank: "Ранг"
     },
     systemChart: {
-      appsTitle: "Динаміка кількості заяв (2021–2025)",
-      scoreTitle: "Динаміка середнього конкурсного балу (2021–2025)"
+      appsTitle: "Динаміка кількості заяв ({from}–{to})",
+      scoreTitle: "Динаміка середнього конкурсного балу ({from}–{to})",
+      scopeNote: "Дані в цілому по системі (усі заклади в рейтингу)"
     },
     methodology: {
       kicker: "Про рейтинг",
@@ -94,10 +94,12 @@ const I18N = {
       currentScore: "Бал зараз",
       trendSince: "Зміна балу з 2021",
       chartTitle: "Середній конкурсний бал по роках",
+      appsChartTitle: "Кількість поданих заяв по роках",
       compareLabel: "Порівняти з",
       compareNone: "— не порівнювати —",
       compareVs: "{a} проти {b}",
       subtitlePlain: "середній конкурсний бал допущених до конкурсу",
+      appsSubtitlePlain: "кількість поданих заяв",
       admittedAverage: "Середній бал",
       rankingByYear: "Рейтинг по роках",
       noChartData: "Немає даних для побудови графіка.",
@@ -153,7 +155,6 @@ const I18N = {
     },
     year: {
       label: "Admission year",
-      current: "{year} · current",
       today: "Today"
     },
     caption: {
@@ -171,8 +172,9 @@ const I18N = {
       rank: "Rank"
     },
     systemChart: {
-      appsTitle: "Application trend (2021–2025)",
-      scoreTitle: "Average competitive score trend (2021–2025)"
+      appsTitle: "Application trend ({from}–{to})",
+      scoreTitle: "Average competitive score trend ({from}–{to})",
+      scopeNote: "System-wide data (all institutions in the ranking)"
     },
     methodology: {
       kicker: "About the ranking",
@@ -206,10 +208,12 @@ const I18N = {
       currentScore: "Current score",
       trendSince: "Score change since 2021",
       chartTitle: "Average competitive score by year",
+      appsChartTitle: "Submitted applications by year",
       compareLabel: "Compare with",
       compareNone: "— don't compare —",
       compareVs: "{a} vs {b}",
       subtitlePlain: "average competitive score of candidates admitted to the competition",
+      appsSubtitlePlain: "submitted applications",
       admittedAverage: "Average score",
       rankingByYear: "Ranking by year",
       noChartData: "No data to build a chart.",
