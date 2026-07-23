@@ -28,12 +28,9 @@ function buildTrend(id, degree) {
   });
 }
 
-function escapeAttr(str) {
-  return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-}
-
-/* series: [{ getVal(t)->number|null, lineClass, dotClass, label }] — до 2 ліній на графіку */
-function buildChartSVG(trend, series) {
+/* series: [{ getVal(t)->number|null, lineClass, dotClass, label }] — до 2 ліній на графіку.
+   formatValue — форматування чисел і на осі Y, і в підказках (бал: 178.4, заяви: 1 234) */
+function buildChartSVG(trend, series, formatValue = (v) => v.toFixed(1)) {
   const values = [];
   trend.forEach((t) => series.forEach((s) => {
     const v = s.getVal(t);
@@ -41,7 +38,7 @@ function buildChartSVG(trend, series) {
   }));
   if (!values.length) return `<div class="chart-empty">${t("uni.noChartData")}</div>`;
 
-  const w = 640, h = 220, padL = 34, padR = 12, padT = 16, padB = 30;
+  const w = 640, h = 220, padL = 46, padR = 12, padT = 16, padB = 30;
   const min = Math.min(...values), max = Math.max(...values);
   const range = Math.max(1, max - min);
   const yMin = min - range * 0.15, yMax = max + range * 0.15;
@@ -67,7 +64,7 @@ function buildChartSVG(trend, series) {
       if (v == null) return "";
       const cx = xFor(i).toFixed(1);
       const cy = yFor(v).toFixed(1);
-      const tooltipText = label ? `${label} · ${t.year}: ${v.toFixed(1)}` : `${t.year}: ${v.toFixed(1)}`;
+      const tooltipText = label ? `${label} · ${t.year}: ${formatValue(v)}` : `${t.year}: ${formatValue(v)}`;
       return `
         <circle class="${cls}" cx="${cx}" cy="${cy}" r="4"></circle>
         <circle class="chart-dot-hit" cx="${cx}" cy="${cy}" r="11" tabindex="0" role="img" aria-label="${escapeAttr(tooltipText)}" data-tooltip="${escapeAttr(tooltipText)}"></circle>
@@ -78,6 +75,8 @@ function buildChartSVG(trend, series) {
   const labels = trend.map((t, i) =>
     `<text class="chart-axis-label" x="${xFor(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">${t.year}</text>`
   ).join("");
+
+  const yAxis = buildYAxisSVG(yMin, yMax, { w, h, padL, padR, padT, padB, formatValue });
 
   const baseline = `<line class="chart-baseline" x1="${padL}" y1="${h - padB}" x2="${w - padR}" y2="${h - padB}" />`;
 
@@ -90,6 +89,7 @@ function buildChartSVG(trend, series) {
 
   return `
     <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="${t("uni.chartAriaLabel")}">
+      ${yAxis}
       ${baseline}
       ${paths}
       ${dots}
@@ -278,6 +278,7 @@ function render() {
     : null;
 
   function renderMetricChart(chartId, legendId, metricKey, plainLabel) {
+    const formatValue = metricKey === "applications" ? (v) => numFmt().format(Math.round(v)) : (v) => v.toFixed(1);
     let legendItems, chartHtml;
     if (compareMetas.length) {
       legendItems = [
@@ -293,12 +294,12 @@ function render() {
           label: m.short
         }))
       ];
-      chartHtml = buildChartSVG(combined, series);
+      chartHtml = buildChartSVG(combined, series, formatValue);
     } else {
       legendItems = [{ color: "var(--accent-dark)", label: plainLabel }];
       chartHtml = buildChartSVG(trend, [
         { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: plainLabel }
-      ]);
+      ], formatValue);
     }
     document.getElementById(chartId).innerHTML = chartHtml;
     document.getElementById(legendId).innerHTML = legendItems.map((li) => `
@@ -374,50 +375,6 @@ function initDegreeTabs() {
 
 function resyncIndicators() {
   syncIndicator(document.getElementById("uni-degree-indicator"), document.querySelector("#uni-degree-tabs .pill.active"));
-}
-
-/* налаштовує підказки для кожного .chart-plot окремо (тултип — вкладений
-   у нього .chart-tooltip) — сторінка може мати кілька незалежних
-   графіків (бал, кількість заяв), кожен зі своєю підказкою */
-function initChartTooltips() {
-  document.querySelectorAll(".chart-plot").forEach((plot) => {
-    const tooltip = plot.querySelector(".chart-tooltip");
-    if (!tooltip) return;
-
-    function show(target) {
-      const text = target.dataset.tooltip;
-      if (!text) return;
-      tooltip.textContent = text;
-      tooltip.classList.add("visible");
-
-      const plotRect = plot.getBoundingClientRect();
-      const dotRect = target.getBoundingClientRect();
-      const centerX = dotRect.left + dotRect.width / 2 - plotRect.left;
-      const halfW = tooltip.offsetWidth / 2;
-      const clampedX = Math.min(Math.max(centerX, halfW + 4), plotRect.width - halfW - 4);
-
-      tooltip.style.left = `${clampedX}px`;
-      tooltip.style.top = `${dotRect.top - plotRect.top}px`;
-    }
-
-    function hide() {
-      tooltip.classList.remove("visible");
-    }
-
-    plot.addEventListener("mouseover", (e) => {
-      const target = e.target.closest(".chart-dot-hit");
-      if (target) show(target);
-    });
-    plot.addEventListener("mouseout", (e) => {
-      const target = e.target.closest(".chart-dot-hit");
-      if (target && !target.contains(e.relatedTarget)) hide();
-    });
-    plot.addEventListener("focusin", (e) => {
-      const target = e.target.closest(".chart-dot-hit");
-      if (target) show(target);
-    });
-    plot.addEventListener("focusout", hide);
-  });
 }
 
 function initCompareSelect() {
