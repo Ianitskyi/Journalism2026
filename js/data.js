@@ -25,6 +25,12 @@ const TODAY = new Intl.DateTimeFormat("sv-SE", {
 const CURRENT_YEAR = 2026;
 const PAST_YEARS = [2021, 2022, 2023, 2024, 2025];
 
+/* 2026 рік ще триває, фінальних підсумкових даних кампанії немає — тож
+   поки не показуємо його в рейтингу, таблицях і на графіках. Перемкнути
+   назад на true, коли з'являться фінальні дані кампанії 2026. */
+const SHOW_CURRENT_YEAR = false;
+const VISIBLE_YEARS = SHOW_CURRENT_YEAR ? [...PAST_YEARS, CURRENT_YEAR] : [...PAST_YEARS];
+
 /* base-профіль закладу: score/applications — стартові орієнтири для генератора,
    не реальні цифри */
 /* nameEn/shortEn — орієнтовні усталені англійські назви/абревіатури для
@@ -350,7 +356,7 @@ const UNI_NAME_EN = {
    заклад навіть за рік, коли в нього немає даних. */
 function allUniversitiesForDegree(degree) {
   const registry = new Map();
-  for (const year of [...PAST_YEARS, CURRENT_YEAR]) {
+  for (const year of VISIBLE_YEARS) {
     const yd = BY_YEAR[year];
     if (!yd) continue;
     const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
@@ -397,7 +403,7 @@ function allUniversitiesMeta() {
 }
 
 const DB = {
-  years: [...PAST_YEARS, CURRENT_YEAR],
+  years: VISIBLE_YEARS,
   currentYear: CURRENT_YEAR,
   byYear: BY_YEAR,
   minApplications: MIN_APPLICATIONS,
