@@ -192,6 +192,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
@@ -206,13 +207,10 @@ a { color: inherit; }
 
 .year-chips {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
   min-width: 0;
 }
-
-.year-chips::-webkit-scrollbar { display: none; }
 
 .year-chip {
   flex: none;
@@ -719,7 +717,7 @@ td {
 
 .charts-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
   margin-top: 22px;
 }
