@@ -19,7 +19,7 @@ const I18N = {
       uniDesc: "Динаміка популярності журфаку або програми журналістики: середній конкурсний бал і кількість заяв по роках."
     },
     hero: {
-      eyebrow: "Вступна кампанія · спеціальність C7 «Журналістика»",
+      eyebrow: "Спеціальність C7 «Журналістика»",
       title: "Рейтинг журфаків України",
       lede: "Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом вступників."
     },
@@ -137,7 +137,7 @@ const I18N = {
       uniDesc: "Popularity trend of a journalism school or program: average competitive score and number of applications by year."
     },
     hero: {
-      eyebrow: "Admissions campaign · major C7 “Journalism”",
+      eyebrow: "Major C7 “Journalism”",
       title: "Ukrainian Journalism Schools Ranking",
       lede: "Ranking of journalism faculties and programs by submitted applications and the average competitive score of applicants."
     },
