@@ -97,7 +97,7 @@ function rank(offers, level) {
       });
     }
     const row = grouped.get(id);
-    row.weighted += offer.averageScore * offer.admitted;
+    row.weighted += offer.averageScore * offer.applications;
     row.applications += offer.applications;
     row.admitted += offer.admitted;
   }
@@ -106,7 +106,7 @@ function rank(offers, level) {
     .filter((row) => row.applications >= MIN_APPLICATIONS[level] && row.admitted > 0)
     .map((row) => ({
       id: row.id, name: row.name, short: row.short, hue: row.hue,
-      score: Math.round((row.weighted / row.admitted) * 10) / 10,
+      score: Math.round((row.weighted / row.applications) * 10) / 10,
       applications: row.applications,
       admitted: row.admitted
     }))

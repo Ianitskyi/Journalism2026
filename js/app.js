@@ -144,15 +144,14 @@ function yearSnapshot(year) {
 }
 
 /* сумарна кількість заяв і зважений середній бал (вага — кількість
-   допущених) по всій системі за рік і рівень, за всі роки, що є в DB */
+   поданих заяв) по всій системі за рік і рівень, за всі роки, що є в DB */
 function systemWideTrend(degree) {
   return DB.years.map((year) => {
     const snap = yearSnapshot(year);
     const rows = snap[degree] || [];
     const applications = snap.totalApplications?.[degree] ?? rows.reduce((s, r) => s + r.applications, 0);
-    const admitted = snap.totalAdmitted?.[degree] ?? rows.reduce((s, r) => s + (r.admitted || 0), 0);
-    const weightedScoreSum = rows.reduce((s, r) => s + r.score * (r.admitted || 0), 0);
-    const avgScore = admitted > 0 ? weightedScoreSum / admitted : null;
+    const weightedScoreSum = rows.reduce((s, r) => s + r.score * r.applications, 0);
+    const avgScore = applications > 0 ? weightedScoreSum / applications : null;
     return { year, applications, avgScore };
   });
 }
