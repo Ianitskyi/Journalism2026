@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/diagnose-archived-offer-page.mjs
+      - run: node scripts/diagnose-application-count.mjs
         timeout-minutes: 5
