@@ -156,7 +156,7 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
   const values = [...bachelorSeries, ...masterSeries].map((d) => d[valueKey]).filter((v) => v != null);
   if (!values.length) return `<div class="chart-empty">${t("empty.noDataDay")}</div>`;
 
-  const w = 640, h = 220, padL = 44, padR = 12, padT = 16, padB = 30;
+  const w = 640, h = 220, padL = 46, padR = 12, padT = 16, padB = 30;
   const min = Math.min(...values), max = Math.max(...values);
   const range = Math.max(1, max - min);
   const yMin = min - range * 0.1, yMax = max + range * 0.1;
@@ -165,6 +165,7 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
   const xFor = (i) => padL + (n === 1 ? 0.5 : i / (n - 1)) * (w - padL - padR);
   const yFor = (v) => padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
   const baselineY = h - padB;
+  const formatValue = valueKey === "applications" ? (v) => numFmt().format(Math.round(v)) : (v) => v.toFixed(1);
 
   function pathFor(series) {
     let d = "";
@@ -183,8 +184,11 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
       const v = point[valueKey];
       if (v == null) return "";
       const cx = xFor(i).toFixed(1), cy = yFor(v).toFixed(1);
-      const formatted = valueKey === "applications" ? numFmt().format(Math.round(v)) : v.toFixed(1);
-      return `<circle class="${cls}" cx="${cx}" cy="${cy}" r="4"><title>${label} · ${point.year}: ${formatted}</title></circle>`;
+      const tooltipText = `${label} · ${point.year}: ${formatValue(v)}`;
+      return `
+        <circle class="${cls}" cx="${cx}" cy="${cy}" r="4"></circle>
+        <circle class="chart-dot-hit" cx="${cx}" cy="${cy}" r="11" tabindex="0" role="img" aria-label="${escapeAttr(tooltipText)}" data-tooltip="${escapeAttr(tooltipText)}"></circle>
+      `;
     }).join("");
   }
 
@@ -192,12 +196,15 @@ function buildSystemChartSVG(bachelorSeries, masterSeries, valueKey) {
     `<text class="chart-axis-label" x="${xFor(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">${y}</text>`
   ).join("");
 
+  const yAxis = buildYAxisSVG(yMin, yMax, { w, h, padL, padR, padT, padB, formatValue });
+
   const baseline = `<line class="chart-baseline" x1="${padL}" y1="${baselineY}" x2="${w - padR}" y2="${baselineY}" />`;
   const bachelorLabel = t("degree.bachelor");
   const masterLabel = t("degree.master");
 
   return `
     <svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img">
+      ${yAxis}
       ${baseline}
       <path class="chart-line chart-line-all" d="${pathFor(bachelorSeries)}" fill="none" />
       <path class="chart-line chart-line-compare" d="${pathFor(masterSeries)}" fill="none" />
@@ -395,3 +402,4 @@ window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(
 render();
 renderUniSearchOptions();
 renderSystemCharts();
+initChartTooltips();

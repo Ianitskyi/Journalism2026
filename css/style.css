@@ -795,6 +795,10 @@ td {
 
 .chart-baseline { stroke: var(--border); stroke-width: 1; }
 
+.chart-gridline { stroke: var(--border); stroke-width: 1; opacity: 0.5; }
+
+.chart-axis-label-y { font-weight: 500; }
+
 .chart-line {
   stroke-width: 2.5;
   stroke-linecap: round;

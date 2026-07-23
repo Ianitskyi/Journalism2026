@@ -404,3 +404,79 @@ const DB = {
   allUniversities: allUniversitiesForDegree,
   allUniversitiesMeta
 };
+
+/* ---------- спільні SVG-хелпери для лінійних графіків — уживаються і
+   системними діаграмами на головній сторінці, і графіками закладу ---------- */
+
+function escapeAttr(str) {
+  return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+
+/* підбирає "круглий" крок сітки (1/2/5 × 10^n) замість довільних дробових
+   позначок, щоб вісь Y виглядала природно */
+function niceStep(range, maxTicks) {
+  const rough = range / Math.max(1, maxTicks);
+  const pow10 = Math.pow(10, Math.floor(Math.log10(rough || 1)));
+  const norm = rough / pow10;
+  const step = norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10;
+  return step * pow10;
+}
+
+/* повертає розмітку сітки + підписи осі Y для діапазону [yMin, yMax] */
+function buildYAxisSVG(yMin, yMax, opts) {
+  const { w, padL, padR, padT, padB, h, ticks = 4, formatValue = (v) => String(Math.round(v)) } = opts;
+  const step = niceStep(yMax - yMin, ticks);
+  if (!step) return "";
+  const first = Math.ceil(yMin / step) * step;
+  let out = "";
+  for (let v = first; v <= yMax + step * 1e-6; v += step) {
+    const y = padT + (1 - (v - yMin) / (yMax - yMin)) * (h - padT - padB);
+    out += `<line class="chart-gridline" x1="${padL}" y1="${y.toFixed(1)}" x2="${w - padR}" y2="${y.toFixed(1)}" />`;
+    out += `<text class="chart-axis-label chart-axis-label-y" x="${padL - 8}" y="${y.toFixed(1)}" text-anchor="end" dominant-baseline="middle">${formatValue(v)}</text>`;
+  }
+  return out;
+}
+
+/* налаштовує підказки для кожного .chart-plot окремо (тултип — вкладений
+   у нього .chart-tooltip) — сторінка може мати кілька незалежних
+   графіків, кожен зі своєю підказкою */
+function initChartTooltips() {
+  document.querySelectorAll(".chart-plot").forEach((plot) => {
+    const tooltip = plot.querySelector(".chart-tooltip");
+    if (!tooltip) return;
+
+    function show(target) {
+      const text = target.dataset.tooltip;
+      if (!text) return;
+      tooltip.textContent = text;
+      tooltip.classList.add("visible");
+
+      const plotRect = plot.getBoundingClientRect();
+      const dotRect = target.getBoundingClientRect();
+      const centerX = dotRect.left + dotRect.width / 2 - plotRect.left;
+      const halfW = tooltip.offsetWidth / 2;
+      const clampedX = Math.min(Math.max(centerX, halfW + 4), plotRect.width - halfW - 4);
+
+      tooltip.style.left = `${clampedX}px`;
+      tooltip.style.top = `${dotRect.top - plotRect.top}px`;
+    }
+
+    function hide() {
+      tooltip.classList.remove("visible");
+    }
+
+    plot.addEventListener("mouseover", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target) show(target);
+    });
+    plot.addEventListener("mouseout", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target && !target.contains(e.relatedTarget)) hide();
+    });
+    plot.addEventListener("focusin", (e) => {
+      const target = e.target.closest(".chart-dot-hit");
+      if (target) show(target);
+    });
+    plot.addEventListener("focusout", hide);
+  });
+}
