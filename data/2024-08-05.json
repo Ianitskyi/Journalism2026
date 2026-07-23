@@ -9,7 +9,9 @@
       "short": "ЧПМ",
       "hue": 100,
       "score": 166.1,
-      "applications": 57,
+      "applications": 28.5,
+      "applicationsTotal": 57,
+      "programCount": 2,
       "admitted": 32,
       "rank": 1
     },
@@ -18,20 +20,12 @@
       "name": "Харківський національний університет імені В.Н. Каразіна",
       "short": "ХВК",
       "hue": 12,
-      "score": 163.3,
-      "applications": 286,
-      "admitted": 279,
+      "score": 163.2,
+      "applications": 42.5,
+      "applicationsTotal": 170,
+      "programCount": 4,
+      "admitted": 167,
       "rank": 2
-    },
-    {
-      "id": "edbo227",
-      "name": "Харківський національний економічний університет імені Семена Кузнеця",
-      "short": "ХЕСК",
-      "hue": 268,
-      "score": 162.1,
-      "applications": 198,
-      "admitted": 72,
-      "rank": 3
     },
     {
       "id": "sumdu",
@@ -39,18 +33,34 @@
       "short": "С",
       "hue": 170,
       "score": 160.8,
-      "applications": 118,
+      "applications": 39.3,
+      "applicationsTotal": 118,
+      "programCount": 3,
       "admitted": 118,
+      "rank": 3
+    },
+    {
+      "id": "edbo192",
+      "name": "Національний університет \"Одеська юридична академія\"",
+      "short": "ОЮ",
+      "hue": 280,
+      "score": 160.6,
+      "applications": 60.8,
+      "applicationsTotal": 304,
+      "programCount": 5,
+      "admitted": 48,
       "rank": 4
     },
     {
-      "id": "naukma",
-      "name": "Національний університет \"Києво-Могилянська академія\"",
-      "short": "КМ",
-      "hue": 268,
-      "score": 160.6,
-      "applications": 471,
-      "admitted": 463,
+      "id": "onu",
+      "name": "Одеський національний університет імені І. І. Мечникова",
+      "short": "ОІІМ",
+      "hue": 24,
+      "score": 159.3,
+      "applications": 87,
+      "applicationsTotal": 174,
+      "programCount": 2,
+      "admitted": 170,
       "rank": 5
     },
     {
@@ -58,40 +68,12 @@
       "name": "Київський національний університет імені Тараса Шевченка",
       "short": "КТШ",
       "hue": 350,
-      "score": 160.4,
-      "applications": 1705,
-      "admitted": 1645,
+      "score": 159.1,
+      "applications": 373,
+      "applicationsTotal": 746,
+      "programCount": 2,
+      "admitted": 717,
       "rank": 6
-    },
-    {
-      "id": "edbo167",
-      "name": "Українська академія друкарства",
-      "short": "УД",
-      "hue": 280,
-      "score": 160,
-      "applications": 164,
-      "admitted": 33,
-      "rank": 7
-    },
-    {
-      "id": "onu",
-      "name": "Одеський національний університет імені І. І. Мечникова",
-      "short": "ОІІМ",
-      "hue": 24,
-      "score": 159.8,
-      "applications": 224,
-      "admitted": 220,
-      "rank": 8
-    },
-    {
-      "id": "edbo192",
-      "name": "Національний університет \"Одеська юридична академія\"",
-      "short": "ОЮ",
-      "hue": 280,
-      "score": 159.6,
-      "applications": 327,
-      "admitted": 52,
-      "rank": 9
     },
     {
       "id": "edbo220",
@@ -99,9 +81,11 @@
       "short": "ОМ",
       "hue": 210,
       "score": 157.9,
-      "applications": 50,
+      "applications": 25,
+      "applicationsTotal": 50,
+      "programCount": 2,
       "admitted": 49,
-      "rank": 10
+      "rank": 7
     },
     {
       "id": "lnu",
@@ -109,9 +93,11 @@
       "short": "ЛІФ",
       "hue": 205,
       "score": 157.8,
-      "applications": 1389,
+      "applications": 463,
+      "applicationsTotal": 1389,
+      "programCount": 3,
       "admitted": 1354,
-      "rank": 11
+      "rank": 8
     },
     {
       "id": "edbo193",
@@ -119,19 +105,11 @@
       "short": "БП",
       "hue": 170,
       "score": 157.7,
-      "applications": 41,
+      "applications": 8.2,
+      "applicationsTotal": 41,
+      "programCount": 5,
       "admitted": 39,
-      "rank": 12
-    },
-    {
-      "id": "edbo225",
-      "name": "Національний університет \"Полтавська політехніка імені Юрія Кондратюка\"",
-      "short": "ППЮК",
-      "hue": 350,
-      "score": 157.1,
-      "applications": 88,
-      "admitted": 44,
-      "rank": 13
+      "rank": 9
     },
     {
       "id": "edbo36",
@@ -139,9 +117,11 @@
       "short": "ТДП",
       "hue": 45,
       "score": 156.4,
-      "applications": 137,
+      "applications": 34.3,
+      "applicationsTotal": 137,
+      "programCount": 4,
       "admitted": 25,
-      "rank": 14
+      "rank": 10
     },
     {
       "id": "mdu",
@@ -149,9 +129,11 @@
       "short": "М",
       "hue": 220,
       "score": 155.6,
-      "applications": 45,
+      "applications": 22.5,
+      "applicationsTotal": 45,
+      "programCount": 2,
       "admitted": 14,
-      "rank": 15
+      "rank": 11
     },
     {
       "id": "edbo353",
@@ -159,39 +141,47 @@
       "short": "М",
       "hue": 140,
       "score": 155.3,
-      "applications": 41,
+      "applications": 20.5,
+      "applicationsTotal": 41,
+      "programCount": 2,
       "admitted": 40,
-      "rank": 16
-    },
-    {
-      "id": "kubg",
-      "name": "Київський столичний університет імені Бориса Грінченка",
-      "short": "КСБГ",
-      "hue": 300,
-      "score": 155.2,
-      "applications": 1498,
-      "admitted": 1480,
-      "rank": 17
-    },
-    {
-      "id": "edbo105",
-      "name": "Національний університет кораблебудування імені адмірала Макарова",
-      "short": "КАМ",
-      "hue": 12,
-      "score": 155,
-      "applications": 33,
-      "admitted": 32,
-      "rank": 18
+      "rank": 12
     },
     {
       "id": "edbo120",
       "name": "Національний університет \"Острозька академія\"",
       "short": "О",
       "hue": 210,
-      "score": 154.6,
-      "applications": 285,
-      "admitted": 282,
-      "rank": 19
+      "score": 154.8,
+      "applications": 87,
+      "applicationsTotal": 174,
+      "programCount": 2,
+      "admitted": 173,
+      "rank": 13
+    },
+    {
+      "id": "znu",
+      "name": "Запорізький національний університет",
+      "short": "З",
+      "hue": 90,
+      "score": 154.3,
+      "applications": 28,
+      "applicationsTotal": 84,
+      "programCount": 3,
+      "admitted": 32,
+      "rank": 14
+    },
+    {
+      "id": "kubg",
+      "name": "Київський столичний університет імені Бориса Грінченка",
+      "short": "КСБГ",
+      "hue": 300,
+      "score": 154.3,
+      "applications": 265.3,
+      "applicationsTotal": 796,
+      "programCount": 3,
+      "admitted": 786,
+      "rank": 15
     },
     {
       "id": "edbo3",
@@ -199,9 +189,11 @@
       "short": "ППВК",
       "hue": 140,
       "score": 153.9,
-      "applications": 104,
+      "applications": 34.7,
+      "applicationsTotal": 104,
+      "programCount": 3,
       "admitted": 101,
-      "rank": 20
+      "rank": 16
     },
     {
       "id": "edbo97",
@@ -209,39 +201,35 @@
       "short": "ЛП",
       "hue": 240,
       "score": 153.7,
-      "applications": 707,
+      "applications": 176.8,
+      "applicationsTotal": 707,
+      "programCount": 4,
       "admitted": 171,
-      "rank": 21
+      "rank": 17
     },
     {
       "id": "dnu",
       "name": "Дніпровський національний університет імені Олеся Гончара",
       "short": "ДОГ",
       "hue": 60,
-      "score": 153.6,
-      "applications": 278,
-      "admitted": 271,
-      "rank": 22
+      "score": 153.2,
+      "applications": 103,
+      "applicationsTotal": 206,
+      "programCount": 2,
+      "admitted": 201,
+      "rank": 18
     },
     {
-      "id": "znu",
-      "name": "Запорізький національний університет",
-      "short": "З",
-      "hue": 90,
-      "score": 153.4,
-      "applications": 119,
-      "admitted": 46,
-      "rank": 23
-    },
-    {
-      "id": "edbo5780",
-      "name": "Державний університет інтелектуальних технологій і зв'язку",
-      "short": "ІТЗЯ",
-      "hue": 12,
-      "score": 152.9,
-      "applications": 96,
-      "admitted": 95,
-      "rank": 24
+      "id": "vnu",
+      "name": "Волинський національний університет імені Лесі Українки",
+      "short": "ВЛУ",
+      "hue": 200,
+      "score": 153,
+      "applications": 78,
+      "applicationsTotal": 156,
+      "programCount": 2,
+      "admitted": 154,
+      "rank": 19
     },
     {
       "id": "edbo171",
@@ -249,19 +237,11 @@
       "short": "З",
       "hue": 30,
       "score": 152.6,
-      "applications": 142,
+      "applications": 71,
+      "applicationsTotal": 142,
+      "programCount": 2,
       "admitted": 46,
-      "rank": 25
-    },
-    {
-      "id": "edbo174",
-      "name": "Національний технічний університет України «Київський політехнічний інститут імені Ігоря Сікорського»",
-      "short": "ТУКП",
-      "hue": 130,
-      "score": 152.2,
-      "applications": 680,
-      "admitted": 447,
-      "rank": 26
+      "rank": 20
     },
     {
       "id": "chnu",
@@ -269,9 +249,11 @@
       "short": "ЧЮФ",
       "hue": 280,
       "score": 152,
-      "applications": 384,
+      "applications": 128,
+      "applicationsTotal": 384,
+      "programCount": 3,
       "admitted": 380,
-      "rank": 27
+      "rank": 21
     },
     {
       "id": "edbo892",
@@ -279,9 +261,11 @@
       "short": "ТВ",
       "hue": 280,
       "score": 151.9,
-      "applications": 210,
+      "applications": 52.5,
+      "applicationsTotal": 210,
+      "programCount": 4,
       "admitted": 131,
-      "rank": 28
+      "rank": 22
     },
     {
       "id": "lnu-shev",
@@ -290,18 +274,10 @@
       "hue": 100,
       "score": 151.6,
       "applications": 38,
+      "applicationsTotal": 38,
+      "programCount": 1,
       "admitted": 24,
-      "rank": 29
-    },
-    {
-      "id": "edbo31",
-      "name": "Одеський національний економічний університет",
-      "short": "ОЕ",
-      "hue": 60,
-      "score": 151.6,
-      "applications": 45,
-      "admitted": 39,
-      "rank": 30
+      "rank": 23
     },
     {
       "id": "edbo6507",
@@ -309,19 +285,11 @@
       "short": "УНТ",
       "hue": 90,
       "score": 151.6,
-      "applications": 42,
+      "applications": 21,
+      "applicationsTotal": 42,
+      "programCount": 2,
       "admitted": 10,
-      "rank": 31
-    },
-    {
-      "id": "vnu",
-      "name": "Волинський національний університет імені Лесі Українки",
-      "short": "ВЛУ",
-      "hue": 200,
-      "score": 151.5,
-      "applications": 257,
-      "admitted": 255,
-      "rank": 32
+      "rank": 24
     },
     {
       "id": "kneu",
@@ -329,9 +297,11 @@
       "short": "КНЕУ",
       "hue": 130,
       "score": 151.4,
-      "applications": 156,
+      "applications": 78,
+      "applicationsTotal": 156,
+      "programCount": 2,
       "admitted": 153,
-      "rank": 33
+      "rank": 25
     },
     {
       "id": "edbo341",
@@ -340,8 +310,10 @@
       "hue": 220,
       "score": 151.3,
       "applications": 302,
+      "applicationsTotal": 302,
+      "programCount": 1,
       "admitted": 300,
-      "rank": 34
+      "rank": 26
     },
     {
       "id": "edbo1486",
@@ -350,18 +322,10 @@
       "hue": 45,
       "score": 151.2,
       "applications": 157,
+      "applicationsTotal": 157,
+      "programCount": 1,
       "admitted": 154,
-      "rank": 35
-    },
-    {
-      "id": "edbo47",
-      "name": "Національний університет харчових технологій",
-      "short": "ХТ",
-      "hue": 240,
-      "score": 151.1,
-      "applications": 111,
-      "admitted": 111,
-      "rank": 36
+      "rank": 27
     },
     {
       "id": "edbo5754",
@@ -369,9 +333,11 @@
       "short": "ОП",
       "hue": 24,
       "score": 151,
-      "applications": 85,
+      "applications": 21.3,
+      "applicationsTotal": 85,
+      "programCount": 4,
       "admitted": 23,
-      "rank": 37
+      "rank": 28
     },
     {
       "id": "edbo183",
@@ -379,19 +345,11 @@
       "short": "А",
       "hue": 320,
       "score": 150.9,
-      "applications": 319,
+      "applications": 159.5,
+      "applicationsTotal": 319,
+      "programCount": 2,
       "admitted": 313,
-      "rank": 38
-    },
-    {
-      "id": "npu",
-      "name": "Український державний університет імені Михайла Драгоманова",
-      "short": "УМД",
-      "hue": 330,
-      "score": 150.8,
-      "applications": 379,
-      "admitted": 63,
-      "rank": 39
+      "rank": 29
     },
     {
       "id": "edbo218",
@@ -399,9 +357,11 @@
       "short": "КМО",
       "hue": 170,
       "score": 150.6,
-      "applications": 29,
+      "applications": 14.5,
+      "applicationsTotal": 29,
+      "programCount": 2,
       "admitted": 29,
-      "rank": 40
+      "rank": 30
     },
     {
       "id": "donnu",
@@ -410,8 +370,10 @@
       "hue": 260,
       "score": 150.5,
       "applications": 144,
+      "applicationsTotal": 144,
+      "programCount": 1,
       "admitted": 144,
-      "rank": 41
+      "rank": 31
     },
     {
       "id": "edbo6540",
@@ -419,9 +381,11 @@
       "short": "П",
       "hue": 100,
       "score": 150.2,
-      "applications": 41,
+      "applications": 13.7,
+      "applicationsTotal": 41,
+      "programCount": 3,
       "admitted": 41,
-      "rank": 42
+      "rank": 32
     },
     {
       "id": "edbo340",
@@ -429,9 +393,11 @@
       "short": "ГСП",
       "hue": 100,
       "score": 150.1,
-      "applications": 36,
+      "applications": 12,
+      "applicationsTotal": 36,
+      "programCount": 3,
       "admitted": 12,
-      "rank": 43
+      "rank": 33
     },
     {
       "id": "edbo96",
@@ -439,9 +405,11 @@
       "short": "ТПВГ",
       "hue": 30,
       "score": 150,
-      "applications": 145,
+      "applications": 29,
+      "applicationsTotal": 145,
+      "programCount": 5,
       "admitted": 143,
-      "rank": 44
+      "rank": 34
     },
     {
       "id": "edbo48",
@@ -449,9 +417,11 @@
       "short": "Х",
       "hue": 60,
       "score": 149.7,
-      "applications": 34,
+      "applications": 11.3,
+      "applicationsTotal": 34,
+      "programCount": 3,
       "admitted": 14,
-      "rank": 45
+      "rank": 35
     },
     {
       "id": "edbo344",
@@ -459,9 +429,11 @@
       "short": "КМ",
       "hue": 330,
       "score": 149.6,
-      "applications": 76,
+      "applications": 38,
+      "applicationsTotal": 76,
+      "programCount": 2,
       "admitted": 75,
-      "rank": 46
+      "rank": 36
     },
     {
       "id": "edbo7",
@@ -469,9 +441,11 @@
       "short": "БПУ",
       "hue": 90,
       "score": 149.5,
-      "applications": 202,
+      "applications": 101,
+      "applicationsTotal": 202,
+      "programCount": 2,
       "admitted": 200,
-      "rank": 47
+      "rank": 37
     },
     {
       "id": "edbo155",
@@ -479,19 +453,11 @@
       "short": "НМГ",
       "hue": 12,
       "score": 149.4,
-      "applications": 26,
+      "applications": 8.7,
+      "applicationsTotal": 26,
+      "programCount": 3,
       "admitted": 14,
-      "rank": 48
-    },
-    {
-      "id": "edbo6594",
-      "name": "Державний торговельно-економічний університет (Київ)",
-      "short": "ТЕ",
-      "hue": 330,
-      "score": 148.9,
-      "applications": 747,
-      "admitted": 737,
-      "rank": 49
+      "rank": 38
     },
     {
       "id": "edbo21",
@@ -499,9 +465,11 @@
       "short": "СВД",
       "hue": 30,
       "score": 148,
-      "applications": 103,
+      "applications": 25.8,
+      "applicationsTotal": 103,
+      "programCount": 4,
       "admitted": 102,
-      "rank": 50
+      "rank": 39
     },
     {
       "id": "edbo178",
@@ -510,8 +478,10 @@
       "hue": 140,
       "score": 147.4,
       "applications": 79,
+      "applicationsTotal": 79,
+      "programCount": 1,
       "admitted": 77,
-      "rank": 51
+      "rank": 40
     },
     {
       "id": "uzhnu",
@@ -519,9 +489,11 @@
       "short": "У",
       "hue": 150,
       "score": 147.1,
-      "applications": 149,
+      "applications": 49.7,
+      "applicationsTotal": 149,
+      "programCount": 3,
       "admitted": 148,
-      "rank": 52
+      "rank": 41
     },
     {
       "id": "edbo91",
@@ -529,19 +501,11 @@
       "short": "ЗП",
       "hue": 220,
       "score": 147,
-      "applications": 49,
+      "applications": 12.3,
+      "applicationsTotal": 49,
+      "programCount": 4,
       "admitted": 18,
-      "rank": 53
-    },
-    {
-      "id": "edbo309",
-      "name": "Луцький національний технічний університет",
-      "short": "ЛТ",
-      "hue": 200,
-      "score": 146.9,
-      "applications": 109,
-      "admitted": 106,
-      "rank": 54
+      "rank": 42
     },
     {
       "id": "edbo249",
@@ -549,9 +513,11 @@
       "short": "ПАТМ",
       "hue": 130,
       "score": 146.8,
-      "applications": 110,
+      "applications": 36.7,
+      "applicationsTotal": 110,
+      "programCount": 3,
       "admitted": 110,
-      "rank": 55
+      "rank": 43
     },
     {
       "id": "edbo252",
@@ -559,9 +525,11 @@
       "short": "ВПМК",
       "hue": 268,
       "score": 146.7,
-      "applications": 278,
+      "applications": 69.5,
+      "applicationsTotal": 278,
+      "programCount": 4,
       "admitted": 273,
-      "rank": 56
+      "rank": 44
     },
     {
       "id": "edbo9",
@@ -569,9 +537,11 @@
       "short": "ВГП",
       "hue": 200,
       "score": 146.6,
-      "applications": 87,
+      "applications": 29,
+      "applicationsTotal": 87,
+      "programCount": 3,
       "admitted": 86,
-      "rank": 57
+      "rank": 45
     },
     {
       "id": "edbo109",
@@ -580,8 +550,10 @@
       "hue": 200,
       "score": 146.5,
       "applications": 94,
+      "applicationsTotal": 94,
+      "programCount": 1,
       "admitted": 92,
-      "rank": 58
+      "rank": 46
     },
     {
       "id": "edbo208",
@@ -589,19 +561,11 @@
       "short": "ЖП",
       "hue": 320,
       "score": 146.3,
-      "applications": 84,
+      "applications": 42,
+      "applicationsTotal": 84,
+      "programCount": 2,
       "admitted": 37,
-      "rank": 59
-    },
-    {
-      "id": "cnu",
-      "name": "Черкаський національний університет імені Богдана Хмельницького",
-      "short": "ЧБХ",
-      "hue": 45,
-      "score": 145.4,
-      "applications": 151,
-      "admitted": 61,
-      "rank": 60
+      "rank": 47
     },
     {
       "id": "edbo318",
@@ -609,19 +573,11 @@
       "short": "ЕПК",
       "hue": 170,
       "score": 145.1,
-      "applications": 109,
+      "applications": 21.8,
+      "applicationsTotal": 109,
+      "programCount": 5,
       "admitted": 82,
-      "rank": 61
-    },
-    {
-      "id": "edbo6600",
-      "name": "Вінницький торговельно - економічний інститут Державного торговельно - економічного університету",
-      "short": "ВТЕД",
-      "hue": 350,
-      "score": 145.1,
-      "applications": 69,
-      "admitted": 69,
-      "rank": 62
+      "rank": 48
     },
     {
       "id": "edbo217",
@@ -629,9 +585,11 @@
       "short": "ВМРЛ",
       "hue": 280,
       "score": 145.1,
-      "applications": 22,
+      "applications": 5.5,
+      "applicationsTotal": 22,
+      "programCount": 4,
       "admitted": 22,
-      "rank": 63
+      "rank": 49
     },
     {
       "id": "edbo55",
@@ -639,9 +597,23 @@
       "short": "ЦВВ",
       "hue": 12,
       "score": 144.6,
-      "applications": 77,
+      "applications": 38.5,
+      "applicationsTotal": 77,
+      "programCount": 2,
       "admitted": 77,
-      "rank": 64
+      "rank": 50
+    },
+    {
+      "id": "cnu",
+      "name": "Черкаський національний університет імені Богдана Хмельницького",
+      "short": "ЧБХ",
+      "hue": 45,
+      "score": 142.9,
+      "applications": 21,
+      "applicationsTotal": 42,
+      "programCount": 2,
+      "admitted": 14,
+      "rank": 51
     },
     {
       "id": "edbo215",
@@ -649,19 +621,11 @@
       "short": "МЕАС",
       "hue": 100,
       "score": 142.5,
-      "applications": 46,
+      "applications": 15.3,
+      "applicationsTotal": 46,
+      "programCount": 3,
       "admitted": 43,
-      "rank": 65
-    },
-    {
-      "id": "edbo16",
-      "name": "Львівський торговельно-економічний університет",
-      "short": "ЛТЕ",
-      "hue": 220,
-      "score": 142.1,
-      "applications": 91,
-      "admitted": 37,
-      "rank": 66
+      "rank": 52
     },
     {
       "id": "edbo88",
@@ -669,29 +633,23 @@
       "short": "УППТ",
       "hue": 260,
       "score": 141.9,
-      "applications": 52,
+      "applications": 26,
+      "applicationsTotal": 52,
+      "programCount": 2,
       "admitted": 41,
-      "rank": 67
+      "rank": 53
     },
     {
       "id": "edbo310",
       "name": "Приватний вищий навчальний заклад \"Київський університет культури\"",
       "short": "КК",
       "hue": 150,
-      "score": 141.8,
-      "applications": 233,
-      "admitted": 228,
-      "rank": 68
-    },
-    {
-      "id": "edbo144",
-      "name": "Заклад вищої освіти \"Університет Короля Данила\"",
-      "short": "КД",
-      "hue": 330,
       "score": 141.6,
-      "applications": 112,
-      "admitted": 37,
-      "rank": 69
+      "applications": 32,
+      "applicationsTotal": 96,
+      "programCount": 3,
+      "admitted": 92,
+      "rank": 54
     },
     {
       "id": "edbo5691",
@@ -699,9 +657,11 @@
       "short": "КІВП",
       "hue": 220,
       "score": 141.5,
-      "applications": 48,
+      "applications": 24,
+      "applicationsTotal": 48,
+      "programCount": 2,
       "admitted": 41,
-      "rank": 70
+      "rank": 55
     }
   ],
   "master": [
@@ -710,9 +670,11 @@
       "name": "Національний університет \"Києво-Могилянська академія\"",
       "short": "КМ",
       "hue": 268,
-      "score": 160.1,
-      "applications": 138,
-      "admitted": 137,
+      "score": 160.5,
+      "applications": 67,
+      "applicationsTotal": 67,
+      "programCount": 1,
+      "admitted": 66,
       "rank": 1
     },
     {
@@ -720,19 +682,23 @@
       "name": "Заклад вищої освіти “Український католицький університет”",
       "short": "УК",
       "hue": 140,
-      "score": 155.5,
-      "applications": 78,
-      "admitted": 76,
+      "score": 154.4,
+      "applications": 32,
+      "applicationsTotal": 32,
+      "programCount": 1,
+      "admitted": 31,
       "rank": 2
     },
     {
-      "id": "knu",
-      "name": "Київський національний університет імені Тараса Шевченка",
-      "short": "КТШ",
-      "hue": 350,
-      "score": 154.6,
-      "applications": 685,
-      "admitted": 676,
+      "id": "kubg",
+      "name": "Київський столичний університет імені Бориса Грінченка",
+      "short": "КСБГ",
+      "hue": 300,
+      "score": 153.6,
+      "applications": 28.5,
+      "applicationsTotal": 57,
+      "programCount": 2,
+      "admitted": 57,
       "rank": 3
     },
     {
@@ -741,39 +707,23 @@
       "short": "ЛП",
       "hue": 240,
       "score": 153.5,
-      "applications": 108,
+      "applications": 27,
+      "applicationsTotal": 108,
+      "programCount": 4,
       "admitted": 41,
       "rank": 4
     },
     {
-      "id": "edbo227",
-      "name": "Харківський національний економічний університет імені Семена Кузнеця",
-      "short": "ХЕСК",
-      "hue": 268,
-      "score": 152.6,
-      "applications": 30,
-      "admitted": 14,
+      "id": "knu",
+      "name": "Київський національний університет імені Тараса Шевченка",
+      "short": "КТШ",
+      "hue": 350,
+      "score": 152.8,
+      "applications": 83.8,
+      "applicationsTotal": 335,
+      "programCount": 4,
+      "admitted": 327,
       "rank": 5
-    },
-    {
-      "id": "edbo174",
-      "name": "Національний технічний університет України «Київський політехнічний інститут імені Ігоря Сікорського»",
-      "short": "ТУКП",
-      "hue": 130,
-      "score": 152.1,
-      "applications": 130,
-      "admitted": 118,
-      "rank": 6
-    },
-    {
-      "id": "kubg",
-      "name": "Київський столичний університет імені Бориса Грінченка",
-      "short": "КСБГ",
-      "hue": 300,
-      "score": 151.7,
-      "applications": 267,
-      "admitted": 266,
-      "rank": 7
     },
     {
       "id": "lnu",
@@ -781,9 +731,11 @@
       "short": "ЛІФ",
       "hue": 205,
       "score": 150.9,
-      "applications": 230,
+      "applications": 76.7,
+      "applicationsTotal": 230,
+      "programCount": 3,
       "admitted": 222,
-      "rank": 8
+      "rank": 6
     },
     {
       "id": "edbo183",
@@ -792,18 +744,10 @@
       "hue": 320,
       "score": 150.3,
       "applications": 51,
+      "applicationsTotal": 51,
+      "programCount": 1,
       "admitted": 51,
-      "rank": 9
-    },
-    {
-      "id": "mdu",
-      "name": "Маріупольський державний університет",
-      "short": "М",
-      "hue": 220,
-      "score": 149.6,
-      "applications": 29,
-      "admitted": 27,
-      "rank": 10
+      "rank": 7
     },
     {
       "id": "edbo344",
@@ -811,9 +755,11 @@
       "short": "КМ",
       "hue": 330,
       "score": 149.3,
-      "applications": 19,
+      "applications": 6.3,
+      "applicationsTotal": 19,
+      "programCount": 3,
       "admitted": 19,
-      "rank": 11
+      "rank": 8
     },
     {
       "id": "edbo7",
@@ -821,29 +767,23 @@
       "short": "БПУ",
       "hue": 90,
       "score": 148.6,
-      "applications": 44,
+      "applications": 14.7,
+      "applicationsTotal": 44,
+      "programCount": 3,
       "admitted": 44,
-      "rank": 12
+      "rank": 9
     },
     {
-      "id": "npu",
-      "name": "Український державний університет імені Михайла Драгоманова",
-      "short": "УМД",
-      "hue": 330,
-      "score": 148.4,
-      "applications": 53,
-      "admitted": 18,
-      "rank": 13
-    },
-    {
-      "id": "dnu",
-      "name": "Дніпровський національний університет імені Олеся Гончара",
-      "short": "ДОГ",
-      "hue": 60,
-      "score": 148.2,
-      "applications": 35,
-      "admitted": 35,
-      "rank": 14
+      "id": "mdu",
+      "name": "Маріупольський державний університет",
+      "short": "М",
+      "hue": 220,
+      "score": 147.5,
+      "applications": 6,
+      "applicationsTotal": 18,
+      "programCount": 3,
+      "admitted": 17,
+      "rank": 10
     },
     {
       "id": "donnu",
@@ -851,9 +791,11 @@
       "short": "ДВС",
       "hue": 260,
       "score": 147.2,
-      "applications": 25,
+      "applications": 12.5,
+      "applicationsTotal": 25,
+      "programCount": 2,
       "admitted": 24,
-      "rank": 15
+      "rank": 11
     },
     {
       "id": "edbo249",
@@ -861,39 +803,23 @@
       "short": "ПАТМ",
       "hue": 130,
       "score": 147.1,
-      "applications": 23,
+      "applications": 7.7,
+      "applicationsTotal": 23,
+      "programCount": 3,
       "admitted": 23,
-      "rank": 16
+      "rank": 12
     },
     {
-      "id": "edbo47",
-      "name": "Національний університет харчових технологій",
-      "short": "ХТ",
-      "hue": 240,
-      "score": 146.6,
-      "applications": 27,
-      "admitted": 27,
-      "rank": 17
-    },
-    {
-      "id": "edbo167",
-      "name": "Українська академія друкарства",
-      "short": "УД",
-      "hue": 280,
-      "score": 146.5,
-      "applications": 49,
+      "id": "znu",
+      "name": "Запорізький національний університет",
+      "short": "З",
+      "hue": 90,
+      "score": 145.9,
+      "applications": 8.8,
+      "applicationsTotal": 35,
+      "programCount": 4,
       "admitted": 19,
-      "rank": 18
-    },
-    {
-      "id": "edbo6594",
-      "name": "Державний торговельно-економічний університет (Київ)",
-      "short": "ТЕ",
-      "hue": 330,
-      "score": 146.4,
-      "applications": 127,
-      "admitted": 126,
-      "rank": 19
+      "rank": 13
     },
     {
       "id": "edbo158",
@@ -901,9 +827,11 @@
       "short": "ЧКТШ",
       "hue": 320,
       "score": 145.9,
-      "applications": 34,
+      "applications": 11.3,
+      "applicationsTotal": 34,
+      "programCount": 3,
       "admitted": 34,
-      "rank": 20
+      "rank": 14
     },
     {
       "id": "edbo120",
@@ -911,9 +839,11 @@
       "short": "О",
       "hue": 210,
       "score": 145.8,
-      "applications": 22,
+      "applications": 11,
+      "applicationsTotal": 22,
+      "programCount": 2,
       "admitted": 22,
-      "rank": 21
+      "rank": 15
     },
     {
       "id": "edbo109",
@@ -921,9 +851,11 @@
       "short": "ЖІФ",
       "hue": 200,
       "score": 145,
-      "applications": 35,
+      "applications": 17.5,
+      "applicationsTotal": 35,
+      "programCount": 2,
       "admitted": 34,
-      "rank": 22
+      "rank": 16
     },
     {
       "id": "chnu",
@@ -932,8 +864,10 @@
       "hue": 280,
       "score": 145,
       "applications": 38,
+      "applicationsTotal": 38,
+      "programCount": 1,
       "admitted": 36,
-      "rank": 23
+      "rank": 17
     },
     {
       "id": "edbo308",
@@ -942,18 +876,10 @@
       "hue": 320,
       "score": 144.9,
       "applications": 78,
+      "applicationsTotal": 78,
+      "programCount": 1,
       "admitted": 76,
-      "rank": 24
-    },
-    {
-      "id": "cnu",
-      "name": "Черкаський національний університет імені Богдана Хмельницького",
-      "short": "ЧБХ",
-      "hue": 45,
-      "score": 144.7,
-      "applications": 24,
-      "admitted": 16,
-      "rank": 25
+      "rank": 18
     },
     {
       "id": "karazin",
@@ -961,19 +887,11 @@
       "short": "ХВК",
       "hue": 12,
       "score": 144.5,
-      "applications": 130,
+      "applications": 14.4,
+      "applicationsTotal": 130,
+      "programCount": 9,
       "admitted": 125,
-      "rank": 26
-    },
-    {
-      "id": "znu",
-      "name": "Запорізький національний університет",
-      "short": "З",
-      "hue": 90,
-      "score": 144.2,
-      "applications": 82,
-      "admitted": 35,
-      "rank": 27
+      "rank": 19
     },
     {
       "id": "edbo892",
@@ -982,8 +900,10 @@
       "hue": 280,
       "score": 144.2,
       "applications": 18,
+      "applicationsTotal": 18,
+      "programCount": 1,
       "admitted": 9,
-      "rank": 28
+      "rank": 20
     },
     {
       "id": "sumdu",
@@ -991,9 +911,11 @@
       "short": "С",
       "hue": 170,
       "score": 143.6,
-      "applications": 34,
+      "applications": 17,
+      "applicationsTotal": 34,
+      "programCount": 2,
       "admitted": 34,
-      "rank": 29
+      "rank": 21
     },
     {
       "id": "uzhnu",
@@ -1001,9 +923,11 @@
       "short": "У",
       "hue": 150,
       "score": 143.2,
-      "applications": 31,
+      "applications": 15.5,
+      "applicationsTotal": 31,
+      "programCount": 2,
       "admitted": 18,
-      "rank": 30
+      "rank": 22
     },
     {
       "id": "edbo341",
@@ -1012,8 +936,10 @@
       "hue": 220,
       "score": 143.2,
       "applications": 34,
+      "applicationsTotal": 34,
+      "programCount": 1,
       "admitted": 33,
-      "rank": 31
+      "rank": 23
     },
     {
       "id": "onu",
@@ -1021,9 +947,11 @@
       "short": "ОІІМ",
       "hue": 24,
       "score": 142.7,
-      "applications": 45,
+      "applications": 22.5,
+      "applicationsTotal": 45,
+      "programCount": 2,
       "admitted": 45,
-      "rank": 32
+      "rank": 24
     },
     {
       "id": "edbo3",
@@ -1031,9 +959,11 @@
       "short": "ППВК",
       "hue": 140,
       "score": 142.6,
-      "applications": 30,
+      "applications": 10,
+      "applicationsTotal": 30,
+      "programCount": 3,
       "admitted": 29,
-      "rank": 33
+      "rank": 25
     },
     {
       "id": "vnu",
@@ -1041,9 +971,11 @@
       "short": "ВЛУ",
       "hue": 200,
       "score": 142.4,
-      "applications": 40,
+      "applications": 20,
+      "applicationsTotal": 40,
+      "programCount": 2,
       "admitted": 40,
-      "rank": 34
+      "rank": 26
     },
     {
       "id": "edbo96",
@@ -1051,9 +983,11 @@
       "short": "ТПВГ",
       "hue": 30,
       "score": 142.3,
-      "applications": 34,
+      "applications": 11.3,
+      "applicationsTotal": 34,
+      "programCount": 3,
       "admitted": 34,
-      "rank": 35
+      "rank": 27
     },
     {
       "id": "edbo192",
@@ -1061,9 +995,11 @@
       "short": "ОЮ",
       "hue": 280,
       "score": 141.9,
-      "applications": 38,
+      "applications": 9.5,
+      "applicationsTotal": 38,
+      "programCount": 4,
       "admitted": 17,
-      "rank": 36
+      "rank": 28
     },
     {
       "id": "edbo6540",
@@ -1071,19 +1007,11 @@
       "short": "П",
       "hue": 100,
       "score": 141.3,
-      "applications": 15,
+      "applications": 7.5,
+      "applicationsTotal": 15,
+      "programCount": 2,
       "admitted": 14,
-      "rank": 37
-    },
-    {
-      "id": "edbo9",
-      "name": "Національний університет водного господарства та природокористування",
-      "short": "ВГП",
-      "hue": 200,
-      "score": 141.3,
-      "applications": 24,
-      "admitted": 24,
-      "rank": 38
+      "rank": 29
     },
     {
       "id": "edbo21",
@@ -1091,9 +1019,11 @@
       "short": "СВД",
       "hue": 30,
       "score": 139,
-      "applications": 33,
+      "applications": 11,
+      "applicationsTotal": 33,
+      "programCount": 3,
       "admitted": 32,
-      "rank": 39
+      "rank": 30
     },
     {
       "id": "edbo217",
@@ -1101,9 +1031,11 @@
       "short": "ВМРЛ",
       "hue": 280,
       "score": 138.2,
-      "applications": 15,
+      "applications": 5,
+      "applicationsTotal": 15,
+      "programCount": 3,
       "admitted": 13,
-      "rank": 40
+      "rank": 31
     },
     {
       "id": "edbo310",
@@ -1111,9 +1043,11 @@
       "short": "КК",
       "hue": 150,
       "score": 137.8,
-      "applications": 41,
+      "applications": 5.9,
+      "applicationsTotal": 41,
+      "programCount": 7,
       "admitted": 40,
-      "rank": 41
+      "rank": 32
     },
     {
       "id": "edbo252",
@@ -1121,9 +1055,11 @@
       "short": "ВПМК",
       "hue": 268,
       "score": 137.2,
-      "applications": 36,
+      "applications": 12,
+      "applicationsTotal": 36,
+      "programCount": 3,
       "admitted": 35,
-      "rank": 42
+      "rank": 33
     },
     {
       "id": "edbo318",
@@ -1131,9 +1067,11 @@
       "short": "ЕПК",
       "hue": 170,
       "score": 133.3,
-      "applications": 20,
+      "applications": 4,
+      "applicationsTotal": 20,
+      "programCount": 5,
       "admitted": 18,
-      "rank": 43
+      "rank": 34
     },
     {
       "id": "edbo36",
@@ -1141,9 +1079,11 @@
       "short": "ТДП",
       "hue": 45,
       "score": 133,
-      "applications": 16,
+      "applications": 5.3,
+      "applicationsTotal": 16,
+      "programCount": 3,
       "admitted": 6,
-      "rank": 44
+      "rank": 35
     },
     {
       "id": "edbo91",
@@ -1151,9 +1091,11 @@
       "short": "ЗП",
       "hue": 220,
       "score": 132.4,
-      "applications": 19,
+      "applications": 3.8,
+      "applicationsTotal": 19,
+      "programCount": 5,
       "admitted": 12,
-      "rank": 45
+      "rank": 36
     },
     {
       "id": "edbo215",
@@ -1161,27 +1103,19 @@
       "short": "МЕАС",
       "hue": 100,
       "score": 128.8,
-      "applications": 25,
+      "applications": 5,
+      "applicationsTotal": 25,
+      "programCount": 5,
       "admitted": 24,
-      "rank": 46
-    },
-    {
-      "id": "cpu",
-      "name": "\"Класичний приватний університет\"",
-      "short": "К",
-      "hue": 18,
-      "score": 127.8,
-      "applications": 15,
-      "admitted": 8,
-      "rank": 47
+      "rank": 37
     }
   ],
   "totalApplications": {
-    "bachelor": 15400,
-    "master": 3154
+    "bachelor": 9592,
+    "master": 1905
   },
   "totalAdmitted": {
-    "bachelor": 12602,
-    "master": 2826
+    "bachelor": 7952,
+    "master": 1721
   }
 }
