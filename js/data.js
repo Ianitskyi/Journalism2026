@@ -260,6 +260,88 @@ async function loadRealCurrentData() {
 
 loadRealCurrentData();
 
+/* Англійські назви/абревіатури для закладів, яких немає в кураторському
+   демо-списку BACHELOR_UNIS/MASTER_UNIS (тобто відомі лише з реальних
+   історичних даних ЄДЕБО) — без цього перемикач на EN лишав би їхню
+   назву українською. Орієнтовний переклад, за наявності — усталена
+   англомовна назва самого закладу; потребує звірки з офіційними
+   джерелами закладів. */
+const UNI_NAME_EN = {
+  edbo193: { name: "Berdiansk State Pedagogical University", short: "BSPU" },
+  edbo318: { name: "KROK University", short: "KROK" },
+  edbo252: { name: "Vinnytsia Mykhailo Kotsiubynskyi State Pedagogical University", short: "VSPU" },
+  edbo6600: { name: "Vinnytsia Institute of Trade and Economics", short: "VITE" },
+  edbo404: { name: "Viacheslav Chornovil Halych Vocational College", short: "HVC" },
+  edbo216: { name: "Ukrainian State University of Chemical Technology", short: "USUCT" },
+  edbo6540: { name: "State Tax University", short: "STU" },
+  edbo6594: { name: "State University of Trade and Economics", short: "SUTE" },
+  edbo208: { name: "Zhytomyr Polytechnic State University", short: "ZPSU" },
+  edbo5780: { name: "State University of Intelligent Technologies and Telecommunications", short: "SUITT" },
+  edbo109: { name: "Ivan Franko Zhytomyr State University", short: "ZSU" },
+  edbo1139: { name: "Lviv University of Business and Law", short: "LUBL" },
+  edbo144: { name: "King Danylo University", short: "KDU" },
+  edbo217: { name: "Open International University of Human Development “Ukraine”", short: "OIUHD" },
+  edbo171: { name: "West Ukrainian National University", short: "WUNU" },
+  edbo178: { name: "Ivan Ohiienko Kamianets-Podilskyi National University", short: "KPNU" },
+  edbo341: { name: "Vasyl Stefanyk Carpathian National University", short: "VSCNU" },
+  kneu: { name: "Vadym Hetman Kyiv National Economic University", short: "KNEU" },
+  edbo196: { name: "Kyiv National University of Trade and Economics", short: "KNUTE" },
+  edbo308: { name: "Kyiv National University of Culture and Arts", short: "KNUCA" },
+  edbo56: { name: "Borys Grinchenko Kyiv University", short: "BGKU" },
+  edbo5691: { name: "Kyiv University of Intellectual Property and Law", short: "KUIPL" },
+  edbo218: { name: "Mykhailo Ostrohradskyi Kremenchuk National University", short: "KrNU" },
+  edbo309: { name: "Lutsk National Technical University", short: "LNTU" },
+  edbo16: { name: "Lviv University of Trade and Economics", short: "LUTE" },
+  edbo353: { name: "International University", short: "IU" },
+  edbo183: { name: "National Aviation University", short: "NAU" },
+  edbo194: { name: "M. P. Drahomanov National Pedagogical University", short: "NPU" },
+  edbo36: { name: "Dnipro University of Technology", short: "DUT" },
+  edbo174: { name: "Igor Sikorsky Kyiv Polytechnic Institute", short: "KPI" },
+  edbo91: { name: "Zaporizhzhia Polytechnic National University", short: "ZPNU" },
+  edbo97: { name: "Lviv Polytechnic National University", short: "LPNU" },
+  edbo5754: { name: "Odesa Polytechnic National University", short: "OPNU" },
+  edbo192: { name: "National University “Odesa Law Academy”", short: "NUOLA" },
+  edbo120: { name: "National University of Ostroh Academy", short: "NaUOA" },
+  edbo225: { name: "Yuri Kondratyuk Poltava Polytechnic National University", short: "PPNU" },
+  edbo158: { name: "T. H. Shevchenko National University “Chernihiv Colehium”", short: "NUCC" },
+  edbo7208: { name: "Kyiv Aviation Institute National University", short: "KAI" },
+  edbo7: { name: "National University of Life and Environmental Sciences of Ukraine", short: "NUBiP" },
+  edbo9: { name: "National University of Water and Environmental Engineering", short: "NUWEE" },
+  edbo105: { name: "Admiral Makarov National University of Shipbuilding", short: "NUOS" },
+  edbo47: { name: "National University of Food Technologies", short: "NUFT" },
+  edbo155: { name: "Mykola Gogol Nizhyn State University", short: "NDU" },
+  edbo31: { name: "Odesa National Economic University", short: "ONEU" },
+  edbo220: { name: "Odesa National Maritime University", short: "ONMU" },
+  edbo3: { name: "Volodymyr Korolenko Poltava National Pedagogical University", short: "PNPU" },
+  edbo249: { name: "Interregional Academy of Personnel Management", short: "MAUP" },
+  edbo310: { name: "Kyiv University of Culture", short: "KUC" },
+  edbo215: { name: "Academician Stepan Demianchuk International University of Economics and Humanities", short: "IUEH" },
+  edbo868: { name: "Ukrainian Institute of Humanities", short: "UIH" },
+  edbo344: { name: "Kyiv International University", short: "KyIU" },
+  edbo1365: { name: "Pylyp Orlyk International Classical University", short: "ICU" },
+  edbo21: { name: "Volodymyr Dahl East Ukrainian National University", short: "EUNU" },
+  edbo892: { name: "V. I. Vernadsky Taurida National University", short: "TNU" },
+  edbo96: { name: "Volodymyr Hnatiuk Ternopil National Pedagogical University", short: "TNPU" },
+  edbo167: { name: "Ukrainian Academy of Printing", short: "UAP" },
+  edbo6507: { name: "Ukrainian State University of Science and Technologies", short: "USUST" },
+  edbo88: { name: "Pavlo Tychyna Uman State Pedagogical University", short: "USPU" },
+  edbo340: { name: "Hryhorii Skovoroda University in Pereiaslav", short: "HSUP" },
+  edbo3457: { name: "University of the State Fiscal Service of Ukraine", short: "USFS" },
+  edbo1486: { name: "University of Customs and Finance", short: "UCF" },
+  edbo87: { name: "Kharkiv State Academy of Culture", short: "KhSAC" },
+  edbo227: { name: "Simon Kuznets Kharkiv National University of Economics", short: "KhNUE" },
+  edbo48: { name: "Kherson State University", short: "KSU" },
+  edbo55: { name: "Volodymyr Vynnychenko Central Ukrainian State University", short: "CUSU" },
+  edbo265: { name: "Petro Mohyla Black Sea National University", short: "BSNU" },
+  sumdu: { name: "Sumy State University", short: "SumDU" },
+  mdu: { name: "Mariupol State University", short: "MSU" },
+  donnu: { name: "Vasyl' Stus Donetsk National University", short: "DonNU" },
+  "lnu-shev": { name: "Taras Shevchenko Luhansk National University", short: "LNU" },
+  vnu: { name: "Lesya Ukrainka Volyn National University", short: "VNU" },
+  cnu: { name: "Bohdan Khmelnytsky National University of Cherkasy", short: "CNU" },
+  cpu: { name: "Classic Private University", short: "CPU" }
+};
+
 /* Реєстр УСІХ закладів освіти, що хоч раз траплялись у даних цього рівня
    (по всіх роках, включно з реальними історичними) — не лише
    кураторський демо-список BACHELOR_UNIS/MASTER_UNIS. Потрібен, щоб (а)
@@ -284,6 +366,12 @@ function allUniversitiesForDegree(degree) {
       existing.shortEn = u.shortEn;
     } else {
       registry.set(u.id, { id: u.id, name: u.name, short: u.short, hue: u.hue, nameEn: u.nameEn, shortEn: u.shortEn });
+    }
+  }
+  for (const [id, entry] of registry) {
+    if (!entry.nameEn && UNI_NAME_EN[id]) {
+      entry.nameEn = UNI_NAME_EN[id].name;
+      entry.shortEn = UNI_NAME_EN[id].short;
     }
   }
   return registry;
