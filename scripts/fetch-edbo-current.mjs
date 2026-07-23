@@ -18,20 +18,20 @@ const UID_TO_SLUG = {
   41: "knu", 282: "lnu", 79: "naukma", 244: "ucu", 28: "onu",
   62: "karazin", 111: "dnu", 73: "znu", 44: "vnu", 207: "uzhnu",
   101: "cnu", 6945: "kubg", 246: "donnu", 198: "cpu", 81: "lnu-shev",
-  19: "mdu", 61: "chnu", 168: "sumdu", 6704: "npu"
+  19: "mdu", 61: "chnu", 168: "sumdu", 6704: "npu", 337: "kneu"
 };
 const SLUG_HUE = {
   knu: 350, lnu: 205, naukma: 268, ucu: 140, onu: 24, karazin: 12,
   dnu: 60, znu: 90, vnu: 200, uzhnu: 150, cnu: 45, kubg: 300,
   donnu: 260, cpu: 18, "lnu-shev": 100, mdu: 220, chnu: 280,
-  sumdu: 170, npu: 330
+  sumdu: 170, npu: 330, kneu: 130
 };
 const SLUG_SHORT = {
   knu: "КНУ", lnu: "ЛНУ", naukma: "НаУКМА", ucu: "УКУ", onu: "ОНУ",
   karazin: "ХНУ", dnu: "ДНУ", znu: "ЗНУ", vnu: "ВНУ", uzhnu: "УжНУ",
   cnu: "ЧНУ", kubg: "КУБГ", donnu: "ДонНУ", cpu: "КПУ",
   "lnu-shev": "ЛНУ ім.Ш.", mdu: "МДУ", chnu: "ЧернНУ",
-  sumdu: "СумДУ", npu: "НПУ"
+  sumdu: "СумДУ", npu: "НПУ", kneu: "КНЕУ"
 };
 const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300, 260, 18, 100, 220, 280, 170, 330];
 const MIN_APPLICATIONS = { bachelor: 20, master: 15 };

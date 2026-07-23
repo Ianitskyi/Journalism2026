@@ -25,6 +25,17 @@ function scoreIn2021(id, degree) {
   return row ? row.score : null;
 }
 
+/* заклади освіти, що є в реєстрі (хоч раз траплялись у будь-якому році),
+   але відсутні цього року в rows — додаються в кінець списку з
+   порожніми даними, відсортовані за назвою */
+function placeholderRows(rows, degree) {
+  const present = new Set(rows.map((r) => r.id));
+  const missing = [...DB.allUniversities(degree).values()].filter((u) => !present.has(u.id));
+  return missing
+    .map((u) => ({ ...u, score: null, applications: null, admitted: null, rank: null }))
+    .sort((a, b) => uniName(a).localeCompare(uniName(b), getLang() === "en" ? "en" : "uk"));
+}
+
 /* повертає новий масив, відсортований і проранжований за обраним
    критерієм — сирі дані завжди зберігають ранг за балом, тож для
    сортування за кількістю заяв ранги рахуємо наново */
@@ -223,6 +234,7 @@ function render() {
   const snap = currentSnapshot();
   const rawRows = snap[state.degree];
   const rows = sortedRows(rawRows, state.sortBy);
+  const displayRows = [...rows, ...placeholderRows(rows, state.degree)];
   const isFinal = state.year !== DB.currentYear;
   const minApps = DB.minApplications[state.degree];
 
@@ -242,12 +254,12 @@ function render() {
   const tbody = document.getElementById("rank-body");
   tbody.innerHTML = "";
 
-  if (!rows.length) {
+  if (!displayRows.length) {
     tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
   } else {
-    const visible = state.expanded ? rows : rows.slice(0, VISIBLE_ROWS);
+    const visible = state.expanded ? displayRows : displayRows.slice(0, VISIBLE_ROWS);
     for (const r of visible) {
-      const baseline2021 = scoreIn2021(r.id, state.degree);
+      const baseline2021 = r.score != null ? scoreIn2021(r.id, state.degree) : null;
       const trendDiff = baseline2021 != null ? Math.round((r.score - baseline2021) * 10) / 10 : null;
       const trendHtml = trendDiff == null
         ? "—"
@@ -256,16 +268,16 @@ function render() {
 
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td><div class="rank">${r.rank}</div></td>
+        <td><div class="rank">${r.rank || "—"}</div></td>
         <td>
           <a class="univ-cell" href="university.html?id=${encodeURIComponent(r.id)}">
             <div class="univ-logo" style="background:hsl(${r.hue} 62% 46%)">${uniShort(r).slice(0, 2).toUpperCase()}</div>
             <div class="univ-name">${uniName(r)}</div>
           </a>
         </td>
-        <td class="num"><div class="score">${r.score.toFixed(1)}</div></td>
-        <td class="num"><div class="applications">${numFmt().format(r.applications)}</div></td>
-        <td class="num"><div class="applications">${numFmt().format(r.admitted || 0)}</div></td>
+        <td class="num"><div class="score">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
+        <td class="num"><div class="applications">${r.applications != null ? numFmt().format(r.applications) : "—"}</div></td>
+        <td class="num"><div class="applications">${r.admitted != null ? numFmt().format(r.admitted) : "—"}</div></td>
         <td class="num"><div class="${trendClass}">${trendHtml}</div></td>
       `;
       tbody.appendChild(tr);
@@ -273,11 +285,11 @@ function render() {
   }
 
   const showAllBtn = document.getElementById("show-all");
-  if (rows.length > VISIBLE_ROWS) {
+  if (displayRows.length > VISIBLE_ROWS) {
     showAllBtn.style.display = "block";
     showAllBtn.textContent = state.expanded
       ? t("showAll.collapse")
-      : t("showAll.expand", { n: rows.length });
+      : t("showAll.expand", { n: displayRows.length });
   } else {
     showAllBtn.style.display = "none";
   }
@@ -342,10 +354,44 @@ function initShowAll() {
   });
 }
 
+/* пошук закладу освіти на головній: datalist з усіма відомими назвами
+   (обидва рівні, усі роки) — вибір зі списку чи Enter на точному
+   збігу назви переходить на сторінку закладу */
+function renderUniSearchOptions() {
+  const datalist = document.getElementById("uni-search-list");
+  if (!datalist) return;
+  const lang = getLang();
+  const items = [...DB.allUniversitiesMeta().values()]
+    .map((u) => ({ id: u.id, name: lang === "en" ? (u.nameEn || u.name) : u.name }))
+    .sort((a, b) => a.name.localeCompare(b.name, lang === "en" ? "en" : "uk"));
+  datalist.innerHTML = items.map((it) => `<option value="${it.name.replace(/"/g, "&quot;")}"></option>`).join("");
+}
+
+function initUniSearch() {
+  const input = document.getElementById("uni-search");
+  if (!input) return;
+
+  function go() {
+    const value = input.value.trim().toLowerCase();
+    if (!value) return;
+    const lang = getLang();
+    const match = [...DB.allUniversitiesMeta().values()].find((u) => {
+      const name = lang === "en" ? (u.nameEn || u.name) : u.name;
+      return name.toLowerCase() === value;
+    });
+    if (match) location.href = `university.html?id=${encodeURIComponent(match.id)}`;
+  }
+
+  input.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
+  input.addEventListener("change", go);
+}
+
 initTabs();
 initSortTabs();
 initShowAll();
-window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); };
-window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); renderSystemCharts(); });
+initUniSearch();
+window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); };
+window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); });
 render();
+renderUniSearchOptions();
 renderSystemCharts();
