@@ -383,6 +383,7 @@ a { color: inherit; }
 .sort-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 18px;
 }
