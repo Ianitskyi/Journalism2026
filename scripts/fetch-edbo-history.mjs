@@ -65,7 +65,21 @@ const UID_TO_SLUG = {
   19: "mdu",       // Маріупольський державний ун-т
   61: "chnu",      // Чернівецький нац. ун-т ім. Юрія Федьковича
   168: "sumdu",    // Сумський державний університет
-  6704: "npu"      // НПУ ім. М. П. Драгоманова (нині Укр. держ. ун-т ім. Драгоманова)
+  6704: "npu",     // НПУ ім. М. П. Драгоманова (нині Укр. держ. ун-т ім. Драгоманова)
+  337: "kneu"      // Київський нац. економічний ун-т ім. Вадима Гетьмана
+};
+
+/* ЄДЕБО іноді повертає назву закладу ВЕЛИКИМИ ЛІТЕРАМИ (напр. uid 337) —
+   виправляємо вручну там, де це помічено, замість використання сирого
+   rec.name */
+const NAME_OVERRIDE = {
+  337: "Київський національний економічний університет імені Вадима Гетьмана"
+};
+
+/* коли автоматична евристика shortName() дає гірший результат за
+   реальну усталену абревіатуру закладу */
+const SLUG_SHORT_OVERRIDE = {
+  kneu: "КНЕУ"
 };
 
 /* мінімальна кількість заяв, щоб заклад потрапив у рейтинг (як у data.js) */
@@ -78,7 +92,7 @@ const PALETTE_HUES = [350, 205, 268, 140, 24, 12, 60, 90, 320, 200, 150, 45, 300
 const SLUG_HUE = {
   knu: 350, lnu: 205, naukma: 268, ucu: 140, onu: 24, karazin: 12, dnu: 60,
   znu: 90, vnu: 200, uzhnu: 150, cnu: 45, kubg: 300, donnu: 260, cpu: 18,
-  "lnu-shev": 100, mdu: 220, chnu: 280, sumdu: 170, npu: 330
+  "lnu-shev": 100, mdu: 220, chnu: 280, sumdu: 170, npu: 330, kneu: 130
 };
 
 function log(line) {
@@ -185,8 +199,8 @@ async function fetchLevelData(base, level, year) {
     const slug = UID_TO_SLUG[rec.uid];
     rows.push({
       id: slug || `edbo${rec.uid}`,
-      name: rec.name,
-      short: shortName(rec.name),
+      name: NAME_OVERRIDE[rec.uid] || rec.name,
+      short: (slug && SLUG_SHORT_OVERRIDE[slug]) || shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
       score: Math.round((rec.weightedScoreSum / rec.admitted) * 10) / 10,
       applications: rec.applications,

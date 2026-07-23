@@ -1,18 +1,16 @@
-const state = { degree: "bachelor", compareId: null };
+const state = { degree: "bachelor", compareIds: [null, null], secondCompareVisible: false };
 
 function findUniMeta(id) {
-  const b = BACHELOR_UNIS.find((u) => u.id === id);
-  const m = MASTER_UNIS.find((u) => u.id === id);
-  const src = b || m;
+  const src = DB.allUniversitiesMeta().get(id);
   if (!src) return null;
   const name = getLang() === "en" ? (src.nameEn || src.name) : src.name;
   const short = getLang() === "en" ? (src.shortEn || src.short) : src.short;
-  return { id, name, short, hue: src.hue, hasBachelor: !!b, hasMaster: !!m };
+  return { id, name, short, hue: src.hue, hasBachelor: !!src.hasBachelor, hasMaster: !!src.hasMaster };
 }
 
 function allUniMetas() {
-  const ids = new Set([...BACHELOR_UNIS, ...MASTER_UNIS].map((u) => u.id));
-  return [...ids].map(findUniMeta).sort((a, b) => a.name.localeCompare(b.name, getLang() === "en" ? "en" : "uk"));
+  const registry = DB.allUniversitiesMeta();
+  return [...registry.keys()].map(findUniMeta).sort((a, b) => a.name.localeCompare(b.name, getLang() === "en" ? "en" : "uk"));
 }
 
 /* останній (актуальний) знімок конкретного року — для 2026 це найновіший
@@ -100,12 +98,17 @@ function buildChartSVG(trend, series) {
   `;
 }
 
-function renderCompareOptions(meta) {
-  const select = document.getElementById("compare-select");
-  const current = state.compareId;
+/* заповнює один <select> порівняння, виключаючи основний заклад і той,
+   що вже обраний у ІНШОМУ слоті порівняння (щоб не можна було обрати
+   той самий заклад двічі) */
+function renderCompareSelect(slot, meta) {
+  const select = document.getElementById(`compare-select-${slot}`);
+  if (!select) return;
+  const otherSlotId = state.compareIds[1 - slot];
+  const current = state.compareIds[slot];
   select.innerHTML = `<option value="">${t("uni.compareNone")}</option>`;
   allUniMetas()
-    .filter((u) => u.id !== meta.id && (state.degree === "bachelor" ? u.hasBachelor : u.hasMaster))
+    .filter((u) => u.id !== meta.id && u.id !== otherSlotId && (state.degree === "bachelor" ? u.hasBachelor : u.hasMaster))
     .forEach((u) => {
       const opt = document.createElement("option");
       opt.value = u.id;
@@ -113,12 +116,23 @@ function renderCompareOptions(meta) {
       select.appendChild(opt);
     });
   select.value = current && [...select.options].some((o) => o.value === current) ? current : "";
-  if (select.value !== current) state.compareId = select.value || null;
+  if (select.value !== current) state.compareIds[slot] = select.value || null;
 }
 
-function renderComparePanel(meta, trend, compareMeta, compareTrend) {
+function renderCompareOptions(meta) {
+  renderCompareSelect(0, meta);
+  renderCompareSelect(1, meta);
+
+  const row1 = document.getElementById("compare-row-1");
+  const addBtn = document.getElementById("add-compare-btn");
+  const showRow1 = state.secondCompareVisible || state.compareIds[1] != null;
+  row1.style.display = showRow1 ? "flex" : "none";
+  addBtn.textContent = showRow1 ? t("uni.removeCompare") : t("uni.addCompare");
+}
+
+function renderComparePanel(meta, trend, compareMetas, compareTrends) {
   const panel = document.getElementById("compare-panel");
-  if (!compareMeta) {
+  if (!compareMetas.length) {
     panel.style.display = "none";
     panel.innerHTML = "";
     return;
@@ -139,7 +153,8 @@ function renderComparePanel(meta, trend, compareMeta, compareTrend) {
     `;
   }
 
-  panel.innerHTML = colHTML(meta, trend, true) + colHTML(compareMeta, compareTrend, false);
+  panel.innerHTML = colHTML(meta, trend, true) +
+    compareMetas.map((m, i) => colHTML(m, compareTrends[i], false)).join("");
 }
 
 /* короткий аналітичний висновок про динаміку закладу: рахується виключно
@@ -202,6 +217,12 @@ function render() {
     return;
   }
 
+  // якщо перший синхронний render() пройшов до завантаження реальних
+  // історичних даних (не знайшов заклад) — скидаємо стан "не знайдено"
+  // після успішного повторного render() з уже підвантаженими даними
+  document.getElementById("uni-content").style.display = "";
+  document.getElementById("uni-not-found").style.display = "none";
+
   document.title = `${meta.name} — ${t("meta.uniTitleSuffix")}`;
 
   // якщо для обраного рівня немає даних узагалі — переключитись на доступний
@@ -239,26 +260,40 @@ function render() {
   document.getElementById("uni-analysis").textContent = buildAnalysisText(first, latest);
 
   renderCompareOptions(meta);
-  const compareMeta = state.compareId ? findUniMeta(state.compareId) : null;
-  const compareTrend = compareMeta ? buildTrend(compareMeta.id, state.degree) : null;
+  const compareMetas = state.compareIds.map((id) => id && findUniMeta(id)).filter(Boolean);
+  const compareTrends = compareMetas.map((m) => buildTrend(m.id, state.degree));
+  const COMPARE_STYLES = [
+    { lineClass: "chart-line-compare", dotClass: "chart-dot-compare", color: "var(--ink-soft)" },
+    { lineClass: "chart-line-compare2", dotClass: "chart-dot-compare2", color: "var(--green)" }
+  ];
 
-  // об'єднуємо роки основного і порівнюваного закладу в один спільний ряд —
-  // спільний для обох графіків (бал і кількість заяв)
-  const combined = compareMeta
-    ? DB.years.map((year, i) => ({ year, row: trend[i].row, compareRow: compareTrend[i].row }))
+  // об'єднуємо роки основного й усіх порівнюваних закладів в один спільний
+  // ряд — спільний для обох графіків (бал і кількість заяв)
+  const combined = compareMetas.length
+    ? DB.years.map((year, i) => ({
+        year,
+        row: trend[i].row,
+        compareRows: compareTrends.map((ct) => ct[i].row)
+      }))
     : null;
 
   function renderMetricChart(chartId, legendId, metricKey, plainLabel) {
     let legendItems, chartHtml;
-    if (compareMeta) {
+    if (compareMetas.length) {
       legendItems = [
         { color: "var(--accent-dark)", label: meta.name },
-        { color: "var(--ink-soft)", label: compareMeta.name }
+        ...compareMetas.map((m, i) => ({ color: COMPARE_STYLES[i].color, label: m.name }))
       ];
-      chartHtml = buildChartSVG(combined, [
+      const series = [
         { getVal: (x) => x.row ? x.row[metricKey] : null, lineClass: "chart-line-all", dotClass: "chart-dot-all", label: meta.short },
-        { getVal: (x) => x.compareRow ? x.compareRow[metricKey] : null, lineClass: "chart-line-compare", dotClass: "chart-dot-compare", label: compareMeta.short }
-      ]);
+        ...compareMetas.map((m, i) => ({
+          getVal: (x) => x.compareRows[i] ? x.compareRows[i][metricKey] : null,
+          lineClass: COMPARE_STYLES[i].lineClass,
+          dotClass: COMPARE_STYLES[i].dotClass,
+          label: m.short
+        }))
+      ];
+      chartHtml = buildChartSVG(combined, series);
     } else {
       legendItems = [{ color: "var(--accent-dark)", label: plainLabel }];
       chartHtml = buildChartSVG(trend, [
@@ -273,15 +308,19 @@ function render() {
     `).join("");
   }
 
-  const subtitle = compareMeta ? t("uni.compareVs", { a: meta.short, b: compareMeta.short }) : t("uni.subtitlePlain");
-  document.getElementById("chart-subtitle").textContent = subtitle;
+  const compareSubtitle = () => {
+    if (!compareMetas.length) return null;
+    if (compareMetas.length === 1) return t("uni.compareVs", { a: meta.short, b: compareMetas[0].short });
+    return t("uni.compareVsMulti", { a: meta.short, b: compareMetas[0].short, c: compareMetas[1].short });
+  };
+
+  document.getElementById("chart-subtitle").textContent = compareSubtitle() || t("uni.subtitlePlain");
   renderMetricChart("chart-wrap", "chart-legend", "score", t("uni.admittedAverage"));
 
-  const appsSubtitle = compareMeta ? t("uni.compareVs", { a: meta.short, b: compareMeta.short }) : t("uni.appsSubtitlePlain");
-  document.getElementById("chart-apps-subtitle").textContent = appsSubtitle;
+  document.getElementById("chart-apps-subtitle").textContent = compareSubtitle() || t("uni.appsSubtitlePlain");
   renderMetricChart("chart-wrap-apps", "chart-legend-apps", "applications", t("table.applications"));
 
-  renderComparePanel(meta, trend, compareMeta, compareTrend);
+  renderComparePanel(meta, trend, compareMetas, compareTrends);
 
   document.getElementById("uni-table-subtitle").textContent =
     t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel");
@@ -382,8 +421,21 @@ function initChartTooltips() {
 }
 
 function initCompareSelect() {
-  document.getElementById("compare-select").addEventListener("change", (e) => {
-    state.compareId = e.target.value || null;
+  document.getElementById("compare-select-0").addEventListener("change", (e) => {
+    state.compareIds[0] = e.target.value || null;
+    render();
+  });
+  document.getElementById("compare-select-1").addEventListener("change", (e) => {
+    state.compareIds[1] = e.target.value || null;
+    render();
+  });
+  document.getElementById("add-compare-btn").addEventListener("click", () => {
+    if (state.secondCompareVisible) {
+      state.secondCompareVisible = false;
+      state.compareIds[1] = null;
+    } else {
+      state.secondCompareVisible = true;
+    }
     render();
   });
 }

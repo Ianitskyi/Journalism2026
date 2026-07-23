@@ -260,9 +260,59 @@ async function loadRealCurrentData() {
 
 loadRealCurrentData();
 
+/* Реєстр УСІХ закладів освіти, що хоч раз траплялись у даних цього рівня
+   (по всіх роках, включно з реальними історичними) — не лише
+   кураторський демо-список BACHELOR_UNIS/MASTER_UNIS. Потрібен, щоб (а)
+   сторінка ЗВО могла знайти метадані для будь-якого реального закладу,
+   а не тільки для ~20 кураторських, і (б) повний рейтинг міг показати
+   заклад навіть за рік, коли в нього немає даних. */
+function allUniversitiesForDegree(degree) {
+  const registry = new Map();
+  for (const year of [...PAST_YEARS, CURRENT_YEAR]) {
+    const yd = BY_YEAR[year];
+    if (!yd) continue;
+    const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
+    for (const row of snap[degree] || []) {
+      registry.set(row.id, { id: row.id, name: row.name, short: row.short, hue: row.hue });
+    }
+  }
+  const curated = degree === "bachelor" ? BACHELOR_UNIS : MASTER_UNIS;
+  for (const u of curated) {
+    const existing = registry.get(u.id);
+    if (existing) {
+      existing.nameEn = u.nameEn;
+      existing.shortEn = u.shortEn;
+    } else {
+      registry.set(u.id, { id: u.id, name: u.name, short: u.short, hue: u.hue, nameEn: u.nameEn, shortEn: u.shortEn });
+    }
+  }
+  return registry;
+}
+
+/* той самий реєстр, але об'єднаний по обох рівнях — з прапорцями
+   hasBachelor/hasMaster (потрібно для сторінки ЗВО) */
+function allUniversitiesMeta() {
+  const registry = new Map();
+  for (const degree of ["bachelor", "master"]) {
+    for (const [id, info] of allUniversitiesForDegree(degree)) {
+      const existing = registry.get(id) || { ...info, hasBachelor: false, hasMaster: false };
+      existing.name = info.name;
+      existing.short = info.short;
+      existing.hue = info.hue;
+      existing.nameEn = info.nameEn;
+      existing.shortEn = info.shortEn;
+      existing[degree === "bachelor" ? "hasBachelor" : "hasMaster"] = true;
+      registry.set(id, existing);
+    }
+  }
+  return registry;
+}
+
 const DB = {
   years: [...PAST_YEARS, CURRENT_YEAR],
   currentYear: CURRENT_YEAR,
   byYear: BY_YEAR,
-  minApplications: MIN_APPLICATIONS
+  minApplications: MIN_APPLICATIONS,
+  allUniversities: allUniversitiesForDegree,
+  allUniversitiesMeta
 };
