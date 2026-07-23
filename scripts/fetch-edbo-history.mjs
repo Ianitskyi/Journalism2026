@@ -179,8 +179,16 @@ async function fetchLevelData(base, level, year) {
   // формі), а не за всіма програмами під спеціальністю. Заклад, у якого
   // жодна програма не названа «журналістика», у рейтинг не потрапляє.
   //
+  // Одна освітня програма (spn) зазвичай подається кількома конкурсними
+  // пропозиціями — за формою навчання (денна/заочна) і джерелом
+  // фінансування (бюджет/контракт). Це РІЗНІ пропозиції, але ОДНА програма
+  // (перевірено на КНУ: 4 пропозиції спн «Журналістика» — 1 програма).
+  // programCount рахує кількість УНІКАЛЬНИХ spn на заклад, а не кількість
+  // пропозицій, — інакше середнє «на програму» було б заниженим там, де
+  // програма просто розбита на кілька каналів подачі заяви.
+  //
   // Агрегуємо по uid (заклад освіти): усі подані заяви й допущені по
-  // відфільтрованих програмах, кількість самих програм — щоб рахувати
+  // відфільтрованих програмах, кількість унікальних програм — щоб рахувати
   // середню кількість заяв на ОДНУ програму (applicationsTotal —
   // сумарна кількість, лишається окремо для системних агрегатів).
   // Ваговий коефіцієнт для середнього балу — st.c.t (усі подані заяви),
@@ -198,18 +206,19 @@ async function fetchLevelData(base, level, year) {
 
     const uid = offer.uid;
     if (!byUid.has(uid)) {
-      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programCount: 0 });
+      byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programNames: new Set() });
     }
     const rec = byUid.get(uid);
     if (Number.isFinite(ka)) rec.weightedScoreSum += ka * t;
     rec.applicationsTotal += t;
     rec.admitted += a;
-    rec.programCount += 1;
+    rec.programNames.add(offer.spn);
   }
 
   const rows = [];
   for (const rec of byUid.values()) {
-    if (rec.applicationsTotal < MIN_APPLICATIONS[level] || rec.admitted <= 0 || rec.programCount <= 0) continue;
+    const programCount = rec.programNames.size;
+    if (rec.applicationsTotal < MIN_APPLICATIONS[level] || rec.admitted <= 0 || programCount <= 0) continue;
     const slug = UID_TO_SLUG[rec.uid];
     rows.push({
       id: slug || `edbo${rec.uid}`,
@@ -217,9 +226,9 @@ async function fetchLevelData(base, level, year) {
       short: (slug && SLUG_SHORT_OVERRIDE[slug]) || shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
       score: Math.round((rec.weightedScoreSum / rec.applicationsTotal) * 10) / 10,
-      applications: Math.round((rec.applicationsTotal / rec.programCount) * 10) / 10,
+      applications: Math.round((rec.applicationsTotal / programCount) * 10) / 10,
       applicationsTotal: rec.applicationsTotal,
-      programCount: rec.programCount,
+      programCount,
       admitted: rec.admitted
     });
   }

@@ -1,21 +1,16 @@
 #!/usr/bin/env node
 /*
- * ДІАГНОСТИЧНИЙ скрипт (нічого не пише в data/) — перевіряє, чи поле st.c.t
- * з /offers-list/ дійсно означає "кількість поданих заяв", чи це щось інше
- * (напр. лише заяви, що дожили до фіналу кампанії). Привід: у реальних даних
- * st.c.a (admitted) виявився підозріло близьким до st.c.t (85-100% для
- * багатьох закладів) — для конкурсного вступу це нереалістично високий
- * відсоток "успішності" заяв.
- *
- * Бере КНУ (uid=41), бакалавр, 2025, друкує сирі st.c об'єкти для програм
- * "журналістика", а також тягне сторінку /offer/<usid> і шукає там будь-які
- * числа біля слів "заяв", "конкурс", "зарахован", "рекомендован", щоб
- * звірити з тим, що бачить сирий глядач сайту.
+ * ДІАГНОСТИЧНИЙ скрипт (нічого не пише в data/) — рахує УНІКАЛЬНІ назви
+ * освітніх програм (spn) окремо для бакалаврату й магістратури КНУ (uid=41),
+ * спеціальність C7, 2025 рік — щоб перевірити реальний programCount після
+ * виправлення (рахувати унікальні spn, а не кількість конкурсних
+ * пропозицій/офферів).
  */
 
 const YEAR = 2025;
 const BASE = `https://vstup${YEAR}.edbo.gov.ua`;
 const KNU_UID = 41;
+const JOURNALISM_RE = /журналіст/i;
 
 async function postForm(path, data) {
   const body = new URLSearchParams(data).toString();
@@ -34,10 +29,11 @@ async function postForm(path, data) {
   return resp.json();
 }
 
-async function main() {
+async function dumpLevel(qualification, educationBase, label) {
+  console.log(`\n=== КНУ, ${label}, C7, ${YEAR} ===`);
   const uniResp = await postForm("/offers-universities/", {
-    qualification: "1",
-    education_base: "40",
+    qualification,
+    education_base: educationBase,
     speciality: "C7",
     region: "",
     education_form: "",
@@ -45,49 +41,30 @@ async function main() {
   });
   const uni = (uniResp.universities || []).find((u) => u.uid === KNU_UID);
   if (!uni) {
-    console.log("КНУ не знайдено у списку ЗВО!", JSON.stringify(uniResp.universities?.slice(0, 3)));
+    console.log("КНУ не знайдено у списку ЗВО для цього рівня.");
     return;
   }
-  console.log("КНУ ids:", uni.ids);
-
   const ids = (uni.ids || "").split(",").filter(Boolean);
   const offersResp = await postForm("/offers-list/", { ids: ids.join(",") });
   const offers = offersResp.offers || [];
   console.log("усього офферів у КНУ:", offers.length);
 
-  const journalismOffers = offers.filter((o) => /журналіст/i.test(o.spn || ""));
+  const journalismOffers = offers.filter((o) => JOURNALISM_RE.test(o.spn || ""));
   console.log("журналістських офферів:", journalismOffers.length);
 
+  const distinctSpn = new Set(journalismOffers.map((o) => o.spn));
+  console.log("унікальних назв програм (spn):", distinctSpn.size, JSON.stringify([...distinctSpn]));
+
   for (const offer of journalismOffers) {
-    console.log("\n--- offer usid=" + offer.usid + " spn=" + offer.spn + " ---");
-    console.log("raw offer (без st):", JSON.stringify({ ...offer, st: undefined }));
-    console.log("st.c:", JSON.stringify(offer.st?.c));
-
-    try {
-      const resp = await fetch(`${BASE}/offer/${offer.usid}`, {
-        headers: { Accept: "text/html", "User-Agent": "Journalism2026 diagnostic" },
-        signal: AbortSignal.timeout(20000)
-      });
-      const html = await resp.text();
-      console.log("offer page status:", resp.status, "length:", html.length);
-
-      // шукаємо всі числа в межах ~60 символів біля ключових слів
-      const keywords = ["заяв", "конкурс", "зарахован", "рекомендован", "учасник", "місц"];
-      for (const kw of keywords) {
-        const re = new RegExp(kw, "gi");
-        let m;
-        let count = 0;
-        while ((m = re.exec(html)) && count < 3) {
-          const idx = m.index;
-          const snippet = html.slice(Math.max(0, idx - 80), idx + 80).replace(/\s+/g, " ");
-          console.log(`  [${kw}] ...${snippet}...`);
-          count++;
-        }
-      }
-    } catch (err) {
-      console.log("offer page fetch error:", err.message);
-    }
+    console.log(`  usid=${offer.usid} spn="${offer.spn}" ustn="${offer.ustn}" efn="${offer.efn}" t=${offer.st?.c?.t} a=${offer.st?.c?.a}`);
   }
+
+  console.log("\nусі оффери КНУ (включно з не-журналістськими), spn:", JSON.stringify(offers.map((o) => o.spn)));
+}
+
+async function main() {
+  await dumpLevel("1", "40", "бакалавр");
+  await dumpLevel("2", "", "магістр");
 }
 
 main().catch((err) => {
