@@ -1,8 +1,10 @@
+const DEFAULT_YEAR = DB.years[DB.years.length - 1];
+
 const state = {
   degree: "bachelor",
   sortBy: "score", // "score" | "applications"
-  year: DB.currentYear,
-  dateIndex: DB.byYear[DB.currentYear].dates.length - 1,
+  year: DEFAULT_YEAR,
+  dateIndex: DB.byYear[DEFAULT_YEAR].dates.length - 1,
   expanded: false
 };
 
