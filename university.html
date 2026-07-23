@@ -62,14 +62,7 @@
 
     <p class="uni-analysis" id="uni-analysis"></p>
 
-    <div class="card chart-card">
-      <div class="card-head chart-card-head">
-        <div class="card-icon">📈</div>
-        <div>
-          <div class="card-title" data-i18n="uni.chartTitle">Середній конкурсний бал по роках</div>
-          <div class="card-subtitle" id="chart-subtitle"></div>
-        </div>
-      </div>
+    <div class="compare-block">
       <div class="compare-row">
         <span class="compare-label" data-i18n="uni.compareLabel">Порівняти з</span>
         <select class="compare-select" id="compare-select-0">
@@ -83,6 +76,15 @@
         </select>
       </div>
       <button type="button" class="add-compare-btn" id="add-compare-btn" data-i18n="uni.addCompare">+ Додати ще одне порівняння</button>
+    </div>
+
+    <div class="card chart-card">
+      <div class="card-head chart-card-head">
+        <div>
+          <div class="card-title" data-i18n="uni.chartTitle">Середній конкурсний бал по роках</div>
+          <div class="card-subtitle" id="chart-subtitle"></div>
+        </div>
+      </div>
       <div class="chart-plot">
         <div class="chart-wrap" id="chart-wrap"></div>
         <div class="chart-tooltip"></div>

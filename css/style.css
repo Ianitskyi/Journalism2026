@@ -834,6 +834,14 @@ td {
   background: repeating-linear-gradient(90deg, currentColor 0 6px, transparent 6px 10px);
 }
 
+.compare-block {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 16px 14px 4px;
+  margin-bottom: 22px;
+}
+
 .compare-row {
   display: flex;
   align-items: center;
