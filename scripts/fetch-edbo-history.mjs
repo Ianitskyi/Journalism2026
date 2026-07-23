@@ -172,8 +172,9 @@ async function fetchLevelData(base, level, year) {
   }
 
   // Агрегуємо по uid (заклад освіти): усі подані заяви, допущені до
-  // конкурсу та середній бал допущених. st.c.ka стосується саме допущених,
-  // тому ваговим коефіцієнтом є st.c.a, а не загальна кількість st.c.t.
+  // конкурсу та середній бал по всіх поданих заявах. Вагового коефіцієнта
+  // для середнього балу — st.c.t (усі подані заяви), а не st.c.a
+  // (допущені), щоб рейтинг послідовно спирався на подані заяви.
   const byUid = new Map();
   for (const offer of offersById.values()) {
     const stats = offer.st && offer.st.c;
@@ -188,7 +189,7 @@ async function fetchLevelData(base, level, year) {
       byUid.set(uid, { uid, name: offer.un, weightedScoreSum: 0, applications: 0, admitted: 0 });
     }
     const rec = byUid.get(uid);
-    if (a > 0 && Number.isFinite(ka)) rec.weightedScoreSum += ka * a;
+    if (Number.isFinite(ka)) rec.weightedScoreSum += ka * t;
     rec.applications += t;
     rec.admitted += a;
   }
@@ -202,7 +203,7 @@ async function fetchLevelData(base, level, year) {
       name: NAME_OVERRIDE[rec.uid] || rec.name,
       short: (slug && SLUG_SHORT_OVERRIDE[slug]) || shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
-      score: Math.round((rec.weightedScoreSum / rec.admitted) * 10) / 10,
+      score: Math.round((rec.weightedScoreSum / rec.applications) * 10) / 10,
       applications: rec.applications,
       admitted: rec.admitted
     });
