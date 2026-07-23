@@ -12,19 +12,25 @@ function uniName(row) {
   return getLang() === "en" ? (row.nameEn || row.name) : row.name;
 }
 
-function uniShort(row) {
-  return getLang() === "en" ? (row.shortEn || row.short) : row.short;
-}
-
-/* середній бал закладу за 2021 рік (підсумковий знімок) — база для
-   стовпця "Зміна балу з 2021" у таблиці; null, якщо закладу тоді не було
-   в рейтингу цього рівня */
-function scoreIn2021(id, degree) {
-  const yd = DB.byYear[2021];
+/* значення показника закладу за попередній (щодо year) рік — потрібне,
+   щоб пофарбувати цифру в таблиці відносно динаміки рік-до-року; null,
+   якщо попереднього року немає в даних або закладу тоді не було в
+   рейтингу цього рівня (тоді цифра лишається нейтральною/чорною) */
+function prevYearValue(id, degree, metric, year) {
+  const yd = DB.byYear[year - 1];
   if (!yd) return null;
   const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
   const row = (snap[degree] || []).find((r) => r.id === id);
-  return row ? row.score : null;
+  return row ? row[metric] : null;
+}
+
+/* клас кольору для цифри в рейтингу: зелений — краще, ніж торік,
+   червоний — гірше, без класу (нейтрально) — не змінилося або вперше */
+function trendClassFor(current, previous) {
+  if (current == null || previous == null) return "";
+  if (current > previous) return "trend-up";
+  if (current < previous) return "trend-down";
+  return "";
 }
 
 /* заклади освіти, що є в реєстрі (хоч раз траплялись у будь-якому році),
@@ -34,7 +40,7 @@ function placeholderRows(rows, degree) {
   const present = new Set(rows.map((r) => r.id));
   const missing = [...DB.allUniversities(degree).values()].filter((u) => !present.has(u.id));
   return missing
-    .map((u) => ({ ...u, score: null, applications: null, admitted: null, rank: null }))
+    .map((u) => ({ ...u, score: null, applications: null, rank: null }))
     .sort((a, b) => uniName(a).localeCompare(uniName(b), getLang() === "en" ? "en" : "uk"));
 }
 
@@ -73,8 +79,6 @@ function currentSnapshot() {
 function renderStats(snap, rows) {
   document.getElementById("stat-submitted").textContent =
     numFmt().format(snap.totalApplications[state.degree] || 0);
-  document.getElementById("stat-admitted").textContent =
-    numFmt().format(snap.totalAdmitted?.[state.degree] ?? rows.reduce((sum, row) => sum + (row.admitted || 0), 0));
   document.getElementById("stat-count").textContent = rows.length;
 }
 
@@ -264,30 +268,25 @@ function render() {
   tbody.innerHTML = "";
 
   if (!displayRows.length) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="4"><div class="empty-state">${t("empty.noDataDay")}</div></td></tr>`;
   } else {
     const visible = state.expanded ? displayRows : displayRows.slice(0, VISIBLE_ROWS);
     for (const r of visible) {
-      const baseline2021 = r.score != null ? scoreIn2021(r.id, state.degree) : null;
-      const trendDiff = baseline2021 != null ? Math.round((r.score - baseline2021) * 10) / 10 : null;
-      const trendHtml = trendDiff == null
-        ? "—"
-        : `${trendDiff > 0 ? "+" : ""}${trendDiff.toFixed(1)}`;
-      const trendClass = trendDiff == null ? "" : trendDiff > 0 ? "trend-up" : trendDiff < 0 ? "trend-down" : "";
+      const prevScore = r.score != null ? prevYearValue(r.id, state.degree, "score", state.year) : null;
+      const prevApps = r.applications != null ? prevYearValue(r.id, state.degree, "applications", state.year) : null;
+      const scoreCls = trendClassFor(r.score, prevScore);
+      const appsCls = trendClassFor(r.applications, prevApps);
 
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td><div class="rank">${r.rank || "—"}</div></td>
         <td>
           <a class="univ-cell" href="university.html?id=${encodeURIComponent(r.id)}">
-            <div class="univ-logo" style="background:hsl(${r.hue} 62% 46%)">${uniShort(r).slice(0, 2).toUpperCase()}</div>
             <div class="univ-name">${uniName(r)}</div>
           </a>
         </td>
-        <td class="num"><div class="score">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
-        <td class="num"><div class="applications">${r.applications != null ? numFmt().format(r.applications) : "—"}</div></td>
-        <td class="num"><div class="applications">${r.admitted != null ? numFmt().format(r.admitted) : "—"}</div></td>
-        <td class="num"><div class="${trendClass}">${trendHtml}</div></td>
+        <td class="num"><div class="score ${scoreCls}">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
+        <td class="num"><div class="applications ${appsCls}">${r.applications != null ? numFmt().format(r.applications) : "—"}</div></td>
       `;
       tbody.appendChild(tr);
     }

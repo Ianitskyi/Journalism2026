@@ -31,7 +31,7 @@
     <div class="eyebrow" data-i18n="hero.eyebrow">Вступна кампанія 2026 · спеціальність 061 «Журналістика»</div>
     <h1 data-i18n="hero.title">Рейтинг журфаків України</h1>
     <p class="lede" data-i18n="hero.lede">
-      Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом допущених до конкурсу.
+      Рейтинг факультетів і програм журналістики за кількістю поданих заяв і середнім конкурсним балом вступників.
     </p>
   </div>
 </section>
@@ -67,10 +67,6 @@
           <div class="stat-label" data-i18n="stats.submitted">Подано заяв</div>
           <div class="stat-value" id="stat-submitted">—</div>
         </div>
-        <div class="stat-tile" id="stat-master">
-          <div class="stat-label" data-i18n="stats.admitted">Допущено до конкурсу</div>
-          <div class="stat-value" id="stat-admitted">—</div>
-        </div>
         <div class="stat-tile">
           <div class="stat-label" data-i18n="stats.count">Журфаків у рейтингу</div>
           <div class="stat-value" id="stat-count">—</div>
@@ -101,8 +97,6 @@
             <col class="col-institution" />
             <col class="col-score" />
             <col class="col-apps" />
-            <col class="col-admitted" />
-            <col class="col-trend" />
           </colgroup>
           <thead>
             <tr>
@@ -110,8 +104,6 @@
               <th data-i18n="table.institution">Заклад</th>
               <th class="num" id="th-score" data-i18n="table.score">Середній бал</th>
               <th class="num" id="th-apps" data-i18n="table.applications">Подано заяв</th>
-              <th class="num" data-i18n="table.admitted">Допущено</th>
-              <th class="num" data-i18n="table.trend2021">Зміна балу з 2021</th>
             </tr>
           </thead>
           <tbody id="rank-body"></tbody>

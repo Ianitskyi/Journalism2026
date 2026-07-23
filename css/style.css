@@ -449,8 +449,6 @@ table {
 .rank-table .col-rank { width: 44px; }
 .rank-table .col-score { width: 120px; }
 .rank-table .col-apps { width: 105px; }
-.rank-table .col-admitted { width: 95px; }
-.rank-table .col-trend { width: 130px; }
 
 thead th {
   text-align: left;
@@ -498,19 +496,6 @@ td {
   gap: 12px;
   text-decoration: none;
   color: inherit;
-}
-
-.univ-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 800;
-  color: #fff;
-  flex: none;
 }
 
 .univ-name {
@@ -933,24 +918,18 @@ td {
 /* ---------- responsive ---------- */
 
 @media (min-width: 620px) {
-  .stats-row { grid-template-columns: repeat(3, 1fr); }
   .controls { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
   .date-chips { min-width: 0; }
   .methodology-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 480px) {
-  thead th:nth-child(5), td:nth-child(5),
-  thead th:nth-child(6), td:nth-child(6) { display: none; }
-  .rank-table .col-admitted, .rank-table .col-trend { display: none; }
-
   table { table-layout: fixed; }
   th, td { padding-left: 10px; padding-right: 10px; }
   .rank-table .col-rank { width: 40px; }
   .rank-table .col-score { width: 70px; }
   .rank-table .col-apps { width: 74px; }
   thead th { padding-left: 4px; padding-right: 4px; font-size: 9.5px; letter-spacing: 0.02em; }
-  .univ-logo { width: 26px; height: 26px; font-size: 10px; }
   .univ-cell { gap: 8px; }
   .compare-panel { grid-template-columns: 1fr; }
 }
