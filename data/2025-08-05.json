@@ -730,11 +730,11 @@
       "name": "Київський національний університет імені Тараса Шевченка",
       "short": "КТШ",
       "hue": 350,
-      "score": 156.3,
-      "applications": 125,
-      "applicationsTotal": 375,
-      "programCount": 3,
-      "admitted": 316,
+      "score": 156.5,
+      "applications": 111.3,
+      "applicationsTotal": 445,
+      "programCount": 4,
+      "admitted": 375,
       "rank": 4
     },
     {
@@ -774,6 +774,18 @@
       "rank": 7
     },
     {
+      "id": "kubg",
+      "name": "Київський столичний університет імені Бориса Грінченка",
+      "short": "КСБГ",
+      "hue": 300,
+      "score": 152.4,
+      "applications": 57.7,
+      "applicationsTotal": 173,
+      "programCount": 3,
+      "admitted": 171,
+      "rank": 8
+    },
+    {
       "id": "mdu",
       "name": "Маріупольський державний університет",
       "short": "М",
@@ -783,18 +795,6 @@
       "applicationsTotal": 20,
       "programCount": 1,
       "admitted": 10,
-      "rank": 8
-    },
-    {
-      "id": "kubg",
-      "name": "Київський столичний університет імені Бориса Грінченка",
-      "short": "КСБГ",
-      "hue": 300,
-      "score": 151.7,
-      "applications": 59,
-      "applicationsTotal": 59,
-      "programCount": 1,
-      "admitted": 59,
       "rank": 9
     },
     {
@@ -1136,10 +1136,10 @@
   ],
   "totalApplications": {
     "bachelor": 14587,
-    "master": 1868
+    "master": 2052
   },
   "totalAdmitted": {
     "bachelor": 12794,
-    "master": 1620
+    "master": 1791
   }
 }

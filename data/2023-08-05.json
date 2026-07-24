@@ -726,6 +726,18 @@
       "rank": 4
     },
     {
+      "id": "knu",
+      "name": "Київський національний університет імені Тараса Шевченка",
+      "short": "КТШ",
+      "hue": 350,
+      "score": 156.6,
+      "applications": 74,
+      "applicationsTotal": 296,
+      "programCount": 4,
+      "admitted": 148,
+      "rank": 5
+    },
+    {
       "id": "edbo91",
       "name": "Національний університет \"Запорізька політехніка\"",
       "short": "ЗП",
@@ -735,7 +747,7 @@
       "applicationsTotal": 15,
       "programCount": 1,
       "admitted": 12,
-      "rank": 5
+      "rank": 6
     },
     {
       "id": "onu",
@@ -747,7 +759,7 @@
       "applicationsTotal": 37,
       "programCount": 1,
       "admitted": 22,
-      "rank": 6
+      "rank": 7
     },
     {
       "id": "lnu-shev",
@@ -759,18 +771,6 @@
       "applicationsTotal": 46,
       "programCount": 1,
       "admitted": 34,
-      "rank": 7
-    },
-    {
-      "id": "knu",
-      "name": "Київський національний університет імені Тараса Шевченка",
-      "short": "КТШ",
-      "hue": 350,
-      "score": 154.2,
-      "applications": 83,
-      "applicationsTotal": 249,
-      "programCount": 3,
-      "admitted": 124,
       "rank": 8
     },
     {
@@ -1064,10 +1064,10 @@
   ],
   "totalApplications": {
     "bachelor": 8949,
-    "master": 1455
+    "master": 1502
   },
   "totalAdmitted": {
     "bachelor": 7270,
-    "master": 1065
+    "master": 1089
   }
 }
