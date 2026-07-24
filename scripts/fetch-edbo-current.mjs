@@ -85,12 +85,25 @@ async function fetchOffer(manifestEntry) {
   };
 }
 
-const JOURNALISM_RE = /журналіст/i;
+/* Ручні винятки: заклад сам не використав слово «журналіст…» у назві
+   програми, але за змістом це той самий напрям цифрових медіа/журналістики —
+   додано за ручним рішенням автора рейтингу (див. таку саму мапу й коментар
+   у scripts/fetch-edbo-history.mjs). Ключ — "uid::programName". */
+const PROGRAM_EXCEPTIONS = new Set([
+  "41::Цифрові медіа", // КНУ ім. Тараса Шевченка, магістр
+  "6945::Контент-продюсування цифрових медіапроєктів", // КУБГ, магістр
+  "6945::Міжнародні медіа та цифрові комунікації" // КУБГ, магістр
+]);
+
+function isJournalismProgram(uid, programName) {
+  if (/журналіст/i.test(programName || "")) return true;
+  return PROGRAM_EXCEPTIONS.has(`${uid}::${programName}`);
+}
 
 function rank(offers, level) {
   const grouped = new Map();
   for (const offer of offers.filter((item) => item.level === level)) {
-    if (!JOURNALISM_RE.test(offer.programName || "")) continue;
+    if (!isJournalismProgram(offer.universityId, offer.programName)) continue;
     const uid = Number(offer.universityId);
     const slug = UID_TO_SLUG[uid];
     const id = slug || `edbo${uid}`;
