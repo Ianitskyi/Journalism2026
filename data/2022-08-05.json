@@ -666,6 +666,18 @@
       "rank": 1
     },
     {
+      "id": "knu",
+      "name": "Київський національний університет імені Тараса Шевченка",
+      "short": "КТШ",
+      "hue": 350,
+      "score": 168.8,
+      "applications": 55,
+      "applicationsTotal": 220,
+      "programCount": 4,
+      "admitted": 82,
+      "rank": 2
+    },
+    {
       "id": "lnu-shev",
       "name": "Державний заклад \"Луганський національний університет імені Тараса Шевченка\"",
       "short": "ЛТШ",
@@ -675,7 +687,7 @@
       "applicationsTotal": 18,
       "programCount": 1,
       "admitted": 18,
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "edbo96",
@@ -687,18 +699,6 @@
       "applicationsTotal": 34,
       "programCount": 1,
       "admitted": 18,
-      "rank": 3
-    },
-    {
-      "id": "knu",
-      "name": "Київський національний університет імені Тараса Шевченка",
-      "short": "КТШ",
-      "hue": 350,
-      "score": 167.2,
-      "applications": 57.3,
-      "applicationsTotal": 172,
-      "programCount": 3,
-      "admitted": 65,
       "rank": 4
     },
     {
@@ -992,10 +992,10 @@
   ],
   "totalApplications": {
     "bachelor": 8064,
-    "master": 1151
+    "master": 1199
   },
   "totalAdmitted": {
     "bachelor": 6447,
-    "master": 728
+    "master": 745
   }
 }

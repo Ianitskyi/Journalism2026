@@ -694,11 +694,11 @@
       "name": "Київський столичний університет імені Бориса Грінченка",
       "short": "КСБГ",
       "hue": 300,
-      "score": 153.6,
-      "applications": 57,
-      "applicationsTotal": 57,
-      "programCount": 1,
-      "admitted": 57,
+      "score": 153.8,
+      "applications": 49,
+      "applicationsTotal": 147,
+      "programCount": 3,
+      "admitted": 147,
       "rank": 3
     },
     {
@@ -718,11 +718,11 @@
       "name": "Київський національний університет імені Тараса Шевченка",
       "short": "КТШ",
       "hue": 350,
-      "score": 152.8,
-      "applications": 111.7,
-      "applicationsTotal": 335,
-      "programCount": 3,
-      "admitted": 327,
+      "score": 153.3,
+      "applications": 106.5,
+      "applicationsTotal": 426,
+      "programCount": 4,
+      "admitted": 418,
       "rank": 5
     },
     {
@@ -1112,10 +1112,10 @@
   ],
   "totalApplications": {
     "bachelor": 9592,
-    "master": 1905
+    "master": 2086
   },
   "totalAdmitted": {
     "bachelor": 7952,
-    "master": 1721
+    "master": 1902
   }
 }

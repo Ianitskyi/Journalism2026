@@ -77,6 +77,23 @@ const NAME_OVERRIDE = {
   6594: "Державний торговельно-економічний університет (Київ)"
 };
 
+/* Ручні винятки: заклад сам не використав слово «журналіст…» у назві
+   програми, але за змістом це той самий напрям цифрових медіа/журналістики —
+   додано за ручним рішенням автора рейтингу після перегляду повного списку
+   виключених назв (діагностика scripts/diagnose-excluded-programs.mjs). Ключ
+   — "uid::spn", щоб виняток стосувався саме цієї програми цього закладу, а
+   не будь-якої програми з такою назвою деінде. */
+const PROGRAM_EXCEPTIONS = new Set([
+  "41::Цифрові медіа", // КНУ ім. Тараса Шевченка, магістр
+  "6945::Контент-продюсування цифрових медіапроєктів", // КУБГ, магістр
+  "6945::Міжнародні медіа та цифрові комунікації" // КУБГ, магістр
+]);
+
+function isJournalismProgram(uid, spn) {
+  if (/журналіст/i.test(spn || "")) return true;
+  return PROGRAM_EXCEPTIONS.has(`${uid}::${spn}`);
+}
+
 /* коли автоматична евристика shortName() дає гірший результат за
    реальну усталену абревіатуру закладу */
 const SLUG_SHORT_OVERRIDE = {
@@ -193,10 +210,9 @@ async function fetchLevelData(base, level, year) {
   // сумарна кількість, лишається окремо для системних агрегатів).
   // Ваговий коефіцієнт для середнього балу — st.c.t (усі подані заяви),
   // а не st.c.a (допущені).
-  const JOURNALISM_RE = /журналіст/i;
   const byUid = new Map();
   for (const offer of offersById.values()) {
-    if (!JOURNALISM_RE.test(offer.spn || "")) continue;
+    if (!isJournalismProgram(offer.uid, offer.spn)) continue;
     const stats = offer.st && offer.st.c;
     if (!stats || !stats.t) continue;
     const t = Number(stats.t);

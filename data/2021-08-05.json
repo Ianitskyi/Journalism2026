@@ -838,11 +838,11 @@
       "name": "Київський національний університет імені Тараса Шевченка",
       "short": "КТШ",
       "hue": 350,
-      "score": 166.5,
-      "applications": 43.8,
-      "applicationsTotal": 263,
-      "programCount": 6,
-      "admitted": 122,
+      "score": 165.9,
+      "applications": 44.7,
+      "applicationsTotal": 313,
+      "programCount": 7,
+      "admitted": 154,
       "rank": 14
     },
     {
@@ -1028,10 +1028,10 @@
   ],
   "totalApplications": {
     "bachelor": 27540,
-    "master": 1475
+    "master": 1525
   },
   "totalAdmitted": {
     "bachelor": 21437,
-    "master": 757
+    "master": 789
   }
 }
