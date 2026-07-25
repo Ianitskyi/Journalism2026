@@ -95,6 +95,11 @@ const I18N = {
       initiative: "Ініціатива",
       dataSourceHtml: "Джерело даних: ЄДЕБО (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>)."
     },
+    /* точкові редакційні примітки про конкретні заклади (напр. реорганізація) —
+       ключ = id закладу (як у DB), показуються на сторінці закладу, якщо є */
+    institutionNotes: {
+      edbo87: "Заклад перебуває в процесі реорганізації: набрані вступники здобуватимуть освіту та отримають дипломи Харківського національного університету мистецтв імені І. П. Котляревського."
+    },
     uni: {
       eyebrow: "Динаміка популярності · спеціальність «Журналістика»",
       bestRank: "Найкращий ранг",
@@ -217,6 +222,9 @@ const I18N = {
     footer: {
       initiative: "An initiative by",
       dataSourceHtml: "Data source: EDBO (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>)."
+    },
+    institutionNotes: {
+      edbo87: "This institution is being reorganized: admitted students will complete their studies and receive diplomas from the I. P. Kotlyarevsky Kharkiv National University of Arts."
     },
     uni: {
       eyebrow: "Popularity trend · Journalism major",

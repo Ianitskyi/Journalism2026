@@ -224,6 +224,11 @@ function render() {
   document.getElementById("uni-logo").style.background = `hsl(${meta.hue} 62% 46%)`;
   document.getElementById("uni-name").textContent = meta.name;
 
+  const noteEl = document.getElementById("institution-note");
+  const noteText = tRaw(`institutionNotes.${meta.id}`);
+  noteEl.style.display = noteText ? "" : "none";
+  if (noteText) noteEl.textContent = noteText;
+
   const trend = buildTrend(meta.id, state.degree);
   const withData = trend.filter((t) => t.row);
 

@@ -766,6 +766,17 @@ td {
   margin-bottom: 20px;
 }
 
+.institution-note {
+  background: var(--accent-tint);
+  border-left: 3px solid var(--accent-dark);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
 .uni-hero-logo {
   width: 56px;
   height: 56px;
