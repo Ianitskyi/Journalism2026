@@ -11,5 +11,9 @@
   "totalAdmitted": {
     "bachelor": 0,
     "master": 0
+  },
+  "totalApplicationsP12": {
+    "bachelor": 0,
+    "master": 0
   }
 }

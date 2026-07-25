@@ -21,7 +21,7 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run fetch-edbo-history
-        timeout-minutes: 5
+        timeout-minutes: 120
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

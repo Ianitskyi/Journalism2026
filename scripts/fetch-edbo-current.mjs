@@ -53,6 +53,58 @@ function shortName(name) {
   return (words.slice(0, 4).map((word) => word[0]).join("") || name.slice(0, 4)).toUpperCase();
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/* /offer-requests/ — той самий недокументований ендпоінт, що й в
+   fetch-edbo-history.mjs (там детальний опис і перевірена пагінація).
+   Тут — той самий підхід, застосований до живого 2026 року: НЕ перевірено
+   заздалегідь (архівні роки не захищені Cloudflare, а живий рік захищений
+   на пошуку — на самому /offer-requests/ це не тестувалось), тому огорнуто
+   в try/catch у fetchOffer(): якщо ендпоінт тут не працює, просто
+   отримаємо p12Count=0/p12ScoreSum=0 для цього offer, і applicationsP12
+   зрештою піде в 0 — без падіння всього скрипта. */
+const PRIORITY_MAX = 2;
+const PRIORITY_PAGE_DELAY_MS = 150;
+const PRIORITY_MAX_PAGES = 60;
+
+async function fetchOfferPriorityStats(offerId) {
+  let last = 0;
+  let total = 0;
+  let p12Count = 0;
+  let p12ScoreSum = 0;
+  for (let page = 0; page < PRIORITY_MAX_PAGES; page++) {
+    const resp = await fetch(`${BASE}/offer-requests/`, {
+      method: "POST",
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        Accept: "application/json, text/javascript, */*; q=0.01",
+        "Content-Type": "application/x-www-form-urlencoded",
+        Referer: `${BASE}/offer/${offerId}`
+      },
+      body: new URLSearchParams({ id: String(offerId), last: String(last) }).toString(),
+      signal: AbortSignal.timeout(20000)
+    });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status} для /offer-requests/ (offerId=${offerId})`);
+    const json = await resp.json();
+    const batch = json.requests || [];
+    if (!batch.length) break;
+    for (const r of batch) {
+      total++;
+      const pa = Number(r.pa);
+      const kv = Number(r.kv);
+      if (pa >= 1 && pa <= PRIORITY_MAX && Number.isFinite(kv)) {
+        p12Count++;
+        p12ScoreSum += kv;
+      }
+    }
+    last = total;
+    await sleep(PRIORITY_PAGE_DELAY_MS);
+  }
+  return { total, p12Count, p12ScoreSum };
+}
+
 async function fetchOffer(manifestEntry) {
   const response = await fetch(`${BASE}/offer/${manifestEntry.offerId}`, {
     headers: { Accept: "text/html", "User-Agent": "Journalism2026 public-data updater" },
@@ -68,6 +120,16 @@ async function fetchOffer(manifestEntry) {
     throw new Error(`offer ${manifestEntry.offerId}: у HTML немає очікуваної статистики`);
   }
 
+  let p12Count = 0;
+  let p12ScoreSum = 0;
+  try {
+    const priority = await fetchOfferPriorityStats(offerId);
+    p12Count = priority.p12Count;
+    p12ScoreSum = priority.p12ScoreSum;
+  } catch (err) {
+    console.log(`  ! не вдалось отримати заяви за пріоритетом для offer ${offerId}: ${err.message}`);
+  }
+
   // programName (spn у архівному API) — назва освітньої програми, потрібна
   // для фільтра "лише журналістика". Поле НЕ перевірено на живій сторінці
   // /offer/<id> (вона захищена Turnstile, скрипт це не обходить) — якщо
@@ -81,7 +143,9 @@ async function fetchOffer(manifestEntry) {
     programName: stringField(html, "spn"),
     applications,
     admitted,
-    averageScore
+    averageScore,
+    p12Count,
+    p12ScoreSum
   };
 }
 
@@ -116,7 +180,9 @@ function rank(offers, level) {
         weighted: 0,
         applicationsTotal: 0,
         admitted: 0,
-        programNames: new Set()
+        programNames: new Set(),
+        p12ApplicationsTotal: 0,
+        p12ScoreSum: 0
       });
     }
     const row = grouped.get(id);
@@ -124,6 +190,8 @@ function rank(offers, level) {
     row.applicationsTotal += offer.applications;
     row.admitted += offer.admitted;
     row.programNames.add(offer.programName);
+    row.p12ApplicationsTotal += offer.p12Count || 0;
+    row.p12ScoreSum += offer.p12ScoreSum || 0;
   }
 
   return [...grouped.values()]
@@ -135,7 +203,10 @@ function rank(offers, level) {
       applications: Math.round((row.applicationsTotal / row.programCount) * 10) / 10,
       applicationsTotal: row.applicationsTotal,
       programCount: row.programCount,
-      admitted: row.admitted
+      admitted: row.admitted,
+      applicationsP12Total: row.p12ApplicationsTotal,
+      applicationsP12: Math.round((row.p12ApplicationsTotal / row.programCount) * 10) / 10,
+      scoreP12: row.p12ApplicationsTotal > 0 ? Math.round((row.p12ScoreSum / row.p12ApplicationsTotal) * 10) / 10 : null
     }))
     .sort((a, b) => b.score - a.score)
     .map((row, index) => ({ ...row, rank: index + 1 }));
@@ -149,6 +220,7 @@ function kyivDate() {
 
 const sumApps = (rows) => rows.reduce((sum, row) => sum + row.applicationsTotal, 0);
 const sumAdmitted = (rows) => rows.reduce((sum, row) => sum + (row.admitted || 0), 0);
+const sumAppsP12 = (rows) => rows.reduce((sum, row) => sum + (row.applicationsP12Total || 0), 0);
 
 async function main() {
   const manifest = JSON.parse(await readFile("data/2026-offers.json", "utf8"));
@@ -175,6 +247,9 @@ async function main() {
     },
     totalAdmitted: {
       bachelor: sumAdmitted(bachelor), master: sumAdmitted(master)
+    },
+    totalApplicationsP12: {
+      bachelor: sumAppsP12(bachelor), master: sumAppsP12(master)
     },
     _offers: {
       bachelor: offers.filter((offer) => offer.level === "bachelor"),
