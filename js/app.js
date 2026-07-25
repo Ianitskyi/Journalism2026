@@ -43,10 +43,7 @@ function prevYearValue(id, degree, metric, year) {
   const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
   const row = (snap[degree] || []).find((r) => r.id === id);
   if (!row) return null;
-  if (state.priorityOnly) {
-    if (metric === "score") return row.scoreP12 ?? null;
-    if (metric === "applications") return row.applicationsP12 ?? 0;
-  }
+  if (state.priorityOnly && metric === "applications") return row.applicationsP12 ?? 0;
   return row[metric];
 }
 
@@ -302,9 +299,7 @@ function render() {
   } else {
     const visible = state.expanded ? displayRows : displayRows.slice(0, VISIBLE_ROWS);
     for (const r of visible) {
-      const prevScore = r.score != null ? prevYearValue(r.id, state.degree, "score", state.year) : null;
       const prevApps = r.applications != null ? prevYearValue(r.id, state.degree, "applications", state.year) : null;
-      const scoreCls = trendClassFor(r.score, prevScore);
       const appsCls = trendClassFor(r.applications, prevApps);
 
       const tr = document.createElement("tr");
@@ -315,7 +310,7 @@ function render() {
             <div class="univ-name">${uniName(r, uniRegistry)}</div>
           </a>
         </td>
-        <td class="num"><div class="score ${scoreCls}">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
+        <td class="num"><div class="score">${r.score != null ? r.score.toFixed(1) : "—"}</div></td>
         <td class="num"><div class="applications ${appsCls}">${r.applications != null ? numFmt().format(r.applications) : "—"}</div></td>
       `;
       tbody.appendChild(tr);
