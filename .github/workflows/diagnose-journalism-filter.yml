@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/diagnose-offer-requests.mjs
+      - run: node scripts/diagnose-offer-requests-pagination.mjs
         timeout-minutes: 5
