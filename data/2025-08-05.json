@@ -13,6 +13,9 @@
       "applicationsTotal": 939,
       "programCount": 1,
       "admitted": 530,
+      "applicationsP12Total": 323,
+      "applicationsP12": 323,
+      "scoreP12": 170.5,
       "rank": 1
     },
     {
@@ -25,6 +28,9 @@
       "applicationsTotal": 1407,
       "programCount": 1,
       "admitted": 1209,
+      "applicationsP12Total": 697,
+      "applicationsP12": 697,
+      "scoreP12": 158.3,
       "rank": 2
     },
     {
@@ -37,6 +43,9 @@
       "applicationsTotal": 205,
       "programCount": 1,
       "admitted": 190,
+      "applicationsP12Total": 106,
+      "applicationsP12": 106,
+      "scoreP12": 159,
       "rank": 3
     },
     {
@@ -49,6 +58,9 @@
       "applicationsTotal": 138,
       "programCount": 1,
       "admitted": 88,
+      "applicationsP12Total": 77,
+      "applicationsP12": 77,
+      "scoreP12": 156.2,
       "rank": 4
     },
     {
@@ -61,6 +73,9 @@
       "applicationsTotal": 292,
       "programCount": 1,
       "admitted": 265,
+      "applicationsP12Total": 137,
+      "applicationsP12": 137,
+      "scoreP12": 158.6,
       "rank": 5
     },
     {
@@ -73,6 +88,9 @@
       "applicationsTotal": 29,
       "programCount": 1,
       "admitted": 29,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 159.5,
       "rank": 6
     },
     {
@@ -85,6 +103,9 @@
       "applicationsTotal": 111,
       "programCount": 1,
       "admitted": 69,
+      "applicationsP12Total": 60,
+      "applicationsP12": 60,
+      "scoreP12": 154.9,
       "rank": 7
     },
     {
@@ -97,6 +118,9 @@
       "applicationsTotal": 2301,
       "programCount": 2,
       "admitted": 2135,
+      "applicationsP12Total": 1053,
+      "applicationsP12": 526.5,
+      "scoreP12": 156.3,
       "rank": 8
     },
     {
@@ -109,6 +133,9 @@
       "applicationsTotal": 153,
       "programCount": 2,
       "admitted": 149,
+      "applicationsP12Total": 85,
+      "applicationsP12": 42.5,
+      "scoreP12": 157.7,
       "rank": 9
     },
     {
@@ -121,6 +148,9 @@
       "applicationsTotal": 82,
       "programCount": 1,
       "admitted": 63,
+      "applicationsP12Total": 42,
+      "applicationsP12": 42,
+      "scoreP12": 153.3,
       "rank": 10
     },
     {
@@ -133,6 +163,9 @@
       "applicationsTotal": 226,
       "programCount": 1,
       "admitted": 221,
+      "applicationsP12Total": 111,
+      "applicationsP12": 111,
+      "scoreP12": 153,
       "rank": 11
     },
     {
@@ -145,6 +178,9 @@
       "applicationsTotal": 42,
       "programCount": 1,
       "admitted": 30,
+      "applicationsP12Total": 20,
+      "applicationsP12": 20,
+      "scoreP12": 149.1,
       "rank": 12
     },
     {
@@ -157,6 +193,9 @@
       "applicationsTotal": 1018,
       "programCount": 2,
       "admitted": 1010,
+      "applicationsP12Total": 529,
+      "applicationsP12": 264.5,
+      "scoreP12": 150.2,
       "rank": 13
     },
     {
@@ -169,6 +208,9 @@
       "applicationsTotal": 854,
       "programCount": 1,
       "admitted": 835,
+      "applicationsP12Total": 360,
+      "applicationsP12": 360,
+      "scoreP12": 152.1,
       "rank": 14
     },
     {
@@ -181,6 +223,9 @@
       "applicationsTotal": 53,
       "programCount": 1,
       "admitted": 41,
+      "applicationsP12Total": 28,
+      "applicationsP12": 28,
+      "scoreP12": 146.2,
       "rank": 15
     },
     {
@@ -193,6 +238,9 @@
       "applicationsTotal": 697,
       "programCount": 1,
       "admitted": 677,
+      "applicationsP12Total": 307,
+      "applicationsP12": 307,
+      "scoreP12": 148,
       "rank": 16
     },
     {
@@ -205,6 +253,9 @@
       "applicationsTotal": 273,
       "programCount": 1,
       "admitted": 215,
+      "applicationsP12Total": 120,
+      "applicationsP12": 120,
+      "scoreP12": 147.7,
       "rank": 17
     },
     {
@@ -217,6 +268,9 @@
       "applicationsTotal": 287,
       "programCount": 1,
       "admitted": 280,
+      "applicationsP12Total": 120,
+      "applicationsP12": 120,
+      "scoreP12": 143.9,
       "rank": 18
     },
     {
@@ -229,6 +283,9 @@
       "applicationsTotal": 231,
       "programCount": 1,
       "admitted": 217,
+      "applicationsP12Total": 126,
+      "applicationsP12": 126,
+      "scoreP12": 148.2,
       "rank": 19
     },
     {
@@ -241,6 +298,9 @@
       "applicationsTotal": 35,
       "programCount": 1,
       "admitted": 26,
+      "applicationsP12Total": 13,
+      "applicationsP12": 13,
+      "scoreP12": 144.6,
       "rank": 20
     },
     {
@@ -253,6 +313,9 @@
       "applicationsTotal": 184,
       "programCount": 1,
       "admitted": 179,
+      "applicationsP12Total": 83,
+      "applicationsP12": 83,
+      "scoreP12": 146.3,
       "rank": 21
     },
     {
@@ -265,6 +328,9 @@
       "applicationsTotal": 605,
       "programCount": 1,
       "admitted": 548,
+      "applicationsP12Total": 243,
+      "applicationsP12": 243,
+      "scoreP12": 148.4,
       "rank": 22
     },
     {
@@ -277,6 +343,9 @@
       "applicationsTotal": 145,
       "programCount": 1,
       "admitted": 140,
+      "applicationsP12Total": 64,
+      "applicationsP12": 64,
+      "scoreP12": 144.6,
       "rank": 23
     },
     {
@@ -289,6 +358,9 @@
       "applicationsTotal": 136,
       "programCount": 1,
       "admitted": 126,
+      "applicationsP12Total": 65,
+      "applicationsP12": 65,
+      "scoreP12": 145.9,
       "rank": 24
     },
     {
@@ -301,6 +373,9 @@
       "applicationsTotal": 89,
       "programCount": 1,
       "admitted": 67,
+      "applicationsP12Total": 43,
+      "applicationsP12": 43,
+      "scoreP12": 148.6,
       "rank": 25
     },
     {
@@ -313,6 +388,9 @@
       "applicationsTotal": 235,
       "programCount": 1,
       "admitted": 150,
+      "applicationsP12Total": 90,
+      "applicationsP12": 90,
+      "scoreP12": 145.5,
       "rank": 26
     },
     {
@@ -325,6 +403,9 @@
       "applicationsTotal": 26,
       "programCount": 1,
       "admitted": 19,
+      "applicationsP12Total": 12,
+      "applicationsP12": 12,
+      "scoreP12": 153,
       "rank": 27
     },
     {
@@ -337,6 +418,9 @@
       "applicationsTotal": 219,
       "programCount": 1,
       "admitted": 187,
+      "applicationsP12Total": 87,
+      "applicationsP12": 87,
+      "scoreP12": 144.2,
       "rank": 28
     },
     {
@@ -349,6 +433,9 @@
       "applicationsTotal": 35,
       "programCount": 1,
       "admitted": 23,
+      "applicationsP12Total": 17,
+      "applicationsP12": 17,
+      "scoreP12": 150,
       "rank": 29
     },
     {
@@ -361,6 +448,9 @@
       "applicationsTotal": 187,
       "programCount": 1,
       "admitted": 179,
+      "applicationsP12Total": 95,
+      "applicationsP12": 95,
+      "scoreP12": 146,
       "rank": 30
     },
     {
@@ -373,6 +463,9 @@
       "applicationsTotal": 64,
       "programCount": 1,
       "admitted": 63,
+      "applicationsP12Total": 36,
+      "applicationsP12": 36,
+      "scoreP12": 145.5,
       "rank": 31
     },
     {
@@ -385,6 +478,9 @@
       "applicationsTotal": 207,
       "programCount": 1,
       "admitted": 201,
+      "applicationsP12Total": 90,
+      "applicationsP12": 90,
+      "scoreP12": 144,
       "rank": 32
     },
     {
@@ -397,6 +493,9 @@
       "applicationsTotal": 185,
       "programCount": 1,
       "admitted": 176,
+      "applicationsP12Total": 85,
+      "applicationsP12": 85,
+      "scoreP12": 143.9,
       "rank": 33
     },
     {
@@ -409,6 +508,9 @@
       "applicationsTotal": 126,
       "programCount": 1,
       "admitted": 112,
+      "applicationsP12Total": 55,
+      "applicationsP12": 55,
+      "scoreP12": 142.5,
       "rank": 34
     },
     {
@@ -421,6 +523,9 @@
       "applicationsTotal": 51,
       "programCount": 1,
       "admitted": 31,
+      "applicationsP12Total": 20,
+      "applicationsP12": 20,
+      "scoreP12": 147.7,
       "rank": 35
     },
     {
@@ -433,6 +538,9 @@
       "applicationsTotal": 263,
       "programCount": 2,
       "admitted": 244,
+      "applicationsP12Total": 128,
+      "applicationsP12": 64,
+      "scoreP12": 147,
       "rank": 36
     },
     {
@@ -445,6 +553,9 @@
       "applicationsTotal": 190,
       "programCount": 1,
       "admitted": 45,
+      "applicationsP12Total": 26,
+      "applicationsP12": 26,
+      "scoreP12": 147.2,
       "rank": 37
     },
     {
@@ -457,6 +568,9 @@
       "applicationsTotal": 235,
       "programCount": 1,
       "admitted": 218,
+      "applicationsP12Total": 89,
+      "applicationsP12": 89,
+      "scoreP12": 145.2,
       "rank": 38
     },
     {
@@ -469,6 +583,9 @@
       "applicationsTotal": 106,
       "programCount": 1,
       "admitted": 96,
+      "applicationsP12Total": 49,
+      "applicationsP12": 49,
+      "scoreP12": 142.6,
       "rank": 39
     },
     {
@@ -481,6 +598,9 @@
       "applicationsTotal": 97,
       "programCount": 1,
       "admitted": 97,
+      "applicationsP12Total": 45,
+      "applicationsP12": 45,
+      "scoreP12": 141,
       "rank": 40
     },
     {
@@ -493,6 +613,9 @@
       "applicationsTotal": 183,
       "programCount": 1,
       "admitted": 176,
+      "applicationsP12Total": 89,
+      "applicationsP12": 89,
+      "scoreP12": 141.8,
       "rank": 41
     },
     {
@@ -505,6 +628,9 @@
       "applicationsTotal": 380,
       "programCount": 1,
       "admitted": 361,
+      "applicationsP12Total": 191,
+      "applicationsP12": 191,
+      "scoreP12": 144.1,
       "rank": 42
     },
     {
@@ -517,6 +643,9 @@
       "applicationsTotal": 36,
       "programCount": 1,
       "admitted": 23,
+      "applicationsP12Total": 24,
+      "applicationsP12": 24,
+      "scoreP12": 139.5,
       "rank": 43
     },
     {
@@ -529,6 +658,9 @@
       "applicationsTotal": 177,
       "programCount": 1,
       "admitted": 172,
+      "applicationsP12Total": 93,
+      "applicationsP12": 93,
+      "scoreP12": 143.7,
       "rank": 44
     },
     {
@@ -541,6 +673,9 @@
       "applicationsTotal": 141,
       "programCount": 1,
       "admitted": 102,
+      "applicationsP12Total": 68,
+      "applicationsP12": 68,
+      "scoreP12": 141.3,
       "rank": 45
     },
     {
@@ -553,6 +688,9 @@
       "applicationsTotal": 96,
       "programCount": 1,
       "admitted": 90,
+      "applicationsP12Total": 40,
+      "applicationsP12": 40,
+      "scoreP12": 141.2,
       "rank": 46
     },
     {
@@ -565,6 +703,9 @@
       "applicationsTotal": 121,
       "programCount": 1,
       "admitted": 115,
+      "applicationsP12Total": 58,
+      "applicationsP12": 58,
+      "scoreP12": 140.6,
       "rank": 47
     },
     {
@@ -577,6 +718,9 @@
       "applicationsTotal": 107,
       "programCount": 1,
       "admitted": 102,
+      "applicationsP12Total": 44,
+      "applicationsP12": 44,
+      "scoreP12": 138.9,
       "rank": 48
     },
     {
@@ -589,6 +733,9 @@
       "applicationsTotal": 87,
       "programCount": 1,
       "admitted": 55,
+      "applicationsP12Total": 56,
+      "applicationsP12": 56,
+      "scoreP12": 138.9,
       "rank": 49
     },
     {
@@ -601,6 +748,9 @@
       "applicationsTotal": 110,
       "programCount": 1,
       "admitted": 109,
+      "applicationsP12Total": 62,
+      "applicationsP12": 62,
+      "scoreP12": 138.8,
       "rank": 50
     },
     {
@@ -613,6 +763,9 @@
       "applicationsTotal": 58,
       "programCount": 1,
       "admitted": 42,
+      "applicationsP12Total": 30,
+      "applicationsP12": 30,
+      "scoreP12": 135.6,
       "rank": 51
     },
     {
@@ -625,6 +778,9 @@
       "applicationsTotal": 33,
       "programCount": 1,
       "admitted": 21,
+      "applicationsP12Total": 12,
+      "applicationsP12": 12,
+      "scoreP12": 140.2,
       "rank": 52
     },
     {
@@ -637,6 +793,9 @@
       "applicationsTotal": 101,
       "programCount": 1,
       "admitted": 96,
+      "applicationsP12Total": 71,
+      "applicationsP12": 71,
+      "scoreP12": 137.3,
       "rank": 53
     },
     {
@@ -649,6 +808,9 @@
       "applicationsTotal": 82,
       "programCount": 1,
       "admitted": 50,
+      "applicationsP12Total": 37,
+      "applicationsP12": 37,
+      "scoreP12": 134.9,
       "rank": 54
     },
     {
@@ -661,6 +823,9 @@
       "applicationsTotal": 57,
       "programCount": 1,
       "admitted": 54,
+      "applicationsP12Total": 30,
+      "applicationsP12": 30,
+      "scoreP12": 135.7,
       "rank": 55
     },
     {
@@ -673,6 +838,9 @@
       "applicationsTotal": 32,
       "programCount": 1,
       "admitted": 32,
+      "applicationsP12Total": 24,
+      "applicationsP12": 24,
+      "scoreP12": 132.4,
       "rank": 56
     },
     {
@@ -685,6 +853,9 @@
       "applicationsTotal": 28,
       "programCount": 1,
       "admitted": 14,
+      "applicationsP12Total": 8,
+      "applicationsP12": 8,
+      "scoreP12": 141.5,
       "rank": 57
     }
   ],
@@ -699,6 +870,9 @@
       "applicationsTotal": 17,
       "programCount": 1,
       "admitted": 11,
+      "applicationsP12Total": 8,
+      "applicationsP12": 8,
+      "scoreP12": 180.7,
       "rank": 1
     },
     {
@@ -711,6 +885,9 @@
       "applicationsTotal": 25,
       "programCount": 1,
       "admitted": 23,
+      "applicationsP12Total": 0,
+      "applicationsP12": 0,
+      "scoreP12": null,
       "rank": 2
     },
     {
@@ -723,6 +900,9 @@
       "applicationsTotal": 96,
       "programCount": 1,
       "admitted": 94,
+      "applicationsP12Total": 36,
+      "applicationsP12": 36,
+      "scoreP12": 169.5,
       "rank": 3
     },
     {
@@ -735,6 +915,9 @@
       "applicationsTotal": 445,
       "programCount": 4,
       "admitted": 375,
+      "applicationsP12Total": 113,
+      "applicationsP12": 28.3,
+      "scoreP12": 171.2,
       "rank": 4
     },
     {
@@ -747,6 +930,9 @@
       "applicationsTotal": 16,
       "programCount": 1,
       "admitted": 15,
+      "applicationsP12Total": 8,
+      "applicationsP12": 8,
+      "scoreP12": 150.3,
       "rank": 5
     },
     {
@@ -759,6 +945,9 @@
       "applicationsTotal": 54,
       "programCount": 1,
       "admitted": 41,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 157.5,
       "rank": 6
     },
     {
@@ -771,6 +960,9 @@
       "applicationsTotal": 20,
       "programCount": 1,
       "admitted": 12,
+      "applicationsP12Total": 3,
+      "applicationsP12": 3,
+      "scoreP12": 171.6,
       "rank": 7
     },
     {
@@ -783,6 +975,9 @@
       "applicationsTotal": 173,
       "programCount": 3,
       "admitted": 171,
+      "applicationsP12Total": 57,
+      "applicationsP12": 19,
+      "scoreP12": 163.7,
       "rank": 8
     },
     {
@@ -795,6 +990,9 @@
       "applicationsTotal": 20,
       "programCount": 1,
       "admitted": 10,
+      "applicationsP12Total": 3,
+      "applicationsP12": 3,
+      "scoreP12": 161.3,
       "rank": 9
     },
     {
@@ -807,6 +1005,9 @@
       "applicationsTotal": 243,
       "programCount": 2,
       "admitted": 238,
+      "applicationsP12Total": 60,
+      "applicationsP12": 30,
+      "scoreP12": 167.2,
       "rank": 10
     },
     {
@@ -819,6 +1020,9 @@
       "applicationsTotal": 69,
       "programCount": 1,
       "admitted": 45,
+      "applicationsP12Total": 4,
+      "applicationsP12": 4,
+      "scoreP12": 171.2,
       "rank": 11
     },
     {
@@ -831,6 +1035,9 @@
       "applicationsTotal": 20,
       "programCount": 1,
       "admitted": 20,
+      "applicationsP12Total": 2,
+      "applicationsP12": 2,
+      "scoreP12": 160.1,
       "rank": 12
     },
     {
@@ -843,6 +1050,9 @@
       "applicationsTotal": 54,
       "programCount": 1,
       "admitted": 53,
+      "applicationsP12Total": 10,
+      "applicationsP12": 10,
+      "scoreP12": 160.3,
       "rank": 13
     },
     {
@@ -855,6 +1065,9 @@
       "applicationsTotal": 21,
       "programCount": 1,
       "admitted": 21,
+      "applicationsP12Total": 6,
+      "applicationsP12": 6,
+      "scoreP12": 157.9,
       "rank": 14
     },
     {
@@ -867,6 +1080,9 @@
       "applicationsTotal": 44,
       "programCount": 1,
       "admitted": 43,
+      "applicationsP12Total": 9,
+      "applicationsP12": 9,
+      "scoreP12": 165.7,
       "rank": 15
     },
     {
@@ -879,6 +1095,9 @@
       "applicationsTotal": 19,
       "programCount": 1,
       "admitted": 19,
+      "applicationsP12Total": 5,
+      "applicationsP12": 5,
+      "scoreP12": 158.9,
       "rank": 16
     },
     {
@@ -891,6 +1110,9 @@
       "applicationsTotal": 90,
       "programCount": 1,
       "admitted": 44,
+      "applicationsP12Total": 10,
+      "applicationsP12": 10,
+      "scoreP12": 162.5,
       "rank": 17
     },
     {
@@ -903,6 +1125,9 @@
       "applicationsTotal": 33,
       "programCount": 1,
       "admitted": 33,
+      "applicationsP12Total": 6,
+      "applicationsP12": 6,
+      "scoreP12": 157.5,
       "rank": 18
     },
     {
@@ -915,6 +1140,9 @@
       "applicationsTotal": 33,
       "programCount": 1,
       "admitted": 32,
+      "applicationsP12Total": 3,
+      "applicationsP12": 3,
+      "scoreP12": 163.2,
       "rank": 19
     },
     {
@@ -927,6 +1155,9 @@
       "applicationsTotal": 35,
       "programCount": 1,
       "admitted": 35,
+      "applicationsP12Total": 4,
+      "applicationsP12": 4,
+      "scoreP12": 163.1,
       "rank": 20
     },
     {
@@ -939,6 +1170,9 @@
       "applicationsTotal": 19,
       "programCount": 1,
       "admitted": 11,
+      "applicationsP12Total": 6,
+      "applicationsP12": 6,
+      "scoreP12": 150.3,
       "rank": 21
     },
     {
@@ -951,6 +1185,9 @@
       "applicationsTotal": 17,
       "programCount": 1,
       "admitted": 17,
+      "applicationsP12Total": 4,
+      "applicationsP12": 4,
+      "scoreP12": 172.2,
       "rank": 22
     },
     {
@@ -963,6 +1200,9 @@
       "applicationsTotal": 67,
       "programCount": 1,
       "admitted": 67,
+      "applicationsP12Total": 6,
+      "applicationsP12": 6,
+      "scoreP12": 161.5,
       "rank": 23
     },
     {
@@ -975,6 +1215,9 @@
       "applicationsTotal": 27,
       "programCount": 1,
       "admitted": 26,
+      "applicationsP12Total": 5,
+      "applicationsP12": 5,
+      "scoreP12": 153,
       "rank": 24
     },
     {
@@ -987,6 +1230,9 @@
       "applicationsTotal": 38,
       "programCount": 1,
       "admitted": 38,
+      "applicationsP12Total": 5,
+      "applicationsP12": 5,
+      "scoreP12": 164.4,
       "rank": 25
     },
     {
@@ -999,6 +1245,9 @@
       "applicationsTotal": 27,
       "programCount": 1,
       "admitted": 26,
+      "applicationsP12Total": 7,
+      "applicationsP12": 7,
+      "scoreP12": 155.3,
       "rank": 26
     },
     {
@@ -1011,6 +1260,9 @@
       "applicationsTotal": 53,
       "programCount": 1,
       "admitted": 47,
+      "applicationsP12Total": 9,
+      "applicationsP12": 9,
+      "scoreP12": 148.1,
       "rank": 27
     },
     {
@@ -1023,6 +1275,9 @@
       "applicationsTotal": 15,
       "programCount": 1,
       "admitted": 8,
+      "applicationsP12Total": 1,
+      "applicationsP12": 1,
+      "scoreP12": 166.2,
       "rank": 28
     },
     {
@@ -1035,6 +1290,9 @@
       "applicationsTotal": 47,
       "programCount": 1,
       "admitted": 47,
+      "applicationsP12Total": 0,
+      "applicationsP12": 0,
+      "scoreP12": null,
       "rank": 29
     },
     {
@@ -1047,6 +1305,9 @@
       "applicationsTotal": 24,
       "programCount": 1,
       "admitted": 24,
+      "applicationsP12Total": 5,
+      "applicationsP12": 5,
+      "scoreP12": 155.6,
       "rank": 30
     },
     {
@@ -1059,6 +1320,9 @@
       "applicationsTotal": 19,
       "programCount": 1,
       "admitted": 14,
+      "applicationsP12Total": 2,
+      "applicationsP12": 2,
+      "scoreP12": 151.9,
       "rank": 31
     },
     {
@@ -1071,6 +1335,9 @@
       "applicationsTotal": 27,
       "programCount": 1,
       "admitted": 23,
+      "applicationsP12Total": 0,
+      "applicationsP12": 0,
+      "scoreP12": null,
       "rank": 32
     },
     {
@@ -1083,6 +1350,9 @@
       "applicationsTotal": 23,
       "programCount": 1,
       "admitted": 20,
+      "applicationsP12Total": 0,
+      "applicationsP12": 0,
+      "scoreP12": null,
       "rank": 33
     },
     {
@@ -1095,6 +1365,9 @@
       "applicationsTotal": 26,
       "programCount": 1,
       "admitted": 26,
+      "applicationsP12Total": 3,
+      "applicationsP12": 3,
+      "scoreP12": 155.9,
       "rank": 34
     },
     {
@@ -1107,6 +1380,9 @@
       "applicationsTotal": 24,
       "programCount": 1,
       "admitted": 17,
+      "applicationsP12Total": 2,
+      "applicationsP12": 2,
+      "scoreP12": 157.2,
       "rank": 35
     },
     {
@@ -1119,6 +1395,9 @@
       "applicationsTotal": 17,
       "programCount": 1,
       "admitted": 13,
+      "applicationsP12Total": 0,
+      "applicationsP12": 0,
+      "scoreP12": null,
       "rank": 36
     },
     {
@@ -1131,6 +1410,9 @@
       "applicationsTotal": 55,
       "programCount": 1,
       "admitted": 32,
+      "applicationsP12Total": 19,
+      "applicationsP12": 19,
+      "scoreP12": 153.2,
       "rank": 37
     }
   ],
@@ -1141,5 +1423,9 @@
   "totalAdmitted": {
     "bachelor": 12794,
     "master": 1791
+  },
+  "totalApplicationsP12": {
+    "bachelor": 6691,
+    "master": 439
   }
 }
