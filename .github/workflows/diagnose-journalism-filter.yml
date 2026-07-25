@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/diagnose-applicant-fields.mjs
+      - run: node scripts/diagnose-offer-js.mjs
         timeout-minutes: 5
