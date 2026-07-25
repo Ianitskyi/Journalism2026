@@ -1,11 +1,50 @@
 const state = { degree: "bachelor", compareIds: [null, null], secondCompareVisible: false };
 
+/* ЛОГОТИПИ ЗАКЛАДІВ — щоб повернути кольорові кола з ініціалами як було,
+   просто зміни SHOW_INSTITUTION_LOGOS на false (нижче) і нічого більше
+   чіпати не треба: мапа INSTITUTION_LOGOS і код рендеру лишаються на
+   місці, просто перестають використовуватись.
+   Джерело зображень — Вікіпедія (uk.wikipedia.org), пряме посилання на
+   файл на upload.wikimedia.org. Охоплює заклади з рейтингу 2025 року;
+   заклад без запису тут показує звичайне кольорове коло з ініціалами. */
+const SHOW_INSTITUTION_LOGOS = true;
+const INSTITUTION_LOGOS = {};
+
 function findUniMeta(id) {
   const src = DB.allUniversitiesMeta().get(id);
   if (!src) return null;
   const name = getLang() === "en" ? (src.nameEn || src.name) : src.name;
   const short = getLang() === "en" ? (src.shortEn || src.short) : src.short;
   return { id, name, short, hue: src.hue, hasBachelor: !!src.hasBachelor, hasMaster: !!src.hasMaster };
+}
+
+/* показує лого закладу (якщо є в INSTITUTION_LOGOS і прапорець увімкнено),
+   інакше — кольорове коло з ініціалами, як і раніше. Якщо картинка не
+   завантажилась (зламане посилання, недоступність Вікіпедії тощо) —
+   для цього конкретного закладу автоматично повертаємось до кола з
+   ініціалами, не ламаючи сторінку. */
+function renderUniLogo(meta) {
+  const logoEl = document.getElementById("uni-logo");
+  logoEl.innerHTML = "";
+
+  function showInitials() {
+    logoEl.style.background = `hsl(${meta.hue} 62% 46%)`;
+    logoEl.textContent = meta.short.slice(0, 2).toUpperCase();
+  }
+
+  const logoUrl = SHOW_INSTITUTION_LOGOS ? INSTITUTION_LOGOS[meta.id] : null;
+  if (!logoUrl) {
+    showInitials();
+    return;
+  }
+
+  logoEl.style.background = "";
+  const img = document.createElement("img");
+  img.className = "uni-hero-logo-img";
+  img.alt = "";
+  img.src = logoUrl;
+  img.addEventListener("error", showInitials);
+  logoEl.appendChild(img);
 }
 
 function allUniMetas() {
@@ -220,8 +259,7 @@ function render() {
   const degreeTabs = document.getElementById("uni-degree-tabs");
   degreeTabs.style.display = meta.hasBachelor && meta.hasMaster ? "inline-flex" : "none";
 
-  document.getElementById("uni-logo").textContent = meta.short.slice(0, 2).toUpperCase();
-  document.getElementById("uni-logo").style.background = `hsl(${meta.hue} 62% 46%)`;
+  renderUniLogo(meta);
   document.getElementById("uni-name").textContent = meta.name;
 
   const noteEl = document.getElementById("institution-note");
