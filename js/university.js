@@ -157,27 +157,16 @@ function renderComparePanel(meta, trend, compareMetas, compareTrends) {
 }
 
 /* короткий аналітичний висновок про динаміку закладу: рахується виключно
-   з реальних даних, які вже є в системі (бал/заяви по роках, ранг) —
-   без жодних вигаданих фактів про сам заклад */
+   з реальних даних, які вже є в системі (заяви по роках, ранг) — без
+   жодних вигаданих фактів про сам заклад.
+   Середній бал свідомо НЕ порівнюємо між роками (навіть словами без
+   конкретної різниці): формула його розрахунку змінювалась рік від
+   року, тож заява на кшталт "бал зріс/впав" була б методологічно
+   некоректною — той самий принцип, що й у дисклеймері під графіком
+   балу (uni.scoreChartDisclaimer) і в методології. */
 function buildAnalysisText(first, latest) {
   if (!first || !latest || first.year === latest.year) {
     return t("uni.analysis.insufficientData");
-  }
-
-  const scoreDiff = Math.round((latest.row.score - first.row.score) * 10) / 10;
-  let scoreSentence;
-  if (Math.abs(scoreDiff) < 0.1) {
-    scoreSentence = t("uni.analysis.scoreFlat", { from: first.year, to: latest.year, value: latest.row.score.toFixed(1) });
-  } else if (scoreDiff > 0) {
-    scoreSentence = t("uni.analysis.scoreUp", {
-      from: first.year, to: latest.year, diff: Math.abs(scoreDiff).toFixed(1),
-      fromVal: first.row.score.toFixed(1), toVal: latest.row.score.toFixed(1)
-    });
-  } else {
-    scoreSentence = t("uni.analysis.scoreDown", {
-      from: first.year, to: latest.year, diff: Math.abs(scoreDiff).toFixed(1),
-      fromVal: first.row.score.toFixed(1), toVal: latest.row.score.toFixed(1)
-    });
   }
 
   const appsPct = first.row.applications > 0
@@ -202,7 +191,7 @@ function buildAnalysisText(first, latest) {
     rankSentence = t("uni.analysis.rankWorse", { from: first.row.rank, to: latest.row.rank });
   }
 
-  return `${scoreSentence} ${appsSentence} ${rankSentence}`;
+  return `${appsSentence} ${rankSentence}`;
 }
 
 function render() {
@@ -245,16 +234,6 @@ function render() {
   document.getElementById("uni-best-rank").textContent = bestRank != null ? `#${bestRank}` : "—";
   document.getElementById("uni-current-rank").textContent = latest ? `#${latest.row.rank}` : "—";
   document.getElementById("uni-current-score").textContent = latest ? latest.row.score.toFixed(1) : "—";
-
-  const trendEl = document.getElementById("uni-trend");
-  if (latest && first && first.year !== latest.year) {
-    const diff = Math.round((latest.row.score - first.row.score) * 10) / 10;
-    trendEl.textContent = `${diff > 0 ? "+" : ""}${diff.toFixed(1)}`;
-    trendEl.className = "stat-value " + (diff > 0 ? "trend-up" : diff < 0 ? "trend-down" : "");
-  } else {
-    trendEl.textContent = "—";
-    trendEl.className = "stat-value";
-  }
 
   document.getElementById("uni-analysis").textContent = buildAnalysisText(first, latest);
 
