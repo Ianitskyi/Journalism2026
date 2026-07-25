@@ -16,5 +16,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/diagnose-offer-requests-old-year.mjs
-        timeout-minutes: 5
+      - run: npm install
+      - run: node scripts/fetch-edbo-history.mjs 2025
+        timeout-minutes: 15
