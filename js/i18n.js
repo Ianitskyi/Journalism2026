@@ -61,6 +61,7 @@ const I18N = {
       institution: "Заклад",
       score: "Середній бал",
       applications: "Заяв на програму",
+      applicationsColumn: "Заяв на програму",
       fullRanking: "Повний рейтинг",
       year: "Рік",
       rank: "Ранг"
@@ -189,6 +190,7 @@ const I18N = {
       institution: "Institution",
       score: "Average score",
       applications: "Applications per program",
+      applicationsColumn: "Apps per program",
       fullRanking: "Full ranking",
       year: "Year",
       rank: "Rank"
