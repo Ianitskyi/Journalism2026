@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /*
  * ДІАГНОСТИЧНИЙ скрипт (нічого не пише в data/, нічого на сайті не міняє) —
- * для кожного закладу з рейтингу 2025 року шукає логотип/герб/емблему через
- * Wikidata (властивість P154 "зображення логотипу"), а якщо немає — через
- * інфобокс української Вікіпедії (поле "зображення"/"лого" в шаблоні картки,
- * якщо назва файлу явно містить слово логотип/герб/емблема).
+ * для кожного закладу з рейтингу 2025 року шукає логотип/герб/емблему:
+ *  1) через Wikidata (властивість P154 "зображення логотипу");
+ *  2) якщо немає — через інфобокс української Вікіпедії (шаблон картки,
+ *     поле "Зображення"/"Лого"/"Герб") з фільтром за назвою файлу, щоб не
+ *     підхопити випадкове фото будівлі.
  *
  * Дає пряме посилання на файл через офіційний, призначений саме для такого
  * хотлінкінгу механізм Wikimedia — Special:FilePath (редиректить на реальний
@@ -12,8 +13,11 @@
  *
  * Пуш через GitHub Actions runner, бо в цьому сховищі/сесії WebFetch/curl до
  * зовнішніх доменів (у т.ч. wikipedia.org, wikidata.org) заблоковано
- * організаційною політикою — GH Actions runner цього обмеження не має
- * (перевірено раніше цього ж проєкту на vstup*.edbo.gov.ua).
+ * організаційною політикою — GH Actions runner цього обмеження не має.
+ *
+ * Перший прогін ловив 429 (Too Many Requests) від Wikidata вже за кілька
+ * запитів через занадто коротку паузу (200мс) без retry — тут пауза значно
+ * довша (900мс) і є retry з експоненційним відкладенням на 429.
  */
 
 const INSTITUTIONS = [
@@ -80,15 +84,25 @@ const INSTITUTIONS = [
   ["edbo265", "Чорноморський національний університет імені Петра Могили"]
 ];
 
+const DELAY_MS = 900;
+const MAX_RETRIES = 4;
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchJson(url) {
+async function fetchJson(url, attempt = 0) {
   const resp = await fetch(url, {
-    headers: { "User-Agent": "Journalism2026-logo-lookup/1.0 (non-commercial ranking site research)" },
+    headers: { "User-Agent": "Journalism2026-logo-lookup/1.0 (non-commercial ranking site research; contact via github.com/Ianitskyi/Journalism2026)" },
     signal: AbortSignal.timeout(20000)
   });
+  if (resp.status === 429 || resp.status === 503) {
+    if (attempt >= MAX_RETRIES) throw new Error(`HTTP ${resp.status} для ${url} (вичерпано ретраї)`);
+    const wait = DELAY_MS * Math.pow(2, attempt + 1);
+    console.log(`  ! ${resp.status}, чекаю ${wait}мс і пробую знову (спроба ${attempt + 1}/${MAX_RETRIES})`);
+    await sleep(wait);
+    return fetchJson(url, attempt + 1);
+  }
   if (!resp.ok) throw new Error(`HTTP ${resp.status} для ${url}`);
   return resp.json();
 }
@@ -99,7 +113,7 @@ async function findWikidataId(name) {
   return (json.search || [])[0] || null;
 }
 
-async function getLogoFilename(qid) {
+async function getLogoFilenameFromWikidata(qid) {
   const url = `https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${qid}&property=P154&format=json`;
   const json = await fetchJson(url);
   const claims = json.claims && json.claims.P154;
@@ -107,37 +121,68 @@ async function getLogoFilename(qid) {
   return claims[0].mainsnak?.datavalue?.value || null;
 }
 
+/* фолбек: якщо на Wikidata немає P154, дивимось на wikitext інфобоксу самої
+   укр. Вікіпедії (перший розділ сторінки) і шукаємо файл, назва якого явно
+   натякає на лого/герб/емблему/символіку — щоб не підхопити фото будівлі */
+const LOGO_FILENAME_HINT = /лого|logo|герб|emblem|емблем|символ/i;
+
+async function getLogoFilenameFromWikipedia(title) {
+  const url = `https://uk.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&section=0&format=json&redirects=1`;
+  const json = await fetchJson(url);
+  const wikitext = json.parse?.wikitext?.["*"];
+  if (!wikitext) return null;
+  const matches = [...wikitext.matchAll(/(?:зображення|лого|логотип|герб)\s*=\s*\[?\[?(?:File|Файл):?([^|\]\n]+)/gi)];
+  for (const m of matches) {
+    const filename = m[1].trim();
+    if (filename) return filename;
+  }
+  // запасний варіант: будь-яке посилання на файл у першому розділі, назва якого сама натякає на лого/герб
+  const anyFile = [...wikitext.matchAll(/\[\[(?:File|Файл):([^|\]\n]+)/gi)].map((m) => m[1].trim());
+  return anyFile.find((f) => LOGO_FILENAME_HINT.test(f)) || null;
+}
+
 function filePathUrl(filename) {
-  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=200`;
+  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename.replace(/ /g, "_"))}?width=200`;
 }
 
 async function main() {
   const results = [];
   for (const [id, name] of INSTITUTIONS) {
+    let logoUrl = null;
+    let note = "";
     try {
       const entity = await findWikidataId(name);
-      if (!entity) {
-        results.push({ id, name, logoUrl: null, note: "wikidata entity not found" });
-        console.log(`${id}: entity not found`);
-        await sleep(200);
-        continue;
+      await sleep(DELAY_MS);
+      if (entity) {
+        const filename = await getLogoFilenameFromWikidata(entity.id);
+        await sleep(DELAY_MS);
+        if (filename) {
+          logoUrl = filePathUrl(filename);
+          note = `wikidata ${entity.id}, P154 file: ${filename}`;
+        } else {
+          note = `wikidata ${entity.id} has no P154`;
+        }
+      } else {
+        note = "wikidata entity not found";
       }
-      const filename = await getLogoFilename(entity.id);
-      if (!filename) {
-        results.push({ id, name, logoUrl: null, note: `wikidata ${entity.id} (${entity.label || ""}) has no P154 logo image` });
-        console.log(`${id}: ${entity.id} — no P154`);
-        await sleep(200);
-        continue;
+
+      if (!logoUrl) {
+        const wpFilename = await getLogoFilenameFromWikipedia(name);
+        await sleep(DELAY_MS);
+        if (wpFilename) {
+          logoUrl = filePathUrl(wpFilename);
+          note += `; uk.wikipedia infobox file: ${wpFilename}`;
+        } else {
+          note += "; uk.wikipedia infobox: no logo-like file found";
+        }
       }
-      const logoUrl = filePathUrl(filename);
-      results.push({ id, name, logoUrl, note: `wikidata ${entity.id}, file: ${filename}` });
-      console.log(`${id}: FOUND — ${filename}`);
-      await sleep(200);
     } catch (err) {
-      results.push({ id, name, logoUrl: null, note: `error: ${err.message}` });
-      console.log(`${id}: error — ${err.message}`);
-      await sleep(200);
+      note = `error: ${err.message}`;
+      await sleep(DELAY_MS);
     }
+
+    results.push({ id, name, logoUrl, note });
+    console.log(`${id}: ${logoUrl ? "FOUND — " + logoUrl : "not found"} (${note})`);
   }
 
   console.log("\n\n=== RESULT JSON ===");

@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/fetch-institution-logos.mjs
-        timeout-minutes: 10
+        timeout-minutes: 20
