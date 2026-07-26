@@ -31,7 +31,8 @@ const INSTITUTION_LOGOS = {
   "edbo340": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%95%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%A3%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D1%96%D1%8F_%D0%A1%D0%BA%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B4%D0%B8_%D0%B2_%D0%9F%D0%B5%D1%80%D0%B5%D1%8F%D1%81%D0%BB%D0%B0%D0%B2%D1%96.png?width=200",
   "karazin": "https://commons.wikimedia.org/wiki/Special:FilePath/Etalon-big.jpg?width=200",
   "cnu": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B5%D1%80%D0%B1_%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BD%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D1%96%D0%BC._%D0%91._%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.jpg?width=200",
-  "chnu": "https://commons.wikimedia.org/wiki/Special:FilePath/Chernivtsi_National_University_arms.png?width=200"
+  "chnu": "https://commons.wikimedia.org/wiki/Special:FilePath/Chernivtsi_National_University_arms.png?width=200",
+  "ucu": "https://commons.wikimedia.org/wiki/Special:FilePath/UkrainianCatholicUniversitylogo.png?width=200"
 };
 
 function findUniMeta(id) {
