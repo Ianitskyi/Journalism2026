@@ -16,21 +16,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Look up UCU logo via Wikidata
+      - name: Look up logos via Wikidata
         timeout-minutes: 3
         run: |
           set -e
-          entity=$(curl -s "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ukrainian%20Catholic%20University&language=en&uselang=en&type=item&limit=3&format=json")
-          echo "SEARCH: $entity"
-          qid=$(echo "$entity" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);console.log((j.search&&j.search[0]&&j.search[0].id)||'')})")
-          echo "QID: $qid"
-          claims=$(curl -s "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=$qid&property=P154&format=json")
-          echo "CLAIMS: $claims"
-          filename=$(echo "$claims" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const c=j.claims&&j.claims.P154;console.log((c&&c[0]&&c[0].mainsnak&&c[0].mainsnak.datavalue&&c[0].mainsnak.datavalue.value)||'')})")
-          echo "FILENAME: $filename"
-          if [ -z "$filename" ]; then echo "NO P154 LOGO FOUND"; exit 1; fi
-          encoded=$(node -e "console.log(encodeURIComponent(process.argv[1].replace(/ /g,'_')))" "$filename")
-          url="https://commons.wikimedia.org/wiki/Special:FilePath/$encoded?width=200"
-          echo "URL: $url"
-          result=$(curl -s -o /dev/null -L --max-time 20 -w "%{http_code} %{content_type}" "$url")
-          echo "VERIFY: $result"
+          lookup() {
+            local id="$1" search_lang="$2" name="$3"
+            echo "=== $id ($name) ==="
+            entity=$(curl -s "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=$(node -e "console.log(encodeURIComponent(process.argv[1]))" "$name")&language=$search_lang&uselang=$search_lang&type=item&limit=3&format=json")
+            qid=$(echo "$entity" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);console.log((j.search&&j.search[0]&&j.search[0].id)||'')})")
+            echo "QID: $qid"
+            sleep 1
+            claims=$(curl -s "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=$qid&property=P154&format=json")
+            filename=$(echo "$claims" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const c=j.claims&&j.claims.P154;console.log((c&&c[0]&&c[0].mainsnak&&c[0].mainsnak.datavalue&&c[0].mainsnak.datavalue.value)||'')})")
+            echo "FILENAME: $filename"
+            if [ -z "$filename" ]; then echo "NO P154 LOGO FOUND for $id"; sleep 1; return; fi
+            encoded=$(node -e "console.log(encodeURIComponent(process.argv[1].replace(/ /g,'_')))" "$filename")
+            url="https://commons.wikimedia.org/wiki/Special:FilePath/$encoded?width=200"
+            echo "URL: $url"
+            sleep 1
+            result=$(curl -s -o /dev/null -L --max-time 20 -w "%{http_code} %{content_type}" "$url")
+            echo "VERIFY: $result"
+            sleep 1
+          }
+          lookup "ucu" "en" "Ukrainian Catholic University"
+          lookup "lnu-shev" "uk" "Луганський національний університет імені Тараса Шевченка"
