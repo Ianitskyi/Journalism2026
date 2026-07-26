@@ -1,0 +1,19 @@
+name: Diagnose master 2021-2022 missing budget/priority data
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. З'ясовує, чому
+# для магістратури 2021 і 2022 років фільтри "лише бюджет" і "лише
+# 1-2 пріоритет" виходять нульовими для всіх закладів.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-master-2021-2022.mjs
+        timeout-minutes: 10
