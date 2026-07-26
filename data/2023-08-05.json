@@ -1869,5 +1869,9 @@
   "totalApplicationsOpen": {
     "bachelor": 6970,
     "master": 906
+  },
+  "totalApplicationsOpenP12": {
+    "bachelor": 1016,
+    "master": 285
   }
 }

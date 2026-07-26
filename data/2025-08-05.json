@@ -1995,5 +1995,9 @@
   "totalApplicationsOpen": {
     "bachelor": 11984,
     "master": 1280
+  },
+  "totalApplicationsOpenP12": {
+    "bachelor": 5187,
+    "master": 382
   }
 }

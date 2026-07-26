@@ -358,6 +358,10 @@ function sumAppsOpen(rows) {
   return rows.reduce((s, r) => s + (r.applicationsOpenTotal || 0), 0);
 }
 
+function sumAppsOpenP12(rows) {
+  return rows.reduce((s, r) => s + (r.applicationsOpenP12Total || 0), 0);
+}
+
 async function fetchYear(year) {
   const base = `https://vstup${year}.edbo.gov.ua`;
   log(`\n=== ${year} (${base}) ===`);
@@ -395,6 +399,10 @@ async function fetchYear(year) {
     totalApplicationsOpen: {
       bachelor: sumAppsOpen(bachelor),
       master: sumAppsOpen(master)
+    },
+    totalApplicationsOpenP12: {
+      bachelor: sumAppsOpenP12(bachelor),
+      master: sumAppsOpenP12(master)
     }
   };
 }
