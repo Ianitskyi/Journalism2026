@@ -1,11 +1,74 @@
 const state = { degree: "bachelor", compareIds: [null, null], secondCompareVisible: false };
 
+/* ЛОГОТИПИ ЗАКЛАДІВ — щоб повернути кольорові кола з ініціалами як було,
+   просто зміни SHOW_INSTITUTION_LOGOS на false (нижче) і нічого більше
+   чіпати не треба: мапа INSTITUTION_LOGOS і код рендеру лишаються на
+   місці, просто перестають використовуватись.
+   Джерело зображень — Вікіпедія (uk.wikipedia.org), пряме посилання на
+   файл на upload.wikimedia.org. Охоплює заклади з рейтингу 2025 року;
+   заклад без запису тут показує звичайне кольорове коло з ініціалами. */
+const SHOW_INSTITUTION_LOGOS = true;
+const INSTITUTION_LOGOS = {
+  "edbo6540": "https://commons.wikimedia.org/wiki/Special:FilePath/Udfsu.png?width=200",
+  "donnu": "https://commons.wikimedia.org/wiki/Special:FilePath/Donetsk_National_University.png?width=200",
+  "edbo109": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerb_zu_edu_ua.gif?width=200",
+  "edbo171": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%BE%D0%B3%D0%BE_%D0%97%D0%A3%D0%9D%D0%A3_-_%D1%84%D0%BE%D0%BD.png?width=200",
+  "edbo178": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamianets-Podilskyi_Ukrainian_State_University_logo.png?width=200",
+  "edbo308": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%9D%D0%A3%D0%9A%D0%86%D0%9C.svg?width=200",
+  "knu": "https://commons.wikimedia.org/wiki/Special:FilePath/KNU_logo.svg?width=200",
+  "edbo36": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Mining_University%2C_Dnipropetrovsk_logo.png?width=200",
+  "naukma": "https://commons.wikimedia.org/wiki/Special:FilePath/NaUKMA_sym.png?width=200",
+  "edbo97": "https://commons.wikimedia.org/wiki/Special:FilePath/Nulp_logo_ukr.svg?width=200",
+  "edbo192": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B5%D1%80%D0%B1_%D0%9D%D0%A3%D0%9E%D0%AE%D0%90.jpg?width=200",
+  "edbo7208": "https://commons.wikimedia.org/wiki/Special:FilePath/KAI_logo.svg?width=200",
+  "edbo7": "https://commons.wikimedia.org/wiki/Special:FilePath/GERB_NUBIP_color.svg?width=200",
+  "edbo9": "https://commons.wikimedia.org/wiki/Special:FilePath/LogoNUWM.png?width=200",
+  "edbo155": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Nizhyn_Gogol_State_University_(in_Ukrainian).png?width=200",
+  "onu": "https://commons.wikimedia.org/wiki/Special:FilePath/Odesa_University.png?width=200",
+  "edbo249": "https://commons.wikimedia.org/wiki/Special:FilePath/MAUP_horizontal.svg?width=200",
+  "sumdu": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D1%83%D0%BC%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D0%B8%D0%B9_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82.png?width=200",
+  "npu": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Pedagogical_Dragomanov_University.jpg?width=200",
+  "edbo340": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%95%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%A3%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D1%96%D1%8F_%D0%A1%D0%BA%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B4%D0%B8_%D0%B2_%D0%9F%D0%B5%D1%80%D0%B5%D1%8F%D1%81%D0%BB%D0%B0%D0%B2%D1%96.png?width=200",
+  "karazin": "https://commons.wikimedia.org/wiki/Special:FilePath/Etalon-big.jpg?width=200",
+  "cnu": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B5%D1%80%D0%B1_%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BD%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D1%96%D0%BC._%D0%91._%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.jpg?width=200",
+  "chnu": "https://commons.wikimedia.org/wiki/Special:FilePath/Chernivtsi_National_University_arms.png?width=200"
+};
+
 function findUniMeta(id) {
   const src = DB.allUniversitiesMeta().get(id);
   if (!src) return null;
   const name = getLang() === "en" ? (src.nameEn || src.name) : src.name;
   const short = getLang() === "en" ? (src.shortEn || src.short) : src.short;
   return { id, name, short, hue: src.hue, hasBachelor: !!src.hasBachelor, hasMaster: !!src.hasMaster };
+}
+
+/* показує лого закладу (якщо є в INSTITUTION_LOGOS і прапорець увімкнено),
+   інакше — кольорове коло з ініціалами, як і раніше. Якщо картинка не
+   завантажилась (зламане посилання, недоступність Вікіпедії тощо) —
+   для цього конкретного закладу автоматично повертаємось до кола з
+   ініціалами, не ламаючи сторінку. */
+function renderUniLogo(meta) {
+  const logoEl = document.getElementById("uni-logo");
+  logoEl.innerHTML = "";
+
+  function showInitials() {
+    logoEl.style.background = `hsl(${meta.hue} 62% 46%)`;
+    logoEl.textContent = meta.short.slice(0, 2).toUpperCase();
+  }
+
+  const logoUrl = SHOW_INSTITUTION_LOGOS ? INSTITUTION_LOGOS[meta.id] : null;
+  if (!logoUrl) {
+    showInitials();
+    return;
+  }
+
+  logoEl.style.background = "";
+  const img = document.createElement("img");
+  img.className = "uni-hero-logo-img";
+  img.alt = "";
+  img.src = logoUrl;
+  img.addEventListener("error", showInitials);
+  logoEl.appendChild(img);
 }
 
 function allUniMetas() {
@@ -220,8 +283,7 @@ function render() {
   const degreeTabs = document.getElementById("uni-degree-tabs");
   degreeTabs.style.display = meta.hasBachelor && meta.hasMaster ? "inline-flex" : "none";
 
-  document.getElementById("uni-logo").textContent = meta.short.slice(0, 2).toUpperCase();
-  document.getElementById("uni-logo").style.background = `hsl(${meta.hue} 62% 46%)`;
+  renderUniLogo(meta);
   document.getElementById("uni-name").textContent = meta.name;
 
   const noteEl = document.getElementById("institution-note");

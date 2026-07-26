@@ -16,6 +16,52 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
-      - run: node scripts/fetch-edbo-history.mjs 2025
-        timeout-minutes: 15
+      - name: Verify logo URLs
+        timeout-minutes: 5
+        run: |
+          urls=(
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Udfsu.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Donetsk_National_University.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Gerb_zu_edu_ua.gif?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%BE%D0%B3%D0%BE_%D0%97%D0%A3%D0%9D%D0%A3_-_%D1%84%D0%BE%D0%BD.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Kamianets-Podilskyi_Ukrainian_State_University_logo.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%9D%D0%A3%D0%9A%D0%86%D0%9C.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/KNU_logo.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/National_Mining_University%2C_Dnipropetrovsk_logo.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/NaUKMA_sym.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Nulp_logo_ukr.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B5%D1%80%D0%B1_%D0%9D%D0%A3%D0%9E%D0%AE%D0%90.jpg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/KAI_logo.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/GERB_NUBIP_color.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/LogoNUWM.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Nizhyn_Gogol_State_University_(in_Ukrainian).png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Odesa_University.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/MAUP_horizontal.svg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D1%83%D0%BC%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D0%B8%D0%B9_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/National_Pedagogical_Dragomanov_University.jpg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%95%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%A3%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D1%96%D1%8F_%D0%A1%D0%BA%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B4%D0%B8_%D0%B2_%D0%9F%D0%B5%D1%80%D0%B5%D1%8F%D1%81%D0%BB%D0%B0%D0%B2%D1%96.png?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Etalon-big.jpg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B5%D1%80%D0%B1_%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BD%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_%D1%96%D0%BC._%D0%91._%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE.jpg?width=200"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Chernivtsi_National_University_arms.png?width=200"
+          )
+          fail=0
+          for u in "${urls[@]}"; do
+            for attempt in 1 2 3 4 5; do
+              result=$(curl -s -o /dev/null -L --max-time 20 -w "%{http_code} %{content_type}" "$u")
+              code=$(echo "$result" | cut -d' ' -f1)
+              ctype=$(echo "$result" | cut -d' ' -f2-)
+              if [ "$code" = "429" ]; then
+                wait=$((attempt * 3))
+                echo "  429, чекаю ${wait}с (спроба $attempt/5): $u"
+                sleep "$wait"
+                continue
+              fi
+              break
+            done
+            echo "$code $ctype  $u"
+            if [ "$code" != "200" ]; then fail=1; fi
+            case "$ctype" in image/*) ;; *) echo "  !! NOT AN IMAGE content-type"; fail=1;; esac
+            sleep 1.5
+          done
+          if [ "$fail" = "1" ]; then echo "SOME URLS FAILED"; exit 1; fi
+          echo "ALL 23 URLS OK"
