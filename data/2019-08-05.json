@@ -15,5 +15,9 @@
   "totalApplicationsP12": {
     "bachelor": 0,
     "master": 0
+  },
+  "totalApplicationsOpen": {
+    "bachelor": 0,
+    "master": 0
   }
 }

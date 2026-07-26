@@ -16,6 +16,12 @@
       "applicationsP12Total": 323,
       "applicationsP12": 323,
       "scoreP12": 170.5,
+      "applicationsOpenTotal": 878,
+      "applicationsOpen": 878,
+      "scoreOpen": 165.5,
+      "applicationsOpenP12Total": 316,
+      "applicationsOpenP12": 316,
+      "scoreOpenP12": 171.1,
       "rank": 1
     },
     {
@@ -31,6 +37,12 @@
       "applicationsP12Total": 697,
       "applicationsP12": 697,
       "scoreP12": 158.3,
+      "applicationsOpenTotal": 1275,
+      "applicationsOpen": 1275,
+      "scoreOpen": 159.1,
+      "applicationsOpenP12Total": 611,
+      "applicationsOpenP12": 611,
+      "scoreOpenP12": 159.8,
       "rank": 2
     },
     {
@@ -46,6 +58,12 @@
       "applicationsP12Total": 106,
       "applicationsP12": 106,
       "scoreP12": 159,
+      "applicationsOpenTotal": 169,
+      "applicationsOpen": 169,
+      "scoreOpen": 158.4,
+      "applicationsOpenP12Total": 81,
+      "applicationsOpenP12": 81,
+      "scoreOpenP12": 160.4,
       "rank": 3
     },
     {
@@ -61,6 +79,12 @@
       "applicationsP12Total": 77,
       "applicationsP12": 77,
       "scoreP12": 156.2,
+      "applicationsOpenTotal": 103,
+      "applicationsOpen": 103,
+      "scoreOpen": 159.8,
+      "applicationsOpenP12Total": 53,
+      "applicationsOpenP12": 53,
+      "scoreOpenP12": 159.2,
       "rank": 4
     },
     {
@@ -76,6 +100,12 @@
       "applicationsP12Total": 137,
       "applicationsP12": 137,
       "scoreP12": 158.6,
+      "applicationsOpenTotal": 243,
+      "applicationsOpen": 243,
+      "scoreOpen": 157.5,
+      "applicationsOpenP12Total": 109,
+      "applicationsOpenP12": 109,
+      "scoreOpenP12": 159.1,
       "rank": 5
     },
     {
@@ -91,6 +121,12 @@
       "applicationsP12Total": 18,
       "applicationsP12": 18,
       "scoreP12": 159.5,
+      "applicationsOpenTotal": 18,
+      "applicationsOpen": 18,
+      "scoreOpen": 157.5,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 163.3,
       "rank": 6
     },
     {
@@ -106,6 +142,12 @@
       "applicationsP12Total": 60,
       "applicationsP12": 60,
       "scoreP12": 154.9,
+      "applicationsOpenTotal": 90,
+      "applicationsOpen": 90,
+      "scoreOpen": 154.7,
+      "applicationsOpenP12Total": 44,
+      "applicationsOpenP12": 44,
+      "scoreOpenP12": 156,
       "rank": 7
     },
     {
@@ -121,6 +163,12 @@
       "applicationsP12Total": 1053,
       "applicationsP12": 526.5,
       "scoreP12": 156.3,
+      "applicationsOpenTotal": 2196,
+      "applicationsOpen": 1098,
+      "scoreOpen": 155,
+      "applicationsOpenP12Total": 963,
+      "applicationsOpenP12": 481.5,
+      "scoreOpenP12": 157.3,
       "rank": 8
     },
     {
@@ -136,6 +184,12 @@
       "applicationsP12Total": 85,
       "applicationsP12": 42.5,
       "scoreP12": 157.7,
+      "applicationsOpenTotal": 103,
+      "applicationsOpen": 51.5,
+      "scoreOpen": 155.5,
+      "applicationsOpenP12Total": 51,
+      "applicationsOpenP12": 25.5,
+      "scoreOpenP12": 159.4,
       "rank": 9
     },
     {
@@ -151,6 +205,12 @@
       "applicationsP12Total": 42,
       "applicationsP12": 42,
       "scoreP12": 153.3,
+      "applicationsOpenTotal": 74,
+      "applicationsOpen": 74,
+      "scoreOpen": 153.3,
+      "applicationsOpenP12Total": 38,
+      "applicationsOpenP12": 38,
+      "scoreOpenP12": 152.9,
       "rank": 10
     },
     {
@@ -166,6 +226,12 @@
       "applicationsP12Total": 111,
       "applicationsP12": 111,
       "scoreP12": 153,
+      "applicationsOpenTotal": 225,
+      "applicationsOpen": 225,
+      "scoreOpen": 152.6,
+      "applicationsOpenP12Total": 111,
+      "applicationsOpenP12": 111,
+      "scoreOpenP12": 153,
       "rank": 11
     },
     {
@@ -181,6 +247,12 @@
       "applicationsP12Total": 20,
       "applicationsP12": 20,
       "scoreP12": 149.1,
+      "applicationsOpenTotal": 35,
+      "applicationsOpen": 35,
+      "scoreOpen": 151,
+      "applicationsOpenP12Total": 16,
+      "applicationsOpenP12": 16,
+      "scoreOpenP12": 149.6,
       "rank": 12
     },
     {
@@ -196,6 +268,12 @@
       "applicationsP12Total": 529,
       "applicationsP12": 264.5,
       "scoreP12": 150.2,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 13
     },
     {
@@ -211,6 +289,12 @@
       "applicationsP12Total": 360,
       "applicationsP12": 360,
       "scoreP12": 152.1,
+      "applicationsOpenTotal": 800,
+      "applicationsOpen": 800,
+      "scoreOpen": 150.2,
+      "applicationsOpenP12Total": 321,
+      "applicationsOpenP12": 321,
+      "scoreOpenP12": 152.8,
       "rank": 14
     },
     {
@@ -226,6 +310,12 @@
       "applicationsP12Total": 28,
       "applicationsP12": 28,
       "scoreP12": 146.2,
+      "applicationsOpenTotal": 40,
+      "applicationsOpen": 40,
+      "scoreOpen": 150.4,
+      "applicationsOpenP12Total": 19,
+      "applicationsOpenP12": 19,
+      "scoreOpenP12": 148,
       "rank": 15
     },
     {
@@ -241,6 +331,12 @@
       "applicationsP12Total": 307,
       "applicationsP12": 307,
       "scoreP12": 148,
+      "applicationsOpenTotal": 654,
+      "applicationsOpen": 654,
+      "scoreOpen": 149.5,
+      "applicationsOpenP12Total": 278,
+      "applicationsOpenP12": 278,
+      "scoreOpenP12": 148.9,
       "rank": 16
     },
     {
@@ -256,6 +352,12 @@
       "applicationsP12Total": 120,
       "applicationsP12": 120,
       "scoreP12": 147.7,
+      "applicationsOpenTotal": 273,
+      "applicationsOpen": 273,
+      "scoreOpen": 148.5,
+      "applicationsOpenP12Total": 120,
+      "applicationsOpenP12": 120,
+      "scoreOpenP12": 147.7,
       "rank": 17
     },
     {
@@ -271,6 +373,12 @@
       "applicationsP12Total": 120,
       "applicationsP12": 120,
       "scoreP12": 143.9,
+      "applicationsOpenTotal": 287,
+      "applicationsOpen": 287,
+      "scoreOpen": 148.2,
+      "applicationsOpenP12Total": 120,
+      "applicationsOpenP12": 120,
+      "scoreOpenP12": 143.9,
       "rank": 18
     },
     {
@@ -286,6 +394,12 @@
       "applicationsP12Total": 126,
       "applicationsP12": 126,
       "scoreP12": 148.2,
+      "applicationsOpenTotal": 230,
+      "applicationsOpen": 230,
+      "scoreOpen": 148.1,
+      "applicationsOpenP12Total": 126,
+      "applicationsOpenP12": 126,
+      "scoreOpenP12": 148.2,
       "rank": 19
     },
     {
@@ -301,6 +415,12 @@
       "applicationsP12Total": 13,
       "applicationsP12": 13,
       "scoreP12": 144.6,
+      "applicationsOpenTotal": 34,
+      "applicationsOpen": 34,
+      "scoreOpen": 148.4,
+      "applicationsOpenP12Total": 13,
+      "applicationsOpenP12": 13,
+      "scoreOpenP12": 144.6,
       "rank": 20
     },
     {
@@ -316,6 +436,12 @@
       "applicationsP12Total": 83,
       "applicationsP12": 83,
       "scoreP12": 146.3,
+      "applicationsOpenTotal": 181,
+      "applicationsOpen": 181,
+      "scoreOpen": 147.7,
+      "applicationsOpenP12Total": 83,
+      "applicationsOpenP12": 83,
+      "scoreOpenP12": 146.3,
       "rank": 21
     },
     {
@@ -331,6 +457,12 @@
       "applicationsP12Total": 243,
       "applicationsP12": 243,
       "scoreP12": 148.4,
+      "applicationsOpenTotal": 602,
+      "applicationsOpen": 602,
+      "scoreOpen": 147.5,
+      "applicationsOpenP12Total": 243,
+      "applicationsOpenP12": 243,
+      "scoreOpenP12": 148.4,
       "rank": 22
     },
     {
@@ -346,6 +478,12 @@
       "applicationsP12Total": 64,
       "applicationsP12": 64,
       "scoreP12": 144.6,
+      "applicationsOpenTotal": 114,
+      "applicationsOpen": 114,
+      "scoreOpen": 149.2,
+      "applicationsOpenP12Total": 47,
+      "applicationsOpenP12": 47,
+      "scoreOpenP12": 145.9,
       "rank": 23
     },
     {
@@ -361,6 +499,12 @@
       "applicationsP12Total": 65,
       "applicationsP12": 65,
       "scoreP12": 145.9,
+      "applicationsOpenTotal": 110,
+      "applicationsOpen": 110,
+      "scoreOpen": 147.9,
+      "applicationsOpenP12Total": 46,
+      "applicationsOpenP12": 46,
+      "scoreOpenP12": 147,
       "rank": 24
     },
     {
@@ -376,6 +520,12 @@
       "applicationsP12Total": 43,
       "applicationsP12": 43,
       "scoreP12": 148.6,
+      "applicationsOpenTotal": 81,
+      "applicationsOpen": 81,
+      "scoreOpen": 147.5,
+      "applicationsOpenP12Total": 38,
+      "applicationsOpenP12": 38,
+      "scoreOpenP12": 148.8,
       "rank": 25
     },
     {
@@ -391,6 +541,12 @@
       "applicationsP12Total": 90,
       "applicationsP12": 90,
       "scoreP12": 145.5,
+      "applicationsOpenTotal": 233,
+      "applicationsOpen": 233,
+      "scoreOpen": 147,
+      "applicationsOpenP12Total": 90,
+      "applicationsOpenP12": 90,
+      "scoreOpenP12": 145.5,
       "rank": 26
     },
     {
@@ -406,6 +562,12 @@
       "applicationsP12Total": 12,
       "applicationsP12": 12,
       "scoreP12": 153,
+      "applicationsOpenTotal": 23,
+      "applicationsOpen": 23,
+      "scoreOpen": 147,
+      "applicationsOpenP12Total": 9,
+      "applicationsOpenP12": 9,
+      "scoreOpenP12": 154.7,
       "rank": 27
     },
     {
@@ -421,6 +583,12 @@
       "applicationsP12Total": 87,
       "applicationsP12": 87,
       "scoreP12": 144.2,
+      "applicationsOpenTotal": 203,
+      "applicationsOpen": 203,
+      "scoreOpen": 147.2,
+      "applicationsOpenP12Total": 74,
+      "applicationsOpenP12": 74,
+      "scoreOpenP12": 145.1,
       "rank": 28
     },
     {
@@ -436,6 +604,12 @@
       "applicationsP12Total": 17,
       "applicationsP12": 17,
       "scoreP12": 150,
+      "applicationsOpenTotal": 22,
+      "applicationsOpen": 22,
+      "scoreOpen": 145.7,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 151.5,
       "rank": 29
     },
     {
@@ -451,6 +625,12 @@
       "applicationsP12Total": 95,
       "applicationsP12": 95,
       "scoreP12": 146,
+      "applicationsOpenTotal": 167,
+      "applicationsOpen": 167,
+      "scoreOpen": 146.7,
+      "applicationsOpenP12Total": 81,
+      "applicationsOpenP12": 81,
+      "scoreOpenP12": 146.4,
       "rank": 30
     },
     {
@@ -466,6 +646,12 @@
       "applicationsP12Total": 36,
       "applicationsP12": 36,
       "scoreP12": 145.5,
+      "applicationsOpenTotal": 49,
+      "applicationsOpen": 49,
+      "scoreOpen": 147.7,
+      "applicationsOpenP12Total": 24,
+      "applicationsOpenP12": 24,
+      "scoreOpenP12": 146.8,
       "rank": 31
     },
     {
@@ -481,6 +667,12 @@
       "applicationsP12Total": 90,
       "applicationsP12": 90,
       "scoreP12": 144,
+      "applicationsOpenTotal": 206,
+      "applicationsOpen": 206,
+      "scoreOpen": 146,
+      "applicationsOpenP12Total": 90,
+      "applicationsOpenP12": 90,
+      "scoreOpenP12": 144,
       "rank": 32
     },
     {
@@ -496,6 +688,12 @@
       "applicationsP12Total": 85,
       "applicationsP12": 85,
       "scoreP12": 143.9,
+      "applicationsOpenTotal": 144,
+      "applicationsOpen": 144,
+      "scoreOpen": 147.2,
+      "applicationsOpenP12Total": 62,
+      "applicationsOpenP12": 62,
+      "scoreOpenP12": 145.7,
       "rank": 33
     },
     {
@@ -511,6 +709,12 @@
       "applicationsP12Total": 55,
       "applicationsP12": 55,
       "scoreP12": 142.5,
+      "applicationsOpenTotal": 117,
+      "applicationsOpen": 117,
+      "scoreOpen": 146.1,
+      "applicationsOpenP12Total": 48,
+      "applicationsOpenP12": 48,
+      "scoreOpenP12": 143.4,
       "rank": 34
     },
     {
@@ -526,6 +730,12 @@
       "applicationsP12Total": 20,
       "applicationsP12": 20,
       "scoreP12": 147.7,
+      "applicationsOpenTotal": 51,
+      "applicationsOpen": 51,
+      "scoreOpen": 145.3,
+      "applicationsOpenP12Total": 20,
+      "applicationsOpenP12": 20,
+      "scoreOpenP12": 147.7,
       "rank": 35
     },
     {
@@ -541,6 +751,12 @@
       "applicationsP12Total": 128,
       "applicationsP12": 64,
       "scoreP12": 147,
+      "applicationsOpenTotal": 233,
+      "applicationsOpen": 116.5,
+      "scoreOpen": 145.4,
+      "applicationsOpenP12Total": 105,
+      "applicationsOpenP12": 52.5,
+      "scoreOpenP12": 148.2,
       "rank": 36
     },
     {
@@ -556,6 +772,12 @@
       "applicationsP12Total": 26,
       "applicationsP12": 26,
       "scoreP12": 147.2,
+      "applicationsOpenTotal": 169,
+      "applicationsOpen": 169,
+      "scoreOpen": 144.5,
+      "applicationsOpenP12Total": 23,
+      "applicationsOpenP12": 23,
+      "scoreOpenP12": 148,
       "rank": 37
     },
     {
@@ -571,6 +793,12 @@
       "applicationsP12Total": 89,
       "applicationsP12": 89,
       "scoreP12": 145.2,
+      "applicationsOpenTotal": 235,
+      "applicationsOpen": 235,
+      "scoreOpen": 144.3,
+      "applicationsOpenP12Total": 89,
+      "applicationsOpenP12": 89,
+      "scoreOpenP12": 145.2,
       "rank": 38
     },
     {
@@ -586,6 +814,12 @@
       "applicationsP12Total": 49,
       "applicationsP12": 49,
       "scoreP12": 142.6,
+      "applicationsOpenTotal": 104,
+      "applicationsOpen": 104,
+      "scoreOpen": 144.2,
+      "applicationsOpenP12Total": 49,
+      "applicationsOpenP12": 49,
+      "scoreOpenP12": 142.6,
       "rank": 39
     },
     {
@@ -601,6 +835,12 @@
       "applicationsP12Total": 45,
       "applicationsP12": 45,
       "scoreP12": 141,
+      "applicationsOpenTotal": 84,
+      "applicationsOpen": 84,
+      "scoreOpen": 144.1,
+      "applicationsOpenP12Total": 33,
+      "applicationsOpenP12": 33,
+      "scoreOpenP12": 141.7,
       "rank": 40
     },
     {
@@ -616,6 +856,12 @@
       "applicationsP12Total": 89,
       "applicationsP12": 89,
       "scoreP12": 141.8,
+      "applicationsOpenTotal": 182,
+      "applicationsOpen": 182,
+      "scoreOpen": 143.2,
+      "applicationsOpenP12Total": 89,
+      "applicationsOpenP12": 89,
+      "scoreOpenP12": 141.8,
       "rank": 41
     },
     {
@@ -631,6 +877,12 @@
       "applicationsP12Total": 191,
       "applicationsP12": 191,
       "scoreP12": 144.1,
+      "applicationsOpenTotal": 364,
+      "applicationsOpen": 364,
+      "scoreOpen": 143.7,
+      "applicationsOpenP12Total": 179,
+      "applicationsOpenP12": 179,
+      "scoreOpenP12": 144.9,
       "rank": 42
     },
     {
@@ -646,6 +898,12 @@
       "applicationsP12Total": 24,
       "applicationsP12": 24,
       "scoreP12": 139.5,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 43
     },
     {
@@ -661,6 +919,12 @@
       "applicationsP12Total": 93,
       "applicationsP12": 93,
       "scoreP12": 143.7,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 44
     },
     {
@@ -676,6 +940,12 @@
       "applicationsP12Total": 68,
       "applicationsP12": 68,
       "scoreP12": 141.3,
+      "applicationsOpenTotal": 132,
+      "applicationsOpen": 132,
+      "scoreOpen": 142,
+      "applicationsOpenP12Total": 62,
+      "applicationsOpenP12": 62,
+      "scoreOpenP12": 141.7,
       "rank": 45
     },
     {
@@ -691,6 +961,12 @@
       "applicationsP12Total": 40,
       "applicationsP12": 40,
       "scoreP12": 141.2,
+      "applicationsOpenTotal": 82,
+      "applicationsOpen": 82,
+      "scoreOpen": 141,
+      "applicationsOpenP12Total": 30,
+      "applicationsOpenP12": 30,
+      "scoreOpenP12": 142.3,
       "rank": 46
     },
     {
@@ -706,6 +982,12 @@
       "applicationsP12Total": 58,
       "applicationsP12": 58,
       "scoreP12": 140.6,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 47
     },
     {
@@ -721,6 +1003,12 @@
       "applicationsP12Total": 44,
       "applicationsP12": 44,
       "scoreP12": 138.9,
+      "applicationsOpenTotal": 107,
+      "applicationsOpen": 107,
+      "scoreOpen": 140.4,
+      "applicationsOpenP12Total": 44,
+      "applicationsOpenP12": 44,
+      "scoreOpenP12": 138.9,
       "rank": 48
     },
     {
@@ -736,6 +1024,12 @@
       "applicationsP12Total": 56,
       "applicationsP12": 56,
       "scoreP12": 138.9,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 49
     },
     {
@@ -751,6 +1045,12 @@
       "applicationsP12Total": 62,
       "applicationsP12": 62,
       "scoreP12": 138.8,
+      "applicationsOpenTotal": 86,
+      "applicationsOpen": 86,
+      "scoreOpen": 139.4,
+      "applicationsOpenP12Total": 44,
+      "applicationsOpenP12": 44,
+      "scoreOpenP12": 139.8,
       "rank": 50
     },
     {
@@ -766,6 +1066,12 @@
       "applicationsP12Total": 30,
       "applicationsP12": 30,
       "scoreP12": 135.6,
+      "applicationsOpenTotal": 57,
+      "applicationsOpen": 57,
+      "scoreOpen": 137.6,
+      "applicationsOpenP12Total": 30,
+      "applicationsOpenP12": 30,
+      "scoreOpenP12": 135.6,
       "rank": 51
     },
     {
@@ -781,6 +1087,12 @@
       "applicationsP12Total": 12,
       "applicationsP12": 12,
       "scoreP12": 140.2,
+      "applicationsOpenTotal": 23,
+      "applicationsOpen": 23,
+      "scoreOpen": 140.4,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 143.9,
       "rank": 52
     },
     {
@@ -796,6 +1108,12 @@
       "applicationsP12Total": 71,
       "applicationsP12": 71,
       "scoreP12": 137.3,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 53
     },
     {
@@ -811,6 +1129,12 @@
       "applicationsP12Total": 37,
       "applicationsP12": 37,
       "scoreP12": 134.9,
+      "applicationsOpenTotal": 71,
+      "applicationsOpen": 71,
+      "scoreOpen": 137.5,
+      "applicationsOpenP12Total": 32,
+      "applicationsOpenP12": 32,
+      "scoreOpenP12": 135.2,
       "rank": 54
     },
     {
@@ -826,6 +1150,12 @@
       "applicationsP12Total": 30,
       "applicationsP12": 30,
       "scoreP12": 135.7,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 55
     },
     {
@@ -841,6 +1171,12 @@
       "applicationsP12Total": 24,
       "applicationsP12": 24,
       "scoreP12": 132.4,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 56
     },
     {
@@ -856,6 +1192,12 @@
       "applicationsP12Total": 8,
       "applicationsP12": 8,
       "scoreP12": 141.5,
+      "applicationsOpenTotal": 25,
+      "applicationsOpen": 25,
+      "scoreOpen": 143.1,
+      "applicationsOpenP12Total": 7,
+      "applicationsOpenP12": 7,
+      "scoreOpenP12": 143.1,
       "rank": 57
     }
   ],
@@ -873,6 +1215,12 @@
       "applicationsP12Total": 8,
       "applicationsP12": 8,
       "scoreP12": 180.7,
+      "applicationsOpenTotal": 16,
+      "applicationsOpen": 16,
+      "scoreOpen": 176.1,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 180.7,
       "rank": 1
     },
     {
@@ -888,6 +1236,12 @@
       "applicationsP12Total": 0,
       "applicationsP12": 0,
       "scoreP12": null,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 2
     },
     {
@@ -903,6 +1257,12 @@
       "applicationsP12Total": 36,
       "applicationsP12": 36,
       "scoreP12": 169.5,
+      "applicationsOpenTotal": 96,
+      "applicationsOpen": 96,
+      "scoreOpen": 157.4,
+      "applicationsOpenP12Total": 36,
+      "applicationsOpenP12": 36,
+      "scoreOpenP12": 169.5,
       "rank": 3
     },
     {
@@ -918,6 +1278,12 @@
       "applicationsP12Total": 113,
       "applicationsP12": 28.3,
       "scoreP12": 171.2,
+      "applicationsOpenTotal": 313,
+      "applicationsOpen": 78.3,
+      "scoreOpen": 159.9,
+      "applicationsOpenP12Total": 113,
+      "applicationsOpenP12": 28.3,
+      "scoreOpenP12": 171.2,
       "rank": 4
     },
     {
@@ -933,6 +1299,12 @@
       "applicationsP12Total": 8,
       "applicationsP12": 8,
       "scoreP12": 150.3,
+      "applicationsOpenTotal": 12,
+      "applicationsOpen": 12,
+      "scoreOpen": 149.3,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 150.3,
       "rank": 5
     },
     {
@@ -948,6 +1320,12 @@
       "applicationsP12Total": 18,
       "applicationsP12": 18,
       "scoreP12": 157.5,
+      "applicationsOpenTotal": 54,
+      "applicationsOpen": 54,
+      "scoreOpen": 153.9,
+      "applicationsOpenP12Total": 18,
+      "applicationsOpenP12": 18,
+      "scoreOpenP12": 157.5,
       "rank": 6
     },
     {
@@ -963,6 +1341,12 @@
       "applicationsP12Total": 3,
       "applicationsP12": 3,
       "scoreP12": 171.6,
+      "applicationsOpenTotal": 15,
+      "applicationsOpen": 15,
+      "scoreOpen": 158.3,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 171.6,
       "rank": 7
     },
     {
@@ -978,6 +1362,12 @@
       "applicationsP12Total": 57,
       "applicationsP12": 19,
       "scoreP12": 163.7,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 8
     },
     {
@@ -993,6 +1383,12 @@
       "applicationsP12Total": 3,
       "applicationsP12": 3,
       "scoreP12": 161.3,
+      "applicationsOpenTotal": 12,
+      "applicationsOpen": 12,
+      "scoreOpen": 150.3,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 161.3,
       "rank": 9
     },
     {
@@ -1008,6 +1404,12 @@
       "applicationsP12Total": 60,
       "applicationsP12": 30,
       "scoreP12": 167.2,
+      "applicationsOpenTotal": 173,
+      "applicationsOpen": 86.5,
+      "scoreOpen": 154.3,
+      "applicationsOpenP12Total": 60,
+      "applicationsOpenP12": 30,
+      "scoreOpenP12": 167.2,
       "rank": 10
     },
     {
@@ -1023,6 +1425,12 @@
       "applicationsP12Total": 4,
       "applicationsP12": 4,
       "scoreP12": 171.2,
+      "applicationsOpenTotal": 25,
+      "applicationsOpen": 25,
+      "scoreOpen": 148.3,
+      "applicationsOpenP12Total": 4,
+      "applicationsOpenP12": 4,
+      "scoreOpenP12": 171.2,
       "rank": 11
     },
     {
@@ -1038,6 +1446,12 @@
       "applicationsP12Total": 2,
       "applicationsP12": 2,
       "scoreP12": 160.1,
+      "applicationsOpenTotal": 14,
+      "applicationsOpen": 14,
+      "scoreOpen": 153.7,
+      "applicationsOpenP12Total": 2,
+      "applicationsOpenP12": 2,
+      "scoreOpenP12": 160.1,
       "rank": 12
     },
     {
@@ -1053,6 +1467,12 @@
       "applicationsP12Total": 10,
       "applicationsP12": 10,
       "scoreP12": 160.3,
+      "applicationsOpenTotal": 36,
+      "applicationsOpen": 36,
+      "scoreOpen": 147.7,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 160.3,
       "rank": 13
     },
     {
@@ -1068,6 +1488,12 @@
       "applicationsP12Total": 6,
       "applicationsP12": 6,
       "scoreP12": 157.9,
+      "applicationsOpenTotal": 15,
+      "applicationsOpen": 15,
+      "scoreOpen": 149.5,
+      "applicationsOpenP12Total": 6,
+      "applicationsOpenP12": 6,
+      "scoreOpenP12": 157.9,
       "rank": 14
     },
     {
@@ -1083,6 +1509,12 @@
       "applicationsP12Total": 9,
       "applicationsP12": 9,
       "scoreP12": 165.7,
+      "applicationsOpenTotal": 31,
+      "applicationsOpen": 31,
+      "scoreOpen": 149.7,
+      "applicationsOpenP12Total": 9,
+      "applicationsOpenP12": 9,
+      "scoreOpenP12": 165.7,
       "rank": 15
     },
     {
@@ -1098,6 +1530,12 @@
       "applicationsP12Total": 5,
       "applicationsP12": 5,
       "scoreP12": 158.9,
+      "applicationsOpenTotal": 14,
+      "applicationsOpen": 14,
+      "scoreOpen": 147.2,
+      "applicationsOpenP12Total": 5,
+      "applicationsOpenP12": 5,
+      "scoreOpenP12": 158.9,
       "rank": 16
     },
     {
@@ -1113,6 +1551,12 @@
       "applicationsP12Total": 10,
       "applicationsP12": 10,
       "scoreP12": 162.5,
+      "applicationsOpenTotal": 55,
+      "applicationsOpen": 55,
+      "scoreOpen": 152.5,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 162.5,
       "rank": 17
     },
     {
@@ -1128,6 +1572,12 @@
       "applicationsP12Total": 6,
       "applicationsP12": 6,
       "scoreP12": 157.5,
+      "applicationsOpenTotal": 22,
+      "applicationsOpen": 22,
+      "scoreOpen": 148.2,
+      "applicationsOpenP12Total": 6,
+      "applicationsOpenP12": 6,
+      "scoreOpenP12": 157.5,
       "rank": 18
     },
     {
@@ -1143,6 +1593,12 @@
       "applicationsP12Total": 3,
       "applicationsP12": 3,
       "scoreP12": 163.2,
+      "applicationsOpenTotal": 17,
+      "applicationsOpen": 17,
+      "scoreOpen": 146.1,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 163.2,
       "rank": 19
     },
     {
@@ -1158,6 +1614,12 @@
       "applicationsP12Total": 4,
       "applicationsP12": 4,
       "scoreP12": 163.1,
+      "applicationsOpenTotal": 35,
+      "applicationsOpen": 35,
+      "scoreOpen": 145,
+      "applicationsOpenP12Total": 4,
+      "applicationsOpenP12": 4,
+      "scoreOpenP12": 163.1,
       "rank": 20
     },
     {
@@ -1173,6 +1635,12 @@
       "applicationsP12Total": 6,
       "applicationsP12": 6,
       "scoreP12": 150.3,
+      "applicationsOpenTotal": 13,
+      "applicationsOpen": 13,
+      "scoreOpen": 150.2,
+      "applicationsOpenP12Total": 6,
+      "applicationsOpenP12": 6,
+      "scoreOpenP12": 150.3,
       "rank": 21
     },
     {
@@ -1188,6 +1656,12 @@
       "applicationsP12Total": 4,
       "applicationsP12": 4,
       "scoreP12": 172.2,
+      "applicationsOpenTotal": 17,
+      "applicationsOpen": 17,
+      "scoreOpen": 144.8,
+      "applicationsOpenP12Total": 4,
+      "applicationsOpenP12": 4,
+      "scoreOpenP12": 172.2,
       "rank": 22
     },
     {
@@ -1203,6 +1677,12 @@
       "applicationsP12Total": 6,
       "applicationsP12": 6,
       "scoreP12": 161.5,
+      "applicationsOpenTotal": 42,
+      "applicationsOpen": 42,
+      "scoreOpen": 146.9,
+      "applicationsOpenP12Total": 6,
+      "applicationsOpenP12": 6,
+      "scoreOpenP12": 161.5,
       "rank": 23
     },
     {
@@ -1218,6 +1698,12 @@
       "applicationsP12Total": 5,
       "applicationsP12": 5,
       "scoreP12": 153,
+      "applicationsOpenTotal": 25,
+      "applicationsOpen": 25,
+      "scoreOpen": 142.9,
+      "applicationsOpenP12Total": 5,
+      "applicationsOpenP12": 5,
+      "scoreOpenP12": 153,
       "rank": 24
     },
     {
@@ -1233,6 +1719,12 @@
       "applicationsP12Total": 5,
       "applicationsP12": 5,
       "scoreP12": 164.4,
+      "applicationsOpenTotal": 35,
+      "applicationsOpen": 35,
+      "scoreOpen": 143.4,
+      "applicationsOpenP12Total": 5,
+      "applicationsOpenP12": 5,
+      "scoreOpenP12": 164.4,
       "rank": 25
     },
     {
@@ -1248,6 +1740,12 @@
       "applicationsP12Total": 7,
       "applicationsP12": 7,
       "scoreP12": 155.3,
+      "applicationsOpenTotal": 27,
+      "applicationsOpen": 27,
+      "scoreOpen": 143.8,
+      "applicationsOpenP12Total": 7,
+      "applicationsOpenP12": 7,
+      "scoreOpenP12": 155.3,
       "rank": 26
     },
     {
@@ -1263,6 +1761,12 @@
       "applicationsP12Total": 9,
       "applicationsP12": 9,
       "scoreP12": 148.1,
+      "applicationsOpenTotal": 29,
+      "applicationsOpen": 29,
+      "scoreOpen": 140.3,
+      "applicationsOpenP12Total": 9,
+      "applicationsOpenP12": 9,
+      "scoreOpenP12": 148.1,
       "rank": 27
     },
     {
@@ -1278,6 +1782,12 @@
       "applicationsP12Total": 1,
       "applicationsP12": 1,
       "scoreP12": 166.2,
+      "applicationsOpenTotal": 8,
+      "applicationsOpen": 8,
+      "scoreOpen": 146.2,
+      "applicationsOpenP12Total": 1,
+      "applicationsOpenP12": 1,
+      "scoreOpenP12": 166.2,
       "rank": 28
     },
     {
@@ -1293,6 +1803,12 @@
       "applicationsP12Total": 0,
       "applicationsP12": 0,
       "scoreP12": null,
+      "applicationsOpenTotal": 26,
+      "applicationsOpen": 26,
+      "scoreOpen": 142.3,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 29
     },
     {
@@ -1308,6 +1824,12 @@
       "applicationsP12Total": 5,
       "applicationsP12": 5,
       "scoreP12": 155.6,
+      "applicationsOpenTotal": 15,
+      "applicationsOpen": 15,
+      "scoreOpen": 143.3,
+      "applicationsOpenP12Total": 5,
+      "applicationsOpenP12": 5,
+      "scoreOpenP12": 155.6,
       "rank": 30
     },
     {
@@ -1323,6 +1845,12 @@
       "applicationsP12Total": 2,
       "applicationsP12": 2,
       "scoreP12": 151.9,
+      "applicationsOpenTotal": 5,
+      "applicationsOpen": 5,
+      "scoreOpen": 153.8,
+      "applicationsOpenP12Total": 2,
+      "applicationsOpenP12": 2,
+      "scoreOpenP12": 151.9,
       "rank": 31
     },
     {
@@ -1338,6 +1866,12 @@
       "applicationsP12Total": 0,
       "applicationsP12": 0,
       "scoreP12": null,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 32
     },
     {
@@ -1353,6 +1887,12 @@
       "applicationsP12Total": 0,
       "applicationsP12": 0,
       "scoreP12": null,
+      "applicationsOpenTotal": 0,
+      "applicationsOpen": 0,
+      "scoreOpen": null,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 33
     },
     {
@@ -1368,6 +1908,12 @@
       "applicationsP12Total": 3,
       "applicationsP12": 3,
       "scoreP12": 155.9,
+      "applicationsOpenTotal": 23,
+      "applicationsOpen": 23,
+      "scoreOpen": 138.6,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 155.9,
       "rank": 34
     },
     {
@@ -1383,6 +1929,12 @@
       "applicationsP12Total": 2,
       "applicationsP12": 2,
       "scoreP12": 157.2,
+      "applicationsOpenTotal": 14,
+      "applicationsOpen": 14,
+      "scoreOpen": 135.1,
+      "applicationsOpenP12Total": 2,
+      "applicationsOpenP12": 2,
+      "scoreOpenP12": 157.2,
       "rank": 35
     },
     {
@@ -1398,6 +1950,12 @@
       "applicationsP12Total": 0,
       "applicationsP12": 0,
       "scoreP12": null,
+      "applicationsOpenTotal": 3,
+      "applicationsOpen": 3,
+      "scoreOpen": 149.3,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null,
       "rank": 36
     },
     {
@@ -1413,6 +1971,12 @@
       "applicationsP12Total": 19,
       "applicationsP12": 19,
       "scoreP12": 153.2,
+      "applicationsOpenTotal": 43,
+      "applicationsOpen": 43,
+      "scoreOpen": 150.1,
+      "applicationsOpenP12Total": 19,
+      "applicationsOpenP12": 19,
+      "scoreOpenP12": 153.2,
       "rank": 37
     }
   ],
@@ -1427,5 +1991,9 @@
   "totalApplicationsP12": {
     "bachelor": 6691,
     "master": 439
+  },
+  "totalApplicationsOpen": {
+    "bachelor": 11984,
+    "master": 1280
   }
 }
