@@ -1,0 +1,20 @@
+name: Diagnose meaning of ustn=Фіксована across years
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. З'ясовує, чи
+# ustn="Фіксована" завжди означає пільгову квоту, чи в роках без
+# "Відкрита" (2021-2022, магістратура) це був просто тодішній звичайний
+# механізм держзамовлення.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-fiksovana-meaning.mjs
+        timeout-minutes: 10
