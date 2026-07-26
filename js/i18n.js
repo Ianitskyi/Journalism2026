@@ -43,7 +43,7 @@ const I18N = {
     },
     filter: {
       priorityOnly: "Показати лише заяви 1 та 2 пріоритету",
-      budgetOnly: "Показати лише бюджет (відкритий конкурс, без пільг)"
+      budgetOnly: "Лише бюджет (без пільг)"
     },
     search: {
       placeholder: "Знайти заклад освіти…"
@@ -179,7 +179,7 @@ const I18N = {
     },
     filter: {
       priorityOnly: "Show only 1st and 2nd priority applications",
-      budgetOnly: "Show only budget (open competition, no quotas)"
+      budgetOnly: "Budget only (no quotas)"
     },
     search: {
       placeholder: "Find an institution…"
