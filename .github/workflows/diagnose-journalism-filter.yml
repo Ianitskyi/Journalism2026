@@ -46,11 +46,22 @@ jobs:
           )
           fail=0
           for u in "${urls[@]}"; do
-            code=$(curl -s -o /dev/null -L -w "%{http_code}" --max-time 20 "$u")
-            ctype=$(curl -s -o /dev/null -L -w "%{content_type}" --max-time 20 "$u")
+            for attempt in 1 2 3 4 5; do
+              result=$(curl -s -o /dev/null -L --max-time 20 -w "%{http_code} %{content_type}" "$u")
+              code=$(echo "$result" | cut -d' ' -f1)
+              ctype=$(echo "$result" | cut -d' ' -f2-)
+              if [ "$code" = "429" ]; then
+                wait=$((attempt * 3))
+                echo "  429, чекаю ${wait}с (спроба $attempt/5): $u"
+                sleep "$wait"
+                continue
+              fi
+              break
+            done
             echo "$code $ctype  $u"
             if [ "$code" != "200" ]; then fail=1; fi
             case "$ctype" in image/*) ;; *) echo "  !! NOT AN IMAGE content-type"; fail=1;; esac
+            sleep 1.5
           done
           if [ "$fail" = "1" ]; then echo "SOME URLS FAILED"; exit 1; fi
           echo "ALL 23 URLS OK"
