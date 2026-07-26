@@ -250,7 +250,9 @@ a { color: inherit; }
 
 .priority-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 10px 24px;
   margin-bottom: 16px;
 }
 

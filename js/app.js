@@ -6,20 +6,34 @@ const state = {
   year: DEFAULT_YEAR,
   dateIndex: DB.byYear[DEFAULT_YEAR].dates.length - 1,
   expanded: false,
-  priorityOnly: false
+  priorityOnly: false,
+  budgetOnly: false
 };
 
-/* коли увімкнено фільтр "лише 1-2 пріоритет", підміняємо score/applications/
-   applicationsTotal на їхні P12-відповідники — решта пайплайну (сортування,
-   рендер, фарбування тренду) далі працює з тими самими назвами полів,
-   нічого не знаючи про сам перемикач */
-function withPriorityView(rawRows) {
-  if (!state.priorityOnly) return rawRows;
+/* два незалежні перемикачі ("лише 1-2 пріоритет" і "лише бюджет —
+   відкритий конкурс, без пільг") комбінуються через суфікс назви поля:
+   "" / "P12" / "Open" / "OpenP12" — рядки даних уже містять усі 4
+   комбінації (applications<suffix>, applications<suffix>Total,
+   score<suffix>), рахуються в scripts/fetch-edbo-history.mjs. Той самий
+   суфікс мапиться на людський i18n-суфікс ("Budget"/"Priority") нижче. */
+function metricSuffix() {
+  return (state.budgetOnly ? "Open" : "") + (state.priorityOnly ? "P12" : "");
+}
+
+const SUFFIX_TO_LABEL = { "": "", Open: "Budget", P12: "Priority", OpenP12: "BudgetPriority" };
+
+/* підміняє score/applications/applicationsTotal на відповідники обраної
+   комбінації фільтрів — решта пайплайну (сортування, рендер, фарбування
+   тренду) далі працює з тими самими назвами полів, нічого не знаючи про
+   самі перемикачі */
+function withFilteredView(rawRows) {
+  const suffix = metricSuffix();
+  if (!suffix) return rawRows;
   return rawRows.map((r) => ({
     ...r,
-    score: r.scoreP12 ?? null,
-    applications: r.applicationsP12 ?? 0,
-    applicationsTotal: r.applicationsP12Total ?? 0
+    score: r[`score${suffix}`] ?? null,
+    applications: r[`applications${suffix}`] ?? 0,
+    applicationsTotal: r[`applications${suffix}Total`] ?? 0
   }));
 }
 
@@ -43,7 +57,8 @@ function prevYearValue(id, degree, metric, year) {
   const snap = yd.snapshots[yd.dates[yd.dates.length - 1]];
   const row = (snap[degree] || []).find((r) => r.id === id);
   if (!row) return null;
-  if (state.priorityOnly && metric === "applications") return row.applicationsP12 ?? 0;
+  const suffix = metricSuffix();
+  if (suffix && metric === "applications") return row[`applications${suffix}`] ?? 0;
   return row[metric];
 }
 
@@ -100,7 +115,8 @@ function currentSnapshot() {
 }
 
 function renderStats(snap, rows) {
-  const totals = (state.priorityOnly ? snap.totalApplicationsP12 : snap.totalApplications) || {};
+  const suffix = metricSuffix();
+  const totals = (suffix ? snap[`totalApplications${suffix}`] : snap.totalApplications) || {};
   document.getElementById("stat-submitted").textContent =
     numFmt().format(totals[state.degree] || 0);
   document.getElementById("stat-count").textContent = rows.length;
@@ -172,12 +188,13 @@ function yearSnapshot(year) {
    по всіх закладах), за всі роки, що є в DB. Середній бал тут навмисно
    не рахуємо — формула конкурсного бала змінювалась рік від року, тож
    безперервна крива по роках була б оманливою (див. методологію) */
-function systemWideTrend(degree, usePriority) {
+function systemWideTrend(degree) {
+  const suffix = metricSuffix();
   return DB.years.map((year) => {
     const snap = yearSnapshot(year);
     const rows = snap[degree] || [];
     const totalApps = rows.reduce((s, r) => {
-      const v = usePriority ? (r.applicationsP12Total ?? 0) : (r.applicationsTotal ?? r.applications ?? 0);
+      const v = suffix ? (r[`applications${suffix}Total`] ?? 0) : (r.applicationsTotal ?? r.applications ?? 0);
       return s + v;
     }, 0);
     const totalPrograms = rows.reduce((s, r) => s + (r.programCount ?? (r.applications != null ? 1 : 0)), 0);
@@ -258,12 +275,13 @@ function renderSystemChartLegend(containerId) {
 }
 
 function renderSystemCharts() {
-  const bachelorTrend = systemWideTrend("bachelor", state.priorityOnly);
-  const masterTrend = systemWideTrend("master", state.priorityOnly);
+  const bachelorTrend = systemWideTrend("bachelor");
+  const masterTrend = systemWideTrend("master");
   const yearVars = { from: DB.years[0], to: DB.years[DB.years.length - 1] };
 
+  const labelSuffix = SUFFIX_TO_LABEL[metricSuffix()];
   document.getElementById("system-chart-apps-title").textContent =
-    t(state.priorityOnly ? "systemChart.appsTitlePriority" : "systemChart.appsTitle", yearVars);
+    t(`systemChart.appsTitle${labelSuffix}`, yearVars);
   document.getElementById("system-chart-apps").innerHTML = buildSystemChartSVG(bachelorTrend, masterTrend, "avgApplicationsPerProgram");
   renderSystemChartLegend("system-chart-apps-legend");
 }
@@ -271,16 +289,17 @@ function renderSystemCharts() {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
-  const rawRows = withPriorityView(snap[state.degree]);
+  const rawRows = withFilteredView(snap[state.degree]);
   const rows = sortedRows(rawRows, state.sortBy);
   const displayRows = [...rows, ...placeholderRows(rows, state.degree)];
   const uniRegistry = DB.allUniversitiesMeta();
   const isFinal = state.year !== DB.currentYear;
   const minApps = DB.minApplications[state.degree];
 
+  const labelSuffix = SUFFIX_TO_LABEL[metricSuffix()];
   document.getElementById("caption").textContent = isFinal
-    ? t(state.priorityOnly ? "caption.finalPriority" : "caption.final", { year: state.year, minApps })
-    : t(state.priorityOnly ? "caption.livePriority" : "caption.live", { date: fmtDateUA(snap.date), minApps });
+    ? t(`caption.final${labelSuffix}`, { year: state.year, minApps })
+    : t(`caption.live${labelSuffix}`, { date: fmtDateUA(snap.date), minApps });
 
   document.getElementById("card-subtitle").textContent =
     `${t(state.degree === "bachelor" ? "degree.bachelorLabel" : "degree.masterLabel")} · ${state.year}`;
@@ -391,6 +410,17 @@ function initPriorityToggle() {
   });
 }
 
+function initBudgetToggle() {
+  const input = document.getElementById("budget-toggle-input");
+  if (!input) return;
+  input.addEventListener("change", () => {
+    state.budgetOnly = input.checked;
+    state.expanded = false;
+    render();
+    renderSystemCharts();
+  });
+}
+
 function initShowAll() {
   document.getElementById("show-all").addEventListener("click", () => {
     state.expanded = !state.expanded;
@@ -433,6 +463,7 @@ function initUniSearch() {
 initTabs();
 initSortTabs();
 initPriorityToggle();
+initBudgetToggle();
 initShowAll();
 initUniSearch();
 window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); };

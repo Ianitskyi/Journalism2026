@@ -17,11 +17,18 @@
  *        region, education_form, course}
  *     → {universities: [{uid, un, ids: "1,2,3", n}, ...]}
  *   POST /offers-list/ {ids: "1,2,3,..."}
- *     → {offers: [{uid, un, qid, qn, ssc, ssn, st: {c: {t, ka, km, kx, ...}}}]}
+ *     → {offers: [{uid, un, qid, qn, ssc, ssn, ustn, st: {c: {t, ka, km, kx, ...}}}]}
  * де st.c.t — кількість заяв, st.c.ka — середній конкурсний бал по цій
  * конкурсній пропозиції. Один ЗВО може мати кілька пропозицій (форми
  * навчання, бюджет/контракт) для тієї самої спеціальності — агрегуємо їх
  * у одну сумарну кількість заяв і середньозважений бал.
+ *
+ * offer.ustn — тип конкурсної пропозиції (перевірено скриптом
+ * scripts/diagnose-budget-field.mjs на реальних даних 2025 року):
+ * "Відкрита" — звичайне бюджетне місце (відкритий конкурс), "Фіксована" —
+ * бюджетне місце за квотою/пільгою, "Небюджетна" — контрактне (платне)
+ * місце. Для фільтра "лише бюджет" нас цікавить строго "Відкрита" —
+ * заклад сам просив рахувати без пільгових/фіксованих місць.
  */
 
 import { writeFile, mkdir } from "node:fs/promises";
@@ -268,19 +275,33 @@ async function fetchLevelData(base, level, year) {
     if (!byUid.has(uid)) {
       byUid.set(uid, {
         uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programNames: new Set(),
-        p12ApplicationsTotal: 0, p12ScoreSum: 0
+        p12ApplicationsTotal: 0, p12ScoreSum: 0,
+        openApplicationsTotal: 0, openWeightedScoreSum: 0,
+        openP12ApplicationsTotal: 0, openP12ScoreSum: 0
       });
     }
     const rec = byUid.get(uid);
+    // "лише бюджет" = строго відкритий конкурс (ustn "Відкрита"), без
+    // пільгових/фіксованих місць ("Фіксована") і без контракту
+    // ("Небюджетна") — див. коментар на початку файлу.
+    const isOpen = offer.ustn === "Відкрита";
     if (Number.isFinite(ka)) rec.weightedScoreSum += ka * t;
     rec.applicationsTotal += t;
     rec.admitted += a;
     rec.programNames.add(offer.spn);
+    if (isOpen) {
+      rec.openApplicationsTotal += t;
+      if (Number.isFinite(ka)) rec.openWeightedScoreSum += ka * t;
+    }
 
     try {
       const priority = await fetchOfferPriorityStats(base, offer.usid);
       rec.p12ApplicationsTotal += priority.p12Count;
       rec.p12ScoreSum += priority.p12ScoreSum;
+      if (isOpen) {
+        rec.openP12ApplicationsTotal += priority.p12Count;
+        rec.openP12ScoreSum += priority.p12ScoreSum;
+      }
       if (priority.total !== t) {
         log(`  ! usid=${offer.usid} (${offer.un}, ${offer.spn}): /offer-requests/ дав ${priority.total} записів, а st.c.t=${t}`);
       }
@@ -306,7 +327,13 @@ async function fetchLevelData(base, level, year) {
       admitted: rec.admitted,
       applicationsP12Total: rec.p12ApplicationsTotal,
       applicationsP12: Math.round((rec.p12ApplicationsTotal / programCount) * 10) / 10,
-      scoreP12: rec.p12ApplicationsTotal > 0 ? Math.round((rec.p12ScoreSum / rec.p12ApplicationsTotal) * 10) / 10 : null
+      scoreP12: rec.p12ApplicationsTotal > 0 ? Math.round((rec.p12ScoreSum / rec.p12ApplicationsTotal) * 10) / 10 : null,
+      applicationsOpenTotal: rec.openApplicationsTotal,
+      applicationsOpen: Math.round((rec.openApplicationsTotal / programCount) * 10) / 10,
+      scoreOpen: rec.openApplicationsTotal > 0 ? Math.round((rec.openWeightedScoreSum / rec.openApplicationsTotal) * 10) / 10 : null,
+      applicationsOpenP12Total: rec.openP12ApplicationsTotal,
+      applicationsOpenP12: Math.round((rec.openP12ApplicationsTotal / programCount) * 10) / 10,
+      scoreOpenP12: rec.openP12ApplicationsTotal > 0 ? Math.round((rec.openP12ScoreSum / rec.openP12ApplicationsTotal) * 10) / 10 : null
     });
   }
 
@@ -325,6 +352,10 @@ function sumAdmitted(rows) {
 
 function sumAppsP12(rows) {
   return rows.reduce((s, r) => s + (r.applicationsP12Total || 0), 0);
+}
+
+function sumAppsOpen(rows) {
+  return rows.reduce((s, r) => s + (r.applicationsOpenTotal || 0), 0);
 }
 
 async function fetchYear(year) {
@@ -360,6 +391,10 @@ async function fetchYear(year) {
     totalApplicationsP12: {
       bachelor: sumAppsP12(bachelor),
       master: sumAppsP12(master)
+    },
+    totalApplicationsOpen: {
+      bachelor: sumAppsOpen(bachelor),
+      master: sumAppsOpen(master)
     }
   };
 }
