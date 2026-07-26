@@ -42,7 +42,7 @@ const I18N = {
       applications: "Заявами на програму"
     },
     filter: {
-      priorityOnly: "Показати лише заяви 1 та 2 пріоритету",
+      priorityOnly: "Лише 1 та 2 пріоритет",
       budgetOnly: "Лише бюджет"
     },
     search: {
@@ -178,7 +178,7 @@ const I18N = {
       applications: "Applications per program"
     },
     filter: {
-      priorityOnly: "Show only 1st and 2nd priority applications",
+      priorityOnly: "1st & 2nd priority only",
       budgetOnly: "Budget only"
     },
     search: {
