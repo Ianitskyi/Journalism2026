@@ -1,0 +1,21 @@
+name: Diagnose budget/contract field in EDBO offers
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Запускає
+# scripts/diagnose-budget-field.mjs на раннері з доступом до архівних
+# vstup<рік>.edbo.gov.ua, щоб у логах побачити, яке поле в об'єкті offer
+# відповідає за джерело фінансування (бюджет/контракт) — потрібно для
+# фільтра "лише бюджет".
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-budget-field.mjs
+        timeout-minutes: 15
