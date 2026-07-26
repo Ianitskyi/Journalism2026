@@ -244,9 +244,9 @@
       "applicationsTotal": 42,
       "programCount": 1,
       "admitted": 30,
-      "applicationsP12Total": 20,
-      "applicationsP12": 20,
-      "scoreP12": 149.1,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 149.8,
       "applicationsOpenTotal": 35,
       "applicationsOpen": 35,
       "scoreOpen": 151,
@@ -268,12 +268,12 @@
       "applicationsP12Total": 529,
       "applicationsP12": 264.5,
       "scoreP12": 150.2,
-      "applicationsOpenTotal": 0,
-      "applicationsOpen": 0,
-      "scoreOpen": null,
-      "applicationsOpenP12Total": 0,
-      "applicationsOpenP12": 0,
-      "scoreOpenP12": null,
+      "applicationsOpenTotal": 901,
+      "applicationsOpen": 450.5,
+      "scoreOpen": 151.3,
+      "applicationsOpenP12Total": 446,
+      "applicationsOpenP12": 223,
+      "scoreOpenP12": 151.4,
       "rank": 13
     },
     {
@@ -1233,9 +1233,9 @@
       "applicationsTotal": 25,
       "programCount": 1,
       "admitted": 23,
-      "applicationsP12Total": 0,
-      "applicationsP12": 0,
-      "scoreP12": null,
+      "applicationsP12Total": 25,
+      "applicationsP12": 25,
+      "scoreP12": 158.6,
       "applicationsOpenTotal": 0,
       "applicationsOpen": 0,
       "scoreOpen": null,
@@ -1362,12 +1362,12 @@
       "applicationsP12Total": 57,
       "applicationsP12": 19,
       "scoreP12": 163.7,
-      "applicationsOpenTotal": 0,
-      "applicationsOpen": 0,
-      "scoreOpen": null,
-      "applicationsOpenP12Total": 0,
-      "applicationsOpenP12": 0,
-      "scoreOpenP12": null,
+      "applicationsOpenTotal": 172,
+      "applicationsOpen": 57.3,
+      "scoreOpen": 152.4,
+      "applicationsOpenP12Total": 57,
+      "applicationsOpenP12": 19,
+      "scoreOpenP12": 163.7,
       "rank": 8
     },
     {
@@ -1863,9 +1863,9 @@
       "applicationsTotal": 27,
       "programCount": 1,
       "admitted": 23,
-      "applicationsP12Total": 0,
-      "applicationsP12": 0,
-      "scoreP12": null,
+      "applicationsP12Total": 27,
+      "applicationsP12": 27,
+      "scoreP12": 139.8,
       "applicationsOpenTotal": 0,
       "applicationsOpen": 0,
       "scoreOpen": null,
@@ -1884,9 +1884,9 @@
       "applicationsTotal": 23,
       "programCount": 1,
       "admitted": 20,
-      "applicationsP12Total": 0,
-      "applicationsP12": 0,
-      "scoreP12": null,
+      "applicationsP12Total": 23,
+      "applicationsP12": 23,
+      "scoreP12": 138.5,
       "applicationsOpenTotal": 0,
       "applicationsOpen": 0,
       "scoreOpen": null,
@@ -1947,15 +1947,15 @@
       "applicationsTotal": 17,
       "programCount": 1,
       "admitted": 13,
-      "applicationsP12Total": 0,
-      "applicationsP12": 0,
-      "scoreP12": null,
+      "applicationsP12Total": 17,
+      "applicationsP12": 17,
+      "scoreP12": 128.7,
       "applicationsOpenTotal": 3,
       "applicationsOpen": 3,
       "scoreOpen": 149.3,
-      "applicationsOpenP12Total": 0,
-      "applicationsOpenP12": 0,
-      "scoreOpenP12": null,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 149.3,
       "rank": 36
     },
     {
@@ -1989,15 +1989,15 @@
     "master": 1791
   },
   "totalApplicationsP12": {
-    "bachelor": 6691,
-    "master": 439
+    "bachelor": 6689,
+    "master": 531
   },
   "totalApplicationsOpen": {
-    "bachelor": 11984,
-    "master": 1280
+    "bachelor": 12885,
+    "master": 1452
   },
   "totalApplicationsOpenP12": {
-    "bachelor": 5187,
-    "master": 382
+    "bachelor": 5633,
+    "master": 442
   }
 }
