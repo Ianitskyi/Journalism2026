@@ -23,12 +23,21 @@
  * навчання, бюджет/контракт) для тієї самої спеціальності — агрегуємо їх
  * у одну сумарну кількість заяв і середньозважений бал.
  *
- * offer.ustn — тип конкурсної пропозиції (перевірено скриптом
- * scripts/diagnose-budget-field.mjs на реальних даних 2025 року):
- * "Відкрита" — звичайне бюджетне місце (відкритий конкурс), "Фіксована" —
- * бюджетне місце за квотою/пільгою, "Небюджетна" — контрактне (платне)
- * місце. Для фільтра "лише бюджет" нас цікавить строго "Відкрита" —
- * заклад сам просив рахувати без пільгових/фіксованих місць.
+ * offer.ustn — тип конкурсної пропозиції (перевірено скриптами
+ * scripts/diagnose-budget-field.mjs, diagnose-fiksovana-meaning.mjs,
+ * diagnose-p-field.mjs на реальних даних): "Небюджетна" — контрактне
+ * (платне) місце, offer.ob (ліцензований обсяг бюджетних місць) завжди
+ * відсутнє; "Відкрита" і "Фіксована" — обидва РЕАЛЬНО бюджетні (кожна
+ * пропозиція типу "Фіксована" має offer.ob > 0, і сирі заявки в ній
+ * справді містять бюджетні заявки поряд із контрактними в межах однієї
+ * пропозиції) — відрізняються лише механізмом розподілу місць: "Відкрита"
+ * — місця розподіляються через загальнонаціональний відкритий конкурс
+ * (наперед невідома кількість, тому offer.ob не задано), "Фіксована" —
+ * наперед визначена (фіксована) кількість місць на програму. Для
+ * магістратури 2021-2022 років "Відкрита" не існувала взагалі (тоді для
+ * магістратури не було відкритого конкурсу) — увесь бюджет тих років
+ * проходив через "Фіксована". Фільтр "лише бюджет" тому рахує і
+ * "Відкрита", і "Фіксована", виключаючи лише "Небюджетна".
  */
 
 import { writeFile, mkdir } from "node:fs/promises";
@@ -183,7 +192,15 @@ function sleep(ms) {
    орієнтуємось лише на порожню відповідь як ознаку кінця списку. Кожен
    запис має "pa" — пріоритет заяви абітурієнта (1, 2, 3…) і "kv" —
    індивідуальний конкурсний бал. Використовуємо це для підрахунку заяв
-   1-го та 2-го пріоритету окремо від загальної кількості. */
+   1-го та 2-го пріоритету окремо від загальної кількості.
+
+   Для магістратури 2021-2022 років "pa" дорівнює 0 для АБСОЛЮТНО кожної
+   заяви (перевірено diagnose-priority-existed.mjs: 0/107, 0/89, 0/85...) —
+   на відміну від бакалаврату тих самих років і магістратури 2023+, де
+   trapляються всі значення 0-5. Це означає, що механізму подачі заяв із
+   пріоритетом на магістратуру тоді ще не було, а не що дані відсутні —
+   anyPriority нижче фіксує, чи хоч колись зустрілось pa>0, щоб не плутати
+   "пріоритету не існувало" з "ніхто не потрапив у 1-2 пріоритет". */
 const PRIORITY_MAX = 2;
 const PRIORITY_PAGE_DELAY_MS = 150;
 const PRIORITY_MAX_PAGES = 60; // запобіжник: 60 сторінок з запасом покриє навіть найбільші пропозиції
@@ -193,6 +210,7 @@ async function fetchOfferPriorityStats(base, usid) {
   let total = 0;
   let p12Count = 0;
   let p12ScoreSum = 0;
+  let anyPriority = false;
   for (let page = 0; page < PRIORITY_MAX_PAGES; page++) {
     const json = await postForm(base, "/offer-requests/", { id: String(usid), last: String(last) });
     const batch = json.requests || [];
@@ -201,6 +219,7 @@ async function fetchOfferPriorityStats(base, usid) {
       total++;
       const pa = Number(r.pa);
       const kv = Number(r.kv);
+      if (pa > 0) anyPriority = true;
       if (pa >= 1 && pa <= PRIORITY_MAX && Number.isFinite(kv)) {
         p12Count++;
         p12ScoreSum += kv;
@@ -209,7 +228,7 @@ async function fetchOfferPriorityStats(base, usid) {
     last = total;
     await sleep(PRIORITY_PAGE_DELAY_MS);
   }
-  return { total, p12Count, p12ScoreSum };
+  return { total, p12Count, p12ScoreSum, anyPriority };
 }
 
 async function fetchLevelData(base, level, year) {
@@ -275,21 +294,21 @@ async function fetchLevelData(base, level, year) {
     if (!byUid.has(uid)) {
       byUid.set(uid, {
         uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programNames: new Set(),
-        p12ApplicationsTotal: 0, p12ScoreSum: 0,
+        p12ApplicationsTotal: 0, p12ScoreSum: 0, anyPriority: false,
         openApplicationsTotal: 0, openWeightedScoreSum: 0,
         openP12ApplicationsTotal: 0, openP12ScoreSum: 0
       });
     }
     const rec = byUid.get(uid);
-    // "лише бюджет" = строго відкритий конкурс (ustn "Відкрита"), без
-    // пільгових/фіксованих місць ("Фіксована") і без контракту
-    // ("Небюджетна") — див. коментар на початку файлу.
-    const isOpen = offer.ustn === "Відкрита";
+    // "лише бюджет" = усі бюджетні місця ("Відкрита" і "Фіксована"),
+    // виключаємо лише контракт ("Небюджетна") — див. коментар на початку
+    // файлу.
+    const isBudget = offer.ustn !== "Небюджетна";
     if (Number.isFinite(ka)) rec.weightedScoreSum += ka * t;
     rec.applicationsTotal += t;
     rec.admitted += a;
     rec.programNames.add(offer.spn);
-    if (isOpen) {
+    if (isBudget) {
       rec.openApplicationsTotal += t;
       if (Number.isFinite(ka)) rec.openWeightedScoreSum += ka * t;
     }
@@ -298,7 +317,8 @@ async function fetchLevelData(base, level, year) {
       const priority = await fetchOfferPriorityStats(base, offer.usid);
       rec.p12ApplicationsTotal += priority.p12Count;
       rec.p12ScoreSum += priority.p12ScoreSum;
-      if (isOpen) {
+      if (priority.anyPriority) rec.anyPriority = true;
+      if (isBudget) {
         rec.openP12ApplicationsTotal += priority.p12Count;
         rec.openP12ScoreSum += priority.p12ScoreSum;
       }
@@ -315,25 +335,42 @@ async function fetchLevelData(base, level, year) {
     const programCount = rec.programNames.size;
     if (rec.applicationsTotal < MIN_APPLICATIONS[level] || rec.admitted <= 0 || programCount <= 0) continue;
     const slug = UID_TO_SLUG[rec.uid];
+
+    const score = Math.round((rec.weightedScoreSum / rec.applicationsTotal) * 10) / 10;
+    const applications = Math.round((rec.applicationsTotal / programCount) * 10) / 10;
+    const scoreOpen = rec.openApplicationsTotal > 0 ? Math.round((rec.openWeightedScoreSum / rec.openApplicationsTotal) * 10) / 10 : null;
+    const applicationsOpen = Math.round((rec.openApplicationsTotal / programCount) * 10) / 10;
+
+    // Якщо для цього закладу/рівня/року пріоритет заяв ніколи не
+    // зустрічався (anyPriority=false — механізму пріоритету тоді не було,
+    // а не "ніхто не в 1-2 пріоритеті"), перемикач "лише 1-2 пріоритет"
+    // не повинен нічого змінювати — показуємо ті самі числа, що й без
+    // фільтра, замість хибного нуля.
+    const hasPriorityData = rec.anyPriority;
+
     rows.push({
       id: slug || `edbo${rec.uid}`,
       name: NAME_OVERRIDE[rec.uid] || rec.name,
       short: (slug && SLUG_SHORT_OVERRIDE[slug]) || shortName(rec.name),
       hue: slug ? SLUG_HUE[slug] : hashHue(rec.uid),
-      score: Math.round((rec.weightedScoreSum / rec.applicationsTotal) * 10) / 10,
-      applications: Math.round((rec.applicationsTotal / programCount) * 10) / 10,
+      score,
+      applications,
       applicationsTotal: rec.applicationsTotal,
       programCount,
       admitted: rec.admitted,
-      applicationsP12Total: rec.p12ApplicationsTotal,
-      applicationsP12: Math.round((rec.p12ApplicationsTotal / programCount) * 10) / 10,
-      scoreP12: rec.p12ApplicationsTotal > 0 ? Math.round((rec.p12ScoreSum / rec.p12ApplicationsTotal) * 10) / 10 : null,
+      applicationsP12Total: hasPriorityData ? rec.p12ApplicationsTotal : rec.applicationsTotal,
+      applicationsP12: hasPriorityData ? Math.round((rec.p12ApplicationsTotal / programCount) * 10) / 10 : applications,
+      scoreP12: hasPriorityData
+        ? (rec.p12ApplicationsTotal > 0 ? Math.round((rec.p12ScoreSum / rec.p12ApplicationsTotal) * 10) / 10 : null)
+        : score,
       applicationsOpenTotal: rec.openApplicationsTotal,
-      applicationsOpen: Math.round((rec.openApplicationsTotal / programCount) * 10) / 10,
-      scoreOpen: rec.openApplicationsTotal > 0 ? Math.round((rec.openWeightedScoreSum / rec.openApplicationsTotal) * 10) / 10 : null,
-      applicationsOpenP12Total: rec.openP12ApplicationsTotal,
-      applicationsOpenP12: Math.round((rec.openP12ApplicationsTotal / programCount) * 10) / 10,
-      scoreOpenP12: rec.openP12ApplicationsTotal > 0 ? Math.round((rec.openP12ScoreSum / rec.openP12ApplicationsTotal) * 10) / 10 : null
+      applicationsOpen,
+      scoreOpen,
+      applicationsOpenP12Total: hasPriorityData ? rec.openP12ApplicationsTotal : rec.openApplicationsTotal,
+      applicationsOpenP12: hasPriorityData ? Math.round((rec.openP12ApplicationsTotal / programCount) * 10) / 10 : applicationsOpen,
+      scoreOpenP12: hasPriorityData
+        ? (rec.openP12ApplicationsTotal > 0 ? Math.round((rec.openP12ScoreSum / rec.openP12ApplicationsTotal) * 10) / 10 : null)
+        : scoreOpen
     });
   }
 
