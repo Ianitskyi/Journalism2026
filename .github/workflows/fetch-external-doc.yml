@@ -1,0 +1,87 @@
+name: Fetch external document (scratch)
+
+# ТИМЧАСОВИЙ службовий workflow. Мережа сесії Claude Code на цьому проєкті
+# не має доступу до довільних зовнішніх сайтів, а GitHub Actions runner —
+# має. Качає сторінку/PDF за посиланням, шукає посилання на .pdf, витягує
+# текст (pdftotext) і зображення (pdfimages) у scratch/<out_dir>/ на цій
+# гілці. Це лише робочі матеріали для перекладу — не публічний контент.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL сторінки або прямого PDF'
+        required: true
+      out_dir:
+        description: 'Тека під scratch/'
+        required: true
+        default: 'doc'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Resolve and download PDF
+        env:
+          PAGE_URL: ${{ github.event.inputs.url }}
+          OUT: ${{ github.event.inputs.out_dir }}
+        run: |
+          set -e
+          mkdir -p "scratch/${OUT}"
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+
+          if [[ "$PAGE_URL" == *.pdf ]]; then
+            PDF_URL="$PAGE_URL"
+          else
+            curl -sS -L -A "$UA" "$PAGE_URL" -o "scratch/${OUT}/page.html"
+            PDF_URL=$(grep -oE 'https?://[^"'"'"' ]+\.pdf' "scratch/${OUT}/page.html" | head -1)
+            if [ -z "$PDF_URL" ]; then
+              REL=$(grep -oE 'href="[^"]+\.pdf"' "scratch/${OUT}/page.html" | head -1 | sed -E 's/^href="//; s/"$//')
+              if [ -n "$REL" ]; then
+                BASE=$(echo "$PAGE_URL" | grep -oE '^https?://[^/]+')
+                case "$REL" in
+                  http*) PDF_URL="$REL" ;;
+                  /*) PDF_URL="${BASE}${REL}" ;;
+                  *) PDF_URL="${BASE}/${REL}" ;;
+                esac
+              fi
+            fi
+          fi
+
+          echo "Resolved PDF_URL: ${PDF_URL:-<none found>}"
+          echo "$PDF_URL" > "scratch/${OUT}/pdf-url.txt"
+
+          if [ -n "$PDF_URL" ]; then
+            curl -sS -L -A "$UA" "$PDF_URL" -o "scratch/${OUT}/source.pdf"
+          fi
+
+      - name: Extract text and images
+        env:
+          OUT: ${{ github.event.inputs.out_dir }}
+        run: |
+          cd "scratch/${OUT}"
+          if [ -f source.pdf ]; then
+            file source.pdf > filetype.txt || true
+            pdfinfo source.pdf > info.txt 2>&1 || true
+            pdftotext -layout source.pdf text.txt || true
+            mkdir -p images
+            pdfimages -all source.pdf images/img || true
+          fi
+
+      - name: Commit results
+        env:
+          OUT: ${{ github.event.inputs.out_dir }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "scratch/${OUT}"
+          git diff --cached --quiet || git commit -m "Fetch external doc (scratch): ${OUT}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
