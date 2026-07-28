@@ -23,9 +23,6 @@ const I18N = {
       title: "Рейтинг журфаків України",
       lede: "Рейтинг університетів за кількістю поданих заяв на програми з журналістики і середнім конкурсним балом вступників."
     },
-    beta: {
-      noticeHtml: "Увага! Рейтинг існує у beta-режимі. Ми приймаємо ваші зауваження та одразу оновлюємо методологію. Пропозиції пишіть на <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
-    },
     stats: {
       submitted: "Подано заяв",
       count: "Журфаків у рейтингу"
@@ -159,9 +156,6 @@ const I18N = {
       title: "Ukrainian Journalism Schools Ranking",
       lede: "Ranking of universities by submitted applications to journalism programs and the average competitive score of applicants."
     },
-    beta: {
-      noticeHtml: "Note: this ranking is in beta. We welcome your feedback and update the methodology accordingly. Send suggestions to <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
-    },
     stats: {
       submitted: "Applications submitted",
       count: "Schools in ranking"
@@ -278,11 +272,30 @@ const I18N = {
 };
 
 function getLang() {
+  const urlLang = new URLSearchParams(location.search).get("lang");
+  if (urlLang === "en" || urlLang === "uk") {
+    localStorage.setItem("site-lang", urlLang);
+    return urlLang;
+  }
   return localStorage.getItem("site-lang") === "en" ? "en" : "uk";
 }
 
 function setLang(lang) {
   localStorage.setItem("site-lang", lang === "en" ? "en" : "uk");
+}
+
+// Дозволяє прийти з promedia.report (чи іншого піддомену) з ?lang=en і
+// одразу відкрити цю сторінку англійською; так само посилання назад на
+// promedia.report / на інші піддомени зберігають поточну мову через ?lang=.
+function syncCrossSiteLinks() {
+  const lang = getLang();
+  document.querySelectorAll("a.home-btn, a[data-cross-site]").forEach((a) => {
+    try {
+      const url = new URL(a.getAttribute("href"), location.href);
+      url.searchParams.set("lang", lang);
+      a.setAttribute("href", url.toString());
+    } catch (e) { /* лишаємо посилання як є, якщо не вдалось розпарсити */ }
+  });
 }
 
 function localeTag() {
@@ -329,6 +342,7 @@ function applyStaticI18n() {
     const value = tRaw(el.dataset.i18nPlaceholder);
     if (value != null) el.setAttribute("placeholder", value);
   });
+  syncCrossSiteLinks();
 }
 
 function initLangToggle() {
