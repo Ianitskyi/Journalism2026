@@ -17,11 +17,28 @@ if (!pageUrl || !outDir) {
 
 await mkdir(outDir, { recursive: true });
 
-const browser = await chromium.launch();
+// Playwright headless Chromium встановлює navigator.webdriver=true й інші
+// автоматизаційні маркери — Cloudflare managed challenge розпізнає це й
+// ніколи не пропускає, скільки не чекай. Патчимо ці ознаки до завантаження
+// сторінки.
+const browser = await chromium.launch({
+  args: [
+    "--disable-blink-features=AutomationControlled",
+    "--disable-features=IsolateOrigins,site-per-process",
+  ],
+});
 const context = await browser.newContext({
   userAgent:
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
   viewport: { width: 1366, height: 900 },
+  locale: "en-US",
+  timezoneId: "Europe/London",
+});
+await context.addInitScript(() => {
+  Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3, 4, 5] });
+  Object.defineProperty(navigator, "languages", { get: () => ["en-US", "en"] });
+  window.chrome = { runtime: {} };
 });
 const page = await context.newPage();
 
@@ -31,9 +48,9 @@ await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
 // Дати Cloudflare managed challenge час пройти й перенаправити.
 let title = await page.title();
 let waited = 0;
-while (/just a moment/i.test(title) && waited < 30000) {
-  await page.waitForTimeout(2000);
-  waited += 2000;
+while (/just a moment/i.test(title) && waited < 45000) {
+  await page.waitForTimeout(3000);
+  waited += 3000;
   title = await page.title();
 }
 console.log(`Final title after ${waited}ms: ${title}`);
