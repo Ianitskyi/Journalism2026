@@ -48,23 +48,6 @@
 [data-guide-lang="en"] .cg-en { display: block; }
 [data-guide-lang="en"] .cg-uk { display: none; }
 
-.utility-bar .cg-en,
-.utility-bar .cg-uk,
-.cg-permission-actions .cg-en,
-.cg-permission-actions .cg-uk,
-.site-footer .cg-en,
-.site-footer .cg-uk {
-  display: inline;
-}
-
-[data-guide-lang="en"] .utility-bar .cg-en,
-[data-guide-lang="en"] .cg-permission-actions .cg-en,
-[data-guide-lang="en"] .site-footer .cg-en { display: inline; }
-
-[data-guide-lang="en"] .utility-bar .cg-uk,
-[data-guide-lang="en"] .cg-permission-actions .cg-uk,
-[data-guide-lang="en"] .site-footer .cg-uk { display: none; }
-
 .cg-hero {
   background: var(--card);
   border-bottom: 1px solid var(--border);
