@@ -11,6 +11,60 @@
   padding: 0 24px 60px;
 }
 
+/* ---------- decorative side art (cover-doodle motif) ---------- */
+
+.cg-page { position: relative; z-index: 1; }
+
+.cg-side-art {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: calc((100vw - 800px) / 2);
+  max-width: 200px;
+  background-image: url("../img/community-guide/squiggle.svg");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 120px auto;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cg-side-art--left { left: 0; }
+.cg-side-art--right { right: 0; }
+
+@media (max-width: 1280px) {
+  .cg-side-art { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .cg-side-art { opacity: 0.22; }
+}
+
+/* ---------- language toggle ---------- */
+
+.cg-en { display: none; }
+
+[data-guide-lang="en"] .cg-en { display: block; }
+[data-guide-lang="en"] .cg-uk { display: none; }
+
+.utility-bar .cg-en,
+.utility-bar .cg-uk,
+.cg-permission-actions .cg-en,
+.cg-permission-actions .cg-uk,
+.site-footer .cg-en,
+.site-footer .cg-uk {
+  display: inline;
+}
+
+[data-guide-lang="en"] .utility-bar .cg-en,
+[data-guide-lang="en"] .cg-permission-actions .cg-en,
+[data-guide-lang="en"] .site-footer .cg-en { display: inline; }
+
+[data-guide-lang="en"] .utility-bar .cg-uk,
+[data-guide-lang="en"] .cg-permission-actions .cg-uk,
+[data-guide-lang="en"] .site-footer .cg-uk { display: none; }
+
 .cg-hero {
   background: var(--card);
   border-bottom: 1px solid var(--border);
