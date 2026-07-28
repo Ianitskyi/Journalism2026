@@ -36,6 +36,12 @@ jobs:
       - name: Install poppler-utils
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
       - name: Read request
         id: req
         run: |
@@ -57,28 +63,12 @@ jobs:
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
           if [[ "$PAGE_URL" == *.pdf ]]; then
-            PDF_URL="$PAGE_URL"
+            curl -sS -L -A "$UA" "$PAGE_URL" -o "scratch/${OUT}/source.pdf"
           else
-            curl -sS -L -A "$UA" "$PAGE_URL" -o "scratch/${OUT}/page.html"
-            PDF_URL=$(grep -oE 'https?://[^"'"'"' ]+\.pdf' "scratch/${OUT}/page.html" | head -1)
-            if [ -z "$PDF_URL" ]; then
-              REL=$(grep -oE 'href="[^"]+\.pdf"' "scratch/${OUT}/page.html" | head -1 | sed -E 's/^href="//; s/"$//')
-              if [ -n "$REL" ]; then
-                BASE=$(echo "$PAGE_URL" | grep -oE '^https?://[^/]+')
-                case "$REL" in
-                  http*) PDF_URL="$REL" ;;
-                  /*) PDF_URL="${BASE}${REL}" ;;
-                  *) PDF_URL="${BASE}/${REL}" ;;
-                esac
-              fi
-            fi
-          fi
-
-          echo "Resolved PDF_URL: ${PDF_URL:-<none found>}"
-          echo "$PDF_URL" > "scratch/${OUT}/pdf-url.txt"
-
-          if [ -n "$PDF_URL" ]; then
-            curl -sS -L -A "$UA" "$PDF_URL" -o "scratch/${OUT}/source.pdf"
+            # iwpr.net (та подібні) стоять за Cloudflare managed challenge,
+            # curl отримує лише заглушку "Just a moment...". Playwright
+            # виконує JS і зазвичай проходить цей виклик автоматично.
+            node scripts/fetch-external-pdf.mjs "$PAGE_URL" "scratch/${OUT}"
           fi
 
       - name: Extract text and images
