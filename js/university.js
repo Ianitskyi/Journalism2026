@@ -503,9 +503,13 @@ function initCompareSelect() {
   });
 }
 
-initDegreeTabs();
-initCompareSelect();
-initChartTooltips();
-window.onLangChange = () => { render(); resyncIndicators(); };
-window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
-render();
+function boot() {
+  initDegreeTabs();
+  initCompareSelect();
+  initChartTooltips();
+  window.onLangChange = () => { render(); resyncIndicators(); };
+  window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); });
+  render();
+}
+
+(window.siteContentReady || Promise.resolve()).then(boot);

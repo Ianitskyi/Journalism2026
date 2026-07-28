@@ -460,15 +460,19 @@ function initUniSearch() {
   input.addEventListener("change", go);
 }
 
-initTabs();
-initSortTabs();
-initPriorityToggle();
-initBudgetToggle();
-initShowAll();
-initUniSearch();
-window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); };
-window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); });
-render();
-renderUniSearchOptions();
-renderSystemCharts();
-initChartTooltips();
+function boot() {
+  initTabs();
+  initSortTabs();
+  initPriorityToggle();
+  initBudgetToggle();
+  initShowAll();
+  initUniSearch();
+  window.onLangChange = () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); };
+  window.addEventListener("edbo-data-updated", () => { render(); resyncIndicators(); renderSystemCharts(); renderUniSearchOptions(); });
+  render();
+  renderUniSearchOptions();
+  renderSystemCharts();
+  initChartTooltips();
+}
+
+(window.siteContentReady || Promise.resolve()).then(boot);

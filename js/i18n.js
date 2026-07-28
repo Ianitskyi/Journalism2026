@@ -271,6 +271,70 @@ const I18N = {
   }
 };
 
+function isPlainObject(value) {
+  return value && typeof value === "object" && !Array.isArray(value);
+}
+
+function deepMerge(target, source) {
+  if (!isPlainObject(source)) return target;
+  Object.keys(source).forEach((key) => {
+    if (isPlainObject(source[key]) && isPlainObject(target[key])) {
+      deepMerge(target[key], source[key]);
+    } else {
+      target[key] = source[key];
+    }
+  });
+  return target;
+}
+
+function applySiteContent(content) {
+  window.PM_SITE_CONTENT = content || {};
+  if (content && isPlainObject(content.i18n)) {
+    deepMerge(I18N, content.i18n);
+  }
+}
+
+function loadJson(url) {
+  if (typeof window.fetch === "function") {
+    return window.fetch(url, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("site content unavailable");
+        return response.json();
+      });
+  }
+
+  return new Promise((resolve, reject) => {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url + "?v=" + Date.now(), true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try {
+          resolve(JSON.parse(xhr.responseText));
+        } catch (err) {
+          reject(err);
+        }
+      } else {
+        reject(new Error("site content unavailable"));
+      }
+    };
+    xhr.onerror = function () { reject(new Error("site content unavailable")); };
+    xhr.send();
+  });
+}
+
+function loadSiteContent() {
+  return loadJson("content/site.json")
+    .then((content) => {
+      applySiteContent(content);
+      return content;
+    })
+    .catch(() => {
+      applySiteContent({});
+      return window.PM_SITE_CONTENT;
+    });
+}
+
 function normalizeLang(lang) {
   return lang === "en" ? "en" : "uk";
 }
@@ -362,7 +426,10 @@ function initLangToggle() {
   sync();
 }
 
-syncLangFromUrl();
-document.documentElement.lang = getLang();
-applyStaticI18n();
-initLangToggle();
+window.siteContentReady = loadSiteContent().then(() => {
+  syncLangFromUrl();
+  document.documentElement.lang = getLang();
+  applyStaticI18n();
+  initLangToggle();
+  return window.PM_SITE_CONTENT;
+});
