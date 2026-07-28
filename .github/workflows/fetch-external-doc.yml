@@ -41,6 +41,7 @@ jobs:
           node-version: 20
 
       - run: npm install
+      - run: npx playwright install --with-deps chromium
 
       - name: Read request
         id: req
