@@ -263,12 +263,30 @@ const I18N = {
   }
 };
 
+function normalizeLang(lang) {
+  return lang === "en" ? "en" : "uk";
+}
+
+function syncLangFromUrl() {
+  try {
+    const lang = new URLSearchParams(window.location.search).get("lang");
+    if (lang === "en" || lang === "uk") localStorage.setItem("site-lang", lang);
+  } catch (_) {}
+}
+
 function getLang() {
   return localStorage.getItem("site-lang") === "en" ? "en" : "uk";
 }
 
-function setLang(lang) {
-  localStorage.setItem("site-lang", lang === "en" ? "en" : "uk");
+function setLang(lang, options = {}) {
+  const normalized = normalizeLang(lang);
+  localStorage.setItem("site-lang", normalized);
+
+  if (options.updateUrl && window.history && window.history.replaceState) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", normalized);
+    window.history.replaceState({}, "", url.toString());
+  }
 }
 
 function localeTag() {
@@ -326,7 +344,7 @@ function initLangToggle() {
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.lang === getLang()) return;
-      setLang(btn.dataset.lang);
+      setLang(btn.dataset.lang, { updateUrl: true });
       document.documentElement.lang = getLang();
       sync();
       applyStaticI18n();
@@ -336,6 +354,7 @@ function initLangToggle() {
   sync();
 }
 
+syncLangFromUrl();
 document.documentElement.lang = getLang();
 applyStaticI18n();
 initLangToggle();
