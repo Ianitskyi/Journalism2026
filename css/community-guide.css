@@ -446,6 +446,15 @@
   color: var(--text);
 }
 
+/* ---------- source note ---------- */
+
+.cg-source-note {
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.6;
+  margin: -8px 0 16px;
+}
+
 /* ---------- closing ---------- */
 
 .cg-closing {
