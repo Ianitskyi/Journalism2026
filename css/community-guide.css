@@ -25,36 +25,6 @@
 .cg-abridged p { margin: 0; }
 .cg-abridged a { color: var(--ink); font-weight: 700; }
 
-/* ---------- decorative side art (cover-doodle motif) ---------- */
-
-.cg-page { position: relative; z-index: 1; }
-
-.cg-side-art {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: calc((100vw - 800px) / 2);
-  max-width: 200px;
-  background-image: url("../img/community-guide/squiggle.svg");
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 120px auto;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.cg-side-art--left { left: 0; }
-.cg-side-art--right { right: 0; }
-
-@media (max-width: 1280px) {
-  .cg-side-art { display: none; }
-}
-
-@media (prefers-color-scheme: dark) {
-  .cg-side-art { opacity: 0.22; }
-}
-
 /* ---------- language toggle ---------- */
 
 .cg-en { display: none; }
