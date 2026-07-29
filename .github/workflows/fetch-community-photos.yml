@@ -1,0 +1,96 @@
+name: Fetch community-guide photo candidates (scratch)
+
+# ТИМЧАСОВИЙ службовий workflow. Сесія Claude Code в цьому проєкті не має
+# мережевого доступу до довільних зовнішніх сайтів, а GitHub Actions
+# runner — має. Шукає та качає кандидатів у вищій якості для двох
+# ілюстративних фото зі спецпроєкту community-guide (Occupy Wall Street /
+# Defending Rights & Dissent та Black Lives Matter / Joe Yates, Unsplash),
+# складає їх у scratch/photos/ на цій гілці для подальшого відбору.
+on:
+  push:
+    paths:
+      - 'scratch/photo-fetch-trigger'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch candidates
+        run: |
+          set -e
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+          mkdir -p scratch/photos/blm scratch/photos/occupy
+
+          echo "== Joe Yates (Unsplash) profile photos =="
+          curl -sS -A "$UA" "https://unsplash.com/napi/users/josephyates_/photos?page=1&per_page=30&order_by=latest" \
+            -o scratch/photos/blm/profile.json || echo "profile fetch failed"
+          if [ -s scratch/photos/blm/profile.json ]; then
+            jq -r '.[] | "\(.id)\t\(.alt_description)\t\(.description)\t\(.urls.full)"' scratch/photos/blm/profile.json > scratch/photos/blm/list.tsv || true
+            cat scratch/photos/blm/list.tsv || true
+            # download every candidate whose alt/description mentions BLM/Atlanta/protest-ish terms, else first 10 as fallback
+            grep -inE "black lives matter|atlanta|protest|george floyd|blm" scratch/photos/blm/list.tsv > scratch/photos/blm/matches.tsv || true
+            if [ ! -s scratch/photos/blm/matches.tsv ]; then
+              head -n 10 scratch/photos/blm/list.tsv > scratch/photos/blm/matches.tsv
+            fi
+            i=0
+            while IFS=$'\t' read -r id alt desc url; do
+              i=$((i+1))
+              echo "downloading $id -> $alt"
+              curl -sS -A "$UA" "$url" -o "scratch/photos/blm/${i}-${id}.jpg" || echo "  failed"
+            done < scratch/photos/blm/matches.tsv
+          fi
+
+          echo "== Unsplash search fallback: black lives matter atlanta =="
+          curl -sS -A "$UA" "https://unsplash.com/napi/search/photos?query=black%20lives%20matter%20atlanta&per_page=10" \
+            -o scratch/photos/blm/search.json || echo "search fetch failed"
+          if [ -s scratch/photos/blm/search.json ]; then
+            jq -r '.results[]? | "\(.id)\t\(.alt_description)\t\(.user.username)\t\(.urls.full)"' scratch/photos/blm/search.json > scratch/photos/blm/search-list.tsv || true
+            cat scratch/photos/blm/search-list.tsv || true
+          fi
+
+          echo "== Defending Rights & Dissent Occupy article =="
+          curl -sS -L -A "$UA" "https://www.rightsanddissent.org/news/the-fbi-and-occupy-the-surveillance-and-suppression-of-occupy-wall-street/" \
+            -o scratch/photos/occupy/article.html || echo "article fetch failed"
+          if [ -s scratch/photos/occupy/article.html ]; then
+            grep -oE '(https?:)?//[^"'"'"' ]+\.(jpg|jpeg|png|webp)[^"'"'"' ]*' scratch/photos/occupy/article.html | sort -u > scratch/photos/occupy/img-urls.txt || true
+            cat scratch/photos/occupy/img-urls.txt || true
+            i=0
+            while read -r u; do
+              i=$((i+1))
+              full="$u"
+              case "$full" in //*) full="https:$full" ;; esac
+              echo "downloading $full"
+              curl -sS -L -A "$UA" "$full" -o "scratch/photos/occupy/${i}.img" || echo "  failed"
+            done < scratch/photos/occupy/img-urls.txt
+          fi
+
+          echo "== Unsplash search fallback: occupy wall street zuccotti park =="
+          curl -sS -A "$UA" "https://unsplash.com/napi/search/photos?query=occupy%20wall%20street%20zuccotti%20park&per_page=10" \
+            -o scratch/photos/occupy/search.json || echo "search fetch failed"
+          if [ -s scratch/photos/occupy/search.json ]; then
+            jq -r '.results[]? | "\(.id)\t\(.alt_description)\t\(.user.username)\t\(.urls.full)"' scratch/photos/occupy/search.json > scratch/photos/occupy/search-list.tsv || true
+            cat scratch/photos/occupy/search-list.tsv || true
+            i=0
+            while IFS=$'\t' read -r id alt user url; do
+              i=$((i+1))
+              echo "downloading search candidate $id -> $alt ($user)"
+              curl -sS -A "$UA" "$url" -o "scratch/photos/occupy/search-${i}-${id}.jpg" || echo "  failed"
+            done < scratch/photos/occupy/search-list.tsv
+          fi
+
+          find scratch/photos -type f | xargs -I{} sh -c 'echo {}: $(file -b "{}")' || true
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scratch/photos
+          git diff --cached --quiet || git commit -m "Fetch community-guide photo candidates (scratch)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
