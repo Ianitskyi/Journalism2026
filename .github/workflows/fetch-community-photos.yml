@@ -46,6 +46,12 @@ jobs:
             curl -sS -L -A "$UA" "$u" -o "scratch/photos/blm/wm-${i}.jpg" || echo "  failed"
           done
 
+          echo "== Wikimedia metadata for the two chosen candidates =="
+          curl -sS -A "$UA" "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AAtlanta_Police_and_Black_Lives_Matter_detail%2C_from-_Hold_the_Line_-_49964334728_(cropped).jpg&prop=imageinfo&iiprop=extmetadata&format=json" \
+            -o scratch/photos/blm/wm-1-meta.json || echo "meta1 failed"
+          curl -sS -A "$UA" "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AAtlanta_Police_Department_and_Black_Lives_Matter_detail%2C_from-_Hold_the_Line_-_49965120087_(cropped).jpg&prop=imageinfo&iiprop=extmetadata&format=json" \
+            -o scratch/photos/blm/wm-2-meta.json || echo "meta2 failed"
+
           echo "== Defending Rights & Dissent Occupy article =="
           curl -sS -L -A "$UA" "https://www.rightsanddissent.org/news/the-fbi-and-occupy-the-surveillance-and-suppression-of-occupy-wall-street/" \
             -o scratch/photos/occupy/article.html || echo "article fetch failed"
