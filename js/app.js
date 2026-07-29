@@ -41,10 +41,10 @@ function withFilteredView(rawRows) {
    даних, які самі по собі не несуть nameEn (лише плейсхолдер-рядки й
    кураторський демо-2026 мають його прямо на об'єкті) */
 function uniName(row, registry) {
-  if (getLang() !== "en") return row.name;
-  if (row.nameEn) return row.nameEn;
+  if (getLang() !== "en") return typographicQuotes(row.name);
+  if (row.nameEn) return typographicQuotes(row.nameEn);
   const meta = registry && registry.get(row.id);
-  return (meta && meta.nameEn) || row.name;
+  return typographicQuotes((meta && meta.nameEn) || row.name);
 }
 
 /* значення показника закладу за попередній (щодо year) рік — потрібне,
@@ -436,7 +436,7 @@ function renderUniSearchOptions() {
   if (!datalist) return;
   const lang = getLang();
   const items = [...DB.allUniversitiesMeta().values()]
-    .map((u) => ({ id: u.id, name: lang === "en" ? (u.nameEn || u.name) : u.name }))
+    .map((u) => ({ id: u.id, name: typographicQuotes(lang === "en" ? (u.nameEn || u.name) : u.name) }))
     .sort((a, b) => a.name.localeCompare(b.name, lang === "en" ? "en" : "uk"));
   datalist.innerHTML = items.map((it) => `<option value="${it.name.replace(/"/g, "&quot;")}"></option>`).join("");
 }
@@ -450,8 +450,8 @@ function initUniSearch() {
     if (!value) return;
     const lang = getLang();
     const match = [...DB.allUniversitiesMeta().values()].find((u) => {
-      const name = lang === "en" ? (u.nameEn || u.name) : u.name;
-      return name.toLowerCase() === value;
+      const rawName = lang === "en" ? (u.nameEn || u.name) : u.name;
+      return typographicQuotes(rawName).toLowerCase() === value || rawName.toLowerCase() === value;
     });
     if (match) location.href = `university.html?id=${encodeURIComponent(match.id)}`;
   }

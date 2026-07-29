@@ -369,6 +369,26 @@ function numFmt() {
   return new Intl.NumberFormat(localeTag());
 }
 
+function typographicQuotes(value) {
+  const text = String(value ?? "");
+  const isUkText = /[А-Яа-яІіЇїЄєҐґ]/.test(text);
+
+  if (isUkText) {
+    return text
+      .replace(/"Вищий навчальний заклад "([^"]+)"$/g, "«Вищий навчальний заклад “$1”»")
+      .replace(/"Університет економіки та права "([^"]+)"$/g, "«Університет економіки та права “$1”»")
+      .replace(/"([^"]+)"/g, "«$1»")
+      .replace(/"/g, "«");
+  }
+
+  let open = true;
+  return text.replace(/"/g, () => {
+    const quote = open ? "“" : "”";
+    open = !open;
+    return quote;
+  });
+}
+
 function tRaw(key) {
   const dict = I18N[getLang()];
   return key.split(".").reduce((o, k) => (o && o[k] != null ? o[k] : undefined), dict);
