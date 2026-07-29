@@ -446,6 +446,18 @@
   color: var(--text);
 }
 
+/* ---------- photo gallery grid ---------- */
+
+.cg-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.cg-gallery .cg-figure { margin: 0; }
+.cg-gallery .cg-figure img { height: 100%; object-fit: cover; }
+
 /* ---------- source note ---------- */
 
 .cg-source-note {
