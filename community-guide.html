@@ -54,14 +54,21 @@
     <p class="cg-en">This is an abridged version of the guide, adapted for online reading. The full version, with all illustrations and the original layout, is available as a PDF on the IWPR website: <a href="https://iwpr.net/global-voices/print-publications/how-bring-order-chaos" target="_blank" rel="noopener">iwpr.net</a>.</p>
   </div>
 
+  <div class="cg-layout">
   <nav class="cg-toc" aria-label="Зміст">
     <div class="cg-uk">
       <h2>Зміст</h2>
-      <ol>
+      <ol class="cg-toc-list">
         <li><a href="#peredmova">Передмова</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Теорія</p>
+      <ol class="cg-toc-list">
         <li><a href="#syla">Сила спільнот</a></li>
         <li><a href="#bulbashky">Бульбашки демократії та боулінг на самоті</a></li>
         <li><a href="#spilna-diya">Спільна дія, емоції та гумор</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Кейси</p>
+      <ol class="cg-toc-list">
         <li><a href="#sovski">«Екопарк Совські ставки»</a></li>
         <li><a href="#ekodiya">Екодія</a></li>
         <li><a href="#tum">The Ukrainians Media</a></li>
@@ -69,6 +76,9 @@
         <li><a href="#dronopad">«Повернись живим» і «Дронопад»</a></li>
         <li><a href="#smilyvi">Сміливі відновлювати</a></li>
         <li><a href="#razom">Razom for Ukraine</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Практика</p>
+      <ol class="cg-toc-list">
         <li><a href="#dyzayn">Дизайн спільноти. З чого розпочати</a></li>
         <li><a href="#audytoriya">Цільова аудиторія</a></li>
         <li><a href="#tehnologiyi">Технології важливі</a></li>
@@ -79,11 +89,17 @@
     </div>
     <div class="cg-en">
       <h2>Contents</h2>
-      <ol>
+      <ol class="cg-toc-list">
         <li><a href="#peredmova">Foreword</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Theory</p>
+      <ol class="cg-toc-list">
         <li><a href="#syla">The Power of Communities</a></li>
         <li><a href="#bulbashky">Democracy's Bubbles and Bowling Alone</a></li>
         <li><a href="#spilna-diya">Collective Action, Emotion and Humour</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Cases</p>
+      <ol class="cg-toc-list">
         <li><a href="#sovski">"Sovski Stavky Eco-Park"</a></li>
         <li><a href="#ekodiya">Ecoaction</a></li>
         <li><a href="#tum">The Ukrainians Media</a></li>
@@ -91,6 +107,9 @@
         <li><a href="#dronopad">"Come Back Alive" and "Dronopad"</a></li>
         <li><a href="#smilyvi">Brave to Rebuild</a></li>
         <li><a href="#razom">Razom for Ukraine</a></li>
+      </ol>
+      <p class="cg-toc-group-label">Practice</p>
+      <ol class="cg-toc-list">
         <li><a href="#dyzayn">Designing a Community. Where to Start</a></li>
         <li><a href="#audytoriya">Your Target Audience</a></li>
         <li><a href="#tehnologiyi">Technology Matters</a></li>
@@ -100,6 +119,8 @@
       </ol>
     </div>
   </nav>
+
+  <div class="cg-main">
 
   <!-- ================= ПЕРЕДМОВА / FOREWORD ================= -->
   <section class="cg-section" id="peredmova">
@@ -2051,6 +2072,9 @@
     </div>
   </section>
 
+  </div>
+  </div>
+
 </main>
 
 <footer class="site-footer">
@@ -2085,6 +2109,30 @@
       apply(b.dataset.lang);
     });
   });
+})();
+</script>
+
+<script>
+(function () {
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".cg-toc a"));
+  if (!tocLinks.length || !("IntersectionObserver" in window)) return;
+  var sections = tocLinks
+    .map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); })
+    .filter(Boolean);
+  function setActive(id) {
+    tocLinks.forEach(function (a) {
+      a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+    });
+  }
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: "-15% 0px -70% 0px", threshold: 0 }
+  );
+  sections.forEach(function (el) { observer.observe(el); });
 })();
 </script>
 
