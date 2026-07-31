@@ -1,0 +1,61 @@
+name: Fetch design reference (scratch)
+
+# ТИМЧАСОВИЙ службовий workflow. Сесія Claude Code не має мережевого
+# доступу до довільних зовнішніх сайтів, а GitHub Actions runner — має.
+# Робить скриншоти (десктоп + мобільний) сторінки-референсу і зберігає
+# HTML/CSS у scratch/design-ref/ на цій гілці для аналізу макету.
+on:
+  push:
+    paths:
+      - 'scratch/design-ref-request.json'
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL сторінки-референсу'
+        required: true
+      out_dir:
+        description: 'Тека під scratch/design-ref/'
+        required: true
+        default: 'ref1'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+
+      - name: Read request
+        id: req
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "url=$(jq -r .url scratch/design-ref-request.json)" >> "$GITHUB_OUTPUT"
+            echo "out_dir=$(jq -r .out_dir scratch/design-ref-request.json)" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=${{ github.event.inputs.url }}" >> "$GITHUB_OUTPUT"
+            echo "out_dir=${{ github.event.inputs.out_dir }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch design reference
+        env:
+          PAGE_URL: ${{ steps.req.outputs.url }}
+          OUT: ${{ steps.req.outputs.out_dir }}
+        run: node scripts/fetch-design-reference.mjs "$PAGE_URL" "scratch/design-ref/${OUT}"
+
+      - name: Commit results
+        env:
+          OUT: ${{ steps.req.outputs.out_dir }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "scratch/design-ref/${OUT}"
+          git diff --cached --quiet || git commit -m "Fetch design reference (scratch): ${OUT}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
