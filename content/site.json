@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "admin": {
+    "label": "ratings.promedia.report",
+    "repository": "Ianitskyi/Journalism2026",
+    "editableFile": "content/site.json",
+    "description": "Text and SEO overrides for the journalism schools ranking. The CMS admin can edit this file through the GitHub API without touching application code or EDBO data files."
+  },
+  "i18n": {
+    "uk": {
+      "meta": {
+        "indexTitle": "Рейтинг журфаків України. Вступ на «Журналістику»",
+        "indexDesc": "Рейтинг журфаків України за кількістю поданих заяв і середнім конкурсним балом вступників на спеціальність «Журналістика». Дані ЄДЕБО."
+      },
+      "hero": {
+        "eyebrow": "Спеціальність C7 «Журналістика», програми з журналістики",
+        "title": "Рейтинг журфаків України",
+        "lede": "Рейтинг університетів за кількістю поданих заяв на програми з журналістики і середнім конкурсним балом вступників."
+      },
+      "beta": {
+        "noticeHtml": "Увага! Рейтинг існує у beta-режимі. Ми приймаємо ваші зауваження та одразу оновлюємо методологію. Пропозиції пишіть на <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
+      }
+    },
+    "en": {
+      "meta": {
+        "indexTitle": "Ukrainian Journalism Schools Ranking. Journalism Admissions",
+        "indexDesc": "Ranking of Ukrainian journalism schools by submitted application count and average competitive score of applicants. EDBO data."
+      },
+      "hero": {
+        "eyebrow": "Major C7 “Journalism”, journalism programs",
+        "title": "Ukrainian Journalism Schools Ranking",
+        "lede": "Ranking of universities by submitted applications to journalism programs and the average competitive score of applicants."
+      },
+      "beta": {
+        "noticeHtml": "Note: this ranking is in beta. We welcome your feedback and update the methodology accordingly. Send suggestions to <a href=\"mailto:info@promedia.report\">info@promedia.report</a>"
+      }
+    }
+  }
+}
