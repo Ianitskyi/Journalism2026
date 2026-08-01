@@ -1,0 +1,19 @@
+name: Diagnose promedia.report footer CSS
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Продовження
+# diagnose-promedia-footer.mjs: тягне CSS-файли (чи inline style) з
+# promedia.report і друкує правила для футер-класів.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-promedia-footer-css.mjs
+        timeout-minutes: 5
