@@ -100,9 +100,12 @@
 .cg-hero-actions { margin-top: 6px; }
 
 .cg-hero h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 800;
   font-size: clamp(28px, 5vw, 44px);
   line-height: 1.12;
+  letter-spacing: -.015em;
+  color: var(--ink);
   margin: 0 0 12px;
 }
 
