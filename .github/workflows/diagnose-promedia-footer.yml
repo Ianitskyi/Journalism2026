@@ -1,0 +1,19 @@
+name: Diagnose promedia.report footer markup
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Витягує HTML
+# футера і підключені CSS з promedia.report, щоб перенести той самий
+# футер на цей сайт (journalism2026).
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-promedia-footer.mjs
+        timeout-minutes: 5
