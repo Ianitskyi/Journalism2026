@@ -1,0 +1,17 @@
+Producer:        Skia/PDF m82
+CreationDate:    Wed Feb 19 12:44:29 2020 UTC
+ModDate:         Wed Feb 19 12:44:29 2020 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           78
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       779222 bytes
+Optimized:       yes
+PDF version:     1.5

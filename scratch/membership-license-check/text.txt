@@ -1,0 +1,2795 @@
+   Reuters Institute Journalist Fellowship Paper
+               University of Oxford
+
+
+
+
+  ​HOW TO BUILD A SUCCESSFUL
+
+ SUBSCRIPTION NEWS BUSINESS:
+LESSONS FROM BRITAIN AND SPAIN
+
+
+
+             by ​Eduardo Suárez
+
+
+                   February 2020
+            2019 Hilary and Trinity Terms
+                  Sponsor: Google
+Table of contents
+1. The rise of subscriptions​…….…….…….…….…….…….…….…….…….…….…….……….​8
+
+1.1. Subscriptions: why now…………..…………..…………..…………..……..…..……………….9
+
+1.2. News subscriptions: an old story.…………..…………..…………..…………..………….....10
+
+1.3. What this paper is (and what is not).………..…………..…………..………………………..13
+
+1.4. Why Spain and the United Kingdom.………..…………..…………..……………………….13
+
+
+2. Executive summary.​…….…….…….…….…….…….…….…….…….…….…….…….……..​16
+
+
+3. Things to do before you start.​…….…….…….…….…….…….…….…….…….…….……​21
+
+3.1. Focus sharply on your core audience.………..…………..…………..………………………23
+
+3.2. Rethink your organisation.………..…………..…………..…………………………………....24
+
+3.3. Learn to tell your own story..……..………..…………..…………..…………………………..25
+
+3.4. How to ‘swallow the fish’.………..…………..…………..……………………………………...26
+
+
+4. Adapting your value proposition.​…….…….…….…….…….…….…….…….…….……..​29
+
+4.1. Focus on your digital product.………..…………..…………..………………………………..30
+
+4.2. Stop doing stuff (really).………..…………..…………..……………………………………….32
+
+4.3. Create great user experience.………..…………..…………..………………………………...32
+
+4.4. Build products your readers can finish.………..…………..…………..…………………….34
+
+4.5. Rethink what to publish and when.………..…………..…………..………………………….37
+
+4.6. Less could be more.………..…………..…………..………….………..…………..…………….38
+
+4.7. Cherish your brand.………..…………..…………..………….………..…………..…………....39
+
+
+5. Designing the best pricing.​…….…….…….…….…….…….…….…….…….…….………..41
+
+5.1. Ensure your pricing is aligned with your values.………..…………..…………..………...43
+
+
+                                                                             3
+5.2. Experiment in every way you can.………..…………..…………..…………………………...44
+
+5.3. Create attractive bundles.……..…………..…………..………………………………………..46
+
+5.4. Don’t focus on print but use it to your advantage.………..…………..…………………..46
+
+5.5. Different tiers require different strategies.………..…………..…………..………………..47
+
+
+6. Creating an acquisition strategy.​…….…….…….…….…….…….…….…….…………….50
+
+6.1. Asking for money? Consider where and how.………..…………..…………..…………….53
+
+6.2. Target specific topics and audiences.………..…………..…………..……………………….55
+
+6.3. How to use social media.………..…………..…………..……………………………………....56
+
+6.4. Use registration for acquisition (or maybe not).………..…………..……………………..56
+
+6.5. Reduce friction at every step.………..…………..…………..………….………..………...….58
+
+6.6. Use the right metrics………..…………..…………..…………………………………………….58
+
+
+7. Fighting churn.​…….…….…….…….…….…….…….…….…….…….…….…….…………….61
+
+7.1. Habits matter more than content.………..…………..…………..…………………………...63
+
+7.2. Look for churn drivers.………..…………..…………..………………………………………....65
+
+7.3. Dirty channels create churn.………..…………..…………..…………………………………..66
+
+7.4. Watch the 90-day onboarding clock.………..…………..…………..…………………….….66
+
+7.5. Communicate the impact of what you do.………..…………..…………..……..……...….67
+
+
+8. Conclusion..…………………………………………………………………………………….70
+
+
+Appendix. Interviewees.​…….…….…….…….…….…….…….…….…….…….…….………...​73
+
+References​…….…….…….…….…….…….…….…….…….…….…….…….…….…….………….​74
+
+
+
+
+                                                                            4
+To the memory
+  of my father
+
+
+
+
+             5
+Acknowledgments
+I would like to thank the Reuters Institute for the Study of Journalism and Google for
+allowing me to spend six months as a journalist fellow in Oxford. During this period,
+I’ve had time to think about the challenges facing journalism and about the best ways
+to address them. The Institute is an unparalleled institution. The fellowship has given
+me the chance to meet its wonderful team and learn more about their work. It has also
+put me in contact with a valuable network of journalists, academics and media
+executives. Meeting them has been one of the highlights of my time here.
+
+I would like to thank my supervisor, Rasmus Nielsen, who provided me with valuable
+feedback and put me in contact with many people who were relevant for my research.
+This paper would be much less informative without his help. I would also like to thank
+Meera Selva for her insights and her help along the way. She was the one who
+suggested that I focus my research on Spain and the United Kingdom. I’m grateful that
+she did.
+
+I would like to express special gratitude to my journalist fellows, whose ideas and
+experiences enriched this paper. Their passion for our profession has been a constant
+inspiration during my time here. I would like to thank my mentors and friends Ann
+Marie Lipinski and Borja Echevarría, who recommended me for this fellowship. I hope
+they think it was worth it.
+
+Special thanks are due to my hosts Catherine King, Sunny, Charles and William Pitt,
+who fed me and made me feel at home during my time in Oxford. Our dinners gave me
+a valuable understanding of how non-journalists view the work we do.
+
+I finished the first draft of this paper a few days before my father was diagnosed with
+cancer. He couldn’t speak any English but I showed him the draft anyway. As someone
+who gave his life to education, he was very proud of the fact that I was a Journalist
+
+
+
+
+                                                                                          6
+Fellow at the University of Oxford. He died on August 25, 2019. This paper is dedicated
+to his memory, which will keep shaping my life for the years to come.
+
+Finally, I would like to thank María Ramírez, the love of my life and one of the best
+journalists I know. As Head of Strategy of eldiario.es, she is one of the interviewees of
+this paper. She encouraged me to come to Oxford and endured the time we spent apart.
+She taught me many of the things I know about journalism. This paper would be very
+different without her wisdom and her support.
+
+
+
+
+                                                                                            7
+1. The rise of subscriptions.
+Flower shops are a risky business proposition. Many get a big portion of their revenue
+on two single occasions: Mother’s Day and Valentine’s Day. The product they sell is not
+perceived as essential. They need to be as close as they can to their best customers and
+this requires paying expensive rents to be in high-end neighbourhoods. Then there’s
+the inventory problem: flowers start to die the moment you cut them. Within three
+weeks, they’re rotting in your fridge.
+
+The founders of American start-up H. Bloom1 solved these problems by creating a
+subscription business. They targeted hotels, restaurants and other businesses and
+offered them weekly flower delivery, installation and maintenance for a recurring fee. It
+was not an easy task. It required partnering with independent flower studios in
+different cities, optimizing delivery and creating a national brand. Four years after its
+launch, H. Bloom had nearly 1,000 clients and more than $7 million in sales.
+
+Flower shops are not that different from news organisations. Both have to deal with
+similar problems: perishable inventory, seasonality, a product that is not perceived as
+essential, a lumpy demand. Subscriptions can provide a solution to some of those
+problems. Setting them up, however, requires a particular mindset and expertise. This
+paper aims to explain how different newspapers are dealing with the different aspects
+of this transformation right now.
+
+Subscriptions have many advantages over other business models. They provide a
+company with smooth demand, sticky customers and free market research.
+Subscriptions open new business possibilities too: you can upgrade your subscribers or
+sell them other products on top of their subscription fees. Amazon Prime is the most
+famous example but it’s not the only one. The subscription economy has reached
+
+
+
+
+1
+ J. Alsever, “How 2 Software Guys Disrupted the Flower Business”, ​Inc​. Retrieved on July 28, 2019 from
+https://www.inc.com/jennifer-alsever/inc.500-how-i-did-it-bryan-burkhart-h-bloom.html
+
+
+                                                                                                       8
+almost every industry. It’s possible to find examples of companies offering
+subscriptions to razors, art classes, cars, vitamins, chocolate and socks.
+
+Subscription businesses have an important disadvantage. They are cash-strapped at the
+beginning. Unless they are wildly successful, it will take them several months to gain
+back the cash they spend in acquiring new customers right after launch. Launching a
+successful subscription service requires patience, upfront cash and a great
+communication strategy. It also requires managers who create a new kind of
+organization, data-savvy and integrated around their customers’ needs.
+
+
+1.1. Subscriptions: why now.
+
+There are at least three reasons for the rise of the subscription economy.
+
+The first one is the rise of broadband Internet around the world, which makes it easier
+to build digital services for a sizable market.
+
+The second is the rise of the access generation, millennials and post-millennials who
+value access over assets and see any physical possessions as unnecessary baggage. As
+Tien Tzuo puts it in ​Subscribed,​ these younger customers want “the ride, not the car.
+The milk, not the cow. The new Kanye music, not the new Kanye record.”2 They like
+convenience and personalisation, and expect companies to provide them with a reliable
+service. These are the customers behind the rise of Zipcar, Netflix and Spotify.
+
+The third factor is the ability to analyze customer behaviour in real-time. “Today
+businesses are closer to their customers than ever before,” says John Warrillow in ​The
+Automatic Customer.​ “Many consumers buy directly through an online channel, and
+those who don’t often interact with the producer directly for post-sale service and
+support. All those customer interactions are being fed into mathematical models,
+which are run by computers that are now capable of storing and processing billions of
+
+
+
+2
+    T. Tzuo, ​Subscribed: Why the Subscription Model will be Your Company's Future - and what to do about
+it,​ Portfolio Penguin, 2018, p. 17.
+
+
+                                                                                                       9
+data points in seconds.”3 These interactions can create a virtuous cycle. Subscription
+companies can watch how their customers use their service and tweak it accordingly.
+There’s no need for surveys or focus groups.
+
+Companies used to make a single product and sell it through many channels. Today
+customers spend their time across many channels and expect companies to meet their
+needs wherever they are. Every channel is best suited for a different product, a group of
+customers or a certain part of the customer journey. Quality means different things for
+different people at different times. As Sunil Gupta says in ​Driving Digital Strategy​, every
+company must identify these complementarities and build around them.4
+
+Nothing illustrates this as well as the rise of Netflix. The old Hollywood studios started
+every quarter with nothing in the bank. They put $250 million into producing a
+blockbuster and hoped it would get four times that figure. Netflix starts every quarter
+with subscription revenue in the bank. Before putting $50 million in a new season of
+one of its shows, its executives can review the data. Even if that season is less
+successful than expected, it still helps Netflix improve its library, attract new
+subscribers and extend the lifetime value of the ones it has.
+
+
+1.2. News subscriptions: an old story.
+
+As John Warrillow explains, the subscription business model was created by map
+publishers in Europe during the 16th century. They would invite their customers to
+subscribe to future editions of their maps at a time when new lands were being
+discovered and explored. Aristocrats and academics paid a subscription and gave them
+the capital they needed to keep on publishing their maps.
+
+Early newspapers adopted the same business model. Subscriptions soon became the
+standard business approach for information publishing. Readers subscribed to
+
+
+3
+  J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry​, Portfolio
+Penguin, 2015, p. 20.
+4
+  S. Gupta, ​Driving Digital Strategy. A Guide to Reimagining Your Business​, HBR Press, 2018.
+
+
+                                                                                                        10
+general-interest publications. Their subscription fees provided the money needed to
+fund production and distribution costs. With the rise of mass audiences, many
+newspapers embraced advertising as their main revenue stream in the last half of the
+19th century. But the pendulum has started to swing back to different forms of reader
+revenue as the rise of technology platforms suck ad money from news companies
+around the world.
+
+A few newspapers adopted digital subscriptions in the first years of this century in a
+period Spanish academic Ángel Arrese has called “the frenzy of free trials.”5 Most of
+these efforts failed. Spanish newspaper El País introduced a pay model in November
+2002 for €80 a year.6 The newspaper attracted around 45,000 digital subscribers. The
+project was dropped in 2005 as the newspaper lost its leadership in digital and
+struggled to grow its subscriber base. The New York Times launched Times Select,7 its
+own digital subscription service, in 2005. According to official figures, it reached
+227,000 online-only paid subscribers8 at $49.95 a year or $7.95 a month. The project
+was discontinued in September 2007. The main reason for closing was the promise of
+traffic from search and advertising revenue. “Our projections for growth on that paid
+subscriber base were low, compared to the growth of online advertising,” said Vivian L.
+Schiller, senior vice president and general manager of nytimes.com at the time.9
+
+There are many reasons why subscriptions didn’t work at the time. Payment systems
+were clunky. Digital advertising was still attractive for general newspapers. People
+weren’t used to paying for services online. Smartphones and tablets didn’t exist yet.
+
+
+
+5
+  Á. Arrese, ‘From Gratis to Paywalls’, ​Journalism Studies,​ Vol. 17, No. 8 (2016), pp. 1051-1067.
+6
+  “EL PAÍS lanza una nueva edición digital a la que se accederá por 0,2 euros diarios”, ​El País​,
+November 16, 2002. Retrieved on July 30, 2019 from
+https://elpais.com/diario/2002/11/16/sociedad/1037401211_850215.html
+7
+  “What is Times Select”, ​The New York Times.​ Retrieved on July 28, 2019 from
+https://archive.nytimes.com/www.nytimes.com/products/timesselect/whatis.html
+8
+  O. Malik, “New York Times To Close Times Select Effective Midnight Tuesday; Will Open Last 20 Years
+Of Archives”, ​GigaOm​, September, 17, 2007. Retrieved on July 28, 2019 from
+https://gigaom.com/2007/09/17/419-new-york-times-to-close-timesselect-effective-wednesday/
+9
+  R. Pérez-Peña, “Times to Stop Charging for Parts of Its Web Site”, ​The New York Times,​ September 18,
+2019. Retrieved on July 28, 2019 from ​https://www.nytimes.com/2007/09/18/business/media/18times.html
+
+
+                                                                                                     11
+Things started to change after the Great Recession. The Financial Times introduced a
+flexible pay model in 2007. The Times and The Sunday Times adopted a hard paywall in
+2010. The New York Times launched a metered model in March 2011. In the last few
+years, many newspapers have followed this path in different flavours. Freemium and
+metered models have flourished in European countries as diverse as Finland, Germany,
+Italy, Poland and France.10
+
+According to the Digital News Report, most people wouldn’t pay for a digital
+subscription to a newspaper. Thirty-four per cent of respondents say they pay for
+online news in Norway, 27% in Sweden and 16% in the United States,11 but these
+countries remain an exception. Percentages are lower in most of the 38 markets
+covered by the report. This doesn’t mean it’s impossible to charge for news. Global
+news brands have often been more prosperous on this front than smaller outlets. But
+several local and national newspapers have managed to execute successful reader
+revenue strategies or at least open a new revenue stream.
+
+Transitioning from a business model based on advertising to one focused on reader
+revenue is not an easy task. Advertising is often a volume game. It requires getting as
+much traffic as possible. Nothing matters more than raw numbers such as unique users
+and page views. Memberships and subscriptions require a different mindset. Any
+newspaper willing to adopt them must focus on its most loyal audience, rethink its
+organisation and learn to tell its own story compellingly. It must also rewire its value
+proposition to the needs of its readers and adapt its digital products to their daily or
+weekly routines.
+
+Advertising and reader revenue can be compared to horses pushing in opposite
+directions. Unrestrained, digital advertising can encourage clickbait, long loading times
+
+10
+   F. M. Simon and L. Graves. “Pay Models in European News”, Reuters Institute for the Study of
+Journalism, 2019. Retrieved on July 30, 2019 from
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2019-05/Paymodels_for_Online_News_FINAL_1.
+pdf
+11
+   R. Fletcher, “Paying for News and the Limits of Subscription”, ​Digital News Report,​ Reuters Institute for
+the Study of Journalism, 2019. Retrieved on July 30, 2019 from
+http://www.digitalnewsreport.org/survey/2019/paying-for-news-and-the-limits-of-subscription/
+
+
+                                                                                                           12
+and bad user experience. Pay models can encourage news inequality and ideological
+echo chambers. But they often reward quality journalism and create an environment in
+which the interests of the journalists and their audience are closely aligned. For a
+subscription company, not every click is created equal. Loyal readers are much more
+important than someone who occasionally clicks on an article from Google or
+Facebook. Frequency and time spent are more valuable than page views.
+
+
+1.3. What this paper is (and what is not).
+
+This paper aims to look at the strategies newspapers use when adopting both
+memberships and subscriptions. It includes an executive summary and is structured in
+five chapters that touch on five aspects every subscription company should pay
+attention to: things to do before you start, value proposition, pricing, acquisition and
+churn. Every chapter opens with a short vignette explaining how a particular news
+organisation has dealt with that particular aspect.
+
+The paper explores what several companies are doing in every one of these aspects
+through structured interviews with 26 media executives from 15 news organisations.
+Some of these outlets run digital subscriptions. Others have reader revenue models
+with a less transactional value proposition. Most of them are based in Spain and the
+United Kingdom. Some are based in other European countries such as Denmark,
+Sweden, Italy and France.
+
+This paper doesn’t analyze either the virtues of different pay models or the price of the
+offerings of every particular newspaper. Its main goal is to explain the strategies news
+outlets are applying to deal with the profound changes required by a subscription
+business in the hope that some could be used by other news organisations elsewhere.
+
+
+1.4. Why Spain and the United Kingdom.
+
+Most of the news organisations featured in this paper are based in Spain and the United
+Kingdom. These media markets have a few things in common. Both have similar
+
+
+                                                                                           13
+percentages of people willing to pay for news according to the Digital News Report:
+10% in Spain, 9% in the U.K.12 Newspapers operating in both countries share the
+blessing (also the curse) to publish its content in a global language. Unlike the Nordic
+countries, they don’t have the competitive advantage of a language almost no one
+speaks outside their market. The Internet provides them with an open field where they
+compete with outlets based on the other side of the Atlantic. In this kind of
+environment, news outlets like The Guardian and El País decided to pursue traffic
+overseas.
+
+Spain and Britain have very different media landscapes. Tabloids and digital-only news
+organisations are mostly free in the United Kingdom and operate under the shadow of
+the BBC. Most national broadsheets and magazines, however, have been running pay
+models for a few years. The Financial Times, The Times and The Sunday Times operate
+with hard paywalls. The Telegraph runs a freemium model. The Guardian combines
+memberships and contributions with several subscription options. News start-up
+Tortoise is exploring a promising model through newsletters, sponsorships and events.
+
+Spain is on the other side of the spectrum. Not a single national legacy news
+organisation was running a substantial pay model in July 2019. El País tried and failed
+before betting heavily on digital advertising. El Mundo started offering a subscription
+to the PDF of its print edition in March 2010.13 It also launched a metered paywall with
+25 free articles in October 2013,14 then dropped it in 2018. The number of free articles
+was too high to convince most readers to join.
+
+
+
+
+12
+   R. Fletcher, “Paying for News and the Limits of Subscription”, ​Digital News Report,​ Reuters Institute for
+the Study of Journalism, 2019. Retrieved on July 30, 2019 from
+http://www.digitalnewsreport.org/survey/2019/paying-for-news-and-the-limits-of-subscription/
+13
+   “EL MUNDO presenta la forma de leer el periódico 'para todo el siglo XXI'”, ​El Mundo, ​March 4, 2010.
+Retrieved on July 28, 2019 from
+https://www.elmundo.es/elmundo/2010/03/03/comunicacion/1267654313.html
+14
+   “EL MUNDO cambia de piel y todos ganamos”, ​El Mundo​, October 3, 2013. Retrieved on July 28, 2019
+from
+ ​https://www.elmundo.es/elmundo/2013/10/03/comunicacion/1380754334.html
+
+
+                                                                                                           14
+As I will explain in the next chapters, some Spanish news organisations run reader
+revenue models. In January 2020, digital-only newspaper eldiario.es had more than
+35,000 members. One-third of its revenue comes from its readers and it has been
+profitable since 2013, the year after its launch. The other exception comes from a few
+local newspapers. In April 2019 Catalan newspaper Ara had more than 45,000
+subscribers, 23,000 of which were digital-only. Vocento media group has launched
+digital subscriptions in five of its 11 local newspapers. Around 27,000 readers had
+joined in March 2019. Competitors such as Prensa Ibérica recently launched digital
+subscriptions too.
+
+The Spanish media landscape started to change in the autumn of 2019. El Mundo
+launched a freemium subscription model in October 2019.15 El País is launching a
+metered paywall in the first quarter of 2020.16
+
+Most national newspapers are preparing to adopt digital subscriptions soon. Local and
+digital-only news organisations could launch a pay model too. This paper is aimed at
+any media executive who is planning to transition into a reader revenue model either in
+Spain or in any other country. Some of the strategies covered here could be applied by
+people working in other media markets. I hope the expertise and innovation I’ve seen
+in many British news organisations will be an inspiration for so many media brands
+that are struggling in Spain and Latin America. I also hope media executives in the U.K.
+will learn from the ingenuity and the resilience I’ve seen in news organisations that
+operate on the other side of the British Channel, often with fewer resources than them.
+Journalism benefits from cross-pollination. Ideas from other countries and other
+industries can help it flourish and endure.
+
+
+
+
+15
+   ​https://www.elmundo.es/television/2019/10/21/5dadf08921efa04f7e8b45fc.html​ as seen on February
+17, 2020.
+16
+   https://www.elespanol.com/economia/medios/20200117/pais-ultima-detalles-muro-poroso-lanzarlo-marz
+o/459454914_0.html​ as seen on February 17, 2020.
+
+
+
+                                                                                                 15
+2. Executive summary.
+Pay models require a different kind of organisation. ​Successful subscription
+companies break silos and create cross-functional teams. Marketing, technology and
+editorial work closely and obsess about customers’ needs. The best media executives
+make sure everyone knows the metrics that matter. Facebook likes, page views, and
+unique users are now valued mostly as means towards an end —acquisition and
+retention of paying subscribers. Frequency, recency and time spent mean readers are
+getting value from your site. The goal of every news outlet should be to get more
+people to enjoy its content more often during more time. Loyalty is the first step
+towards a subscription. Occasional readers never subscribe.
+
+Every newspaper must learn to tell its own story.​ There will always be outlets
+offering free access to their news content. Any company with a pay model must explain
+why readers should support its work. This appeal should be crafted carefully. It must
+take into account the mission of the organisation as well as its ownership, its history
+and its constraints. Journalists should explain how they do what they do. Media
+executives should be as transparent as possible in their financial reports. Newspapers
+could benefit from presenting themselves within a broader social narrative. A
+conversation with their readers could help frame a narrative that is clear and attractive.
+Any news brand must mean something. Anything it does should be aligned with its
+editorial mission. Paying readers are less forgiving than occasional users. Clickbait can
+destroy trust.
+
+Subscription companies must obsess about their core audience. ​Most of the reader
+revenue of every newspaper with a pay model comes from a small percentage of their
+readers. These are the ones most attached to the brand and most likely to subscribe.
+Media executives should look at the behaviour of these readers. Their goal should be to
+learn what their news habits are, how they structure their news diet, what they’re
+
+
+
+
+                                                                                          16
+looking for when they come. News organisations should learn as much as possible
+about this group and should think of strategies to grow it. Their future depends on this.
+
+The best newspapers focus on their digital products.​ Most of the legacy outlets
+covered by this paper still get most of their revenue from print. Their top priority,
+however, is improving their digital properties. This is not an easy task. Loyal readers
+are not uniform. Their consumption patterns could be all over the map. Quality often
+means different things to different people. Every channel requires a different language
+and different skills. The best companies invest their resources on the platforms that are
+popular among their core users and adapt their processes and priorities to their needs.
+This could mean producing audio versions of your best stories or creating niche
+editorial products for audiences that are underserved.
+
+Good user experience is essential to succeed.​ News organisations are realising that
+content is just one of the aspects of their value proposition. User experience is almost
+as important, especially on a mobile phone. A great editorial product can fail as a result
+of poor user experience. On the other hand, great user experience could be a great
+selling point for a news organisation: The Guardian lets everyone read every article in
+its website, but makes readers pay to read some of those articles or a daily edition in its
+premium apps. The most successful news organisations think thoroughly about loading
+time, packaging and presentation. Younger audiences are used to the high standards
+set by digital platforms. They don’t accept pop-up windows or invasive ads.
+
+Readers appreciate a product they can finish. ​In a world dominated by endless news
+feeds, finite editions are having a comeback as a way to foster loyalty among
+subscribers and recreate the news habits of the past. Older readers still love to read the
+electronic versions of the print editions. Younger audiences gravitate towards daily
+podcasts, niche newsletters or news digests bundled into cheaper subscriptions.
+Readers appreciate news products they can finish. Journalists should remember their
+job is not so much publishing everything as editing what is important. Their work
+
+
+
+
+                                                                                          17
+shouldn’t be guided by outdated processes but by the routines of their current
+audience.
+
+Print shouldn’t be the focus but it could help. ​A print product could be
+overwhelming or pointless for a portion of your digital audience. But print can still be
+an asset today. Newspapers face a strategic dilemma: most of their growth comes from
+digital, but most of their revenue still comes from print. The most successful
+companies adapt their content to the language of every channel where its loyal readers
+spend their time and print is a channel too. The Guardian uses price hikes to transform
+anonymous buyers into print subscribers and repackages some of its articles into a new
+glossy weekly magazine. The Economist creates most of its daily picks from articles
+already published in the print edition of the magazine.
+
+The best subscription companies experiment with pricing. ​Newspapers have
+produced a single product and sold it for a single price for the last couple of centuries.
+Digital subscriptions require a different mindset, much more open to experimenting
+with bundles and price points. Discounts and free trials could be in your toolbox. But
+you should make it very clear to your readers they enter into a paid relationship.
+Otherwise, you will attract people who won’t stay for long. Hard data, not gut feelings
+should guide your decisions. Any changes on pricing should be made after reviewing
+the behaviour of the people most likely to subscribe. Newspapers are partnering with
+other news organisations. Swedish newspaper Dagens Nyheter offers bundles with The
+New York Times and with a few local newspapers. Spanish newspaper eldiario.es offers
+bundles with a couple of magazines.
+
+Open vs closed is not the right framework. ​The difference between membership and
+subscription models is more blurred than ever before. Some news organisations with a
+membership model run very hard paywalls while newspapers with subscriptions allow
+sampling opportunities through free trials, social and search. Open news organisations
+are more closed than you think, and vice versa. The Guardian runs a successful
+subscription business. The FT ran an open WhatsApp channel and still publishes audio
+
+
+
+                                                                                         18
+and video content for free. The most successful news outlets are not attached to their
+models. They tweak them according to the behaviour of their audience and experiment
+with bundles and revenue streams. The shape of your paywall must be just one of the
+elements of your value proposition. Newsletters, podcasts, audiobooks, trips, discounts
+and events must be added to the mix.
+
+Journalism is the best acquisition strategy. ​Every news organisation covered by this
+report experiment with search and social channels. But everyone says that nothing
+beats journalism as an acquisition tool. Memberships and subscriptions are not impulse
+sales. People start paying after engaging with a news organisation regularly for a long
+time. Creating news habits is the best way to get subscribers and reduce churn. Readers
+often convert after reading long-form pieces and investigations that force politicians to
+resign. Quality and consistency are important for every subscription company but also
+for newspapers with a less transactional value proposition. News sites should perfect
+the way they ask for the support of their audience. They should test different messages
+and try to answer with them any questions they could have.
+
+Friction is your enemy. ​Subscribing or donating to a news outlet should be as easy as
+possible. Newspapers should take a page from technology start-ups and adopt
+frictionless payment systems. Anyone should be able to subscribe in a few seconds.
+Anyone should be able to cancel its subscription without making a phone call. Creating
+a seamless payment system is especially difficult for global news organisations, whose
+managers have to deal with different platforms and different regulations. You won’t
+reduce your churn rate unless you get your customers into reliable payment systems.
+Many cancellations are the result of credit cards’ expiration dates.
+
+Churn is much more important than acquisition. ​Getting thousands of subscribers
+who leave a few months after they join is not a sustainable path for any news
+organisation. This is why acquisition and churn strategies should be run by the same
+team. Dirty acquisition channels bring in the wrong kind of customers and produce
+high churn rates. Good subscription companies design great onboarding experiences
+
+
+
+                                                                                         19
+and encourage their readers to make the most of their subscription in the first few days.
+They also segment their users by demographics and by the time they joined. Creating
+habits matters much more than showing any particular piece of content. Retention
+often correlates with frequency and time spent.
+
+
+
+
+                                                                                      20
+3. Things to do before you start.
+The Guardian launched its membership model on September 10, 2014.17 According to a
+news article published at the time, the original scheme focused on “a rolling
+programme of events, discussions, debates, interviews, keynote speeches and
+festivals.”18 It had three tiers: friends, partners and patrons. Friends didn’t pay
+anything. Partners paid £15 a month and could get discounts and priority bookings for
+some of the events. Patrons paid £60 a month and had an extra level of access. They
+could enjoy newsroom tours and host their own events in The Shed, a listed building by
+King’s Cross station which was set to open in 2016.
+
+It was an important moment for The Guardian. A few weeks later, it would overtake The
+New York Times19 as the second most popular English-language newspaper behind the
+Daily Mail. It had published scoops such as the Edward Snowden revelations and the
+phone-hacking scandal. It had just won its first Pulitzer Prize.20
+
+The newspaper’s finances, however, didn’t look good. Circulation had been cut in half
+in a few years.21 It had just posted an annual loss of £30.6m.22 It would lose £227m from
+
+17
+   ​L. O’Reilly,​ “​Why the Guardian believes readers will pay £15 a month to become members”, ​Marketing
+Week,​ September 10, 2014. Retrieved on July 28, 2019 from
+https://www.marketingweek.com/2014/09/10/why-the-guardian-believes-readers-will-pay-15-a-month-to-b
+ecome-members/
+18
+   M. Sweeney, “Guardian launches new three-tier membership scheme”, ​The Guardian,​ September 10,
+2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/sep/10/guardian-membership-scheme-patrons-kings-cross
+19
+    ​M. Sweeney​, “​The Guardian overtakes New York Times in comScore traffic figures”, ​The Guardian​,
+October 21, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/oct/21/the-guardian-overtakes-new-york-times-in-comscore-traf
+fic-figures
+20
+   E. Pilkington, “Guardian and Washington Post win Pulitzer prize for NSA revelations”, ​The Guardian,​
+April 14, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/apr/14/guardian-washington-post-pulitzer-nsa-revelations
+21
+   “ABCs: National daily newspaper circulation September 2014”, ​The Guardian,​ October 10, 2014.
+Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/table/2014/oct/10/abcs-national-newspapers
+22
+     ​D. Ponsford, “Guardian losses flat year on year at £30.6m but Trader sale swells bank balance to
+£842.7m”, ​Press Gazette​, July 8, 2014. Retrieved on July 28, 2019 from
+https://www.pressgazette.co.uk/guardian-losses-flat-year-on-year-at-306m-but-trader-sale-swells-bank-ba
+lance-to-8427m/
+
+
+                                                                                                      21
+2009 to 2016.23 Part of those losses had to do with an expensive American expansion.
+The Guardian was the eighth player in a small market like Britain. The United States
+was a much bigger market and held plenty of opportunity. American readers were
+richer and much easier to monetise.
+
+The American operation brought millions of readers but not enough revenue.
+Circulation and print advertising were still falling. With other British newspapers
+setting up paywalls, many people wondered whether The Guardian would follow suit.
+
+The Guardian’s membership model started to take shape at a readers’ conference in
+March 2012. During a session with Clay Shirky, editor-in-chief Alan Rusbridger said the
+audience would have to pay to sustain The Guardian, then asked them a question.
+Would they prefer a plastic bucket or a loyalty club? Giving money to the newspaper as
+a cause or paying a monthly fee to get tickets and discounts? “Readers were incredibly
+unenthusiastic about tickets,” says Rusbridger. “But many were willing to give money
+so our journalism could be available for everyone as a public good. They saw The
+Guardian as a cause.”
+
+Consultants hired by the business side came to the same conclusion but the board
+didn’t believe it. “They thought it was editorial moonshine,” says Rusbridger. He
+remembers the words of one of the senior managers. “I can’t have a plastic bucket and
+go to Dolce & Gabbana [to sell ads],” he said. According to Rusbridger, there was a
+complete mismatch between readers who kept saying ‘we’d really love to give you
+money’ and the board saying ‘no, we’ll give you tickets.’”
+
+The original membership model, built around events, didn’t take off. It gathered
+around 12,000 members in the first year. “It was appealing to certain people who lived
+in certain areas. But given our global readership, it wasn’t a benefit that many people
+
+
+
+
+23
+  A. Rajan, “Guardian records first operating profit since 1998”, ​BBC,​ May 1, 2019, Retrieved on July 28,
+2019 from ​https://www.bbc.co.uk/news/entertainment-arts-48111464
+
+
+                                                                                                         22
+could partake,” says Amanda Michel, who is now the global director and senior product
+manager for Contributions at The Guardian. Michel started to work in this area in 2016.
+
+At the end of the fiscal year 2018/19, The Guardian had over 655,000 regular
+supporters. Around 365,000 were members and recurring contributors. The newspaper
+also received over 340,000 one-off contributions from more than 300,000 contributors
+around the world.24
+
+The Guardian achieved this remarkable turnaround by shutting down its event business
+and putting its editorial mission at the centre of the membership programme. The
+management was flexible enough to change tack when the data didn’t support the
+initial vision. After all, they realised the plastic bucket was much more powerful than
+any loyalty scheme.
+
+“People​ ​on editorial are not good at things like logistics and flexible pricing,” says
+Rusbridger. “But commercial people sometimes don’t trust that incredible bond
+between the reader and the journalist. They don’t quite get that. We had published an
+incredible range of stories throughout the years. So many people said: ‘I will support
+you because we think you are what a newspaper should be.’”
+
+Every news organisation should strengthen this bond with its audience before setting
+up any kind of reader revenue model but they should also do other things before
+performing that difficult transition. I will explore a few in this chapter.
+
+
+3.1. Focus sharply on your core audience.
+
+Many news organisations are still optimized for traffic. Setting up a pay model requires
+reorienting your processes and priorities to focus on your most loyal audience. This is
+not an easy task. Commercial departments will warn against losing page views and
+
+
+24
+     “​Guardian Media Group announces outcome of three year turnaround strategy”,​ The Guardian,​ May 1,
+2019. Retrieved on July 28, 2019 from
+https://www.theguardian.com/gnm-press-office/2019/may/01/guardian-media-group-announces-outcome-
+of-three-year-turnaround-strategy
+
+
+                                                                                                      23
+advertising revenue and some journalists won’t be happy about limiting the reach of
+their articles. But you will only succeed if you focus on understanding the needs of your
+most loyal audience. Casual users will never subscribe.
+
+Global reach has helped big outlets like The Guardian and The New York Times to get
+subscribers around the world. But this hasn’t worked for smaller news organisations,
+whose subscribers often come from smaller markets. The tension is especially difficult
+in small countries with global languages such as Britain and Spain, where even some
+local and regional newspapers have given in to the temptation of pursuing global traffic
+through clickbait and gossip news.
+
+“In the last few years, we’ve seen other regional newspapers trying to compete on
+traffic with global brands through search and social. I think that’s a mistake. You can’t
+produce tons of low-quality content and then sell subscriptions in your local market.
+Your brand must mean something,” says Fernando Belzunce, editorial director of local
+newspapers at Vocento, a Spanish media group.
+
+
+3.2. Rethink your organisation.
+
+Subscription businesses require a new mindset and a new kind of organisation,
+integrated around the needs of the audience. Any reader revenue strategy needs to
+involve people from editorial, technology and the business side. Customers are familiar
+with digital services and expect customization, frictionless payments and great user
+experience. These things are important and could have an impact on your bottom line.
+
+Data should be at the forefront of any decision making. As author and technologist
+Tien Tzuo says, “the more information you can learn about the customer, the better
+you can serve their needs, and the more valuable the relationship becomes”25
+
+
+
+
+25
+     T. Tzuo, ​Subscribed: Why the subscription model will be your company's future - and what to do about
+it,​ Portfolio Penguin, 2018, p. 20.
+
+
+                                                                                                        24
+The Financial Times bridges the gap between marketing and editorial with a weekly
+meeting. “We want to know what they’re about to do so we can turn that into both
+existing customer engagement opportunities and acquisition opportunities rather than
+waiting for the news to hit. This relationship is helping them see the role marketing can
+play to turn their content into subscriptions,” says Marie Goddard, head of customer
+marketing.
+
+Some Spanish newspapers are using the shift into digital subscriptions to reorganise
+their editorial teams. La Vanguardia has integrated both digital and print teams in a
+single newsroom. “Achieving this kind of integration is much easier now that we are in
+the subscription mindset. It would have been much more difficult a few years ago,” says
+Javier Martínez, director of audiences and digital strategy.
+
+As part of their shift into pay models, El País and La Razón are adopting Washington
+Post’s Arc publishing system to break silos, integrate many data sources and encourage
+experimentation on the editorial and the business side.
+
+El Mundo is creating an expanded express team and a small print hub, where a few
+senior editors will repackage content for print. The expansion of the express team
+reflects the realities of the Spanish market, where people still go for breaking news to
+big legacy newspapers as the public broadcaster is not as dominant as the BBC.
+According to managing editor Joaquín Manso, the goal is that most of their journalists
+will be reporting and producing valuable content, and not sitting behind a desk.
+“There’s nothing more valuable for your readers than taking them to the places they
+can’t go,” he says.
+
+
+3.3. Learn to tell your own story.
+
+After launching its membership model, people at The Guardian noticed many readers
+saw the newspaper had 150 million readers and assumed they were making a lot of
+money. So they realised they had to explain how advertising revenue was dropping and
+why they needed their readers’ support. Another good example was the Scott Trust, the
+
+
+                                                                                           25
+British company who is the only shareholder of The Guardian and whose central
+purpose is “to ​secure the financial and editorial independence of The Guardian in
+perpetuity as a quality national newspaper without party affiliation.”26 People at the
+newspaper assumed the audience knew what the Scott Trust was. But most of the
+audience didn’t. So they started articulating its role and why it was so significant. Now
+the Scott Trust is as important for the audience as it is for the journalists and the
+members of its board.
+
+“As journalists, we have always been telling the stories of other people. Now we also
+have to tell our own,” says Amanda Michel.
+
+In a world where many people discover brands through search and social media, telling
+your story is more important than ever. Tien Tzuo recommends what he calls the
+three-room model. The first room is the story of your product:​ the how​. The second is
+the market you’re trying to reach:​ the who​. The third room is an overarching story that
+puts your product and your market within a broader social narrative: ​the why now​. “You
+should tell your story from the third room to the first one. First the context, then the
+market, then the product,” says Tzuo.27
+
+
+3.4. How to ‘swallow the fish’.
+
+Before adopting a pay model, it’s also important to communicate any changes inside
+your news organisation. Companies shifting to a subscription model often face what
+authors Thomas Lah and J. B. Wood call “swallowing the fish.”28
+
+The fish is what happens when existing companies go into subscriptions. In the
+beginning, their revenues shrink as revenues from large, pay-upfront deals are replaced
+by recurring subscriptions without big upfront payments. At the same time, they must
+
+26
+     “The Scott Trust: values and history”, ​The Guardian,​ July 26, 2015. Retrieved on July 28, 2019 from
+https://www.theguardian.com/the-scott-trust/2015/jul/26/the-scott-trust
+27
+     T. Tzuo, ​Subscribed: Why the subscription model will be your company's future - and what to do about
+it,​ Portfolio Penguin, 2018, p. 147.
+28
+     T. Lah and J.B. Wood, ​Technology-as-a-service: How to Grow a Profitable Subscription business,​
+TSIA, 2016.
+
+
+                                                                                                        26
+make investments in many of the new capabilities and structures required to succeed in
+the new world. As Tien Tzuo says, “the traditionally profitable and stable mix of more
+revenue than costs on the left side of the chart is replaced with a tumultuous period of
+costs exceeding revenue.”29
+
+Software company Adobe faced this challenge as it changed its business model.30 It
+went from charging $1,800 for a one-time sale to $50 a month for a subscription to
+Adobe Creative Cloud, this software suite. The company faced a short-term shock as its
+main source of income disappeared. Processes and priorities changed overnight.
+Managers ​swallowed the fish​ by transforming the organisation, announcing their goals
+very clearly and committing to a firm timeline. They were open about these changes
+and over-communicated them to customers, employees and investors. “The louder and
+more publicly aggressive companies seem to be about their pivot, the better chance
+their stock price has of weathering the transition period,”31 says Tzuo.
+
+The transition period could feel pretty lonely for newspaper managers who dare to
+jump. Journalists hate losing a portion of their audience. Commercial departments feel
+threatened by what they often perceived as a power grab. Many people won’t accept the
+new model before seeing the first positive results.
+
+Chris Duncan, managing director of The Times, learned this lesson after the newspaper
+launched its paywall in July 2010.32 “The initial reaction from the journalists was:
+‘You’ll kill us all. We’re going to lose our voice, our reach.’ I still remember the night
+we pressed the button and we resigned millions of customers effectively. And there was
+
+
+
+
+29
+     T. Tzuo, ​Subscribed: Why the subscription model will be your company's future - and what to do about
+it,​ Portfolio Penguin, 2018, p. 85.
+30
+     “How Adobe Became a Successful $95 Billion SaaS Company”, ​Product Habits Blog​. Retrieved on July
+28, 2019 on ​https://producthabits.com/adobe-95-billion-saas-company/
+31
+     T. Tzuo, ​Subscribed: Why the subscription model will be your company's future - and what to do about
+it,​ Portfolio Penguin, 2018, p. 86.
+32
+     L. Oliver, “Times and Sunday Times paywall to go up tomorrow”, ​Journalism.co.uk,​ July 1, 2010.
+Retrieved on July 28, 2019 from
+https://www.journalism.co.uk/news/times-and-sunday-times-paywall-to-go-up-tomorrow/s2/a539431/
+
+
+                                                                                                       27
+a moment I remember very clearly because it still makes me feel sick. I looked around
+the room and asked: ‘How many subscribers did we get?’ And someone said: ‘None.’”
+
+The newspaper didn’t have much to lose when it introduced a hard paywall in July
+2010. ​The company had just lost ​£72m. Traffic was continually increasing, but revenue
+was flat. The first pay model charged​ ​£1 for a day and​ ​£2 for a week. Online access was
+included in a seven-day print subscription but iPad editions were not. If you wanted
+them, you should pay an extra​ ​£9.99 a month.
+
+Chairman Rupert Murdoch was convinced a hard paywall was the way to go. Others in
+the company were not so sure. “There was a group within the business who believed it
+could be done and a group who believed it couldn’t,” says Duncan. “For a year or so I
+was relatively persona non grata on the editorial floor. But 18 months in, we made
+more money from the pay model than we did from the ad-funded model. So people
+started to see this could work.”
+
+In June 2019 The Times and The Sunday Times had grown its subscriber base to a total
+of 539,000 people, 304,000 of which were digital-only. “The mood in the newsroom has
+shifted,” says Alan Hunter, head of digital at the newspaper. “I would say 95% of our
+journalists think it was a good thing.”
+
+
+
+
+                                                                                          28
+4. Adapting your value proposition.
+Vocento is one of the leading media groups in Spain. It owns national conservative
+newspaper ABC and 11 local newspapers, most of which are market leaders in their
+regional markets. The most important one is El Correo, the best-selling newspaper in
+the Basque Country. Average circulation in 2018 was 57,547 copies, according to
+Spanish auditing organisation OJD.33 It was 128,007 copies in 2003.34
+
+El Correo was the first Vocento newspaper to introduce digital subscriptions in 2015.
+Print sales and ad revenue were projected to drop. Pursuing viral traffic didn’t make
+any sense for a publisher whose most valuable readers were based around two cities:
+Vitoria and Bilbao. Managers had boosted revenue through initiatives such as Oferplan
+and Local Digital Kit,35 but they needed new revenue streams.
+
+El Correo started with a very simple value proposition: a metered paywall and a few
+exclusive articles for subscribers. The price of the subscription was cheap: €4.95 a
+month. “Our goal was to retain our leadership online after we launched,” says Fernando
+Belzunce, editorial director of local newspapers at the group. They got 4,500
+subscribers, then hit a plateau. Page views dropped but advertising revenue didn’t fall
+as much as they feared. The most expensive ads were the ones on the home page, and
+those were not behind the paywall.
+
+In October 2018 El Correo relaunched its pay model by lowering the number of free
+articles and building a more rounded value proposition. The company put more pieces
+behind a paywall and marked those pieces as such. Journalists focused on topics that
+
+33
+     ​J. Soteras, “Los 10 principales periódicos españoles bajaron en 2018 sus ventas en el quiosco”,
+Infolibre,​ January 30, 2019. Retrieved on July 30, 2019 from
+https://www.infolibre.es/noticias/medios/2019/01/30/ninguno_los_principales_periodicos_espanoles_vend
+e_quiosco_mas_000_ejemplares_mes_91317_1027.html
+34
+   ​“‘El Correo Español El Pueblo Vasco’ consigue los mejores resultados de difusión en el último informe
+de la OJD”, ​Gaceta de Prensa​, October 22, 2014. Retrieved on July 30, 2019 from
+https://www.gacetadeprensa.com/noticia/5030/actualidad/el-correo-espanol-el-pueblo-vasco-consigue-los
+-mejores-resultados-de-difusion-en-el-ultimo-informe-de-la-ojd.html
+35
+   Oferplan is a service that saves people money through the use of virtual coupons. Local Digital Kit
+offers small companies different services such as advertising, marketing and SEO.
+
+
+                                                                                                        29
+were important for some of their readers such as female sports and local football teams.
+They also created a true crime section where local reporters resurfaced content from
+the archive and wrote about things that happened in their city a few decades before.
+“These sections don’t generate a lot of traffic, but they build loyalty and amplify our
+brand,” says Belzunce. “The challenge now is transforming frustration into excitement.
+It’s not just about the paywall. Once you are a subscriber, you receive newsletters on
+your favourite topics and enjoy discounts from our loyalty club.”
+
+The relaunch worked. In a few months, El Correo signed up thousands of readers and
+reached 12,000 subscribers in March 2019. Although they ran ads on local buses, the
+main conversion driver was the most valuable journalism they produced. “We are much
+happier now because we see that our marketing strategy is working and also because
+the new model is helping us transform our newsrooms,” says Belzunce.
+
+After adopting digital subscriptions at El Correo, Vocento launched them in four of its
+local newspapers: Diario Vasco (2016), Diario Montañés (2017), Ideal (2018) and La
+Rioja (2019). According to Belzunce, they plan to launch subscriptions in the rest in the
+next few months. The last ones to adopt subscriptions will be the ones based in very
+competitive markets: El Comercio in Asturias and Las Provincias in Valencia. “Right
+now we have over 27,000 digital subscribers. I think it’s feasible for us to get to 100,000
+subscribers once we are running subscriptions in the 11 local newspapers we own.”
+
+What happened at El Correo is not unusual. Adopting any reader revenue model
+requires rethinking your value proposition. And not just in terms of your journalism. A
+younger, mostly mobile audience demands a seamless user experience. Publishers need
+to adjust their offerings to the needs of their customers. Here are some things news
+organisations are doing on this front.
+
+
+4.1. Focus on your digital product.
+
+Two-thirds of the revenue of Swedish newspaper Dagens Nyheter still comes from
+print. But its leadership decided to focus on the digital presentation as if print didn’t
+
+
+                                                                                            30
+exist. “We make sure every article is published at the right time and in the right format
+for the digital audience,” says Martin Jönsson, head of editorial development at the
+newspaper. “If your goal is to build digital loyalty, you have to start from digital
+quality. That means reviewing your metrics to understand the needs of your readers,
+then change into a positive spiral where more quality attracts more subscribers and
+gets you more revenue and more journalists.”
+
+In the last four years, Dagens Nyheter has achieved that. “It’s much cheaper to publish
+a digital product,” says Jönsson. “You shouldn’t care too much whether revenue comes
+from print or digital as long as you can get a profitable business.”
+
+Swedish publishers are in a privileged position: Jönsson says that most of their
+customers pay for either music, movies or news, and 13% pay for all three. But there are
+many lessons publishers from other countries could draw from their success. After
+adopting digital subscriptions, Dagens Nyheter started creating innovative formats
+such as VR, podcasts and audiobooks. As a result, they’ve attracted a different
+audience: much younger, more female and less urban. While 73% of their print
+circulation is sold in Stockholm, 60% of their digital subscribers live in other cities. “We
+are reaching new people,” says Jönsson. “So we have to understand how these new
+readers define quality and what we can do about that.”
+
+Some of the things Dagens Nyheter has done will sound familiar to other publications.
+They’ve expanded their team of investigative reporters and increased the number of
+foreign correspondents. They’ve launched a new app with quizzes and crosswords and
+published audio versions of all of their long-form stories. This is something Danish
+digital newspaper Zetland also did at its members’ request.36 “Today 65% of our usage
+comes from audio,” says Lea Korsgaard, Zetland’s co-founder and editor-in-chief.
+
+
+
+36
+   ​C. Schmidt​, “​Zetland’s members asked for an audio version — and now it’s more popular than their
+written stories”, ​Nieman Lab​, May 9, 2018. Retrieved on July 28, 2019 from
+https://www.niemanlab.org/2018/05/zetlands-members-asked-for-an-audio-version-and-now-its-more-pop
+ular-than-their-written-stories/
+
+
+
+                                                                                                   31
+“We’re still a written-word publication, but people listen to the written word. We asked
+our users and they told us what they wanted.”
+
+
+4.2. Stop doing stuff (really).
+
+As part of their efforts, journalists at Dagens Nyheter tried to identify the kind of
+stories very few people read. “We realised that using copy from AP or Reuters didn’t
+work for us. People come to us in search of deep dives, not quick summaries,” says
+Jönsson. They cut the number of articles they published by 15%. After doing that, they
+managed to increase traffic by making sure they focused on the right stories. Le Monde
+and The Guardian have also reduced their output with similar results.
+
+Spanish journalist Ignacio Escolar faced a similar challenge after founding eldiario.es in
+2012. His initial model was Politico. He didn’t want to create another general-interest
+newspaper but one with a sharp focus on politics and investigations. As its audience
+grew, Escolar considered publishing sports news. “We were approached by a group of
+journalists who wanted to cover sports for us,” says Escolar, founder and
+editor-in-chief of eldiario.es. “We signed an agreement with them but it didn’t go well.
+Our paying members complained.” Some of their emails were blunt: “I’m not paying
+you guys to know more about the Real Madrid matches.” The sports coverage didn’t
+create either substantial ad revenue or new members and eldiario.es dropped the
+project. It hasn’t covered sports ever since.
+
+
+4.3. Create great user experience.
+
+Members don’t see any ads when reading eldiario.es. El Correo’s subscribers aren’t
+shown the most invasive ones. Both newspapers have redesigned their digital products
+so their paying readers can enjoy a better user experience.
+
+
+
+
+                                                                                        32
+News organisations are realising that content is just one of the aspects of their value
+proposition. Loading time, packaging and presentation are important too. Younger
+audiences are used to the high standards set by digital platforms and are less forgiving.
+
+The Guardian has a two-fold reader revenue strategy. It offers memberships and
+one-off contributions for the readers who want to support the work of its journalists.
+But it also offers a transactional proposition for people who want to experience its
+journalism in unique ways. “Content is free and will always be free,” says Richard
+Furness, managing director for consumer revenues and publishing at the newspaper.
+“Our subscriptions are about creating an experience that is so compelling that people
+will pay.”
+
+The Guardian offers several options: ​several print and digital bundles, ​an ​£11.99
+monthly subscription to the iPad edition of the British newspaper and ​a ​£5.99
+subscription to a few features of its premium mobile app.37 For this monthly fee you can
+customize the home screen, follow your favourite writers and have access to a couple of
+exclusive tabs:
+
+     ●   The first one is called ​Live​ and it’s designed for news junkies who want to keep
+         up with the news.
+     ● The second one is called ​Discover​ and includes a selection of long reads.
+
+“We created these features after doing many tests with our readers,” says Furness.
+“Two needs came up time and again: ‘I’ve got two minutes and I want to catch up
+quickly with what’s going on’ and ‘I want to read beautifully presented long stories.”
+Both tabs are really popular right now.”
+
+
+
+
+37
+   ​Subscription bundles, ​The Guardian.​ Retrieved on July 28, 2019 from
+https://support.theguardian.com/uk/subscribe?INTCMP=header_support_subscribe&acquisitionData=%7
+B%22source%22%3A%22GUARDIAN_WEB%22%2C%22componentType%22%3A%22ACQUISITIONS
+_HEADER%22%2C%22componentId%22%3A%22header_support_subscribe%22%2C%22referrerPage
+viewId%22%3A%22jwugtx3iyjycma7ygt5y%22%2C%22referrerUrl%22%3A%22https%3A%2F%2Fwww.t
+heguardian.com%2Fuk%22%7D
+
+
+
+                                                                                            33
+Not every reader demands the same user experience. Around 22,000 subscribers of El
+Mundo pay to read the PDF version of the next day’s print edition before going to sleep.
+PDFs are old-fashioned but are still popular among older audiences. These readers can
+be a great asset as El Mundo launches a more comprehensive subscription model. La
+Vanguardia and Ara report similar behaviour. The print edition is still perceived as
+something valuable by a significant portion of the audience even though some of its
+pieces are already available online.
+
+
+4.4. Build products your readers can finish.
+
+Readers love the sense of achievement that comes from finishing a daily edition. In a
+digital environment dominated by endless feeds, finite products are quite appealing.
+“Journalists should remember that their job is not publishing as much as they can, but
+editing what is important,” says Richard Furness, from The Guardian. In October 2018
+Furness helped relaunch Guardian Weekly38 as a glossy magazine with three different
+editions: international, North-American and Australian. The magazine has introduced
+a younger audience to The Guardian in print. Most of the pieces published in Guardian
+Weekly are not commissioned just for the magazine. Its editor is there mostly to edit
+down and curate journalism that already exists. The lesson for Furness is clear. “You
+should think about the content you produce every day and then do something
+interesting with that content and sell it as a subscription product,” he says.
+
+News organisations are betting on the renewed appeal of daily or weekly editions as a
+way to recreate the news habits of the past. This trend is behind daily podcasts such as
+The Economist’s The Intelligence and The Guardian’s Today in Focus. It’s also what’s
+fuelling the rise of newsletters as a way to engage with the audience without depending
+on algorithms.
+
+
+
+
+38
+  The Guardian Weekly Wikipedia page. Retrieved on July 29, 2019 from
+https://en.wikipedia.org/wiki/The_Guardian_Weekly#Since_2007
+
+
+                                                                                        34
+Publishers use newsletters for different purposes. They can be just a tool to bring casual
+readers further into the acquisition funnel. They can also enhance the newspaper’s
+value proposition by providing value to underserved audiences. A great example is The
+Times’s Crime Club newsletter.39 It gives reviews, free ebooks and event tickets to crime
+fiction fans. It’s the most successful newsletter at The Times with a 70% open rate. A
+big news story can also be a great opportunity for a pop-up newsletter. Catalan
+newspaper Ara published a daily email during the trial of 12 separatist leaders over
+their role in 2017 Catalonia’s failed independence bid.
+
+The product team at The Economist sees newsletters as an opportunity to maximise
+traffic and bring occasional readers closer to the brand. Unlike other news
+organisations, they’ve focused on a small number of newsletters rather than to launch
+dozens. They may explore a few niches in the future, but any new efforts should be
+based on their readers’ needs. The Economist sends two daily newsletters and a weekly
+one with the cover and a few pieces of the magazine. According to Denise Law, head of
+product at The Economist, newsletters surpassed Twitter as a source of referral traffic
+to their website in May 2019. “Readers who use our newsletters are more likely to
+become subscribers than those via other channels,”40 she says. “The email with the
+Donald Trump cover right after the [2016 presidential] election converted two o three
+times more than the average one,” says Sunnie Huang, newsletters editor at the
+magazine.
+
+Digital editions come in many flavours. Every week Catalan newspaper Ara publishes a
+PDF dossier41 with essays and infographics about a topic. These dossiers could be as
+long as 80 pages. Topics are evergreen and wide-ranging, from Marxism to Europe,
+obesity and sex. According to Maria Llambí, Ara’s chief marketing officer, dossiers get
+downloaded more than 15,000 times a month. Most of their content already exists and
+
+
+39
+   The Times crime club newsletter signup page, ​The Times.​ Retrieved on July 29, 2019 from
+https://www.thetimes.co.uk/article/newsletter-signup-crimeclub-cw8qsvlg2
+40
+   D. Law, “Focusing on our core digital products”, ​Medium​, June 3, 2019. Retrieved on July 28, 2019
+from ​https://medium.com/severe-contest/focusing-on-our-core-digital-products-8dd1d7a80a20
+41
+   Dossiers published by Catalan newspaper ​Ara​. Retrieved on July 28, 2019 from ​https://llibreria.ara.cat/
+
+
+                                                                                                           35
+is repackaged for this new format. Dossiers have their own metered paywall. Only
+subscribers have unlimited access. Registered users can download five for free.
+
+Both Le Monde and La Repubblica have experimented with simpler digital products.
+Every morning at 7 am, Le Monde publishes a 25-article digital edition to its mobile app
+La Matinale.42 Its user interface looks a lot like Tinder. Users are shown the headlines
+and swipe left or right depending on their interests. That gives them access to a news
+feed with the articles they’ve saved. Some are only accessible to subscribers.
+
+Italian newspaper La Repubblica launched a new digital subscription in July 2018.43 The
+subscription is 50% cheaper than the full digital bundle and doesn’t include access to
+every article published in print. It offers the 20 most important stories published in
+print plus four news analysis and one exclusive long-form piece. It also gives readers
+access to audio versions of the articles and three daily newsletters. “At the beginning,
+we published every article at midnight, but most readers converted between seven and
+nine. So we started to publish new pieces at lunchtime and dinnertime. By doing this,
+we got more new subscribers every day,” says former editor-in-chief Mario Calabresi.
+
+When Calabresi left its position in February 2019, more than 40,000 people were paying
+for this cheaper subscription, which gives La Repubblica €3 million in annual revenue.
+According to Calabresi, the newspaper lost around €12 million in 2018 on an annual
+budget of €110 million.
+
+In November 2014 The Economist launched Espresso,44 a daily briefing with five pieces,
+a quick roundup of the daily news and a smart quotation. According to Lane Greene,
+language columnist of The Economist and editor of Espresso, pieces should have
+around 155 words and fit in a phone screen. Every article should have a news peg, a
+
+42
+   Home page of ​Le Monde’​ s La Matinale. Retrieved on July 28, 2019 from
+https://www.lemonde.fr/lamatinale/
+43
+   “Il mondo Repubblica: ecco la nuova app che gira intorno a te”, ​La Repubblica,​ July 26, 2018. Retrieved
+on July 28, 2019 from
+https://www.repubblica.it/tecnologia/mobile/2018/07/26/news/repubblica_nuova_app_disponibile_store_a
+pple_google_play-202751586/
+44
+   “Our new daily edition for smartphones”, ​The Economist,​ November 6, 2014. Retrieved on July 28,
+2019 from ​https://www.economist.com/newsbook/2014/11/06/our-new-daily-edition-for-smartphones
+
+
+                                                                                                         36
+surprising fact and a takeaway. It should be an opportunity to look at a bigger trend
+too.
+
+Espresso has editions for Asia, Europe and the Americas and it’s available in the main
+app of the magazine. Every subscriber can read it, but it’s also sold as a cheaper,
+separate subscription for ​£​2.49/$3.99 a month. 60% of Espresso’s revenue comes from
+subscriptions. The rest comes from advertising. It is sent as a newsletter, but most of its
+audience read it through The Economist app.
+
+
+4.5. Rethink what to publish and when.
+
+In March 2016, The Times announced it would stop covering breaking news. Instead of
+posting quick updates on developing stories, it would publish three daily editions at 9
+am, 12 pm and 5 pm. The management decided after reviewing the data. “The message
+[from our readers] was very clear,” says Alan Hunter, head of digital at the newspaper.
+“They valued us for our insights, our analysis and the authority of our reporting, not for
+the ability to catch up very quickly.”
+
+The Financial Times hasn’t retreated from breaking news, but it’s acting more like a
+broadcaster. A few years ago, most of the British newspapers were still publishing the
+bulk of their content online around 5 pm. As a result, there was a perfect asymmetry
+between when readers were reading and when journalists were publishing. It was bad
+for search too. When surfacing news articles, Google takes into account factors such as
+home page promotion and freshness of publication. Pieces published in the afternoon
+were harder to find.
+
+“This realisation led to a slow, finally successful shift in publication habits,” says Renée
+Kaplan, head of audience and new content strategies at the Financial Times. “We had
+to reprogram desks and journalists in order to keep on filing after the print deadline.
+Now we’ve evolved from a print distribution culture to a broadcast distribution culture,
+with pieces published throughout the day. Unlike The Times, though, we don’t publish
+
+
+
+
+                                                                                          37
+three e-papers a day. Our home page is very dynamic. We still receive a lot of traffic
+from social and search.”
+
+
+4.6. Less could be more.
+
+“I read The Economist cover-to-cover because its content makes me think critically
+about the world,” tweeted45 Bill Gates in July 2018. The statement was a reminder of the
+value the weekly magazine provided to many influential readers, but some people at
+the newsroom saw it as a mixed blessing. “There’s a whole universe of new subscribers
+for whom The Economist is an overwhelming experience,” says Denise Law, head of
+product at the magazine. “That doesn’t mean we should exclude them. It means that
+we might need to do a better job at tailoring to them.”
+
+These readers find it hard to get through the magazine each week. When old issues
+start piling up on their coffee table, they start feeling guilty about not being able to get
+through it. Law calls this “the New Yorker effect” and it’s one of the main reasons
+people cancel their subscription to the magazine.46
+
+The Economist’s new app tries to solve this problem by integrating Espresso and giving
+the reader a few daily picks. “The whole point of the daily picks is saying: ‘Here are the
+seven most important things you need to read today. We're not going to make it like a
+never-ending Facebook feed where you keep going and you see more posts. We pride
+ourselves on being the trusted filter on the world. And filter is a really important word.
+You come to us because you trust our judgment,” says Law.
+
+The Economist’s strategy makes an important point. The product you sell offline could
+be overwhelming or useless for a digital audience. The most successful news
+
+
+
+
+45
+   Tweet from Bill Gates. Retrieved on July 28, 2019 from
+https://twitter.com/billgates/status/1022712786449846272?lang=en
+46
+   L. Southern, “​Newsletters as puzzle pieces’: How The Economist uses email to reduce subscriber
+churn”,​ ​Digiday​, July 5, 2019. Retrieved on July 28, 2019 from
+https://digiday.com/media/economist-takes-less-approach-newsletters/
+
+
+                                                                                                     38
+organisations think thoroughly about packaging and presentation and invest their
+limited resources on the platforms that are popular among their most loyal audiences.
+
+
+4.7. Cherish your brand.
+
+Many newspapers still treat their digital products as separate brands. They fill their
+websites with second-rate articles and publish their best articles just in print. However,
+audiences don’t distinguish a printed newspaper from its digital products or its social
+media feeds. In a world increasingly fragmented, the values of a brand should be
+present in everything it does.
+
+“If we sell oranges through [our service] Oferplan,47 it’s because our readers trust our
+brand. You can’t do an event on the new developments in science if you have a website
+full of clickbait,” says Fernando Belzunce from Spanish media group Vocento. Denise
+Law, from The Economist, shares a similar view: “Every single piece of journalism we
+do, regardless of the platform, needs to be done to a high standard.”
+
+As part of their subscription strategies, some newspapers attach their brands to
+particular values. Spanish conservative newspaper La Razón creates content related to
+five values: diversity, the environment, the traditional family, the fight for the rights of
+people with disabilities, and the unity of Spain. “Selling content is very difficult. So
+most of our campaigns are associated with those values,” says Sergio Rodríguez, head
+of digital at the newspaper. La Razón launched digital subscriptions in October 2018. It
+had signed up around 1,000 subscribers in March 2019.
+
+Journalists at eldiario.es tried something similar in 2015. As European migration crisis
+unfolded, they asked their readers for money to ramp up their coverage. They created a
+landing page and launched a specific campaign. It didn’t work.
+
+
+
+
+47
+  What is Oferplan, Vocento. Retrieved on July 28, 2019 from
+https://www.vocento.com/nosotros/digital/oferplan/
+
+
+                                                                                           39
+Other efforts have been more successful. ​eldiario.es faced a difficult moment during the
+Catalan crisis in October 2017. “In the first few months, many people cancelled their
+membership,” says Escolar. “Some thought we were too supportive of the
+pro-independence movement. Others thought we were too much against it. Many
+organisations on the left faced a similar challenge.” Escolar and his colleagues
+managed to change this atmosphere by creating “A call for a dialogue”,48 a section
+where intellectuals, journalists and politicians wrote short pieces calling for building
+bridges between Catalonia and the rest of Spain. “This project got us hundreds of new
+members and strengthened our position as an independent voice at a moment where
+most newspapers were hugely polarized,” Escolar says.
+
+A physical object can strengthen the connection of a newspaper with its audience. In
+2018, eldiario.es printed 300 copies of a drawing by award-winning Spanish illustrator
+Ana Juan.49 It sold most of them to raise money for a non-profit fighting violence
+against women. The rest were given as a present to the most loyal female members of
+the newspaper.
+
+
+
+
+48
+   “Una llamada colectiva al diálogo”, ​eldiario.es,​ October 5, 2017. Retrieved on July 29, 2019 from
+https://www.eldiario.es/politica/Voces-dialogo_0_693980656.html
+49
+   “eldiario.es y Ana Juan, comprometidos contra la violencia de género”, ​eldiario.es,​ July 17, 2018.
+Retrieved on July 28, 2019 from
+https://www.eldiario.es/redaccion/eldiarioes-Ana-Juan-comprometidos-violencia_6_793780624.html
+
+
+                                                                                                          40
+5. Designing the best pricing.
+Swedish newspaper Dagens Nyheter had almost no digital subscribers in 2015. Four
+years later, the newspaper has reached a few milestones. It had 165,000 digital
+subscribers and 163,000 print subscribers. The total number was higher than it has
+been at any point since the early 2000s. Revenue from digital subscriptions was higher
+than revenue from digital ads. According to Digiday,50 the newspaper was converting
+around 2,000 subscribers a week.
+
+Dagens Nyheter’s executives adopted this reader revenue strategy when they realised
+the ad revenue was flowing away from newspapers into technology platforms. Ramping
+up digital subscriptions was the only real alternative to raising prices and cutting jobs.
+“Cutting costs made you turn into a negative spiral,” says Jönsson. With fewer
+journalists, they would offer lower quality and it would be impossible to charge more.
+
+Dagens Nyheter reimagined its value proposition, reduced friction on the payment
+process and improved the user experience of its digital products. Then it implemented
+a complex pay model with three different elements:
+
+     ● Everyone can read three articles a week before hitting a metered paywall. This
+        metered paywall accounts for 10% of conversions.
+     ● Some premium articles are always behind the paywall. These pieces are usually
+        quality lifestyle content: articles related to science, health, relationships, family,
+        work and children. These pieces represent 35% of conversions.
+     ● Around 55% of conversions come from articles that are free for a few hours and
+        are only put behind a paywall after going viral. An algorithm detects these
+        articles but an editor decides which ones to make available just for subscribers
+        and when.
+
+
+50
+  L. Southern, “How Swedish newspaper Dagens Nyheter halved subscriber churn in 2 years”, ​Digiday​,
+May 20, 2019. Retrieved on July 28, 2019 from
+https://digiday.com/media/how-swedish-newspaper-dagens-nyheter-halved-churn-to-8-in-2-years/
+
+
+
+                                                                                                   41
+“We want our best and most popular content to be subscribers-only, but we need it to
+be open for a while to get new readers into the funnel,” says Jönsson.
+
+As my colleague Michael Leitner explained in a recent paper,51 many European news
+outlets are adopting dynamic paywalls in different flavours. As Dagens Nyheter,
+Swedish newspaper Svenska Dagbladet puts some of its articles behind the paywall
+after they reach a huge audience. Swiss newspaper NZZ adapts the meter threshold
+dynamically to the user’s propensity to subscribe. Users with a low propensity score get
+access to more articles and high-scored users quickly reach a lower threshold.
+
+This trend reflects an important change in the industry. As Robert G. Picard wrote in
+2014, “news service providers are relating to consumers differently than in the past and
+employing pricing models that differ from those of the original print and broadcast
+products. Many offer varying prices for access to different bundles of platforms and for
+different levels of access to premium and specialized news content. No longer is all
+content provided to all consumers at the same price.”52
+
+When making complex decisions about pricing, media executives should be aware of
+what economists call reference price, “an internal standard against which observed
+prices are compared.53 There is wide evidence that consumers use reference prices in
+making their choices. These reference prices come from past prices but also from the
+prices of other products and services, especially in the digital space. The monthly price
+of Netflix or Spotify could affect what a newspaper can charge for its digital
+subscriptions, especially in the Nordic countries, where the penetration of these
+services is very high. “People here in Sweden have learnt that you have to pay for your
+
+
+
+
+51
+   M. Leitner, ​How media companies use data to sign up digital subscribers (and keep them),​ Reuters
+Institute, 2019. Retrieved on July 28, 2019 from
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2019-05/How_media_companies_use_data.pdf
+52
+   R. Picard, “Twilight or new dawn of journalism? Evidence from the changing news ecosystem”,
+Journalism Studies​ vol. 15, no. 5, 2014, pp. 500-510.
+53
+   G. ​Kalyanaram and R. S. Winer. “Empirical Generalizations from Reference Price Research”, ​Marketing
+Science​, vol. 14, no. 3, 1995, pp. G161–G169. ​www.jstor.org/stable/184158
+
+
+                                                                                                     42
+content,” says Jönsson. “They pay for their music, their movies and their newspaper,
+and they cost about €10 each.”
+
+This chapter will deal with pricing, free trials and content bundles. Here are some of
+the things news organisations are trying right now in this field.
+
+
+5.1. Ensure your pricing is aligned with your values.
+
+Pricing is especially tough for newspapers with a less transactional value proposition.
+How much should you charge for what is mostly a recurring donation with a few
+additional perks? At Spanish newspaper eldiario.es they started in 2012 with a couple
+of options: an annual membership for €60 and a biannual one for €30. Around 10% of
+members pay more than that on their own volition. They are called patrons and are
+identified as such when posting comments on the site.
+
+In February 2019, eldiario.es dropped the biannual membership and introduced a
+monthly one for €7. This higher price doesn’t include receiving a copy of the quarterly
+magazine eldiario.es sends to its annual members. Raising prices was less important
+than responding to the needs of the audience. “The reason behind this was making it
+easier for our readers to dip in and out of the membership,” says Esther Alonso, head of
+marketing at the newspaper. “Many had asked us for this option and it’s almost an
+industry standard.”
+
+After introducing the monthly membership, Alonso noticed a change in consumer
+behaviour. Before February 2019, around 50% of the new members took the annual
+option, 40% the biannual one. The rest took other offerings. After February, 77% of the
+new members sign up for the annual subscription and only 17% take the new monthly
+option. “I would say the monthly option is attracting people who wouldn’t join
+otherwise,” says Alonso. “It’s still possible monthly memberships are cannibalizing
+some annual ones. But the fact that they only amount to 17% of new signups makes us
+
+
+
+
+                                                                                         43
+think our members are usually loyal readers who prefer a longer option to a shorter
+one.”
+
+After growing its member base for the last seven years, eldiario.es has started to hit a
+plateau. The newspaper had around 35,000 in January 2020. Churn is extremely low,
+but it is more difficult to keep growing every month. As every Spanish newspaper is
+preparing to adopt digital subscriptions, executives are considering a few changes.
+Their messaging has always made two points to their readers: they should become
+members to keep information free and to protect editorial independence. Should they
+drop the first point and introduce a paywall?
+
+As a response to the new environment, eldiario.es is preparing a slightly different
+membership model. After reading a number of articles, the reader will hit a metered
+paywall and will be shown the monthly and the annual price. If she can’t afford to pay
+€7 a month, she will be invited to explain why and to give anything from nothing to €6
+a month. Those members will have access to the eldiario.es but won’t have other
+advantages such as receiving the quarterly magazine. The ultimate goal of this move is
+to keep growing without losing unique users. Around 350,000 users of eldiario.es read
+more than 15 articles a month. Those are the ones eldiario.es would like to convert.
+
+"Introducing a traditional paywall would’ve meant not just going against one of our
+editorial principles but also against one of the strengths of our business model,” says
+María Ramírez, head of strategy at eldiario.es. “At the same time, it was essential to do
+something new to get new members in a more competitive environment as more
+newspapers in Spain are turning to subscriptions. In the end, we’ve found a balance
+between pushing strongly for readers' support and keeping the information free for
+those who can't afford it."
+
+
+5.2. Experiment in every way you can.
+
+Spanish media group Vocento owns 11 local newspapers. Five run digital subscriptions
+at the monthly price of €4.95. When launching subscriptions in the sixth one, El Norte
+
+
+                                                                                           44
+de Castilla, Vocento tried a higher monthly price: €5.95.54 “If it goes well, we could
+raise prices in the other newspapers too,” says Fernando Belzunce, editorial director of
+local newspapers at the group, who suggest a changing media environment could create
+some kind of reference price. “It would be great for us if El País charges €15 a month for
+its digital subscriptions. Then we could charge a similar price.”
+
+Speaking in 2019 at the Oxford Media Convention, Mark Thompson, said that younger
+readers were his main concerns as CEO of The New York Times Company. “The biggest
+existential threat to legacy newspapers is losing the audiences under 40,” he said.55 The
+New York Times has addressed this strategic problem in different ways. It has created
+The Daily, a podcast that has introduced many younger readers to its best journalism. It
+has also invited readers to give between $10 and $2,000 to sponsor student
+subscriptions. The newspaper promises to match every one of them. As Joshua Benton
+wrote, the programme has sponsored more than 3 million student subscriptions and
+generates around $10 million for The New York Times.56
+
+The Financial Times offers half-price subscriptions to every college student in the
+United Kingdom and free subscriptions57 to students of secondary schools around the
+world.58 Swedish newspaper Dagens Nyheter offered every reader under 25 a free
+subscription during the general election without asking for a credit card. The day after
+the election, they asked them if they wanted to pay. A lot of them stayed on.
+
+British news startup Tortoise has created the so-called Tortoise Network, a scheme to
+reach the people who are hardest for news organisations to reach but whose voices they
+
+54
+    ​Subscription pricing of El Norte de Castilla. Retrieved on July 28, 2019 from
+https://areapersonal.elnortedecastilla.es/suscripcion/#vca=suscribete&vso=elnortedecastilla&vmc=on&vli
+=cabecera
+55
+    Tweet retrieved on July 28, 2019 from ​https://twitter.com/eduardosuarez/status/1107594978891624448
+56
+     ​J. Benton, “​ ​Want to see what one digital future for newspapers looks like? Look at The Guardian, which
+isn’t losing money anymore”, ​Nieman Lab,​ May 1, 2019. Retrieved on July 28, 2019 from
+https://www.niemanlab.org/2019/05/want-to-see-what-one-digital-future-for-newspapers-looks-like-look-at
+-the-guardian-which-isnt-losing-money-anymore/
+57
+   “ Financial Times Student discount”, ​Financial Times​. Retrieved on July 30, 2019 from
+https://www.nus.org.uk/en/nus-extra/discounts/financial-times-student-discount/
+58
+    “FT Secondary Schools”, ​Financial Times.​ Retrieved on July 30, 2019 from
+https://www.ft.com/ft-secondary-schools
+
+
+                                                                                                            45
+most need to hear. The newsroom monitors the demographic and attitudinal profile of
+their membership base to spot the ones underrepresented. Tortoise works with
+nonprofits and charities to reach out to those kinds of people, then give them a
+membership funded by several sponsors. The Tortoise Network opened with over
+3,5000 memberships in June 2019.
+
+
+5.3. Create attractive bundles.
+
+Dagens Nyheter offers a few bundles with its digital subscription. One includes its
+crosswords app. Others include subscriptions to The New York Times, a local
+newspaper or an audiobook company. “We don’t see this as an earnings opportunity
+but as an anti-churn opportunity. It’s a way to build loyalty by adding great products to
+our brand,” says Martin Jönsson, head of editorial development at the newspaper.
+
+At eldiario.es they’ve created bundled subscriptions with sister publications such as
+satirical magazine Mongolia and environmental magazine Ballena Blanca. Instead of
+paying €60 a year to be members of eldiario.es, readers can add a membership to any of
+those outlets by paying €80. As part of its new pay model, eldiario.es has created
+similar bundles with 14 local news sites it partners with. Every reader can support their
+work by paying €20 euros more.
+
+
+5.4. Don’t focus on print but use it to your advantage.
+
+Print is not a priority for the main legacy news organizations in Spain or the United
+Kingdom. This doesn’t mean people who are responsible for reader revenue don’t care
+about print. Most of them are trying to manage decline through cutting costs and
+raising prices. Others are using print to their advantage in different ways.
+
+The Guardian launched its first print subscription offerings in 2008. Today they
+represent 45% of their print sales on weekdays and 20% on weekends. “We’ve used
+price hikes to convert anonymous buyers into known subscribers,” says Richard
+Furness, managing director for consumer revenues and publishing at the newspaper.
+
+
+                                                                                        46
+“We announce our decision, then say: ‘If you subscribe, you won’t pay full price.’” The
+Guardian never does any retail promotion without including a clear ask for a
+subscription.
+
+When launching its paywall in 2010, The Times gave digital for free to its print
+subscribers. “It was a nice way to get some people in because on day one we had no
+audience,” says Chris Duncan, managing director at the newspaper. “Today print plus
+digital are the ultimate buyers but digital-only is where our growth comes from. If we
+grew 55,000 last year, digital-only grew by 52,000. Print is relatively stable. We’re not
+signing up a lot of seven-day print subscribers. And it’s not easy to sell digital plus the
+printed edition of The Sunday Times.”
+
+Many media executives will recognise themselves in the dilemmas expressed by Maria
+Llambí, chief marketing officer at Catalan newspaper Ara. A seven-day print
+subscription costs €400 a year. A digital one costs only €100. Print subscriptions have a
+higher margin because the price is higher and print ads are more expensive. People who
+subscribe to print stay for longer too.
+
+Ara has around 45,000 subscribers. 60% are digital-only and 40% come from print. “It’s
+much easier for us to acquire digital subscribers. They account for 80% of the people we
+sign up. They also churn at a higher rate. Once they’re with us, we try to upgrade them
+at least to the weekend print bundle,” says Llambí.
+
+
+5.5. Different tiers require different strategies.
+
+The Financial Times introduced a metered paywall in 2007. The number of free articles
+a non-subscriber could read started at 30 and shrank very quickly over time. In 2015 the
+newspaper switched to paid trials as its primary acquisition model. Readers get access
+to most of its content for four weeks for a small sum. Digital subscriptions now account
+
+
+
+
+                                                                                            47
+for more than three-quarters of the FT’s circulation. Around 70% of its readers live
+outside the United Kingdom.59
+
+Today the newspaper offers two different digital subscriptions: standard and premium.
+Premium is twice as expensive as standard and includes extra benefits such as access to
+the Lex Column, special in-depth analysis and a digital replica of the daily newspaper.
+Standard subscribers can share up to 10 articles a month with family, friends and
+colleagues. Premium subscribers can share up to 20.
+
+Premium subscribers are richer and skew towards finance. They are often more senior
+and read less content than standard subscribers. They only read what they need to read.
+The vast majority of the FT’s business subscriptions are premium subscriptions.
+Standard gets the bulk of consumer sales.
+
+Premium subscriptions are never sold at a discount. “We do apply discounts on
+standard subscriptions,” says Marie Goddard, director of customer marketing at the
+newspaper. “If we get someone on a discount, we slowly increase her price over her
+subscription tenure. We play around with the levers at the entry-level so our audience
+can understand what it means to subscribe to the FT.”
+
+“Selling standard in the context of premium is very hard because it’s not everything but
+it’s still very good,” says ​Daisy Donald, head of customer experience research at the
+newspaper​. “We’ve tried to articulate this in different ways throughout the year. Now
+we’ve landed on standard giving you breadth and premium giving you extra depth
+within smaller verticals.” When selling premium subscriptions, the newspaper
+mentions emerging markets, mergers and acquisitions, investing and trade as those
+verticals.
+
+On the other side of the spectrum are the so-called trialists, readers who sample the FT
+through discounts. The Financial Times offers a four-week paid trial for a small amount
+
+
+59
+  “FT tops one million paying readers”, ​Financial Times,​ April 1, 2019. Retrieved on July 28, 2019 from
+https://aboutus.ft.com/en-gb/announcements/ft-tops-one-million-paying-readers/
+
+
+                                                                                                            48
+of money​. “We did a lot of experiments before making a decision,” says Donald. “It was
+5 pounds versus 1 pound versus free, free with no credit card details versus free with
+credit card details. One pound with credit card details is where we landed. It was the
+data that informed our decision on this.”
+
+Should the FT offer an even cheaper subscription? And if so, what would it look like?
+This is a conversation that keeps circling back in the newspaper. There are at least two
+problems with creating this kind of tier: pricing and value proposition. On pricing,
+Goddard doesn’t think Netflix and Amazon provide a reference price for the FT’s
+customer base. “Our challenge is that we’re now in this bucket of subscriptions with
+Netflix, Spotify and all the rest. So we need to make sure people always see the value
+we offer compared to so much Netflix they don’t watch.”
+
+A cheaper tier would require crafting the right value proposition. “There are a lot of
+misconceptions around the Financial Times. People don’t realise it’s actually about the
+global economy and global affairs,” says Renée Kaplan, head of audience and new
+content strategies at the newspaper. “But the biggest blocking point after recognition is
+price because our subscriptions are expensive. The question is what you put on this
+cheaper tier. It has to be some representation of the full product because the whole
+point of this kind of product would be eventually upselling you. It should be sort of a
+gateway in.”
+
+
+
+
+                                                                                          49
+6. Creating an acquisition strategy.
+Ignacio Escolar launched digital newspaper eldiario.es along with other Spanish
+colleagues in September 2012. Escolar was a high-profile journalist. He often appeared
+as a pundit in a few radio and television programmes. He had been the founding
+editor-in-chief of left-wing newspaper Público from 2007 to 2009.
+
+After being ousted as editor-in-chief, Escolar started to think about founding a new
+outlet. First, he envisioned a newsroom with around 30 journalists and a business
+model entirely based on advertising. Then he thought it was better to start small. “I
+came from Público’s failure and one of my partners came from [Spanish newspaper]
+ADN’s failure. Neither of us wanted to fail again,” he says.
+
+The project started with nine journalists and three extra employees. While preparing to
+launch, something extraordinary happened. After Público closed down, some of its
+journalists started a crowdfunding campaign to buy the newspaper from its millionaire
+owner.60 They failed, but they raised more than 30,000 euros. At the same time, five
+journalists from the same newspaper created another digital outlet called Infolibre in
+association with French news startup Mediapart.
+
+“I started to think many readers felt guilty of allowing their newspaper to go bankrupt
+and were ready to pay,” says Escolar. “We discussed different models and we landed on
+something no one had tried before. We would send an email with a few articles every
+evening. Those articles would be behind a paywall for a few hours. Non-members would
+be able to read them after 6.30am.” A few months later, they added two additional
+benefits for members: a quarterly magazine and the chance to read the website with no
+ads. They thought of different names for their supporters. “We considered calling them
+friends, patrons or subscribers. In the end, we called them members [“socios” in
+Spanish] because eldiario.es was 80% Greenpeace and 20% cable TV.”
+
+
+60
+  Más Público’s crowdfunding campaign. Retrieved on July 29, 2019 from
+https://www.verkami.com/projects/1736-maspublicoorg
+
+
+                                                                                         50
+Escolar and his partners envisioned a mixed business model with two revenue streams:
+advertising and memberships. “I didn’t want to depend entirely on advertising,” he
+says. “I wanted to create a combative newspaper. I didn’t want any of the big
+companies to be able to control it or shut it down.”
+
+Three months after its launch, eldiario.es reported a small €5,094 loss61 with €214,229
+in revenue. At this point, 57% of this figure came from its members. As eldiario.es
+grew, advertising became the largest revenue stream. It accounted for 63% of the
+revenue in 2018. This percentage has been very stable for most of its history.
+
+Memberships have grown very fast. In March 2013, eldiario.es reported 3,485 members.
+It reached 10,000 members in a couple of years.62 In June 2019 eldiario.es had 34,048.
+Memberships represented 32% of its revenue in 2018.
+
+Messaging and marketing tactics have been important to reach this number. But
+journalism is the real reason why eldiario.es has grown so fast in such a small time.
+Every time eldiario.es has published a big investigation, it’s got hundreds if not
+thousands of new members. It happened when it published how the board members of
+a Spanish public bank spent millions through credit cards that did not show up on any
+document.63 It happened again when Escolar was kicked out of a radio station owned by
+a powerful media group for publishing that the name of its CEO’s wife was on the
+Panamá Papers64 and also when eldiario.es unveiled 25 years of secret contracts signed
+
+
+
+
+61
+   I. Escolar, “Las cuentas de eldiario.es”, ​eldiario.es​, March 5, 2013. Retrieved on July 29, 2019 from
+https://www.eldiario.es/escolar/cuentas-eldiarioes_6_107849233.html
+62
+   “Ya somos 10.000 socios y socias”, ​eldiario.es​. Retrieved on July 29, 2019 from
+https://www.eldiario.es/10000socios/
+63
+   P. Águeda, “Qué son las tarjetas 'black' y por qué no son solo unos gastos llamativos”, ​eldiario.es,​
+October 10, 2014. Retrieved on July 29, 2019 from
+https://www.eldiario.es/gastos_tarjetas_black/tarjetas-black_0_312169291.html
+64
+   I. Escolar, “Por qué Cebrián me despide de la Ser”, ​eldiario.es,​ April 27, 2016. Retrieved on July 29,
+2019 from ​https://www.eldiario.es/escolar/Juan-Luis-Cebrian-despide_6_509959001.html
+
+
+                                                                                                              51
+by the state-owned railway company, a building group and one of the biggest Spanish
+banks.65
+
+No scoop brought more new members than the one eldiario.es published on March 21,
+2018. It revealed Cristina Cifuentes, the president of the Madrid region and a leading
+conservative politician, had fraudulently obtained a master’s degree from a public
+university.66 For five weeks, Cifuentes denied the facts and sued the journalists who
+published the story. She resigned on April 25, 2018.
+
+From the day it published the Cifuentes’ scoop to her resignation, eldiario.es signed up
+more than 8,400 new members. As a result, reader revenue grew from €1.3 million to €2
+million in a single year. The newspaper made a profit of €394,458 in 2018. It used this
+money to pay a dividend, raise salaries and hire more journalists.
+
+Today eldiario.es has 89 full-time employees67 and an annual revenue of €6.5 million.
+There is not a single digital-only news organisation that is either more used or more
+trusted in Spain, according to 2019 Digital News Report.68 Competing with larger
+newspapers is hard, but Escolar thinks eldiario.es has a competitive advantage: “The
+annual budget of [Spanish newspaper] El País is 30 times bigger than ours. In terms of
+influence, though, the difference is much smaller. So we are much more efficient than
+them and at some point, we’ll overtake them.”
+
+As most Spanish newspapers prepare for digital subscriptions, Escolar, who owns 41%
+of eldiario.es, thinks the newspaper will benefit from the new environment: “Soon
+everyone will be measured by its members or its subscribers, not by its unique users. By
+
+
+
+
+65
+   F. Caballero, “eldiario.es revela 25 años de contratos secretos de la Operación Chamartín entre
+Fomento, BBVA y San José”, ​eldiario.es​, January 23, 2019. Retrieved on July 29, 2019 from
+https://www.eldiario.es/madrid/papeles-Operacion-Chamartin_0_859164476.html
+66
+   “El caso Master”, ​eldiario.es,​ March 2019. Retrieved on July 29, 2019 from
+https://l.eldiario.es/el-caso-master/
+67
+   Another 54​ people work for the 14 regional editions of the newspaper.
+68
+   S. Negredo, A. Vara, A. Amoedo y E. Moreno, “Spain”, ​Digital News Report​, June 13, 2019. Retrieved
+on July 29, 2019 from ​http://www.digitalnewsreport.org/survey/2019/spain-2019/
+
+
+                                                                                                      52
+this measure, eldiario.es could be second or third and that’s great. We have the right
+model and a strong community behind us.”
+
+According to internal data, around 70% of the members of eldiario.es are men. The
+average member is around 50 and comes from the upper-middle class. Esther Alonso,
+head of marketing​ at the newspaper, says they never offer discounts or free trials as
+part of their acquisition strategy. Sometimes they use books or old magazines to attract
+new members. But the daily email they send in the evening with their best stories is
+still their main acquisition tool. ​From May to December 2018, eldiario.es got an average
+of 239 new members every week.
+
+Investigative journalism is a great acquisition tool for many news outlets, but it’s not
+the only one. Here are other strategies newspapers are using to get readers to subscribe.
+
+
+6.1. Asking for money? Consider where and how.
+
+Messaging is extremely important for news organisations that rely on the generosity of
+their readers. As their value proposition is less transactional, they need to articulate
+the reasons why anyone should join. The Guardian has refined its pitch in the last few
+years through constant experimentation and with its readers’ help. “We learnt that a
+message shouldn’t be a slogan but an explanation of what we’re trying to do, and why
+and how this is part of it,” says Amanda Michel, global director and senior product
+manager for contributions at the newspaper.
+
+The Guardian doesn’t use any banners or pop-up windows. It asks for their readers’
+help with a big paragraph at the end of every article. The pitch is built by answering
+some of the questions their readers ask about the membership programme. “A longer
+pitch is better than a short one because it answers more questions,” says Michel. “We
+imagine these pitches as small conversations. If you were talking to someone in person,
+which kinds of questions would you ask about this?”
+
+
+
+
+                                                                                           53
+As we explained in Chapter 3, learning to tell your own story is an essential part of this
+effort. Especially when you’re trying to reach a global audience, as The Guardian does.
+The newspaper has received contributions from more than 170 countries. Around 70%
+of its reader revenue comes from outside the United Kingdom.
+
+Different countries often require different strategies. In the United States, people
+prefer to make one-off contributions. Some aren’t even regular readers. They give
+money after reading a piece they loved. “These people may give multiple times during
+the year, but they have no interest in a recurring relationship,” says Michel. “Some are
+freelancers and their income is unpredictable. Others just enjoy giving, and the idea of
+having money withdrawn from their account takes away the pleasure of doing it.” At
+The Guardian, they’ve encouraged these occasional contributions by creating ambitious
+editorial projects such as “This land is your land”,69 which examines the threats to
+public lands in the United States.
+
+These projects wouldn’t be possible without the work of cross-disciplinary teams, with
+people from marketing, editorial, technology and user experience collaborating to
+reach the same goal. “You have to develop self-awareness and understand how it is that
+your readers see you, what they value about your work and in what ways you’re serving
+them and in what ways you’re not,” says Michel. This self-awareness has made The
+Guardian (and eldiario.es) create more specific messages, focusing on a few editorial
+obsessions such as immigration, child poverty and climate change.
+
+Unlike eldiario.es, The Guardian also sells more transactional subscriptions to its print
+products and some of the features of its premium app. This creates an interesting
+strategic dilemma. Which kind of offer should they show their readers when they get to
+their home page? “We have a limited amount of space and it’s important to put the
+right package in front of the right people,” says Richard Furness, managing director for
+consumer revenues and publishing at the newspaper. “If you’re a first time user, you
+
+69
+  “This land is your land”, ​The Guardian,​ January 29, 2018. Retrieved on July 29, 2019 from
+https://www.theguardian.com/environment/2018/jan/29/this-land-is-your-land-series-the-guardian
+
+
+
+                                                                                                 54
+shouldn’t see a commercial proposition. In your third visit, maybe you should see an
+ask for a contribution. Then you should see a subscription. Then, an offer to buy a
+holiday from us or a call to join our dating site. We are defining this customer journey.
+And we can do that because we stopped the infighting between departments.”
+
+
+6.2. Target specific topics and audiences.
+
+In the last couple of years, Renée Kaplan and her audience team at the Financial Times
+realised that articles about the big consulting companies attracted a younger audience.
+Most of these readers were based in Asia. They read the FT through Facebook on their
+mobile phones. After noticing this, they started producing more content about this
+topic and focused their social promotion strategy around this group.
+
+Brexit is one of the topics the FT has focused on in the last few years. In June 2016, it
+dropped its paywall for 24 hours on the eve of the vote. As a result, it saw a 600% surge
+in digital subscription sales over the next weekend.70 This was hailed as a success at the
+time, but some of these subscribers didn’t stay for long. “The problem with discounts
+hanging around key events is that you get a lot of people who have no intention to
+stay,” says Marie Goddard, head of customer marketing. “It’s great to remind people we
+are not just a financial news site. However, many of these people cancel after one year.
+So it’s not a stable model for us.”
+
+Brexit created another puzzle for the FT marketing team: a significant volume of their
+B2C subscribers consume mostly Brexit news. So it’s important to lead them to other
+areas of coverage so they can have a sense of the depth and breadth of the FT. “If you
+look at someone like [columnist] Robert Shrimsley, he writes about Brexit but he also
+writes about his dogs. And it’s not always easy to discover that kind of content. So
+we’re looking at ways we can lead people into other reading points,” Goddard says.
+
+
+
+70
+  J. Davis, “How the FT drove digital subscriptions sales by 600 percent over Brexit weekend”, ​Digiday​,
+June 29, 2016. Retrieved on July 29, 2019 from
+https://digiday.com/uk/ft-drove-digital-subscriptions-sales-600-percent-brexit-weekend/
+
+
+                                                                                                        55
+6.3. How to use social media.
+
+Half of progressive Americans have never heard of The Economist, according to
+internal research. VMany still think it only covers economics and finance. The role of
+the magazine’s social media accounts is raising awareness about The Economist and
+dispel this myth. The FT has a similar problem: many potential readers have
+misconceptions about its brand. The newspaper has a first click-free model: anyone
+coming through social can click through once a day on one piece of content on every
+single social platform. If they come through Google, they can click a couple of times a
+day. Their audio and video content is also free. In a company with such a tight paywall,
+social offers a rare opportunity to create some kind of sampling.
+
+Instagram is the hottest platform for the FT right now. Its main account has grown
+110% in the last year. This growth has been fuelled by an audience that is very young,
+very female and mostly American. “Instagram is not optimised for click-through, but it
+generates a lot of engagement around news, fashion and charts,” says Renée Kaplan,
+head of audience and new content strategies at the newspaper.
+
+When explaining the FT’s approach to social media, Marie Goddard, head of customer
+marketing, uses the metaphor of a luxury brand: “Big fashion houses have cheaper
+products like keyrings or little wallets, and people will buy those if they don’t have a lot
+of money to feel associated with the brand. And then, when they’re ready, they can
+stare up to where the real value and the real content is. I think Instagram is like that for
+the FT. For some people, it’s a way to start an association with our brand when they’re
+in their twenties with the idea that in the future they’ll become subscribers. Every
+publisher is still understanding how this works.”
+
+
+6.4. Use registration for acquisition (or maybe not).
+
+Spanish newspapers such as ABC, El País, El Confidencial and La Vanguardia are
+making people give their email address to read a portion of their content. They see this
+
+
+
+                                                                                         56
+as a first step before introducing a pay model. El País, ABC and El Confidencial apply
+this rule to a few premium articles. La Vanguardia applies the logic of the metered
+paywall: it makes people sign up after reading a number of pieces a month. “We
+decided to implement this after talking to the guys at [Argentinian newspaper] Clarín,”
+says Javier Martínez, director of audiences and digital strategy at La Vanguardia. “They
+made thousands of people sign up before launching a paywall. It was a way to start
+exploring a pay model without losing advertising revenue. Their traffic figures were
+very similar to ours so we decided to try.”
+
+Spanish newspaper El Mundo considered adopting this model but decided against it. “It
+would have been great a couple of years ago,” says Vicente Ruiz, head of digital at the
+newspaper. “Once we’ve decided to adopt digital subscriptions, it doesn’t make any
+sense to bother our most loyal readers twice.”
+
+Anyone who wants to post a comment at eldiario.es has to leave her email address.
+However, people who register to post a comment are not likely to become members.
+Around 70% of new members were not registered users before they joined. Registering
+to receive a newsletter, being a frequent visitor and engaging with the newspaper in
+more than one channel are much better indicators that someone will become a
+member. Leaving your email to post a comment is not.
+
+The Times introduced registration as a way to open up a very hard paywall. Anyone
+who signs up can read two articles a week. The newspaper planned to finish 2019 with
+more than 5 million registered users. “We introduced this to create more sampling
+opportunities without angering our subscribers. Most of them are heavy edition readers
+so light sampling is not scaring the horses,” says managing director Chris Duncan.
+
+At the FT they removed registered users’ access in 2015 in favour of a one-month paid
+trial. “One month allows you to sample what our content is,” says Marie Goddard, head
+of customer marketing at the newspaper. “This also makes them understand this is a
+paid relationship and not a free offering.” If someone doesn’t convert her trial or
+
+
+
+
+                                                                                         57
+decides to cancel, they still allow you some access to keep that relationship going. They
+try to keep these readers closer to the FT.
+
+
+6.5. Reduce friction at every step.
+
+On the advice of a leading venture capitalist, Swedish newspaper Dagens Nyheter
+contacted Klarna, a payment solutions firm, in 2015. At this stage, the newspaper had
+almost zero digital-only subscribers. The process of becoming a subscriber was too
+complex. There were too many steps to get through. Klarna helped the newspaper
+develop a one-click payment process. The customer can subscribe just by sharing the
+phone number associated with her bank account. The new system worked. From 2015
+to 2017, they saw a net growth of nearly 12% per month.71
+
+Removing friction should be an obsession for every subscription business. In March
+2018, Google launched a feature that enables customers to use their Google account
+and payment methods to subscribe to their favourite publications across the web.
+“Subscribe with Google” has another advantage: if you’ve subscribed to a newspaper
+through this feature, Google will highlight relevant articles from that newspaper in
+every search you do.72 Setting up the feature requires some engineering work Google
+has subsidised in some cases. The company takes a cut from every transaction that gets
+through.
+
+
+6.6. Use the right metrics.
+
+A business model focused on reader revenue requires different metrics. Page views and
+unique users are much less important than the number of loyal readers and the time
+they spend on your page. Some news organisations have built their proprietary
+
+
+71
+     ​S. Seale, “Dagens Nyheter moves to successful digital subscription model”, ​INMA​ ​Conference Blog​,
+December 13, 2017. Retrieved on July 29, 2019 from
+https://www.inma.org/blogs/conference/post.cfm/inma-webinar-dagens-nyheter-moves-to-successful-digit
+al-subscription-model
+72
+   J. Albrecht, “Introducing Subscribe with Google”, ​Google Blog,​ March 20, 2018. Retrieved on July 29,
+2019 from ​https://blog.google/outreach-initiatives/google-news-initiative/introducing-subscribe-google/
+
+
+                                                                                                             58
+analytics tools to track the behaviour of the people who are most likely to subscribe or
+contribute. “Page views are mostly irrelevant in a subscription business,” says Renée
+Kaplan, from the FT. “Our journalists are keen to understand who is reading their
+pieces and where they live.” This is essential for a global newspaper like FT, whose
+media executives are increasingly focused on trying to understand and target specific
+regions.
+
+These are the reasons why the FT created Lantern, an analytics dashboard that
+highlights the things that are relevant to their business model and their editorial goals.
+Lantern is used every day by more than 200 FT employees. It is meant to be a tactical
+tool. For every story, you can see how much time people spend reading it, how many
+comments it’s generated and which percentage of visitors come from social and search.
+Lantern shows how many people who read a story are subscribers and how many were
+anonymous users. It also tracks quality readers. “It looks at the percentage of readers
+who actually clicked through a story and spent enough time on the story to actually
+read at least half of it,” says Kaplan. This figure, which is adjusted for length, reflects
+the number of people who got real value from a piece.
+
+News organisations such as The Wall Street Journal use complex tools to determine
+their acquisition strategy. These systems assign every user a so-called propensity score.
+This score indicates how likely they are to subscribe. Marketing efforts are personalised
+based on propensity scores.73 Spanish newspapers are designing similar tools before
+adopting their subscription models. El Mundo measures the value readers get from a
+story through several indicators: time spent on page, percentage of loyal users to read
+it and how many came from social and search. “Long-form stories, profile articles and
+pieces about science are the ones that our readers enjoy the most,” says managing
+editor Joaquín Manso. “It’s important to track the stories at the bottom too. If a story
+
+
+
+
+73
+  M. Leitner, ​How media companies use data to sign up digital subscribers (and keep them),​ Reuters
+Institute, 2019, p. 10-11. Retrieved on July 29, 2019 from
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2019-05/How_media_companies_use_data.pdf
+
+
+                                                                                                      59
+gets 400 views after hours on the home page, you have to ask yourself what’s wrong
+with it.”
+
+
+
+
+                                                                                     60
+7. Fighting churn.
+Churn is the biggest existential threat to any subscription business. Getting new
+customers is much easier than keeping them after the first few weeks. Retention is
+especially hard for any news business. Only a small percentage of the population pays
+for a digital subscription in most of the 38 countries covered by the 2019 Digital News
+Report.74 Even among the wealthiest, the most educated and the most interested in
+news, most people only pay for one subscription to a news site.
+
+Today people subscribe to many digital services: video streaming, music, online gaming
+and dating. Asked which one they would keep if forced to keep one, only 12% said they
+would keep their subscription to a news site. The percentage is even smaller (7%)
+among people under 45. Around 76% of people who currently pay for news would stop
+paying if they could only afford one subscription in the next year. This figure is
+hypothetical right now. But it could be real if there is an economic downturn in the
+next few months.
+
+In such a competitive environment, fighting churn should be a priority from day one.
+Keeping your subscribers depends on many of the things we’ve discussed so far.
+Designing a seamless user experience is essential. So is cherishing your brand, adopting
+the right pricing strategy and creating an attractive value proposition. However, as
+John Warrillow explains in ​The Automatic Customer,​ 75 fighting churn also requires
+keeping an eye on three important figures:
+
+     ● The monthly recurring revenue (MRR) or the amount of money you get from
+        your subscribers every month. If 10 people subscribe to your newspaper for $99 a
+        year, your MMR is $82.50 a month.
+
+
+74
+   ​R. Fletcher, “Paying for News and the Limits of Subscription”, ​Digital News Report​, Reuters Institute for
+the Study of Journalism, 2019. Retrieved on July 30, 2019 from
+http://www.digitalnewsreport.org/survey/2019/paying-for-news-and-the-limits-of-subscription/
+75
+   J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015.
+
+
+                                                                                                            61
+     ● The average Lifetime Value (LTV) of your customers or the projected revenue
+        the average customer will generate during her relationship with your company.
+        If the average customer stays for 30 months, it would be $247.50.
+     ● The Customer Acquisition Cost (CAC) or the amount of money you spend on
+        bringing people in. If you spend $2,000 a month to get 25 new subscribers, your
+        CAC would be $80.
+
+Experts warn the average LTV of a subscription company should be at least three times
+as big as its CAC. Otherwise, it will be spending its money on getting new customers
+who don’t stay for long. Keeping churn low is essential to improve this ratio. As
+Warrillow says, “you need to get your churn down to a point where over the life of her
+subscription, your average customer is worth at least three times what it costs you to
+acquire her.”76 Companies shouldn’t spend too much money on acquisition before
+getting churn right.
+
+A company’s churn rate is the percentage of users who cancelled their subscription
+within a certain timeframe. For example, an annual churn rate of 10% for a company
+with 100 subscribers means that 10 users cancelled their subscriptions within a year.
+Marketing teams often look at churn by dividing subscribers in daily, weekly or monthly
+cohorts and analyzing cohort retention curves. Those curves show the behaviour of
+everyone who joined on date X. Churn often flattens out after a few weeks. The older a
+cohort is, the higher its marginal retention. In other words, older subscribers retain
+better than newer ones.
+
+According to the Subscription Economy Index Report by Zuora,77 media subscription
+businesses had an annual churn rate of 33% in the second half of 2018, the highest
+average churn rate among all industries covered by the report. Some of the companies
+
+
+
+
+76
+   J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015, p. 131.
+77
+   “The Subscription Economy Index”, Zuora. March 2019. Retrieved on July 29, 2019 from
+http://info.zuora.com/rs/602-QGZ-447/images/subscription-economy-index-q4-2018.pdf
+
+
+                                                                                                         62
+covered in this paper declare much lower rates. Most don’t share any figures about its
+churn. In the next few pages, I will mention some of the things they’ve done.
+
+
+7.1. Habits matter more than content.
+
+Churn and acquisition are two sides of the same coin and should be dealt with by a
+cross-disciplinary team, with inputs from marketing, engineering and editorial. Churn
+is much more important than acquisition. Any small improvement on that front has a
+huge impact on the company’s bottom line. “Our data, and data from all over the world,
+shows that it is four to five times cheaper to retain an existing user than to acquire a
+new one. And while we invest quite a lot right now in acquisition, we still invest much
+more in retention and engagement,” said78 Gadi Lahav, head of product at the FT.
+
+Marie Goddard, head of customer marketing at the newspaper, says that embedding
+habits in new subscribers is much more useful than showing them articles. “It’s not
+about showing them content because content is short-lived,” she says. “It’s about
+showing them how to sign up to a newsletter, how to choose the right newsletters or
+how to download our mobile app. If you use the app, you are very likely to be engaged
+with the FT. So we flipped from content discovery to thinking about the nudges we
+need to get them to access our content in their way.”
+
+Fighting inertia is key for every subscription business. One of the biggest reasons why
+people cancel any service is the perception that they are paying for something they
+don’t use. Your biggest competitor is not a rival service but your customer’s inertia in
+not using your service. “For a subscription to stick, customers need to change their
+behavior and actually use the service,” says John Warrillow in his book. “You have a
+short window to break your customers’ old habits and insert yourself in their daily lives.
+
+
+
+
+78
+  B. Veseling, “The road to 1 million subscribers: FT helps users to build 'habit'”, ​WAN-IFRA Blog,​ April
+16, 2018. Retrieved on July 29, 2019 from
+https://blog.wan-ifra.org/2018/04/16/the-road-to-1-million-subscribers-ft-helps-users-to-build-habit
+
+
+                                                                                                              63
+That window is the first few weeks after they have purchased, before the excitement
+about what your subscription offers wears off.”79
+
+The FT uses data to examine every reader’s behaviour. Its data scientists have looked at
+the day and time she joined, her device and the channel she came from. Then they have
+come up with seven different user journeys depending on the relationship they have
+with the FT. Some readers only come from social and search. Others get to the articles
+through email or a mobile app. This analysis helps the newspaper design new products
+and suggest readers different habits that are better for them.
+
+Every subscriber of the FT has an RFV score. RFV is an acronym that reflects the three
+most essential metrics for the newspaper: recency, frequency and volume. “We don’t
+use page views (...) or time-on-site, which may help other publishers,” says Lahav, who
+explains why the RFV score is so important for the newspaper: “If your frequency is
+increasing, you are coming more times to the site. If your volume is increasing, the
+number of articles that you’re reading is increasing. (...) If your recency is lower,
+hopefully it’s zero, which means you came today, your RFV is also higher. It doesn’t
+matter what the formula is. What matters is this is a very good proxy for retention.”
+
+At least 83% of the FT’s subscriber base hits their RFV target. But not everyone who
+doesn’t is at risk of churning. “The challenge for us is that some of those customers
+don’t need to be engaged,” says Goddard. “If you’re a CEO, you might not use your
+subscription but you’re not cancelling it either. So we need to be careful when
+contacting people who don’t hit their target.” The newspaper doesn’t have an accurate
+propensity model to predict which users will churn. Their engagement scores are
+useful. But factors like region can influence the audience’s behaviour too.
+
+The Economist doesn’t follow the RFV model. “For us, it’s not about how frequently
+you come back or whether you come back every day,” says Denise Law, head of product
+at the magazine. “It’s that when you do come, you spend a lot of time with us. So time
+
+79
+  J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015, p. 180.
+
+
+                                                                                                        64
+spent is the single biggest predictor of retention. If Bob comes to The Economist and
+stays for five hours once a week, he is more likely to renew his subscription than Sally,
+who comes every single day to skim the headlines. So that’s what separates us from our
+daily competitors. They’re all about building a daily habit. We are not.”
+
+
+7.2. Look for churn drivers.
+
+A few years ago, Dagens Nyheter lowered its churn from 25% to 10% with the help of AI
+Israeli company ​Spark Beyond80. They created a research engine that identified more
+than 200 features that explained churn. With these insights, Dagens Nyheter designed
+a churn model that predicted potential churn with 86% accuracy and offered actionable
+things they could change to lower it. This model changed the editorial priorities of the
+newspaper but also its organisation. The company created a cross-functional team.
+This team identifies possible churn drivers every day.
+
+As part of this process, Dagens Nyheter has segmented its readers by different factors
+to understand which ones have a high likelihood to churn. For example, if they have a
+subscriber who has been recruited from telemarketing and comes from a certain age
+group and hasn’t used the website in the last five days, he’s very likely to churn. “There
+are two things you can do,” says Martin Jönsson, ​head of editorial development at the
+newspaper. “You can stop recruiting people from channels with a high churn rate or
+you can try to engage with those people by sending out an email or a push notification,
+or by trying to remind them to sign up to newsletters or download the app.”
+
+Micro-segments showed there were acquisition channels that were much more
+efficient. They also gave useful insights on pricing, payments, content and device. Two
+lessons stood out. The first one is that getting people into loyal means of payment such
+as direct debit has a huge impact on churn. The second is that retention is built through
+loyalty: churn drops dramatically after the first hundred days.
+
+
+80
+  R. Whitehead and E. J. Wilkinson, “The Media Subscriptions Blueprint”, ​INMA​, April 2018. Retrieved on
+July 30, 2019 from ​http://www.dagensmedier.no/globalassets/rapporter/inma_2018digitalsubscriptions.pdf
+
+
+                                                                                                      65
+People who read Dagens Nyheter through its mobile app and those who access its
+content from more than one device are much less likely to churn. Those who read
+specialized long-form articles are less likely to cancel too. “If you come to us daily and
+stay as a subscriber for more than 12 months, your churn rate is around 1.5%,” says
+Jönsson. “So we try to create habits to get people used to our digital products. Those
+habits can be anything from crosswords to audiobooks, from podcasts to reading a
+certain columnist. If you are one of our journalists, we don’t want you to create stories
+that get a lot of page views. We want you to create something that builds loyalty and
+makes people want to come back. Habits increase our earnings because help us keep
+down our acquisition costs.”
+
+
+7.3. Dirty channels create churn.
+
+Acquisition and churn are two sides of the same coin. If you recruit your subscribers
+from the wrong channels, cancellations will go up. Acquisition and churn should be put
+under the same organisational umbrella. Otherwise, people who run acquisition will
+have the wrong incentives and will bring in customers less likely to stay.
+
+“Engagement sits upstream from acquisition,” says Chris Duncan, managing director of
+The Times. “If I run cheap and dirty offers, I’ll get dirty customers and they’ll wash out
+the system pretty quickly. But if I’m able to get good quality customers, design an
+onboarding experience, get them engaged in the whole realm of the product, then I
+have a very high chance of keeping those customers. Our job is to train those habits and
+the better we get at this, the faster our business will grow.”
+
+
+7.4. Watch the 90-day onboarding clock.
+
+John Warrillow mentions in his book what he calls “the 90-day onboarding clock”. The
+first three months are the most crucial period for every subscription company. After
+this time, it’s much more difficult to get subscribers to use your product. “The stickiest
+subscription businesses make it their mission to insert themselves into the daily lives
+
+
+
+                                                                                          66
+of their customers,” Warrillow says. “If your customers can avoid your product or
+service and still get their jobs done, you’ll have much bigger churn than if they need to
+interact with your service to complete their daily tasks.”81
+
+Designing an appropriate onboarding process is a powerful weapon in the fight against
+churn. After 90 days, over-communication can produce churn. But during the first few
+weeks, subscribers are in the mood for knowing more about the service they’re paying
+for. “You should think of a new subscriber as a new lover,” says Warrillow. “New lovers
+have a thirst to understand you intimately. An older subscriber will find your constant
+communication annoying after a while, whereas a new subscriber welcomes your
+contacts and takes the time to consume them.”82
+
+Warrillow mentions Blue Dolphin, a venture-backed company headed by Don Nicholas
+and set up to sell magazine subscriptions online. One of their products was Women’s
+Living, which aggregated content from 60 different magazines and had 1.7 million
+subscribers at the time he published his book. Nicholas did an experiment. He gave a
+cohort of users articles from the 10 best-converting magazines in the first 10 days of
+their subscription. “One year later,” says Warrillow, “they saw that this cohort was
+three times more valuable than the control group of customers. In other words, when
+they packed a ton of value into the first 10 days of the relationship with a subscriber, it
+was able to triple the lifetime value of the average customer.”83
+
+
+7.5. Communicate the impact of what you do.
+
+The churn rate of Spanish newspaper eldiario.es is extremely low for industry
+standards. Around 88% of its members renew their subscription and 12% experience
+some kind of problem, often insufficient money in their bank accounts or a card that
+
+
+81
+   J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015, p. 175.
+82
+   J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015, p. 186.
+83
+   J. Warrillow, ​The Automatic Customer. Creating a Subscription Business in Any Industry,​ Portfolio
+Penguin, 2015, p. 180.
+
+
+                                                                                                         67
+has expired. The newspaper sends them an email and gives them three days to update
+their data. They keep most of them during this process: eldiario.es churn rate is 5%.
+
+Esther Alonso, head of marketing, sees big scoops as an opportunity for both retention
+and acquisition. “It’s important to explain the impact of what we do but we have a
+problem,” says Alonso. “Sometimes the impact of what you publish comes five years
+later during a criminal trial. Then you have to explain this result wouldn’t have been
+possible without the members’ support.” Scoops help eldiario.es get former members to
+come back. In 2019, around 30% of the acquisition has come from that group.
+
+The newspaper employs two people whose job is to respond by phone or by email to
+any queries from its members. They’ve defined the lifetime cycle of every member and
+send them an email after eldiario.es publishes important stories and at some critical
+points. For example, just after they join and before they have to renew their
+membership. In April 2019, they sent a 53-question survey to every member and 4.622
+people answered. “They told us a lot of things about what we do,” says María Ramírez,
+head of strategy at the newspaper. “They would like to see more foreign and
+hyper-local coverage. Some told us they’d like to see more conservative voices among
+our columnists too.”
+
+When leaving, members of eldiario.es usually give two reasons. Around 70% say they
+don’t have enough money to pay for their membership. The rest say they are not happy
+with the editorial line. “Some thought this was an activist organisation. So when
+eldiario.es publishes something against their favourite party, they get angry,” says
+Alonso. The newspaper takes these cancellations very seriously. The editor-in-chief,
+Ignacio Escolar, sends these people personal emails explaining his editorial decisions
+and publishes a biweekly column addressing their concerns. These complaints, though,
+are greatly exaggerated. Some of the readers who complain are not even members of
+the newspaper. “This caused much churn a few years ago but not anymore,” says
+Alonso. “We’re starting to see how some members even explain to other members what
+our editorial independence really means.”
+
+
+
+                                                                                         68
+Most of the news outlets covered by this paper force their customers to make a phone
+call to cancel their subscriptions. Swedish daily Dagens Nyheter and Spanish
+newspapers eldiario.es and La Razón are the only ones that let their subscribers leave
+by clicking on their sites. Readers often complain when they can’t cancel online. “By
+making readers call, we keep more of them. I would say right over 50%,” says Chris
+Duncan, managing director of The Times. “Some haven’t realised what the product is.
+When talking to us, they understand what’s available to them. We’ll get to a point
+where we will have to meet the expectation of automatic cancellation but we are not
+there yet.”
+
+
+
+
+                                                                                         69
+8. Conclusion.
+The goal of this paper was to look at​ the strategies that newspapers are using when
+adopting reader revenue models. I have done this by interviewing 26 senior executives
+who have gone through this process in legacy and digital-born news organisations,
+mostly in the United Kingdom and Spain. Every chapter has covered a different aspect
+any subscription company should pay attention to —from things to be done before
+launch to shaping the value proposition, pricing, acquisition and churn.
+
+Digital subscriptions are one of the key trends in the news industry. Newspapers and
+magazines are embracing them in countries as diverse as Argentina, Poland, France,
+Italy and Denmark. Half of the 232 media executives surveyed by the Reuters Institute
+at the end of 2019 said that reader revenue would be their main income stream going
+forward. Only 14% pinned their hopes on advertising alone84.
+
+However, it’s worth keeping in mind that advertising is still the main revenue stream
+for most of the newspapers featured in this paper and that most legacy publications
+still get most of their income from print. Both realities will create tensions between
+departments and will make it difficult for news organisations to apply any takeaways
+from this paper. Change will require discipline and a clear mandate from the top.
+
+Any publisher going into digital subscriptions should know it is entering a long
+distance race. Reader revenue models are a marathon, not a sprint. They require
+patience and some investment. They won’t redeem any bottom line overnight.
+
+At the beginning digital subscriptions will be an additional (and probably small)
+revenue stream. But they will provide publishers with valuable data about their most
+loyal customers, and this data will allow them to refine their value proposition and
+adapt their product to their customers’ needs.
+
+
+84
+ http://www.digitalnewsreport.org/publications/2020/journalism-media-and-technology-trends-and-predicti
+ons-2020/​. Retrieved on February 17, 2020.
+
+
+
+                                                                                                    70
+This journey will require a more integrated organisation, with senior editors,
+technologists, marketing experts and general managers working together more often
+than ever before. Any important decisions should be shaped by data. Managers should
+experiment with pricing and bundles as well as with innovative news products.
+Acquisition and churn should be under the same department to avoid getting
+subscribers who won’t stay for long.
+
+Any publisher considering a shift to digital subscriptions must be aware that its outlet
+will always compete with public service news organisations and news sites that make
+their content available for free. This is an additional challenge and one that won’t go
+away any time soon. In this kind of environment, news organisations need to learn to
+articulate a clear vision and talk much more openly about their editorial mission, their
+ownership and their finances. As Walter Lippmann famously said, “the news about the
+news needs to be told.”
+
+Hard data, not gut feelings should dictate the right reader revenue model for any news
+organisation. Hard paywalls are increasingly rare. Most of the outlets covered here run
+freemium or metered models with free trials and side doors. Even the more open news
+organisations are embracing more transactional value propositions as they try to reach
+beyond their most loyal readers after hitting a plateau. The most successful newspapers
+are embracing propensity scores and dynamic paywalls that distinguish between
+occasional readers and users that are likely to subscribe.
+
+As these systems evolve through artificial intelligence, they may create a technology
+gap between legacy news organisations and smaller outlets that don’t have the money
+or the talent to compete.
+
+Digital subscriptions will be challenging for any news brand without a clear editorial
+mission. Data from the Reuters Institute’s Digital News Report shows that most people
+who pay for news only buy a single news subscription. Global brands and specialized
+outlets such as The Information and The Athletic flourish. Tabloids and clickbait sites
+find it much more difficult to succeed. However, digital-only news sites such as
+
+
+                                                                                          71
+eldiario.es, Dennik N and Zetland have proved that smaller brands can also succeed in
+this difficult ecosystem as long as they prove they are valuable for their audiences and
+for democracy as a whole.
+
+
+
+
+                                                                                       72
+Appendix: interviewees
+
+
+
+
+                         73
+References
+Albrecht, J., “Introducing Subscribe with Google”, ​Google Blog,​ March 20, 2018.
+Retrieved on July 29, 2019 from
+https://blog.google/outreach-initiatives/google-news-initiative/introducing-subscribe-
+google/
+
+Alsever, J., “How 2 Software Guys Disrupted the Flower Business”, ​Inc.​ Retrieved on
+July 28, 2019 from
+https://www.inc.com/jennifer-alsever/inc.500-how-i-did-it-bryan-burkhart-h-bloom.h
+tml
+
+Arrese, Á., “From Gratis to Paywalls”, ​Journalism Studies​, Vol. 17, Issue 8, 2016, pp.
+1051-1067.
+
+Benton, J., “Want to see what one digital future for newspapers looks like? Look at The
+Guardian, which isn’t losing money anymore”, ​Nieman Lab,​ May 1, 2019. Retrieved on
+July 28, 2019 from
+https://www.niemanlab.org/2019/05/want-to-see-what-one-digital-future-for-newspa
+pers-looks-like-look-at-the-guardian-which-isnt-losing-money-anymore/
+
+Davis, J., “How the FT drove digital subscriptions sales by 600 percent over Brexit
+weekend”, ​Digiday​, June 29, 2016. Retrieved on July 29, 2019 from
+https://digiday.com/uk/ft-drove-digital-subscriptions-sales-600-percent-brexit-weeke
+nd/
+
+El Mundo,​ “EL MUNDO presenta la forma de leer el periódico 'para todo el siglo XXI'”​,
+March 4, 2010. Retrieved on July 28, 2019 from
+https://www.elmundo.es/elmundo/2010/03/03/comunicacion/1267654313.html
+
+El Mundo,​ “EL MUNDO cambia de piel y todos ganamos”, October 3, 2013. Retrieved on
+July 28, 2019 from
+https://www.elmundo.es/elmundo/2013/10/03/comunicacion/1380754334.html
+
+El País​, “EL PAÍS lanza una nueva edición digital a la que se accederá por 0,2 euros
+diarios”, November 16, 2002. Retrieved on July 30, 2019 from
+https://elpais.com/diario/2002/11/16/sociedad/1037401211_850215.html
+
+Fletcher, R., “Paying for News and the Limits of Subscription”, ​Digital News Report​,
+Reuters Institute for the Study of Journalism, 2019. Retrieved on July 30, 2019 from
+
+
+
+
+                                                                                           74
+http://www.digitalnewsreport.org/survey/2019/paying-for-news-and-the-limits-of-sub
+scription/
+
+Fletcher, R. and Nielsen, R. K., “Paying for online news”, ​Digital Journalism, V
+                                                                                ​ ol. 5,
+Issue 9, 2017, pp. 1173-1191.
+
+Financial Times​, “FT tops one million paying readers”, April 1, 2019. Retrieved on July
+28, 2019 from
+https://aboutus.ft.com/en-gb/announcements/ft-tops-one-million-paying-readers/
+
+Gaceta de Prensa,​ “‘El correo español el pueblo vasco’ consigue los mejores resultados
+de difusión en el último informe de la OJD”, October 22, 2014. Retrieved on July 30,
+2019 from
+https://www.gacetadeprensa.com/noticia/5030/actualidad/el-correo-espanol-el-pueblo
+-vasco-consigue-los-mejores-resultados-de-difusion-en-el-ultimo-informe-de-la-ojd.
+html
+
+Grueskin, Bill, “The Case for Charging to Read WSJ.Com”, ​Reflections of a Newsosaur​,
+March 22, 2019. Retrieved on July 30, 2019 from
+http://newsosaur.blogspot.com.es/2009/03/case-for-charging-to-read-wsjcom.html
+
+Gupta, S., ​Driving Digital Strategy. A Guide to Reimagining Your Business​, HBR Press,
+2018.
+
+Jacob, M. “Medill Study Identifies ‘Paradigm Shift’ in How Local News Serves Readers”,
+Medill Local News Initiative, February 5, 2019. Retrieved on July 30, 2019 from
+https://localnewsinitiative.northwestern.edu/posts/2019/02/05/northwestern-subscribe
+r-data/index.html
+
+Janzer, A., ​Subscription Marketing.​ ​Strategies for Nurturing Customers in a World of
+Churn​, Cuesta Park Consulting, 2017.
+
+Kalyanaram G., and Winer, R. S., “Empirical Generalizations from Reference Price
+Research”, ​Marketing Science,​ vol. 14, no. 3, 1995, pp. G161–G169.
+www.jstor.org/stable/184158
+
+Kellman Baxter, R., ​The Membership Economy: Find Your Super Users, Master the Forever
+Transaction, and Build Recurring Revenue,​ McGraw Hill-Education, 2015.
+
+Lah T., and Wood, J.B., ​Technology-as-a-service: How to Grow a Profitable Subscription
+business​, TSIA, 2016.
+
+
+
+
+                                                                                           75
+La Repubblica,​ “Il mondo Repubblica: ecco la nuova app che gira intorno a te”, July 26,
+2018. Retrieved on July 28, 2019 from
+https://www.repubblica.it/tecnologia/mobile/2018/07/26/news/repubblica_nuova_app_d
+isponibile_store_apple_google_play-202751586/
+
+Law, D., “Focusing on our core digital products”, ​Medium​, June 3, 2019. Retrieved on
+July 28, 2019 from
+https://medium.com/severe-contest/focusing-on-our-core-digital-products-8dd1d7a80
+a20
+
+Leitner, M., ​How media companies use data to sign up digital subscribers (and keep them)​,
+Reuters Institute, 2019. Retrieved on July 28, 2019 from
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2019-05/How_media_compa
+nies_use_data.pdf
+
+Malik, O., “New York Times To Close Times Select Effective Midnight Tuesday; Will
+Open Last 20 Years Of Archives”, ​GigaOm,​ September, 17, 2007. Retrieved on July 28,
+2019 from
+https://gigaom.com/2007/09/17/419-new-york-times-to-close-timesselect-effective-we
+dnesday/
+
+Negredo, S., Vara, A., Amoedo A., y Moreno, E., “Spain”, ​Digital News Report​, June 13,
+2019. Retrieved on July 29, 2019 from
+http://www.digitalnewsreport.org/survey/2019/spain-2019/
+
+Newman, N., “Attitudes to paying for online news”, Reuters Institute for the Study of
+Journalism, August 2017. Retrieved on July 30, 2019 from
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2017-09/KM%20RISJ%20Pa
+ying%20for%20online%20news%20-%20report%20230817_0.pdf
+
+Nicholls, T., Shabbir, N., & Nielsen, R. K. (2016). Digital-Born News Media in Europe.
+Reuters Institute for the Study of Journalism. Retrieved from
+https://ora.ox.ac.uk/objects/uuid:0037eea3-8f97-4bf3- a336-f86e21abfd0b
+
+Oliver, L., “Times and Sunday Times paywall to go up tomorrow”, ​Journalism.co.uk​, July
+1, 2010. Retrieved on July 28, 2019 from
+https://www.journalism.co.uk/news/times-and-sunday-times-paywall-to-go-up-tomor
+row/s2/a539431/
+
+O’Reilly, L., “Why the Guardian believes readers will pay £15 a month to become
+members”, ​Marketing Week,​ September 10, 2014. Retrieved on July 28, 2019 from
+
+
+
+
+                                                                                           76
+https://www.marketingweek.com/2014/09/10/why-the-guardian-believes-readers-will-
+pay-15-a-month-to-become-members/
+
+Pérez-Peña, R., “Times to Stop Charging for Parts of Its Web Site”, ​The New York Times​,
+September 18, 2019. Retrieved on July 28, 2019 from
+https://www.nytimes.com/2007/09/18/business/media/18times.html
+
+Picard, R., “Twilight or new dawn of journalism? Evidence from the changing news
+ecosystem”, ​Journalism Studies​, vol. 15, Issue 5, 2014, pp. 500-510.
+
+Pilkington, E., “Guardian and Washington Post win Pulitzer prize for NSA revelations”,
+The Guardian​, April 14, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/apr/14/guardian-washington-post-pulitzer-
+nsa-revelations
+
+Ponsford, D., “Guardian losses flat year on year at £30.6m but Trader sale swells bank
+balance to £842.7m”, ​Press Gazette​, July 8, 2014. Retrieved on July 28, 2019 from
+https://www.pressgazette.co.uk/guardian-losses-flat-year-on-year-at-306m-but-trader
+-sale-swells-bank-balance-to-8427m/
+
+Product Habits Blog​, “How Adobe Became a Successful $95 Billion SaaS Company”.
+Retrieved on July 28, 2019 on
+https://producthabits.com/adobe-95-billion-saas-company/
+
+Rajan, A., “Guardian records first operating profit since 1998”, ​BBC,​ May 1, 2019,
+Retrieved on July 28, 2019 from
+https://www.bbc.co.uk/news/entertainment-arts-48111464
+
+Schmidt, C., “Zetland’s members asked for an audio version — and now it’s more
+popular than their written stories”, ​Nieman Lab​, May 9, 2018. Retrieved on July 28, 2019
+from
+https://www.niemanlab.org/2018/05/zetlands-members-asked-for-an-audio-version-a
+nd-now-its-more-popular-than-their-written-stories/
+
+Seale, S., “Dagens Nyheter moves to successful digital subscription model”, ​INMA
+Conference Blog​, December 13, 2017. Retrieved on July 29, 2019 from
+https://www.inma.org/blogs/conference/post.cfm/inma-webinar-dagens-nyheter-move
+s-to-successful-digital-subscription-model
+
+Simon, F. M. and Graves, L., “Pay Models in European News”, Reuters Institute for the
+Study of Journalism, 2019. Retrieved on July 30, 2019 from
+
+
+
+
+                                                                                       77
+https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2019-05/Paymodels_for_Onl
+ine_News_FINAL_1.pdf
+
+Skrob, R. ​Retention Point. The Single Biggest Secret to Membership and Subscription
+Growth​, Membership Services, 2018.
+
+Soteras, J., “Los 10 principales periódicos españoles bajaron en 2018 sus ventas en el
+quiosco”, ​Infolibre​, January 30, 2019. Retrieved on July 30, 2019 from
+https://www.infolibre.es/noticias/medios/2019/01/30/ninguno_los_principales_periodic
+os_espanoles_vende_quiosco_mas_000_ejemplares_mes_91317_1027.html
+
+Southern, L., “​Newsletters as puzzle pieces’: How The Economist uses email to reduce
+subscriber churn”,​ ​Digiday,​ July 5, 2019. Retrieved on July 28, 2019 from
+https://digiday.com/media/economist-takes-less-approach-newsletters/
+
+Southern, L., “How Swedish newspaper Dagens Nyheter halved subscriber churn in 2
+years”, ​Digiday​, May 20, 2019. Retrieved on July 28, 2019 from
+https://digiday.com/media/how-swedish-newspaper-dagens-nyheter-halved-churn-to-
+8-in-2-years/
+
+Scott, C., “Five lessons from the Guardian's membership strategy, three years on”​,
+Journalism.co.uk,​ November 13, 2018. Retrieved on July 30, 2019 from
+https://www.journalism.co.uk/news/five-lessons-from-the-guardian-s-membership-str
+ategy-three-years-on/s2/a730347/
+
+Sweeney, M., “Guardian launches new three-tier membership scheme”, ​The Guardian​,
+September 10, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/sep/10/guardian-membership-scheme-patr
+ons-kings-cross
+
+Sweeney, M., “The Guardian overtakes New York Times in comScore traffic figures”,
+The Guardian​, October 21, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/2014/oct/21/the-guardian-overtakes-new-york-ti
+mes-in-comscore-traffic-figures
+
+The Guardian​, “Guardian Media Group announces outcome of three year turnaround
+strategy”,​ The Guardian,​ May 1, 2019. Retrieved on July 28, 2019 from
+https://www.theguardian.com/gnm-press-office/2019/may/01/guardian-media-group-a
+nnounces-outcome-of-three-year-turnaround-strategy
+
+
+
+
+                                                                                       78
+The Guardian​, “ABCs: National daily newspaper circulation September 2014”, October
+10, 2014. Retrieved on July 28, 2019 from
+https://www.theguardian.com/media/table/2014/oct/10/abcs-national-newspapers
+
+The Guardian​, “The Scott Trust: values and history”, July 26, 2015. Retrieved on July 28,
+2019 from​ ​https://www.theguardian.com/the-scott-trust/2015/jul/26/the-scott-trust
+
+Tzuo, T. ​Subscribed: Why the Subscription Model will be Your Company's Future - and
+what to do about it​, Portfolio Penguin, 2018
+
+Warrillow, J., ​The Automatic Customer. Creating a Subscription Business in Any Industry,​
+Portfolio Penguin, 2015.
+
+Whitehead R. and Wilkinson, E. J., “The Media Subscriptions Blueprint”, ​INMA,​ April
+2018. Retrieved on July 30, 2019 from
+http://www.dagensmedier.no/globalassets/rapporter/inma_2018digitalsubscriptions.pd
+f
+
+Zuora, “The Subscription Economy Index”, March 2019. Retrieved on July 29, 2019
+from
+http://info.zuora.com/rs/602-QGZ-447/images/subscription-economy-index-q4-2018.p
+df
+
+
+
+
+                                                                                         79
+
