@@ -1,0 +1,1311 @@
+{
+  "url": "https://membershipguide.org/handbook/developing-and-launching-membership/designing-our-membership-program/how-do-we-brand-our-membership-program",
+  "title": "How do we brand our membership program? | The Membership Guide",
+  "h1": "Designing a Membership Program",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Designing your membership program is about more than choosing what benefits to offer your members. You need to conduct audience research to understand what potential members value and articulate a membership value proposition. You’ll use that to design a product – the membership program – that speaks to those values, aligns with your mission, and can be implemented with your existing capacity. You’ll then identify a reasonable price or prices for your membership program.The Membership Puzzle Project has watched newsrooms spend months trying to come up with the perfect mix of benefits and pricing tiers. But while benefits can make the membership experience more enriching, they’re not as important as knowing your potential members deeply and getting the membership value proposition right. This is what hooks potential members and tells them what they’re opting into. Once you’ve got the value proposition and branding right and you’ve identified a few ways to add value to the membership experience – your benefits – the best thing you can do is launch your membership program and see how potential members respond. The most useful feedback you get might be whether people join, why they say they joined, and what benefits they take advantage of when they do. This section will guide you through developing the first draft of your membership program so that you can get it out the door and see what your members think.In 2023, the research team updated the Guide with research on how designing a membership program might differ when a newsroom has a large diaspora audience and when its primary product is an audio product. We also studied how solo journalists, or creators, are developing membership as a revenue stream. Many of the best practices for membership apply equally to these products and audiences, so we focused the new research on the ways in which best practices differ. You’ll find those additions at the end of this section."
+    },
+    {
+      "tag": "p",
+      "text": "The process outlined here is not the only way to design your membership program. It is an accessible, entry-level suggestion informed by MPP’s experience with De Correspondent that you’re invited to riff on to suit your organization’s capacity, skills, and budget."
+    },
+    {
+      "tag": "p",
+      "text": "MPP assumes that before you get to this step, you’ve already determined that membership is viable for your organization – both whether you are organizationally ready and that you have an audience that is willing to support you."
+    },
+    {
+      "tag": "h3",
+      "text": "Identify who you are designing for"
+    },
+    {
+      "tag": "p",
+      "text": "The process of designing or iterating on a membership program begins with interviewing your most loyal audience members, because they’re the ones who are most likely to become your members. These are audience members who already engage with your organization at a higher-than-normal level – regular event attendees and newsletter subscribers with a very high open rate, for example."
+    },
+    {
+      "tag": "p",
+      "text": "If you have crowdfunded or asked your audience members for donations in the past, you could focus on this group, treating them as a group of beta members, analyzing their financial contributions for patterns and surveying them to understand what motivated them to support you. This is what the Daily Maverick did."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "h3",
+      "text": "Choose a method for gathering the information you need"
+    },
+    {
+      "tag": "p",
+      "text": "Interviews and focus groups are good for understanding details about what your target audience members need, particularly details on why they behave, think, and purchase in the ways that they do. They will require more than one team member to be involved. Fewer, deeper interviews are more useful than dozens of short interviews that don’t leave room for free-flowing answers."
+    },
+    {
+      "tag": "p",
+      "text": "Surveys are useful for getting a broad cross-section of respondents, particularly when you have fairly specific questions. They require an engaged 1:many channel with audience members, such as an email newsletter or WhatsApp group. You will need a larger number of survey responses to derive actionable insights."
+    },
+    {
+      "tag": "p",
+      "text": "Jump to “Conducting audience research” for survey and interview best practices."
+    },
+    {
+      "tag": "h3",
+      "text": "If you are conducting an in-person focus group or interview…"
+    },
+    {
+      "tag": "p",
+      "text": "Recruit your team. You need at least a facilitator and an observer/notetaker who will capture everything said during the focus group or interview."
+    },
+    {
+      "tag": "p",
+      "text": "Select and gather your interview subjects. Do the interview someplace casual, where they can relax. Loyal audience members would likely enjoy a chance to visit the newsroom, but any place where a casual, free-flowing group conversation can happen is fine."
+    },
+    {
+      "tag": "p",
+      "text": "Do a card sorting exercise. Ask the interview subjects to sort these membership value cards by: (1) Things they get value from currently (2) Things they might get value from in the future (3) Things they don’t get value from."
+    },
+    {
+      "tag": "p",
+      "text": "(This Guide is being published during the coronavirus pandemic, which makes in-person interviews and focus groups difficult. You can perform this exercise in online focus groups using a software like Whimsical, which recreates the sticky note brainstorm experience.)"
+    },
+    {
+      "tag": "p",
+      "text": "The things they get value from currently tell you what to design for, the things they might get value from in the future tells you what to consider later as you build on your membership program, and the things they don’t get value from tells you what not to consider."
+    },
+    {
+      "tag": "p",
+      "text": "This exercise will guide you toward a value proposition for your membership program and inform your decisions about what benefits to offer."
+    },
+    {
+      "tag": "p",
+      "text": "Ask a few more questions. MPP recommends the following questions to get a read on the landscape, help you identify potential future partners, begin to understand your pricing options, and offer cautionary tales to guide retention efforts."
+    },
+    {
+      "tag": "li",
+      "text": "With whom, or with what, do you have a bond or regular relationship that keeps you coming back?"
+    },
+    {
+      "tag": "li",
+      "text": "What are your favorite causes and organizations to support? Why?"
+    },
+    {
+      "tag": "li",
+      "text": "What especially attracts you in regards to requests for your time and attention? What turns you off?"
+    },
+    {
+      "tag": "li",
+      "text": "Have you quit any organizations you used to be involved with? Why? How did you decide?"
+    },
+    {
+      "tag": "li",
+      "text": "Do you have a monthly or annual budget (of time, money, etc.) for the causes you elect to support? How do you decide how to allocate it?"
+    },
+    {
+      "tag": "li",
+      "text": "Do you financially support any other news organizations? Which ones and why?"
+    },
+    {
+      "tag": "p",
+      "text": "If you have not previously conducted a membership viability assessment, you could incorporate some of those questions here."
+    },
+    {
+      "tag": "p",
+      "text": "Add some (optional) whimsy. When Membership Puzzle Project conducted this research with De Correspondent’s members to inform the design of The Correspondent’s membership experience, MPP invited members to write a postcard to De Correspondent on what membership meant to them. This type of indirect feedback can be beneficial for branding and marketing efforts, and it helps everyone in your organization experience the joy of working with members."
+    },
+    {
+      "tag": "h3",
+      "text": "If you are conducting a survey…"
+    },
+    {
+      "tag": "p",
+      "text": "You can adapt Membership Puzzle Project’s membership value proposition worksheet, and add the same questions offered above. If you have not previously conducted a membership viability assessment, you could incorporate some of those questions into this survey."
+    },
+    {
+      "tag": "h3",
+      "text": "Synthesize the results"
+    },
+    {
+      "tag": "p",
+      "text": "If you did an interview or focus group, you should review the notes immediately upon conclusion. Add any additional context needed, and highlight all the things that you think matter the most."
+    },
+    {
+      "tag": "p",
+      "text": "Wait a day, and then come back with anyone else who was present to analyze the data. Jump to “How do we generate insights from audience research?” for more on synthesis."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Designed by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "Pay particular attention to the insights that surprised you. What were you missing or misinterpreting about your audience before? If you conduct a focus group, you should also make a note of how focus group subjects speak about your news organization. Pay attention to the language they use, and how they say you make them feel. This is fodder for future membership branding and marketing."
+    },
+    {
+      "tag": "h3",
+      "text": "Identify your membership value proposition"
+    },
+    {
+      "tag": "p",
+      "text": "At the end of your synthesis process, you’ll have a clear understanding of what your members value, which you’ll use to identify your membership value proposition."
+    },
+    {
+      "tag": "p",
+      "text": "Value propositions can be phrased in different ways. MPP’s preferred format is based on the Value Proposition ad-libs method by Strategyzer:"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Designed by Jessica Phan. Content by Strategyzer."
+    },
+    {
+      "tag": "p",
+      "text": "These elements – what you make or do (products/services), who you serve (user segments), your user’s motivations (user jobs to be done), and how it works (how you reduce pain and enable gain) – are what you need to figure out in order to create a value proposition."
+    },
+    {
+      "tag": "p",
+      "text": "In this case, your product is your membership program, and your user segment is your members. Jump to “How do we identify our membership value proposition?” for a step-by-step process to completing this step."
+    },
+    {
+      "tag": "p",
+      "text": "You can’t brand your membership program or design the membership experience (in other words, choose benefits) without a strong membership value proposition."
+    },
+    {
+      "tag": "h3",
+      "text": "Design your membership program"
+    },
+    {
+      "tag": "p",
+      "text": "Once you have settled your membership value proposition, you can (finally!) design your membership program. This entails branding your membership program, selecting the benefits to offer, determining the price, and determining what other pathways to membership you might offer."
+    },
+    {
+      "tag": "p",
+      "text": "MPP has created a worksheet to help guide you through this process. Make a copy of the membership program design worksheet and continue reading."
+    },
+    {
+      "tag": "p",
+      "text": "As you choose which benefits to offer in your membership program, keep in mind that implementing your membership program needs to be desirable and feasible. At this stage, you should continually be asking two questions:"
+    },
+    {
+      "tag": "li",
+      "text": "Who is this element of the membership program for?"
+    },
+    {
+      "tag": "li",
+      "text": "What does this element of the membership program cost you in actual costs and staff time?"
+    },
+    {
+      "tag": "p",
+      "text": "For guidance on what benefits to consider, jump to “What benefits should we offer our members?“"
+    },
+    {
+      "tag": "p",
+      "text": "When selecting benefits, you should consider them against what you now know your potential members value. If they value the chance to interact with your team highly and rank discounts poorly, you should not put much energy into a citywide discount card, for example, even if it’s easy because of existing business relationships."
+    },
+    {
+      "tag": "p",
+      "text": "If you need help determining that, you can plot the list of benefits you’re considering against this matrix. The values survey you did earlier will help you decide whether a benefit belongs in the high value or low value quadrant. What it would cost you in actual costs and staff time to implement that benefit can help you determine whether it belongs in the high effort or low effort quadrant."
+    },
+    {
+      "tag": "p",
+      "text": "Prioritize offering these benefits from the beginning"
+    },
+    {
+      "tag": "p",
+      "text": "Consider whether there are small changes you can make to lessen the effort required to offer these. If not, depending on your bandwidth, choose just one, or put them on your roadmap for later."
+    },
+    {
+      "tag": "p",
+      "text": "Consider whether any small changes could make these more valuable to your potential members. If you don’t see a way to make them higher value, take these off your list."
+    },
+    {
+      "tag": "p",
+      "text": "Take these off your list"
+    },
+    {
+      "tag": "p",
+      "text": "Once you’ve placed each benefit on the matrix, you can decide which to act on."
+    },
+    {
+      "tag": "p",
+      "text": "When setting a price, you can use member responses about other causes they support to understand what their baseline might be, and apply one or a combination of the pricing strategies used by most newsrooms that MPP details in its advice on setting a price for your membership program. (Jump to “How do we price our membership?“)"
+    },
+    {
+      "tag": "p",
+      "text": "Frontier Myanmar designed its own membership program from scratch last year, and walked Membership Puzzle Project through their process for the Guide, from identifying potential member personas to the rollout of member benefits."
+    },
+    {
+      "tag": "h3",
+      "text": "How Frontier brought a membership model to Myanmar"
+    },
+    {
+      "tag": "p",
+      "text": "They began by identifying five professions who needed the journalism Frontier Myanmar produces."
+    },
+    {
+      "tag": "p",
+      "text": "A membership program is not a set-it-and-forget-it product. It’s important to take a look at the performance and cost of the program regularly and adjust your offering. Some of your benefits might take off, while others are rarely used. As your membership program grows, some of the more intimate benefits, such as the opportunity to attend editorial meetings, may not feasibly scale, and new opportunities to improve the member experience might arise."
+    },
+    {
+      "tag": "p",
+      "text": "Bridge Michigan’s book club was a COVID-19 pandemic innovation meant to fill the gap when they had to cancel all their in-person events, but it became a permanent fixture – and their biggest membership draw. In their member onboarding survey, Bridge asks people why they became a member and “the book club is far and away the biggest reason they join,” according to membership and engagement director Amber DeLind — even though the book club isn’t member-only. And when DeLind asked members what benefit they enjoyed most in their 2021 year-end survey, the free download of the book club book that Bridge offers members is the most popular benefit across all tiers, after “I don’t need any benefits, I just want to support your journalism.”"
+    },
+    {
+      "tag": "h3",
+      "text": "How new offerings got Bridge Michigan past a membership plateau"
+    },
+    {
+      "tag": "p",
+      "text": "Growing and retaining members isn’t something that happens passively, especially when a membership program gets past its buzzy first years."
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, three years after launching with a membership program, Denmark’s Zetland hit the road to hear from members in five cities outside Copenhagen.  Their goal was to gain fresh insight into what members loved about Zetland, and come up with ways that Zetland could make that easier for them to show off to non-members."
+    },
+    {
+      "tag": "p",
+      "text": "The staff heard clearly that members wanted the opportunity to show their friends more of Zetland’s journalism, so the staff proposed a new benefit: each member could create their own shareable package of their favorite Zetland stories. Before building the new feature, they surveyed their whole member base to see what they thought. The feature got a thumbs up."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "p",
+      "text": "Of course, you don’t have to go on a road trip to find out what your members want from their membership. Many questions about how valuable your members find their benefits can be answered with data you already have."
+    },
+    {
+      "tag": "li",
+      "text": "If you’re wondering how valuable your member-only newsletter is, check the open rates."
+    },
+    {
+      "tag": "li",
+      "text": "If you’re wondering how valuable member-only events are (whether online or in-person) are, check how many unique members attended a member-only event in the last six months."
+    },
+    {
+      "tag": "li",
+      "text": "If the ability to comment is a perk, check how many unique commenters you have."
+    },
+    {
+      "tag": "li",
+      "text": "If you offer the opportunity to gift a free membership, check how many gift memberships have been offered, and whether they are spread across many members."
+    },
+    {
+      "tag": "li",
+      "text": "If you offer swag but members have to provide their address to receive it, check how many members actually take the step to share their address or inquire about how to get their swag."
+    },
+    {
+      "tag": "p",
+      "text": "You should also consider these data points against your capacity. How much is fulfilling each of these benefits costing you, in terms of staff time, technical support, merchandise, and shipping?"
+    },
+    {
+      "tag": "p",
+      "text": "If you don’t have the data you need to evaluate how valuable a benefit is, you can survey your members."
+    },
+    {
+      "tag": "p",
+      "text": "Krautreporter and Steady co-founder Sebastian Esser recommends a simple approach: send your members a survey with just two questions: what benefit do they value the most, and which benefit do they value the least? It’s easier for your members than asking them to rank all of the benefits you offer, and the internal ranking that results from the responses will be more than enough information to decide what to stop offering."
+    },
+    {
+      "tag": "p",
+      "text": "Knowing what benefits are most valued can also help you upsell members to higher tiers if you have a tiered membership program by making those benefits available only at the higher tiers. How much effort it requires to fulfill a particular benefit is another thing to consider when you’re deciding to which tier to allocate a benefit."
+    },
+    {
+      "tag": "p",
+      "text": "When conducting this survey, you should include a list of the benefits because they might have trouble recalling the benefit they find least valuable."
+    },
+    {
+      "tag": "p",
+      "text": "You could probably make the decision based just on the ranking offered by members, eliminating those that rank poorly, but if you want an additional layer of analysis, you can use the same effort/value matrix explained above."
+    },
+    {
+      "tag": "p",
+      "text": "The ranking from your members will determine whether something goes in a high value or low value quadrant. The effort it takes to provide the benefit determines whether it goes in the high effort or low effort quadrant."
+    },
+    {
+      "tag": "p",
+      "text": "Keep these benefits"
+    },
+    {
+      "tag": "p",
+      "text": "Explore ways to lessen the effort required to offer these"
+    },
+    {
+      "tag": "p",
+      "text": "Remove these from your program"
+    },
+    {
+      "tag": "p",
+      "text": "Remove these from your program"
+    },
+    {
+      "tag": "p",
+      "text": "Some questions to ask yourself as you review the matrix:"
+    },
+    {
+      "tag": "li",
+      "text": "What makes the benefits in the top left and top right so valuable to your members? What does this tell you about what your members value more broadly?"
+    },
+    {
+      "tag": "li",
+      "text": "What steps can you take to make the delivery of benefits in the top right quadrant less onerous for your team? If you can’t reduce the burden, you should only keep those options for which the value to you and your members outweigh the costs."
+    },
+    {
+      "tag": "p",
+      "text": "You should eliminate any benefits in the lower right immediately and consider what you can do with those items in the lower left quadrant to make them more valuable for your members without exerting any additional effort. If you can’t, phase those out too."
+    },
+    {
+      "tag": "p",
+      "text": "Once you make the decision to stop offering a benefit, you have to consider what you’ll say about it. If it’s a high value benefit but you don’t have the capacity to continue providing it, that likely warrants an explanation. If it’s a low value benefit, it’s unlikely members will notice that it’s gone and doesn’t justify a separate communication about it. If you provide periodic member updates, you could mention it then."
+    },
+    {
+      "tag": "p",
+      "text": "When Scalawag decided in July 2020 to stop offering its print magazine, something that members strongly valued, they sent an email explaining their decision. This communication offered transparency and reminded members of what they make possible – a reiteration of the membership value proposition."
+    },
+    {
+      "tag": "blockquote",
+      "text": "As more news outlets change their approach to journalism in response to demands for racial justice, our work is even more imperative as a model for what media can and should do. Scalawag has long stood upon the collective values of justice and liberation in the South. Your membership has played a major role in helping Scalawag solidify its standing as a trusted media source about the South—and we’re not going anywhere. \n\n\n\nWe’ve provided a platform to organizers, incarcerated people, and storytellers from communities directly affected by injustice to share critical information and shape narratives that have real-world outcomes. Over the past year, we’ve seen that our work beyond print is reaching a wider audience than ever before.  \n\n\n\nBut even with over 1,000 subscribers to our print magazine, our small nonprofit was spending over $80,000 a year—a third of our budget—on production and shipping costs. So, we’ve made the tough but strategic decision to discontinue the physical version of our work, in favor of creating more opportunities for transformative impact online and in person."
+    },
+    {
+      "tag": "p",
+      "text": "As more news outlets change their approach to journalism in response to demands for racial justice, our work is even more imperative as a model for what media can and should do. Scalawag has long stood upon the collective values of justice and liberation in the South. Your membership has played a major role in helping Scalawag solidify its standing as a trusted media source about the South—and we’re not going anywhere."
+    },
+    {
+      "tag": "p",
+      "text": "We’ve provided a platform to organizers, incarcerated people, and storytellers from communities directly affected by injustice to share critical information and shape narratives that have real-world outcomes. Over the past year, we’ve seen that our work beyond print is reaching a wider audience than ever before."
+    },
+    {
+      "tag": "p",
+      "text": "But even with over 1,000 subscribers to our print magazine, our small nonprofit was spending over $80,000 a year—a third of our budget—on production and shipping costs. So, we’ve made the tough but strategic decision to discontinue the physical version of our work, in favor of creating more opportunities for transformative impact online and in person."
+    },
+    {
+      "tag": "p",
+      "text": "The email concluded by giving members the link to Scalawag’s payment page if the decision made them want to change their membership level."
+    },
+    {
+      "tag": "p",
+      "text": "Branding plays a critical role in how potential members perceive your membership program. Without a branding strategy, each person in your newsroom could end up conveying your program’s mission and values in a different way, making it hard for potential members to understand what they’re being asked to join."
+    },
+    {
+      "tag": "p",
+      "text": "With so many news organizations launching audience revenue efforts, branding is also a critical way of cutting through the noise. It subtly conveys your membership value proposition. It both helps to differentiate your membership program and raise awareness of it."
+    },
+    {
+      "tag": "p",
+      "text": "There are ample resources on branding and most news organizations will have a branding strategy that they can build on for membership, so MPP will offer only a brief overview of the role branding plays, as well as some additional resources."
+    },
+    {
+      "tag": "p",
+      "text": "Branding has three components:"
+    },
+    {
+      "tag": "p",
+      "text": "Your brand strategy includes your purpose, positioning, and messaging. It articulates who you are and what you exist to do, what sets you apart (your value proposition), and the language you use to describe that."
+    },
+    {
+      "tag": "p",
+      "text": "Getting your membership value proposition right is the most critical component of your branding strategy because it lays the foundation for how you describe and market your membership program. MPP previously offered advice on defining your membership value proposition."
+    },
+    {
+      "tag": "p",
+      "text": "Your brand identity is encapsulated in the visual elements of your brand – the name, logo, and colors – that help audience members connect with your organization and help you stand out in their minds. Your membership program’s brand identity, from what you call your members to the swag you give them, should align with your organizational brand identity, as it does for WURD in Philadelphia, which calls its membership program “forWURD,” a nod to the station’s well-known call letters. Below is an example of visual consistency from the Daily Maverick and its membership program, Maverick Insider."
+    },
+    {
+      "tag": "p",
+      "text": "Your brand experience emerges from all of the products that audience members interact with out there in the world: your website, your social media presence, your events, etc. In the case of your membership program, this includes places like your membership landing page, a member-only newsletter, and the benefits of your membership program. We discuss benefits next."
+    },
+    {
+      "tag": "p",
+      "text": "When you get the brand strategy, brand identity, and brand experience right, you increase the likelihood that people will become members. It also makes decision-making on everything from membership appeals to event invitations easier."
+    },
+    {
+      "tag": "h3",
+      "text": "How Honolulu Civil Beat rebranded itself to be “friendlier”"
+    },
+    {
+      "tag": "p",
+      "text": "Positioning itself as a disruptive outsider was not a good fit for an organization about to launch membership."
+    },
+    {
+      "tag": "p",
+      "text": "Recommended branding resources:"
+    },
+    {
+      "tag": "li",
+      "text": "Sonya Quick of Voice of San Diego for INN at Home, June 2020: Branding is Not a Dirty Word; resources for DIY branding for small organizations"
+    },
+    {
+      "tag": "li",
+      "text": "INSEAD: How to build a brand pyramid"
+    },
+    {
+      "tag": "p",
+      "text": "What you call your members is an important part of your membership branding identity. Membership Puzzle Project gets many branding questions about what to call members, and how to differentiate them between membership tiers."
+    },
+    {
+      "tag": "p",
+      "text": "When choosing a name for their membership program, most newsrooms keep it simple, sticking with calling their members “member” or a word with an equivalent meaning in their language (in some countries, the term “member” has political connotations that a news organization might shy away from). Some choose a term with a close connection to the publication’s name, as The Narwhal in Canada did when it began inviting readers to “Become a Narwhal.” If you’re going to choose a more bespoke term for members, it should not be one that makes them scratch their head. It should have strong continuity with your overall brand identity."
+    },
+    {
+      "tag": "p",
+      "text": "Membership Puzzle Project advises against giving a different name to each membership tier.  Giving different names to members contributing at slightly different financial levels bifurcates your community, calls out financial disparities, and can be confusing for  potential members to navigate."
+    },
+    {
+      "tag": "p",
+      "text": "The exception to this advice emerges when you get into larger-dollar membership. At that point, organizations often employ different names as part of a large-dollar donor cultivation strategy.   Public radio in the U.S., one of the earliest examples of membership in news, has traditionally defined small-dollar membership as below an annual contribution of roughly $250. Above this, you are moving into large-dollar donor development, which the research team has not studied extensively for the purpose of this guide."
+    },
+    {
+      "tag": "p",
+      "text": "Your benefits are a key component of how members will experience your membership program. They should align with your membership value proposition, as well as what audience research told you potential members value about their membership. Membership Puzzle Project’s step-by-step membership program design process can help you assess that."
+    },
+    {
+      "tag": "p",
+      "text": "Once you know what your audience members value about membership, you can begin choosing what benefits to offer. Based on interviews with dozens of newsrooms, the Membership Puzzle Project divides membership benefits into 10 categories."
+    },
+    {
+      "tag": "li",
+      "text": "Exclusive access, such as member-only newsletters, events, content, website features such as comments, and enhanced opportunities to communicate with the journalists"
+    },
+    {
+      "tag": "li",
+      "text": "Early access, such as opportunities to access content or sign up for in-demand events before they open to the general audience"
+    },
+    {
+      "tag": "li",
+      "text": "Influence, such as the ability to vote in key decisions, which is common in cooperative models"
+    },
+    {
+      "tag": "li",
+      "text": "Discounts on items such as event tickets and to local businesses and institutions"
+    },
+    {
+      "tag": "li",
+      "text": "Online community, such as a members-only Slack or Facebook group and commenting"
+    },
+    {
+      "tag": "li",
+      "text": "Ad-free browsing, such as the ability to log in to the site and read without ads or access to an ad-free version of a podcast"
+    },
+    {
+      "tag": "li",
+      "text": "Ability to grant access, such as the ability to share stories that would otherwise be behind a paywall or to share your membership with others"
+    },
+    {
+      "tag": "li",
+      "text": "Swag, such as branded tote bags, stickers, and clothing items"
+    },
+    {
+      "tag": "li",
+      "text": "Short-term topical benefits to incentivize sign-ups and renewals at that time, such as a time-limited swag item or the opportunity to have your contribution matched"
+    },
+    {
+      "tag": "li",
+      "text": "Opportunity to support other mission-aligned organizations, including other news organizations, such as bundled memberships"
+    },
+    {
+      "tag": "p",
+      "text": "As you choose which benefits to offer your membership program, keep in mind that it needs to be desirable and feasible. Who is this element of the membership program for? What does this element of the membership program cost you financially and in terms of staff time?"
+    },
+    {
+      "tag": "p",
+      "text": "Don’t overload your membership program with benefits. You are not designing a corporate rewards program. A couple benefits that you know are desirable because you’ve conducted audience research are going to be more valuable to your members than eight scattershot ones. MPP found that benefits can increase the appeal and retention of your membership program, but they’re rarely the main reason potential members join."
+    },
+    {
+      "tag": "figcaption",
+      "text": "El Diario in Spain offers five benefits with membership: ad-free browsing, early access to stories, commenting, events with other El Diario members, and discounts and special promotions. All five are mission-aligned and feasible. (Courtesy of El Diario)"
+    },
+    {
+      "tag": "p",
+      "text": "If you have more than one tier, MPP also cautions against changing the benefits too frequently from one tier to another. It’s a lot for a potential member to process. One additional benefit for each membership tier is fine. Time-limited benefits can be effective, particularly when tied to a community moment. During its spring 2020 membership drive, which began as coronavirus was taking hold in the U.S., VTDigger temporarily stopped offering its typical benefits and instead arranged for a local company to donate a cloth mask for every donation VTDigger received. The pivot away from its typical benefits was a smart move that recognized that its typical benefits, such as swag, would have seemed tone deaf and been difficult to fulfill during the coronavirus pandemic."
+    },
+    {
+      "tag": "h3",
+      "text": "How cloth masks powered VTDigger’s spring 2020 member drive"
+    },
+    {
+      "tag": "p",
+      "text": "Coronavirus reached the U.S. as VTDigger approached their spring 2020 membership drive. They knew swag was out of the question."
+    },
+    {
+      "tag": "p",
+      "text": "Newsrooms are increasingly concerned about the inclusiveness of their coverage and how the stories they choose to tell implicitly or explicitly leave out people they want to serve. MPP learned in the user research for this Guide that many newsrooms are also concerned about the inclusiveness of their membership programs. They struggle to make decisions about member benefits, particularly what experiences should be available to their entire audience, and what should be offered as a way to enrich the member experience."
+    },
+    {
+      "tag": "p",
+      "text": "“It’s a balancing act between how much we want to celebrate and hook up our members versus you don’t want to make people who can’t afford to be a member feel penalized or dismissed or not valued. So we are always trying to walk that line,” said Sara Lomax-Reese, president of WURD Radio in Philadelphia. One small way they solve for this is by periodically opening up event ticket giveaways to everyone."
+    },
+    {
+      "tag": "p",
+      "text": "When it comes to designing the features of a membership program, MPP encourages newsrooms to think about what message each benefit sends. You choose a benefit because you think it will resonate with your members. That means that the benefits you choose say a lot about who you believe your members are – and tells potential members whether or not they belong. In this section we address two axes of exclusivity to pay attention to: place and content."
+    },
+    {
+      "tag": "p",
+      "text": "Exclusivity based on place. For place-based news organizations, being attuned to exclusivity of place is particularly important. Everything from the places to which you offer discounts to where you hold your events sends a signal about where in the city your members are. In cities experiencing gentrification, it’s important to consider whether the locations you promote have roots in the community."
+    },
+    {
+      "tag": "p",
+      "text": "You can ask these questions to assess your membership program features:"
+    },
+    {
+      "tag": "li",
+      "text": "If you’re a place-based newsroom, map out your event locations and local business partners. Are they concentrated in particular neighborhoods? Are they accessible by public transportation?"
+    },
+    {
+      "tag": "li",
+      "text": "Who is the target demographic of entities you offer discounts to or partnerships with? Do they show a similar commitment to issues of equity and inclusion?"
+    },
+    {
+      "tag": "p",
+      "text": "Content exclusivity: As you consider member-only content, keep in mind that many members don’t want a gate around the journalism they support. They want to share it freely and celebrate their role in its success. The 2020 Digital News Report from the Reuters Institute of Journalism found a growing concern about information inequality, particularly in the U.S. “I pay to keep news free for everyone” is a value proposition that resonates strongly, from public radio in the U.S. to the Guardian to the Daily Maverick in South Africa. If you know that this is something your members value, allowing only them full access to your journalism would run counter to their motivations."
+    },
+    {
+      "tag": "p",
+      "text": "That said, while metered paywalls are more common in a subscription model, they are a feature of many member-driven newsrooms. Paywalls are not a model themselves; they are a payment-prompting mechanism. If you’re looking for advice on what to put behind a paywall, Membership Puzzle Project recommends the “Digital Pay Meter Playbook” from the Lenfest Institute and Shorenstein Center."
+    },
+    {
+      "tag": "p",
+      "text": "Most member-driven newsrooms without paywalls split the difference on content exclusivity by offering an array of member-only extras  – such as behind-the-scenes newsletters and fireside chats with in-demand experts – while keeping the core journalism being produced available to all. But some newsrooms Membership Puzzle Project spoke to while researching this project are considering eschewing all access-based benefits because they feel it undermines their commitment to equity and is out of sync with what motivates people to become members of their organization."
+    },
+    {
+      "tag": "p",
+      "text": "“The whole point of our model is that everyone should have access to our work. The questions we ask ourselves are: How does any nonprofit have a membership program? How are we meant to be accessible for everyone while also offering member benefits? How can we create a truly inclusive membership program?” Chalkbeat’s Kary Perez told the research team."
+    },
+    {
+      "tag": "p",
+      "text": "So far, Chalkbeat has decided that they won’t limit access to anything that’s useful for creating educational outcomes. They’re also exploring how they might create pathways to membership that don’t require a monetary exchange. That’s what Maldita in Spain does – they grant member status both to those who support them financially and those who assist them as fact checkers."
+    },
+    {
+      "tag": "h3",
+      "text": "How Maldita enlists members’ ‘superpowers’ to fact check"
+    },
+    {
+      "tag": "p",
+      "text": "Maldita weeds out trolls trying to wreck their fact checking by asking respondents to upload proof of their credentials."
+    },
+    {
+      "tag": "p",
+      "text": "Pricing discussions can be the most daunting part of designing a membership program, especially for smaller organizations who don’t have a business-side team. Much of the advice on pricing is incredibly complex and designed for larger, more corporate entities."
+    },
+    {
+      "tag": "p",
+      "text": "Most pricing research language puts support for journalism in a transactional frame, putting your membership program in competition with one-way transactions like Netflix subscriptions. But pricing membership is actually about understanding both the value of your work to someone and how much they value ensuring other people can access it."
+    },
+    {
+      "tag": "p",
+      "text": "This philanthropic giving impulse can be tricky to put a monetary value on. You may need to test out different prices until you find the intersection between your financial needs and your members’ ability to give. If you’ve asked for financial support in the past, you could study those past campaigns for clues as to what a good starting price might be, or look to other member-driven organizations that are geographically close or mission-aligned (news and otherwise) for clues as to what is a reasonable ask."
+    },
+    {
+      "tag": "p",
+      "text": "The decades-old Van Westendorp Price Sensitivity meter is the go-to method in the audience revenue space for assessing a price your audience members will find palatable. But for smaller organizations the Van Westendorp meter might be overly complex and could come across as corporate. Asking audience members to complete it in a survey could undermine the sense of community that motivates many members. Membership Puzzle Project  brings it up here because MPP is often asked about pricing strategy in the subscription space, but MPP doesn’t necessarily suggest this for your newsroom."
+    },
+    {
+      "tag": "p",
+      "text": "Sebastian Esser, CEO of membership platform Steady, says that organizations tend to underprice “dramatically.” This was the case at Krautreporter in Germany, which he also founded. Krautreporter raised its prices in December 2019 for the first time, and said that they received no pushback or cancellations in response to the price increase."
+    },
+    {
+      "tag": "p",
+      "text": "After surveying dozens of newsrooms about their pricing strategy, MPP suggests one or a combination of the following strategies for determining your own."
+    },
+    {
+      "tag": "li",
+      "text": "Looking horizontally to other membership organizations that are geographically close or mission-aligned"
+    },
+    {
+      "tag": "li",
+      "text": "Asking your audience members what other causes they support and for how much (There is language for this in MPP’s suggested membership program design process)"
+    },
+    {
+      "tag": "li",
+      "text": "Studying the range of contributions to previous crowdfunding or donations campaigns"
+    },
+    {
+      "tag": "li",
+      "text": "Launching with multiple options, or a pay-what-you-can option, and studying the patterns that emerge"
+    },
+    {
+      "tag": "p",
+      "text": "El Diario in Spain took a fairly straightforward approach when they launched their membership program – they looked across the media landscape and set their own membership price (€60 a year at launch) in between the more expensive subscription-based legacy publications and the less expensive digital journalism organizations. When they launched, their membership program quickly gained traction, with little pushback on the price. El Diario has almost 60,000 members today. In spring 2020, they raised their price for the first time, to €80 a year, but experienced no dropoff in membership as a result."
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick used a donations campaign to test several of its assumptions about membership, including what people would be willing to give if it was left open-ended and what would happen if they changed the default amount. They found that even when given the option of giving the bare minimum required – the cost of a credit card transaction, essentially – few people took that choice."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "p",
+      "text": "The Dispatch, a conservative news startup in the U.S., launched in October 2019 with a lifetime membership option priced at $1,500. They used their annual membership price of $100 as the baseline, framing it as paying to support getting The Dispatch to 15 years. They had hoped they would get 300 lifetime members, but they had 450 in July 2020."
+    },
+    {
+      "tag": "p",
+      "text": "An increasing number of organizations are choosing a pay-what-you-can or pay-what-you-want model, sometimes for a trial period and often indefinitely. The Daily Maverick in South Africa decided to use this pricing design indefinitely, while Zetland in Denmark allowed new members to set their price for the first month as part of a campaign, after which they pay about $20 a month."
+    },
+    {
+      "tag": "p",
+      "text": "Organizations choosing this pricing model cite the following reasons: It makes membership available to a wider swath of the community. (This alone is not enough to make your membership more inclusive. But if you’ve taken additional steps, such as diversifying your staff and sources,  removing this barrier is a good final step.) It also makes it easy for those members who have the ability to contribute more to do so."
+    },
+    {
+      "tag": "p",
+      "text": "As mentioned before, if your value proposition is that you are producing a public good for anyone to access, then you are asking members to give in proportion to how much they value both your work and open access to it. The pay-what-you-can model harnesses the public good value and motivation more powerfully than pricing tiers."
+    },
+    {
+      "tag": "p",
+      "text": "Styli Charalambous of the Daily Maverick reflects on this dynamic: “Besides removing friction from the process, [the pay-what-you-can model] also taps into a different part of the brain — and budget. Subscription fatigue is a thing, and publishers in South Africa have to compete with the New York Times for a slice of people’s subscription budget.… But people can and do support multiple good causes that resonate with them. We wanted to convey our cause that was worthy of support alongside the Society for the Protection of Animals, National Sea Rescue Institute, or educational development programmes.”"
+    },
+    {
+      "tag": "p",
+      "text": "After almost two years of having a pay-what-you-can model, the Daily Maverick has learned that although most people will not default to the lowest possible option, they had to implement some nudges to get members who could afford to contribute more to do so. In their case, they instituted a perk that only kicked in for members who contributed above R150 (about $10) a month."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick designed a pay-what-you-can model"
+    },
+    {
+      "tag": "p",
+      "text": "A well-targeted benefit nudges those who can afford to contribute more to do so, while keeping membership accessible for all."
+    },
+    {
+      "tag": "p",
+      "text": "At WURD Radio in Philadelphia, President Sara Lomax-Reese said they see both ends of the spectrum. They’ve had people give $1,000 and say they want nothing in return, and they’ve had  people who can’t meet the minimum membership tier of $90 a year, but want to show their support however they can. “There is a guy who sends me $1 every month! He sends this beautiful note. He says, ‘I don’t have $90, but I have $1.”"
+    },
+    {
+      "tag": "p",
+      "text": "For organizations who don’t want to implement a pay-what-you-can membership model but want to serve the full spectrum of supporters, accepting one-time donations alongside membership can meet that need."
+    },
+    {
+      "tag": "p",
+      "text": "Swag, a common member benefit, brings a sense of fun, delight, and belonging to your membership program and can reinforce your brand identity if it’s consistent with your branding, but it’s not a must. MPP research found that swag is not a primary reason people become members of a news organization."
+    },
+    {
+      "tag": "p",
+      "text": "To be a true value add, swag needs to make members feel a stronger sense of community and it needs to be cost effective and feasible to provide."
+    },
+    {
+      "tag": "p",
+      "text": "Here are some questions to ask as you consider whether to offer swag and what to offer:"
+    },
+    {
+      "tag": "li",
+      "text": "Will people wear or use this item?"
+    },
+    {
+      "tag": "li",
+      "text": "If you plan to mail the swag, how will you get addresses?"
+    },
+    {
+      "tag": "li",
+      "text": "How much will it cost to produce/purchase?"
+    },
+    {
+      "tag": "li",
+      "text": "How will you distribute it?"
+    },
+    {
+      "tag": "li",
+      "text": "How much staff time will swag fulfillment require, or how much will it cost to outsource this?"
+    },
+    {
+      "tag": "li",
+      "text": "Is your swag equally appealing to differently abled individuals and people with different body types?"
+    },
+    {
+      "tag": "p",
+      "text": "Swag fulfillment – in other words, the packaging and delivery of swag – consistently flummoxes newsrooms who underestimate the costs in staff time associated with it. But assessing how much swag costs you beyond the actual production costs is simple. The Narwhal in Canada decided to hire a person to manage swag fulfillment after estimating how much staff time it would take and multiplying that by the hourly compensation of the staff members who would do it. It was immediately clear that it was more cost effective to bring someone on to do it on an hourly basis and free up the staff’s time to do things only they could do."
+    },
+    {
+      "tag": "p",
+      "text": "When WTF Just Happened Today first launched a membership program, founder Matt Kiser offered different swag for each membership tier. Fulfilling all the orders was eating into the time he needed to actually produce the newsletter. So he stopped offering swag… and the members didn’t really mind."
+    },
+    {
+      "tag": "p",
+      "text": "“After speaking with members, it became clear that while physical rewards are nice, the real reward is supporting the continued production of WTF Just Happened Today,” he wrote on his membership FAQ."
+    },
+    {
+      "tag": "p",
+      "text": "If you can’t deliver on your membership value proposition and offer swag, MPP recommends setting swag aside until you can do both."
+    },
+    {
+      "tag": "p",
+      "text": "The other thing to consider with swag fulfillment is how you’ll get the information you need, such as size (if the swag is a clothing item) and address (if you plan to mail it). You want to ask for as little information as possible before someone completes the membership sign-up process (Jump to “Launching our membership program” for more on that ) so Membership Puzzle Project does not recommend asking for a mailing address at the signup point. Many organizations retrieve members’ mailing addresses in one of the first onboarding emails instead."
+    },
+    {
+      "tag": "p",
+      "text": "If you are unsure if your members are excited about receiving swag, asking for information at a later stage is one way to gauge enthusiasm. How many people take this small step to ensure they receive it?"
+    },
+    {
+      "tag": "p",
+      "text": "Sometimes the opportunity to get limited-time swag motivates people to become members during a particular campaign. It can bring you members you might not have otherwise earned, but you’ll have to work hard to keep them – DCist found that offering coveted Washington, D.C., themed socks brought them many new members who canceled a couple months later."
+    },
+    {
+      "tag": "p",
+      "text": "Sometimes swag is more powerful as its own independent revenue source, rather than as an incentive for membership. Minnesota Public Radio’s #MPRraccoon campaign happened a few years ago, but it remains one of the best examples of harnessing a community moment to make swag that could bring in additional revenue: it took advantage of a moment, harnessed a sense of community, and tapped into a capability that MPR already had."
+    },
+    {
+      "tag": "p",
+      "text": "This section was authored by MPP researcher Laura Oliver."
+    },
+    {
+      "tag": "p",
+      "text": "Through the use of voice, podcasts and other audio products can establish a strong, personal link with listeners and grow a highly engaged community through this medium – both elements that create a strong foundation for a membership program."
+    },
+    {
+      "tag": "p",
+      "text": "But audio products typically rely on third-party podcast platforms such as Spotify and Apple Podcasts for discovery and regular listening. As a result, listeners encounter this journalism on platforms at a distance from the newsroom’s owned channels, where the mission and value proposition of the organization can be most clearly communicated."
+    },
+    {
+      "tag": "p",
+      "text": "That distributed model also means that organizations often lack much of the data that text-based newsrooms use to inform the design of the membership program, such as whether they subscribe to their podcasts, the depth of engagement with an audio story or which individual podcast episode prompted sign-up. There are more steps to the process of surveying listeners, introducing friction that can lower response rates."
+    },
+    {
+      "tag": "p",
+      "text": "On top of that, each listening platform has a different payment process, creating a complex range of journeys to membership that is hard for a newsroom, especially a smaller one, to manage."
+    },
+    {
+      "tag": "p",
+      "text": "How can newsrooms creating audio products communicate the value of membership while making the best of audio’s unique qualities to overcome the challenges of distributed consumption, and how can they create a member experience?"
+    },
+    {
+      "tag": "p",
+      "text": "Much of the advice on designing a membership program is the same, whether it’s a text-based journalism organization or an audio-based one. In this section we will focus on areas where the advice diverges. We address questions on how to market and grow a membership program for an audio product in “Growing a membership program.” (Jump to “How do we grow membership for an audio product?“)"
+    },
+    {
+      "tag": "p",
+      "text": "The following questions are important if you are an audio publisher and plan to design a program:"
+    },
+    {
+      "tag": "li",
+      "text": "Will your members support individual shows or your organization as a whole?"
+    },
+    {
+      "tag": "li",
+      "text": "Will audio or voice feature in the design of your membership experience?"
+    },
+    {
+      "tag": "li",
+      "text": "How can you make it simple for people who listen on third-party platforms to find and join your membership program?"
+    },
+    {
+      "tag": "li",
+      "text": "What data will you need to assess whether your membership hypothesis works? How will you get it?"
+    },
+    {
+      "tag": "li",
+      "text": "How will you keep payment frictionless for people who listen on different platforms but manageable for your team?"
+    },
+    {
+      "tag": "p",
+      "text": "For this research, MPP interviewed people working on a couple different types of audio products:"
+    },
+    {
+      "tag": "li",
+      "text": "Audio journalism produced by a newsroom that also produces journalism in other formats"
+    },
+    {
+      "tag": "li",
+      "text": "A standalone podcast"
+    },
+    {
+      "tag": "li",
+      "text": "An audio-focused newsroom that produces multiple audio products, likely podcasts"
+    },
+    {
+      "tag": "p",
+      "text": "First, make sure you understand listening habits. Consuming audio breeds different habits than text-based journalism, so design your membership program with an awareness of them."
+    },
+    {
+      "tag": "p",
+      "text": "With the boom in podcasting, listeners are often navigating through a sea of audio, struggling to keep track of shows that they want to listen to. A curated listening experience is one of the perks Danish newsroom Zetland offers its members. If members access the podcasts in the member-only app, they’ll get a suggested order in which to consume Zetland’s audio journalism."
+    },
+    {
+      "tag": "p",
+      "text": "Another audio habit that text-based publishers don’t have to think about: binge listening. For their latest season, Portuguese investigative journalism podcast Fumaça is making all 13 episodes available to members in one go, in hopes that enabling this habit leads to a more valuable member experience. Previously they only had access to the first four episodes upon launch."
+    },
+    {
+      "tag": "p",
+      "text": "But one reason that audio journalism fits so well into people’s lives is also a reason that it can be harder to actually convert listeners to members: People are often doing other things while listening. That means membership messaging needs to be exceptionally memorable or attention-grabbing in order to get listeners to pause what they’re doing and register."
+    },
+    {
+      "tag": "p",
+      "text": "Understanding the competition in your local audio market, whether audiences typically pay for audio products, and other behaviors related to audio will help you design a more successful membership program. Spanish-language, narrative podcast Radio Ambulante knows there are many Spanish learners among its listening audience – around 20 percent of responses to its annual audience survey come from non-native Spanish speakers. These audiences have led to the development of specific products, including a college curriculum based on Radio Ambulante episodes and a tool for individual Spanish learners, Lupa. While these are not specific perks of membership, mentioning them in sign-up campaigns shows how Radio Ambulante wants the membership community to be inclusive of all audiences and can also appeal to donors who want to support Lupa in particular."
+    },
+    {
+      "tag": "p",
+      "text": "Be clear what people are people becoming a member of. If you are an audio-focused newsroom but have multiple podcast strands, you will have to decide whether to design separate membership programs for each show or have one membership program for all listeners that supports your newsroom as a whole."
+    },
+    {
+      "tag": "p",
+      "text": "Separate membership programs for each podcast may be easier to communicate to potential members: they will be supporting a name that they know (both the host and the show). But if you plan to launch multiple audio products, you would have to create a membership program for each, convince existing members to support new launches, and potentially convince them to pay for multiple memberships."
+    },
+    {
+      "tag": "p",
+      "text": "The alternative approach is a membership program that supports the whole organization. In this scenario, it’s crucial to be clear about what members’ contributions will support. Volume, a podcast production company based in South Africa, tried to build a membership program on a show-by-show basis but kept changing its mind internally and flipping this idea with being a member of Volume overall. A Volume membership program could provide a built-in audience for new products, but people didn’t want to become a member of a production company, says co-founder Paul McNally. Typically audiences had a relationship with one host or podcast, such as the weekly news show, Nuusmakers."
+    },
+    {
+      "tag": "p",
+      "text": "Volume produces a number of podcasts for clients, which introduces additional complications for a membership strategy. Who gets the money from membership if your podcast is funded by a client (or sponsor)? What do members need to know about this relationship? Volume has since shuttered the version of its membership program that included multiple shows and supported Volume as a whole. McNally is developing a new model solely for Alibi, a separate investigative journalism podcast. Alibi is not sponsored."
+    },
+    {
+      "tag": "p",
+      "text": "Radio Ambulante used to make it clear in communications, including with members, that while it is owned by NPR, their operations are not sustained by NPR. They no longer feel the need to do this, believing that after 10 years it is clear to audiences that Radio Ambulante sustains itself and that their membership program, called Deambulantes, is a key part of that. Radio Ambulante also co-produces the weekly El Hilo podcast, which Deambulantes revenue helps support. The team is figuring out how to communicate that both podcast brands are connected to the same program."
+    },
+    {
+      "tag": "p",
+      "text": "Use the intimacy of audio to build community and make it a benefit. Audio builds the “illusion of intimacy” with your listeners, said Jorge Caraballo, freelance journalist, Nieman fellow and former growth editor at Radio Ambulante: “[A membership experience] can turn that real intimate connection into a conversation between you and the listener and the listener with other listeners.”"
+    },
+    {
+      "tag": "h3",
+      "text": "How Radio Ambulante has made community building routine"
+    },
+    {
+      "tag": "p",
+      "text": "By empowering their listeners to host listening clubs, Radio Ambulante extended the reach of its community."
+    },
+    {
+      "tag": "p",
+      "text": "Creating spaces, in person or virtually, that extend the listening activity or reflect the listening experience can be great benefits for audio newsrooms to offer. Portuguese investigative journalism podcast Fumaça has a 3,000-strong online community organized via Slack. It hosts an online book club, regular group discussions on news stories and “ask me anything” sessions every two months with journalists and experts. The team also uses the Slack channel to share reporting updates and callouts."
+    },
+    {
+      "tag": "p",
+      "text": "“It tears down the barrier between the newsroom and people who donate every month and creates communications between the members,” said Ricardo Esteves Ribeiro, Fumaça journalist and co-founder."
+    },
+    {
+      "tag": "p",
+      "text": "Even if your Fumaça membership expires, you remain part of the community. This recognizes the support these members have previously given but also retains that connection with Fumaça, including an open invitation to contribute financially in the future."
+    },
+    {
+      "tag": "p",
+      "text": "Initially, Fumaça had offered “obvious” benefits inspired by other independent media, like access to live interviews and scripts and documents used in its journalism. But its 2019 members survey showed that members valued interactions with the team and involvement with the journalistic process more highly as benefits. In the survey:"
+    },
+    {
+      "tag": "li",
+      "text": "117 people said they wanted to be involved in the interview process (suggesting people to interview and questions for the script)"
+    },
+    {
+      "tag": "li",
+      "text": "82 said they valued free access to live events (debates or interviews)"
+    },
+    {
+      "tag": "li",
+      "text": "80 said they wanted to have access to scripts and documents that Fumaça were using"
+    },
+    {
+      "tag": "li",
+      "text": "46 wanted merchandise"
+    },
+    {
+      "tag": "li",
+      "text": "45 wanted to have early access to episodes."
+    },
+    {
+      "tag": "p",
+      "text": "When their next season is released, Fumaça will offer live events, including member-only listening parties to discuss the first episode, and a visit to the newsroom, as member benefits."
+    },
+    {
+      "tag": "p",
+      "text": "Radio Ambulante offers a virtual coffee hour to its third-tier members, which is also the tier with the lowest cancellation rate."
+    },
+    {
+      "tag": "p",
+      "text": "When choosing benefits, consider what platforms people use and why and what types of requests you get that you don’t offer as part of the member experience."
+    },
+    {
+      "tag": "p",
+      "text": "WhatsApp is very popular in Latin America, where many of Radio Ambulante’s listeners live, so they’ve added a set of show-inspired WhatsApp stickers to their lowest tier of membership ($1-$36 a year). The hope is that members will use them to promote Deambulantes, as the membership scheme is known. As a bonus, these digital-only perks are much easier to distribute than physical swag."
+    },
+    {
+      "tag": "p",
+      "text": "The Radio Ambulante team also gets a lot of requests for advice from podcasters and journalists about audio production and storytelling. They’ve added a podcast guide as a member benefit for level 2 members paying $36-$99 a year. The top tier now includes an invitation to watch the Radio Ambulante or sister show El Hilo’s team in action as they work on a future episode. The newsroom has also added more benefits for teachers, who they know often use Radio Ambulante episodes in class."
+    },
+    {
+      "tag": "p",
+      "text": "Simplify payment. Unless you have your own app for distributing and listening to your audio journalism, you will be publishing your work on third-party platforms such as Spotify and Apple Podcasts. This means distributed audiences and different payment journeys. You’ll have to decide whether to accept payment on those platforms, making it easier for the listener to support you but harder to design a universal member experience, or to drive listeners from different platforms to one central place to register and pay."
+    },
+    {
+      "tag": "p",
+      "text": "“Collecting money from all these people in different ways is difficult. Having a simple, frictionless process for payment through one platform is the way to go,” said Volume’s Paul McNally. His plan for a different membership program for Alibi is to keep it simpler and have payment through the website and a Substack-hosted newsletter – both owned properties – at a set price of $5/month or $55 a year."
+    },
+    {
+      "tag": "p",
+      "text": "Radio Ambulante, a News Revenue Hub client, handles membership registration on the News Revenue Hub platform regardless of where a person listens to the podcast."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Show notes for a December 2022 Radio Ambulante episode hosted on Spotify. The first bullet point links to their membership program registration page, hosted by News Revenue Hub."
+    },
+    {
+      "tag": "p",
+      "text": "Guerrero said that the typical membership journey builds on a legacy habit of paying for a newspaper, which doesn’t exist for radio or audio. People aren’t used to paying for this medium in any form. This is one reason why Radio Ambulante allows people to become members with just a one-off donation as well as recurring payments."
+    },
+    {
+      "tag": "p",
+      "text": "This section was authored by MPP researcher Laura Oliver."
+    },
+    {
+      "tag": "p",
+      "text": "When the Membership Guide was published in 2020, we were at the very beginning of the wave of journalists launching solo ventures. WTF Just Happened Today was one of the only such independents out there that had chosen a membership path, so there was a limited number of ventures for the research team to study. Since the initial launch, MPP has watched membership experimentation among solo journalists or independent teams evolve with great interest and now feels there are enough examples for the research team to offer insights."
+    },
+    {
+      "tag": "p",
+      "text": "In this section, we refer to independent journalists or ventures by which we mean journalists running their own editorial product, such as a newsletter, podcast, social news channel or website, not as part of a larger media organization. These journalists are sometimes referred to as creators, solo journalists, or journalist creators."
+    },
+    {
+      "tag": "p",
+      "text": "Most of the Membership Guide’s advice on designing a membership program applies to independent journalists as well, so in this section we will focus on areas where there is either additional or different advice for independent journalists specifically."
+    },
+    {
+      "tag": "p",
+      "text": "Membership can offer these independent, often one-person, ventures an intimate relationship with their audiences. Members can see the work, features and mission that their contributions support in an extremely direct way, often helping to shape it through regular feedback and audience research. This sense of partnership, where creators and their work are accountable or informed by members, can create an experimental space for both in terms of membership strategy and product features."
+    },
+    {
+      "tag": "p",
+      "text": "What’s more, given the low operating costs, a solo venture can achieve sustainability by converting a relatively small number of audience members to a membership program. The key is to get your messaging and price points right, according to journalists we spoke to who run independent ventures, including:"
+    },
+    {
+      "tag": "li",
+      "text": "Two newsletter-based ventures with multiple editions and membership tiers"
+    },
+    {
+      "tag": "li",
+      "text": "A website and newsletter-based venture supported by members"
+    },
+    {
+      "tag": "li",
+      "text": "A newsletter with a subscription rather than a membership model"
+    },
+    {
+      "tag": "p",
+      "text": "Based on these interviews and additional research, MPP has the following recommendations."
+    },
+    {
+      "tag": "p",
+      "text": "Start charging early. It can be hard for an independent journalist to believe that people will pay to support your journalism and imagine that process. You are both asking the audience to validate your idea and to part with money, but those we spoke to suggest you turn on a paid option or basic version of a membership program early in the life of your venture. This allows early supporters and loyal audience members who have followed you from other organizations to support you from the get-go."
+    },
+    {
+      "tag": "p",
+      "text": "Irene Caselli runs The First 1,000 Days project, which covers early childhood, reproductive rights, and caregivers. She previously covered the beat for the now-defunct global news organization The Correspondent, as part of which she ran a newsletter. When The Correspondent shut down in 2021 she had approximately 1,000 subscribers."
+    },
+    {
+      "tag": "p",
+      "text": "In her final newsletter for The Correspondent, she let her subscribers know about her new project. Four hundred immediately signed up for her new newsletter; more than 130 became supporters, even before she had designed any sort of membership program. Of course, not everyone striking out on their own will be allowed to make this kind of ask – many ventures are unlikely to let you use their platforms to ask for people to follow you elsewhere. But you should use whatever channels you do have to make the ask and you should be set up from the beginning to receive and ask for financial support in some form."
+    },
+    {
+      "tag": "p",
+      "text": "Asking early will also help cover the costs of experimentation as you refine your product and conduct audience research. Think about what the conversion from a free reader or listener to a member will look like, said Priti Patnaik, founder of the independent health policy newsletter Geneva Health Files, which has a subscription model. Introduce the transition to your non-paying audience gently. Before introducing a paid subscription tier in March 2021, which would limit the volume and type of content readers could access for free, Patnaik began mentioning the change months earlier and surveyed readers. She told her audience that at least half the content would be behind a paywall to give them notice and gently asked them to sign up to pay. Patnaik targeted and reached a 15 percent conversion rate of non-paying subscribers to paying subscribers as a guide."
+    },
+    {
+      "tag": "p",
+      "text": "You can find more guidance on conversion benchmarks and setting your conversion goals here."
+    },
+    {
+      "tag": "p",
+      "text": "Don’t undervalue your work by setting the initial price for membership too low. This can lead to an unsustainable pricing model and force you to raise prices abruptly in the future. Patreon, for example, dissuades creators from going below $5/month."
+    },
+    {
+      "tag": "p",
+      "text": "A straightforward approach to pricing is to work backwards. Factoring in the cost of your tools and time, what would make your venture sustainable? How many people would you need paying X amount for this to work? As an example, you can see WTF Just Happened Today founder Matt Kiser’s monthly costs in the Membership Guide case study."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "p",
+      "text": "Emilio Doménech’s newsletter La Wikly, which covers the Americas for a Spanish-language audience, has around 11,500 people on a free tier and between 300 and 400 people paying €5 a month. He offers two months free to people who pay annually. To decide the price points, he looked at what other newsletters were charging for subscriptions and membership. The Entrepreneurial Journalism Creators Program at the City University of New York shared a useful comparison of pricing strategies and this ConvertKit analysis of thousands of newsletter pricing models, for example (CUNY runs a 100-day boot camp for independent creators)."
+    },
+    {
+      "tag": "p",
+      "text": "A special rate for founding members might sound appealing, especially if you’re nervous about asking for too much money. But it’s hard to raise rates on people as your product and costs grow. Patnaik advocates “pricing aggressively”. “It is better to do that and offer discounts than starting low and increasing it later,” she said."
+    },
+    {
+      "tag": "p",
+      "text": "But even Patnaik has raised her prices over time. Your product and what you offer will evolve and that might be a cue that your pricing structure should too. Patnaik of Geneva Health Files has revised her subscription pricing twice in 2.5 years to reflect new editorial features. She has typically announced changes in January: it fits with New Year resolutions and especially for some existing subscribers who want visibility over plans and spending in the coming year. She will start mentioning any changes as part of end-of-year content too."
+    },
+    {
+      "tag": "p",
+      "text": "Get more advice on pricing in the Membership Guide’s section on making a business case for membership (“Jump to “How should we set prices for our membership program?”)"
+    },
+    {
+      "tag": "p",
+      "text": "Be realistic about how many benefits you can deliver. Every membership benefit you promise is another draw on your time and resources as a solo creator, so don’t overdo it. Consider focusing on benefits that will help develop your product or are a natural extension of your work."
+    },
+    {
+      "tag": "p",
+      "text": "La Wikly’s first paid tier of membership at €5/month includes news reports and columns covering the Americas, but also access to private channels in its community space on Discord, where members can meet to “discuss, play and study.” Through these Discord channels, members share LaWikly subjects they enjoy the most, send questions for future interviewees and give perspectives from different parts of the world that inform LaWikly’s journalism. “We have people from Colombia and Argentina who are very knowledgable about their politics and they have been very helpful sometimes teaching us about how they view their day-to-day politics,” said Doménech."
+    },
+    {
+      "tag": "p",
+      "text": "In the UK, Black Ballad (which began as a two-person venture) created a member-only Slack workspace when they launched membership in 2018. The idea was to create a safe place where their readers could converse freely and semi-privately. That Slack group offers a steady stream of feedback on what their members care about and has become a source of story ideas as well as a place staff can test out story ideas."
+    },
+    {
+      "tag": "p",
+      "text": "Kirsten Han, the founder of We, The Citizens, a newsletter covering Singapore from a human rights-based perspective, provides extra midweek content for paying members. These are often pieces with a local angle that she would have previously pitched elsewhere with a more international focus. Sometimes they’re opinion pieces co-published with another outlet. With more time, she would like to do more special reports for higher-tier members, but analysis pieces are more efficient when time is tight."
+    },
+    {
+      "tag": "p",
+      "text": "But you don’t have to offer member-only content – especially if it doesn’t align with your philosophy about access to journalism. Caselli launched The First 1,000 Days with a paywall, but she dropped the paywall after a year because it didn’t fit with her idea of membership. She wanted to focus on building a community and fostering conversations between members and experts, she said, and a paywall felt like it got in the way of that."
+    },
+    {
+      "tag": "p",
+      "text": "But before dropping the paywall, she surveyed her paying members about whether they would still pay. She got about 100 replies and just two people said they wanted her to keep much of her content member-only. This corresponds with something that MPP has heard over and over again: supporting the work to keep it accessible to everyone, not just those who can afford to pay, can be a “benefit” in and of itself for those who believe in your work."
+    },
+    {
+      "tag": "p",
+      "text": "The First 1,000 Days has three tiers of membership: member, member and friend, and founding member. Everyone on the newsletter list receives a weekly email from Caselli, but paying members can leave comments and their newsletter may include a summary of member discussions too. The second tier at ~$6.30/month also includes an additional membership that can be gifted and the third tier at ~$8.41/month offers a monthly Zoom call with Caselli to discuss the direction of her beat."
+    },
+    {
+      "tag": "p",
+      "text": "MPP will also reiterate some advice that applies to all member-driven ventures: it is likely that only a small number of your members will take full advantage of your benefits. Many will become members just to support your work. As long as you are retaining them, the fact that many aren’t making use of your benefits is not a cause for concern. If you are investing time and resources to offer a benefit that few members are using but you are not struggling to retain members, you can probably stop offering that benefit without any issues. (Jump to “How do we decide when to change what we offer members?”; Jump to “Retaining members”)"
+    },
+    {
+      "tag": "p",
+      "text": "Invite your members to review offers and editorial plans. Continuing with the advice to offer benefits that can help develop your product, a common benefit is to bring members into your entrepreneurial process. Caselli sends an annual member survey, the results of which have helped her make editorial plans for the coming year, including the decision to drop a weekly section that members didn’t like as much as other weekly offerings. “It helped me clarify where to put my energy and saved me a bunch of time,” she said."
+    },
+    {
+      "tag": "p",
+      "text": "Radical transparency is a benefit too. A window into how you work, your venture’s finances and workflows can be a benefit in and of itself. In his annual report, Tanmoy Goswami, who runs the member-funded mental health storytelling platform Sanity by Tanmoy, breaks down Sanity’s finances, plans for the future, and what didn’t work out. It’s a great way to show members exactly how their contributions are used on a granular basis and what their support means to the independent journalist. Goswami shows how member support affects everything from what he produces to his working patterns and the future of the platform. He includes thanks to members and direct calls for support: “Help me out by picking up a monthly or annual subscription?”"
+    },
+    {
+      "tag": "p",
+      "text": "Goswami has also drawn up a set of 16 promises between himself and his readers. This kind of mission statement and accountability is tied directly to the journalist behind the venture and can be a motivation for membership. Again, there are direct calls for support in this set of promises."
+    },
+    {
+      "tag": "p",
+      "text": "You may be the main benefit. You, your approach to the topic, your personality, and your style of journalism will play a part in why members want to support a solo journalism project. Han said her members don’t necessarily care about the benefits on offer: “There’s a lack of alternative media in Singapore so there’s a hunger for another voice. The motivation for their subscription is not tied to the product but rather it’s about supporting me [and this work] generally.”"
+    },
+    {
+      "tag": "p",
+      "text": "Han volunteers as an anti-death penalty activist. During a period of many executions in Singapore in 2022, she was busy supporting the families of death row prisoners and working on urgent campaigns and was not always able to keep up with her regular newsletter schedule. More members wrote in expressing concern for her rather than asking about schedule disruptions. The relationship with members can feel like a friendship rather than a customer-product relationship, she said."
+    },
+    {
+      "tag": "p",
+      "text": "To lean into this and make it a benefit of membership, she is testing a Ghost feature that allows emails to be sent to members without appearing on her website. These will take the form of more informal and personal updates on her work, including extensions of We, The Citizens’ main products, such as a book she is writing on Singapore politics and civil society."
+    },
+    {
+      "tag": "p",
+      "text": "But access to you as a member benefit is a big draw on your time. For the first year, Caselli offered founding members (around 20 people in her higher value tier) a monthly Zoom meeting with her. The conversations were interesting and helped foster a sense of community, but after a few members dropped out of the higher tier and fewer people started showing up to the meetings, they became less useful for Irene and less appealing to members. She now offers a Calendly link to her founding membership tier, which can use it to book one-on-one meetings with her. A few do every month."
+    },
+    {
+      "tag": "p",
+      "text": "For newsrooms in challenging socioeconomic situations, diaspora audiences – and, often, their higher purchasing power – can present a membership opportunity. MPP has been asked often what sort of membership opportunity there is among diaspora audiences, and what it takes to leverage that opportunity."
+    },
+    {
+      "tag": "p",
+      "text": "The research team is confident there is a membership opportunity here, but experimentation with diaspora members is still in its infancy. The team could only gather meaningful insights from a couple of people and newsrooms, among them Guatemalan journalist Claudia Cruz, a former fellow at the Reuters Institute for Journalism, who studied how newsrooms could capitalize on their diaspora audiences for additional revenue."
+    },
+    {
+      "tag": "p",
+      "text": "Peter Erdélyi, director of 444 in Hungary, told Cruz that diaspora readers are among their most responsive to calls for support. “Whenever we have a call to action, it is not just about money. They tend to be super active and they care about Hungarian public life and the Hungarian media and us in some ways more, and they want to do more,” he said."
+    },
+    {
+      "tag": "li",
+      "text": "Further reading: “A Central American audience opportunity: the U.S. diaspora”"
+    },
+    {
+      "tag": "p",
+      "text": "Evaluate the size of your diaspora opportunity. You’ll want to look at your analytics, specifically how many readers are outside your country and how loyal they are. Cruz lays out the segmentation process in more detail in her paper."
+    },
+    {
+      "tag": "li",
+      "text": "Between 15 and 20 percent of readers of South India’s The News Minute and between 10 and 12 percent of their members are diaspora."
+    },
+    {
+      "tag": "li",
+      "text": "In 2022, 444 said that diaspora Hungarians represent 16 percent of its membership."
+    },
+    {
+      "tag": "p",
+      "text": "To reach more of these diaspora readers, 444 has turned to geotargeted and language-targeted Facebook ad campaigns, as well as lookalike audiences. This, Erdélyi said, is the biggest effort they make to specifically attract readers in the diaspora."
+    },
+    {
+      "tag": "p",
+      "text": "Navin Sigamany, who leads membership for The News Minute, believes that the diaspora offers much more of an opportunity than The News Minute has yet been able to explore. He said diaspora organizations in the U.S. would have been an excellent focus for an awareness campaign or member drive, promoting The News Minute through its strong local relationships. Such organizations might also have advice on membership pitches that will resonate. But building a relationship with each individual organization is time intensive and they ultimately decided not to invest in that strategy at this stage."
+    },
+    {
+      "tag": "p",
+      "text": "Diaspora readers likely have different information needs. Cruz notes that publishers she spoke to had to challenge their assumptions about what immigrants in the U.S. wanted to hear about. Nostalgia isn’t enough, said José Luis Sanz, the former editor-in-chief of El Faro in El Salvador, who Cruz interviewed."
+    },
+    {
+      "tag": "blockquote",
+      "text": "“Someone who works 10-14 hours a day wants to listen to a radio show that will tell you how the [national football team] performed, play a cumbia that you miss, reminds you of a recipe, tell you if something important happened back home – for example, a landslide in Guatemala – and whether or not the immigration law is going to be approved here, or if schools in DC are going to be closed tomorrow.” Sanz also warned that catering to the diaspora audience requires understanding that they live in a very different media ecosystem. “In other countries you differentiate yourself by breaking the silence. [Here] there is a lot of information [to compete against].”"
+    },
+    {
+      "tag": "p",
+      "text": "“Someone who works 10-14 hours a day wants to listen to a radio show that will tell you how the [national football team] performed, play a cumbia that you miss, reminds you of a recipe, tell you if something important happened back home – for example, a landslide in Guatemala – and whether or not the immigration law is going to be approved here, or if schools in DC are going to be closed tomorrow.” Sanz also warned that catering to the diaspora audience requires understanding that they live in a very different media ecosystem. “In other countries you differentiate yourself by breaking the silence. [Here] there is a lot of information [to compete against].”"
+    },
+    {
+      "tag": "p",
+      "text": "Cruz’s report has several suggestions in the conclusion for editorial products tailored to the diaspora that can help develop loyal diaspora readers. This is an area where MPP recommends further testing, possibly with a low-lift weekly newsletter rounding up news that diaspora readers need to know, before making any strategic changes or committing substantial resources. Neither The News Minute nor 444 have received requests for content tailored to the diaspora."
+    },
+    {
+      "tag": "p",
+      "text": "Don’t design special benefits for them. The News Minute, a digital newsroom serving South India, realized just how big their diaspora audience was in 2019 when torrential rains in Chennai caused catastrophic flooding. Suddenly, readers far from South India were asking what they could do to help."
+    },
+    {
+      "tag": "p",
+      "text": "When The News Minute launched their membership program in April 2020, it included a tier for Indians living outside the country, known as Non-Resident Indians (NRIs). This “tier” had two key benefits: the option to pay monthly (Indians in India could only pay annually or twice a year) and access to a “help desk” that would assist them with navigating bureaucracy in India from afar, such as finding a doctor for an aging parent."
+    },
+    {
+      "tag": "p",
+      "text": "More than two years after launching this membership tier, fewer than 10 people have accessed the help desk and most diaspora members have not opted for the monthly payment option, Sigamany said (they haven’t shut down the help desk, although they’re not trying to stoke interest in it either). These data points, combined with surveys and interviews, has taught The News Minute that special benefits for the diaspora aren’t worth the effort."
+    },
+    {
+      "tag": "p",
+      "text": "“Every time we tried to do something that was focused on the diaspora, we didn’t get the interest we thought we would get,” he said. “We spoke to dozens of diaspora folks and we got a lot of different viewpoints but then we realized what keeps them coming back is the stuff we’re doing already.”"
+    },
+    {
+      "tag": "p",
+      "text": "His advice: “Make it easy for them to consume, easy to contribute, easy to be part of the community.”"
+    },
+    {
+      "tag": "p",
+      "text": "Easy to contribute is key: There are often more flexible payment processors available to diaspora audience members than those in the home country. For example, in India very few companies can set up recurring payments with any of the local payment processors due to Indian bank regulations, Sigamany said. For them it is worthwhile to offer Non-Resident Indians a Stripe-based payment processor that allows them to set up recurring payments."
+    },
+    {
+      "tag": "h3",
+      "text": "How The News Minute maintains crowdfunding and membership side-by-side"
+    },
+    {
+      "tag": "p",
+      "text": "Crowdfunding activates readers who have no interest in the membership experience, but want to support specific projects."
+    },
+    {
+      "tag": "p",
+      "text": "Erdélyi said 444 members haven’t expressed much interest in benefits catering to diaspora audiences."
+    },
+    {
+      "tag": "p",
+      "text": "“Be mindful that these people want to connect to the motherland, to the places where they grew up. You have to offer them a sense of connection. In my experience, they are not looking for any specific service,” he said."
+    },
+    {
+      "tag": "p",
+      "text": "But they do notice – and care – when they’re being left out because they live outside the country, he said. Their diaspora members often complain about not receiving 444’s popular cultural magazine, which is too expensive for 444 to ship overseas. He estimates that at least 15 percent of their customer service requests that come in around the same time as a magazine release come from people outside Hungary complaining about not receiving it."
+    },
+    {
+      "tag": "p",
+      "text": "Lean into the guilt. People who leave their home country for places with better prospects often feel a sense of responsibility. If you can frame supporting your newsroom as a way to support the country they left behind, you’ll strike a nerve."
+    },
+    {
+      "tag": "p",
+      "text": "“It’s that idea of guilt. I’m responsible for the wellbeing of my country,” Erdélyi told MPP in an interview."
+    },
+    {
+      "tag": "p",
+      "text": "Many members of member-driven movements outside news told the MPP research team in 2018 that they became members of organizations because they feel something fundamental in the world and/or in themselves is broken. In membership they seek a way to feel part of a solution. That’s how 444 talks about it too: support for their independent newsroom is one way a Hungarian living outside the country can do something to restore what feels broken."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How new offerings got Bridge Michigan past a membership plateau"
+    },
+    {
+      "tag": "p",
+      "text": "Growing and retaining members isn’t something that happens passively, especially when a membership program gets past its buzzy first years."
+    },
+    {
+      "tag": "h3",
+      "text": "How The News Minute maintains crowdfunding and membership side-by-side"
+    },
+    {
+      "tag": "p",
+      "text": "Crowdfunding activates readers who have no interest in the membership experience, but want to support specific projects."
+    },
+    {
+      "tag": "h3",
+      "text": "How Página/12 built a community in the comments"
+    },
+    {
+      "tag": "p",
+      "text": "Página/12 leveraged an intellectually engaged readership to build a membership program built on comments."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter approaches retention after losing half its members"
+    },
+    {
+      "tag": "p",
+      "text": "In its second year, Krautreporter implemented a paywall, prioritized annual recurring payments, and allowed sharing."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent refreshed its member insights"
+    },
+    {
+      "tag": "p",
+      "text": "Four years after launching their membership program, De Correspondent sat down with members to find out what they thought."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Narwhal adopted a test-and-learn mindset"
+    },
+    {
+      "tag": "p",
+      "text": "The Narwhal has developed a rhythm of running small tests to optimize every stage of its audience funnel."
+    },
+    {
+      "tag": "h3",
+      "text": "How Honolulu Civil Beat rebranded itself to be “friendlier”"
+    },
+    {
+      "tag": "p",
+      "text": "Positioning itself as a disruptive outsider was not a good fit for an organization about to launch membership."
+    },
+    {
+      "tag": "h3",
+      "text": "How Frontier brought a membership model to Myanmar"
+    },
+    {
+      "tag": "p",
+      "text": "They began by identifying five professions who needed the journalism Frontier Myanmar produces."
+    },
+    {
+      "tag": "h3",
+      "text": "How cloth masks powered VTDigger’s spring 2020 member drive"
+    },
+    {
+      "tag": "p",
+      "text": "Coronavirus reached the U.S. as VTDigger approached their spring 2020 membership drive. They knew swag was out of the question."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick designed a pay-what-you-can model"
+    },
+    {
+      "tag": "p",
+      "text": "A well-targeted benefit nudges those who can afford to contribute more to do so, while keeping membership accessible for all."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Launching Membership"
+    }
+  ]
+}

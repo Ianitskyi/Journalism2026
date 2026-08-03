@@ -1,0 +1,959 @@
+{
+  "url": "https://membershipguide.org/handbook/getting-started-with-membership/adopting-a-product-mindset/how-do-we-prioritize-ideas",
+  "title": "How do we prioritize ideas? | The Membership Guide",
+  "h1": "Adopting a Product Mindset",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "There is no simple, one-size-fits-all formula for membership. Membership takes time, experimentation, and iteration to get right – and even the “right” answer will change over time. This is why Membership Puzzle Project says the basic unit of membership practice is the “try.” Make an educated guess about what will work with members. Revise if you need to, or quit if it’s not working. The trick is not to invest too much in any one try until you know you have something.This is why product thinking is a critical skill for newsrooms with membership. Product thinking is a mindset that emphasizes data-based decision making over instinct, and values testable insights over closed processes. It’s based on digital product management, a discipline that is widespread in software development. Product thinking helps a newsroom create collaboration across teams and harness the potential of interdisciplinary partnerships.And because a membership program cuts across editorial, tech, revenue, and community, it requires product management, a cross-functional discipline that is focused on strategically developing, launching, improving and sustaining an organization’s products.  (Here is a helpful breakdown of the difference between product and project management.)  Even some small organizational experience with testing and learning from potential members will massively help your nascent membership efforts. A product can be anything a news organization creates to solve a problem or meet a need. An effective product serves a well-defined audience, and is often pegged to a specific way of earning revenue. A product can be digital — for example, an app or a website feature — or it can be physical — for example, an event series. A product can serve external constituencies (like a newsletter) or it can be something that’s created to serve your staff (your newsroom’s CMS, for example, is one of your internal products).Think about your membership program as a product or, as it expands in complexity, potentially as a series of products. Product thinking for membership centers around a core cycle of: • Setting concrete goals• Generating creative ideas• Centering your members’ needs • Conducting fast tests• Assessing the results and iterating Like any product, your membership strategy thrives when the entire organization, from the newsroom to the revenue team, understands and supports its purpose. And by approaching your membership program like a product you can support the needs of your business and empower your existing team to do even more. That includes empowering your team to celebrate and learn from your failures. By treating failure as an opportunity to learn, you’re already putting your organization on the path to product thinking.In this section, we’ll review key product thinking tools and workflows that align with these essential product thinking values and that you can adopt regardless of the size or age of your news organization. At the end of the section, we’ll address whether you need a formal product team and discuss some common barriers to product thinking in news organizations."
+    },
+    {
+      "tag": "p",
+      "text": "You should have realistic, ambitious, measurable goals for any product your organization makes or maintains, and no product development process should begin before you’ve set goals."
+    },
+    {
+      "tag": "p",
+      "text": "Goals give each product a direction. Tasks are what needs to be done so that the goal is reached. Whether you’re launching a membership program, iterating on an existing membership program, or working to adopt more memberful routines in your newsroom, if you get started without setting goals for that effort, you’re likely to meander."
+    },
+    {
+      "tag": "p",
+      "text": "It’s important for goals to be both realistic and ambitious because if they’re too easy, you’ll keep reaching them but likely not doing very much to help your news organization thrive. If they’re too ambitious, you’ll never reach them and that will be bad for morale. If they’re not measurable, you’ll never be able to figure out if you’ve achieved them."
+    },
+    {
+      "tag": "p",
+      "text": "Here is some more advice on goal-setting:"
+    },
+    {
+      "tag": "p",
+      "text": "Decide on who can help. As you start setting your goals, think about who to involve in the goal-setting process. It might be helpful to analyze historical data — or consult with your analytics team, if you have one — to inform your goals. It might be helpful to talk to leadership to figure out if there are revenue targets you need to hit for sustainability purposes. And if your goals require editorial effort, you might want to talk with your journalists to make sure the goals resonate for them."
+    },
+    {
+      "tag": "p",
+      "text": "Decide on a standard format for goals. Using a standard framework is planning for the future: you’ll be able to use the same format again and again, meaning that you’ll save time but also that you’ll be able to easily look at all your products at a glance and figure out which ones are performing the best."
+    },
+    {
+      "tag": "p",
+      "text": "A common strategy is SMARTIE goals. The Management Center, a nonprofit training organization, created a useful worksheet to help groups craft goals. Here’s how they define each element in a SMARTIE goal:"
+    },
+    {
+      "tag": "p",
+      "text": "Strategic – The goal reflects an important dimension of what your organization seeks to accomplish (programmatic or capacity-building priorities)."
+    },
+    {
+      "tag": "p",
+      "text": "Measurable – Reasonable people can agree on a few standards to determine whether the goal has been met (by numbers or defined qualities)."
+    },
+    {
+      "tag": "p",
+      "text": "Ambitious – It’s challenging enough that achievement would mean significant progress; a “stretch” for the organization."
+    },
+    {
+      "tag": "p",
+      "text": "Realistic – It’s not so challenging that there’s almost no chance you’ll succeed, thereby guaranteeing failure. (For example, if you’re a small local news organization serving a region of 3 million, aiming to sign up 1 million digital subscribers in a single year would likely be an unrealistic goal)"
+    },
+    {
+      "tag": "p",
+      "text": "Time-bound – It includes a clear deadline."
+    },
+    {
+      "tag": "p",
+      "text": "Inclusive – It brings traditionally marginalized people—particularly those most impacted—into processes, activities, and decision/policy-making in a way that shares power. Just like with other areas of your goal, you should include standards by which to measure whether or not your initiative is actually inclusive."
+    },
+    {
+      "tag": "p",
+      "text": "Equitable – It includes an element of fairness or justice that seeks to address systemic injustice, inequity, or oppression."
+    },
+    {
+      "tag": "p",
+      "text": "Let your goals determine the metrics you focus on. Once you’ve chosen the goal you want to influence, then you can decide which metrics to use. For example, if your top organizational goals are to inspire loyalty and increase member retention by 5 percent, identify which key metrics tie back to loyalty and retention, and track those metrics carefully over time. These could be metrics such as:"
+    },
+    {
+      "tag": "li",
+      "text": "Repeat donations"
+    },
+    {
+      "tag": "li",
+      "text": "Repeat website visitation"
+    },
+    {
+      "tag": "li",
+      "text": "Net Promoter Score"
+    },
+    {
+      "tag": "li",
+      "text": "The amount of time visitors spend with your stories, or how many stories they read."
+    },
+    {
+      "tag": "p",
+      "text": "Focus on outcomes, not activities. Your goals should be based on outcomes (what you hope to accomplish), rather than activities (what you hope to do). Here’s an example from Douglas K. Smith, Quentin Hope, and Tim Griggs of the Knight-Lenfest Newsroom Initiative, also known as Table Stakes:"
+    },
+    {
+      "tag": "li",
+      "text": "Activity-based goal: By December 15th, we will train all reporters in how to use headlines to drive traffic."
+    },
+    {
+      "tag": "li",
+      "text": "Outcome-based goal: By December 15th, all reporters will have used headlines to increase overall traffic by a minimum of 10%."
+    },
+    {
+      "tag": "p",
+      "text": "“We will train all reporters” is an activity, not an outcome. When you articulate goals in terms of activities, you trap yourselves in a self-fulfilling prophecy. In this example, imagine the conversation after December 15th:"
+    },
+    {
+      "tag": "li",
+      "text": "Manager: “How did we do at the goal?”"
+    },
+    {
+      "tag": "li",
+      "text": "Staff: “We did great! We trained all reporters in how to use headlines.”"
+    },
+    {
+      "tag": "p",
+      "text": "But, no one knows if the training made any difference."
+    },
+    {
+      "tag": "p",
+      "text": "When Chalkbeat was preparing to launch its membership program, it had a clear sense of what outcomes would indicate that membership was “working” for them."
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat defined and measured membership success"
+    },
+    {
+      "tag": "p",
+      "text": "They started with four hypotheses about what implementing membership could do for Chalkbeat."
+    },
+    {
+      "tag": "p",
+      "text": "Two other common frameworks for goal-setting are key performance indicators (KPIs) and objectives and key results (OKRs). Setting OKRs and KPIs is a more complex goal-setting framework than the SMARTIE framework outlined above, and MPP recommends you begin with the latter if you’re new to setting organizational goals."
+    },
+    {
+      "tag": "p",
+      "text": "KPIs are targeted, outcome-driven metrics that you use to measure the success of an organization, team, or individual. A lowered monthly churn rate is an example of a KPI for a newsroom that has identified stronger member retention as a goal."
+    },
+    {
+      "tag": "p",
+      "text": "OKRs define specific goals and the measurements used to track their progress. They are meant to be aspirational. A team’s objective might be to better explain the value of their membership program, while the key result might be a reduction of the churn rate. (It can be hard to parse the difference between a KPI and an OKR. Here’s an additional explanation.)"
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick’s membership team uses OKRs to set goals for their marketing efforts. One objective is to grow the number of active members, both through acquiring new members and retaining existing ones. Three key results are reaching 20,000 members by the end of 2020, keeping monthly churn to less than 5 percent, and achieving a Net Promoter Score of 8/10 on the membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Jump to “Developing membership metrics” for more offers detailed advice on identifying objectives for your membership strategy."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "p",
+      "text": "Good ideas can come from anywhere, and product thinking enables news organizations to solicit, support, and enact ideas from their key stakeholders — both internally (with your team) and externally (with your member community). Whether you’re trying to design your membership program or think about how to improve the membership experience for an existing program, this is how MPP recommends you come up with ideas for new membership products."
+    },
+    {
+      "tag": "h3",
+      "text": "Think about members’ jobs to be done"
+    },
+    {
+      "tag": "p",
+      "text": "Product thinking isn’t just about gathering data – it’s also about understanding the data you have. Part of centering the voice of the member is understanding who your members are and what their daily routines look like. When looking at your data, keep an eye out for where members have unmet needs or frequent pain points. The late Harvard Business School professor Clay Christensen, a pioneer who defined the theory of disruptive innovation, referred to this approach as jobs to be done. (For advice on using a jobs to be done framework to craft your value proposition, jump to “Discovering our value proposition.”)"
+    },
+    {
+      "tag": "p",
+      "text": "By applying the jobs to be done framework to your own member data, you’ll likely realize that your organization isn’t just competing with other news organizations. You’re competing for time and attention with social media, busy calendars, and even phone calls. The jobs to be done framework offers a way to process and act upon this knowledge."
+    },
+    {
+      "tag": "p",
+      "text": "For example, Krautreporter in Germany prides itself on its engagement-focused approach to journalism that emphasizes context, not breaking news. But as it interviewed members in late 2019 and examined its metrics, the team came to understand that members often canceled their membership because they didn’t have enough time to engage with their coverage. Krautreporter described this as “time expensive.”"
+    },
+    {
+      "tag": "p",
+      "text": "As a result, Krautreporter set out to make it easier for its members to fit the site into their lives. It reworked its morning newsletter to feature aggregated major news headlines along with Krautreporter’s more in-depth reporting so readers can get both in one place. It plans to continue to place greater emphasis on its daily newsletter product and it’s also developing new features on its website that will show readers how long it should take them to finish a story. The organization is also thinking about grouping stories by length, and continuing to look into developing more finite news experiences so readers can feel like they’ve caught up to the news."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter approaches retention after losing half its members"
+    },
+    {
+      "tag": "p",
+      "text": "In its second year, Krautreporter implemented a paywall, prioritized annual recurring payments, and allowed sharing."
+    },
+    {
+      "tag": "h3",
+      "text": "Brainstorm with your audience members"
+    },
+    {
+      "tag": "p",
+      "text": "Product thinking focuses on centering the voice of your audience member, which is a critical  component for membership success. While many organizations only brainstorm internally, MPP recommends making time to involve your audience members sometime, too. It’s a powerful way to become member centric. These types of brainstorms invite a cohort of your member base – or your potential member base – to work with you to find solutions to common problems."
+    },
+    {
+      "tag": "p",
+      "text": "These types of sessions are most useful when you organize them around specific questions or feedback you’re looking to receive. The Membership Puzzle Project created a “brainstorm-in-a-box” toolkit that offers more than 30 “how-might-we” questions that you could answer with your members."
+    },
+    {
+      "tag": "p",
+      "text": "In these sessions, you are there only as a facilitator. Make sure that you’re not doing the majority of the talking. Create an environment that’s relaxed and open. Have people sit in small groups and talk freely."
+    },
+    {
+      "tag": "p",
+      "text": "This guide is being written during the coronavirus pandemic, when in-person focus groups are discouraged, but sometimes focus groups also aren’t viable because of geography or accessibility. The UX Alliance offers guidance on hosting online focus groups."
+    },
+    {
+      "tag": "p",
+      "text": "Here are a few exercises you can do in a joint brainstorm on your membership program:"
+    },
+    {
+      "tag": "li",
+      "text": "Ask participants to fill out questionnaires and then discuss their answers together. This gives people a chance to privately reflect before sharing with the group – good for preventing groupthink and for those who prefer to gather their thoughts before speaking."
+    },
+    {
+      "tag": "li",
+      "text": "Ask participants to talk in a small group about what other memberships they have and what they get out of them, then have a representative present their conversation to the group. They might be more forthcoming talking to each other than to you."
+    },
+    {
+      "tag": "li",
+      "text": "Ask participants to “draw” the things they’d most like in a membership program. This type of challenge can feel intimidating, but it can actually unlock unexpected creativity."
+    },
+    {
+      "tag": "p",
+      "text": "Ask their permission to record the results so you can return to them later on. You can also plug these exercises into MPP’s step-by-step process for designing a membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Your work with your members doesn’t end with a single brainstorm. Ideally, you should find a way to keep at least a subset of your members constantly engaged in your process. In the UK, Black Ballad created a member-only Slack community as a space where members could connect with one another. It’s also a way to get regular feedback from members."
+    },
+    {
+      "tag": "h3",
+      "text": "How Black Ballad built a safe space online for Black women"
+    },
+    {
+      "tag": "p",
+      "text": "For Black Ballad, the community is the end goal - and that's evident in how they think about everything."
+    },
+    {
+      "tag": "h3",
+      "text": "Brainstorm with your team"
+    },
+    {
+      "tag": "p",
+      "text": "The people who work with you may have great ideas for what your organization should be working on. You just have to find the right way to ask them. A great way to do this is to set up a structured intake process."
+    },
+    {
+      "tag": "p",
+      "text": "Create a Trello board, a Google sheet, or a Google Form that’s open to your entire organization, and invite people to submit their ideas via a pitch questionnaire that addresses questions such as “Who will do this?” Communicate that you’ll review the idea board at regular intervals, and then follow through on that promise. Newsroom product managers Emma Carew Grovum, Shannan Bowen, and Becca Aaronson put together this list of potential questions to put into your pitch questionnaire."
+    },
+    {
+      "tag": "p",
+      "text": "If your organization is small, a formal submission process might feel intimidating. Host a conversation focused on generating ideas. By creating a gathering, you have a chance to ask clarifying questions and offer feedback in real time. Use this list of pitch questions as a guide. In this conversation format, you can also offer any relevant audience data as the pitch is developing. You can host these types of conversational sessions as a one-off brainstorm, or as a regular meeting."
+    },
+    {
+      "tag": "p",
+      "text": "Chances are your newsroom has more ideas and goals than you can feasibly act on. Prioritizing which to work on first or to throw away is a critical component of product thinking."
+    },
+    {
+      "tag": "p",
+      "text": "When product managers talk about priorities, they’re also talking about trade-offs. You don’t have endless time or resources, so working on one thing often means not working on something else."
+    },
+    {
+      "tag": "p",
+      "text": "A lot of times, journalists make decisions about what to work on based on gut instinct, historical preferences, or organizational hierarchy. Product managers try to make these decisions based on audience research, analytics, and business impact."
+    },
+    {
+      "tag": "p",
+      "text": "Here are two potential frameworks for deciding what to prioritize."
+    },
+    {
+      "tag": "p",
+      "text": "Prioritize goals and ideas with an impact/effort matrix. The goal of this approach is to rank tasks by the impact they’ll create versus the effort they’ll take to complete. To do this, make a list of the things you know you want to work on in the near future, and then go through the task list. For each item, try to estimate:"
+    },
+    {
+      "tag": "li",
+      "text": "The impact this idea will have on the business. Let’s say you’re considering changing a donation button on your site. Do you have competitors who have made similar changes? How much did their donations rise? In general, when you’ve made changes to this button in the past, what type of results did you see? Based on these questions, think about how much impact this particular change could realistically have. Rely on data to guide you. If it’s helpful, you can estimate in numbers or use general categories like High, Medium, and Low."
+    },
+    {
+      "tag": "li",
+      "text": "How much effort is required to execute the idea. Which of your existing team members will need to spend time to accomplish the task? How much time? Will you need to purchase tools or hire outside help? Again, turn to data so that you’re not taking stabs in the dark. Based on this exercise, you can estimate how much effort each idea will require: High, Medium, or Low."
+    },
+    {
+      "tag": "p",
+      "text": "Quick wins"
+    },
+    {
+      "tag": "p",
+      "text": "Major projects, but worth the investment"
+    },
+    {
+      "tag": "p",
+      "text": "Fill-in jobs that are worthwhile at some point, but are not a top priority"
+    },
+    {
+      "tag": "p",
+      "text": "Thankless tasks that are not a good use of your time"
+    },
+    {
+      "tag": "p",
+      "text": "Designed by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "Once you have these estimates, it’s easier to put your ideas side-by-side and review them. Remember that your estimates might not be exact. That’s fine. If you discover you were wrong, adapt where you can and keep your learnings in mind for your next prioritization exercise."
+    },
+    {
+      "tag": "p",
+      "text": "This approach is particularly effective for small teams, for whom “quick wins” can have an outsized impact – and make time and free up resources for tackling major projects later."
+    },
+    {
+      "tag": "p",
+      "text": "Prioritize goals and ideas with an urgent/important matrix.  This approach, also known as the Eisenhower matrix, is particularly effective for prioritizing your to-do list and identifying (and eliminating) activities that keep you busy but contribute little to your organization’s longterm success."
+    },
+    {
+      "tag": "p",
+      "text": "It’s easy to get distracted from working on important tasks that don’t feel urgent (planning an audience research sprint to iterate on your membership program) with urgent tasks that aren’t important (such as answering e-mails). Mapping items on this matrix will help you recognize what you need to make time to work on, and what you need to say “no” to or assign to someone else. It can also help you tackle important tasks before they become urgent. Get more advice about evaluating tasks against this matrix here."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Designed by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "Now that you’ve figured out what goals and ideas you want to focus on, you have to map these ideas onto what product thinkers call a “roadmap.” Roadmaps are long-term planning documents that give you a concrete plan for how to turn your ideas into reality. If your organization has decided to launch a membership program, you’ll want to develop a roadmap that takes you to launch."
+    },
+    {
+      "tag": "p",
+      "text": "Membership Puzzle Project coach and newsroom consultant Emma Carew Grovum created a playbook for creating your own roadmap for MPP’s Membership in News Fund partners. Here’s a roadmap template from Airtable you could use."
+    },
+    {
+      "tag": "p",
+      "text": "Here are Carew Grovum’s big picture guidelines for building a roadmap:"
+    },
+    {
+      "tag": "li",
+      "text": "Use a timeline: You can break your timeline down by week, month, quarter, or year. No matter how far out you plan it, the timeline should align with your team’s sprint schedule so you can coordinate the work."
+    },
+    {
+      "tag": "li",
+      "text": "Set up categories: This will define what you’re using the roadmap to track and plan. These categories could be defined by team, by committee, by product, by task type, etc. Regardless, you should choose a simple system and stick to it."
+    },
+    {
+      "tag": "li",
+      "text": "Create parallel tracks: A roadmap allows you to see the plans for multiple projects at once, which enables you to prioritize tasks for both near- and long-term goals."
+    },
+    {
+      "tag": "p",
+      "text": "In the presentation, Carew Grovum and Pierre Liebovici, engagement editor for Mediacités in France, shared the steps they took to build Mediacités’ roadmap:"
+    },
+    {
+      "tag": "li",
+      "text": "They made a list of things that were working and things that were not working."
+    },
+    {
+      "tag": "li",
+      "text": "They put the items on the “not working” list on an urgent/important matrix to visualize what needed to be addressed immediately."
+    },
+    {
+      "tag": "p",
+      "text": "Increase revenue from members to be sustainable"
+    },
+    {
+      "tag": "p",
+      "text": "Lack of KPIs to measure conversion and retention of members"
+    },
+    {
+      "tag": "p",
+      "text": "Investigative stories are launched by our journalists without assessing community information needs first"
+    },
+    {
+      "tag": "p",
+      "text": "Some staff members still need to be convinced about the benefits of membership"
+    },
+    {
+      "tag": "p",
+      "text": "Lack of time to answer and manage all of our readers’ contributions"
+    },
+    {
+      "tag": "p",
+      "text": "Surge in number of new members in the last six weeks due to a membership campaign"
+    },
+    {
+      "tag": "p",
+      "text": "Experiment with new types of storytelling to tell our story better"
+    },
+    {
+      "tag": "li",
+      "text": "They also put the items on an impact/effort matrix to evaluate how big an undertaking each item was. (On a small team like Mediacités, it’s difficult to take on two high-effort projects at once, even if they’re both also high impact.)"
+    },
+    {
+      "tag": "li",
+      "text": "They identified two priorities for that quarter:Solve the lack of KPIs for conversion and retention (an urgent and important item that was low effort)Increase revenue from members to be sustainable (an urgent and important item that was high effort)"
+    },
+    {
+      "tag": "li",
+      "text": "Solve the lack of KPIs for conversion and retention (an urgent and important item that was low effort)"
+    },
+    {
+      "tag": "li",
+      "text": "Increase revenue from members to be sustainable (an urgent and important item that was high effort)"
+    },
+    {
+      "tag": "li",
+      "text": "They identified short term and long term goals for each of those two priorities and assigned deadlines for each."
+    },
+    {
+      "tag": "li",
+      "text": "They broke the goals down into tasks that would need to be completed, and assigned deadlines to those, too."
+    },
+    {
+      "tag": "p",
+      "text": "Lack of KPIs to measure conversion and retention of members"
+    },
+    {
+      "tag": "p",
+      "text": "Investigative stories are launched by our journalists without assessing community information needs first"
+    },
+    {
+      "tag": "p",
+      "text": "Increase revenue from members to be sustainable"
+    },
+    {
+      "tag": "p",
+      "text": "Surge in number of new members in the past 6 weeks thanks to a special campaign"
+    },
+    {
+      "tag": "p",
+      "text": "Experiment with new types of storytelling to tell our story better"
+    },
+    {
+      "tag": "p",
+      "text": "Lack of time to manage and answer to all of our readers’ contributions"
+    },
+    {
+      "tag": "p",
+      "text": "Some staff members still need to be convinced about the benefits of membership"
+    },
+    {
+      "tag": "p",
+      "text": "You can see this in greater detail in slides 18-35."
+    },
+    {
+      "tag": "p",
+      "text": "Your roadmap should break down your top ideas into tasks, along with estimates for how long it should take to complete them."
+    },
+    {
+      "tag": "p",
+      "text": "Roadmaps often stretch many months, and they require more than a start date and end date. You’ll need incremental deadlines along the way to stay on track and so you can learn as you go, adapting your technology and strategy as you discover what works."
+    },
+    {
+      "tag": "p",
+      "text": "Many product teams work to execute their ideas in one to four week cycles called “sprints.” The concept of sprints is popular in agile software development, and many newsrooms now prioritize and execute their ideas with them."
+    },
+    {
+      "tag": "p",
+      "text": "Using sprints to structure the work is useful because sprints break big projects up into smaller increments, and do so in a way that puts the whole team on the same schedule. This helps you standardize the intervals upon which you measure results and run tests – crucial when your newsroom is trying to maintain multiple editorial products across many teams."
+    },
+    {
+      "tag": "p",
+      "text": "You’ll assign the tasks you identified in your roadmap to a specific sprint interval (or multiple sprint intervals for particularly large tasks)."
+    },
+    {
+      "tag": "p",
+      "text": "Each team chooses a sprint duration that’s based on what they want to accomplish and what resources they have. Whatever you decide, you should keep your sprint cadence consistent over time, so choose a cadence that will work even as your products evolve in complexity. Focus on how long it’ll take you to accomplish a meaningful chunk of work, such as hosting a focus group to help you design your membership program or choosing a payment processor to process membership payments."
+    },
+    {
+      "tag": "p",
+      "text": "For each sprint, you develop and release a meaningful piece of work, evaluate how it performs, and decide whether you are satisfied with what you did, whether you want to refine it further, and whether you want to move on to the next chunk of work on your roadmap."
+    },
+    {
+      "tag": "p",
+      "text": "While most newsrooms organize sprints around time intervals, that is not the only way to define the beginning and end point of a sprint. Scalawag, a North Carolina-based newsroom covering the American South, has an events-focused membership growth strategy. It plans and executes its events in a series, so it made more sense to align its sprints with that than with a specific increment of time. Read the full case study to learn how Scalawag adopted agile methodology to grow its membership through events."
+    },
+    {
+      "tag": "h3",
+      "text": "How Scalawag made the growth case for events"
+    },
+    {
+      "tag": "p",
+      "text": "Relying on newsletters alone to grow its membership was too narrow for Scalawag, which aims to serve a diverse set of audiences."
+    },
+    {
+      "tag": "p",
+      "text": "You won’t know whether an idea works until you actually get it out there in front of members. There’s no substitute for real-world data. But you also don’t want to pour all your resources into something until you know you’re on the right track."
+    },
+    {
+      "tag": "p",
+      "text": "The best strategy for launching effective membership products is to test-and-learn. When you want to use a test and learn strategy to develop and launch a product, you may need to create a minimum viable product, or MVP. Launching MVPs is a way of testing your ideas in the real world."
+    },
+    {
+      "tag": "p",
+      "text": "MVPs don’t need to be perfect. They are the most basic expression of your idea or product. When developing an MVP, focus on what you think are the most important features. Keep the list very tight and very focused. You can layer on additional features after you’ve tested your concept."
+    },
+    {
+      "tag": "p",
+      "text": "A simple MVP is also helpful because you can easily draw links between your actions and observed impacts. In other words, it’ll hopefully be easier for members to understand your MVP and easier for you to interpret how people react to it."
+    },
+    {
+      "tag": "p",
+      "text": "We’ve broken out the process of designing an MVP into four stages: set goals, design your MVP, launch/gather data, and assess/iterate."
+    },
+    {
+      "tag": "h3",
+      "text": "1. Set Clear Goals"
+    },
+    {
+      "tag": "p",
+      "text": "The first step in launching an MVP is to set clear outcome-based goals. What do you want your MVP to accomplish and how will you know if you’ve succeeded? Use this section’s ideation and goal-setting sections to help you learn from your audience feedback and then set outcome-based goals."
+    },
+    {
+      "tag": "p",
+      "text": "Another way to think about your MVP is that it’s a hypothesis. What information do you need to gather to prove or disprove your hypothesis? For example, when Daily Maverick in South Africa set out to launch its donations MVP, it’s goal was to answer the following questions:"
+    },
+    {
+      "tag": "li",
+      "text": "Whether people would financially support The Daily Maverick on an ongoing basis"
+    },
+    {
+      "tag": "li",
+      "text": "Where on their owned platforms they would find their most engaged readers"
+    },
+    {
+      "tag": "li",
+      "text": "What membership messaging most resonated"
+    },
+    {
+      "tag": "li",
+      "text": "How button placements and color schemes affect signups"
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "h3",
+      "text": "2. Design your MVP"
+    },
+    {
+      "tag": "p",
+      "text": "A simple MVP is great because you can clearly draw insights between your ideas and audience behavior, and you can design and launch it relatively quickly."
+    },
+    {
+      "tag": "p",
+      "text": "In her guide to making more data-informed membership decisions, MPP coach Federica Cherubini offered advice on keeping things simple in order to determine the link between action and audience impact:"
+    },
+    {
+      "tag": "blockquote",
+      "text": "It’s important to remember to introduce just one variable at a time, so you can understand which strategies are working, and which ones need tweaking. For example, if you’re testing which platform is converting better, make sure the wording on all calls to action is the same, or quite similar (while wording might vary a bit, you’ll want to make sure the tone remains consistent). Once you’ve tested for platform, then you can test what messaging works best, by trying different wording on the same platform."
+    },
+    {
+      "tag": "p",
+      "text": "It’s important to remember to introduce just one variable at a time, so you can understand which strategies are working, and which ones need tweaking. For example, if you’re testing which platform is converting better, make sure the wording on all calls to action is the same, or quite similar (while wording might vary a bit, you’ll want to make sure the tone remains consistent). Once you’ve tested for platform, then you can test what messaging works best, by trying different wording on the same platform."
+    },
+    {
+      "tag": "h3",
+      "text": "3. Launch your MVP"
+    },
+    {
+      "tag": "p",
+      "text": "Once you’ve established how you want to test your MVP, then launch it. Here’s a short and not at all exhaustive list of how to get your MVP in front of your audience members"
+    },
+    {
+      "tag": "li",
+      "text": "Tools like Google Optimize hook into Google Analytics and allow you to run light tests on your site. This is useful if you want to test an MVP of a new type of call to action, for example"
+    },
+    {
+      "tag": "li",
+      "text": "Most email service providers allow you to run A/B tests within their systems to probe items such as subject lines, sender name, and send time."
+    },
+    {
+      "tag": "li",
+      "text": "Social media management platforms allow users to run tests on everything from post text to preview image and more."
+    },
+    {
+      "tag": "li",
+      "text": "There are tools like TestFlight and InVision that allow you put early versions of apps and digital experiences into the hands of potential testers"
+    },
+    {
+      "tag": "p",
+      "text": "The Narwhal used an A/B test to gauge whether potential members would respond better to an invitation to “Become a member” or “Become a Narwhal,” taking the guesswork out of choosing one that would resonate with its audience members."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Narwhal adopted a test-and-learn mindset"
+    },
+    {
+      "tag": "p",
+      "text": "The Narwhal has developed a rhythm of running small tests to optimize every stage of its audience funnel."
+    },
+    {
+      "tag": "p",
+      "text": "One of the key things to remember when testing is that you need to allow enough time and have the right testers for a significant result."
+    },
+    {
+      "tag": "p",
+      "text": "You want to ensure that the people who look at your MVP match the type of audience member you hope will adopt it. If your target members are college students, don’t exclusively test your MVP on working professionals. If you’re specifically designing something to reach an underrepresented audience, make sure that members of this audience are included in your MVP testing audience."
+    },
+    {
+      "tag": "h3",
+      "text": "4. Assess results and iterate"
+    },
+    {
+      "tag": "p",
+      "text": "Depending on the nature of your test, you’ll likely want it running for at least one sprint, and possibly longer. It’s important to resist the impulse to cut the test short if a few people react poorly. Make an effort to keep any negative feedback in perspective by comparing the feedback to the total number of people who are actually involved in the test."
+    },
+    {
+      "tag": "p",
+      "text": "There might be situations – for example, if a test has had a consistent and overall negative impact on your search ranking or your advertising revenue – when the impacts to your business mean you absolutely have to cut a test short. But in general, you will get your best results if you let your test run its course."
+    },
+    {
+      "tag": "p",
+      "text": "After you’ve run your first test, you’ll want to assess the results and improve on your MVP."
+    },
+    {
+      "tag": "p",
+      "text": "Revisit the goals you set at the start of your test. Did you hit your targets? Were there areas where you fell short? Did anything surprise you? Identify a few small changes or tweaks that you think might help you meet or improve upon your goals, implement them, and measure what happens. The cycle begins again."
+    },
+    {
+      "tag": "p",
+      "text": "When DoR in Romania began hosting pop-up newsrooms outside the capital of Bucharest, they created a series of MVPs that grew in scope over the course of a month. Each MVP built on what they learned from the previous one."
+    },
+    {
+      "tag": "li",
+      "text": "MVP 1: A series of after-work conversations in their newsroom"
+    },
+    {
+      "tag": "li",
+      "text": "MVP 2: A full day hosting a stage at a festival outside Bucharest"
+    },
+    {
+      "tag": "li",
+      "text": "MVP 3: A week in the city of Târgu Mureș"
+    },
+    {
+      "tag": "li",
+      "text": "Beta: A series of trips to the region of Vaslui over the course of a few months"
+    },
+    {
+      "tag": "p",
+      "text": "Your membership offerings will likely change over time, even within a successful program, because your members’ needs and expectations change. By implementing the test and learn cycle, your membership product can grow alongside your members."
+    },
+    {
+      "tag": "h3",
+      "text": "How Bridge Michigan tested its way to membership growth"
+    },
+    {
+      "tag": "p",
+      "text": "They designed a set of targeted experiments at every stage of the audience funnel."
+    },
+    {
+      "tag": "p",
+      "text": "Even on a team of one, it’s critical to build in time for reflection. One of the most useful tools in the product thinking toolkit is the retrospective, better known as the retro. The retro provides space for team members to reflect on their workflow and results in order to capture best practices for future projects. It’s a surprisingly powerful tool, especially if you use it regularly."
+    },
+    {
+      "tag": "p",
+      "text": "A retrospective can happen at any time, as long as it’s at the end of a meaningful chunk of work. It can happen at the end of an MVP, the end of a sprint, or the end of a long-term project. As a member-driven newsroom, you might conduct a retrospective after your membership launch, after a major audience engagement project, or after testing out some changes to your member newsletter, for example."
+    },
+    {
+      "tag": "p",
+      "text": "The key requirements for a successful retrospective are honesty and a sense of safety. Having a neutral party as the facilitator can be easier and better than having a team member facilitate. Some people do retros without managers in the room to help people speak freely.  It’s important to remind teams that their goal is to improve processes, not attack each other, even if the work you’re reflecting on didn’t go well"
+    },
+    {
+      "tag": "p",
+      "text": "Everyone who worked directly on the project should join in. In smaller organizations, you might invite everyone in your newsroom."
+    },
+    {
+      "tag": "p",
+      "text": "Once you’ve invited people, chosen a facilitator, and set the tone, you’ll need to decide what to actually do in your retro."
+    },
+    {
+      "tag": "p",
+      "text": "A common method is to open up a digital pin board (which is essentially the digital version of putting sticky notes on a wall) and create three columns labeled “Continue,” “Start,” and “Stop.” (You might also have seen teams use “Keep,” “Stop,” and “Add.”) You start the retro by having everyone anonymously add cards to each column. Software such as Whimsical, Miro, or Trello are good options for this."
+    },
+    {
+      "tag": "p",
+      "text": "The “continue” column is for things your team has been doing that you believe you should continue doing because they are working. These could be internal, such as continuing to hold a weekly membership meeting, or they could be a product or feature, such as maintaining changes recently made to your member-only newsletter that boosted open rates. The “start” column is for things they want to start doing. In the “stop” column, they’ll put down things they want the team to stop doing."
+    },
+    {
+      "tag": "p",
+      "text": "After that, everyone gets to vote on the cards that they most identify with. The facilitator can then bring up the most-voted cards for discussion. The team might disagree on certain items, and it might flag certain items for follow-up."
+    },
+    {
+      "tag": "p",
+      "text": "Tools like Trello and Retrium allow you to create these types of boards, and on a small team, a simple GoogleDoc might suffice. Here’s a retrospective template from Trello that you can copy to use on your team, and here are a few other suggestions for soliciting feedback in retros."
+    },
+    {
+      "tag": "p",
+      "text": "After the retro, the facilitator should take notes of what the team will start, stop, and continue, including marking up any to-dos. Process learnings, in particular, should be written down and possibly kept in a single file. Retros are only useful if you begin them by recalling where you were at organizationally when the sprint you’re assessing began and if you capture the learnings and apply them to future work."
+    },
+    {
+      "tag": "p",
+      "text": "The short answer is no. Below, we offer three interim steps you can take to begin applying product thinking in your newsroom without hiring a product manager."
+    },
+    {
+      "tag": "h3",
+      "text": "Identify product thinkers within your existing team"
+    },
+    {
+      "tag": "p",
+      "text": "If you don’t have the capacity to hire a dedicated product manager but know you have room in your organization for ongoing product work, it could be valuable to identify existing staffers in your organization who can step into product roles."
+    },
+    {
+      "tag": "p",
+      "text": "Rishad Patel, co-founder of Asian media consultancy Splice, offers these suggestions for what to look for in journalists with product potential:"
+    },
+    {
+      "tag": "li",
+      "text": "Journalists who put the reader first: Product thinking is about prioritizing user needs, and if a journalist already realizes that they’re doing journalism for actual people and communities and are committed to imbuing their journalism with engagement and audience-first practices, then they are likely to understand the user-first nature of product thinking."
+    },
+    {
+      "tag": "li",
+      "text": "Journalists who excel at problem definition: Successful product thinkers are able to successfully identify problems on behalf of their users — it is “the big holy grail,” Patel said. For example, if your website is loading slowly, that’s your problem, not the reader’s problem — the user’s problem is whatever you’re trying to solve with your product."
+    },
+    {
+      "tag": "li",
+      "text": "Journalists who can see the business case: Product thinkers in your newsroom will understand how their work ties to your organization’s business model and revenue streams. They need to understand and care that successfully putting your members first will result in improvements to the bottom line. “It makes your business better to treat your users with more respect,” Patel said. “If you’re able to have that compassion…that’s what makes you a product person.”"
+    },
+    {
+      "tag": "p",
+      "text": "One of the newsrooms that Patel and Splice have worked with is Frontier Myanmar, an English-language news and business magazine based in Yangon. In 2019, Frontier Myanmar decided to transition to a membership-driven model. The magazine received funding from the Google News Initiative (which is also supporting this guide). Digital editor Clare Hammond found herself thrust into the role of designing and launching the membership program."
+    },
+    {
+      "tag": "h3",
+      "text": "How Frontier brought a membership model to Myanmar"
+    },
+    {
+      "tag": "p",
+      "text": "They began by identifying five professions who needed the journalism Frontier Myanmar produces."
+    },
+    {
+      "tag": "p",
+      "text": "If you find yourself similarly thrust into a product management role, former Chalkbeat Director of Product Becca Aaronson encourages shadowing others in your newsroom whose jobs you don’t know much about. By better understanding how different teams operate on a day-to-day basis, you can start to think about how to form connections and break down silos."
+    },
+    {
+      "tag": "p",
+      "text": "Many organizations offer support for newsroom staff in product roles or working to bring product thinking to their organization, including Open News, the Online News Association and Women in Product."
+    },
+    {
+      "tag": "h3",
+      "text": "Appoint an interdisciplinary team"
+    },
+    {
+      "tag": "p",
+      "text": "One of the key things that product managers do is break down internal silos. Sometimes, especially if you’re working with a smaller team, you don’t need to hire a new person, you just need a new meeting to coordinate. Jump to “Staffing our membership strategy” for more on this."
+    },
+    {
+      "tag": "p",
+      "text": "At Chalkbeat, they did this with the “AudSquad” — a coalition of newsroom, marketing, product, and audience engagement leaders that meets every two weeks to coordinate cross-functional strategy. Much of the core product thinking and execution has moved into that team."
+    },
+    {
+      "tag": "p",
+      "text": "“It’s best if you have people in the newsroom at all levels thinking about how we figure out what the strategy should be and build cross-functional teams as needed to get these things done,” Aaronson said. “You need a couple of people in the middle who can see everything in a way that helps people at the executive level then take all that information and prioritize it even further.”"
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat built its cross-functional AudSquad"
+    },
+    {
+      "tag": "p",
+      "text": "You might not need to hire new people to support your membership strategy. You might just need a new squad."
+    },
+    {
+      "tag": "h3",
+      "text": "Hire consultants or coaches"
+    },
+    {
+      "tag": "p",
+      "text": "Consultants can help with things like: recommending product thinking tools to invest in, planning and conducting audience research, developing a roadmap in partnership with your existing team, teaching you about prioritization and ways to do it, or actually managing and organizing your software development cycle."
+    },
+    {
+      "tag": "p",
+      "text": "If you decide to hire a consultant, look for people who have experience working in media. Focus on projects that touch on things that people in your organization are doing already, so that way the consultant has an internal partner already baked in. Organizations such as News Catalyst in the U.S., Sembra Media in Latin America, and Splice Media in Asia offer consultations and can recommend coaches and trainers. News Catalyst also periodically offers training programs for small newsrooms. The News Product Alliance launched in September 2020 to offer support and practice specifically for news product leaders."
+    },
+    {
+      "tag": "p",
+      "text": "There are more detailed tips and strategies for hiring vendors and consultants in the tech stack section. (Jump to “Building our membership tech stack.“)"
+    },
+    {
+      "tag": "p",
+      "text": "Adopting product thinking in your organization is a major culture shift, but you won’t succeed at implementing your membership strategy without it. Here are some of the most common obstacles we have seen, and some potential ways to respond."
+    },
+    {
+      "tag": "p",
+      "text": "People may resist product thinking entirely, or particular aspects of it. A team used to making decisions by instinct, for example, may strongly resist making decisions based on data."
+    },
+    {
+      "tag": "p",
+      "text": "Here are some strategies for combating internal resistance and building product culture:"
+    },
+    {
+      "tag": "li",
+      "text": "Where possible, introduce ideas one at a time, rather than all at once."
+    },
+    {
+      "tag": "li",
+      "text": "Product thinking is also about collaboration and enjoyment. Invite your colleagues to explore with you, and emphasize that product thinking is here to help and amplify your great work, not to displace anyone. If you can, organize joint brainstorms that are fun and informative."
+    },
+    {
+      "tag": "li",
+      "text": "Identify key allies: are there one or two people in the organization who are open to your new way of thinking? Would they be able to help you try out a few light solutions or changes?"
+    },
+    {
+      "tag": "li",
+      "text": "Take care of yourself, too: if you constantly feel like you’re beating uphill alone, take some time to recharge and reassess your approach."
+    },
+    {
+      "tag": "p",
+      "text": "A lack of resources. Even large organizations struggle with ambitions that often go beyond their capacity. The agility of product thinking actually means that, once you get the hang of it, it helps your organization become more efficient with limited resources. Where possible, think about ways to break up the load."
+    },
+    {
+      "tag": "li",
+      "text": "Outline a measurable goal: What’s the most important thing you want product thinking to do for you and your organization? How can you measure that success? Then you can figure out which tools might move the needle most."
+    },
+    {
+      "tag": "li",
+      "text": "Prioritize the tools in this kit. You don’t need to do everything all at once, and you don’t need just one person to do everything. Just like you would prioritize your goals, prioritize the parts of product thinking that you think might be most helpful, and tackle those first."
+    },
+    {
+      "tag": "li",
+      "text": "Enlist allies. Wherever possible, think about where people on your existing team might have space or desire to expand their skills, and whom you can enlist as allies in the process. (See earlier in the section for more on identifying product thinkers in your newsroom)"
+    },
+    {
+      "tag": "p",
+      "text": "Your team constantly misses deadlines. When you plan projects, you need  to be able to estimate how long work will take, and what resources will be required."
+    },
+    {
+      "tag": "p",
+      "text": "While failure at meeting deadlines can feel personally frustrating, it’s often the result of systemic problems that could consistently undermine your ability to deliver on and improve your products. Maybe your project plan didn’t take summer vacations into account, or you left too little time for senior management to approve important designs. Too many missed product deadlines can, over time, build up internal resistance to product thinking and product resourcing across your organization."
+    },
+    {
+      "tag": "p",
+      "text": "If you find that you are often missing deadlines, it’s time to take stock with these questions:"
+    },
+    {
+      "tag": "li",
+      "text": "Where is there inefficiency or bottlenecks in your process?"
+    },
+    {
+      "tag": "li",
+      "text": "What impacts does this inefficiency have?"
+    },
+    {
+      "tag": "li",
+      "text": "Where in the process are your time or resource estimations falling short?"
+    },
+    {
+      "tag": "li",
+      "text": "Where are you missing key resources (people, tools, know-how) or important lines of responsibility or authority?"
+    },
+    {
+      "tag": "p",
+      "text": "Take stock of these gaps, and escalate the issues that need to be addressed. If you don’t address the systemic issues getting in the way of delivering on time and on budget,  missing deadlines can become a huge and recurrent problem. But by divorcing the system supporting product creation from the individuals creating it, you can confidently tackle a lapsed deadline as the impersonal issue that it is, and hopefully solve it for the future."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat defined and measured membership success"
+    },
+    {
+      "tag": "p",
+      "text": "They started with four hypotheses about what implementing membership could do for Chalkbeat."
+    },
+    {
+      "tag": "h3",
+      "text": "How Bridge Michigan tested its way to membership growth"
+    },
+    {
+      "tag": "p",
+      "text": "They designed a set of targeted experiments at every stage of the audience funnel."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter uses surveys to engage, co-design, and grow"
+    },
+    {
+      "tag": "p",
+      "text": "Krautreporter is running three to five surveys at any point in time."
+    },
+    {
+      "tag": "h3",
+      "text": "How VTDigger gets and uses a steady flow of audience feedback"
+    },
+    {
+      "tag": "p",
+      "text": "Their suite of surveys and commitment to always following up with respondents gives the staff a highly useful picture of their audience."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Narwhal adopted a test-and-learn mindset"
+    },
+    {
+      "tag": "p",
+      "text": "The Narwhal has developed a rhythm of running small tests to optimize every stage of its audience funnel."
+    },
+    {
+      "tag": "h3",
+      "text": "How Frontier brought a membership model to Myanmar"
+    },
+    {
+      "tag": "p",
+      "text": "They began by identifying five professions who needed the journalism Frontier Myanmar produces."
+    },
+    {
+      "tag": "h3",
+      "text": "How Scalawag made the growth case for events"
+    },
+    {
+      "tag": "p",
+      "text": "Relying on newsletters alone to grow its membership was too narrow for Scalawag, which aims to serve a diverse set of audiences."
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat built its cross-functional AudSquad"
+    },
+    {
+      "tag": "p",
+      "text": "You might not need to hire new people to support your membership strategy. You might just need a new squad."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Staffing a Membership Strategy"
+    }
+  ]
+}

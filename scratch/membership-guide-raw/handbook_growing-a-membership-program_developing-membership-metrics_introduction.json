@@ -1,0 +1,671 @@
+{
+  "url": "https://membershipguide.org/handbook/growing-a-membership-program/developing-membership-metrics/introduction",
+  "title": "Membership Handbook | The Membership Guide",
+  "h1": "Developing Membership Metrics",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Every member-driven newsroom should have a membership strategy that provides the basic outlines of what you will do and how you will do it. You implement your membership strategy through your membership program and memberful routines. Membership objectives help you answer the question of whether you are fulfilling your membership value proposition. You measure progress on your objectives with metrics and markers. The goal of this section is to help you set objectives in line with your membership strategy, and measure your progress toward those objectives with both metrics and markers. In other words, it will help you assess how effectively you are delivering value to your members.When we say “metrics,” we mean the indicators that can be quantified into clear-cut numbers and percentages, such as what percentage of your email newsletter list you are converting into paying members. When we say “markers,” we mean qualitative indicators that can’t necessarily be quantified, but that are valuable indicators that you should keep track of, such as the diversity of people who attend your member events, or the quality of comments you receive from member emails. What gets measured in a news organization is what gets done, the trope goes. That’s why it’s critical that your metrics and markers connect to your membership strategy, and that you pay as much attention to measuring your progress on developing memberful routines as you do on growing your membership program.This is easier said than done. We live in an era of unprecedented data. The temptation when setting up a metrics regime is to assume that if something can be measured, it must be important. But just because something is measurable, doesn’t mean it’s more important than something that is hard to measure. Complicating things further, news organizations are just beginning to figure out how to measure and track progress on memberful routines.Parsing the signal from the noise should be your primary aim in choosing what metrics and markers your newsroom will pay attention to as you develop your membership strategy.  The goal of this section is to help you identify, set up, and track metrics and markers that promote the vitality of your membership program and memberful routines. MPP will walk you through the three core components of developing an actionable, measurable membership assessment strategy, and offer insight into how other member-driven newsrooms are doing the same. This section will cover: How to assess your effectiveness at creating value for your members. Your membership value proposition is the North Star for your membership strategy. The research team will explain how to translate the components of your membership value proposition into objectives, and identify the right metrics and markers to measure your progress. Assessing your effectiveness at creating value also involves tracking your retention of members.How to assess your effectiveness at cultivating and converting loyal readers into members. This includes tracking the growth of your loyal audience and the conversion of your loyal audience into members. How to assess your effectiveness at balancing the costs and benefits of delivering the program. This includes assessing the monetary and as well as non-monetary contributions of members, and understanding your business model for membership.Contextualizing your membership program. MPP has created a survey that will benchmark the goals and key performance indicators of member-driven newsrooms across the globe. So far we have collected data from 40 newsrooms. In the final parts of this section, we will present the early results from the survey that illustrate the range of membership efforts in newsrooms across the globe. Use these results to inform your own objectives, metrics, and markers."
+    },
+    {
+      "tag": "p",
+      "text": "The MPP research team has worked with many member-driven newsrooms that struggle with the same question: what does success in membership look like? Success in a member-driven newsroom looks like creating value for your audience members so that they become members, and creating value for your members so that they stay."
+    },
+    {
+      "tag": "p",
+      "text": "Although membership value looks different from newsroom to newsroom, the same process of assessing value can be used in any newsroom. To define specifically what your membership program’s success looks like involves setting clear, measurable objectives for your membership program and your memberful routines. (Objectives are specific outcomes and measurable steps that bring you closer to your goals, which are usually broader and more aspirational.)"
+    },
+    {
+      "tag": "p",
+      "text": "Some measures of success, such as the number of members you have or a reduction in your churn rate, are quite straightforward, and the research team offers advice on sustainability metrics below. (Jump to “How do we assess how well we are balancing costs and revenue?”) But others, particularly those connected to memberful routines, can be a little harder to identify and measure. Those begin with going back to your membership value proposition to identify what success means for you."
+    },
+    {
+      "tag": "p",
+      "text": "This section will focus on how to set objectives based on your membership value proposition, and how to use those objectives to assess how effectively you are creating value for your members."
+    },
+    {
+      "tag": "p",
+      "text": "Start with your membership value proposition. If you used the process in the handbook section “Discovering our value proposition,” it might look something like this."
+    },
+    {
+      "tag": "p",
+      "text": "“Our [membership program] helps [our loyal supporters] who want to [user jobs to be done] by [membership feature] and by [membership feature].”"
+    },
+    {
+      "tag": "p",
+      "text": "For example:"
+    },
+    {
+      "tag": "p",
+      "text": "“Our membership program helps our loyal supporters who want to contribute to important issues in their community by connecting them with our reporters.”"
+    },
+    {
+      "tag": "p",
+      "text": "At this stage, you’ll add a new component to this statement: your desired outcome:"
+    },
+    {
+      "tag": "p",
+      "text": "“Our membership program helps our loyal supporters who want to contribute to important issues in their community by connecting them with our reporters to generate local story ideas.”"
+    },
+    {
+      "tag": "p",
+      "text": "To understand what constitutes success, you now need to turn your membership program value proposition into a question. At the program level, you may have a more general value proposition question:"
+    },
+    {
+      "tag": "p",
+      "text": "Is our membership program helping our loyal supporters who want to [user jobs to be done] by [membership program feature] and thereby [membership program outcome]?"
+    },
+    {
+      "tag": "p",
+      "text": "Is our membership program helping our loyal supporters who want to contribute to important issues in their community by connecting them with our reporters to generate local story ideas?"
+    },
+    {
+      "tag": "p",
+      "text": "To set detailed objectives for your membership program, turn each part of your membership value proposition into a question that you can answer. Break your membership value proposition down as much as you can."
+    },
+    {
+      "tag": "li",
+      "text": "Is our program reaching the people who want to contribute to the important issues in our community?"
+    },
+    {
+      "tag": "li",
+      "text": "Is our membership program connecting our members with our reporters effectively?"
+    },
+    {
+      "tag": "li",
+      "text": "Are our reporters incorporating members’ story ideas into their work?"
+    },
+    {
+      "tag": "li",
+      "text": "Do our members who generate story ideas feel they are contributing to important issues in their community?"
+    },
+    {
+      "tag": "p",
+      "text": "Decide on the indicators you need to answer your questions. What indicators do you need, and how will you measure those in order to answer your value proposition questions?"
+    },
+    {
+      "tag": "p",
+      "text": "To illustrate this, using the sample value proposition questions above, here is how you might translate your questions into indicators and measurement strategies."
+    },
+    {
+      "tag": "p",
+      "text": "Articulate your objectives using your indicators. Now you have a list of indicators of success and a plan for how to measure each. Next, you will articulate objectives. A good objective will have a timeframe and specified metrics or markers."
+    },
+    {
+      "tag": "p",
+      "text": "Going through this process of setting objectives should help you:"
+    },
+    {
+      "tag": "li",
+      "text": "Answer the question “what does success look like”"
+    },
+    {
+      "tag": "li",
+      "text": "Establish a set of metrics and markers to track"
+    },
+    {
+      "tag": "li",
+      "text": "Establish a set of measurement practices to put in place"
+    },
+    {
+      "tag": "p",
+      "text": "You can use your own historical performance in combination with industry benchmarks to determine a range of metrics or markers that would be reasonable. But industry benchmarks and historical performance can only take you so far — you need to know how to set reasonable objectives for your own newsroom and learn how to adapt them through testing and iteration."
+    },
+    {
+      "tag": "p",
+      "text": "Based on the example above, here is what a series of measurable objectives might look like."
+    },
+    {
+      "tag": "p",
+      "text": "Pull it all together into a statement of what success looks like. For the example above, this looks like beginning with the value proposition:"
+    },
+    {
+      "tag": "p",
+      "text": "Our membership program helps our loyal supporters who want to contribute to important issues in their community by connecting them with our reporters to generate local story ideas."
+    },
+    {
+      "tag": "p",
+      "text": "And then adding what constitutes success:"
+    },
+    {
+      "tag": "p",
+      "text": "Our objective in the first year is to convert 1,000 members from our newsletter list and connect 100 of those members with our reporters to co-produce 50 stories. Our objective is that 75 percent of those members who contribute stories will tell us after the experience that they feel they have contributed to their community."
+    },
+    {
+      "tag": "p",
+      "text": "Chalkbeat in the U.S. went through a similar process when they decided to launch their membership program in 2018, setting acquisition, retention, engagement, and revenue objectives."
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat defined and measured membership success"
+    },
+    {
+      "tag": "p",
+      "text": "They started with four hypotheses about what implementing membership could do for Chalkbeat."
+    },
+    {
+      "tag": "p",
+      "text": "Assessing your effectiveness at creating value also involves tracking the retention of your members. If your value creation starts to wane, you will see it in your retention metrics. Jump to “Retaining our members” for help setting retention-specific objectives."
+    },
+    {
+      "tag": "p",
+      "text": "You can use the process above, which helps you turn a membership value proposition into a series of measurable objectives, to clarify and track the intended impact for any area of activity. To get a sense for what the outcomes of this process can look like when applied to an overall mission, see this example of how City Bureau aligned its mission, its intended outcomes, and the metrics it tracks."
+    },
+    {
+      "tag": "p",
+      "text": "Loyalty is the most important precondition for membership, and your ability to cultivate loyal audience members and convert them into members is the foundation of a strong membership program. It is also the most important factor shaping whether you will be able to keep the members you have. To cultivate and retain members, you need to orient your organization around measuring loyalty, more so than reach. (Jump to “Growing our membership” for tactics for growing your membership program.)"
+    },
+    {
+      "tag": "p",
+      "text": "The key user behavior to track in order to assess your effectiveness at cultivating loyal readers is repeat action. If repeat actions in your general audience are lacking, that is a red flag that you will struggle to convert audience members into members. To assess the loyalty of your audience by repeat action, the research team recommends that you focus on the following metrics. This advice is written primarily for text-based digital news organizations, but if that doesn’t describe your organization, you can substitute a measure of loyalty in your primary channel for most of this guidance."
+    },
+    {
+      "tag": "p",
+      "text": "Regular use of your site (or primary channel). Instead of measuring the spikes in web traffic month after month, the research team recommends focusing on the size of your web audiences that keep coming back to your website – a good metric is users with 3+ or  6+ sessions per month. (German membership platform Steady has identified 3+ sessions per month; U.S. public media’s research across newsrooms in its industry recommends using 3+ through 6+ sessions to set a more robust bar for loyalty.) For additional reading on loyalty metrics, MPP recommends:"
+    },
+    {
+      "tag": "li",
+      "text": "Digital Content Next and the Lenfest Institute for Journalism’s case study of Slate’s membership program, which found that Slate readers who read eight articles or more a month were far more likely to join."
+    },
+    {
+      "tag": "li",
+      "text": "Brian Boyer’s Memberkit 1.0, which walks newsrooms through why measuring regularity on web matters and how to pull the right numbers. Here’s the spreadsheet Boyer uses when crunching the numbers, and here’s the writeup about how he did it."
+    },
+    {
+      "tag": "p",
+      "text": "Regular use of your email newsletter products. For most member-driven digital newsrooms, email is the most reliable channel for cultivating loyal audience members and converting them into members. An increasing number of digital publications publish exclusively through newsletters, or focus on that as their primary channel with their readers."
+    },
+    {
+      "tag": "p",
+      "text": "That’s why the research team recommends tracking the percentage of your newsletter audience that is loyal, which the research team has identified as opening your email 75 percent of the time. (If you use Mailchimp as your email service provider, that is the subset of your newsletter list that is a 5-star reader.) For more on newsletter metrics, see NewsletterGuide.org."
+    },
+    {
+      "tag": "p",
+      "text": "Regular use of other newsroom products. The Membership Puzzle team knows site visits and email aren’t everything, particularly in countries where WhatsApp is the more dominant means of communication. When measuring the success of your other products that create loyalty and lead to membership, focus on regularity – or the number of people who keep coming back to use your product again and again. For this purpose, MPP defines a product as anything your newsroom produces that connects people to your journalism. Podcast-based news organizations might look at episode downloads and the average percentage of an episode that listeners complete."
+    },
+    {
+      "tag": "p",
+      "text": "What tracking loyalty metrics can do for you. Tracking and analyzing loyalty metrics can help newsrooms build more audience-centric and member-centric products. For example, Krautreporter analyzed their members’ habits and found that, across all of their platforms and products, their members most regularly interacted with email newsletters and article pages the most. As a result, Krautreporter developed a newsletter strategy with several topic-focused newsletters, each written by a reporter. See Krautreporter’s Engaged Journalism Playbook for more."
+    },
+    {
+      "tag": "p",
+      "text": "As an example of how newsrooms can use loyalty metrics to bring newsrooms closer to membership, KPCC in Southern California created “loyal and local” dashboards for their reporters to track loyalty metrics on the stories they produce. The dashboard reports on the number of loyal users per story (or people who have three or more web sessions in a 30-day period) and compares it to the median number of loyal users for their stories. This way, reporters don’t just see  “500 loyal users” – but instead, they see “500 users is 20 percent above or below your median for the last six weeks.”"
+    },
+    {
+      "tag": "p",
+      "text": "KPCC’s Executive Editor Megan Garvey and Audience Insights and Development Manager Patrick Dougall have worked with KPCC reporters on how to incorporate the dashboard into their workflow. Garvey encourages reporters to focus on this loyalty metric, above all, when assessing the performance of stories."
+    },
+    {
+      "tag": "p",
+      "text": "As Dougall explained: “We’ve tried to educate the newsroom that we’re not as focused on getting a huge amount of traffic for your individual stories. It’s really about – how many people do you inspire loyalty with? And then we’re working to use a lot of that [audience member] loyalty to a specific reporter to deliver more targeted membership asks.”"
+    },
+    {
+      "tag": "p",
+      "text": "You don’t have to track loyalty in a dashboard. For an example of a newsroom that measures loyalty without a custom dashboard, public media station KQED in San Francisco measures both total reach and “loyalty” across each audience platform. For example, after hosting an event, the team measures the number of attendees overall and the number of repeat event attendees. See earlier MPP research, “Loyalty is membership’s North Star. Here’s how news sites & advocacy groups measure it,” for more."
+    },
+    {
+      "tag": "p",
+      "text": "The key metric to track to determine your effectiveness at converting loyal audience members is, unsurprisingly, conversion rate. Conversion rate is the percentage of audience members who join as members, divided over the sum total of your audience members over some specified period of time."
+    },
+    {
+      "tag": "p",
+      "text": "Conversion rates can vary by medium, by message, by user type, and by time. If you want to boost your effectiveness at converting members, it helps to understand conversion behavior in these categories. For a simple template for tracking that, see MPP coach Federica Cherubini’s process for tracking member acquisition."
+    },
+    {
+      "tag": "p",
+      "text": "Conversion rates by medium: These metrics can include percent of newsletter subscribers who convert to membership, percent of web users who convert to membership, and percent of event attendees who convert to membership. For most publications with membership, newsletters are the most effective conversion medium and it is worth tracking conversion per newsletter product. But members can convert in other places as well – at the end of an article page, on your homepage, or at an event. You have to be able to set up a source tracking system that links your web analytics system to your CRM to be able to track conversion at different places on your site. This can be complicated, but it is worth tracking your conversion rates by medium to understand where you’re most likely to make an effective ask."
+    },
+    {
+      "tag": "p",
+      "text": "What these metrics can do for you: Tracking conversion rates by medium can help you understand how and where to focus your membership appeals. For example, if you find newsletters to be your most successful method for converting members, your newsroom could instead focus calls-to-action in its other platforms (events, article pages) around asking your audiences to sign up for your newsletter, thereby initiating the newsletter audience funnel."
+    },
+    {
+      "tag": "p",
+      "text": "Conversion rates by message: These kinds of metrics include conversion rate by campaign theme, conversion rate by appeal author, and conversion rate by marketing message."
+    },
+    {
+      "tag": "p",
+      "text": "What these metrics can do for you: Tracking conversion rates by variables like campaign theme, appeal author, and marketing language can help you learn about what membership messages resonate most with which parts of your audience. Your audience is not a monolith, and they have different motivations for supporting your work, which means you need to ask audience members to become members in a variety of ways. If you are experimenting (e.g. A/B testing) with membership messages, you should be tracking conversion rates by message. The results of these experiments can help you learn about your audience and fine-tune your membership marketing strategy. Jump to “Growing our membership” for more on marketing strategies."
+    },
+    {
+      "tag": "p",
+      "text": "Conversion rates by time: These kinds of metrics include calendar-based metrics like annual conversion rate, but also seasonal conversion rates like end-of-year."
+    },
+    {
+      "tag": "p",
+      "text": "What these metrics can do for you: Certain times of the year (for example, end-of-year campaigns) can be more effective for membership conversions than others. By tracking conversion rates by time and over time, you can note where your conversion rates line up with strategic initiatives like a new member drive, or external events like major breaking news."
+    },
+    {
+      "tag": "p",
+      "text": "Conversion rates by user behavior: More mature newsrooms that have audience segmentation capabilities can also track conversion rates by audience segment. These types of metrics assign a conversion rate to regular patterns of audience behavior detected by an audience intelligence system."
+    },
+    {
+      "tag": "p",
+      "text": "What these metrics can do for you: Tracking conversion rates by user behavior can tell you if certain types of stories or beats tend to drive conversion to membership, or if certain story layouts or calls-to-action convert some users better than others. If you don’t have an integrated CRM and CMS, you can proxy conversion-by-user-behavior by creating specialized email newsletters that focus by topic, beat, or theme and compare conversion rates across those different products."
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick has recently started tracking member conversion based on the method of persuasion a membership appeal employs. Here’s how they’re doing that."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "p",
+      "text": "The beauty of tracking loyalty and conversion metrics together is that they can be combined and compared to understand the member journeys that users take from casual reader to member. With those kinds of insights, you can boost membership conversion."
+    },
+    {
+      "tag": "p",
+      "text": "For an excellent example of a metric that pulls a few of the above mentioned elements together to boost conversion, Brian Boyer writes that a major indicator his team at Spirited Media (formerly Billy Penn, Denverite, and The Incline) tracked was the percent of readers who converted to donors in their first 30 days after subscribing to the newsletter. By tracking this metric, the Spirited team learned that the longer they waited to ask a newsletter subscriber for a financial contribution, the less likely the subscriber was to click the button to donate. (If you use Mailchimp for your newsletter, see Boyer’s report on how to get this metric up and running.)"
+    },
+    {
+      "tag": "p",
+      "text": "An audience funnel is the most common way newsrooms track loyalty and conversion rates together. See MPP’s case study on Bridge Michigan for an example of how a member-driven newsroom developed a test-and-learn strategy along the audience funnel to fuel membership growth. Bridge was able to run concentrated experiments that focused on growing its overall audience and increasing its email list, which ultimately moved the needle on Bridge’s overall goal — growing its membership base."
+    },
+    {
+      "tag": "h3",
+      "text": "How Bridge Michigan tested its way to membership growth"
+    },
+    {
+      "tag": "p",
+      "text": "They designed a set of targeted experiments at every stage of the audience funnel."
+    },
+    {
+      "tag": "p",
+      "text": "What to do when you don’t have access to most of these metrics: Most of the newsrooms that the research team was able to study are digital organizations that publish on their websites and/or via email newsletters and distribute their content via newsletters and social media. They have ample data to work with. But newsrooms publishing on platforms that provide little access to data have to find other ways to understand conversion. Surveys can offer a slice of the necessary information."
+    },
+    {
+      "tag": "p",
+      "text": "The Continent, the weekly pan-African newspaper, is published as a PDF and distributed on WhatsApp, which also provides very little data. So once a year they send their readers a survey with fairly granular questions about how they first heard about The Continent, whether they share it with others, how they share it with others when they do, how they read the PDF, and what parts of the weekly magazine they enjoy the most. Co-founder Sipho Kings said that they get a few thousand responses from their subscriber base of more than 100,000 phone numbers and that they’re likely to send more frequent surveys in the future."
+    },
+    {
+      "tag": "p",
+      "text": "A note on tracking number of members. Of course, the simplest and most general measure of your effectiveness at converting members is the number of members in your program. But this can be an imperfect indicator of success. Audience growth will often also drive member growth. If you are growing your audience or making changes to your membership program, you should be paying close attention to your conversion rate to assess the impact of your changes rather than just the number of members."
+    },
+    {
+      "tag": "p",
+      "text": "Plus, strong incentives like special merchandise or discounts can drive spikes in membership that may boost your membership in the short term, but they may prove to be fickle once the incentive wears off."
+    },
+    {
+      "tag": "p",
+      "text": "Whatever loyalty and conversion measures you track, do so carefully and intentionally. Due to privacy laws or the missions of the newsroom’s themselves, some member-driven newsrooms opt to prioritize audience privacy, above all. To illustrate how newsrooms can still make data-driven audience decisions while collecting minimal data on their audience members, MPP interviewed De Correspondent in The Netherlands."
+    },
+    {
+      "tag": "p",
+      "text": "De Correspondent uses the “Google Analytics alternative” Matomo, a platform that only collects information that cannot be traced back to an individual person. Instead, it tracks anonymized aggregated information like page views and homepage visits, country-level location, and sign-up page actions. In the U.S., the investigative news organization The Markup similarly limits its collection of reader data, partially informed by De Correspondent’s approach."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent keeps its commitment to collecting  minimal data"
+    },
+    {
+      "tag": "p",
+      "text": "They invest heavily in collecting qualitative insights volunteered by members instead of funneling up quantitative data."
+    },
+    {
+      "tag": "p",
+      "text": "Another cornerstone of your membership strategy is becoming sustainable: assessing the costs of running your membership program against the benefits it generates for your organization. You should choose metrics that reflect both the monetary and non-monetary value of members’ contributions. This section provides some guidelines for choosing sustainability metrics. Jump to “Making the business case for membership” for detailed advice on how to develop a business plan for your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "To assess the financial sustainability of membership, you should build on the components of your business model to create a set of metrics you can measure and assess monthly, quarterly, and annually."
+    },
+    {
+      "tag": "p",
+      "text": "Tracking revenue: To track the revenue generated by your membership program, you should at a minimum pay attention to high-level membership revenue metrics such as total membership dollars (monthly and annually); your percent of total revenue from membership; and your growth rate of membership revenue (monthly and annually)."
+    },
+    {
+      "tag": "p",
+      "text": "Examples of objectives tied to membership revenue could include: grow annual membership revenue by 5 percent and increase total share of membership revenue from 5 percent to 10 percent of total revenue."
+    },
+    {
+      "tag": "p",
+      "text": "In addition to paying attention to the overall number of dollars generated by your membership program, you can also analyze revenue generation by other variables. These can help you understand where your membership dollars are coming from and where you excel at generating membership revenue so you can create strategies that boost it further. Consider tracking membership revenue in the following categories:"
+    },
+    {
+      "tag": "li",
+      "text": "Segmented membership revenue metrics: These types of metrics include average contribution per member, number of members who opt for each tier (if you have membership tiers), and revenue generation by tier.These metrics can help you: Finetune your contribution levels and understand which categories of membership are generating the most revenue for you. You can collapse, expand, or combine membership tiers as you assess the performance of member-based revenue over time. A very important type of member-related revenue metric is Customer Lifetime Value. See below for more advice on using this metric.(Jump to “Designing our membership program” for more advice on pricing and tiers.)"
+    },
+    {
+      "tag": "li",
+      "text": "Time-related revenue metrics: These kinds of metrics include monthly membership revenue, quarterly membership revenue, and annual membership revenue.These metrics can help you: Assess your revenue performance against revenue goals on a monthly, quarterly, and annual basis."
+    },
+    {
+      "tag": "li",
+      "text": "Conversion-related revenue metrics: These kinds of metrics include membership revenue per source (e.g. calls-to-action on the newsletter or site), membership revenue per campaign, and membership revenue per call-to-action.These metrics can help you: Assess which membership marketing and conversionchannels are your most effective revenue drivers."
+    },
+    {
+      "tag": "p",
+      "text": "An example of an objective supported by revenue metrics might be: Grow our average contribution per member from $5/month to $10/month by changing the defaults on our pricing page."
+    },
+    {
+      "tag": "p",
+      "text": "Tracking Costs: Jump to “Making the business case for membership” for detailed advice on how to think about costs categories for membership. MPP recommends tracking ongoing costs in two broad categories:"
+    },
+    {
+      "tag": "li",
+      "text": "Staffing, technical, and overhead costs: These costs include membership staff costs (salary and benefits), technology license and maintenance costs, and any portion of staff time in software development, newsroom, or engagement that are devoted to membership work."
+    },
+    {
+      "tag": "li",
+      "text": "Direct programmatic costs: These costs are the direct costs of running a membership program and include expenses like member event management, merchandise, and fulfillment."
+    },
+    {
+      "tag": "p",
+      "text": "You can use these categories of costs to construct the following types of metrics:"
+    },
+    {
+      "tag": "li",
+      "text": "Member program related cost metrics: These types of metrics include cost per category of member and cost per benefit delivered.These metrics can help you: Assess how expensive your program’s benefits are relative to categories of membership (if you have tiered benefits) and relative to types of benefits. Breaking down costs by member and benefit type can also help you decide when a particular benefit is becoming too expensive to deliver relative to the number of members who take advantage of it, or when a particular membership tier is too costly to maintain and should be trimmed."
+    },
+    {
+      "tag": "li",
+      "text": "Time-related cost metrics: These types of metrics include monthly membership costs, quarterly membership costs, and annual membership costs.These metrics can help you: Assess your expenditures to support membership against your budgeted amounts on a monthly, quarterly, and annual basis."
+    },
+    {
+      "tag": "li",
+      "text": "Conversion-related cost metrics: These types of metrics include marketing dollars spent per member converted per source and marketing dollars spent per member converted per campaign. These kinds of costs are typically considered under the label “cost per acquisition” because they show you on a unit basis, how much you are spending to convert one member.These kinds of cost metrics can help you: Assess which membership marketing and conversion channels are most expensive and where you are spending your budget relative to where you are gaining members."
+    },
+    {
+      "tag": "p",
+      "text": "MPP turned to Matt Kiser, who founded WTF Just Happened Today and remains the sole full-time staff member, for an example of how to develop a simple metrics regime to track costs and benefits of his membership program."
+    },
+    {
+      "tag": "p",
+      "text": "In summary, Kiser tracks conversion rate, average contributions per member, and churn rate as his major pieces of “directional evidence” to determine, essentially, is this working or not? At the end of the day, it’s really about making sure revenue exceeds expenses. As long as he can predict when he’s heading for the red and can correct course with member drives, he’s all set."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "p",
+      "text": "Calculating return on investment: The final step in assessing sustainability is actually comparing revenue and cost to understand the financial return on investment of your membership program. At a high level, you can use your business model to subtract your (monthly or yearly) revenue from your (monthly or yearly) costs to get a dollar figure for the net revenue (or net cost) generated by your membership program. You can express that number as return rate by dividing your member dollars generated by the total cost of your program."
+    },
+    {
+      "tag": "p",
+      "text": "You can use the same process to understand the return on investment of particular member benefits and the return on investment of marketing membership in different conversion channels."
+    },
+    {
+      "tag": "p",
+      "text": "An example of an objective based on a return on investment might be: Generate $100,000 in net revenue from membership over the next two years by decreasing the average program cost per member and increasing our members’ average monthly contribution."
+    },
+    {
+      "tag": "p",
+      "text": "What these metrics can do for you. If you don’t have a membership program, a prospective return on investment calculation can help you decide if membership is right for you (jump to “Making the business case for membership” for more). If you have a membership program, a return on investment calculation can help you understand if the investments you’ve made in membership are paying off (if revenue is one of your objectives). Even if financial return isn’t an objective of your membership program, a return on investment calculation can be helpful to understand if you’re comfortable with the ratio of membership costs and returns."
+    },
+    {
+      "tag": "p",
+      "text": "Calculating customer lifetime value. The sustainability goal of retention is to cultivate long-term relationships with members. A member’s support becomes more and more valuable over time as their cumulative contributions add up. But how can you track this accumulation of value? Customer Lifetime Value is a metric that comes from subscription management and is one way to capture the monetary value of members over time."
+    },
+    {
+      "tag": "p",
+      "text": "Here’s a simple way to calculate CLV:"
+    },
+    {
+      "tag": "p",
+      "text": "You can calculate the average revenue per member by dividing total monthly membership revenue by total members over a 6 or 12-month period, depending on how you’re projecting."
+    },
+    {
+      "tag": "p",
+      "text": "The easiest way to calculate the average lifetime of a membership is through a simple calculation, which will tell you the average number of months a membership will last: 1 ÷ Monthly Churn Rate"
+    },
+    {
+      "tag": "p",
+      "text": "What this metric can do for you. CLV calculations bring together member revenue and member loyalty into a single metric. Writing for the Lenfest Institute, reader revenue specialist Matt Skibinski said that CLV is a valuable metric for publishers to track because it helps publishers see beyond basic traffic metrics as a way to measure success:"
+    },
+    {
+      "tag": "p",
+      "text": "“If newsrooms could view successful coverage not just as content that generates clicks, but also as journalism that delivers value to subscribers, it stands to reason that they would respond to those cues in the decisions they make day-to-day.”"
+    },
+    {
+      "tag": "p",
+      "text": "One of the hallmarks of a member-driven news organization is that audience members and paying members are able – and encouraged – to participate regularly in non-monetary ways. This is a practice MPP calls memberful routines. Such participation can be difficult to track and quantify."
+    },
+    {
+      "tag": "p",
+      "text": "However, because evidence from outside news suggests that participation deepens members’ loyalty and retention, MPP believes it is well worth the effort of trying to measure a member’s participation journey. As researcher JP Gomes told MPP, “It’s possible that participation measured in hours, rather than dollars, correlates with how connected people feel to an organization.”"
+    },
+    {
+      "tag": "p",
+      "text": "To do this, MPP recommends measuring repeat participation by audience members and paying members. You can start by paying attention to how many audience members accept your opportunities to participate, whether that’s something small like filling out a survey or a multi-hour commitment, such as helping with fact checking. MPP recommends constructing your own “participation ladder” to help you track participation, as many organizations beyond news do. Jump to “Developing memberful routines” for more on that."
+    },
+    {
+      "tag": "p",
+      "text": "But you can also take a different approach to tracking participation and attempt to value non-monetary contributions directly. How can you do this? In 2019, MPP researcher Joe Amditis explored how organizations outside news are assigning actual financial value to non-monetary contributions. The strategies below – based on his research for MPP – can help you understand the depth of a member’s relationship with your organization and help you identify potential advocates and amplifiers."
+    },
+    {
+      "tag": "p",
+      "text": "Create value estimations for yourself and your members. While a qualitative member contribution might be difficult to put a direct dollar figure on, that doesn’t mean you can’t estimate. What does a particular member contribution save in staff time, for example? Or what might you pay a freelancer or contractor for a similar contribution? The Water Environment Research Foundation created a benefit cost tool to “help people decide how to objectively evaluate the intangible benefits of a particular project or initiative,” which allows it to translate qualitative benefits into monetary value."
+    },
+    {
+      "tag": "p",
+      "text": "Devise a point system for contributions. If you don’t want to go as far as estimating a dollar value, you can also devise a separate point system that can help you track the relative and cumulative value of member contributions over time. You could even allow members (or non-members) to exchange those points for member benefits. For example, Google’s Local Guides program allows users to earn perks — such as badges, early access to Google products, or even free cloud storage — by contributing photos, videos, or other information to Google Maps. Different types of contributions are assigned point values, and the more you contribute, the more you earn."
+    },
+    {
+      "tag": "p",
+      "text": "Exchange membership for high-effort contributions. You can also exchange membership for particularly important and effortful member contributions. This puts a dollar value directly on the efforts of contributions because you know the price (and cost) of a membership. If you want to try this strategy, consider the time, resources, and know-how that would constitute a membership-worthy contribution, and offer avenues for participation along those lines. Maldita in Spain considers audience members who have volunteered their expertise to help them fact check misinformation to be members, alongside those who offer Maldita recurring financial support."
+    },
+    {
+      "tag": "h3",
+      "text": "How Maldita enlists members’ ‘superpowers’ to fact check"
+    },
+    {
+      "tag": "p",
+      "text": "Maldita weeds out trolls trying to wreck their fact checking by asking respondents to upload proof of their credentials."
+    },
+    {
+      "tag": "p",
+      "text": "As you work on your own membership goals and definitions of success, you may be curious about how other newsrooms are tackling those same questions. The Membership Puzzle team sent out surveys to 46 member-driven newsrooms to help answer this question. The research team’s goal was to understand, broadly speaking, how member-driven newsrooms around the world define their membership program’s mission and success. In total, MPP received 40 responses to the Defining Membership Goals and Successes Survey, one of three surveys the research team administered."
+    },
+    {
+      "tag": "p",
+      "text": "MPP asked our set of surveyed newsrooms, “What is the mission or purpose of your membership program?” The survey question format was multiple choice, and we asked respondents to select all options that applied. MPP gave the following options:"
+    },
+    {
+      "tag": "li",
+      "text": "increase loyalty of readership"
+    },
+    {
+      "tag": "li",
+      "text": "increase revenue"
+    },
+    {
+      "tag": "li",
+      "text": "increase engagement with audiences"
+    },
+    {
+      "tag": "li",
+      "text": "build community"
+    },
+    {
+      "tag": "li",
+      "text": "support our journalism with story ideas or sources from the community"
+    },
+    {
+      "tag": "p",
+      "text": "The vast majority of respondents – ninety-seven percent – selected “build community” and “increase revenue” as primary missions for their membership program.  Not far behind, “increase engagement with audiences” came in at 86 percent. Other goals included “increasing loyalty of readership” (63%) and to support journalism with story ideas or sources from the community (63%)."
+    },
+    {
+      "tag": "p",
+      "text": "Interestingly, roughly a quarter of respondents to this question said the mission of their membership program changed over time. When asked why, the overarching theme was that newsrooms started off with membership as a purely transactional process, but later realized that revenue was a by-product of cultivating community and audience engagement."
+    },
+    {
+      "tag": "p",
+      "text": "See below for a few interesting responses that highlight this theme:"
+    },
+    {
+      "tag": "li",
+      "text": "“Even though our content has always been free, the program used to be very transactional. Now it is more focused on involvement and a sense of community.”"
+    },
+    {
+      "tag": "li",
+      "text": "“The initial motivation for membership was reader revenue, but in the planning phase, it became clear that for it to be successful, financial results had to be a successful by-product of building the community.”"
+    },
+    {
+      "tag": "li",
+      "text": "“We’ve learned that membership to our audience isn’t about buying a product, it’s about supporting the work we do.”"
+    },
+    {
+      "tag": "p",
+      "text": "In addition to defining program mission, MPP also asked respondents: “how do you define ‘success’ for your membership program?” Our research team categorized each response into a set of key themes that emerged, and found that the top response was to “see a growth in number of members.”"
+    },
+    {
+      "tag": "p",
+      "text": "The second most common definition of success was to have membership become a larger source of revenue, and third was to see indicators that the membership program is building an engaged community that is valuable for both the members themselves and the newsroom’s journalists."
+    },
+    {
+      "tag": "p",
+      "text": "MPP asked newsrooms which metrics they track in order to assess the success of their membership program (and asked survey respondents to select all metrics that they use)."
+    },
+    {
+      "tag": "p",
+      "text": "The top two metrics were, naturally, total number of members and revenue earned from members. See below for a full breakdown of the results."
+    },
+    {
+      "tag": "figcaption",
+      "text": "The metrics member-driven newsrooms track in order to assess the success of their membership program"
+    },
+    {
+      "tag": "p",
+      "text": "MPP then asked “Out of the metrics you selected, which metrics most help you know whether you are on track to reaching the primary goal for your membership program?” We asked survey respondents to select up to three metrics."
+    },
+    {
+      "tag": "p",
+      "text": "Here are the top-five metrics that member-driven newsrooms use to make sure they’re on track:"
+    },
+    {
+      "tag": "li",
+      "text": "Total number of active members"
+    },
+    {
+      "tag": "li",
+      "text": "Revenue earned from members"
+    },
+    {
+      "tag": "li",
+      "text": "Number of new members acquired per month"
+    },
+    {
+      "tag": "li",
+      "text": "Number of new members acquired in past 365 days"
+    },
+    {
+      "tag": "li",
+      "text": "Annual and monthly retention of members"
+    },
+    {
+      "tag": "p",
+      "text": "MPP observes here that member-driven newsrooms are also paying close attention to audience data, such as overall site traffic, that didn’t necessarily help them identify whether they were achieving their membership objectives. MPP believes that while newsrooms can focus on both audience growth and member conversion at the same time, if growing your membership program and developing memberful routines are top priority, newsrooms should focus on setting objectives that reflect that."
+    },
+    {
+      "tag": "p",
+      "text": "In addition to looking at more quantitative metrics, MPP also asked member-driven newsrooms, “Which markers, or qualitative indicators, do you notice or track when assessing the success of your membership program? (Please select all that apply)”"
+    },
+    {
+      "tag": "p",
+      "text": "The primary response (97%) was “The encouraging and nice emails and letters you get from your members, or the angry and upset notes you get when someone asks to unsubscribe.” Forty-two percent of respondents said they look to whether members are carrying out calls-to-action, such as showing up to an event, asking questions at an event, or participating in other less-measurable ways in-person or off-platform."
+    },
+    {
+      "tag": "p",
+      "text": "See below for the full breakdown of results."
+    },
+    {
+      "tag": "figcaption",
+      "text": "The markers, or qualitative indicators member-driven newsrooms notice or track when assessing the success of their membership program"
+    },
+    {
+      "tag": "p",
+      "text": "As you compare your goals, definitions of success, and chosen metrics and markers to those of other newsrooms, you may also want to compare your stats to industry benchmarks."
+    },
+    {
+      "tag": "p",
+      "text": "Digital member-driven newsrooms still struggle to find peers to measure themselves against, particularly outside the U.S. Public media and subscription-based publications are useful but imperfect points of comparison. So, as part of this research effort, the Membership Puzzle Project research team set out to compare the key performance indicators of member-driven newsrooms around the world."
+    },
+    {
+      "tag": "p",
+      "text": "Because of the diversity of responses in our data set, the survey results are a robust snapshot of the range of membership efforts underway in news, but MPP cannot yet offer definitive membership benchmarks. If you want to see some preliminary answers, you can see a summary of MPP’s initial results."
+    },
+    {
+      "tag": "p",
+      "text": "There are also several existing sources of benchmarking data that can be used to assess the success of your membership program. Below, MPP summarizes some major datasets that track and report on member data. The research team recommends searching for examples of newsrooms that you think are on a similar growth plan, or have a similar set of resources, to your own."
+    },
+    {
+      "tag": "p",
+      "text": "The News Revenue Hub: One excellent source for benchmarking is the News Revenue Hub, which works largely with North American digital newsrooms. Browse their full set of reports (mainly focused on learnings from their set of clients), including this post on how audience impacts membership revenue."
+    },
+    {
+      "tag": "p",
+      "text": "Public media support organizations: As the earliest practitioners of membership in news, public media is another excellent source for benchmarks. See “To build and engage your audience, consider these core metrics for measuring success” for insights into recommended metrics to watch to grow audience. Look to organizations such as Greater Public and the industry news outlet Current for more."
+    },
+    {
+      "tag": "p",
+      "text": "The Institute for Nonprofit News: INN serves North American nonprofit newsrooms. They produce an annual INN Index, which contains a mix of audience and revenue benchmarks across their 80+ newsroom members."
+    },
+    {
+      "tag": "p",
+      "text": "The annual M+R Benchmarks report: M+R is a digital strategy consulting firm that specializes in mission-driven organizations. Their annual report contains benchmarks (predominantly fundraising data) from a mix of nonprofits, largely outside the news industry, although it includes public media stations. Because membership is a cause-driven relationship, it likely has more in common with philanthropic giving behavior than transactional behavior (such as paying for a Netflix subscription). This is why MPP believes that fundraising data for causes and cause-driven non-media organizations can provide useful benchmarks for member-driven newsrooms."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "h3",
+      "text": "How Chalkbeat defined and measured membership success"
+    },
+    {
+      "tag": "p",
+      "text": "They started with four hypotheses about what implementing membership could do for Chalkbeat."
+    },
+    {
+      "tag": "h3",
+      "text": "How Bridge Michigan tested its way to membership growth"
+    },
+    {
+      "tag": "p",
+      "text": "They designed a set of targeted experiments at every stage of the audience funnel."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent keeps its commitment to collecting  minimal data"
+    },
+    {
+      "tag": "p",
+      "text": "They invest heavily in collecting qualitative insights volunteered by members instead of funneling up quantitative data."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Growing Membership"
+    }
+  ]
+}

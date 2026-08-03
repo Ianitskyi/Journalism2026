@@ -1,0 +1,483 @@
+{
+  "url": "https://membershipguide.org/handbook/planning-your-membership-move/making-the-business-case-for-membership/how-should-we-calculate-our-universe-of-potential-members",
+  "title": "How should we calculate our universe of potential members? | The Membership Guide",
+  "h1": "Making the Business Case for Membership",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "This section addresses the topic of membership and money. What revenue can you expect from a membership program? What costs should you plan for before you decide to launch a membership program?First, a reminder. Membership is more than just a piece of a revenue pie. Membership is a relationship between a newsroom and its supporters that treats audience members as core participants and stakeholders. This relationship is supported by memberful routines, which MPP has found are a critical component of a membership strategy. Members can also be a source of revenue support, as they are in most member-driven newsrooms MPP has studied. In order for that revenue strategy to work, you need to understand what scale of investment (and ongoing cost) is required and what scale of returns you can expect.Here’s a second reminder: compared to subscriptions, membership in news is still a relatively new model and a relatively new revenue strategy. The Institute for Nonprofit News’ 2019 Index Report, which aggregates data from its 108 member newsrooms based in North America, found that only a third of its newsrooms reported having a membership program in 2018. About two-thirds of those membership programs are quite young: three years old or younger and have fewer than 1,000 members. Membership is even more nascent in Latin America, Africa, and Asia.Keep this in mind: the value proposition and business model for membership are different from the value proposition and business model for subscription. In a subscription model, audience members pay for access to a product or service. It is a transactional relationship in which access to the content is what is monetized. This model typically requires a paywall of some kind. An open question remains whether membership will follow charitable giving trends or subscription trends in terms of revenue growth across newsrooms. The industry does not yet have the data to definitively answer that question, although the research team sees a lot of reasons for hope and opportunity for membership revenue growth. One exciting trend MPP has identified in its work with newsrooms is that, unlike what we are seeing with subscriptions, the membership ceiling has not yet been reached. Some successful member-driven newsrooms are leaning into a strong distinction between membership and subscription in their value proposition and marketing. The Daily Maverick in South Africa implemented a “pay-what-you-can” model, partially to tilt supporters’ minds toward charitable causes when considering joining. CEO Styli Charalambous wrote: “Subscription fatigue is a thing, and publishers in South Africa have to compete with the New York Times for a slice of people’s subscription budget.… But people can and do support multiple good causes that resonate with them. We wanted to convey our cause that was worthy of support alongside the Society for the Protection of Animals, National Sea Rescue Institute, or educational development programmes.”In this section, we focus on financial planning and forecasting for membership, which should help your newsroom decide whether or not to pursue membership, whether to stick with membership, or whether to invest more resources into membership to continue building it as a source of sustainability."
+    },
+    {
+      "tag": "p",
+      "text": "If you are starting a membership program from scratch, often the first thing you want to figure out is the range of member revenue you can reasonably expect to generate. Is it $30,000? $300,0000? Modeling revenue requires estimating how many members you can expect, paying what level of membership. To begin, you need to estimate how many members you can reasonably expect to attract by calculating your total addressable market."
+    },
+    {
+      "tag": "h3",
+      "text": "Calculate your total addressable audience."
+    },
+    {
+      "tag": "p",
+      "text": "Calculating your total addressable audience starts with understanding some basic demographics of the community you are seeking to serve: How many adults over the age of 18? How many households? What is the average income and employment level in your community?"
+    },
+    {
+      "tag": "p",
+      "text": "For example, if you are a newsroom serving a particular city, you can start a calculation of total addressable audience by pulling census or similar data on population size for 18+ year old people living in your city. If you serve a particular demographic group, age group, or neighborhood, you’ll want to narrow in on what percentage of the population they make up in the geographic area you’re covering."
+    },
+    {
+      "tag": "p",
+      "text": "If you are a newsroom that reports on a particular topic, this is a bit more complicated, but you can likely start by looking at industry data on how many people work in a field that your reporting might cover, or looking at membership numbers in professional associations in your field."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan and Content provided by Corporate Finance Institute"
+    },
+    {
+      "tag": "p",
+      "text": "Obviously not everyone in your total addressable audience will read your journalism. It’s likely only a small percentage will. According to the annual Digital News Report, 28 percent of readers worldwide prefer to get their news online. (In the U.S., that number is 37 percent) This rate will vary across communities, but you could use that preference rate to get a rough calculation of the universe of adults in your community whom you could hope to reach."
+    },
+    {
+      "tag": "p",
+      "text": "Combining estimated news consumption rates with some basic demographic data on your community will help you get to an addressable audience estimate."
+    },
+    {
+      "tag": "p",
+      "text": "Let’s say you are a local news site in the U.S. serving a city of 200,000 and 80 percent are over the age of 18. So there are 160,000 adults in your city, and 37 percent of them, or 59,200 people, likely prefer to get their news online. That means your total addressable market is 59,200 people. (You could make a more conservative estimate by looking at the number of households rather than the number of adults.)"
+    },
+    {
+      "tag": "p",
+      "text": "Your total addressable audience calculation is what is called in marketing terms the “top of the funnel” – the maximum number of people you can reasonably expect to reach. The point of marketing (and relationship-building) is to get those potential readers from the top of your funnel into successive stages of a deeper relationship with you, in this case into membership."
+    },
+    {
+      "tag": "p",
+      "text": "In order to estimate membership revenue, you need to make some informed guesses about how effective you can be at getting the attention of people in your community and then building a closer relationship with them. That means you’ll need to make some assumptions about what your audience funnel is going to look like."
+    },
+    {
+      "tag": "p",
+      "text": "With your total addressable market calculation in hand from the previous section, there are a number of steps you can take next to model your audience conversion funnel and ultimately estimate revenue. One option is to model web users; another option is to model newsletter subscribers."
+    },
+    {
+      "tag": "p",
+      "text": "Use your total addressable audience to estimate monthly unique users and site visits. If you are a startup newsroom with no audience yet, you can use your total addressable market calculation to estimate how many web users you can expect at the top of your funnel. (If you’re already publishing, you can just use your existing monthly uniques). To estimate web users at the top of your funnel, first decide how conservative you want to be in your estimates of how many potential digital news readers you can attract to read an article on your site. For example, you could estimate that 25 percent to 75 percent of the digital-news-reading adults in your community would actually find your site and read articles regularly."
+    },
+    {
+      "tag": "p",
+      "text": "Let’s return to our earlier example from the previous section (in summary: you are a local news site serving a city of 200,000 and a total addressable market of 59,200 people). If 75 percent of those adults found you, that would give you an upper limit of 44,400 monthly unique users."
+    },
+    {
+      "tag": "p",
+      "text": "If you assume that 50% of those readers who found you became regular readers of your site and visited you twice a week, that would give you (22,200 + (22,200*2*4)) ~ 200,000 monthly site visits. That gives you 200,000 chances per month to bring a user further down your conversion funnel. (Jump to “Developing membership metrics” for more on measuring repeat activity as indicators of loyalty and membership.)"
+    },
+    {
+      "tag": "p",
+      "text": "Use monthly site visits to estimate newsletter subscribers. One of the most high-performing  pathways to membership, particularly for more traditional newsrooms, is via newsletter subscription. If you are a news site with a robust digital audience already, you can use your monthly site visits to estimate a goal for your newsletter subscribers, and from there calculate your membership potential. There are some early industry benchmarks in the U.S. for how many monthly site visits you can expect to convert to newsletter subscriptions. Among News Revenue Hub newsrooms, 8 percent of monthly website visits turn into newsletter subscriptions. If we go with 8 percent in this example: at an 8 percent newsletter subscription rate, with 200,000 monthly site visits, you could expect to convert (over time) up to 16,000 readers from your website to your newsletter list."
+    },
+    {
+      "tag": "p",
+      "text": "Use newsletter subscribers to estimate your number of members. Getting a site visitor to become a newsletter subscriber is an important step toward gaining a member. But, of course, not all newsletter subscribers will become members. So, how can you model this step?"
+    },
+    {
+      "tag": "p",
+      "text": "Modeling the transition from newsletter subscriber to member involves making an assumption about newsletter conversion rates. The Facebook Local News Subscriptions Accelerator Program reported that publishers might expect to convert five to 10 percent of email subscribers to paying subscribers. For small and mid-sized newsrooms in the U.S., News Revenue Hub reports that among their clients, a good conversion rate to membership from newsletters is 7 percent. Suppose we go with a 7 percent conversion rate for this example: if you have an overall target of 16,000 on your newsletter list, you should expect to have, over time, 1,120 members. Strong editorial products and significant investment in memberful routines could lead to a higher conversion rate for your organization."
+    },
+    {
+      "tag": "p",
+      "text": "Calculating these audience and member estimates is not just useful for calculating revenue projections. They can be useful for setting goals for loyalty-building editorial products and your membership program. (Jump to “Adopting a product mindset” for more on setting goals.)"
+    },
+    {
+      "tag": "p",
+      "text": "A caveat on how quickly you can expect to reach your member target. There is no magic formula for the timeframe in which you should expect to reach that member target. How quickly you meet (or exceed) your member target depends on a number of factors: how clearly you articulate and deliver your membership value proposition, how effectively you launch your membership program,  how effectively you can market and grow your membership program, and how effective you are at retaining members. See those sections of the Handbook for more."
+    },
+    {
+      "tag": "p",
+      "text": "MPP does have some data to offer on newsrooms’ member yield in the first year of membership. According to data collected as a part of the Membership Puzzle Project’s Defining Membership Goals and Successes Surveys from 40 member-driven newsrooms around the world,  ~1,000 members is right around the median number of members most member-driven newsrooms reported having in their first year after launching a membership program. (Two things to note here: there were some outliers reporting several thousand members, usually from larger, more mature newsrooms, and we defined membership in the survey question as “individuals who contributed between $1 – $5,000 to your organization in the last 365 days”)."
+    },
+    {
+      "tag": "p",
+      "text": "When we asked the same set of respondents how many members they have in the past 365 days (as of the date of taking the survey over this past summer 2020), our set of newsrooms reported a median of 2,668 members and an average of 10,223 members. Jump to “Developing membership metrics” for more information on the methods and results from MPP’s Defining Membership Goals and Successes Survey."
+    },
+    {
+      "tag": "p",
+      "text": "The revenue you can expect to generate from membership will be heavily dependent on your pricing model and pricing tiers. You should consider your pricing model options and then, if possible, conduct audience research to test pricing tiers. Taking these two steps before you model revenue will help ensure your membership business model is robust."
+    },
+    {
+      "tag": "p",
+      "text": "After surveying dozens of newsrooms about their pricing strategy, MPP suggests one or a combination of the following strategies for determining your own."
+    },
+    {
+      "tag": "li",
+      "text": "Looking horizontally to other membership organizations that are geographically close or mission-aligned"
+    },
+    {
+      "tag": "li",
+      "text": "Asking your audience members what other causes they support and how much"
+    },
+    {
+      "tag": "li",
+      "text": "Studying the range of contributions to previous crowdfunding or donations campaigns"
+    },
+    {
+      "tag": "li",
+      "text": "Launching with multiple options, or a pay-what-you-can option, and studying the patterns that emerge"
+    },
+    {
+      "tag": "p",
+      "text": "Consider your pricing model options. There are many options to consider for pricing models. Some member-driven newsrooms, like Denverite, let all members choose exactly how much they would like to pay and whether they would like to pay that amount monthly, annually, or one-time. Most member-driven newsrooms have membership tiers that are priced at specific levels, whereas others like CALMatters in California define ranges and spell out member benefits within each broad range. MPP has also followed with great interest the Daily Maverick’s “pay-what-you-can” model, which is coupled with a suggested monthly amount. Look at the “individuals fund work” column of the Membership Puzzle Project database for a more complete list of pricing structures."
+    },
+    {
+      "tag": "p",
+      "text": "It can also be helpful to look at publicly available benchmark data to get a sense of reasonable pricing, like the below table from INN’s 2019 Index report which shows an average member donation of $72 per year. Because MPP recommends encouraging your members to become monthly recurring members, you would divide $72 by 12 to end up with a minimum monthly reference price of $6. (Jump to “Retaining members” for more on smart payment defaults.)"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of INN’s 2019 Index Report"
+    },
+    {
+      "tag": "p",
+      "text": "Set your membership prices. Pricing discussions can be the most daunting part of designing a membership program, especially for smaller organizations who don’t have a business-side team. Much of the advice on pricing is incredibly complex and designed for larger, more corporate entities."
+    },
+    {
+      "tag": "p",
+      "text": "Most pricing research language puts support for journalism in a transactional frame, putting your membership program in competition with one-way transactions like Netflix subscriptions. But pricing membership is actually about understanding both the value of your work to someone and how much they value ensuring other people can access it."
+    },
+    {
+      "tag": "p",
+      "text": "This philanthropic giving impulse can be tricky to put a monetary value on. You may need to test out different prices until you find the intersection between your financial needs and your members’ ability to give."
+    },
+    {
+      "tag": "p",
+      "text": "The decades-old Van Westendorp Price Sensitivity meter is the go-to method in the audience revenue space for assessing a price your audience members will find palatable. But for smaller organizations the Van Westendorp meter might be overly complex and could come across as too corporate. Asking audience members to complete it in a survey could undermine the sense of community that motivates many members. It is mentioned here because Membership Puzzle Project is often asked about pricing strategy in the subscription space, but MPP doesn’t necessarily suggest this for your newsroom."
+    },
+    {
+      "tag": "p",
+      "text": "Sebastian Esser, CEO of membership platform Steady, says that organizations tend to underprice dramatically. This was the case at Krautreporter in Germany, which he also founded. Krautreporter raised its prices in December 2019 for the first time, and said that they received no pushback or cancellations in response to the price increase."
+    },
+    {
+      "tag": "p",
+      "text": "El Diario in Spain took a fairly straightforward approach when they launched their membership program in 2012 – they looked across the media landscape and set their own membership price (€60 a year at launch) in between the more expensive subscription-based legacy publications and the less expensive digital journalism organizations. When they launched, their membership program quickly gained traction, with little pushback on the price. El Diario has almost 60,000 members today. In spring 2020, they raised their price for the first time, to €80 a year, but experienced no dropoff in membership as a result."
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick used a donations campaign to test several of its assumptions about membership, including what people would be willing to give if it was left open-ended and what would happen if they changed the default amount. They found that even when given the option of giving the bare minimum required – the cost of a credit card transaction, essentially – few people took that choice."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick designed a pay-what-you-can model"
+    },
+    {
+      "tag": "p",
+      "text": "A well-targeted benefit nudges those who can afford to contribute more to do so, while keeping membership accessible for all."
+    },
+    {
+      "tag": "p",
+      "text": "The Dispatch, a conservative news startup in the U.S., launched in October 2019 with a lifetime membership option priced at $1,500. They used their annual membership price of $100 as the baseline, framing it as, essentially: “if you believe in fact-based reporting and analysis informed by a center-right perspective, join us as a Lifetime Founding Member to give our efforts a jump-start.” They had hoped they would get 300 lifetime members, but they had 450 in July 2020."
+    },
+    {
+      "tag": "p",
+      "text": "Let’s say you have followed the steps in the “how many members can we expect” section and have a goal of attracting 1,120 supporting members from your community. You’ve chosen a pricing model and done adequate audience research to test your early assumptions on pricing. Now you can calculate how much revenue you can expect to generate from those members."
+    },
+    {
+      "tag": "p",
+      "text": "Calculating membership monthly or annual revenue from an estimated number of members is a straightforward calculation. You take an estimate of your average donation per member and multiply it by the number of members. If you are designing your membership program to bring in an average donation of $10/month or $120/year per member, that means the total membership revenue you can expect from 1,120 members is $134,400."
+    },
+    {
+      "tag": "p",
+      "text": "There are other tools and methods to estimate membership revenue. The methods we offered so far are just one approach. For example, Steady offers these guidelines for modeling revenue:"
+    },
+    {
+      "tag": "p",
+      "text": "“The amount you can earn depends on the size of your community. Your community includes people who follow your project, wait for your updates and can contact you digitally or personally. By estimating the size of your community, you can work out how much money you could earn using Steady: (number of community members * 0.05) * (average membership fee) = possible revenue. An average membership price on Steady is around €5 per month. Using this example, in order to reach a goal of €1,000 a month, you’ll need to reach at least 4,000 community members with your campaign.”"
+    },
+    {
+      "tag": "p",
+      "text": "The research team recommends this tool from Steady to project member revenue. You’ll need to enter in a few numbers, like the smallest monthly amount of money you will take for someone to become a member, the average contribution you estimate (or set), monthly churn, and the percentage of your engaged community that become a member. If you’re just starting out and don’t know what your churn will be, MPP recommends putting 5 percent per month, which is a conservative estimate among membership organizations."
+    },
+    {
+      "tag": "p",
+      "text": "In this example, you can see that Steady has a €5 euro/month average price across their 300 clients (most of which aren’t news organizations), a 2.5 percent average monthly churn, and that 5 percent of their “engaged” community converts to paid members."
+    },
+    {
+      "tag": "p",
+      "text": "For another example, see how Canadian publisher Indiegraf uses a process similar to MPP’s for calculating how much revenue an indie local news publisher in Canada can expect."
+    },
+    {
+      "tag": "p",
+      "text": "Mature small-dollar-supported digital newsrooms in the U.S. like the Texas Tribune, VTDigger, and Mother Jones bring in between a fifth and a third of their revenue from small givers, many of whom are members. Some younger member-driven digital newsrooms have also been able to reach this level of 20 percent to 33 percent revenue support from membership, while many public radio organizations in the U.S. have grown a revenue model that is supported by one third membership, one third major giving, and one third underwriting and other support. In MPP’s dataset of 40 member-driven newsrooms around the world, six newsrooms saw membership contribute between 20 percent and 35 percent of their total revenue."
+    },
+    {
+      "tag": "p",
+      "text": "A robust membership program can also become the basis for other revenue streams. If you’re new to membership, the research team does not recommend building offshoot revenue into your business model. However, if you have a growing or mature membership program, it can be worth thinking about how to leverage your membership program into other revenue streams."
+    },
+    {
+      "tag": "p",
+      "text": "You could consider working with a local university or other large institutional partner to create an institutional membership tier, as Frontier Myanmar did. Their small institutional membership includes five logins per account, while the large institutional membership includes 20 logins. Although most of Frontier’s members are individual members (with one login), as of July 2020, they had 16 small institution members with 93 logins total, and three large institution members with another 60 logins. This is a particularly promising tactic in contexts where individuals’ ability to pay for news may be limited, but there is a robust non-governmental organization (NGO) sector, as is the case in Myanmar."
+    },
+    {
+      "tag": "p",
+      "text": "You could also strike up paid partnerships or other forms of sponsorship based on a strong relationship with your members. That’s what Black Ballad in the U.K. has done with its editorial campaigns, which center Black British women’s challenges and opportunities, as identified in robust member surveys."
+    },
+    {
+      "tag": "h3",
+      "text": "How Black Ballad turns member surveys into new revenue streams"
+    },
+    {
+      "tag": "p",
+      "text": "Their goal is to be the one who knows the Black British professional woman better than anyone else – and to monetize that knowledge."
+    },
+    {
+      "tag": "p",
+      "text": "For more on how mission-driven newsrooms can leverage their audiences for sponsorship and advertising partnerships, see this case study on Madison365 and this one on the San Antonio Report."
+    },
+    {
+      "tag": "p",
+      "text": "Creating a robust business model for membership requires attending to both the revenue and cost sides of a program. In doing any financial modeling for membership, it’s important to plan for two types of costs:"
+    },
+    {
+      "tag": "p",
+      "text": "Start-up costs. If you are launching a new membership program, these are the costs associated with setting up the technical systems and people that will support membership. In this category you should also plan for the one-time marketing and branding activities that will contribute to your launch. Special launch merchandise, fulfillment, and paid marketing would fall into this category."
+    },
+    {
+      "tag": "p",
+      "text": "On-going costs. Once your membership program is launched, you will have a set of ongoing costs associated with keeping your program running smoothly. Some of those costs will be easy to attribute to membership: the salary and benefits of your membership support staff, for example, or membership merchandise and fulfillment. Some of these costs however, like software development and CRM maintenance, will support both newsroom operations and your membership program. To really understand your membership business model, MPP recommends estimating the percent of the total effort/usefulness of shared resources that are going to support membership. You can use that allocation estimate to calculate a fractional cost, and then add that cost to your membership business model."
+    },
+    {
+      "tag": "p",
+      "text": "As you get your program up and running, you can also usefully categorize your costs into staffing, technical, and overhead costs; and direct programmatic costs."
+    },
+    {
+      "tag": "p",
+      "text": "Staffing, technical, and overhead costs: These costs include membership staff costs (salary and benefits), technology license and maintenance costs, and any portion of staff time in software development, newsroom, or engagement that are devoted to membership work."
+    },
+    {
+      "tag": "p",
+      "text": "Direct programmatic costs: These costs are the direct costs of running a membership program and include expenses like member event management, merchandise, and fulfillment."
+    },
+    {
+      "tag": "p",
+      "text": "It is useful to categorize and track these types of costs as you model membership and as you manage your program because it will help you understand how your direct costs are contributing to your membership revenue over time. If your program becomes expensive to run with its direct costs and you aren’t seeing a revenue bump from membership, it might be time to reassess your benefits and see if you can convert, engage, and fulfill just as many members with fewer bells and whistles."
+    },
+    {
+      "tag": "p",
+      "text": "You can use these categories and the costs below, along with other sections of the guide (Jump to “Designing our membership program“; “Staffing our membership strategy“; “Building our tech stack”) to create a detailed list of what costs to plan for in setting up and running your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Staffing and technical costs are usually the largest category of membership-related costs. This section will help you understand and plan for those costs in your business model."
+    },
+    {
+      "tag": "p",
+      "text": "Staffing costs. Your staffing costs will depend on how you staff membership and membership-related activities. Jump to “Staffing our membership strategy” and use the information there to create a staffing plan for membership. Consider:"
+    },
+    {
+      "tag": "li",
+      "text": "How many full-time employees do you want to devote to running the various components of your membership program?"
+    },
+    {
+      "tag": "li",
+      "text": "If you don’t have a full-time staff member for membership, where will you allocate time from other staff?"
+    },
+    {
+      "tag": "p",
+      "text": "The important thing to keep in mind is that the tasks required to run a successful membership program are sometimes allocated to a single person within a newsroom, and sometimes allocated as multiple, part-time jobs across several staff members. Even in the leanest membership model, membership is likely half of one full-time person’s job, and they are likely outsourcing some other components of membership work to a firm or consultant. Many member-driven newsrooms choose to pay for marketing and tech services that allow them to outsource some of the duties and tasks required to run a successful membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Throughout the cases featured in this handbook, the MPP research team has found that successful membership models in mid-sized and growing newsrooms typically have at least one full-time employee dedicated to membership, or the equivalent of a full-time employee working on a combination of membership and audience engagement."
+    },
+    {
+      "tag": "p",
+      "text": "You can also staff some of your start-up tasks with freelancers. Freelance designers, marketing consultants, and software developers can be especially helpful in the launch stage and in creating and executing targeted membership campaigns."
+    },
+    {
+      "tag": "p",
+      "text": "Technology and technical services costs: Jump to “Building our membership tech stack” for an extensive list of the software and tools you need to run a membership program. Lenfest Institute also created a pricing sheet of publicly available pricing data. Use this to come up with the start-up and ongoing costs of supporting your membership program with technology, and don’t forget to account for price increases as your membership program grows. As you project costs for tools and technical services, be sure to take account of the bank and credit card processing fees that might be associated with your payment processor."
+    },
+    {
+      "tag": "p",
+      "text": "Membership programs require more than investments in people and technology. They also require a series of ongoing investments in programmatic elements – events, content, marketing, merchandise – that add to the member experience. Use the information below as a guide to help you plan for the programmatic costs of running a membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Member events: Many member-driven newsrooms hold member-only events as part of delivering on their membership value proposition. You can lower the direct costs of an event by hosting them in your newsroom space or in a free space. Costs rise when you provide experiences like swag, food, and beverages."
+    },
+    {
+      "tag": "p",
+      "text": "Many member-driven newsrooms get sponsors to help offset the costs of hosting an event in exchange for a marketing and branding opportunity. San Antonio Report (previously the Rivard Report) in San Antonio, Texas, earned 7 percent of its 2019 revenue from event sponsorships."
+    },
+    {
+      "tag": "p",
+      "text": "At the time of publication, the impacts of COVID-19 prohibit many newsrooms from hosting in-person events, so many newsrooms are experimenting with virtual events. When planning to host virtual events, consider the pricing of video technology like Zoom, which starts at $15 per month per host for their “Pro” plan that allows for meetings longer than 40 minutes. Outride.rs in Poland took its festival online in spring 2020 and documented every step of that process, including what software was worth investing in and what they felt was unnecessary."
+    },
+    {
+      "tag": "p",
+      "text": "Member content and access benefits: Many newsrooms provide a member-only newsletter or member-only web page, or let loyal members meet with staff or newsroom leadership. (Jump to “Designing our membership program” for a list of common benefits)"
+    },
+    {
+      "tag": "p",
+      "text": "For these types of benefits, which are low in actual costs, don’t forget to consider the cost of your newsroom staff’s time and to weigh that against member participation and other value the event might provide. Calculate the cost of staff time by estimating the percentage of staff time spent on membership-related activities (at either individual or team level), and using that percentage to allocate a portion of overall staff costs to membership."
+    },
+    {
+      "tag": "p",
+      "text": "If the benefit requires involvement from more than your membership staff, as might be the case with a newsroom meet-and-greet or a member-only newsletter with reporter contributions, be sure to account for the portion of news staff time devoted to membership content, using the same method as above."
+    },
+    {
+      "tag": "p",
+      "text": "Member merchandise and swag: The MPP research team has consistently heard from the newsrooms it’s studied that merchandise and swag are not a primary reason their members join. However, swag can serve an important purpose in reinforcing your brand identity and providing a sense of affiliation. (For more on the pros and cons of using swag as a benefit, jump to “Designing our membership program”)."
+    },
+    {
+      "tag": "p",
+      "text": "The direct costs and time spent on fulfillment – the packaging and delivery of swag – can quickly spiral. For the purpose of business model creation, planning for merchandise and swag falls into two categories: the cost of the items/experiences themselves; and the cost of fulfillment. Here are questions to answer as you source and price out items."
+    },
+    {
+      "tag": "p",
+      "text": "Sourcing and costing"
+    },
+    {
+      "tag": "li",
+      "text": "How do you assess and decide on the quality of materials you want?"
+    },
+    {
+      "tag": "li",
+      "text": "How do you spot a good vendor?"
+    },
+    {
+      "tag": "li",
+      "text": "How do you make sure you don’t order more than you need?"
+    },
+    {
+      "tag": "li",
+      "text": "What are some best practices for branding?"
+    },
+    {
+      "tag": "li",
+      "text": "How should you think about per-unit costs?"
+    },
+    {
+      "tag": "p",
+      "text": "Fulfillment"
+    },
+    {
+      "tag": "li",
+      "text": "What are some things to keep in mind about packaging?"
+    },
+    {
+      "tag": "li",
+      "text": "What are some things to keep in mind about managing shipping?"
+    },
+    {
+      "tag": "li",
+      "text": "What is a reasonable turnaround time for fulfillment?"
+    },
+    {
+      "tag": "p",
+      "text": "Fulfillment consistently flummoxes newsrooms who underestimate the costs in staff time associated with it. But assessing how much swag costs you beyond the actual production costs is simple. The Narwhal in Canada decided to hire a person to manage swag fulfillment after estimating how much staff time it would take and multiplying that by the hourly compensation of the staff members who would do it. It was immediately clear that it was more cost effective to bring someone on to do it on an hourly basis and free up the staff’s time to do things only they could do."
+    },
+    {
+      "tag": "p",
+      "text": "Even in a single-person newsroom like WTF Just Happened Today, it’s important to go through cost projection and accounting. Founder Matt Kiser walked the research team through how he budgets his small but mighty publication."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "p",
+      "text": "Keep this in mind: membership is not a silver bullet for solving the revenue crisis in journalism. It is also a relatively new strategy. In the Institute for Nonprofit News’ 2019 Index Report that included a mix of both newsrooms with and without membership programs, only about 10 newsrooms in the survey reported generating 10 percent or more of their total newsroom revenue from member contributions in 2018."
+    },
+    {
+      "tag": "p",
+      "text": "On the flip side, the research team has also seen several examples of astronomical success with membership as a driver of major revenue. To name just a few standouts:"
+    },
+    {
+      "tag": "li",
+      "text": "El Diario reported 35% of its revenue coming from membership before COVID-19 struck in March (and 65% from advertising). As of this past May, the organization now reports making more revenue from members than advertising and predicts that this will continue."
+    },
+    {
+      "tag": "li",
+      "text": "VT Digger’s membership program grew from bringing in almost $10,000 in 2010 (a year after its founding) to nearly $330,000 in revenue in 2017. Below, see how their revenue pie progressed from 2010 to 2016. See this VTDigger case study from the Institute for Nonprofit News for more."
+    },
+    {
+      "tag": "li",
+      "text": "De Correspondent brought in 78% of its revenue from membership in 2018 and 54% percent in 2019 (when combined with other forms of reader revenue such as book sales and donations, total revenue from readers was 95 percent in 2018 and 98 percent in 2019)"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of the Institute for Nonprofit News and Shorenstein Center’s Case on VT Digger, 2018."
+    },
+    {
+      "tag": "p",
+      "text": "In the Membership Puzzle Project’s Defining Membership Goals and Successes Survey, the researchers asked 40 member-driven newsrooms to share the percentage membership made up in their total revenue. Across the 31 member-driven newsrooms that responded to this question, the average percentage membership made up of a newsroom’s total revenue pie in FY2019 was 29 percent, with a median of 19 percent. (The difference between the average rate and the median rate is attributable to some outliers in the data set. The median is the middle number of the set.) Jump to “Developing membership metrics” for more on survey methods and other results."
+    },
+    {
+      "tag": "p",
+      "text": "MPP also asked for a breakdown of newsrooms’ total revenue mix for FY 2019. Below, the research team has chosen and anonymized a few responses, all from primarily digital newsrooms, that exemplify different revenue mixes. Three of these examples are from North America and two of these examples are from Europe. (While MPP also have respondents from Latin America, Africa, and Asia, because there are fewer examples, we are not sharing those revenue pies out of respect for the newsrooms’ anonymity. Some of the specifics of their funding sources made them easily identifiable.)"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Designed by Jessica Phan"
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How The Bristol Cable and its members developed an Ethical Advertising Charter"
+    },
+    {
+      "tag": "p",
+      "text": "The Ethical Advertising Charter gives the Cable clear parameters, defined by members, on what types of advertising it can accept."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "h3",
+      "text": "How Black Ballad turns member surveys into new revenue streams"
+    },
+    {
+      "tag": "p",
+      "text": "Their goal is to be the one who knows the Black British professional woman better than anyone else – and to monetize that knowledge."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland turned its members into powerful ambassadors"
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Zetland faced a hard truth: they still weren’t profitable, and they were running out of time. Could their members help?"
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick designed a pay-what-you-can model"
+    },
+    {
+      "tag": "p",
+      "text": "A well-targeted benefit nudges those who can afford to contribute more to do so, while keeping membership accessible for all."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Building a Membership Tech Stack"
+    }
+  ]
+}

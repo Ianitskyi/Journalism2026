@@ -1,0 +1,1411 @@
+{
+  "url": "https://membershipguide.org/handbook/planning-your-membership-move/building-our-membership-tech-stack/what-should-we-look-for-in-a-crm-to-support-membership",
+  "title": "What should we look for in a Customer Relationship Management system | The Membership Guide",
+  "h1": "Building a Membership Tech Stack",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Tools and technology are the infrastructure that underpin much of membership. These systems will influence every aspect of your publication’s approach to membership — from how you publish stories to how you process credit card payments. There are dozens of decisions that every publication has to make when it comes to their technology: Should you build a new product or use an outside vendor? Which vendor will you choose? How much will you pay for a particular product or service? The list goes on and on. These choices aren’t just about technology. Your technical stack reflects your values and supports and enables your editorial mission. The choices you make about tools and technology can help create outstanding community-oriented journalism and support a robust membership program. In fact, it helps to think about the value proposition of your membership program and the experiences you want to create as you are making technical choices.But technical choices can also have unintended consequences and limit your options in the future. This section will provide the information, context, and cautionary tales you need in order to make good choices. It also offers case studies and tips for what to do when you inherit a poor tech choice or are stuck with limited options due to decisions beyond your control or budget limitations. If you do not have in-house technological expertise, such as a chief technological officer (CTO), a lead engineer, or any developers, you may find value in hiring a consultant or tech lead to help you. This section offers advice on how to hire for those roles.To source the tools included here, the research team surveyed newsrooms around the world about the tools and services they’re using to produce coverage and serve their members. This section does not include every suggestion received but attempts to represent the breadth of options in the following categories:• Content Management System• Email Service Provider• Customer Relationship Management Software• Social Media Management• Payment platforms• Audience Analytics• Registration/Paywall• All-in-one membership platforms • Commenting Platforms/Listening Tools + ServicesThe sections below outline the key features you should look for when scouting these tools. The research team also compiled pricing information for the products where available online. If you are a nonprofit, many of these tools and services will offer special discounts for your newsroom.For more resources and overviews of tech stack, here are some additional compilations: In Latin America, Sembra Media has compiled comprehensive guides to tools for digital journalists and news entrepreneurs. (These guides were funded in part by the Lenfest Institute, which is co-publishing this guide.) Public Media Tech Stack created an expansive guide to help newsrooms make ethical decisions about the tools they use. This remainder of this section adapts and builds on previous MPP research “What to know when choosing your membership tech stack,” by former Membership Puzzle Project coach Emma Carew Grovum."
+    },
+    {
+      "tag": "p",
+      "text": "As you start to build a tech stack to support membership, there are two key concepts to understand before choosing tools or vendors: Customer Relationship Management systems (CRM), and Application Programming Interfaces (API). A CRM system keeps track of your identified readers and members. An API enables different software systems, like your CRM, to speak to each other. This section gives some background information on CRM systems, the use of APIs, and why they are important for building a membership technical stack."
+    },
+    {
+      "tag": "h3",
+      "text": "What is a CRM?"
+    },
+    {
+      "tag": "p",
+      "text": "Successful membership organizations are able to track all the ways an individual engages with their brand, from reading a story or contributing a news tip to making a financial donation. To launch, grow, and sustain membership in news, you need to understand how an individual engages with you, and what prompts them to support you. You can keep tabs on the actions of your audience members — both members and non-members — through a customer relationship management system, or a CRM."
+    },
+    {
+      "tag": "p",
+      "text": "The most important thing to know about CRM and membership is that there is no CRM designed especially for managing membership in news (which is a problem that interests MPP greatly)."
+    },
+    {
+      "tag": "p",
+      "text": "In the absence of a dedicated CRM for news membership, publishers need to make do with existing CRM tools. We’ve cataloged some options in the advice sections — along with some all-in-one platforms that include CRM functionality."
+    },
+    {
+      "tag": "h3",
+      "text": "What is an API?"
+    },
+    {
+      "tag": "p",
+      "text": "The critical technical ingredient for building membership on top of a general-purpose CRM involves the smart use of Application Programming Interfaces, or APIs."
+    },
+    {
+      "tag": "p",
+      "text": "APIs are the interfaces that allow data to flow out of a software system and to be used or analyzed by a different system. APIs enable you to easily access a software system’s data associated with your account. The power of APIs is that you can draw data from multiple systems simultaneously, and then put those data together for a fuller picture of what’s happening across your technical system."
+    },
+    {
+      "tag": "p",
+      "text": "For example, you can use the APIs from your CRM and your email service provider to pull the email addresses of your members and your newsletter subscribers. With those two data sets, you can calculate how much overlap there is between your membership and your newsletter subscribers."
+    },
+    {
+      "tag": "p",
+      "text": "With the help of a developer or vendor, you can use APIs to automatically bring together data from disparate systems, run calculations that produce metrics which matter, and create dashboards that present cross-functional data in a manner that can inform your decision making."
+    },
+    {
+      "tag": "p",
+      "text": "In order to be able to use data in this way, you need to make sure that the tools you’re licensing have an open API, which enables outside developers (or you) to get access to the data using software tools rather than manual downloads."
+    },
+    {
+      "tag": "p",
+      "text": "Journalism is at the heart of all news membership models. Your content management system, or CMS, is the tool that enables you to publish coverage to your website. It’s critical to create coverage that meets the needs of your audience and your members. You’ll want a CMS that makes it easy to publish a variety of content types and that supports other tools that are essential to membership, such as the CRM and ESP."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "WordPress/NewsPack, Squarespace, Drupal, Chorus, Arc, Brightspot, Ghost, The News Project, Opennemas"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Anything published to your website is managed here: content, pages, graphics, etc."
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Create and manage pages and individual pieces of content for your website"
+    },
+    {
+      "tag": "li",
+      "text": "Manage header/footer/navigation menus"
+    },
+    {
+      "tag": "li",
+      "text": "Security measures for managing several users (2FA, admin roles, etc)"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "A centralized image and multimedia library (digital asset management)"
+    },
+    {
+      "tag": "li",
+      "text": "Easy-to-use plugins/integrations to make the system more robust/sophisticated/customized"
+    },
+    {
+      "tag": "li",
+      "text": "Open API endpoints that can speak to other pieces of software"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "CMS maintenance is a whole separate game – but someone needs to do it. CMS maintenance tends to focus on four areas:"
+    },
+    {
+      "tag": "p",
+      "text": "1. Security patches and updates"
+    },
+    {
+      "tag": "p",
+      "text": "2. Uptime, performance, and backups"
+    },
+    {
+      "tag": "p",
+      "text": "3. Adding new features"
+    },
+    {
+      "tag": "p",
+      "text": "4. Updating the look and feel and the user experience"
+    },
+    {
+      "tag": "li",
+      "text": "Are you going to pay a developer every time you need changes/upgrades?"
+    },
+    {
+      "tag": "li",
+      "text": "If you buy an “off-the-shelf” product, will they work with you to customize the solution to best fit your organization’s needs as you grow?"
+    },
+    {
+      "tag": "li",
+      "text": "Security and technical support are generally covered by a fully hosted solution such as NewsPack or WordPress VIP. Some hosted vendors will add new features, but updating the look-and-feel will almost always fall to you"
+    },
+    {
+      "tag": "p",
+      "text": "For some additional reading on some of these CMS solutions, check out this guide from News Catalyst and Poynter."
+    },
+    {
+      "tag": "p",
+      "text": "Email is an essential ingredient for a successful membership program. Email newsletters can help turn occasional readers into return visitors and supporting members. You can also use your email list as an effective way to reach community members during membership drives and to ask for support. You need an email service provider, or ESP, that gives you capabilities to design and send emails to various list segments and groups."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "MailChimp, Constant Contact, Engaging Networks, Substack, Revue, Sailthru, Pardot, ConvertKit"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Manage email relationships with customers and distribute content via email publishing"
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Manage email contact lists and segments (even better if it will sync with your CRM)"
+    },
+    {
+      "tag": "li",
+      "text": "Build, design, and manage email newsletter templates"
+    },
+    {
+      "tag": "li",
+      "text": "Send email blasts such as newsletters and membership drives"
+    },
+    {
+      "tag": "li",
+      "text": "Send automatically triggered emails, such as welcome emails or onboarding series, also known as drip campaigns (Learn more about designing a welcome email and onboarding series)"
+    },
+    {
+      "tag": "li",
+      "text": "Sign up new users for email lists on your website"
+    },
+    {
+      "tag": "li",
+      "text": "Allow users to unsubscribe from lists and manage their preferences"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Send automated emails, such as renewal and credit card expiry notifications (your payment processor should have a notifications system – you could manually manage this process of notifying expired credit card users if you had to. See the Tech Stack section for more detail)"
+    },
+    {
+      "tag": "li",
+      "text": "Create and deploy banner or popup “calls to action” onsite (you can also use tools such as OptinMonster or Sumo for this functionality)"
+    },
+    {
+      "tag": "li",
+      "text": "Connect via API or integrate with CMS and CRM"
+    },
+    {
+      "tag": "li",
+      "text": "Integrate interactive email content, such as GIFs"
+    },
+    {
+      "tag": "li",
+      "text": "Use conditional formatting to have a “members only” section in the newsletter"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Cost: Most ESPs set prices based on the size of your list. Others offer plans based on the volume of emails you send. Either way, if you succeed at growing your list quickly and scale up your email offerings, the costs could grow, too"
+    },
+    {
+      "tag": "li",
+      "text": "Length of service contract: Some high-volume plans will often try to get you for 2+ years, which makes you less nimble in the future"
+    },
+    {
+      "tag": "li",
+      "text": "Ease of use: Is the template/email builder easy to use?"
+    },
+    {
+      "tag": "li",
+      "text": "AI-powered and “intuitive” features: They’ll try to upsell you on these, but you probably don’t need them, and they do not always work!"
+    },
+    {
+      "tag": "li",
+      "text": "Data analytics: What kind of data does the ESP provide? Some platforms have robust tools for data analytics. Others have little to no data functionality"
+    },
+    {
+      "tag": "p",
+      "text": "For additional reading on ESP solutions check out this resource from Inbox Collective founder Dan Oshinsky."
+    },
+    {
+      "tag": "p",
+      "text": "How many members does your news organization have? What percentage of your members subscribe to your email newsletters? What steps did an audience member take before becoming a member?"
+    },
+    {
+      "tag": "p",
+      "text": "These are all questions your customer relationship management system (CRM) should be able to answer for you. Successful membership programs need a centralized database to be able to understand and track their audiences — both members and non members."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "Sugar CRM, Salesforce, Hubspot, Google Spreadsheets, Airtable, Pico, ReachNC Voices, Nimble"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Your CRM should keep track of all of your members and contacts. This includes email addresses, membership status, payment and renewal information, subscription preferences, and any other information you need to know about who is engaging with your site. This should be your single source of truth for all contacts."
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "An easy way to bulk-import or upload contacts from existing lists (like .csv files)"
+    },
+    {
+      "tag": "li",
+      "text": "Easy to use search/sort/segment functions"
+    },
+    {
+      "tag": "li",
+      "text": "Means of tracking members vs nonmembers"
+    },
+    {
+      "tag": "li",
+      "text": "Tracking interactions — phone calls, emails, in-person meetings – with potential and current members or donors"
+    },
+    {
+      "tag": "li",
+      "text": "Security measures (such as two-factor authentication)"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Advanced tagging and segmentation tools, which can help you organize your contacts"
+    },
+    {
+      "tag": "li",
+      "text": "An internal notes field (or some means for your staff to keep track of their interactions with members, member preferences, etc)"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Are the data stored in a single, flat table like a spreadsheet, or are they available in a more dynamic setup, such as a database or several linked tables?"
+    },
+    {
+      "tag": "li",
+      "text": "Does it speak to your CMS and Email Service Provider easily (through API or third-party integration or plugin)?"
+    },
+    {
+      "tag": "p",
+      "text": "You did it. A reader has consumed your journalism, engaged with your community efforts, and decided they want to become a member. Their next step is to provide their payment information, and more likely than not they’ll need to enter their credit card details."
+    },
+    {
+      "tag": "p",
+      "text": "Point-of-sale systems are what allow you to accept payments from readers. There are many considerations for payment processors — especially depending on your location — but you’ll want something that is ultimately simple and easy for your members-to-be to complete."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "Stripe, PayPal, Square, Braintree, Reveniu, PayU, Mercado Pago"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Allow you to take and refund customers’ money for products (like membership)."
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "PCI compliance, ensuring safety of credit card transactions"
+    },
+    {
+      "tag": "li",
+      "text": "Highest security standards, such as tokenization technology and P2PE (point-to-point encryption)"
+    },
+    {
+      "tag": "li",
+      "text": "Ability to process (and refund) credit card payments"
+    },
+    {
+      "tag": "li",
+      "text": "Robust, user-friendly analytics and reporting"
+    },
+    {
+      "tag": "li",
+      "text": "Ability to manage recurring monthly and annual payments"
+    },
+    {
+      "tag": "li",
+      "text": "Ability for users to update their credit card information automatically (not solving for this can be incredibly time consuming for staff and lead to preventable churn)"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Ability to gift a subscription or membership"
+    },
+    {
+      "tag": "li",
+      "text": "Auto-renewal (ability to turn on/off at the user level)"
+    },
+    {
+      "tag": "li",
+      "text": "Real-time payment failure notifications"
+    },
+    {
+      "tag": "li",
+      "text": "Integration with CRM/membership database"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Rates and fees for accepting different types of payments"
+    },
+    {
+      "tag": "li",
+      "text": "Mobile and desktop experiences"
+    },
+    {
+      "tag": "li",
+      "text": "Compliance with privacy laws, especially GDPR(data privacy laws set by the European Union)"
+    },
+    {
+      "tag": "li",
+      "text": "The ability to process payments in the country where you operate and possibly multiple currencies depending on where your audience members reside"
+    },
+    {
+      "tag": "p",
+      "text": "For more here’s a guide from Big Commerce on what to know before choosing a payment processor. Head to “Launching our membership program” for more on what a good checkout flow looks like, and seek payment processors that will support that."
+    },
+    {
+      "tag": "p",
+      "text": "Membership-focused newsrooms need to know how their audiences are interacting with their coverage to better be able to serve them. At the most basic level, newsrooms want to know the size of their audience and the source of traffic. But a more sophisticated look at digital analytics can help publishers better serve their existing members and grow their membership base."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "Google Analytics, Chartbeat, Parsely, Omniture, Audience Explorer, Metrics for News, Memberkit"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Keep track of website performance, track user behavior across the site, and report in real time where the audience is coming from and what they are doing next"
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Daily record of how posts on the website performed, where traffic came from and the specifics of how users entered your site (i.e. a specific link on social media or in a newsletter)"
+    },
+    {
+      "tag": "li",
+      "text": "Historical view of how content has performed over time"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "App or easy mobile view"
+    },
+    {
+      "tag": "li",
+      "text": "Realtime data, especially for social media traffic"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Whether or not you have a user login system (this means you will be able to track users more closely)"
+    },
+    {
+      "tag": "li",
+      "text": "Whether the system was designed for journalism/newsrooms"
+    },
+    {
+      "tag": "li",
+      "text": "Sophistication of accessible data, and how much support the vendor will provide to help you analyze the data"
+    },
+    {
+      "tag": "li",
+      "text": "Any commitments your organization has made in regards to how you will or won’t track audience members’ behavior"
+    },
+    {
+      "tag": "p",
+      "text": "Here’s a resource from What’s New in Publishing listing 9 types of web analytics tools to consider."
+    },
+    {
+      "tag": "p",
+      "text": "How might we use analytics to guide a membership strategy?"
+    },
+    {
+      "tag": "p",
+      "text": "For much more on how to use analytics and data to guide your membership strategy, jump to “Developing membership metrics.”"
+    },
+    {
+      "tag": "p",
+      "text": "Social media platforms are unlikely to be how you interact with your most loyal audience members (email and text messaging are more likely), but it is often where audience members first learn about you."
+    },
+    {
+      "tag": "p",
+      "text": "The day-to-day running of social media accounts can be tedious. These tools will help you coordinate and automate basic tasks so you can focus on more impactful community-building work."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "SocialFlow, Buffer, Hootsuite, Sprout Social, Postcron"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Allow you to coordinate and schedule social media posting across several branded accounts. Though a little tangential, it’s how many people will first come into contact with your content"
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Future scheduling function"
+    },
+    {
+      "tag": "li",
+      "text": "App or easy-to-use mobile interface"
+    },
+    {
+      "tag": "li",
+      "text": "Integration across all major social media platforms (Facebook, Instagram, Twitter, LinkedIn, etc)"
+    },
+    {
+      "tag": "li",
+      "text": "Security (two-factor authentication for users, etc)"
+    },
+    {
+      "tag": "li",
+      "text": "Exportable analytics (so that you can knit them together with analytics reports from other pieces of your stack)"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Real-time analytics"
+    },
+    {
+      "tag": "li",
+      "text": "Listening function (ability to create lists of users to follow/segment)"
+    },
+    {
+      "tag": "li",
+      "text": "Integration with your main analytics tool"
+    },
+    {
+      "tag": "p",
+      "text": "What are factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "How many people need access to this tool? Many of these tools charge by the number of users. Do you need to offer access to just one social media manager, or an entire team?"
+    },
+    {
+      "tag": "p",
+      "text": "Many news organizations make some of their coverage available only to members. If you’ve decided that’s part of your membership value proposition, you’ll need a tool that will allow you to restrict access and enable registration."
+    },
+    {
+      "tag": "p",
+      "text": "Even if your coverage is totally free to access, a registration system could still be valuable as a way to collect email addresses or other contact information to build more loyal and habitual relationships with your audiences."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "Piano, Pico, Pigeon Paywall, Ghost, Steady"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "Enable you to restrict access to specific content based on whether a reader is a paying member or a registered user"
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "CMS integration to manage content access"
+    },
+    {
+      "tag": "li",
+      "text": "Simple and user friendly sign-up process for new users and log-in capabilities for returning readers"
+    },
+    {
+      "tag": "li",
+      "text": "Built-in checkout flow and integrations with payment processors that aren’t overly disruptive to reader experience"
+    },
+    {
+      "tag": "li",
+      "text": "Integrations with CRM/membership database and audience analytics platforms"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "A/B testing and dynamic metering"
+    },
+    {
+      "tag": "li",
+      "text": "Support of multiple payment types such as PayPal, Apple Pay, and Google Pay"
+    },
+    {
+      "tag": "li",
+      "text": "Social media logins to make it easier for users to sign in with existing accounts"
+    },
+    {
+      "tag": "p",
+      "text": "What are the factors to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Restricting access to coverage limits your audience and potentially constrains the top of your funnel, so you’ll want to decide whether this approach is right for your business"
+    },
+    {
+      "tag": "li",
+      "text": "You’ll also need to determine whether your chosen registration system supports your strategy for putting some coverage behind a paywall"
+    },
+    {
+      "tag": "p",
+      "text": "Community engagement is at the heart of membership. Unlike subscriptions, membership isn’t a transactional relationship — it’s about a sense of belonging and being part of a mission-driven organization."
+    },
+    {
+      "tag": "p",
+      "text": "Using community-building tools allows you to bring members — and potential members — into your reporting processes and enables you to incorporate their voices into your reporting. Community-building tools can also help you conduct audience research that can inform your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "When choosing tools to build a community online, you should take a jobs-to-be-done approach to choosing a product. Pick the tool based on what you’re hoping to learn from your community. Here are some jobs-to-be-done that we match to tools in the rest of the section:"
+    },
+    {
+      "tag": "li",
+      "text": "Solicit community input"
+    },
+    {
+      "tag": "li",
+      "text": "Communicate with readers in an intimate, one-to-one channel"
+    },
+    {
+      "tag": "li",
+      "text": "Host a community discussion"
+    },
+    {
+      "tag": "p",
+      "text": "If you want to solicit community input, consider Hearken."
+    },
+    {
+      "tag": "p",
+      "text": "Hearken’s software and consulting services help news organizations include the public as a story develops, from conception to publication, enabling community members to suggest, vote on, and meaningfully participate in the stories covered."
+    },
+    {
+      "tag": "p",
+      "text": "For example, KPCC-LAist has used Hearken to solicit and answer questions from its communities about coronavirus. As of August 2020, the public radio station has answered more than 4,000 questions from community members."
+    },
+    {
+      "tag": "h3",
+      "text": "How KPCC answered 4,000+ community questions about coronavirus"
+    },
+    {
+      "tag": "p",
+      "text": "They used an “if this, then that” framework to handle the influx of questions they received."
+    },
+    {
+      "tag": "p",
+      "text": "If you want to communicate with readers in an intimate, one-to-one channel, consider text messaging services like GroundSource, Subtext, Reach by EdNC, or WhatsApp or other messaging apps."
+    },
+    {
+      "tag": "p",
+      "text": "Text messaging — whether through SMS or a chat app such as WhatsApp — gives your newsroom a direct connection to individuals on the device where they spend the majority of their time. Texting can also be an effective means for reaching individuals who might not have internet access. “Nonprofit text messaging audiences grew by 26% in 2019, at a time when Facebook audiences grew by just 4% and email list sizes declined by 2%,” according to the nonprofit research firm M+R."
+    },
+    {
+      "tag": "p",
+      "text": "A number of different tools have sprung up in recent years to enable newsrooms to text with their audiences."
+    },
+    {
+      "tag": "p",
+      "text": "GroundSource: The GroundSource platform and consulting service help newsrooms use two-way text messaging to share timely information and gather on-the-ground perspectives with texting call-outs."
+    },
+    {
+      "tag": "p",
+      "text": "Chalkbeat Tennessee used GroundSource to text parents in Memphis information about where they could get free meals during the coronavirus shutdown. It decided to use text messaging because it realized that many of the families affected did not have the internet access or cellphone data required to access a purpose-built tool on Chalkbeat’s website. But most would be able to get information via SMS."
+    },
+    {
+      "tag": "p",
+      "text": "Subtext: Created by Advance Media’s Alpha Group, Subtext is a platform that supports SMS conversations with readers and includes analytics and monetization options."
+    },
+    {
+      "tag": "p",
+      "text": "BuzzFeed News used Subtext to solicit questions from readers about coronavirus, and used those questions to create a column on its website. The site was able to learn what its readers wanted to know about and respond with tailor-made coverage. Via Subtext’s Medium:"
+    },
+    {
+      "tag": "p",
+      "text": "“Even without prodding, BuzzFeed News gets a lot of questions via text. Coupled with the occasional nudge — getting questions has been relatively easy and ranged from “when is it OK to not wear a mask?” to “is it unethical to get pregnant right now?”"
+    },
+    {
+      "tag": "p",
+      "text": "Reach by EdNC: Texting is one part of the broader Reach platform, which was created by EducationNC to support various types of community engagement through email newsletters, texting, surveys, and more."
+    },
+    {
+      "tag": "p",
+      "text": "EdNC uses Reach’s texting platform to survey its audience every week about the latest education news in North Carolina."
+    },
+    {
+      "tag": "p",
+      "text": "WhatsApp: Many publishers use the Facebook-owned messaging app to share news and updates with audiences. Though Facebook has put limits on bulk messaging via WhatsApp to try and crack down on misinformation, it’s still a platform that has a wide audience. WhatsApp has a Business platform to support companies of all sizes wanting to reach audiences."
+    },
+    {
+      "tag": "p",
+      "text": "Documented, a nonprofit newsroom covering New York’s immigrant community, had a popular WhatsApp newsletter, and it used the platform to update audiences on COVID-19 this spring. Founder Mazin Sidahmed described the process to the American Press Institute."
+    },
+    {
+      "tag": "p",
+      "text": "If you want to host a community discussion, use Coral by Vox Media, Discourse, or Crowdstack."
+    },
+    {
+      "tag": "p",
+      "text": "Coral by Vox Media: Coral’s open-source “Talk” commenting platform supports respectful, community-minded discussions with tools for moderators, journalists, and community managers. Coral also recently launched a new Q&A tool."
+    },
+    {
+      "tag": "p",
+      "text": "The Argentine newspaper Pagina/12 uses Coral’s “Talk” as a member-only benefit. A perk of joining is being able to comment on articles and join discussions with journalists. That added benefit drove people to sign up for memberships, said Mariano Blejman, chief digital officer of Grupo Octubre, the non-profit that owns Página/12."
+    },
+    {
+      "tag": "p",
+      "text": "Discourse: As an open-source discussion platform, Discourse is designed to work as a mailing list, discussion forum, long-form chat room, and a comprehensive API."
+    },
+    {
+      "tag": "p",
+      "text": "Matt Kiser, who runs WTF Just Happened Today?, hosts the site’s community platform on Discourse because it’s free and open-sourced."
+    },
+    {
+      "tag": "p",
+      "text": "Crowdstack: Crowdstack hosts on-site communities and features tools to segment members by role, keep members engaged, assign permissions, track activity, and send messages in order to build and maintain communities."
+    },
+    {
+      "tag": "p",
+      "text": "The Pennyhoarder, a personal finance website, started its community engagement efforts on Facebook but moved the conversations to Crowdstack because it wanted to be able to own the data and provide its members higher levels of privacy."
+    },
+    {
+      "tag": "p",
+      "text": "Small and single-person newsrooms need technical tools that provide a lot of leverage — tools that can accomplish a lot with little effort, management, or technical expertise required. All-in-one membership platforms can be single tools or connectors between different systems that incorporate multiple functions of membership support."
+    },
+    {
+      "tag": "p",
+      "text": "All-in-one technical solutions can also be a boost for news organizations that are just starting out and are looking to launch with a minimum viable product that allows them to prioritize their journalistic output and community building."
+    },
+    {
+      "tag": "p",
+      "text": "You might have heard of:"
+    },
+    {
+      "tag": "p",
+      "text": "Patreon, Memberful, News Revenue Hub, Steady, Pico, Substack, NewsPack, BlueLena"
+    },
+    {
+      "tag": "p",
+      "text": "What should this software do for you?"
+    },
+    {
+      "tag": "p",
+      "text": "All-in-one platforms and platform services should knit together the different technical components supporting membership into a single stack. Integrated fundraising and marketing services like the News Revenue Hub and Memberful combine and customize a suite of tools that drive revenue: an email service provider, a CRM, a payment processor, and more."
+    },
+    {
+      "tag": "p",
+      "text": "Other platforms, such as Pico and Steady, connect to your existing website to support payment processing, content gating, and member management. Platforms such as Patreon and Substack support both publishing content as well as managing payments, email newsletters, a CRM, and other functionality."
+    },
+    {
+      "tag": "p",
+      "text": "What are must-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Seamless connections between publishing platform, email service provider, and payment system"
+    },
+    {
+      "tag": "li",
+      "text": "Member management tools"
+    },
+    {
+      "tag": "li",
+      "text": "Analytics tools"
+    },
+    {
+      "tag": "li",
+      "text": "Control over branding so your own brand isn’t overshadowed by the platform"
+    },
+    {
+      "tag": "p",
+      "text": "What are nice-to-haves?"
+    },
+    {
+      "tag": "li",
+      "text": "Membership tiers to offer members a variety of price points"
+    },
+    {
+      "tag": "li",
+      "text": "Integration with analytics tools"
+    },
+    {
+      "tag": "li",
+      "text": "Connections to social media and outside platforms"
+    },
+    {
+      "tag": "li",
+      "text": "Self-service account management for members"
+    },
+    {
+      "tag": "p",
+      "text": "What do you need to consider?"
+    },
+    {
+      "tag": "li",
+      "text": "Choosing one of these platforms may lock you into their system. Switching providers will likely mean that your members’ automatic periodic payments will stop, and you’ll have to ask them to re-join. And when you do that, you may lose a lot of members. Your platform provider could maintain control over your user data or users’ payment information, which could make it a challenge to leave the platform. Though many all-in-one tools provide powerful leverage for small and start-up newsrooms, if your goal is to grow, you should have a plan for how you will migrate member data and historical metrics when the time comes to scale up to a new set of tools"
+    },
+    {
+      "tag": "li",
+      "text": "You should also be cognizant of the fees that each of the platforms charges and what level of support you need. Some services like the News Revenue Hub combine technical functionality with consulting and even outsourced marketing and campaign management if needed. If you’re a single person or small newsroom that needs marketing services in addition to technical tools, integrated platform/service combinations can be very helpful"
+    },
+    {
+      "tag": "li",
+      "text": "While all-in-one technical solutions can be hugely beneficial to small newsrooms, it’s worth noting that other tools mentioned in this guide — such as the NewsPack CMS — are also specifically designed for small newsrooms"
+    },
+    {
+      "tag": "p",
+      "text": "News Catalyst and Poynter published an assessment of some of the most commonly used all-in-one solutions."
+    },
+    {
+      "tag": "p",
+      "text": "Whether to buy or build is one of the most consequential decisions a news organization can make when deciding on the tools and technologies for membership. Your use of various tools is ultimately in service of your members and membership program, and you need to ensure that the platforms you use to produce your journalism and manage membership fill those needs."
+    },
+    {
+      "tag": "p",
+      "text": "There are trade-offs to buying versus building. No off-the-shelf technology will meet your every need, but what you give up in flexibility when you buy, you save in cost and time of building your own tool or platform. Here are some details on what to consider when you face a build-versus-buy decision."
+    },
+    {
+      "tag": "h3",
+      "text": "When to buy (license) a tool or technology"
+    },
+    {
+      "tag": "p",
+      "text": "You may choose to buy a license to a tool or technology if:"
+    },
+    {
+      "tag": "li",
+      "text": "You lack staff capacity. If you don’t have the staff skills or capacity to build and maintain a tool or system, MPP recommends against building. The research team has found that maintaining bespoke tools over time is a particular source of stress for newsroom software development teams."
+    },
+    {
+      "tag": "li",
+      "text": "You lack budget. Bespoke software development is expensive and requires both up-front investment and ongoing maintenance costs. If you don’t have the budget to support the research and development needed to build a tool or system, don’t build. And if you have the up-front budget (say through a grant or gift) to build a system or tool, but aren’t sure if you will have the budget to maintain it, don’t build."
+    },
+    {
+      "tag": "li",
+      "text": "You find a good-enough alternative. Technology choices are about trade-offs. If you are a small or mid-sized newsroom and you find an off-the-shelf technology that meets enough of your needs, or can be customized to meet your needs with a small amount of investment, it’s better to buy than to build."
+    },
+    {
+      "tag": "p",
+      "text": "If you’re thinking of buying or licensing a tool or technology, understand that most software falls into one or more of the following categories:"
+    },
+    {
+      "tag": "p",
+      "text": "Open-source: Open-source software is created and maintained by an open community of developers. Generally, anyone can take the existing code base and implement it without cost. The WordPress CMS is an example of an open-source platform. While anyone can utilize the base code, there are also paid versions that offer additional levels of support."
+    },
+    {
+      "tag": "p",
+      "text": "A note of caution: there are dozens of different types of open-source licenses, each of which has different stipulations and limitations. You should be familiar with the specific license of the software you’re using. The Open Source Initiative maintains a comprehensive database of licenses."
+    },
+    {
+      "tag": "p",
+      "text": "Free tool: Software that was created to be used for free, although it may have a paid tier as well. The free version of these tools may have limitations in terms of the functionality or branding possibilities. They may also include advertisements or other monetization limits."
+    },
+    {
+      "tag": "p",
+      "text": "For example, Canva is an easy-to-use online design tool that you can use to produce graphics for social media. Its free tier has access to more than 8,000 templates, but you cannot personalize the fonts or colors to match your brand identity unless you have a paid account."
+    },
+    {
+      "tag": "p",
+      "text": "Part of a suite of tools: Some software companies have an “out of the box” option, a suite of tools that are designed to connect to each other."
+    },
+    {
+      "tag": "p",
+      "text": "Salesforce is most well known for its CRM, but it also offers additional services that range from email service providers to marketing automation and even productivity tools."
+    },
+    {
+      "tag": "p",
+      "text": "Some newsrooms have a mix of open source, free, and suite tools. Other newsrooms choose a fully “turn-key” system, which can be used immediately after purchase."
+    },
+    {
+      "tag": "h3",
+      "text": "When to build a tool or technology"
+    },
+    {
+      "tag": "p",
+      "text": "Building your own technology solution is a significant decision. By creating your own software, you will have greater control over its functionality and can customize it to your own needs and use cases."
+    },
+    {
+      "tag": "p",
+      "text": "Here are some reasons why you might decide to build your own tool:"
+    },
+    {
+      "tag": "li",
+      "text": "There’s nothing out there that fits your newsroom’s particular needs: If you’ve done all the research you can, and believe that the existing products on the market don’t meet your organization’s needs. By building your own product, you have more control over things such as features and security. It truly gives you the flexibility to create tools that meet the needs of your organization"
+    },
+    {
+      "tag": "li",
+      "text": "You’re looking to scale: If your organization is growing, you may quickly outgrow the functionality of an off-the-shelf tool. By building your own, you can continue to iterate and add capabilities that meet your growing organization"
+    },
+    {
+      "tag": "li",
+      "text": "You’re looking for a new business model: Building your own tools also creates the opportunity for a new revenue stream. There could be opportunities down the road to license the technology to other companies if you’re sure that your needs reflect the needs of many others across the industry"
+    },
+    {
+      "tag": "p",
+      "text": "The special case of infrastructure upgrades. There has been a big push in the nonprofit news ecosystem to support the technical advancement of small and mid-sized newsrooms, particularly for infrastructure upgrades to CMS, CRM, and ESPs. The MPP research team has seen many small newsrooms hit a growth spurt and then strain against technical systems (particularly CMS and CRM) that no longer fit their needs."
+    },
+    {
+      "tag": "p",
+      "text": "While an infrastructure upgrade is a significant technical investment (even if it’s externally funded), core systems upgrades tend to last longer and can better contribute to your organization’s long-term sustainability than building and launching single tools."
+    },
+    {
+      "tag": "p",
+      "text": "We do not recommend that small and mid-sized newsrooms build their own core infrastructure systems (CRM and CMS in particular). However, if you can secure funding for an infrastructure upgrade to an existing and tested system that will make your publishing and fundraising more targeted and efficient, those investments can be worth making assuming you are appropriately budgeting for the migration costs, staff support, and maintenance costs over time. See “technical mistakes” below for more on the risks and benefits of infrastructure upgrades."
+    },
+    {
+      "tag": "p",
+      "text": "As El Diario’s membership program grew, the Spanish newsroom realized they needed better tools to serve members and their newsroom. With support from a Google DNI grant, they decided to invest in building their own CRM."
+    },
+    {
+      "tag": "h3",
+      "text": "How El Diario decided it was worth it to build its own CRM"
+    },
+    {
+      "tag": "p",
+      "text": "One of the benefits of El Diario membership is ad-free browsing - but with their old CRM, that just left white boxes on the site."
+    },
+    {
+      "tag": "p",
+      "text": "Meanwhile, The Dispatch in Washington, D.C., worked with Substack to adapt its system to meet their needs. The small startup gave up some features as a result, but held on to staff time and funds that might have otherwise been spent on development."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Dispatch made Substack work for them"
+    },
+    {
+      "tag": "p",
+      "text": "The Dispatch had to forego having a robust website, but choosing Substack has freed up the team to focus on journalism."
+    },
+    {
+      "tag": "p",
+      "text": "Membership is built on trust. And one of the ways your members show that they trust you is by sharing their personal information. No matter if they’re providing credit card numbers, physical addresses, or email addresses, you need to be certain that their information is secure and that you are transparent with your members about how you’re utilizing the data you collect."
+    },
+    {
+      "tag": "p",
+      "text": "As you decide which tools and services you use to run your membership program, you’ll want to ensure you’re attending to the following three steps."
+    },
+    {
+      "tag": "li",
+      "text": "Think about how much audience data you really need. More audience data is not always better. Too much data, especially too much sensitive user data, can be risky to hold onto, especially if you aren’t storing it properly."
+    },
+    {
+      "tag": "li",
+      "text": "Examine your vendors’ privacy policies. What do your vendors do with your users data? Are there clauses that permit your vendor to sell your users’ data to a third party? Assess whether you feel comfortable with how your vendor will handle your users’ data."
+    },
+    {
+      "tag": "li",
+      "text": "Create your own privacy policy and post it on your site. After you have assessed your own data needs and the ways that your vendors will handle your users’ data, create your own privacy policy. Make sure you give it a home on your website. You can also link to email-specific privacy policies in your email newsletters. If you are accepting payments on your site, your site’s security and PCI compliance vendor can help with a set of best practices. For example, see here for Richland Source’s privacy policy."
+    },
+    {
+      "tag": "p",
+      "text": "Email privacy policies and managing opt-ins. Having an explicit privacy policy is particularly important for how you utilize readers’ email addresses, which are important tools for growing your membership program. Readers should have to opt-in to your email newsletters or marketing, and it should be easy and straightforward for them to unsubscribe."
+    },
+    {
+      "tag": "p",
+      "text": "Be intentional about tracking pixels. Many publishers place tracking pixels on their websites that connect user behavior with platforms such as Facebook and Google or other outside companies. As consumers become increasingly wary of these major platforms’ data practices, you should be cognizant of how much information you’re sharing with them. You can use tools such as Ghostery or Privacy Badger to audit the trackers that are on your website and better understand what they’re doing."
+    },
+    {
+      "tag": "p",
+      "text": "Be intentional about programmatic ad networks. You should also take note of programmatic advertising networks. While they may seem like a way to boost incremental revenue, they can be a privacy nightmare and vectors for malware. Programmatic advertising companies are in a never-ending arms race, and should not be relied on to honor your privacy values."
+    },
+    {
+      "tag": "p",
+      "text": "Make your privacy values explicit. You can also make your privacy values explicit as part of building trust with your audience. For example, The Markup, the new nonprofit newsroom covering big tech, limits its data collection and clearly outlines what it does collect on its website: “We make a promise to you, our readers: The Markup will collect as little personal information about you as possible when you visit our site, and we will never monetize this data.” For example, it chose to use the ESP Revue because it was able to turn off all user tracking."
+    },
+    {
+      "tag": "p",
+      "text": "The Correspondent, for example, has outlined that one of its core principles is that it minimizes data collection, only cataloging data that it needs legally and to enable the core functionality of its website."
+    },
+    {
+      "tag": "p",
+      "text": "Here’s how it describes it to readers in clear and easy to understand language on its website:"
+    },
+    {
+      "tag": "blockquote",
+      "text": "Most free online services let their users pay by turning over their personal data. At The Correspondent, we minimize the data we collect about you. We only collect the data we are required by law to collect, or that is necessary for our platform to function correctly (such as login names and passwords). We do not sell this information to third parties. Our reasons for collecting data must be explained clearly. And wherever possible, members must have control over the data collected."
+    },
+    {
+      "tag": "p",
+      "text": "Most free online services let their users pay by turning over their personal data. At The Correspondent, we minimize the data we collect about you. We only collect the data we are required by law to collect, or that is necessary for our platform to function correctly (such as login names and passwords). We do not sell this information to third parties. Our reasons for collecting data must be explained clearly. And wherever possible, members must have control over the data collected."
+    },
+    {
+      "tag": "p",
+      "text": "Make sure you are following local, national, and international privacy laws. You must always make sure also that your technical setup is in compliance with local privacy laws. Notably, California and Europe have strict privacy requirements that each in their own way prioritize user control over their data and identity."
+    },
+    {
+      "tag": "p",
+      "text": "Even if you are not based in a region with particularly strict privacy laws, if you have users in those jurisdictions, then you need to be in compliance with these regulations. (Some U.S. news organizations’ websites still aren’t accessible in Europe more than two years after its privacy law, GDPR, went into effect.)  See here for an overview of what GDPR means for publishers."
+    },
+    {
+      "tag": "p",
+      "text": "For more detail and tips on how to meet key regulations and stay up-to-date on user privacy, here are some primers and guides:"
+    },
+    {
+      "tag": "li",
+      "text": "GDPR: The London-based law firm Bird & Bird has created a comprehensive and regularly updated overview of GDPR regulations, which govern online privacy in the European Union. The Interactive Advertising Bureau has also created the Transparency and Consent Framework to standardize data collection practices. Here’s an overview from Digiday, and a detailed FAQ from the IAB."
+    },
+    {
+      "tag": "li",
+      "text": "CAN-SPAM Act of 2003: This U.S. law sets regulations for all email marketing communications. For publishers, this includes both editorial newsletter products as well as marketing and fundraising emails. Here’s an overview of the law’s requirements from Cornell Law School."
+    },
+    {
+      "tag": "li",
+      "text": "California Consumer Privacy Act: California’s digital privacy law went into effect in 2020. The law was designed to give consumers greater control over their data, and it allows them to ask companies for details about how they are using their personal information. The IT security trade publication CSO has a detailed overview of the law."
+    },
+    {
+      "tag": "p",
+      "text": "Committing to collecting minimal data doesn’t have to limit your ability to make data-driven decisions about serving your audience. In this case, De Correspondent shares how it uses qualitative insights in place of tracking its members on site."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent keeps its commitment to collecting  minimal data"
+    },
+    {
+      "tag": "p",
+      "text": "They invest heavily in collecting qualitative insights volunteered by members instead of funneling up quantitative data."
+    },
+    {
+      "tag": "p",
+      "text": "Some of you may be facing technical challenges you inherited. These “messes” could pose a challenge to your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "What do we mean by a “mess”? A couple examples:"
+    },
+    {
+      "tag": "li",
+      "text": "A past executive signed a lengthy, binding contract with a system that doesn’t work well."
+    },
+    {
+      "tag": "li",
+      "text": "You’re stuck in a corporate contract with other sibling entities/organizations."
+    },
+    {
+      "tag": "li",
+      "text": "Someone made a mistake in a previous implementation. Dots are no longer connected and your data can’t talk between components of your tech stack."
+    },
+    {
+      "tag": "li",
+      "text": "A key employee left without leaving behind “the keys” to a tool or piece of codebase."
+    },
+    {
+      "tag": "li",
+      "text": "You’re stuck in an outdated CMS that doesn’t allow you to include CTAs that would encourage readers to become members."
+    },
+    {
+      "tag": "p",
+      "text": "These technical building blocks are essential to creating vibrant membership programs, and these scenarios could make it more difficult to execute on these strategies."
+    },
+    {
+      "tag": "p",
+      "text": "It’s also possible that you have no idea that you’ve got a mess on your hands. Here are some simple checks you can run to make sure your stack is running effectively:"
+    },
+    {
+      "tag": "li",
+      "text": "Sign up for your own mailing list. Did you get the correct email? Are you added to the correct lists?"
+    },
+    {
+      "tag": "li",
+      "text": "Become a member: Do you get properly tagged in the CRM? What about the ESP?"
+    },
+    {
+      "tag": "li",
+      "text": "Test everything important: Test your signup forms, your membership checkout pages, etc. on different mobile devices and in different browsers. An email service such as Litmus can help you make sure your emails display properly in all major email clients"
+    },
+    {
+      "tag": "p",
+      "text": "You may also have made a decision that has had consequences as your organization’s needs have evolved:"
+    },
+    {
+      "tag": "li",
+      "text": "Your audience could have grown, which would require a new email service provider that can accommodate bigger lists."
+    },
+    {
+      "tag": "li",
+      "text": "Your organization could be moving into a new market, which will require you to support additional currencies."
+    },
+    {
+      "tag": "li",
+      "text": "A vendor could go out of business, which could require you to transition to a new service"
+    },
+    {
+      "tag": "p",
+      "text": "It is particularly important that small and growing newsrooms document and keep a separate record of their Key Performance Indicators. In 2019, the Philadelphia news site Billy Penn was acquired by WHYY, the city’s public media outlet. As a result of that merger, it had to integrate two separate membership systems."
+    },
+    {
+      "tag": "p",
+      "text": "When Billy Penn left its previous owner, Spirited Media, it set up new instances of its core membership stack — the News Revenue Hub’s Salesforce-Mailchimp-Stripe connector. While Billy Penn was able to transfer over its data, it lost all the historic information about its members — for example, their history of engagement with Billy Penn’s newsletters. “It was frustrating in the beginning,” Billy Penn editor Danya Henninger said, noting that not having that information made it more difficult to target readers with membership asks."
+    },
+    {
+      "tag": "p",
+      "text": "Henninger said she wished she had regularly been downloading key data points and tracking metrics outside of the platforms so Billy Penn would not have lost the information it would have liked to have kept when it transferred systems. “No matter what your tech stack is, keep your own records,” she said. “…Keep your KPIs and identify those for yourself even if you’re not reporting them out.”"
+    },
+    {
+      "tag": "p",
+      "text": "Upgrading technical systems can introduce new technical messes that you have to clean up later, so weigh the costs and benefits. This is particularly true when an upgrade involves migrating large amounts of content and data into a new system. The risk of data getting lost in migration needs to worth the payoff in more powerful functions. Be sure to budget for plenty of time and resources for the upgrade."
+    },
+    {
+      "tag": "p",
+      "text": "While Billy Penn staff appreciates the flexibility and ease of use of its News Revenue Hub stack, they are looking forward to their eventual integration to WHYY’s system so that it can tap into WHYY’s massive email database. Billy Penn has about 25,000 email subscribers — WHYY has more than 250,000 contacts."
+    },
+    {
+      "tag": "p",
+      "text": "“That’s what sold me to the fact that Billy Penn should switch over to their platform: to do all sorts of targeting and smart logic,” Henninger said."
+    },
+    {
+      "tag": "p",
+      "text": "WTF Just Happened Today’s Matt Kiser has had to migrate his data twice – a time consuming process, but one that was ultimately worthwhile both times. This case study offers advice on getting members to transfer systems with you."
+    },
+    {
+      "tag": "h3",
+      "text": "What WTFJHT learned from a bad membership tech choice"
+    },
+    {
+      "tag": "p",
+      "text": "WTFJHT founder Matt Kiser is on his fourth payment processor since launching in 2017."
+    },
+    {
+      "tag": "p",
+      "text": "Many newsrooms don’t have on-staff tech teams. As you’re navigating these different tools and potentially confronting some messes you need to deal with, you may decide you need to hire some outside help."
+    },
+    {
+      "tag": "p",
+      "text": "Investing in freelance tech help or hiring a vendor may be worth the investment if it’s able to streamline processes for you or allow you to focus on your core operations: Producing great journalism and serving your members."
+    },
+    {
+      "tag": "p",
+      "text": "Developers in or near the news industry generally tend to fall into three categories: front-end (the consumer-facing or “front” side of your software), back-end (“under the hood” or “back” side of your software), and full-stack (someone who works in both front- and back-end development). What do you need this person to do?"
+    },
+    {
+      "tag": "p",
+      "text": "Common tasks you might ask a developer to handle could include:"
+    },
+    {
+      "tag": "li",
+      "text": "Write code for a third-party API to create a bridge between two pieces of software"
+    },
+    {
+      "tag": "li",
+      "text": "Customize an off-the-shelf tool to fit the specific needs of your organization"
+    },
+    {
+      "tag": "li",
+      "text": "Redesign your newsletter templates for a mobile-first experience"
+    },
+    {
+      "tag": "li",
+      "text": "Optimize your welcome series and other automated emails"
+    },
+    {
+      "tag": "li",
+      "text": "Configure your analytics and building reports"
+    },
+    {
+      "tag": "li",
+      "text": "Choose and implement vendor products like CRM"
+    },
+    {
+      "tag": "p",
+      "text": "What to avoid:"
+    },
+    {
+      "tag": "li",
+      "text": "Anyone who won’t explain things to you clearly and respectfully. You want someone who is going to meet you at your technical comfort level and help educate you to make informed decisions"
+    },
+    {
+      "tag": "li",
+      "text": "Developers who haven’t had news media clients or past experience working in newsrooms. The ideal vendor will provide a professional reference in the journalism industry who you can speak to"
+    },
+    {
+      "tag": "li",
+      "text": "Someone who hasn’t worked with a news organization before. They don’t need to be embedded in a newsroom, but they should have experience with the industry. This could be a reporter-turned-coder who has worked on news apps. This could be someone who has worked for other newsroom vendors"
+    },
+    {
+      "tag": "p",
+      "text": "Key reminders for working with contractors:"
+    },
+    {
+      "tag": "li",
+      "text": "Make sure that you retain ownership of your documentation. This means the code base, any digital assets, any training materials, passwords, and a clear explanation of how to maintain the code and get support as needed"
+    },
+    {
+      "tag": "li",
+      "text": "Set clear guidance for who has “the keys” to the stack, such as: Who has access to login pages: You should account for both on-staff team members and contract workers who might work with youWho has admin access: There should always be at least two admins, ideally from different departmentsWho has the ability to restore and create passwords: How often do you update the master passwords? Are you using some kind of organization-wide password manager?Who has ability to create and delete new users/admins: Create on- and off-boarding checklists for when new employees join or leave your organization. Make sure that your offboarding policy includes instructions on removing an employee’s access to the tool when they leave the company"
+    },
+    {
+      "tag": "li",
+      "text": "Who has access to login pages: You should account for both on-staff team members and contract workers who might work with you"
+    },
+    {
+      "tag": "li",
+      "text": "Who has admin access: There should always be at least two admins, ideally from different departments"
+    },
+    {
+      "tag": "li",
+      "text": "Who has the ability to restore and create passwords: How often do you update the master passwords? Are you using some kind of organization-wide password manager?"
+    },
+    {
+      "tag": "li",
+      "text": "Who has ability to create and delete new users/admins: Create on- and off-boarding checklists for when new employees join or leave your organization. Make sure that your offboarding policy includes instructions on removing an employee’s access to the tool when they leave the company"
+    },
+    {
+      "tag": "p",
+      "text": "Any outside service you utilize in your organization — no matter if it’s internally facing or externally facing — becomes affiliated with your brand and sends a signal to your members. Just as you have standards for the journalism you produce and for your membership offerings, you should similarly ensure that vendors fit into your goals and mission."
+    },
+    {
+      "tag": "p",
+      "text": "Vendor selection isn’t just about finding the right tools, it’s about ensuring that the company you’re choosing to work with is a good technology partner for your organization."
+    },
+    {
+      "tag": "p",
+      "text": "Here are some key areas to focus on when evaluating vendors:"
+    },
+    {
+      "tag": "p",
+      "text": "Competitive research"
+    },
+    {
+      "tag": "li",
+      "text": "Start by Googling “Vendor name + competitors” and see if someone else has already written a comparison between the tools you are considering"
+    },
+    {
+      "tag": "li",
+      "text": "Ask around: talk to newsroom peers in your space and ask what they are currently using and what the pros and cons are"
+    },
+    {
+      "tag": "li",
+      "text": "Ask for references. Most vendors will happily direct you to their previous clients in the media/membership space. If not, that’s a red flag"
+    },
+    {
+      "tag": "p",
+      "text": "Customer service"
+    },
+    {
+      "tag": "li",
+      "text": "A service level agreement or SLA is a key part of your service contract. This states how long the vendor has to respond to your inquiries for support should anything go wrong"
+    },
+    {
+      "tag": "li",
+      "text": "Ask the vendor about several types of support requests: simple items like being locked out of your account on a weekday all the way up to a full outage over the weekend"
+    },
+    {
+      "tag": "li",
+      "text": "Ask whether you would have a dedicated support resource and access to a direct contact (like a phone number) or whether you will have to request support via a service portal (such as Zendesk)"
+    },
+    {
+      "tag": "p",
+      "text": "Proof of concept and demonstration"
+    },
+    {
+      "tag": "li",
+      "text": "Always ask for a full demonstration of features, and be sure to record the demo so you can refer back to it later"
+    },
+    {
+      "tag": "li",
+      "text": "A good vendor will give you a free trial or a development environment to play with settings and try out features. You should be given a chance to pressure test the software or system before you buy"
+    },
+    {
+      "tag": "li",
+      "text": "Push hard here. Before the demo, make a list of all of the things you need this tool to do, then make the vendor demonstrate each one. If they won’t demonstrate a feature, you should be asking why"
+    },
+    {
+      "tag": "p",
+      "text": "Projected cost analysis"
+    },
+    {
+      "tag": "li",
+      "text": "It’s not just enough to know how much the tool/system/software costs to purchase and implement. You need to see a full cost analysis for the entire length of the contract, including customization, upgrades, ongoing support, maintenance, and any other costs that change over time"
+    },
+    {
+      "tag": "li",
+      "text": "This is the time to have them fully explain all of their tiered options. Find out whether their pricing depends on audience size (and what would happen if your audience size suddenly explodes)"
+    },
+    {
+      "tag": "p",
+      "text": "Roadmap"
+    },
+    {
+      "tag": "li",
+      "text": "Ask to see their product roadmap! If you’re going to be a client for a year or more, you should know what features they might add."
+    },
+    {
+      "tag": "li",
+      "text": "What features are they close to releasing? (They can usually tell you by quarter.)"
+    },
+    {
+      "tag": "li",
+      "text": "What features are commonly requested by other news clients?"
+    },
+    {
+      "tag": "li",
+      "text": "How often do they release major updates to the tool, and how are they managed?"
+    },
+    {
+      "tag": "li",
+      "text": "What happens to your data if something happens to the company during the term of your contract?"
+    },
+    {
+      "tag": "p",
+      "text": "Security"
+    },
+    {
+      "tag": "li",
+      "text": "Make sure every user can or must enable two-factor authentication"
+    },
+    {
+      "tag": "li",
+      "text": "Does the tool capture or store personally identifiable information (PII)? And if so, are there ways to limit access to this data?"
+    },
+    {
+      "tag": "li",
+      "text": "Are the vendor’s PII practices compliant with privacy regulations relevant to your location and audience? GDPR, etc."
+    },
+    {
+      "tag": "li",
+      "text": "Does the tool use encryption for sharing and sending key data?"
+    },
+    {
+      "tag": "li",
+      "text": "How does the vendor handle security patches and breaches? How often are they sent? What was the last major one?"
+    },
+    {
+      "tag": "p",
+      "text": "You can also consider bringing in outside help to consult with you on vendor selection and implementation. In many situations, you may lack the background to make an informed choice. For example, three vendors may make identical promises about their features, services, or security — and all three may deliver very different results. Because development mistakes can be difficult and costly to reverse, bringing on a consultant who can help vet vendors and proposals can be a worthwhile up-front investment."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "What WTFJHT learned from a bad membership tech choice"
+    },
+    {
+      "tag": "p",
+      "text": "WTFJHT founder Matt Kiser is on his fourth payment processor since launching in 2017."
+    },
+    {
+      "tag": "h3",
+      "text": "How Correctiv invites readers into its investigations"
+    },
+    {
+      "tag": "p",
+      "text": "The only way Correctiv could get data on who owned property in Hamburg was by asking readers to submit their own records."
+    },
+    {
+      "tag": "h3",
+      "text": "How El Diario decided it was worth it to build its own CRM"
+    },
+    {
+      "tag": "p",
+      "text": "One of the benefits of El Diario membership is ad-free browsing - but with their old CRM, that just left white boxes on the site."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent keeps its commitment to collecting  minimal data"
+    },
+    {
+      "tag": "p",
+      "text": "They invest heavily in collecting qualitative insights volunteered by members instead of funneling up quantitative data."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Dispatch made Substack work for them"
+    },
+    {
+      "tag": "p",
+      "text": "The Dispatch had to forego having a robust website, but choosing Substack has freed up the team to focus on journalism."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Designing a Membership Program"
+    }
+  ]
+}

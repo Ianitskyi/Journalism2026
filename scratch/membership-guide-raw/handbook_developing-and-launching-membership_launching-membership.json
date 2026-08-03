@@ -1,0 +1,471 @@
+{
+  "url": "https://membershipguide.org/handbook/developing-and-launching-membership/launching-membership",
+  "title": "Membership Handbook | The Membership Guide",
+  "h1": "Launching Membership",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Launching your membership program can be scary. Months of work lead up to the moment when your membership landing page goes live and you send that first appeal. Your membership launch moment is about more than the launch of a new product. It is a strategic opportunity not to be missed. Making the most of your launch requires a strong value proposition – for your newsroom and for your membership program – and a brand strategy that you can weave into all your launch communications. If you have a strong value proposition and branding strategy in place, your membership launch can be a moment of heightened attention to tell your newsroom’s story at a whole new level – maybe in a new way that audience members haven’t heard before – and explain to potential members how they can be a part of it.But for your story to stay front-and-center during a membership launch, there are a lot of details you need to get right behind the scenes. For example, you need to make sure members have a smooth signup process. If you can’t process their payment on the day you grab their attention, it might be hard to get their attention a second time. Anticipating potential members questions is also key, as is staffing customer service support accordingly. Treat this section as a practical checklist to help prevent hiccups at launch and “missed opportunity” realizations in the weeks after.If your membership program growth is slower than you hoped, you can also use this section as a checklist of things to make sure you’re doing behind the scenes so you’re not losing potential members for reasons that are easy to fix. For example, if you haven’t optimized your checkout process, you might be losing members that you could keep just by shortening your registration process. This section will tackle what you need to have in place before launch, including the key components of an effective membership landing page, smooth payment process, and welcoming onboarding series."
+    },
+    {
+      "tag": "p",
+      "text": "This list of 15 things to have in place before you launch is sourced from dozens of newsrooms interviewed for the Membership Guide. Take this tearsheet back to your newsroom to make sure you’re ready for launch."
+    },
+    {
+      "tag": "h3",
+      "text": "Launch Timing"
+    },
+    {
+      "tag": "p",
+      "text": "Getting launch timing right can be difficult because the news cycle can shift so quickly. But MPP recommends being as proactive as you can in setting a launch date, fixing a campaign timeline and clearing conflicts with internal and external stakeholders. Here are the questions to ask."
+    },
+    {
+      "tag": "p",
+      "text": "Have you checked your calendar? First, look outward. What will be happening around the time that you plan to launch your membership program? There are two ways to think about timing a launch. You can aim for a time when it will be easy to attract people’s attention because there’s nothing competing for it, or you can latch onto a mission-aligned news moment. In the U.S., many nonprofit newsrooms have launched membership to coincide with NewsMatch, for example. Then, look inward. Will you have internal capacity around that time? If you have a special series launching around that time, or if your tech stack is slated for major technical work, you may want to choose another time to launch."
+    },
+    {
+      "tag": "p",
+      "text": "How long will your launch last? How long will you drum up your new membership program? Your launch campaign should have a manageable beginning, middle, and end. Membership Puzzle Project recommends no more than three weeks for any membership marketing campaign. You can use this demo membership campaign calendar as a starting point for planning your own."
+    },
+    {
+      "tag": "h3",
+      "text": "Telling your story"
+    },
+    {
+      "tag": "p",
+      "text": "A membership launch campaign is an unparalleled moment to communicate the value of your newsroom and the value of membership. It’s vitally important that your campaign communications clearly articulate your value, have an integrated look and feel with your overall branding strategy, and hang together in a cohesive way. Here are the questions to ask."
+    },
+    {
+      "tag": "p",
+      "text": "Have you identified a membership value proposition? Before launch, be sure you test your proposition with a few of your loyal audience members to make sure it resonates and that your membership ask is clear. (Jump to “Discovering our value proposition” if you still need to identify yours.)"
+    },
+    {
+      "tag": "p",
+      "text": "Is your value proposition integrated into all your campaign assets? Before launch, line up all of your launch campaign assets (logos, web copy, email copy, social media promotions, onboard series, etc.) and double check that your membership value proposition is accurately reflected in each. You don’t need to copy your value proposition word-for-word in each piece of communication, but you should ensure that your communications reflect the audience segments you’re serving, the member motivations you’re drawing on, and the benefits you’re offering."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have a membership landing page, and does it include the essential components? It should be easy to find on your homepage, reflect your overall branding, have a straightforward URL that can be placed on social media assets (such as www.newsroomname.com/join), and provide a succinct, powerful overview of your membership program. Then it should get to the point: payment. MPP recommends asking people from outside your organization to review it before launch for clarity and the strength of your pitch.  Jump to “What makes for a good membership landing page?” for more recommendations on how to design a strong landing page."
+    },
+    {
+      "tag": "h3",
+      "text": "Managing customer service"
+    },
+    {
+      "tag": "p",
+      "text": "MPP has found that strong membership programs run on strong customer service. Customer service means handling the problems your members and potential members encounter in your program with responsiveness, grace, and practicality. Because customer service is so important to the membership experience, MPP recommends setting up and staffing for customer service protocols from the first moment of launch. When something goes wrong for a member (as it inevitably will), having a customer service plan in place will be your best insurance that small issues don’t blow up into major launch-sinking (and eventually program-sinking) problems. Here are the questions to ask."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have an “if this, then that” protocol in place? Your team should do its best to list all the scenarios that could come up with processing membership transactions and decide on a standardized response for each. An example: “If someone says they don’t want to opt in to recurring payments, then the membership manager will reach out to them personally to explain why we’re asking for recurring payments and explain how to do a one-time donation if they still don’t want to opt in to recurring payments.”"
+    },
+    {
+      "tag": "p",
+      "text": "Do you have an FAQ? Spend some time with your team anticipating what your most frequently asked questions might be and turn them into a public FAQ that can be quickly shared with members who write in with those questions. Here’s an example from The Devil Strip."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have someone on standby for customer support? A cornerstone of good customer service is resolving issues promptly. A twenty-four hour turnaround is the longest it should take to respond to a member about an issue under normal circumstances, but you should aim for a much faster turnaround at launch. The person responsible for member support should have their calendar cleared of other demands as much as possible during launch week."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have a plan in place for delivering member benefits and perks? Whether the benefits are digital or physical, you should be ready to consistently provide them. If you can’t automate the delivery through your onboarding series, you should add reminders to your calendar to manage fulfillment."
+    },
+    {
+      "tag": "p",
+      "text": "Is your checkout process easy? You should test it on mobile and desktop, preferably with someone not on staff who you are confident would join anyways. Have them use a company credit card or offer a perk as a thank you, such as the opportunity to gift a membership to someone. If you can, observe them going through the full signup process via a screen share or ask them to document their observations about the process. Jump to “What does a good checkout process look like?“"
+    },
+    {
+      "tag": "p",
+      "text": "Because you won’t be able to forecast all the ways in which membership transactions and member experiences will go sideways, make a plan for how the person or team handling membership customer service will document the issues that come up and the resolutions that work best. When your launch is over, review the lessons learned and adjust your protocols, FAQs, and program management accordingly. Documentation over time is vital for building a strong customer service practice to support your membership program. Start that habit at launch and keep it going."
+    },
+    {
+      "tag": "h3",
+      "text": "Managing technical issues"
+    },
+    {
+      "tag": "p",
+      "text": "Technical issues are almost inevitable at launch, but you can minimize them by thinking ahead about what could go wrong and testing your tools and checkout flow in advance of launch. And as with customer service, identifying in advance who will be on-call for solving technical issues and when will help you have a smooth launch. It is also important to ensure that you have set up your tools properly so that you are collecting the information you need from members as they sign up. Here are some questions to ask as you test your tools."
+    },
+    {
+      "tag": "p",
+      "text": "Have you accounted for different currencies? If you are using a payment processor developed in another country/for a different currency, check that it will process credit cards from your country properly."
+    },
+    {
+      "tag": "p",
+      "text": "Is your payment processor “talking” to your CRM? Check that the person who tested your checkout process is now in your customer relationship management system as a member. This is important for suppressing membership appeals and tracking other member behavior."
+    },
+    {
+      "tag": "p",
+      "text": "Is your CRM linked to your email service provider? This will help you do things like suppress membership appeals to existing members and trigger your onboarding series. This is especially important if you plan to ask aggressively for a couple weeks."
+    },
+    {
+      "tag": "p",
+      "text": "For more detailed advice on technical needs, jump to “Building our membership tech stack” and read about the challenges WTFJHT still faces today, almost four years after launch, because of a pre-launch tech decision he made."
+    },
+    {
+      "tag": "h3",
+      "text": "What WTFJHT learned from a bad membership tech choice"
+    },
+    {
+      "tag": "p",
+      "text": "WTFJHT founder Matt Kiser is on his fourth payment processor since launching in 2017."
+    },
+    {
+      "tag": "h3",
+      "text": "Setting the foundation for future growth and retention"
+    },
+    {
+      "tag": "p",
+      "text": "Membership launch is the perfect time to set up good habits that will support retention and the future growth of your program. Onboarding members, thanking members, and learning about where members come from and how they navigate the sign-up process will all help you to nurture your program over time. Here are the questions to ask."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have a plan for identifying your best opportunities for future growth? Your launch will give you valuable information about where new members come from and what types of appeals resonate the most – if you take the time to set up a tracking system before launch. Jump to “Growing our membership” for detailed advice on setting up a tracking system, and find a template for that in previous MPP research on data-informed decision making."
+    },
+    {
+      "tag": "p",
+      "text": "Have you set up your onboarding series? This is the beginning of your effort to retain your new members. Jump to “How should we onboard our members?” for advice on crafting an onboarding series."
+    },
+    {
+      "tag": "p",
+      "text": "Do you have a plan for thanking your founding members? Your founding members are your biggest fans. A personal thank you will go a long way toward keeping them. Leverage that love for your organization by making it easy for your founding members to flaunt their membership."
+    },
+    {
+      "tag": "p",
+      "text": "You might want to give them visual assets they can share on social media to celebrate their membership. Consider offering them their own unique URL for the landing page so they can find out if they drive any new memberships. For more ideas, check out Zetland’s members-getting-members campaign or MPP’s study of The Correspondent’s crowdfunding campaign."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland turned its members into powerful ambassadors"
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Zetland faced a hard truth: they still weren’t profitable, and they were running out of time. Could their members help?"
+    },
+    {
+      "tag": "p",
+      "text": "While your membership value proposition will speak to the broader state of the world, your launch is a chance to speak to the moment. It can also be a moment to redescribe what you do in a powerful way that’s become clearer to you over time.Your membership launch communications should draw on your membership value proposition and should also lean into events happening around you and how they affect your organization. This is how you will make your launch feel timely and relevant, while also unique to you."
+    },
+    {
+      "tag": "p",
+      "text": "As you make your membership launch communications, keep in mind this MPP finding: the most inspiring and sustainable membership-driven organizations connect individuals to a shared larger purpose. They frame membership as a way to restore what feels broken in the world. They speak to the present zeitgeist in which something feels out of balance – and offer membership in their organization as credible grounds for optimism. And they give members a way to feel like they are part of the solution."
+    },
+    {
+      "tag": "p",
+      "text": "Drawing on those elements, a strong membership launch story includes:"
+    },
+    {
+      "tag": "li",
+      "text": "The newsroom value proposition and corresponding membership value proposition"
+    },
+    {
+      "tag": "li",
+      "text": "Transparency about why you need your fans to become supporters, including any financial challenges you are facing"
+    },
+    {
+      "tag": "li",
+      "text": "A rousing articulation of what it means to be a member and what their support will make possible"
+    },
+    {
+      "tag": "li",
+      "text": "A connection to current events that make your work imperative for audience members"
+    },
+    {
+      "tag": "p",
+      "text": "You should lean on your brand strategy and identity to tell this launch story in a way that feels like a continuation of the journalism you do."
+    },
+    {
+      "tag": "p",
+      "text": "You can repackage parts of this launch story for email appeals, for your membership landing page, social media posts, and anywhere else you invite people to join your cause. Ahead of your launch date, you should have multiple membership appeals ready that tell some version of this story."
+    },
+    {
+      "tag": "p",
+      "text": "Don’t be afraid to tell your launch story loudly and clearly. You want to over-communicate in the launch campaign and in the future so that your message really gets through. As Chris Horne, founder and publisher of the Devil Strip in Ohio, shared, “You will overestimate how much people are paying attention to you when you talk about your membership program. Don’t be shy about educating and publicizing your membership program all the time.”"
+    },
+    {
+      "tag": "p",
+      "text": "An extreme example of a captivating (re)launch story comes from Tiempo Argentino in Argentina. In 2015, faced with declining profits, the businessman owner of Tiempo stopped paying salaries, then stopped printing the newspaper. Soon after, he threatened to shut down the newspaper completely. Tiempo’s journalists occupied the newsroom, vowing not to leave until they got paid. They ended up sleeping on mattresses in the office for 10 months."
+    },
+    {
+      "tag": "p",
+      "text": "Meanwhile, Tiempo’s team organized music festivals to raise money and marches to tell Argentinians what was happening. They continued to publish online and leveraged social networks in a way they hadn’t when they were printing a newspaper. They had more readers than ever before – and those readers all knew Tiempo’s story, not just the journalism being produced."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Tiempo organized a concert to raise money for the newspaper (Courtesy of Javier Borelli)"
+    },
+    {
+      "tag": "p",
+      "text": "The Tiempo team raised enough money to publish a special print edition in 2016, four months after receiving their last payroll, to mark the anniversary of Argentina’s last coup. It was also a way to meet readers, find out how to reach them directly (by collecting email addresses), and learn how much support they had."
+    },
+    {
+      "tag": "p",
+      "text": "The supplement sold out. Tiempo gained hundreds of email addresses. Soon after, they re-launched as a worker-owned cooperative with a membership model. Argentineans responded to Tiempo’s call to help them stay independent and keep their journalism free to access. Today membership makes up 70 percent of Tiempo’s revenue."
+    },
+    {
+      "tag": "p",
+      "text": "Tiempo’s re-launch as a member-supported, independent news organization included all of the elements above: a strong membership value proposition, transparency about their challenges, a compelling pitch to become a member, and a connection to the events of the moment (this video captures the whole story). And with many member-driven startups being born out of the dissolution or atrophying of legacy publications, Tiempo’s story might not be that far off from yours.  Remember: there is deep dissatisfaction with “the media” in many parts of the world. You’re providing a better way. Your membership launch can tell that story."
+    },
+    {
+      "tag": "p",
+      "text": "Building a strong landing page for your membership program is like creating a welcoming front door to your supporters. A membership landing page is where your potential members begin the checkout process. Our advice for what makes a good landing page assumes that you have a membership FAQ page for handling common questions. Some organizations don’t, but the Membership Puzzle Project recommends making FAQ pages to reduce the number of questions your membership support staff has to field and reduce the amount of information a potential member has to wade through before signing up."
+    },
+    {
+      "tag": "p",
+      "text": "A membership program landing page should:"
+    },
+    {
+      "tag": "p",
+      "text": "Reflect your overall branding. It should be obvious to members that they are still within the same organization when they land on this page."
+    },
+    {
+      "tag": "p",
+      "text": "Reiterate your value proposition. What does their membership make possible? This is your chance to make members feel like the superheroes they are."
+    },
+    {
+      "tag": "p",
+      "text": "Get to the point. If you get people to your payment page, it means they’re interested. You don’t need to sell them all over again, especially if you have a separate membership FAQ page. Reiterate your value proposition, and then get to the point – payment. The details (i.e. the benefits) and FAQ can go after that."
+    },
+    {
+      "tag": "p",
+      "text": "Defaults matter. Whether you have tiers or a pay-what-you-want model, you should know at what support level you need the bulk of your members to contribute in order to hit your financial targets. Consider making that support level your default/preset payment option, either by preselecting it or by making it the most prominent option."
+    },
+    {
+      "tag": "p",
+      "text": "Some news organizations MPP interviewed worked hard to encourage members to become annual recurring members, reasoning that monthly members are presented with the opportunity to cancel every month. Others have said the cost of an annual membership is too big an ask and prefer monthly, both because it’s less daunting for members and because the cash flow can be more predictable. Although MPP does not have a strong recommendation in this case, the research team has seen growing evidence that those who opt for monthly recurring payments have higher retention rates. Jump to “Retaining our members” for insight into how defaults can affect member retention."
+    },
+    {
+      "tag": "p",
+      "text": "For an example of the use of defaults, observe Krautreporter in Germany’s payment page. Krautreporter determined it needs most people to become members at €9 a month or €108 a year. They prefer annual members because the paywalled organization found that many monthly members joined for a month in order to access a few articles and then canceled soon after."
+    },
+    {
+      "tag": "p",
+      "text": "Placing that option in the middle plays into a behavioral psychology phenomenon called “the decoy effect.” It’s a form of nudging."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of Krautreporter"
+    },
+    {
+      "tag": "p",
+      "text": "Pay-what-you-want models often pre-fill the payment box, or set a specific benefit to kick in at a certain level of contribution."
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick in South Africa wants members to join at R150 (about $8.75 at the time of writing) a month or R1,800 a year if they can afford it, so that is the preset amount on their membership landing page. They also make a popular Uber voucher available at that level to nudge members toward that level."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of the Daily Maverick"
+    },
+    {
+      "tag": "p",
+      "text": "Jump to “Designing our membership program” for additional advice on setting a price."
+    },
+    {
+      "tag": "p",
+      "text": "A good check-out process is an often overlooked but critically important component of a membership program. You can get all the other elements of a membership program right, and still undermine your success with a shoddy check-out process."
+    },
+    {
+      "tag": "p",
+      "text": "Why is this? Styli Charalambous, CEO of the Daily Maverick in South Africa, says that membership is also an e-commerce business. He’s right. If payment is a precondition of membership in your membership program, you have to execute on payment. “Cart abandonment” (or drop-offs on the payment page) is a huge problem across e-commerce. That’s why your checkout flow matters. E-commerce expert Kunle Campbell shared the essential steps to a smooth checkout process with the Facebook Journalism Project."
+    },
+    {
+      "tag": "p",
+      "text": "Get the email address first – If the person “abandons their cart” (leaves the page without paying), you’ll be able to follow up with them by email."
+    },
+    {
+      "tag": "p",
+      "text": "Don’t require users to create a login until they’ve paid – The key is to introduce as little friction as possible until a user has joined. Especially if someone is signing up on mobile, making the user create and save a password might be enough to stop the user from completing the process. Alternatively, you can give the user the option of logging in with a social or Google account."
+    },
+    {
+      "tag": "p",
+      "text": "Ask for as little information as possible until after payment – Few credit card processors require anything more than a zip code to process payment, so don’t ask for more payment information than you have to. If you are a print publication and need to collect physical addresses, enable autocomplete and use an address finder if you can. If you want a person’s address for swag fulfillment, collect it on the screen immediately after payment or in one of the onboarding emails. Consider integrating one-click payment options such as PayPal or ApplePay. If you offer multiple payment options, it’s worth paying attention to which ones are used the most often."
+    },
+    {
+      "tag": "p",
+      "text": "Make sure it’s easy to join on mobile. Turn off pop-ups on your payment pages, or at least make sure they are mobile responsive and potential members can easily get past them to pay. One-click payment options will be particularly valuable on mobile. Again, if you offer multiple payment options, it’s worth paying attention to which ones are used the most often – and how this differs between desktop and mobile."
+    },
+    {
+      "tag": "p",
+      "text": "You can find more details, including screenshots of well-designed checkout flows, at the Facebook Journalism Project. Memberkit 1.0 also offers advice on how to find out when and why potential members are quitting the signup process."
+    },
+    {
+      "tag": "p",
+      "text": "MPP will add two more items to Campbell’s list:"
+    },
+    {
+      "tag": "p",
+      "text": "Do user testing. Before the page is public, ask a couple of potential members to go through your full sign up process, making sure that some do it on desktop and some do it on mobile. You can do this by having them use your company credit card or by offering some kind of incentive for them to join early, using their own card."
+    },
+    {
+      "tag": "p",
+      "text": "Make sure members get an email receipt. All this email needs to do is confirm that their payment went through. If you can personalize it a little bit by adding your logo and making sure the tone of the message matches your brand, that’s great. But save the details about your membership value proposition for the welcome email."
+    },
+    {
+      "tag": "p",
+      "text": "Your onboarding series, also known as a drip campaign, is basically a welcome package to your new members. The welcome email – which is different from the payment confirmation email – is your opportunity to say an enthusiastic “Thank you!” to your new member. The series of emails that follows is an opportunity to orient them to your publication and their new relationship to it. MPP strongly encourages newsrooms not to overlook the chance to onboard new members. They’ve started a relationship with you – and now it’s on you to take them by the hand and lead them through the membership journey."
+    },
+    {
+      "tag": "p",
+      "text": "For those newsrooms with a large number of non-digital audience members, you’ll need to also plan an analog onboarding experience. At WURD Radio in Philadelphia, many of their members pay by putting a check in the mail. You can’t tie an automated email series to that. Their membership coordinator calls the member when WURD receives their check, and lets the member know they’ll be getting their membership package in two to four weeks. This process is labor intensive, but necessary for serving a crucial segment of WURD’s audience."
+    },
+    {
+      "tag": "p",
+      "text": "Onboarding is the first step to retaining your new members, which is why this appears both in the launching stage – because you shouldn’t launch your membership program without it – and the retention stage."
+    },
+    {
+      "tag": "p",
+      "text": "There is no magic number of onboarding emails. We recommend starting with between two and four, and studying the open rate on the whole series to figure out the right number for your readers. There will be some dropoff, but you should aim to keep the open rate above 50 percent."
+    },
+    {
+      "tag": "p",
+      "text": "Member-driven newsrooms use onboarding emails to:"
+    },
+    {
+      "tag": "li",
+      "text": "Say thank you (again)."
+    },
+    {
+      "tag": "li",
+      "text": "Explain the benefits of membership"
+    },
+    {
+      "tag": "li",
+      "text": "Introduce members to key members of the staff, including the editor/publisher and their primary point of contact (the person who is most directly managing the membership program)"
+    },
+    {
+      "tag": "li",
+      "text": "Gather additional information about members via onboarding surveys"
+    },
+    {
+      "tag": "li",
+      "text": "Share some of the ways members can contribute beyond becoming a paying member"
+    },
+    {
+      "tag": "li",
+      "text": "Share work that members have made possible"
+    },
+    {
+      "tag": "li",
+      "text": "Encourage members to recruit other members"
+    },
+    {
+      "tag": "li",
+      "text": "Collect physical addresses for swag fulfillment"
+    },
+    {
+      "tag": "li",
+      "text": "Tell them how to get in touch with you"
+    },
+    {
+      "tag": "p",
+      "text": "Here are some best practices for onboarding emails:"
+    },
+    {
+      "tag": "p",
+      "text": "Send your onboarding emails from a personable email address. This is not the place to use noreply@[domain]. Many organizations use hello@[domain] or members@[domain]."
+    },
+    {
+      "tag": "p",
+      "text": "Send your onboarding emails from and to a real person. Your onboarding emails should be written by and signed by recognizable individuals in your organization, such as the founder or a well-known reporter, or the person members will hear from the most often, such as your membership editor. Consider including a photo of the writer. And since you have their first name from their registration, use a merge tag to address the email to them specifically."
+    },
+    {
+      "tag": "p",
+      "text": "Give only one “job” to each onboarding email. Limit the number of “jobs” each onboarding email does to one or two. If you’re introducing new members to your team and how you work, don’t also enumerate their benefits in that email. Make the onboarding emails simple to digest and act on, if there’s an action needed (such as filling out an onboarding survey)."
+    },
+    {
+      "tag": "p",
+      "text": "For example, when Outride.rs in Poland created an onboarding series for their flagship newsletter, The Brief, they originally had just two emails. The first, written by the editor-in-chief, welcomed them, reiterated Outride.rs value proposition, and explained what to expect from the Brief. The second one explained how Outride.rs made editorial decisions and its financial model, but after several emails from confused readers, they realized that they had packed too much into that second email and split it into two separate emails. When they launch their membership program in fall 2020, they will add a fourth email inviting newsletter subscribers to become a member."
+    },
+    {
+      "tag": "p",
+      "text": "Giving each newsletter in the series just one job doesn’t necessarily mean you have to keep them short, though. For example, inspired by Bernie Sanders’ presidential campaign, Zetland in Denmark welcomes its new members with a long email about their mission and their journey. In 2020, amid concerns about losing members due to the coronavirus pandemic and resulting economic crisis, Zetland (which has a paywall) began offering new members the opportunity to share articles with their contacts as part of the onboarding process."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "p",
+      "text": "Use onboarding emails as an opportunity to get to know your new members. What else do you want to know about your members in order to make your journalism and your membership program more desirable? Ask questions that can give you data about that. Krauteporter in Germany, Maldita in Spain, and the Daily Maverick in South Africa (and likely many others) all use their onboarding series to ask members about their area of expertise so they can leverage that in their journalism. In its onboarding survey, Black Ballad in the UK asks members what three topics they’re most interested in and how they want to have an impact on the world, which informs the team’s decision about what topics to focus on in their editorial campaigns."
+    },
+    {
+      "tag": "h3",
+      "text": "How Black Ballad turns member surveys into new revenue streams"
+    },
+    {
+      "tag": "p",
+      "text": "Their goal is to be the one who knows the Black British professional woman better than anyone else – and to monetize that knowledge."
+    },
+    {
+      "tag": "p",
+      "text": "Some organizations continue to “onboard” new members for an entire year. Because onboarding series are set up to send automatically at preset time increments (hence the term “drip campaign”), this is easy to set up. Consider sending an email at the three-month or six-month mark that includes a Net Promoter Score survey or more detailed survey to see how you’re doing. If members are happy, you can ask them to encourage others to join."
+    },
+    {
+      "tag": "p",
+      "text": "For example, De Correspondent in the Netherlands surveys new members about how their member experience compares to their expectations within 30 days of joining, and then surveys them on a quarterly basis about their experience and what they would like to see on the platform. They send their last onboarding email as the member’s one-year anniversary/annual renewal date approaches."
+    },
+    {
+      "tag": "p",
+      "text": "Find more tips on sending great welcome emails from Cory Brown at The Byline, published by Pico. For an onboarding campaign template, see The News Revenue Hub’s suggestions here."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter approaches retention after losing half its members"
+    },
+    {
+      "tag": "p",
+      "text": "In its second year, Krautreporter implemented a paywall, prioritized annual recurring payments, and allowed sharing."
+    },
+    {
+      "tag": "h3",
+      "text": "What WTFJHT learned from a bad membership tech choice"
+    },
+    {
+      "tag": "p",
+      "text": "WTFJHT founder Matt Kiser is on his fourth payment processor since launching in 2017."
+    },
+    {
+      "tag": "h3",
+      "text": "How Honolulu Civil Beat rebranded itself to be “friendlier”"
+    },
+    {
+      "tag": "p",
+      "text": "Positioning itself as a disruptive outsider was not a good fit for an organization about to launch membership."
+    },
+    {
+      "tag": "h3",
+      "text": "How Frontier brought a membership model to Myanmar"
+    },
+    {
+      "tag": "p",
+      "text": "They began by identifying five professions who needed the journalism Frontier Myanmar produces."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick tested its membership assumptions pre-launch"
+    },
+    {
+      "tag": "p",
+      "text": "Daily Maverick took advantage of a delay with its membership program launch to answer some questions it had about its potential members."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Developing Membership Metrics"
+    }
+  ]
+}

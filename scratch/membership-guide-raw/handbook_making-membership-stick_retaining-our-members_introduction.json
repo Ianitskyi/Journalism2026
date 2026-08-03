@@ -1,0 +1,631 @@
+{
+  "url": "https://membershipguide.org/handbook/making-membership-stick/retaining-our-members/introduction",
+  "title": "Membership Handbook | The Membership Guide",
+  "h1": "Retaining Members",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Retaining members is the most essential thing a news organization can do to sustain the long-term health of its membership program. Many outlets focus the bulk of their attention on acquiring new members, but if you have to choose to focus on one or the other, focus on retaining the members you have. It is less time intensive, less costly, and leads to deeper, more invested communities.Retention begins with a strong relationship between a supporter and a newsroom. All relationship-building work is grounded in having a solid understanding of your membership value proposition, and delivering on it consistently. (Jump to “Discovering your value proposition”)Traditional subscription strategies give us a clue to what drives retention next: sustained attention. Under a “thick” membership model, sustained attention comes from memberful routines. Memberful routines are the magic of member-driven newsrooms because those routines bring supporters down the conversion funnel and also strengthen the relationship and trust over time, boosting retention (Jump to “Developing memberful routines” for more). It’s useful to think about memberful routines and member retention as the outcome of an expanded audience funnel. The audience funnel shows how potential members move from being occasional visitors to paying members. As you build out retention strategies using memberful routines, you can expand on the idea of a conversion funnel by flipping the funnel on its side (consider the image at the top of this section). A flipped funnel expands the avenues for participation to account for activities after someone becomes a member. This allows you to see how to deepen engagement and turn your most loyal members into advocates that can help grow your membership base. You should be thinking about strategies for how you can retain your members from the second they join. The longer someone is a member, the more likely it is that they will stay one and the more value they bring through recurring payments and participation, including educating themselves about your journalism and what it takes to produce it. So how do you get members to that point where they’ll stick around for the long-term? There are four vital ingredients for retention:1. Consistently delivering value in your core service2. Consistently delivering value in your membership program3. Providing opportunities for participation4. Putting in place smart tech defaults and customer service that prevent easily avoidable member losses MPP has covered the first three throughout this guide. This section will offer an introduction to the core concepts underpinning retention, and then dig into the fourth point above: technology defaults and customer service practices that support retention. By getting these components right, you can avoid otherwise preventable member losses and gain time and resources to focus on delivering value in your core service and membership program."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan and Content provided by In The Know"
+    },
+    {
+      "tag": "p",
+      "text": "The German membership platform Steady said the publishers that use its platform average a 3 percent monthly churn rate. This is “amazingly low,” said Sebastian Esser, Steady’s founder and CEO. He added that it often takes membership organizations longer to build up their base of supporters, but their data suggest members stick around longer than subscribers."
+    },
+    {
+      "tag": "p",
+      "text": "“That’s one thing that speaks for membership: Low churn, high retention, strong relationships. People care [about their memberships]. If they cancel, it hurts. [Cancelling membership] is saying to a person I don’t want you anymore. It doesn’t hurt to cancel my Netflix account.”"
+    },
+    {
+      "tag": "p",
+      "text": "It sounds promising, but what does that mean? Retention strategy is filled with jargon and terminology, and because digital membership models are still fairly new, MPP looks to the subscription space and public radio space for pointers, but acknowledges that there is more knowledge to be gained as the membership space matures."
+    },
+    {
+      "tag": "p",
+      "text": "Before you can set retention goals or tackle retention challenges, there are a few foundational concepts to understand."
+    },
+    {
+      "tag": "p",
+      "text": "Know the difference between retention and churn. Retention rate is the ratio of customers that continue on as members of your newsroom month after month or year after year. Churn rate is the inverse of retention — it’s the ratio of members you’ve lost over a period of time (either month to month or year to year). A newsroom with a high churn rate would, by definition, have a lower retention rate. Many member-driven newsrooms measure both retention and monthly or annual churn."
+    },
+    {
+      "tag": "p",
+      "text": "Know if you are measuring monthly retention or annual retention. Monthly retention is the percentage of members that stay on as paying members month to month. Annual retention is the percentage of members that stay on as paying members year after year."
+    },
+    {
+      "tag": "p",
+      "text": "Monthly retention"
+    },
+    {
+      "tag": "p",
+      "text": "MPP recommends tracking monthly retention in the first few months after a member campaign, and as an indicator of the strength of your new member onboarding process."
+    },
+    {
+      "tag": "p",
+      "text": "The simplest way to calculate monthly retention is:"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "What data exist for benchmarking monthly retention? A 2019 report from The Lenfest Institute and Shorenstein Center examined the engagement, conversion, and retention rates of 500+ news organizations with a digital subscription or membership model between 2011 and 2019. Many news organizations in this data set are national, metro, regional and local newspapers with established brands and paywalls."
+    },
+    {
+      "tag": "p",
+      "text": "This analysis found that the median publisher reported a 94.4 percent monthly retention rate. The top 5 percent of publishers studied reported a 97 percent monthly retention rate.  These rates are a good benchmark for mature newsrooms with a strong brand and a paywall component to membership, however a 95 percent monthly retention rate is a worthy goal for small and mid-sized digital newsrooms who are new to membership."
+    },
+    {
+      "tag": "p",
+      "text": "Annual retention"
+    },
+    {
+      "tag": "p",
+      "text": "Tracking annual retention will help you understand how longer-term membership strategies are working, such as the introduction of new member benefits or changes to your onboarding series. If you see a dip in retention after a huge bump in membership numbers, those are low quality members. This often happens among members who join for a specific benefit, such as swag."
+    },
+    {
+      "tag": "p",
+      "text": "One common way to calculate annual retention is:"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "MPP turns to U.S. public media organizations, the earliest practitioners of membership in the U.S., for benchmarks for this. NPR station KUER in Salt Lake City, Utah, reported their member retention rate over 12 months, 3 years, and 5 years as a whopping 93.24 percent, 69.54 percent, and 57 percent, respectively. (Although KUER is a standout, public radio generally reports very high annual retention rates.)"
+    },
+    {
+      "tag": "p",
+      "text": "Know the difference between static and rolling retention rates. The retention measurements above are static rates, meaning they are calculated with a set date as the start and end date (in the example above, the first day of the year and the last day of the year), and can be calculated over any specified month or year."
+    },
+    {
+      "tag": "p",
+      "text": "Rolling retention  is a measure of retention that allows you to assess how many members have stayed on as members relative to a certain date. If you have to prioritize what you measure, the research team recommends focusing on rolling retention over a static retention measurement."
+    },
+    {
+      "tag": "p",
+      "text": "Rolling retention is a useful metric to use when you want to understand the effectiveness of new member recruitment and retention strategies. For example, you might use this metric to check whether sending a series of donation requests to your membership list causes you to lose members. You can examine your rolling retention rate in the days and weeks following the implementation of that series, and see how it compares to your rolling retention rate prior to that action."
+    },
+    {
+      "tag": "p",
+      "text": "Some services, like the News Revenue Hub, measure “annual, rolling retention” for the clients on a monthly basis. Here’s the News Revenue Hub’s calculation:"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "For example:"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "News Revenue Hub uses this particular measurement with its clients because “it helps clients watch—and react to—any wobbling their organization might see in retention throughout the year.” Here are a few figures you can use to benchmark yourself: for small and mid-sized digital newsrooms in the U.S., the News Revenue Hub reports a median rolling annual retention of 60 percent. See here for more on how and why they calculate member retention."
+    },
+    {
+      "tag": "p",
+      "text": "The Membership Puzzle Project surveyed a set of member-driven newsrooms internationally and found that out of a set of 17 newsroom respondents, the average rolling annual retention was 69 percent and median 72 percent. Jump to “Developing membership metrics” for methods on the survey and more results."
+    },
+    {
+      "tag": "p",
+      "text": "The goal of retention is to cultivate long-term relationships with members. A member’s support becomes more and more valuable over time as their cumulative contributions add up. But how can you track this accumulation of value? Customer Lifetime Value is a metric that comes from subscription models and is one way to capture the monetary value of members over time."
+    },
+    {
+      "tag": "p",
+      "text": "This is a more valuable metric for a member-driven newsroom to watch than traffic, writes Matt Skibinski for the Lenfest Institute. You can use CLV to make decisions such as how much you should spend on marketing or advertising efforts to grow your member base."
+    },
+    {
+      "tag": "p",
+      "text": "See below for a simple CLV calculation that the research team adapted for membership — thus resulting in “Member Lifetime Value” (MLV)."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "You can calculate the average revenue per member by dividing total monthly membership revenue by total members over a 6-or-12-month period, depending on how you’re projecting."
+    },
+    {
+      "tag": "p",
+      "text": "The easiest way to calculate the expected lifetime of a membership is through a simple calculation, which will tell you the average number of months a membership will last:"
+    },
+    {
+      "tag": "p",
+      "text": "1 ÷ Monthly Churn Rate"
+    },
+    {
+      "tag": "p",
+      "text": "The Dispatch, a year-old startup in Washington, D.C., used an approximation of customer lifetime value to set the price for its lifetime membership, which costs $1,500. An annual membership is $100 a year, and they reasoned that a lifetime member would help The Dispatch get to 15 years."
+    },
+    {
+      "tag": "p",
+      "text": "Of course, members provide more value to newsrooms than just their monetary contributions, but MPP has not seen any news organizations find a way to incorporate this into CLV yet."
+    },
+    {
+      "tag": "p",
+      "text": "Membership Puzzle Project researcher Joe Amditis explored the potential and challenges of calculating of lifetime membership value in 2019: “There are certain core aspects of membership that are demonstrably valuable to an organization and its members, but it’s much harder to quantify what they’re worth and to nail down a dollar amount. A lot of it has to do with the difficulty in calculating the value of participation, which can be a huge part of membership organizations.”"
+    },
+    {
+      "tag": "p",
+      "text": "He offers the example of Google Maps, which relies on users to submit photos, reviews, and other information about locations on the map to make Google Maps more useful. In exchange, those who are part of its Local Guides program get points and perks. The points and perks translate to rewards for the contributor."
+    },
+    {
+      "tag": "p",
+      "text": "Although the points and perks are going to the contributor, that indicates that Google was able to assign a certain amount of value to these contributions in order to determine the proper set of points and rewards. If newsrooms could find similar ways to assign financial value to audience participation, they could more accurately assess the true lifetime value of a member. We explored this more deeply in the metrics section. (Jump to “Developing membership metrics”)"
+    },
+    {
+      "tag": "p",
+      "text": "Smart payment defaults will help you avoid losing members for easy, preventable reasons. Prioritizing recurring member payments over one-time donations is critical."
+    },
+    {
+      "tag": "p",
+      "text": "MPP has seen growing evidence that members who opt for monthly recurring payments have higher retention rates – and are therefore more powerful supporters over time – than those who opt for annual recurring payments or non-recurring donations (usually referred to as one-time donations, even if they happen every year). Monthly recurring payments are also easier for newsrooms to manage. This is one area where “set-it-and-forget-it” is the right approach."
+    },
+    {
+      "tag": "p",
+      "text": "This is because:"
+    },
+    {
+      "tag": "li",
+      "text": "It is a smaller up-front ask to new members, and people are reminded every month of their support;"
+    },
+    {
+      "tag": "li",
+      "text": "Monthly recurring payments smooth out newsrooms’ cash flow, rather than having to deal with big lumps of money a couple times a year;"
+    },
+    {
+      "tag": "li",
+      "text": "It is easier to handle any credit card issues that come up if they don’t come down the pipe all at once (more on that below);"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Example of setting a monthly contribution as the default (Courtesy of Minnesota Public Radio)"
+    },
+    {
+      "tag": "p",
+      "text": "U.S public radio is in the midst of transitioning from a tradition of one-time donation drives, held multiple times a year, to encouraging listeners to become sustaining members by making monthly recurring contributions to their stations."
+    },
+    {
+      "tag": "p",
+      "text": "Here’s how public media fundraising specialist Valerie Arganbright described the logic of a sustainer model it to the research team: if a member gave a one-time gift of $100 last March, when it’s time for them to renew their membership one year later, often that member won’t get around to renewing until 14 or 15 months past their initial gift. At that point, compared to a monthly giver, the newsroom has lost 2 or 3 months of revenue from this annual member."
+    },
+    {
+      "tag": "p",
+      "text": "The shift to sustained giving is paying off for public media, suggesting that adopting sustaining memberships in other types of newsrooms could be a robust strategy. In 2019, the lifetime revenue per donor across many public radio stations was more than 30% greater ($281) for donors acquired as recurring sustainers than the $190 for donors acquired as one-time givers."
+    },
+    {
+      "tag": "p",
+      "text": "Data provided by Arganbright from Blackbaud/Target Analytics showing patterns of public radio giving also shows that monthly giving increases a member’s loyalty. See the chart below. Across donors who were acquired in 2017, 77 percent of the original donors still giving in 2019 were acquired as recurring donors. The members who had given a one-time contribution two years prior only made up a third of the donor-base in 2019."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Blackbaud/Target Analytics Data provided by Valerie Arganbright, August 2020"
+    },
+    {
+      "tag": "p",
+      "text": "Some newsrooms still prefer annual recurring payments, for a variety of reasons. If you have a paywall, members may use the monthly payment option to access your content on a short-term basis. Krautreporter in Germany saw this happening amongst their members and chose to default to an annual option instead. The switch could potentially suppress some of their membership growth, but they reason that gaining members who are likely to stick around is more valuable."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter approaches retention after losing half its members"
+    },
+    {
+      "tag": "p",
+      "text": "In its second year, Krautreporter implemented a paywall, prioritized annual recurring payments, and allowed sharing."
+    },
+    {
+      "tag": "p",
+      "text": "Many newsrooms also offer an option to give a one-time donation. While we recommend making this option available for people who won’t financially support you unless you give them a one-time option, you should do whatever you can in your checkout flow and communications to emphasize the value of a monthly recurring payment."
+    },
+    {
+      "tag": "p",
+      "text": "Optimizing your billing process for retention – in other words, easy giving – prevents a significant number of otherwise avoidable member losses."
+    },
+    {
+      "tag": "p",
+      "text": "In the media business, an average of 30 percent of cancellations come from payment failures, according to Patrick Campbell, CEO of ProfitWell, who spoke to the Facebook Retention Accelerator. Of those failures, on average, 70 percent will not renew their accounts."
+    },
+    {
+      "tag": "p",
+      "text": "Here are some strategies for addressing credit card declines and heading them off:"
+    },
+    {
+      "tag": "p",
+      "text": "Utilize account updaters: All of the major credit card companies offer updater services, which allow merchants to update the information for on-file credit cards when a customer’s account details change. There are fees for these services, but they can save you the headache of having to constantly remind members about expiring credit cards or risk losing members because they forget to update their account. Here’s an overview from Visa about how its service works."
+    },
+    {
+      "tag": "p",
+      "text": "Improve your dunning process: Dunning is the term for organizations collecting money they’re owed when a credit card is invalid or declined. Many news organizations do this manually by simply emailing members when their credit card doesn’t work and asking them to update it, but you can automate it. ProfitWell created a useful guide for dunning basics that emphasizes the need for empathy with your members and clear and concise communications."
+    },
+    {
+      "tag": "p",
+      "text": "The Daily Maverick in South Africa has thousands of lapsed members with credit cards on hold at any point in time, many due to high rates of credit card fraud and a lack of quality payment processors in the market – something out of their control. That’s why Retention Manager Tinashe Munyuki has been almost exclusively focused on winning back those on-hold members. He’s reinstated 10,000 of them since 2020, the majority through persistent, often manual, dunning. He detailed all his tactics for the MPP research team, and they’re captured in the case study below."
+    },
+    {
+      "tag": "h3",
+      "text": "How the Daily Maverick won back 10,000 lapsed members"
+    },
+    {
+      "tag": "p",
+      "text": "At any point in time, the Daily Maverick has thousands of lapsed members with credit cards on hold."
+    },
+    {
+      "tag": "p",
+      "text": "Extend grace periods for renewal: You can make your dunning process more effective by extending a member’s membership period even after their credit card expires. This gives you more time to win them back. You should only begin communicating with your members about their failed payment after their membership expires. For more on extending grace periods, here is advice from the Facebook Journalism Project Accelerator Program."
+    },
+    {
+      "tag": "p",
+      "text": "This guide is being published during the coronavirus pandemic, which is causing extreme economic hardship for many people. Your newsroom should consider allowing those who want to cancel their membership because they can’t afford it to remain members until they can afford to pay again."
+    },
+    {
+      "tag": "p",
+      "text": "For example, Zetland, a Danish member-driven news site with a paywall, added a new feature to their unsubscribe page shortly after the lockdown began in Denmark: a piece of text next to the unsubscribe button that essentially says: “If you’ve been negatively impacted by all of this, don’t leave us for good. Tell us what your situation is, and we’ll reduce the price of membership for you.” See our case on Zetland to learn more about this tactic."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "p",
+      "text": "Last spring, as COVID-19 emerged, El Diario, the Spanish news site, raised its membership fees for the first time since 2012, but it told members who could not afford the new rates due to economic hardship that they could remain members if they could not afford the new rate. Here’s how it was described in a European Journalism Centre case study:"
+    },
+    {
+      "tag": "p",
+      "text": "To the team’s surprise, 97% of eldiario.es’ members accepted the new membership prices. On top of that, a further 18,056 members joined in just two months, taking the publication’s membership total to over 55,000 as of the end of May."
+    },
+    {
+      "tag": "p",
+      "text": "Encourage payments with bank accounts: You can also improve retention by avoiding credit cards entirely and asking members to have their payment debited directly from their bank account. MPP recommends that only established newsrooms with high levels of loyalty and trust take this approach. Because bank account information is sensitive, it’s risky for newsrooms without a track record to ask new members to sign up directly with their bank account information. For long-established brands, however, it is worth asking your members to give via a means that will rarely be changed or declined, and explaining why it matters."
+    },
+    {
+      "tag": "p",
+      "text": "Segment your members by renewal status. Consider identifying and targeting current members or soon-to-lapse members in your CRM. You can use these segments to send targeted email renewal campaigns. These campaigns should focus on encouraging the member to renew and reminding the member of your newsroom and membership value propositions (Jump to “Discovering your value proposition”). See below for an example of this in action with a few snapshots of emails out of The Marshall Project’s renewal campaign series."
+    },
+    {
+      "tag": "figcaption",
+      "text": "The Marshall Project’s renewal campaign email series (Courtesy of The Marshall Project)"
+    },
+    {
+      "tag": "p",
+      "text": "If your organization is struggling with implementation of the steps above, hiring an e-commerce consultant to help you get set up might be a worthwhile one-time investment."
+    },
+    {
+      "tag": "p",
+      "text": "Your onboarding series, also known as a drip campaign, is basically a welcome package to your new members. The welcome email – which is different from the payment confirmation email – is your opportunity to say an enthusiastic “Thank you!” to your new member. The series of emails that follows is an opportunity to orient them to your publication and their new relationship to it. MPP strongly encourages newsrooms not to overlook the chance to onboard new members. They’ve started a relationship with you – and now it’s on you to take them by the hand and lead them through the membership journey."
+    },
+    {
+      "tag": "p",
+      "text": "For those newsrooms with a large number of non-digital audience members, you’ll need to also plan an analog onboarding experience. At WURD Radio in Philadelphia, many of their members pay by putting a check in the mail, and you can’t tie an automated email series to that. Their membership coordinator calls the member when WURD receives their check and lets the member know they’ll be getting their membership package in two to four weeks. This process is labor intensive, but necessary for serving a crucial segment of WURD’s audience."
+    },
+    {
+      "tag": "p",
+      "text": "Onboarding is the first step to retaining your new members, which is why MPP has put it in both in the launching stage – because you shouldn’t launch your membership program without it – and the retention stage – because onboarding is the first of many steps you should take to retain your members."
+    },
+    {
+      "tag": "p",
+      "text": "There is no magic number of onboarding emails. We recommend starting with between two and four, and studying the open rate on the whole series to figure out the right number for your readers. There will be some dropoff, but you should aim to keep the open rate above 50 percent."
+    },
+    {
+      "tag": "p",
+      "text": "Member-driven newsrooms use onboarding emails to:"
+    },
+    {
+      "tag": "li",
+      "text": "Say thank you (again)."
+    },
+    {
+      "tag": "li",
+      "text": "Explain the benefits of membership"
+    },
+    {
+      "tag": "li",
+      "text": "Introduce members to key members of the staff, including the editor/publisher and their primary point of contact (the person who is most directly managing the membership program)"
+    },
+    {
+      "tag": "li",
+      "text": "Gather additional information about members via onboarding surveys"
+    },
+    {
+      "tag": "li",
+      "text": "Share some of the ways members can contribute beyond becoming a paying member"
+    },
+    {
+      "tag": "li",
+      "text": "Share work that members have made possible"
+    },
+    {
+      "tag": "li",
+      "text": "Encourage members to recruit other members"
+    },
+    {
+      "tag": "li",
+      "text": "Collect physical addresses for swag fulfillment"
+    },
+    {
+      "tag": "li",
+      "text": "Tell members how to get in touch with you"
+    },
+    {
+      "tag": "p",
+      "text": "Here are some best practices for onboarding emails:"
+    },
+    {
+      "tag": "p",
+      "text": "Send your onboarding emails from a personable email address. This is not the place to use noreply@[domain]. Many organizations use hello@[domain] or members@[domain]."
+    },
+    {
+      "tag": "p",
+      "text": "Send your onboarding emails from and to a real person. Your onboarding emails should be written by and signed by recognizable individuals in your organization, such as the founder or a well-known reporter, or the person members will hear from the most often, such as your membership editor. And since you have their first name from their registration, use a merge tag to address the email to them specifically."
+    },
+    {
+      "tag": "p",
+      "text": "New Bridge Michigan members get a welcome email from John Bebow, the site’s CEO. He thanks new members for their support, gives them more background information about Bridge, and encourages them to follow Bridge on social media or invite their friends. He also provides suggestions for how members can get in touch with any questions."
+    },
+    {
+      "tag": "p",
+      "text": "Limit the “jobs” of each onboarding email. Limit the number of “jobs” each onboarding email does to one or two. If you’re introducing new members to your team and how you work, don’t also enumerate their benefits in that email. Make the onboarding emails simple to digest and act on, if there’s an action needed (such as filling out an onboarding survey)."
+    },
+    {
+      "tag": "p",
+      "text": "For example, when Outride.rs in Poland created an onboarding series for its flagship newsletter, The Brief, it originally had just two emails. The first, written by the editor-in-chief, welcomed members, reiterated Outride.rs’ value proposition, and explained what to expect from The Brief. The second one explained how Outride.rs made editorial decisions and its financial model, but after several emails from confused readers, it realized that it had packed too much into that second email and split it into two separate emails. When Outride.rs launches its membership program in fall 2020, it will add a fourth email inviting newsletter subscribers to become a member."
+    },
+    {
+      "tag": "p",
+      "text": "Giving each newsletter in the series just one job doesn’t necessarily mean you have to keep them short, though. For example, inspired by Bernie Sanders’ presidential campaign, Zetland in Denmark welcomes its new members with a long email about its mission."
+    },
+    {
+      "tag": "p",
+      "text": "Use onboarding emails as an opportunity to get to know your new members. What else do you want to know about your members in order to make your journalism and your membership program more desirable? Ask questions that can give you data about that. Krauteporter in Germany, Maldita in Spain, and the Daily Maverick in South Africa (and likely many others) all use onboarding series to ask members about their area of expertise so they can leverage that in their journalism. In its onboarding survey, Black Ballad in the UK asks members what three topics they’re most interested in, which informs the team’s decision about what topics to focus on in their editorial campaigns."
+    },
+    {
+      "tag": "p",
+      "text": "Some organizations continue to “onboard” new members for an entire year. Because onboarding series are set up to send automatically at preset time increments (hence the term “drip campaign”), this is easy to set up. Consider sending an email at the three-month or six-month mark that includes a Net Promoter Score survey or more detailed survey to see how you’re doing. If members are happy, you can ask them to encourage others to join."
+    },
+    {
+      "tag": "p",
+      "text": "For example, De Correspondent in the Netherlands surveys new members about how their member experience compares to their expectations within 30 days of joining, and then surveys them on a quarterly basis about their experience and what they would like to see on the platform. They send their last onboarding email as the member’s one-year anniversary/annual renewal date approaches."
+    },
+    {
+      "tag": "p",
+      "text": "Find more tips on sending great welcome emails from Cory Brown at The Byline, published by Pico."
+    },
+    {
+      "tag": "p",
+      "text": "For an onboarding campaign template, see The News Revenue Hub’s suggestions here. For more information on email newsletter strategy generally, see the tech stack section."
+    },
+    {
+      "tag": "p",
+      "text": "Customer service for membership should address technical and billing questions, handle complaints or questions about editorial coverage, and provide a process to enable cancellations. Your customer service practices should also encourage members to change their minds and not cancel their memberships!"
+    },
+    {
+      "tag": "p",
+      "text": "Staffing for customer service is a priority in the strong member-driven newsrooms MPP has worked with. For example, the Daily Maverick has a full-time member retention manager. His primary responsibilities are churn management (mostly credit card issues), technical support for members (such as helping them set up their accounts), and inbox management (answering member emails or routing them to the right person). Jump to “Staffing our membership strategy” for more on these tasks."
+    },
+    {
+      "tag": "p",
+      "text": "“A member saved is worth more than a member gained,” Daily Maverick told MPP."
+    },
+    {
+      "tag": "p",
+      "text": "But not every news organization has the resources — or the need — for that large of a membership support team. Here are ways that newsrooms of all sizes can address the customer service needs that running a membership program demands:"
+    },
+    {
+      "tag": "p",
+      "text": "Name a membership support point person: Designate one person who is ultimately responsible for handling member email requests. They should do it from an institutional email address that others can access to ensure continued support through vacations and staff turnover. Even if they don’t answer all of the questions, they can keep things organized and ensure that no member requests fall through the cracks."
+    },
+    {
+      "tag": "p",
+      "text": "At The Texas Tribune in Austin, Texas, Director of Loyalty Programs Sarah Glen oversees the membership program and handles customer service. Together with an intern who contributes ⅓ of their time to handling the membership program, Glen answers member questions."
+    },
+    {
+      "tag": "p",
+      "text": "“I bounce between leaving notes on the most frequent kind of requests that we’re getting and being a first responder for those types of inquiries,” Glen said. “The same is with our email list and people struggling to unsubscribe or struggling to get different email addresses. There’s a lot of feedback around the frequent reader questions that I’m getting and offering feedback between our biweekly sprints.”"
+    },
+    {
+      "tag": "p",
+      "text": "Make it easy to contact you: The contact information for your membership point-person should be easily accessible on your website or other platforms. Provide a clear email address, phone number, and mailing address that members can use to reach you with any questions (or to submit payment — don’t forget old-fashioned mailed checks!). MPP recommends having an email address especially for members so their requests don’t get lost amid spam and more general requests that might come into a general “info@” email address."
+    },
+    {
+      "tag": "p",
+      "text": "At the Texas Tribune, Glen’s contact information is listed in multiple places on the Tribune’s website, including on its checkout page, so members and members-to-be can easily find the information they need without digging too much."
+    },
+    {
+      "tag": "p",
+      "text": "Help members help themselves: While there will always be some member questions that require staff intervention, many questions that your members have will be repetitive and easily answered. Take note of which questions you get the most often and address these clearly on an FAQ page or on your membership landing page."
+    },
+    {
+      "tag": "p",
+      "text": "The Colorado Sun in Colorado, U.S., took it one step further. For the first six months after they launched in 2018, Eric Lubbers, their head of technology and strategy, received a constant flood of emails from members asking about cancellations, refunds, or other support issues. The workload was not sustainable."
+    },
+    {
+      "tag": "p",
+      "text": "To help manage the flow of questions, The Sun created a Zendesk account that featured a list of frequently asked membership questions such as:"
+    },
+    {
+      "tag": "li",
+      "text": "How do I log into my Colorado Sun account?"
+    },
+    {
+      "tag": "li",
+      "text": "I signed up for newsletters but I’m not getting them."
+    },
+    {
+      "tag": "li",
+      "text": "How do I update or change my credit card, email address, membership status or other information?"
+    },
+    {
+      "tag": "li",
+      "text": "How do I upgrade my membership?"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of the Colorado Sun"
+    },
+    {
+      "tag": "p",
+      "text": "The Sun also created a separate support email address that team members could use so they can triage any requests that weren’t answered by the FAQ. By putting systems in place for members to answer their own questions, the Sun was able to lighten its burden."
+    },
+    {
+      "tag": "p",
+      "text": "For more on the daily, weekly, and periodic tasks that support member retention, jump to “Staffing our membership strategy.”"
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick gradually staffed up its membership program"
+    },
+    {
+      "tag": "p",
+      "text": "The team went from two people working on membership part-time to seven people working on it almost completely full time."
+    },
+    {
+      "tag": "p",
+      "text": "By paying attention to indicators of engagement amongst your members, you can spot brewing retention problems and begin to address them before you lose members. You can also identify when benefits are not doing much to improve your members’ experience. Something like lagging newsletter open rates, especially in your member-only newsletter products, is an early warning sign that you might be on track to lose members."
+    },
+    {
+      "tag": "p",
+      "text": "Paying attention to these key performance indicators (KPIs) is especially important early on, when you’re still figuring out how to best deliver on your membership value proposition, and when your membership program begins to scale, making it harder to offer 1:1 interactions. (Jump to “Adopting a product mindset” for more on KPIs). Here are some other warning signs to keep an eye out for, and the steps you can take to tackle them."
+    },
+    {
+      "tag": "p",
+      "text": "Pay attention to your members’ email newsletter behavior. If you have a robust email newsletter strategy, your newsletter metrics are one of the easiest and strongest indicators of when current members might be turning inactive or dormant."
+    },
+    {
+      "tag": "p",
+      "text": "The ESP Mailchimp uses a scale from one to five stars to measure the activity of each individual subscriber (one star representing the least active, and five stars the most active). If your newsroom uses Mailchimp, you can segment your members and observe how many members (and what percentage of your email list) is a three-star reader or below."
+    },
+    {
+      "tag": "p",
+      "text": "Send a re-engagement campaign to any member registering three-stars or below. An re-engagement campaign is a targeted email sent to the subscribers (in this case, member-subscribers) on your email list that are inactive. In general, a re-engagement campaign looks like this: a publisher will identify a segment of disengaged email subscribers, and will send them (and only them) an email saying something along the lines of “hey, we’ve noticed that you haven’t been reading our email very often.” The email message will also include a call-to-action to the reader, such as “click here to confirm that you’d like to stay on this email list.” If the reader doesn’t make the call-to-action, even after a few reminder messages, then we recommend removing the inactive emails from your email list."
+    },
+    {
+      "tag": "p",
+      "text": "For information on email re-engagement or activation campaigns, see this Digiday piece on how publishers re-engage dormant email subscribers. Re-engagement campaigns are a fairly common marketing practice, and there’s lots of helpful information out there from the marketing community, like this blog post that summarizes advice from marketing consultants."
+    },
+    {
+      "tag": "p",
+      "text": "Send a Net Promoter Score survey. A Net Promoter Score (NPS) is used to gauge the enthusiasm of your current users. Essentially, it is the question: “How likely is it that you would recommend our company/product/service to a friend or colleague?” The scoring for this answer is based on a 0 to 10 scale.  A person who gives a score of 7 or 8 is considered to be “passive” and satisfied, but not particularly enthusiastic. A person who gives a score of 9 or 10 is a “promoter.” These people are loyal enthusiasts who will likely fuel your growth by recommending you to others. If your NPS drops below 7, that is a sign of a brewing retention problem. MPP recommends reaching out directly to anyone who gives you a score below 7 to learn how you can improve their membership experience.  Even if you can’t meet their needs at that moment, it’s valuable data to have."
+    },
+    {
+      "tag": "p",
+      "text": "Ask canceled members why they canceled. You might be hesitant to bother them since they’re already done with you, but that’s why it can’t hurt to ask – and it can give you valuable data about changes you need to make to prevent future cancellations. VTDigger in Vermont included a single question on their newsletter unsubscribe page asking readers to let them know why they were canceling. The most common reason was “I just get too many emails,” so they updated their unsubscribe page with an option for users to instead downgrade to weekly summaries."
+    },
+    {
+      "tag": "p",
+      "text": "We recommend asking cancelling members the same question, and looking for patterns in the answers you receive. You could also ask canceled members if they would be willing to do a quick interview with someone on your team to gather deeper insights into why they left. (Jump to “Conducting audience research”.)"
+    },
+    {
+      "tag": "h3",
+      "text": "How VTDigger gets and uses a steady flow of audience feedback"
+    },
+    {
+      "tag": "p",
+      "text": "Their suite of surveys and commitment to always following up with respondents gives the staff a highly useful picture of their audience."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How the Daily Maverick won back 10,000 lapsed members"
+    },
+    {
+      "tag": "p",
+      "text": "At any point in time, the Daily Maverick has thousands of lapsed members with credit cards on hold."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter approaches retention after losing half its members"
+    },
+    {
+      "tag": "p",
+      "text": "In its second year, Krautreporter implemented a paywall, prioritized annual recurring payments, and allowed sharing."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent keeps serving members as it scales"
+    },
+    {
+      "tag": "p",
+      "text": "As De Correspondent approaches 70,000 members, it has had to make some changes to maintain the quality of the member experience."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland retained its members through coronavirus and a recession"
+    },
+    {
+      "tag": "p",
+      "text": "Offering discounts for membership is a delicate balance. If you discount it too much, you risk devaluing membership."
+    },
+    {
+      "tag": "h3",
+      "text": "How De Correspondent refreshed its member insights"
+    },
+    {
+      "tag": "p",
+      "text": "Four years after launching their membership program, De Correspondent sat down with members to find out what they thought."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter uses surveys to engage, co-design, and grow"
+    },
+    {
+      "tag": "p",
+      "text": "Krautreporter is running three to five surveys at any point in time."
+    },
+    {
+      "tag": "h3",
+      "text": "How VTDigger gets and uses a steady flow of audience feedback"
+    },
+    {
+      "tag": "p",
+      "text": "Their suite of surveys and commitment to always following up with respondents gives the staff a highly useful picture of their audience."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland turned its members into powerful ambassadors"
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Zetland faced a hard truth: they still weren’t profitable, and they were running out of time. Could their members help?"
+    },
+    {
+      "tag": "h3",
+      "text": "Why Malaysiakini blended membership and subscription"
+    },
+    {
+      "tag": "p",
+      "text": "Given the government’s attacks, Malaysiakini understood people might be nervous about being “members” – but knew they wanted to engage."
+    },
+    {
+      "tag": "h3",
+      "text": "How Black Ballad built a safe space online for Black women"
+    },
+    {
+      "tag": "p",
+      "text": "For Black Ballad, the community is the end goal - and that's evident in how they think about everything."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Developing a member-focused culture"
+    }
+  ]
+}

@@ -1,0 +1,1323 @@
+{
+  "url": "https://membershipguide.org/handbook/growing-a-membership-program/growing-our-membership/what-are-common-marketing-mistakes-we-should-avoid",
+  "title": "What common marketing mistakes should we avoid? | The Membership Guide",
+  "h1": "Growing Membership",
+  "blocks": [
+    {
+      "tag": "p",
+      "text": "Membership invites both conventional growth opportunities through marketing and the opportunity to grow by turning your members into ambassadors. Newsrooms have also started experimenting with bundled memberships and underwritten memberships.Although marketing plays a role in growth at every stage of the audience funnel, this guidance will focus on the point of conversion for your membership program: when people become members in order to sustain your organization.That means the advice will focus on growing your membership program. This section will not address how to generally grow your overall audience or newsletter list. To get the most value out of this section, you should know who your audience is and what motivates your most loyal audience members. You also need to have a firm grasp on your membership value proposition and have a tech stack that can manage members’ personal information and payments.Email is the most proven strategy for growing your membership program, so much of the advice below will be email-based. However, the messaging strategies and guidance on how to measure the efficacy of certain appeals could easily be applied to other channels. When possible, the research team will highlight experimentation with growing membership through other channels, such as events, ambassador campaigns, and marketing via WhatsApp. MPP believes these experiments offer promise, but the research team has only seen a handful of organizations try these methods. They are offered as inspiration for your own experimentation.In 2023, the research team updated the Guide with research on how to grow a membership program when its primary product is an audio product. We also studied how solo journalists, or creators, are growing membership as a revenue stream. Many of the best practices for membership discussed in the Guide apply just as well to audio products and solo journalists,  so we focused the new research on the ways in which best practices differ. You’ll find those additions at the end of this section. Keep in mind: Retaining existing members is just as, if not more, important than gaining new ones. If you don’t have time or resources to bring in new members, keep the ones you have happy. Send stewardship messages to them regularly, reinforcing their member status, the ways in which you’re serving your community or stakeholders in a particular subject area, and making them feel a greater sense of connectivity to the newsroom. Jump to “Retaining our members” for more on that.And finally, don’t make membership growth an island in your newsroom. The throughline among organizations with strong membership growth: Although one person might be tasked with writing membership appeals, these organizations have cultivated an audience-centric, test-and-iterate culture that spans editorial, audience, and business. Employees are empowered to make decisions and innovate across teams and departments, and they’re thoughtfully tracking and refining everything from site growth to email acquisition to member conversion.For a deep dive into how all of these components came together in a donation model, see Shorenstein Center’s case study on Mother Jones."
+    },
+    {
+      "tag": "p",
+      "text": "Building a membership marketing strategy starts with internal, collective buy-in around your journalism as a cause and understanding your readers’ motivations for supporting that cause."
+    },
+    {
+      "tag": "p",
+      "text": "Membership Puzzle Project and News Revenue Hub, where the co-author of this section works, have heard a few recurring themes from organizations with whom they’ve worked."
+    },
+    {
+      "tag": "li",
+      "text": "Members are worried about democracy and the current political climate: “It is in the interest of everyone who cares about democracy to support a free press.”"
+    },
+    {
+      "tag": "li",
+      "text": "Members think your publication provides quality they can’t get elsewhere: “Competent, really well-selected reporters. Deep knowledge base in their beats.”"
+    },
+    {
+      "tag": "li",
+      "text": "Members don’t want it to go away: “Yes, if it is a source I depend on and it cannot continue without me.”"
+    },
+    {
+      "tag": "li",
+      "text": "Members want it to remain freely accessible to all, even those who can’t pay: “I do believe that news should be free…but also funded by readers and other donors who are able.”"
+    },
+    {
+      "tag": "p",
+      "text": "Many people told the Membership Puzzle Project that they join because they feel something fundamental in the world and/or in themselves is broken. In membership they seek a way to feel part of a solution."
+    },
+    {
+      "tag": "p",
+      "text": "The cause-driven nature of membership marketing provides the opportunity to connect to the present zeitgeist in which something crucial is broken or out of balance — and then offer membership as credible grounds for optimism. You can lean into this in your membership appeals, especially those that are connected to current events. You are helping people fight disillusionment, including with The Media."
+    },
+    {
+      "tag": "p",
+      "text": "The cause-driven nature of membership marketing is especially clear when you compare it to subscription marketing:"
+    },
+    {
+      "tag": "p",
+      "text": "One important caveat: For some single-subject or industry-specific publications such as The Plug, which covers the Black innovation economy, members might be more motivated by access to exclusive content than by the call to support a cause that they believe in. For these newsrooms, it’s important to craft appeals that communicate the value of the membership experience."
+    },
+    {
+      "tag": "p",
+      "text": "But for most member-driven news organizations, an invitation to join the cause will resonate. Getting the ratio of individual motivation and higher purpose right is hard, but MPP’s work suggests that this is a secret sauce for many successful member-driven movements. There’s a “me” part (what do I get from this?) and a “we” element (the community I am a part of, the cause we are backing.) Getting these to combine well is crucial to member mission, “social contract,” and pitch. This goes beyond offering plentiful member perks and relies on studying members’ intrinsic and extrinsic motivations."
+    },
+    {
+      "tag": "p",
+      "text": "The value proposition for membership, and therefore the marketing of your membership program, depend on an accurate reading of how much “me” and “we” you need in the mix. When members say something like, “Don’t send me swag, I would rather you use that money to do some good,” they are talking to you about that mix. Jump to “Discovering our value proposition” for advice on how to articulate that strongly."
+    },
+    {
+      "tag": "p",
+      "text": "To illustrate how a newsroom value proposition and membership appeal can be linked, consider how Glenn Burkins at QCityMetro explains the value his newsroom provides to Black residents of Charlotte, N.C.: “We’re not a mouthpiece of the community, we’re not a public relations arm, but at the same time we do advocate for the community, we do give voice to people in the community who may not have had a voice previously. When City Council is talking about something that impacts Black Charlotte, our ears perk up. That is our core audience and that’s our reason for being.”"
+    },
+    {
+      "tag": "p",
+      "text": "He draws on the value his newsroom creates by appealing to potential members to help support telling those stories. Burkins shared with MPP, “Today I quoted an African proverb [in our membership appeal] – ‘Until the lion learns to write, the story will always glorify the hunter. Join us in helping Q City Metro write the next chapter of Charlotte’s history.’ I know how important it is for Black people to tell their own stories. We don’t want to be written about. We want to be written for. We want to tell our own story because we don’t believe anyone will tell our story quite like we do.”"
+    },
+    {
+      "tag": "p",
+      "text": "The mix of “me” and “we” will vary based on your cultural context. As some Latin American newsrooms told the research team, a lack of donations culture in the region makes it more challenging to appeal to that sense of higher purpose in membership calls-to-action. In these contexts, you might emphasize more strongly the benefits that come with membership, and will likely have to invest more heavily in educating them about why you have chosen a membership model."
+    },
+    {
+      "tag": "p",
+      "text": "Once you can clearly articulate the membership value proposition, you can think about how to recruit members. A marketing strategy articulates where, when, and how often you will make your pitch. The research team will make recommendations on what to include in your strategy based on your capacity."
+    },
+    {
+      "tag": "p",
+      "text": "Before you decide what channels you’re going to invest in, it helps to take a step back and think about all the places and ways you could market your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Some marketing strategies can be automated and require only occasional updating and adjusting, while other marketing strategies have to be done manually each time."
+    },
+    {
+      "tag": "p",
+      "text": "The assessments of impact for each marketing channel are based on what the research team knows from News Revenue Hub’s work with its newsrooms, who are mostly U.S.-based."
+    },
+    {
+      "tag": "p",
+      "text": "The research team offers the channel-by-channel impact assessment as a data point you can use for deciding which channels to try, based on your team capacity and the returns you’re likely to get. Mileage will vary based on your own audience behavior, and you should ultimately choose which channels to invest in based on channels your audience members already use habitually and where you have strong relationships with your audience members. For newsrooms outside the U.S. and Europe, that might be WhatsApp or Facebook, rather than e-mail."
+    },
+    {
+      "tag": "p",
+      "text": "Later, the research team offers advice on tracking member acquisition, which will help inform your own impact assessment."
+    },
+    {
+      "tag": "p",
+      "text": "AUTOMATED"
+    },
+    {
+      "tag": "figcaption",
+      "text": "*This impact assessment is based on News Revenue Hub clients"
+    },
+    {
+      "tag": "p",
+      "text": "MANUAL"
+    },
+    {
+      "tag": "figcaption",
+      "text": "*This impact assessment is based on News Revenue Hub clients **WhatsApp exists somewhere between email and the other networked platforms on the list. News organizations can reach audience members directly, rather than relying on an algorithm, but depending on how the organization is using WhatsApp, they might be writing to a group of people who can also communicate with each other."
+    },
+    {
+      "tag": "p",
+      "text": "The strongest membership programs refine their marketing strategy over time based on how different channels and messages perform for them."
+    },
+    {
+      "tag": "h3",
+      "text": "First stage"
+    },
+    {
+      "tag": "p",
+      "text": "This marketing strategy is for newsrooms with no one on staff dedicated to marketing. You should develop evergreen(ish) membership marketing copy and collateral and place it on all owned assets that can be automated or do not require regular updates. That would include:"
+    },
+    {
+      "tag": "li",
+      "text": "All website assets detailed above"
+    },
+    {
+      "tag": "li",
+      "text": "A membership call-to-action (CTA) within editorial newsletters"
+    },
+    {
+      "tag": "li",
+      "text": "Your onboarding series for new newsletter subscribers"
+    },
+    {
+      "tag": "li",
+      "text": "Automated member renewal emails"
+    },
+    {
+      "tag": "p",
+      "text": "While these tactics do have that set-it-and-forget-it allure, it is important to have a schedule for refreshing copy and assets, such as images and testimonials, so they don’t become wallpaper. A year is the longest you should go without changing these. It’s important also to remember to adjust things like your CTA in newsletters when there is a crisis and the tone might be off, or when you learn something new about your members."
+    },
+    {
+      "tag": "p",
+      "text": "An onboarding series for a non-member newsletter is part of the process of developing a loyal audience member. A basic rule of thumb is that emails 1 to 3 should introduce subscribers to your organization’s purpose, what they can expect from the newsletter, various team members, and other product offerings. The emails should be useful and interesting to anyone who reads them, whether they’re members or not."
+    },
+    {
+      "tag": "p",
+      "text": "After those introductions, emails in the series should make a concerted case for your mission and explicitly ask them to join, as the Montana Free Press does with its onboarding email which starts “I’m excited to tell you about our membership program, which is essential to our existence.” News Revenue Hub recommends that you ask a newsletter subscriber to join within 30 days of them signing up for a newsletter, which Spirited Media applied in Memberkit 1.0."
+    },
+    {
+      "tag": "p",
+      "text": "Over time, you can add more evergreen appeals to the end of this series (for example, three months from sign-up, six months from sign-up) so that you have a permanent member recruitment campaign running in the background."
+    },
+    {
+      "tag": "p",
+      "text": "Because this section focuses on the stage of converting existing loyal audience members into members, we will not go too deeply into advice on crafting a newsletter onboarding series, but you can find more advice on welcome emails from media consultant Cory Brown on The Byline by Pico."
+    },
+    {
+      "tag": "p",
+      "text": "If you have a one-time donation option for membership, you should also set up automated emails to let those one-time donors know when their membership is about to expire, inviting them to set up a recurring payment instead. For this purpose a “current member” is someone who has donated to your organization in the past 365 days."
+    },
+    {
+      "tag": "h3",
+      "text": "Second stage"
+    },
+    {
+      "tag": "p",
+      "text": "You have all of the above in place, member conversions look promising so far, and you still have some additional capacity. It’s time to build on the basics, then. This strategy is well-suited for a team with at least one staff member dedicated to marketing."
+    },
+    {
+      "tag": "p",
+      "text": "At this stage, you can:"
+    },
+    {
+      "tag": "li",
+      "text": "Promote membership on other owned assets that can’t be automated, such as podcasts, events, and articles"
+    },
+    {
+      "tag": "li",
+      "text": "Run one or two membership campaigns a year"
+    },
+    {
+      "tag": "li",
+      "text": "Schedule social media posts to go out on institutional accounts weekly or bimonthly throughout the year."
+    },
+    {
+      "tag": "p",
+      "text": "Generally, newsrooms have seen few member conversions from social media promotion. But since it’s difficult to quantify how many times a prospective member needs to see your message and where before they actually convert, we recommend use of this owned asset if capacity allows. If your organization has a highly engaged audience on a social media platform, it might convert better for you."
+    },
+    {
+      "tag": "p",
+      "text": "You can develop an evergreen(ish) script that allows an editor, reporter or emcee to promote membership on your newsroom’s podcast or at its next event. Event registrants are also a good target for membership appeals via email after registering but before the event, as well as after an event."
+    },
+    {
+      "tag": "p",
+      "text": "You can publish articles about membership to coincide with a major news moment or a specific time of year, like during a year-end campaign. These should adhere to the best practices we outline below for crafting a good membership appeal. See these examples from VT Digger, The Tyee, Mother Jones, and Daily Maverick."
+    },
+    {
+      "tag": "p",
+      "text": "For American newsrooms, your audience members might be public media consumers, too, which means they’re familiar with time-limited membership drives. Consider developing timely membership copy and assets and conducting a membership drive twice a year. The core of your campaign should be email appeals (or whichever channel yields the highest conversions for you usually), but if you have a bit of additional time, consider rounding out your efforts with site ads, social media posts, and campaign callouts in newsletters to increase the number of people the campaign reaches."
+    },
+    {
+      "tag": "p",
+      "text": "At Chalkbeat, their biggest effort is their end of year campaign, which runs through November and December, coinciding with NewsMatch and state-specific initiatives such as ColoradoGives. Senior Marketing Manager Kary Perez told us people are primed for giving at this time. They also run an “almost-Summer” campaign the week before school finishes. Perez said this timing took into account that many of their members are teachers who join with their school email address, and so they ask them to donate as one of the last things they do before they finish for the summer."
+    },
+    {
+      "tag": "p",
+      "text": "If you’re a single-issue organization, subject-specific awareness weeks can be a powerful marker around which to base a regular campaign. Chalkbeat, for example, also runs a mini membership drive around Teacher Appreciation Week each May."
+    },
+    {
+      "tag": "p",
+      "text": "As for campaign duration, MPP recommends experimenting with a sprint-style timeline as well as a weeks-long one to determine whether your organization is better positioned to support the intensity of the sprint-style campaign or the length of the weeks-long campaign, as well as which results in better returns from your audience."
+    },
+    {
+      "tag": "p",
+      "text": "Here are example marketing plans for sprint-style and weekly-long membership campaigns:"
+    },
+    {
+      "tag": "p",
+      "text": "You can also bring this sample campaign calendar back to your newsroom."
+    },
+    {
+      "tag": "h3",
+      "text": "Third stage"
+    },
+    {
+      "tag": "p",
+      "text": "You’re doing all of the above, your member community is still growing and now you’re ready to try new things and see what sticks. You’re likely a newsroom with at least one staff member dedicated to membership and you have copywriting and editing support from people like your CEO, editor-in-chief, head of development, etc. The Texas Tribune and the Daily Maverick are examples of this."
+    },
+    {
+      "tag": "p",
+      "text": "At this stage, you can add on:"
+    },
+    {
+      "tag": "li",
+      "text": "Timely topical appeals tied to your latest, most impactful work"
+    },
+    {
+      "tag": "li",
+      "text": "Crowdfunding campaigns"
+    },
+    {
+      "tag": "li",
+      "text": "Donate-to-win campaigns"
+    },
+    {
+      "tag": "li",
+      "text": "Breaking news appeals"
+    },
+    {
+      "tag": "li",
+      "text": "Asking other people in your newsroom to write membership appeals"
+    },
+    {
+      "tag": "p",
+      "text": "When your organization publishes work that has strong, obvious impact, that is a good time to send a membership appeal. The appeal should be centered on the impact the work has, and how membership makes that work possible. Examples of good tie-ins are investigative stories that resulted in a policy change, high-impact service journalism and journalism that helps audience members navigate a crisis.You could also send an appeal tied to the release of an annual transparency or impact report, as El Diario in Spain did in 2019."
+    },
+    {
+      "tag": "p",
+      "text": "Crowdfunds are particularly effective when you can tie them to a goal that you know readers are bought into as well, as The Tyee did when it asked readers to help make “people-driven” election reporting possible, VT Digger did when they asked readers to help them fund a Report for America position covering southern Vermont, and The News Minute in India did to fund its COVID-19 reporting. Crowdfunding should be used sparingly, and only for initiatives that are high impact and high visibility. It’s important to report back to the crowdfund contributors on how you use that money."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Tyee plans a crowdfunding campaign in a week"
+    },
+    {
+      "tag": "p",
+      "text": "Each campaign is built around a theory-of-change formula, and follows a time-proven template."
+    },
+    {
+      "tag": "h3",
+      "text": "How The News Minute maintains crowdfunding and membership side-by-side"
+    },
+    {
+      "tag": "p",
+      "text": "Crowdfunding activates readers who have no interest in the membership experience, but want to support specific projects."
+    },
+    {
+      "tag": "p",
+      "text": "Donate-to-win membership drives should be used sparingly, but can be highly effective. The Texas Tribune (where Rebecca Quarls, co-author of this section, served as Membership and Marketing Manager from 2016 to 2018) tried this for the first time in 2016 to see if an incentive could help them 1) sign up more members on the ground at The Texas Tribune festival and 2) tap outside of their typical sphere of prospective members online — the “on-the-fencers,” if you will. The answer was yes on both counts. The Tribune has continued running this campaign yearly to coincide with its annual festival. Even if your organization doesn’t host events, it’s worth experimenting with incentive-based campaigns."
+    },
+    {
+      "tag": "p",
+      "text": "Ask others in the newsroom to make membership appeals. Social media is probably the easiest place to start. Provide newsroom staffers with sample language so they can promote membership on their accounts. But email is a much more effective channel for member conversion than social media, so if you can work with reporters to send email appeals to your entire list, that’s likely to be more gratifying for them. Check out this one from Mississippi Today’s political reporter and this one from their editor-in-chief, as well as this one from The Tyee."
+    },
+    {
+      "tag": "p",
+      "text": "Offer time-limited incentives. Bridge Michigan tried out digital contributor rewards for the first time in March 2020, giving new members who gave $120 or more a year (on a monthly or annual basis) a free one-year subscription to The New York Times or Reason, a center-right magazine. Bridge Michigan has since offered this as a benefit four other times: in May 2020; their December 2020 year-end campaign; their December 2021 year-end campaign; and to only highly-engaged readers in February 2022. Membership and engagement director Amber DeLind says that although they don’t have the budget to offer this sign-up benefit all the time, that’s not necessarily an issue — she thinks that it’s a more effective benefit when offered during specific times of year."
+    },
+    {
+      "tag": "h3",
+      "text": "How new offerings got Bridge Michigan past a membership plateau"
+    },
+    {
+      "tag": "p",
+      "text": "Growing and retaining members isn’t something that happens passively, especially when a membership program gets past its buzzy first years."
+    },
+    {
+      "tag": "p",
+      "text": "Experiment with channels where you have strong communities. While email is the most well-developed channel for marketing membership programs, if you have a more loyal audience somewhere else, you should focus on marketing your membership program there instead of or in addition to email."
+    },
+    {
+      "tag": "p",
+      "text": "Radio Ambulante, a narrative storytelling podcast with a global Spanish-speaking audience, uses email as its primary marketing channel right now. But Growth Editor Jorge Caraballo can see the quality of the community around Radio Ambulante (90,000 people listened a week during the last season, and the average listener listens to 80 percent of an episode) and believes they are reaching only a fraction of the listeners they could reach by focusing on email, rather than the podcast and their WhatsApp groups."
+    },
+    {
+      "tag": "p",
+      "text": "Their newsletter open rate is 27 percent – low for such a loyal listenership. But they have more than 3,000 contacts on WhatsApp, and when they shared new episodes via WhatsApp last season, Caraballo sometimes got more than 200 responses."
+    },
+    {
+      "tag": "p",
+      "text": "“In Latin America, email is for work. WhatsApp is for everything else,” Caraballo says."
+    },
+    {
+      "tag": "p",
+      "text": "Radio Ambulante publishes in seasons, so when the fall season begins, Caraballo will experiment with marketing the membership program on the podcast and via WhatsApp, as well as continuing email appeals."
+    },
+    {
+      "tag": "p",
+      "text": "For the podcast, Caraballo plans to ask Radio Ambulante’s existing members to record voice messages about why they support Radio Ambulante and where they’re listening from. At least one of these 20-second membership appeals will appear in each episode."
+    },
+    {
+      "tag": "p",
+      "text": "WhatsApp has been an essential component of Radio Ambulante’s community building strategy.  The reason WhatsApp is so strong as a channel is similar to that of newsletters: people have to opt in to be reached there. For Radio Ambulante to reach an audience member on WhatsApp, that person has to add the podcast’s phone number to their contacts. Getting there requires a major investment in engagement, but it’s a very sticky relationship."
+    },
+    {
+      "tag": "p",
+      "text": "Last season host Daniel Alarcon sent voice messages to the WhatsApp list encouraging listeners to sign up for their newsletter. That tactic converted well, so this season, they’ll experiment with calls-to-action that go directly to membership, rather than the newsletter. But they’ll have to be careful about how often they do that, Caraballo says. Because it’s a more intimate channel than email, something like that can quickly feel spammy."
+    },
+    {
+      "tag": "p",
+      "text": "MPP plans to publish a case study on the results of this strategy after their fall 2020 season concludes. For more on their community building strategies, check out the case study on the ways they build community across continents. For more on calls-to-action on podcasts, check out this primer from Glow.fm, which helps podcasts implement membership programs."
+    },
+    {
+      "tag": "h3",
+      "text": "How Radio Ambulante has made community building routine"
+    },
+    {
+      "tag": "p",
+      "text": "By empowering their listeners to host listening clubs, Radio Ambulante extended the reach of its community."
+    },
+    {
+      "tag": "p",
+      "text": "By a membership appeal, we mean a single communication, usually via email, that is sent for the specific purpose of asking someone to become a member. Strong membership appeals will vary significantly because the membership value proposition will vary, but there are a few key things common to the best examples MPP and News Revenue Hub have seen."
+    },
+    {
+      "tag": "figcaption",
+      "text": "A membership appeal from Berkeleyside, with pointers from researcher Rebecca Quarls on what makes it a strong appeal"
+    },
+    {
+      "tag": "p",
+      "text": "They come from a real person. Authenticity and editorial voice are everything. Appeals need to be driven by journalistic sensibilities—not marketing speak."
+    },
+    {
+      "tag": "p",
+      "text": "They are persuasive. This sounds like a no brainer, but good copy that converts starts with understanding how to trigger the right emotions that will compel a potential member to want to join. The best programs refine their marketing messaging over time based on audience research—what motivates readers to join your cause, what deters them, what they’re looking for in a relationship with your organization. In 2020, the Daily Maverick started categorizing their membership appeals by the persuasion tactic each employs, and studying the conversion of each tactic."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "p",
+      "text": "They feature your newsroom’s strongest work and help readers understand the merits of supporting that work financially. Are you a local newsroom that provides stories readers can’t get elsewhere? Are you a statewide, national, international or single subject newsroom that’s successfully held elected officials and policymakers accountable? Do you have a “no ads” policy to provide a better experience? Use those concrete examples to rally support."
+    },
+    {
+      "tag": "p",
+      "text": "They do not link to other site content. The News Revenue Hub recommends only linking to your membership landing page. If you feel something needs more context, try summarizing it briefly, rather than directing people away from the appeal. Blending editorial content promotion and membership promotion can neutralize the effectiveness of both."
+    },
+    {
+      "tag": "p",
+      "text": "They contextualize fundraising goals and make them meaningful. “Help us raise $X by the end of the year!” is less compelling than “We’re trying to raise $X by the end of the year. Every dollar helps us pay for essential reporting in this [community/subject area], and that’s a victory for all of us. Will you help?” Crowdfunding campaigns are a strong example of contextualized goals. The Tyee shared their crowdfunding campaign planning process, including a campaign schedule, with MPP."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Tyee plans a crowdfunding campaign in a week"
+    },
+    {
+      "tag": "p",
+      "text": "Each campaign is built around a theory-of-change formula, and follows a time-proven template."
+    },
+    {
+      "tag": "p",
+      "text": "Find a visual template here. The research team has gathered additional examples of strong membership appeals, and MPP is always eager to add to resources like these. If you have an appeal that you would like to share, please email MPP at ideas@membershippuzzle.org."
+    },
+    {
+      "tag": "p",
+      "text": "This section includes 2023 updated by MPP researcher Katie Hawkins-Gaar."
+    },
+    {
+      "tag": "p",
+      "text": "If your newsroom is covering a breaking news moment in a meaningful, high-quality way, there’s no need to be shy about marketing your membership program during that time. In fact, in breaking news situations, newsrooms with robust membership programs have someone on the team asking, “How do we ask for support in this moment?”"
+    },
+    {
+      "tag": "p",
+      "text": "The journalism industry saw record audience revenue numbers in the early months of the coronavirus pandemic. There are ways to ask readers to support you at these fraught moments without coming across as opportunistic, but there are a few things to keep in mind as well:"
+    },
+    {
+      "tag": "p",
+      "text": "It starts where it always does: With the journalism itself. Readers are desperately seeking high-quality news during a time of confusion and concern. After breaking the news of Berkeley’s first confirmed COVID-19 case in March 2020, Berkeleyside shifted all of its reporting resources to help residents understand and navigate the outbreak. “At the same time,” Berkeleyside publisher Lance Knobel said, “we went to our readers with a simple message: you’re relying on trusted, independent local news more than ever, and now is the moment when we need your support. We’ve sent emails out every week along this theme, and the response has been clamorous.” At the time of the Guide’s publication, Berkeleyside has grown its member ranks by 33% since the beginning of March 2020."
+    },
+    {
+      "tag": "p",
+      "text": "The key takeaway: Many small- and medium-sized publishers put fundraising efforts on pause during crises. But this is when you should accelerate as readers become more aware (and appreciative) of your role in gathering, vetting and distributing reliable information, as El Diario did. They didn’t just appeal to readers for support – they raised their prices to make up for their advertising losses."
+    },
+    {
+      "tag": "p",
+      "text": "It necessitates transparency. Many local and state newsrooms are suffering acute losses in revenue from online advertising and event sponsorship. The Nevada Independent turned that vulnerability into powerful messaging for a membership campaign. “We realized that our donor base would evaporate and our bank account would go to zero,” says The Nevada Independent’s CEO Jon Ralston, “So we gambled that our readers would step up and support us if we were transparent about our situation. We were, and hundreds upon hundreds of readers have stepped up with donations and supportive messages. If there’s a silver lining, it is how gratified we are that people recognize the quality of this team’s work and don’t want to lose it.” The Nevada Independent has raised close to $350,000 from readers so far to support its crisis reporting efforts."
+    },
+    {
+      "tag": "p",
+      "text": "Key takeaway: Bold and successful membership campaigns like The Nevada Independent’s references above reinforce to readers that they have a role in supporting news they value and trust – but they need to understand the business model and why an outlet needs their support. Explain, in clear terms, that donations sustain the public service your newsroom provides."
+    },
+    {
+      "tag": "p",
+      "text": "But tread lightly during tragedy. There is a difference between leveraging a moment such as a public crisis like the pandemic and a tragedy such as a mass shooting. As the only newsroom in the U.S. dedicated to covering gun violence, The Trace sees large spikes in readership after mass shootings. Loren Lynch, The Trace’s Director of Development, advises not to aggressively push membership during tragic times like these."
+    },
+    {
+      "tag": "p",
+      "text": "“Providing readers the information they need in the moment and not making yourself the focus by fundraising earns you more goodwill in the long run,” Lynch said. “It makes your readers trust you more, and gives you the opportunity to come back to them later.”"
+    },
+    {
+      "tag": "p",
+      "text": "Several days after the May 2022 school shooting in Uvalde, Texas, The Trace sent out an email from their managing director that linked to new pieces about the event, articles about how people were taking action, and older stories that offered context about the gun laws across the country. Lynch included a donate button at the bottom, “but it wasn’t a hard ask,” she said. That email netted 11 recurring monthly donors and eight one-time gifts. During their fall campaign, The Trace highlighted their work covering Uvalde and other mass shootings throughout the year, resulting in 60 new members during a two-week period."
+    },
+    {
+      "tag": "p",
+      "text": "Key takeaway: Although it might be tempting to push membership during traffic spikes driven by tragedy, doing so can cause harm. Instead, focus on providing information and ask your audience for support later on. With some distance, news outlets can share what they produced during a major moment as well as the impact of that work, then make a compelling case for future support."
+    },
+    {
+      "tag": "p",
+      "text": "In the immediate aftermath of a tragedy or crisis, it is far more important and appropriate for newsrooms to promote their value as an information source than their membership programs. During the early days of the pandemic, for example, Mary Walter-Brown, CEO of the News Revenue Hub, said that, “We encouraged messaging that first reinforced the important role the newsroom was playing during the crisis, then recommended soft asks.”"
+    },
+    {
+      "tag": "p",
+      "text": "Play the long game from the beginning. The Nevada Independent normally has around 350,000 unique readers per month. But in the two months leading up to the 2020 presidential election, that number surpassed 500,000. The key to making the most of readership spikes, Chief Revenue Officer Brett Burke said, is to show readers how their interest in bigger stories translates to smaller, local stories, which arguably have a bigger impact on their lives. Today, with 17,000 members and 54% retention, he’s making good progress."
+    },
+    {
+      "tag": "p",
+      "text": "“If readers come to us for coverage of a state Senate race that’s hot right now, we have to show them what we cover once that Senator is elected.” They do this by funneling new readers into newsletters that tie to their interests, connecting the dots from bigger stories to related coverage, and then making a membership appeal. “It’s a long game,” Burke said. “Once they’ve got a vested interest in what we’re doing, we ask for support.”"
+    },
+    {
+      "tag": "p",
+      "text": "Key takeaway: When newsrooms see a spike in audience tied to a specific news event, especially if it’s one they can plan for such as the run-up to an election, they need to have a strategy for keeping those people coming back. For most newsrooms, that will be about getting readers to sign up for a newsletter. You’ll have to make the case that you’re relevant year-round, not just in that moment. “If you’re able to explain local politics in terms of how it affects readers’ day-to-day lives, then you’ve got a real opportunity to earn their support financially too, because those things matter and impact them,” Burke said."
+    },
+    {
+      "tag": "h3",
+      "text": "How cloth masks powered VTDigger’s spring 2020 member drive"
+    },
+    {
+      "tag": "p",
+      "text": "Coronavirus reached the U.S. as VTDigger approached their spring 2020 membership drive. They knew swag was out of the question."
+    },
+    {
+      "tag": "p",
+      "text": "Knowing whether an appeal is successful and understanding why it worked are essential to replicating that success – and avoiding wasting valuable staff time on low-impact efforts."
+    },
+    {
+      "tag": "p",
+      "text": "Marketing success means you’re growing the size of your membership program and its associated revenue at a steady clip year over year. Getting there will require knowing which marketing channels and messages work best, and doubling down on them to get there. It also requires having big-picture, realistic growth goals. Jump to “Developing membership metrics” for more on setting objectives for your membership program."
+    },
+    {
+      "tag": "p",
+      "text": "This starts and ends with tracking. Use a distinct, trackable URL every time you promote membership across your products—website, newsletters, standalone email appeals, social media, text messages, etc. You can create your URLs by hand or you can use a URL generator (News Revenue Hub uses Salesforce campaign IDs)."
+    },
+    {
+      "tag": "p",
+      "text": "One of the most important metrics to watch is conversions (i.e. how many donors are attributable to each channel and promotion effort). Keep track of this performance data in a spreadsheet so you can get a grip on your baselines. After doing this for a few months, you should be able to glean actionable answers to questions like:"
+    },
+    {
+      "tag": "li",
+      "text": "Which channels should we focus on? In other words, of all the places where we’re publishing a call to action and inviting readers to become members, which one is converting best?"
+    },
+    {
+      "tag": "li",
+      "text": "Which of my onsite calls-to-action are converting best? Should we consider testing different copy, colors, and imagery?"
+    },
+    {
+      "tag": "li",
+      "text": "How many conversions can we expect from an email appeal, on average? Are there any patterns among highest- and lowest-performing emails in terms of subject matter (“Save journalism!” versus “Help fund our coverage of this issue!”), send day/time, subject line, etc?"
+    },
+    {
+      "tag": "p",
+      "text": "This Membership Puzzle Project resource on data-informed decision making offers simple advice for how newsrooms can better track member acquisition. It includes a spreadsheet template and other low-cost, low labor advice on collecting the data you need. Check out the Daily Maverick’s marketing roadmap to see how one newsroom tracks their marketing success."
+    },
+    {
+      "tag": "p",
+      "text": "It will take some experimentation to figure out which messages and channels work best with your audience, but there are some membership “don’ts” that are true across the board. Here are some of the most common mistakes."
+    },
+    {
+      "tag": "p",
+      "text": "Not regularly sending appeals to members and non-members. Many organizations think they’re sending out too many solicitations because every time they send one out, they get one or two cranky responses. Organizations take that as a vote against more solicitations, but they don’t count the members who responded to the appeal as opposing votes. Here are some points and counterpoints to combat squeamishness:"
+    },
+    {
+      "tag": "p",
+      "text": "It is important that your newsroom either suppresses membership appeals to existing members or sends them a different message than the one you’re sending to prospective members. Their message should thank them for their support and invite them to increase their contribution or tell someone else about the opportunity to become a member."
+    },
+    {
+      "tag": "p",
+      "text": "Setting your default donation amounts too low or asking for too little. In behavioral economics, setting defaults is an effective nudge when there is inertia or uncertainty in decision making. Nudge people toward monthly donations and larger donations by setting aspirational defaults. The News Revenue Hub has experimented with increasing the default monthly donation on a member organization’s checkout page. They’ve found that most people will give what you ask for. If you set your default amount at $5, your average monthly gift is going to be around $5. If you set your default monthly donation amount at $10, your average monthly gift is going to be around $10. Additionally, avoid “micropayments.” It runs counter to your goal of getting most supporters on a recurring payment cycle to support your body of work."
+    },
+    {
+      "tag": "p",
+      "text": "Assuming readers understand your business model. News organizations may think it’s obvious that they need audience members’ financial support. It isn’t. Your audience members may have a very thin grasp on how much real, good journalism costs – and if they don’t know that or why you need that support, they’re unlikely to give it."
+    },
+    {
+      "tag": "p",
+      "text": "When a new news organization is accepted into News Revenue Hub, the first thing the Hub does is have them conduct an audience survey. The survey helps measure an audience’s emotional connection to a news outlet and sheds light on areas of possible confusion: Questions like “Did you know we’re a nonprofit?” or “How do you think we’re funded?” sometimes yield unexpected results."
+    },
+    {
+      "tag": "p",
+      "text": "Readers often don’t know if their contributions are tax-deductible. Sometimes, readers assume news organizations are funded by advertising, even when there are no ads on the site. Misconceptions about membership and paywalls are common, too. When asked if they think consumers of the news should help fund it, respondents who answer negatively often say, “No, because some information would not be available to those without funds.” The survey responses will help you understand what you need to clarify in your marketing efforts."
+    },
+    {
+      "tag": "p",
+      "text": "Many newsrooms will consider at one point whether to hire outside help to support their marketing efforts. Many membership platforms and consultancies (such as News Revenue Hub, Pico, and Steady) will offer this as part of their support package, and there are many independent consultants that also help newsrooms with this part of the puzzle."
+    },
+    {
+      "tag": "p",
+      "text": "A well-timed outside marketing intervention can infuse your work with a stronger infrastructure and fresh creative thinking. If you’ve been trying tactics outlined in the medium- and large-lift sections above and not seeing much growth, it might be the right time to hire a consultant to audit your marketing efforts. At this stage, you might also consider bringing a designer on board to help you refresh your brand identity, which is key to standing out among other organizations asking for financial support."
+    },
+    {
+      "tag": "p",
+      "text": "Hiring outside help usually comes down to adding needed capacity and/or creativity:"
+    },
+    {
+      "tag": "p",
+      "text": "Capacity: Your team is focused on audience development and engagement and you simply don’t have the capacity to execute on marketing. In these cases, a marketing consultant could help get you set up on many of the items listed in the “lowest lift” section above, and could be engaged periodically for time-limited campaigns described in the “medium lift” section."
+    },
+    {
+      "tag": "p",
+      "text": "Creativity: Your audience has grown in size and loyalty, but your membership numbers have not. You think there’s a disconnect between your audience work and your membership work and you need someone to help you come up with creative solutions to realize the bottom-of-the-funnel growth opportunity."
+    },
+    {
+      "tag": "p",
+      "text": "The research team cautions that bringing on outside help for marketing efforts should be seen as a support to help you level up, not a comprehensive solution to challenges growing your membership program. Marketing your membership program well requires intimate knowledge of the stories and engagement you’re working on, what resonates with your community, and the value propositions of your newsroom and your membership program. Only your team can provide that. Hiring outside help will be money wasted if you do not yet have a loyal audience or a clear value proposition. Jump to “Discovering our value proposition” for help with that."
+    },
+    {
+      "tag": "p",
+      "text": "Paid acquisition is a marketing tactic in which an organization pays to target their advertisement to a specific group of people with the goal of growing their audience. Lead generation ads are a type of paid acquisition that is commonly used by digital news organizations to grow their newsletter list."
+    },
+    {
+      "tag": "p",
+      "text": "Membership Puzzle Project and membership platform Pico commissioned research from journalism entrepreneur Phillip Smith that explored the question, “Can publishers who seek to grow their membership invest in paid lead acquisition tactics and predict with strong confidence the rate of return on their investment?”"
+    },
+    {
+      "tag": "p",
+      "text": "By running ads on Facebook and the petition platform Care2, Smith was able to answer “Yes, but…"
+    },
+    {
+      "tag": "p",
+      "text": "Yes, but not directly to membership. Lead generation ads were effective at getting people on a subscriber list for a free newsletter. From there, publishers could send a welcome series and develop an ongoing relationship with them – and ask readers to become members down the line."
+    },
+    {
+      "tag": "p",
+      "text": "Yes, but the rate of return varies and you’ll need to understand your customer lifetime value (CLV). Once you know your CLV (0r member lifetime value, MLV), you can determine how much to invest in acquiring new leads. The goal is to spend less than the estimated CLV on acquiring a new customer (in this case, newsletter subscriber). Jump to “What is Customer Lifetime Value and why does it matter?” for more on this metric."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Illustration by Jessica Phan"
+    },
+    {
+      "tag": "p",
+      "text": "Smith walks you step-by-step through his experiments in his research:"
+    },
+    {
+      "tag": "li",
+      "text": "Smart investments in paid lead acquisition to grow membership (or, how to spend money to make money)"
+    },
+    {
+      "tag": "li",
+      "text": "Spending money to make money, Part II: Case studies of newsrooms using paid acquisition"
+    },
+    {
+      "tag": "li",
+      "text": "Is your newsroom doing paid acquisition right? Here are 10+ examples to check against (also by Smith, but published on Pico’s The Byline)"
+    },
+    {
+      "tag": "p",
+      "text": "The paid acquisition space, particularly on Facebook, is changing constantly because of new features and algorithmic adjustments. If you want the most up-to-date advice, Membership Puzzle Project recommends joining the robust community of people experimenting with paid acquisition in the #paid-acquisition channel on Gather’s Slack."
+    },
+    {
+      "tag": "p",
+      "text": "Influencer marketing is another type of paid acquisition. There is understandable squeamishness in the journalism industry about the use of this tactic because of influencers’ reputation for not disclosing sponsorships and for being a source of misinformation, but Outride.rs in Poland, which covers foreign issues from the Polish perspective, found a way to work with influencers to grow its newsletter list that was both authentic and ethical."
+    },
+    {
+      "tag": "p",
+      "text": "When it analyzed the acquisition source of its new newsletter subscribers in 2019, Outride.rs was surprised to find that 30 percent of the people who landed on the signup page for the Brief, their core newsletter, came from Instagram. When they surveyed new subscribers, they found that 15 percent of them discovered the Brief because of a friend’s recommendation, and another 30 percent discovered it because of a Polish Instagram influencer’s recommendation."
+    },
+    {
+      "tag": "p",
+      "text": "The magazine-style weekly newsletter had a strong, recognizable aesthetic, which made it a perfect candidate for screenshot shares. Meanwhile, reading it had a certain cachet, partially because Outride.rs’ founders had previously written a popular blog, that made people want to flaunt that they were subscribers."
+    },
+    {
+      "tag": "p",
+      "text": "As returns on Facebook ads declined, Outride.rs got creative, drafting advertising contracts with a handful of influencers that the founders knew personally from their blogging days and who had organically fueled much of their newsletter growth."
+    },
+    {
+      "tag": "p",
+      "text": "Like conventional advertising contracts, they included terms of payments and guidelines for how many posts the influencer had to make: two separate posts of the Brief, including the use of the swipe-up function to link to their newsletter signup page. The influencers followed standard Instagram guidelines for disclosing when content is sponsored content."
+    },
+    {
+      "tag": "figcaption",
+      "text": "Courtesy of Outride.rs"
+    },
+    {
+      "tag": "p",
+      "text": "Another upside to this tactic was that the influencers reached demographics that Outride.rs might not have otherwise reached, particularly younger men and women and residents outside the major cities."
+    },
+    {
+      "tag": "p",
+      "text": "“We want to show that the global issues we cover are not just for white, old guys working in think tanks. We want to show people that these issues are around all of us, each of us, and they influence our lives,” co-founder Jakub Gornicki explained."
+    },
+    {
+      "tag": "p",
+      "text": "You can read more about their Instagram growth strategy in MPP’s case study."
+    },
+    {
+      "tag": "p",
+      "text": "One of the most exciting things about the challenge of growing a membership program is what a powerful asset your members can be. Members support news organizations because they believe in their cause – and that means there are ways to turn them into amplifiers and advocates. Membership is a way to identify your strongest supporters and incorporate them in your quest for sustainability. Few initiatives embody that more clearly than the use of ambassadorship."
+    },
+    {
+      "tag": "p",
+      "text": "Ambassadorship taps into members’ passion for your work – one of the six key motivations MPP heard when analyzing responses from hundreds of supporters of news organizations about why they gave their support.  Members motivated by the chance to show some love for your mission are proud of their affinity with your organization and want people to know about it. One simple way to harness this motivation is to offer the ability to gift a membership or bundle of articles as a member benefit."
+    },
+    {
+      "tag": "p",
+      "text": "Although only a small percentage of your members will likely respond to your call for ambassadors (the 90/10/1 rule is that 90 percent of members will just consume the product, 10 percent will interact with you, and 1 percent of that 10 percent will become core contributors), that small percentage can have a transformative impact."
+    },
+    {
+      "tag": "p",
+      "text": "Zetland harnessed this motivation powerfully with its members-getting-members campaign in 2019. The campaign brought them 3,500 new members in about a month, bringing Zetland to 14,000 members – the point when it became financially sustainable."
+    },
+    {
+      "tag": "p",
+      "text": "From their first ambassador campaign in 2018, which did not retain a meaningful percentage of the members recruited, and their much more successful campaign in 2019, Zetland learned a couple key things:"
+    },
+    {
+      "tag": "p",
+      "text": "Be honest about your financial situation. Zetland’s second ambassador campaign began with a blunt financial tell-all article laying out their financial situation. (“Right now, our expenses are greater than our income – in other words, the amount in our bank account is shrinking every month,” former CEO Jakob Moll wrote.) If you’re going to ask members to leverage their connections to help you grow, you owe them transparency about why you’re asking. Zetland’s radically honest article published prior to the ambassador campaign’s launch (including how many more members, exactly, they needed to survive) helped mobilize their current members into action, who saw a clear way to ensure that Zetland continued to exist."
+    },
+    {
+      "tag": "p",
+      "text": "Focus on recruiting people who are willing to pay in the near future. Having ambassadors give free memberships in 2018 was much less successful than the 2019 tactic: enabling ambassadors to offer a one-month trial in which the recruited member could pay what they wanted. At the end of the month, the new member’s price fell in line with the price for all members. Offering freebies is likely to bring you members who haven’t given much thought as to whether it’s something they want. In 2018, about half of the people who received a free membership didn’t log on to Zetland at all after the campaign ended."
+    },
+    {
+      "tag": "p",
+      "text": "Make it easy for ambassadors to promote you. Zetland equipped their new ambassadors for both digital and print recruitment campaigns. After a member signed up to become an ambassador, Zetland gave them a unique signup page URL that included their name. The URL was easy to remember so that ambassadors could seamlessly share the link both in conversation and on social media. The URL brought potential new members to the pay-what-you-want sign-up form. Zetland also gave ambassadors the option of postcards or posters to spread the word offline. They shipped out more than 20,000 postcards and 2,000 posters with ambassadors’ personal URLs for the ambassadors to share when the campaign launched."
+    },
+    {
+      "tag": "p",
+      "text": "Say thank you. The Zetland team worked hard to make their ambassadors feel special, empowering them to recruit new members either digitally with their personalized URLs or manually with postcards. Ambassadors also received small gifts like stickers and packets of plant seeds. The Zetland team was sure to say thank you often, and to keep their ambassadors updated on the newsroom’s progress and success along the way."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland turned its members into powerful ambassadors"
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Zetland faced a hard truth: they still weren’t profitable, and they were running out of time. Could their members help?"
+    },
+    {
+      "tag": "p",
+      "text": "While Zetland’s ambassador campaign was a full-team effort, this motivation can be harnessed in smaller ways that are less resource-intensive. For example, you could add an email to your member onboarding series that sends your member a thank you at the 1-year mark, inviting them to invest further in your work by recruiting a new member during their second year of membership. Something like this could be fully automated."
+    },
+    {
+      "tag": "p",
+      "text": "The Skimm’s well-known Skimm’bassadors referral program is another example of harnessing the power of ambassadorship. This case study outlines the key components of that strategy."
+    },
+    {
+      "tag": "p",
+      "text": "MPP heard variations of the following during user research interviews in the early stages of writing this guide: “I know events are important, but what are they important for? Are they best for growing our membership, or for deepening members’ loyalty?”"
+    },
+    {
+      "tag": "p",
+      "text": "Events can do both. You just have to decide which you want them to be. While events as a loyalty driver are well understood among member-driven newsrooms, with member-only events and member perks at events among the most common benefits offered with membership, how events can drive membership growth is less well understood."
+    },
+    {
+      "tag": "p",
+      "text": "But MPP suggests that newsrooms should consider prioritizing events more heavily as a membership growth strategy. News organizations are overly reliant on newsletters as their primary method for converting members. By relying on a single method for converting members, news organizations are putting their eggs in one basket and also potentially limiting the diversity of their membership base."
+    },
+    {
+      "tag": "p",
+      "text": "There are two types of membership growth events: events that get you in front of people previously unfamiliar with your organization and put them at the top of your audience funnel, and events that deepen your relationship with existing audience members and might tip them from potential member to member."
+    },
+    {
+      "tag": "p",
+      "text": "For events intended to grow your membership, the most important thing is getting the word out about your event to people who are not yet members. The easiest way to do that is to partner with like-minded organizations, as Scalawag, based in Durham, N.C., does. (Scalawag hosts two types of events: awareness events and loyalty-strengthening events. MPP will focus on awareness events here)"
+    },
+    {
+      "tag": "p",
+      "text": "Scalawag focuses on three things for awareness events:"
+    },
+    {
+      "tag": "li",
+      "text": "Partnering with like-minded organizations whose community includes people Scalawag might not reach on its own, or partnering with a big-name speaker with their own following"
+    },
+    {
+      "tag": "li",
+      "text": "Capturing email addresses on the event registration form"
+    },
+    {
+      "tag": "li",
+      "text": "Creating an onboarding experience for newcomers, who Scalawag believes end up skipping the first couple steps of the audience journey as a result of meeting the Scalawag community in person"
+    },
+    {
+      "tag": "p",
+      "text": "Scalawag has also implemented small nudges before, during, and after events to convert existing audience members who attend. They offer small member-only perks as part of the event, send event registrants an invitation to become a member between the time they sign up for the event and the event itself; advertise membership at the event; and send attendees a post-event email encouraging them to consider becoming a member. They began implementing this strategy during the coronavirus pandemic, so an example of a recent member-only event perk is the opportunity to join a member-only Zoom “afterparty” following an event. Learn more about their event growth strategy in the case study."
+    },
+    {
+      "tag": "h3",
+      "text": "How Scalawag made the growth case for events"
+    },
+    {
+      "tag": "p",
+      "text": "Relying on newsletters alone to grow its membership was too narrow for Scalawag, which aims to serve a diverse set of audiences."
+    },
+    {
+      "tag": "p",
+      "text": "The following questions are important to answer if you plan to experiment with events as a top-of-the-funnel and member conversion strategy:"
+    },
+    {
+      "tag": "li",
+      "text": "What messages do you want to share about your publication and its mission?"
+    },
+    {
+      "tag": "li",
+      "text": "How will you foster a sense of community at the event?"
+    },
+    {
+      "tag": "li",
+      "text": "For newcomers, how will you collect their email addresses? (An email address can sometimes be more valuable as an admission fee than actual dollars because you then have a chance to repeatedly follow up and deepen engagement.)"
+    },
+    {
+      "tag": "li",
+      "text": "For existing audience members who have not expressed interest in becoming a member, how will you make membership seem appealing?"
+    },
+    {
+      "tag": "li",
+      "text": "How do you intend to follow up with newcomers and existing audience members who are not yet members? (These are likely two different follow ups)"
+    },
+    {
+      "tag": "p",
+      "text": "Bridge Michigan’s virtual book club was a COVID-19 pandemic innovation meant to fill the gap when they had to cancel all their in-person events, but it became a permanent fixture – and their biggest membership draw. In their member onboarding survey, Bridge asks people why they became a member and “the book club is far and away the biggest reason they join,” according to membership and engagement director Amber DeLind — even though the book club isn’t member-only. And when DeLind asked members what benefit they enjoyed most in their 2021 year-end survey, the free download of the book club book that Bridge offers members is the most popular benefit across all tiers, after “I don’t need any benefits, I just want to support your journalism.”"
+    },
+    {
+      "tag": "h3",
+      "text": "How new offerings got Bridge Michigan past a membership plateau"
+    },
+    {
+      "tag": "p",
+      "text": "Growing and retaining members isn’t something that happens passively, especially when a membership program gets past its buzzy first years."
+    },
+    {
+      "tag": "p",
+      "text": "The Guide was initially published in September 2020, relatively early in the COVID-19 pandemic. Virtual events were just emerging and therefore are not studied in depth in the Guide, but MPP believes that Bridge Michigan’s virtual book club and the Daily Maverick’s successful live journalism strategy are a strong indicator that virtual events, not just in-person events, can be a major driver of membership growth and retention."
+    },
+    {
+      "tag": "p",
+      "text": "A matching gift is when an individual or institution matches the fundraising dollars you raise during a specific period of time, essentially doubling the funds raised."
+    },
+    {
+      "tag": "p",
+      "text": "If you’ve received an appeal that asks you to help an organization raise a certain amount of money by a certain time so that the organization can unlock an equal amount of money from another person or organization, then you’ve experienced a match campaign."
+    },
+    {
+      "tag": "p",
+      "text": "Match campaigns have been a staple of public radio membership drives for decades, and they’ve spread to the other American newsrooms through NewsMatch, a national matching gift campaign that runs annually from Nov. 1 through Dec. 31."
+    },
+    {
+      "tag": "p",
+      "text": "Match campaigns are much less common outside the U.S., but MPP believes that they can be a highly effective tactic for newsrooms around the world. They add urgency and impact to membership campaigns, making it easier to pull in new members and to get additional support from existing members."
+    },
+    {
+      "tag": "p",
+      "text": "PublicSource in the U.S. is one of the newsrooms who began experimenting with match campaigns through NewsMatch. Based on their success, MPP believes that match campaigns also offer a new way to activate loyal members contributing at high levels. In 2022 PublicSource asked members to contribute to a local match pool, which they then leveraged to raise more membership dollars in their end-of-year campaign."
+    },
+    {
+      "tag": "h3",
+      "text": "How PublicSource formed a match pool, with members at its core"
+    },
+    {
+      "tag": "p",
+      "text": "PublicSource’s approach highlights a way to leverage your board and highest contributing members to power a match campaign."
+    },
+    {
+      "tag": "p",
+      "text": "The research team will not go into depth on match campaigns because NewsMatch offers many publicly available resources to help any newsroom get started. To explore this tactic, MPP recommends:"
+    },
+    {
+      "tag": "li",
+      "text": "NewsMatch resource library"
+    },
+    {
+      "tag": "li",
+      "text": "NewsMatch, resource: How to build your match"
+    },
+    {
+      "tag": "li",
+      "text": "MPP summit, recording: How to make matching gifts part of your membership strategy"
+    },
+    {
+      "tag": "li",
+      "text": "Institute for Nonprofit News, case study: How Sahan Journal built community support to grow revenue by 50% in one year"
+    },
+    {
+      "tag": "p",
+      "text": "This section was authored by MPP researcher Laura Oliver."
+    },
+    {
+      "tag": "p",
+      "text": "How audio is consumed and distributed poses big challenges for developing a membership growth strategy. Most podcasts are published and distributed across multiple platforms. While this distributed approach helps you acquire new listeners, it introduces a number of challenges to growing a membership program:"
+    },
+    {
+      "tag": "li",
+      "text": "You will have to catch listeners with a membership CTA when they are in a listening or browsing frame of mind and either redirect their attention to your membership signup page in the moment or create a sticky enough CTA that membership is still top of mind when they encounter the ask in a newsletter (more on that newsletter component below)."
+    },
+    {
+      "tag": "li",
+      "text": "If you are reliant on third-party platforms for distributing and playing your journalism, you will lack some very useful audience data."
+    },
+    {
+      "tag": "li",
+      "text": "Because your show is encountered on a third-party platform, it will lack the full context of your mission and your branding, making it harder for your brand and your pitch to stick with them."
+    },
+    {
+      "tag": "p",
+      "text": "Tactics familiar to non-audio newsrooms will be useful for filling these gaps, such as newsletters and surveys."
+    },
+    {
+      "tag": "p",
+      "text": "Audio publishers must also be realistic about the cadence of podcast publishing cycles, which often have lengthy breaks between seasons, and how that affects membership growth. Periodic publishing may leave gaps where members are not receiving new content. Investing in other non-content-based perks, strong communication, and touchpoints that help build relationships with members are all crucial for consistent growth."
+    },
+    {
+      "tag": "p",
+      "text": "Of course, there’s much about marketing membership for an audio product that is similar to that of text-based journalism, so much of what was discussed earlier in the handbook will apply. In this section we will focus on ways that growing a membership program for an audio product differs."
+    },
+    {
+      "tag": "p",
+      "text": "You probably still need a newsletter. You may reach more people with your audio product but when they are listening, they might be engrossed or doing something else as they listen. There’s often a barrier to stopping and making a payment. With a newsletter, it’s substantially easier to get from the call-to-action to payment."
+    },
+    {
+      "tag": "p",
+      "text": "Narrative Spanish-language podcast Radio Ambulante shared its membership program goals in a newsletter and on social media, using custom sign-up links for each channel. They also experimented marketing their membership program via WhatsApp, where they already had a vibrant ongoing conversation."
+    },
+    {
+      "tag": "p",
+      "text": "Jorge Caraballo, freelance journalist, Nieman fellow and former Radio Ambulante growth editor, recommends using audio to expose people to the membership message, employing the power of voice to convey urgency and meaning, then sending an email with the link to join."
+    },
+    {
+      "tag": "p",
+      "text": "“In a couple of clicks they can do what you need and that’s where the conversion happens,” said Caraballo, who helped launch Radio Ambulante’s membership program. “Every podcast should prioritize a healthy active mailing list that’s its own channel related to the brand.”"
+    },
+    {
+      "tag": "p",
+      "text": "Portuguese investigative journalism podcast Fumaça learned early on that building their email list was essential, and that it was easier to sign people up to a free newsletter list from the podcast than to get them all the way to membership from a link in their show notes. The team has built a newsletter list of more than 11,000 subscribers, which it uses to market its membership program."
+    },
+    {
+      "tag": "p",
+      "text": "Not podcast-focused? Consider audio features as a membership benefit. Producing audio versions of articles was something Danish newsroom Zetland planned to do from the beginning, but it was also an early request from members. Building an audio player and native app for listening to audio articles and its daily news podcast Zetland Helikopter met this demand from members and gives Zetland access to data on how their members listen to audio and allows them to design a better overall content experience. For example, they can measure the completion rates for both text and audio, so a member can switch between media and pick up an article where they left off."
+    },
+    {
+      "tag": "p",
+      "text": "They first launched a simple play button on articles to test the feature using actors’ voices. Despite its limited functionality, people pressed the button, often more than once. The test involved an initial three to four articles and then increased to a new audio article every Saturday. Early numbers suggested that 8 percent of the content members consumed was now audio and they were returning each Saturday. This early data encouraged Zetland to develop its audio product further into a native app and actors’ voices were replaced with those of Zetland’s journalists."
+    },
+    {
+      "tag": "p",
+      "text": "Within a couple of months of the native app launch, 40 to 50 percent of members’ consumption of Zetland content was via audio. Now, 75 percent of members will consume an article in its audio form, 7 percent will do so in text and 18 percent will do both. Understanding how members consume its audio product – and where they are also consuming non-audio – allows Zetland to develop its editorial products with members in mind."
+    },
+    {
+      "tag": "p",
+      "text": "“For me there’s no doubt that audio is the biggest thing that drives membership [at Zetland],” said Tav Klitgaard, CEO of Zetland. In 2021, Zetland had 20,000 paying members. That rose to 28,000 in 2022. It is currently growing around 9 percent above where it was at the same time last year."
+    },
+    {
+      "tag": "p",
+      "text": "You are going to lack some of the data that you feel like you need. It can be hard to pin down why and when people decide to become members of a podcast. A jump in members after a new episode is released may suggest that episode was the driving factor, but the data to prove that journey can be hard to come by when your audio is hosted on third-party platforms. Unique campaign IDs for episode descriptions can help, but for now, audio publishers generally lack the granular data that text-based publishers have, such as what story a person was reading when they decided to join."
+    },
+    {
+      "tag": "p",
+      "text": "Add custom links to your membership marketing campaigns in your newsletter, social media posts and wherever else you promote the program. This will help you understand what channels members are coming from and which are the best referrers."
+    },
+    {
+      "tag": "p",
+      "text": "Audience research can also help fill in the blanks. Consider adding a survey to an early stage of your member onboarding asking what prompted them to become a member. Radio Ambulante asks why people are becoming members on its sign-up page so it can link one-off donations and membership payments to specific motivations. The responses show, for example, that donations and membership payments totaling $70,000 mentioned its weekly podcast El Hilo, which focuses on Latin American communities in the U.S. (Jump to “How should do we onboard our new members?”)Fumaça conducts annual surveys, usually in December/January, and runs regular Slack polls on smaller issues, such as merchandise or event topics. Survey data helped guide the team on episode length: 54 percent said they didn’t care about length and 14 percent said episodes should be one hour. In-person discussions at member events and member visits to the newsroom also add qualitative data. “We use every opportunity to get feedback from listeners and members and to get to know them better,” said Maria Almeida, co-founder."
+    },
+    {
+      "tag": "p",
+      "text": "Although not an audio-focused outlet, The Continent faces similar challenges. The weekly pan-African newspaper is published as a PDF and distributed on WhatsApp, which also provides very little data. So once a year they send their readers a survey with fairly granular questions about how they first heard about The Continent, whether they share it with others,  how they share it with others when they do, how they read the PDF, and what parts of the weekly magazine they enjoy the most. Co-founder Sipho Kings said that they get a few thousand responses from their subscriber base of more than 100,000 phone numbers and that they’re likely to send more frequent surveys in the future."
+    },
+    {
+      "tag": "p",
+      "text": "Use all your real estate. Ensuring there’s a message with a call to action in every single podcast episode – pre-roll, mid-roll or end-roll – and in the podcast description is recommended by Caraballo. Text-based publishers often fret that too-frequent membership appeals will cause readers to unsubscribe from their emails. They are often overly concerned about this, but the fact remains that listeners can’t unsubscribe only from the membership appeals if they’re woven throughout the show. MPP believes that public radio drives in the U.S. show that it’s possible to ask for support much more often in audio journalism than is the norm right now."
+    },
+    {
+      "tag": "p",
+      "text": "“We wanted to let everyone know there was a way to support us and that it wasn’t a luxury and something that they could ignore because we needed it,” said Caraballo, formerly of Radio Ambulante. “If they wanted to keep listening we needed their support.”"
+    },
+    {
+      "tag": "p",
+      "text": "Leverage the power of voice. Use the personal tone of voice in a podcast to create a more emotive plea for support."
+    },
+    {
+      "tag": "p",
+      "text": "Voice is a crucial part of an audio product and the intimacy of voice helps listeners feel connected to the journalists and to each other. “It makes up a personality you can trust,” said Klitgaard, Zetland’s CEO."
+    },
+    {
+      "tag": "p",
+      "text": "This personal connection can also make it easier to talk about your membership program during a podcast or as part of an audio story. “Podcasts create new environments where people feel that they belong,” said Caraballo. “When you belong to that community you understand there’s a cost attached so you contribute to the health of that space.”"
+    },
+    {
+      "tag": "p",
+      "text": "Impersonal membership appeals from the institution (i.e. the show or the host company) can feel especially jarring given how connected listeners often feel to hosts. South African podcast production company Volume’s co-founder Paul McNally said their membership communications weren’t personal enough until it was too late. Volume shuttered the first version of its membership program, which supported all of Volume’s shows. When they relaunch membership for the show Alibi, McNally says they will make sure the membership communications come from him."
+    },
+    {
+      "tag": "p",
+      "text": "The voice that defines your audio journalism or podcast should carry onto other platforms. Radio Ambulante sees the highest conversion to membership from their newsletter, and conversion is especially strong when the newsletter is signed by someone the readers recognize, such as host Daniel Alarcón. “This voice is almost as important as the host’s voice on the podcast,” said Carolina Guerrrero, Radio Ambulante CEO."
+    },
+    {
+      "tag": "h3",
+      "text": "How Radio Ambulante has made community building routine"
+    },
+    {
+      "tag": "p",
+      "text": "By empowering their listeners to host listening clubs, Radio Ambulante extended the reach of its community."
+    },
+    {
+      "tag": "p",
+      "text": "Have a strategy for periods of radio silence. For many audio-first publishers, there will be gaps between podcast episodes, seasons, or series. Radio Ambulante has a seasonal gap when it goes “off air,” typically from May to August. Portuguese investigative journalism podcast Fumaça focuses on long-form reporting and investigations, sometimes creating a year-long gap between its series. Growing and retaining membership during these gaps is a challenge."
+    },
+    {
+      "tag": "p",
+      "text": "“It may look like you are not publishing a lot but you are asking for a lot,” Caraballo said.  “I could pay the same for more elsewhere and get much more.”"
+    },
+    {
+      "tag": "p",
+      "text": "However, Fumaça has a 3,000-strong online community organized via Slack where they facilitate conversation year-round. It also hosts an online book club, regular group discussions on news stories and “ask me anything” sessions every two months with journalists and experts. The team also uses the Slack workspace to share reporting updates and callouts. Members have also used the Slack space to organize their own listening parties and discussions."
+    },
+    {
+      "tag": "p",
+      "text": "In their 2021 annual survey, Slack was cited as the third benefit that people valued the most, almost as much as people valued giving suggestions and participating in our journalism, said co-founder Almeida. If your membership lapses, you remain a part of the Slack community."
+    },
+    {
+      "tag": "p",
+      "text": "The audience members who stay with Fumaça in the gaps between content, whether paying members or lapsed, are a key group for the newsroom. “They understand our way of working, are willing to wait for in-depth investigations, they support us and actively participate in our journalism, they help us spread the word, and they contribute to our long-term sustainability,” said Almeida. “They are the core of our community. That’s why we’ve been focusing so much on keeping these members engaged between series.”"
+    },
+    {
+      "tag": "p",
+      "text": "For its next season, Fumaça is testing more contact between supporters and the newsroom during a publishing gap. They are launching landing pages for upcoming investigations with progress updates, which they will also send via their newsletter. The messaging is focused on thanking members who stuck with the team and made the new season possible through their support. They’ll also leverage these landing pages, which show the amount of work that goes into producing a season, when trying to convert new members."
+    },
+    {
+      "tag": "p",
+      "text": "For the first time, members will have access to the whole series upon launch. Previously they had early access to the first four episodes. Once the new season is released, Fumaça will offer live events, including member-only listening parties to discuss the first episode, and a visit to the newsroom, as member benefits."
+    },
+    {
+      "tag": "p",
+      "text": "They will promote the binge listening perk in an effort to stoke membership before the launch of the next season with the message, “Why wait if you can listen to the whole series now?”"
+    },
+    {
+      "tag": "p",
+      "text": "It’s not about producing non-audio journalism content to fill the gaps between audio releases, but about regular touchpoints."
+    },
+    {
+      "tag": "p",
+      "text": "“People care about what you’re saying, what you’re doing and the way you are doing it,” said Caraballo. “That care manifests as, ‘I want to support this. I want to be a member’. It doesn’t matter if you’re not publishing every day.”"
+    },
+    {
+      "tag": "p",
+      "text": "Fumaça is committed to radical transparency: sharing all of its editorial, financial and operational actions with its audience. They have a monthly progress bar showing member contributions and release a financial update every three months, regardless of the publishing schedule. Their 2022 end-of-year campaign, coupled with the launch of a new season, brought in 480 new members. That brought their total number of active paying members to 1,875 and membership revenue to 52 percent of their budget."
+    },
+    {
+      "tag": "p",
+      "text": "This is also another chance to talk about what they do as a way to appeal to new members. The team believes that the cumulative effect of a range of messages and promotion of potential benefits over time will nudge someone into finally becoming a member. You can see examples of some of these financial update emails here and here."
+    },
+    {
+      "tag": "p",
+      "text": "“Thinking of it as triggers is especially important for us because we are audio,” said Ricardo Esteves Ribeiro, Fumaça journalist and co-founder. “When you are listening there’s no button to contribute… . We have to get people to come to our website.”"
+    },
+    {
+      "tag": "p",
+      "text": "MPP believes that membership, in which people are joining a cause that they believe in, can be a strong revenue model for narrative and investigative journalism podcasts that have long publishing gaps. If you subscribed to a newspaper that stopped publishing for a month, you’d likely want your money back because it’s a transactional relationship. The reasoning goes that if you’re not getting the content you paid for, then you shouldn’t pay."
+    },
+    {
+      "tag": "p",
+      "text": "But with membership, you have a deeper investment.  If you are receiving clear communication about what work is being done and why a podcast has paused, you are more likely to stay on as a supporter in order to further that cause. MPP recommends using publishing gaps to test communication that shows how hard you work even when not publishing."
+    },
+    {
+      "tag": "p",
+      "text": "This section was authored by MPP researcher Laura Oliver."
+    },
+    {
+      "tag": "p",
+      "text": "When the Membership Guide was published in 2020, we were at the very beginning of the wave of journalists launching solo ventures. WTF Just Happened Today was one of the only such ventures out there that had chosen a membership path, so there was an extremely limited number of ventures for the research team to study. Since the initial launch, MPP has watched membership experimentation among solo journalists evolve with great interest and now feels there are enough examples for the research team to offer insights."
+    },
+    {
+      "tag": "p",
+      "text": "In this section, we refer to independent journalists or ventures by which we mean journalists running their own editorial product, such as a newsletter, podcast, social news channel or website, not as part of a larger media organization. These journalists are sometimes referred to as creators, solo journalists, or journalist creators."
+    },
+    {
+      "tag": "p",
+      "text": "Most of the Membership Guide’s advice on growing a membership program applies to independent journalists as well, so in this section we will focus on areas where there is either additional or different advice for independent journalists specifically."
+    },
+    {
+      "tag": "p",
+      "text": "For this new addition, MPP interviewed:"
+    },
+    {
+      "tag": "li",
+      "text": "Two newsletter-based ventures with multiple editions and membership tiers"
+    },
+    {
+      "tag": "li",
+      "text": "A website and newsletter-based venture supported by members"
+    },
+    {
+      "tag": "li",
+      "text": "A newsletter with a subscription rather than a membership model"
+    },
+    {
+      "tag": "p",
+      "text": "Based on these interviews and additional research, MPP recommends experimenting with the following growth tactics."
+    },
+    {
+      "tag": "p",
+      "text": "Couple your appeals with financial transparency. As an independent journalist, you have the advantage of relatively transparent, straightforward costs. That makes it easy to show your audience why you need their support, and what their support covers."
+    },
+    {
+      "tag": "p",
+      "text": "Matt Kiser, founder of WTF Just Happened Today, found that being radically honest with his books also helps him alleviate some of his hesitations around asking for money from his readers. As he puts it, “You can see, nobody’s getting rich here!” Being transparent is also one way to build trust when asking people to optionally contribute to your work."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "p",
+      "text": "Consider reminding readers regularly what it costs you to keep publishing and how you allocate member dollars."
+    },
+    {
+      "tag": "p",
+      "text": "Tie new benefits or products to membership growth. It’s also easy for independent journalists to show that they need additional support in order to expand their offerings, so experiment with tying the launch of a new benefit or product to a membership target."
+    },
+    {
+      "tag": "p",
+      "text": "Kirsten Han, the founder of We, The Citizens, a newsletter covering Singapore from a rights-based perspective, launched a mini-mentorship program in June 2022 which allowed members to pitch ideas for publication. The winning submission would work with Han on producing their feature or essay idea. This brought in some new members."
+    },
+    {
+      "tag": "p",
+      "text": "But she leveraged the mentorship program for growth in a second way, as well: she asked people to become members to help her cover the costs of running the program, such as the cost of paying the authors of the published pieces."
+    },
+    {
+      "tag": "blockquote",
+      "text": "If you’re not applying for this initiative but would like to support it, please consider becoming a Milo Peng Funder! Your subscription fee goes towards supporting my independent writing/civil society work, and helps me pay honorariums for guest issues."
+    },
+    {
+      "tag": "p",
+      "text": "If you’re not applying for this initiative but would like to support it, please consider becoming a Milo Peng Funder! Your subscription fee goes towards supporting my independent writing/civil society work, and helps me pay honorariums for guest issues."
+    },
+    {
+      "tag": "p",
+      "text": "The first wave of the program was open for just a month but is now open on a rolling basis. Tying new efforts to member support is a way to show how members’ funding directly supports an independent journalist’s work – and to get enough runway to give it a strong go."
+    },
+    {
+      "tag": "p",
+      "text": "Seek external referrals. Caselli assumed that word-of-mouth would be an important driver of growth for her newsletter and membership, but this hasn’t been the case. References to her work by newsletter writers on similar topics have been far more helpful. She got more than 20 new newsletter registrations and two paying members from recent mentions in The Double Shift, a member-supported newsletter run by US journalist Katherine Goldstein, and a newsletter by Romanian journalist Oana Sandu. She believes audiences reading these newsletters are like-minded and predisposed to supporting newsletter writers."
+    },
+    {
+      "tag": "p",
+      "text": "Caselli thinks that this points to an opportunity to experiment with “bundled” access to multiple independent ventures’ work through shared membership packages. This would give audiences an option to pay for curated access to multiple creators covering related topics and build on the monitoring of her network that she already tries to share with her members. There are a few examples of this already: Every, a collection of newsletters and podcasts for “curious business people,” and Sidechannel, a Discord community for supporters of one of several newsletters on tech, the future of work and media, and internet culture."
+    },
+    {
+      "tag": "p",
+      "text": "Positioning yourself as a thought leader and taking part in events related to the focus of your independent venture can also boost membership. “People have to see you in conversations outside the newsletter,” said Patnaik. “It is at the expense of your time for business development or reporting but it’s a good way to reach new people.”"
+    },
+    {
+      "tag": "p",
+      "text": "Try out different price points. Han of We, The Citizens, began with just one membership tier at $50/year. But in early 2022, when her membership platform Ghost enabled multiple tiers, she decided to add two higher price point tiers – without any additional benefits."
+    },
+    {
+      "tag": "p",
+      "text": "“I added them in case there were people who wanted to support my work at a higher tier than the usual $50/year or $5/month,” Han said. “I had an idea that there were people like that out there. I didn’t think there would be a lot of them but I figured even if there were very few of them it doesn’t hurt to have the option.”"
+    },
+    {
+      "tag": "p",
+      "text": "Despite not offering any additional benefits at the higher tier nor doing any marketing of the higher tiers, 4 percent of her readers opted to support her at $100 a year and 3 percent opted to support her at $200 a year. She also includes a link for a one-time contribution in every email to capture those who don’t want to commit to a recurring payment and offers students a 50% discount on their first year of membership."
+    },
+    {
+      "tag": "p",
+      "text": "While this doesn’t grow the number of members, necessarily, it does grow the amount of revenue you receive from membership. That’s revenue you can reinvest in the journalist that brought you their support in the first place."
+    },
+    {
+      "tag": "p",
+      "text": "MPP has seen that, like members of larger newsrooms, supporters of independent journalists are often there to support the journalism, not get extra benefits. Some of them might be happy to pay more if you ask."
+    },
+    {
+      "tag": "p",
+      "text": "Bundling is what it’s called when purchasing a subscription gives you access to multiple publications. The practice is nascent in the digital media space, and is being used most often in subscription models at this point in time (perhaps most notably by Bloomberg, which  launched a bundled subscription with The Information in early 2020 and was reportedly preparing to add The Athletic at the time of publication)."
+    },
+    {
+      "tag": "p",
+      "text": "MPP believes there is potential for bundling in the membership space, especially among the increasing number of single-person newsrooms."
+    },
+    {
+      "tag": "p",
+      "text": "Every (previously Everything) is a popular bundle of writing on business strategy and productivity. MPP reached out to Nathan Baschez, one of the founders of Every and the writer behind Divinations, to learn more about what publications should look for in a good partner for a bundle. (At the time of the interview in August 2020, Every was still Everything and included five publications who all publish on Substack.)"
+    },
+    {
+      "tag": "p",
+      "text": "For the economics of a bundle to work, Baschez told MPP:"
+    },
+    {
+      "tag": "li",
+      "text": "There need to be some things in the bundle that a particular audience member really loves and that they would be willing to pay full price for (the revenue maximizing price)"
+    },
+    {
+      "tag": "li",
+      "text": "There needs to be some things that an audience member is a fan of, but not so much that they would pay full price for."
+    },
+    {
+      "tag": "li",
+      "text": "If there are things in there that they aren’t a fan of, those things shouldn’t make their experience worse."
+    },
+    {
+      "tag": "p",
+      "text": "The third point is only possible if the bundle offers a degree of personalization, such as the opportunity to opt out of receiving communication from the publications that audience member isn’t interested in. The less personalization a subscriber is offered, the stronger the overlap between the publications in the bundle needs to be. An aspirational example of this is Spotify, which has a vast library of music but excels at showing you a high percentage of music you will really like, Baschez says. Everything’s five publications all connect to business strategy in some way, but each comes at it from a different angle, whether that’s productivity or the passion economy."
+    },
+    {
+      "tag": "p",
+      "text": "Surveying your audience members on other organizations they support is a good way to gather data that could help you identify potential partners. (Jump to “Conducting audience research”)"
+    },
+    {
+      "tag": "p",
+      "text": "Everything also figured out a fairly simple revenue sharing plan, which Baschez said has been the “most challenging piece.”"
+    },
+    {
+      "tag": "p",
+      "text": "When someone subscribes to Everything, they are asked what publication is the primary publication they signed up for, and Everything splits the revenue from that subscription 50/50 with the primary publication. While that split makes it slightly less attractive for the publications with larger audiences who are bringing in more subscribers, it makes support for the group a component of the bundle, which Baschez values."
+    },
+    {
+      "tag": "p",
+      "text": "While Everything’s strength is the content that it bundles, which subscribers couldn’t otherwise access, Baschez said he sees bundling opportunities even among organizations without a paywall."
+    },
+    {
+      "tag": "p",
+      "text": "“The key that holds bundles together is the fact that you pay one price and you get access to all the stuff behind the paywall. It doesn’t have to be content. It could be a Facebook group or Slack group… but there’s got to be a thing that they get access to,” he says."
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Colorado Media Project experimented with bundled memberships and subscriptions by helping five statewide and place-based news organizations form joint partnerships with each other and with other civic organizations in their geographic area. MPP supported the pilot with a grant from its Membership in News Fund. Colorado Media Project published a report on the experiment, including a step-by-step process for identifying and setting up strong partnerships."
+    },
+    {
+      "tag": "p",
+      "text": "The cause-driven nature of membership opens up opportunities to partner with other organizations to expand your membership base. The idea of underwritten and sponsored memberships is still very new, but MPP has detected a lot of curiosity about the method,  particularly among news organizations who place a strong value on serving the whole community, not just those who can afford to pay."
+    },
+    {
+      "tag": "p",
+      "text": "For membership programs with member-only content or experiences, the research team sees a related opportunity in selling bulk memberships to institutions like schools, universities, and other large organizations. Frontier Myanmar launched its membership program with both individual and institutional memberships. The small institutional membership includes five logins per account, while the large institutional membership includes 20 logins. Although most of Frontier’s members are individual members (with one login), as of July 2020, they had 16 small institution members with 93 logins total, and three large institution members with another 60 logins."
+    },
+    {
+      "tag": "p",
+      "text": "MPP believes there is promise in underwritten and sponsored memberships, but because only a few organizations have tried this tactic at this point in time, the research team has only observations at this time."
+    },
+    {
+      "tag": "p",
+      "text": "If you have a strong value proposition and a record of community service, finding the partners will likely be the easiest part of this process. The most difficult part will be building a relationship with underwritten or sponsored members, many of whom are likely to receive the membership before becoming a loyal audience member. Offering the membership for free is not enough to gain an active member during the free trial or beyond. Have you signed up for a new service just because you got a free trial in the mail that you didn’t ask for? Probably not."
+    },
+    {
+      "tag": "p",
+      "text": "MPP supported an experiment with sponsored memberships at Red/Acción in Argentina through the Membership in News Fund, and offers some early learnings. Red/Acción, which aims to cultivate a community of changemakers, offered free memberships to employees and members of social impact communities, a group of potential audience members that were highly valuable to Red/Acción’s goal of doing journalism that creates change but who might not have the ability to pay."
+    },
+    {
+      "tag": "p",
+      "text": "Red/Acción had two hypotheses: 40 percent of the sponsored members would join as paying members after the six-month free trial, and even those who didn’t convert to paying members at the end would conclude the trial more invested in Red/Acción’s journalism and might participate in non-monetary ways."
+    },
+    {
+      "tag": "p",
+      "text": "They offered about 1,000 memberships in their pilot, and 137 people activated their free membership. Of those 137, 10 people converted to paying members at the end and six asked to have their free trial extended. The other 121 remained on Red/Acción’s newsletters."
+    },
+    {
+      "tag": "p",
+      "text": "Although the 7 percent conversion fell short of Red/Acción’s hypothesis, it is still a higher conversion rate than their general newsletter list, which is presently converting at about 1 percent. However, this method is also much more labor intensive than the newsletter."
+    },
+    {
+      "tag": "p",
+      "text": "The team learned a few things from the pilot, and was preparing for a second try at the time of publication in September 2020:"
+    },
+    {
+      "tag": "li",
+      "text": "The greatest value these social impact communities could offer was not their money, but their participation in Red/Acción’s journalism. They connected Red/Acción with stories and individuals Red/Acción could not reach as readily on their own, and helped the news organization gain trust."
+    },
+    {
+      "tag": "li",
+      "text": "Onboarding was critical to making sure these sponsored members understood what it meant to be a member of Red/Acción and how they could make the most of their membership. (They did not have an onboarding series for their general membership or the sponsored members at the time of the pilot.)"
+    },
+    {
+      "tag": "p",
+      "text": "Red/Acción is still experimenting with the right structure for sponsored memberships. MPP will add additional insights as they become available."
+    },
+    {
+      "tag": "h3",
+      "text": "Read related case studies"
+    },
+    {
+      "tag": "h3",
+      "text": "How The CT Mirror raised more than $36,000 in 36 hours"
+    },
+    {
+      "tag": "p",
+      "text": "The Gavel Give campaign takes advantage of an annual traffic surge prompted by the end of the Connecticut legislative session."
+    },
+    {
+      "tag": "h3",
+      "text": "How new offerings got Bridge Michigan past a membership plateau"
+    },
+    {
+      "tag": "p",
+      "text": "Growing and retaining members isn’t something that happens passively, especially when a membership program gets past its buzzy first years."
+    },
+    {
+      "tag": "h3",
+      "text": "How The News Minute maintains crowdfunding and membership side-by-side"
+    },
+    {
+      "tag": "p",
+      "text": "Crowdfunding activates readers who have no interest in the membership experience, but want to support specific projects."
+    },
+    {
+      "tag": "h3",
+      "text": "How PublicSource formed a match pool, with members at its core"
+    },
+    {
+      "tag": "p",
+      "text": "PublicSource’s approach highlights a way to leverage your board and highest contributing members to power a match campaign."
+    },
+    {
+      "tag": "h3",
+      "text": "How DoR doubled membership in 6 weeks, helped by members and influencers"
+    },
+    {
+      "tag": "p",
+      "text": "They didn’t offer ambassadors a bunch of swag – just the opportunity to be a part of a positive story in a year where there weren’t many."
+    },
+    {
+      "tag": "h3",
+      "text": "How 1-person, member-driven newsroom WTFJHT built its budget"
+    },
+    {
+      "tag": "p",
+      "text": "He pays attention to just three metrics for setting revenue projects: member conversion, average contribution, and churn."
+    },
+    {
+      "tag": "h3",
+      "text": "How Bridge Michigan tested its way to membership growth"
+    },
+    {
+      "tag": "p",
+      "text": "They designed a set of targeted experiments at every stage of the audience funnel."
+    },
+    {
+      "tag": "h3",
+      "text": "How Krautreporter uses surveys to engage, co-design, and grow"
+    },
+    {
+      "tag": "p",
+      "text": "Krautreporter is running three to five surveys at any point in time."
+    },
+    {
+      "tag": "h3",
+      "text": "How Zetland turned its members into powerful ambassadors"
+    },
+    {
+      "tag": "p",
+      "text": "In 2019, Zetland faced a hard truth: they still weren’t profitable, and they were running out of time. Could their members help?"
+    },
+    {
+      "tag": "h3",
+      "text": "How cloth masks powered VTDigger’s spring 2020 member drive"
+    },
+    {
+      "tag": "p",
+      "text": "Coronavirus reached the U.S. as VTDigger approached their spring 2020 membership drive. They knew swag was out of the question."
+    },
+    {
+      "tag": "h3",
+      "text": "How Scalawag made the growth case for events"
+    },
+    {
+      "tag": "p",
+      "text": "Relying on newsletters alone to grow its membership was too narrow for Scalawag, which aims to serve a diverse set of audiences."
+    },
+    {
+      "tag": "h3",
+      "text": "How The Tyee plans a crowdfunding campaign in a week"
+    },
+    {
+      "tag": "p",
+      "text": "Each campaign is built around a theory-of-change formula, and follows a time-proven template."
+    },
+    {
+      "tag": "h3",
+      "text": "How Daily Maverick developed a  membership marketing roadmap"
+    },
+    {
+      "tag": "p",
+      "text": "It begins with recording the conversion rates of every piece of marketing outreach at the weekly Maverick Insider meeting."
+    },
+    {
+      "tag": "h3",
+      "text": "What's next"
+    },
+    {
+      "tag": "p",
+      "text": "Retaining Members"
+    }
+  ]
+}
