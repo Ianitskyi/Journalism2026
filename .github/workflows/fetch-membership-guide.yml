@@ -7,6 +7,9 @@ name: Fetch Membership Guide handbook (scratch)
 # прав (лист Ariel Zirulnick, MPP, 05.10.2025, CC Jay Rosen + Lenfest
 # Institute) — це лише робочі матеріали для подальшого перекладу.
 on:
+  push:
+    paths:
+      - 'scratch/membership-guide-fetch.trigger'
   workflow_dispatch: {}
 
 permissions:
