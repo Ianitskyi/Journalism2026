@@ -1,0 +1,19 @@
+name: Diagnose if vstup2026 archived subdomain is live
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Перевіряє, чи
+# vstup2026.edbo.gov.ua вже запрацював як завершені архівні роки
+# (2018-2025) — без Cloudflare, зі старим /offers-universities/ контрактом.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-2026-archived.mjs
+        timeout-minutes: 5
