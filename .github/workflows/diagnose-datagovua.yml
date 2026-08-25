@@ -1,0 +1,20 @@
+name: Diagnose data.gov.ua open dataset for EDBO admissions
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Перевіряє, чи
+# МОН/ЄДЕБО публікують рейтингові списки вступників як відкритий датасет
+# на data.gov.ua — альтернативне джерело, якщо vstup2026.edbo.gov.ua ще
+# не запрацював.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-datagovua.mjs
+        timeout-minutes: 5
