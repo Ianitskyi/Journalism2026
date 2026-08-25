@@ -1,0 +1,20 @@
+name: Diagnose data.gov.ua dataset details for EDBO admissions
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Детально вивчає
+# два найперспективніші датасети МОН на data.gov.ua (знайдені попереднім
+# diagnose-datagovua.mjs), щоб з'ясувати, чи є там дані за 2026 рік,
+# розбивка по спеціальностях/закладах і бюджет/контракт.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-datagovua-details.mjs
+        timeout-minutes: 5
