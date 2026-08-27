@@ -37,14 +37,28 @@ async function bingSearch(query) {
   const html = await resp.text();
   console.log(`довжина сторінки: ${html.length}`);
 
-  // усі href, що ведуть на зовнішні домени (не bing/microsoft)
-  const hrefRe = /<a[^>]+href="(https?:\/\/[^"]+)"[^>]*>/g;
+  // Bing загортає результати у власні click-tracking redirect (bing.com/ck/a?...u=a1<base64>)
+  // — розкодовуємо їх, а не відкидаємо як "внутрішні" посилання
+  const hrefRe = /<a[^>]+href="([^"]+)"[^>]*>/g;
   const seen = new Set();
   let m;
   let count = 0;
-  while ((m = hrefRe.exec(html)) && count < 40) {
-    const href = m[1];
-    if (/bing\.com|microsoft\.com|msn\.com/i.test(href)) continue;
+  while ((m = hrefRe.exec(html)) && count < 60) {
+    let href = m[1];
+    if (/\/ck\/a/i.test(href)) {
+      try {
+        const u = new URL(href, "https://www.bing.com");
+        const encoded = u.searchParams.get("u");
+        if (encoded) {
+          const b64 = encoded.startsWith("a1") ? encoded.slice(2) : encoded;
+          href = Buffer.from(b64, "base64").toString("utf8");
+        }
+      } catch {
+        // залишаємо href як є
+      }
+    }
+    if (!/^https?:\/\//i.test(href)) continue;
+    if (/(^|\.)(bing|microsoft|msn|live)\.com$/i.test(new URL(href).hostname)) continue;
     if (seen.has(href)) continue;
     seen.add(href);
     console.log(`  - ${href}`);
