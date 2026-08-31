@@ -1,0 +1,19 @@
+name: Diagnose other EDBO domains for admissions statistics
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Перевіряє інші
+# домени екосистеми ЄДЕБО (info.edbo.gov.ua, edbo.gov.ua) поза розділом
+# "вступ" — раптом там є публічна статистика прийому за 2026 рік.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-edbo-other-domains.mjs
+        timeout-minutes: 5
