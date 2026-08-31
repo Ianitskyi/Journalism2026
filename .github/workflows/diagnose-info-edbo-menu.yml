@@ -1,0 +1,19 @@
+name: Diagnose info.edbo.gov.ua menu structure
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. info.edbo.gov.ua
+# виявився доступним (200) — дивимось повне меню/навігацію сторінки, чи є
+# там розділи про прийом/вступ/статистику.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-info-edbo-menu.mjs
+        timeout-minutes: 5
