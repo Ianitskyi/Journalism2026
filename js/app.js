@@ -86,8 +86,14 @@ function placeholderRows(rows, degree) {
    критерієм — сирі дані завжди зберігають ранг за балом, тож для
    сортування за кількістю заяв ранги рахуємо наново */
 function sortedRows(rawRows, sortBy) {
+  // null-безпечне сортування: заклади без значення показника (напр. середній
+  // бал ще не опубліковано для поточної кампанії) йдуть у кінець, а порядок
+  // визначається кількістю заяв як запасним критерієм — щоб рейтинг лишався
+  // осмисленим, навіть коли балів для року ще немає.
   return [...rawRows]
-    .sort((a, b) => b[sortBy] - a[sortBy])
+    .sort((a, b) =>
+      ((b[sortBy] ?? -Infinity) - (a[sortBy] ?? -Infinity)) ||
+      ((b.applicationsTotal ?? b.applications ?? 0) - (a.applicationsTotal ?? a.applications ?? 0)))
     .map((r, i) => ({ ...r, rank: i + 1 }));
 }
 

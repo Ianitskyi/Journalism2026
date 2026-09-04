@@ -210,8 +210,8 @@ function renderComparePanel(meta, trend, compareMetas, compareTrends) {
       <div class="compare-col ${isPrimary ? "is-primary" : ""}">
         <div class="compare-col-name">${m.name}</div>
         <div class="compare-metric"><span>${t("uni.metricRank", { year: latest ? latest.year : "—" })}</span><span>${latest ? "#" + latest.row.rank : "—"}</span></div>
-        <div class="compare-metric"><span>${t("table.score")}</span><span>${latest ? latest.row.score.toFixed(1) : "—"}</span></div>
-        <div class="compare-metric"><span>${t("table.applications")}</span><span>${latest ? numFmt().format(latest.row.applications) : "—"}</span></div>
+        <div class="compare-metric"><span>${t("table.score")}</span><span>${latest && latest.row.score != null ? latest.row.score.toFixed(1) : "—"}</span></div>
+        <div class="compare-metric"><span>${t("table.applications")}</span><span>${latest && latest.row.applications != null ? numFmt().format(latest.row.applications) : "—"}</span></div>
       </div>
     `;
   }
@@ -301,7 +301,7 @@ function render() {
 
   document.getElementById("uni-best-rank").textContent = bestRank != null ? `#${bestRank}` : "—";
   document.getElementById("uni-current-rank").textContent = latest ? `#${latest.row.rank}` : "—";
-  document.getElementById("uni-current-score").textContent = latest ? latest.row.score.toFixed(1) : "—";
+  document.getElementById("uni-current-score").textContent = latest && latest.row.score != null ? latest.row.score.toFixed(1) : "—";
 
   document.getElementById("uni-analysis").textContent = buildAnalysisText(first, latest);
 
@@ -387,8 +387,8 @@ function render() {
       tr.innerHTML = `
         <td><strong>${entry.year}</strong></td>
         <td class="num"><div class="score">#${entry.row.rank}</div></td>
-        <td class="num"><div class="score">${entry.row.score.toFixed(1)}</div></td>
-        <td class="num"><div class="applications">${numFmt().format(entry.row.applications)}</div></td>
+        <td class="num"><div class="score">${entry.row.score != null ? entry.row.score.toFixed(1) : "—"}</div></td>
+        <td class="num"><div class="applications">${entry.row.applications != null ? numFmt().format(entry.row.applications) : "—"}</div></td>
       `;
     }
     tbody.appendChild(tr);
