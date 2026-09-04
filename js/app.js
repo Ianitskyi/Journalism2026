@@ -89,7 +89,7 @@ function sortedRows(rawRows, sortBy) {
   return [...rawRows]
     .sort((a, b) =>
       ((b[sortBy] ?? -Infinity) - (a[sortBy] ?? -Infinity)) ||
-      ((b.applicationsTotal ?? b.applications ?? 0) - (a.applicationsTotal ?? a.applications ?? 0)))
+      ((b.applications ?? 0) - (a.applications ?? 0)))
     .map((r, i) => ({ ...r, rank: i + 1 }));
 }
 
