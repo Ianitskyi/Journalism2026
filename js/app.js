@@ -86,10 +86,6 @@ function placeholderRows(rows, degree) {
    критерієм — сирі дані завжди зберігають ранг за балом, тож для
    сортування за кількістю заяв ранги рахуємо наново */
 function sortedRows(rawRows, sortBy) {
-  // null-безпечне сортування: заклади без значення показника (напр. середній
-  // бал ще не опубліковано для поточної кампанії) йдуть у кінець, а порядок
-  // визначається кількістю заяв як запасним критерієм — щоб рейтинг лишався
-  // осмисленим, навіть коли балів для року ще немає.
   return [...rawRows]
     .sort((a, b) =>
       ((b[sortBy] ?? -Infinity) - (a[sortBy] ?? -Infinity)) ||
@@ -295,6 +291,18 @@ function renderSystemCharts() {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
+  /* попередній (ще не фінальний) знімок не має розбивок «лише бюджет» /
+     «1-2 пріоритет» — ховаємо ці перемикачі й скидаємо їх, щоб рейтинг
+     показував усі заяви коректно */
+  const isPreliminary = !!snap.preliminary;
+  const filtersRow = document.querySelector(".priority-row");
+  if (filtersRow) filtersRow.style.display = isPreliminary ? "none" : "";
+  if (isPreliminary && (state.budgetOnly || state.priorityOnly)) {
+    state.budgetOnly = false;
+    state.priorityOnly = false;
+    const pt = document.getElementById("priority-toggle-input"); if (pt) pt.checked = false;
+    const bt = document.getElementById("budget-toggle-input"); if (bt) bt.checked = false;
+  }
   const rawRows = withFilteredView(snap[state.degree]);
   const rows = sortedRows(rawRows, state.sortBy);
   const displayRows = [...rows, ...placeholderRows(rows, state.degree)];
