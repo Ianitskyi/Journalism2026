@@ -104,6 +104,55 @@ a { color: inherit; }
 
 .lang-btn:not(.active):hover { color: var(--ink); }
 
+/* ---------- ProMedia network navigation ---------- */
+
+.network-nav {
+  max-width: 1200px;
+  margin: 10px auto 0;
+  padding: 0 24px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px 18px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.network-link {
+  flex: 0 0 auto;
+  padding: 6px 0 9px;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.network-link:hover,
+.network-link.active { border-color: var(--accent); color: var(--ink); }
+.network-en { display: none; }
+html[lang="en"] .network-uk { display: none; }
+html[lang="en"] .network-en { display: inline; }
+
+.network-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.network-footer a { color: var(--muted); font-size: 12px; font-weight: 700; text-decoration: none; }
+.network-footer a:hover { color: var(--ink); }
+
+/* Match the shared Map layout while keeping ranking controls intact. */
+.utility-bar, .hero-inner, .wrap, .site-footer, .page-nav-row, .uni-wrap { max-width: 1200px; }
+.hero { background: transparent; border-bottom: 0; padding: 36px 24px 8px; }
+.wrap { padding-top: 20px; }
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -1044,4 +1093,10 @@ td {
   th, td { padding-left: 6px; padding-right: 6px; }
   thead th:nth-child(3), td:nth-child(3) { width: 56px; }
   thead th:nth-child(4), td:nth-child(4) { width: 54px; }
+}
+
+.site-footer { max-width: 1200px; }
+@media (max-width: 640px) {
+  .network-nav { padding-inline: 16px; gap: 6px 15px; }
+  .network-footer { gap: 8px 14px; }
 }
