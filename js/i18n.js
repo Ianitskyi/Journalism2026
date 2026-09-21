@@ -427,6 +427,16 @@ function applyStaticI18n() {
   });
 }
 
+// Посилання на інші продукти мережі ПроМедіа (communities/research/atlas)
+// ведуть на локалізовану версію відповідного піддомену через data-href-uk/-en.
+function applyNetworkNavLinks() {
+  const lang = getLang();
+  document.querySelectorAll("[data-href-uk][data-href-en]").forEach((el) => {
+    const href = lang === "en" ? el.dataset.hrefEn : el.dataset.hrefUk;
+    if (href) el.setAttribute("href", href);
+  });
+}
+
 function initLangToggle() {
   const buttons = document.querySelectorAll(".lang-btn");
   function sync() {
@@ -440,6 +450,7 @@ function initLangToggle() {
       document.documentElement.lang = getLang();
       sync();
       applyStaticI18n();
+      applyNetworkNavLinks();
       if (typeof window.onLangChange === "function") window.onLangChange();
     });
   });
@@ -450,6 +461,7 @@ window.siteContentReady = loadSiteContent().then(() => {
   syncLangFromUrl();
   document.documentElement.lang = getLang();
   applyStaticI18n();
+  applyNetworkNavLinks();
   initLangToggle();
   return window.PM_SITE_CONTENT;
 });
