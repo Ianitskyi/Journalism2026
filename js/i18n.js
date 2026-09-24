@@ -324,7 +324,8 @@ function loadJson(url) {
 }
 
 function loadSiteContent() {
-  return loadJson("content/site.json")
+  const root = document.body && document.body.dataset.root ? document.body.dataset.root : "";
+  return loadJson(`${root}content/site.json`)
     .then((content) => {
       applySiteContent(content);
       return content;
@@ -341,6 +342,10 @@ function normalizeLang(lang) {
 
 function syncLangFromUrl() {
   try {
+    if (/^\/en(?:\/|$)/.test(window.location.pathname)) {
+      localStorage.setItem("site-lang", "en");
+      return;
+    }
     const lang = new URLSearchParams(window.location.search).get("lang");
     if (lang === "en" || lang === "uk") localStorage.setItem("site-lang", lang);
   } catch (_) {}
@@ -356,8 +361,10 @@ function setLang(lang, options = {}) {
 
   if (options.updateUrl && window.history && window.history.replaceState) {
     const url = new URL(window.location.href);
-    url.searchParams.set("lang", normalized);
-    window.history.replaceState({}, "", url.toString());
+    const path = url.pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+    url.pathname = normalized === "en" ? `/en${path}` : path;
+    url.searchParams.delete("lang");
+    window.location.assign(url.toString());
   }
 }
 
