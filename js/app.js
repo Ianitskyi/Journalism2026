@@ -41,6 +41,7 @@ function withFilteredView(rawRows) {
    даних, які самі по собі не несуть nameEn (лише плейсхолдер-рядки й
    кураторський демо-2026 мають його прямо на об'єкті) */
 function uniName(row, registry) {
+  if (getLang() === "crh") return typographicQuotes(transliterateUk(row.name));
   if (getLang() !== "en") return typographicQuotes(row.name);
   if (row.nameEn) return typographicQuotes(row.nameEn);
   const meta = registry && registry.get(row.id);
@@ -450,7 +451,7 @@ function renderUniSearchOptions() {
   if (!datalist) return;
   const lang = getLang();
   const items = [...DB.allUniversitiesMeta().values()]
-    .map((u) => ({ id: u.id, name: typographicQuotes(lang === "en" ? (u.nameEn || u.name) : u.name) }))
+    .map((u) => ({ id: u.id, name: typographicQuotes(localizedUniName(u.name, u.nameEn)) }))
     .sort((a, b) => a.name.localeCompare(b.name, lang === "en" ? "en" : "uk"));
   datalist.innerHTML = items.map((it) => `<option value="${it.name.replace(/"/g, "&quot;")}"></option>`).join("");
 }
@@ -462,9 +463,8 @@ function initUniSearch() {
   function go() {
     const value = input.value.trim().toLowerCase();
     if (!value) return;
-    const lang = getLang();
     const match = [...DB.allUniversitiesMeta().values()].find((u) => {
-      const rawName = lang === "en" ? (u.nameEn || u.name) : u.name;
+      const rawName = localizedUniName(u.name, u.nameEn);
       return typographicQuotes(rawName).toLowerCase() === value || rawName.toLowerCase() === value;
     });
     if (match) location.href = `university.html?id=${encodeURIComponent(match.id)}`;
