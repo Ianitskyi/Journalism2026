@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="crh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="meta.uniDefaultTitle">Jurnalistika programmalarınıñ dinamikası — Ukraina jurnalistika fakülteleri reytingi</title>
+<meta name="description" content="Jurnalistika fakülteti ya da programmasınıñ populârlik dinamikası: seneler boyunca orta yarış balı ve arzalar sayısı." data-i18n-content="meta.uniDesc" />
+<link rel="canonical" href="https://ratings.promedia.report/crh/university.html" />
+<link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/university.html" />
+<link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/university.html" />
+<link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/university.html" />
+<link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/university.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ProMedia" />
+<meta property="og:url" content="https://ratings.promedia.report/crh/university.html" />
+<meta property="og:title" content="Jurnalistika programmalarınıñ dinamikası — Ukraina jurnalistika fakülteleri reytingi" data-i18n-content="meta.uniDefaultTitle" />
+<meta property="og:description" content="Jurnalistika fakülteti ya da programmasınıñ populârlik dinamikası: seneler boyunca orta yarış balı ve arzalar sayısı." data-i18n-content="meta.uniDesc" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Jurnalistika programmalarınıñ dinamikası — Ukraina jurnalistika fakülteleri reytingi" data-i18n-content="meta.uniDefaultTitle" />
+<meta name="twitter:description" content="Jurnalistika fakülteti ya da programmasınıñ populârlik dinamikası: seneler boyunca orta yarış balı ve arzalar sayısı." data-i18n-content="meta.uniDesc" />
+<link rel="icon" href="../favicon.png" type="image/png" />
+<link rel="stylesheet" href="../css/style.css" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8TM22QR9R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D8TM22QR9R');
+</script>
+</head>
+<body data-root="../">
+<script>localStorage.setItem('site-lang', 'crh'); document.documentElement.lang = 'crh';</script>
+
+<main class="wrap uni-wrap">
+
+  <div class="page-nav-row">
+    <a class="home-btn" href="https://promedia.report" data-i18n="nav.promedia">← ProMedia</a>
+    <a class="back-link" href="index.html" data-i18n="nav.backToRating">← До рейтингу</a>
+    <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language / Мова">
+      <button class="lang-btn" data-lang="uk" type="button">UA</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+      <button class="lang-btn" data-lang="crh" type="button">QT</button>
+    </div>
+  </div>
+
+  <nav class="network-nav" aria-label="ProMedia loyihaları">
+    <a data-network="news" class="network-link" href="https://news.promedia.report/?lang=crh"><span class="network-uk">Новини</span><span class="network-en">News</span><span class="network-crh">Haberler</span></a>
+    <a data-network="communities" class="network-link" href="https://communities.promedia.report/crh/"><span class="network-uk">Карта спільнот</span><span class="network-en">Community Map</span><span class="network-crh">Cemaatlar haritası</span></a>
+    <a class="network-link active" href="index.html"><span class="network-uk">Рейтинг журфаків</span><span class="network-en">Journalism Schools Ranking</span><span class="network-crh">Jurnalistika fakülteleri reytingi</span></a>
+    <a data-network="research" class="network-link" href="https://research.promedia.report/crh/"><span class="network-uk">Дослідження</span><span class="network-en">Research</span><span class="network-crh">Tedqiqatlar</span></a>
+    <a data-network="atlas" class="network-link" href="https://atlas.promedia.report/crh/"><span class="network-uk">Атлас Медіа</span><span class="network-en">Media Atlas</span><span class="network-crh">Mediya Atlası</span></a>
+  </nav>
+
+  <div id="uni-not-found" class="empty-state uni-not-found" style="display:none">
+    <span data-i18n="empty.uniNotFound">Такий заклад освіти не знайдено.</span> <a href="index.html" data-i18n="empty.backToRating">Повернутись до рейтингу →</a>
+  </div>
+
+  <div id="uni-content">
+
+    <div class="uni-hero">
+      <div class="uni-hero-logo" id="uni-logo">—</div>
+      <div>
+        <div class="uni-hero-eyebrow" data-i18n="uni.eyebrow">Динаміка популярності · спеціальність «Журналістика»</div>
+        <h1 id="uni-name">—</h1>
+      </div>
+    </div>
+
+    <div class="institution-note" id="institution-note" style="display:none"></div>
+
+    <div class="tabs" id="uni-degree-tabs" role="tablist">
+      <span class="tabs-indicator" id="uni-degree-indicator"></span>
+      <button class="pill active" data-degree="bachelor" role="tab" aria-selected="true" data-i18n="degree.bachelor">Бакалавр</button>
+      <button class="pill" data-degree="master" role="tab" aria-selected="false" data-i18n="degree.master">Магістр</button>
+    </div>
+
+    <div class="stats-row uni-stats-row">
+      <div class="stat-tile">
+        <div class="stat-label" data-i18n="uni.bestRank">Найкращий ранг</div>
+        <div class="stat-value accent" id="uni-best-rank">—</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label" data-i18n="uni.currentRank">Ранг зараз</div>
+        <div class="stat-value" id="uni-current-rank">—</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label" data-i18n="uni.currentScore">Бал зараз</div>
+        <div class="stat-value" id="uni-current-score">—</div>
+      </div>
+    </div>
+
+    <p class="uni-analysis" id="uni-analysis"></p>
+
+    <div class="compare-block">
+      <div class="compare-row">
+        <span class="compare-label" data-i18n="uni.compareLabel">Порівняти з</span>
+        <select class="compare-select" id="compare-select-0">
+          <option value="" data-i18n="uni.compareNone">— не порівнювати —</option>
+        </select>
+      </div>
+      <div class="compare-row" id="compare-row-1" style="display:none">
+        <span class="compare-label" data-i18n="uni.compareLabel2">І ще з</span>
+        <select class="compare-select" id="compare-select-1">
+          <option value="" data-i18n="uni.compareNone">— не порівнювати —</option>
+        </select>
+      </div>
+      <button type="button" class="add-compare-btn" id="add-compare-btn" data-i18n="uni.addCompare">+ Додати ще одне порівняння</button>
+    </div>
+
+    <div class="card chart-card">
+      <div class="card-head chart-card-head">
+        <div>
+          <div class="card-title" data-i18n="uni.appsChartTitle">Середня кількість заяв на програму з журналістики по роках</div>
+          <div class="card-subtitle" id="chart-apps-subtitle"></div>
+        </div>
+      </div>
+      <div class="chart-plot">
+        <div class="chart-wrap" id="chart-wrap-apps"></div>
+        <div class="chart-tooltip"></div>
+      </div>
+      <div class="chart-legend" id="chart-legend-apps"></div>
+    </div>
+
+    <div class="card chart-card">
+      <div class="card-head chart-card-head">
+        <div>
+          <div class="card-title" data-i18n="uni.chartTitle">Середній конкурсний бал по роках</div>
+          <div class="card-subtitle" id="chart-subtitle"></div>
+        </div>
+      </div>
+      <p class="chart-disclaimer" data-i18n="uni.scoreChartDisclaimer">Формула конкурсного бала змінювалася рік від року — порівнюйте заклади в межах одного року, а не сам бал одного закладу різних років між собою.</p>
+      <div class="chart-plot">
+        <div class="chart-wrap" id="chart-wrap"></div>
+        <div class="chart-tooltip"></div>
+      </div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+
+    <div class="compare-panel" id="compare-panel" style="display:none"></div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">📊</div>
+        <div>
+          <div class="card-title" data-i18n="uni.rankingByYear">Рейтинг по роках</div>
+          <div class="card-subtitle" id="uni-table-subtitle"></div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="table.year">Рік</th>
+            <th class="num" data-i18n="table.rank">Ранг</th>
+            <th class="num" data-i18n="table.score">Бал</th>
+            <th class="num" data-i18n="table.applicationsColumn">Заяв на програму</th>
+          </tr>
+        </thead>
+        <tbody id="uni-year-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="https://promedia.report" target="_blank" rel="noopener">
+      <span data-i18n="footer.initiative">Ініціатива</span>
+      <img src="../img/promedia-wordmark.svg" alt="«ProMedia» İCT" class="footer-logo" />
+    </a>
+    <span data-i18n-html="footer.dataSourceHtml">Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).</span>
+    <nav class="network-footer" aria-label="ProMedia loyihaları">
+      <a data-network="news" href="https://news.promedia.report/?lang=crh"><span class="network-uk">Новини</span><span class="network-en">News</span><span class="network-crh">Haberler</span></a>
+      <a data-network="communities" href="https://communities.promedia.report/crh/"><span class="network-uk">Карта спільнот</span><span class="network-en">Community Map</span><span class="network-crh">Cemaatlar haritası</span></a>
+      <a href="index.html"><span class="network-uk">Рейтинг журфаків</span><span class="network-en">Journalism Schools Ranking</span><span class="network-crh">Jurnalistika fakülteleri reytingi</span></a>
+      <a data-network="research" href="https://research.promedia.report/crh/"><span class="network-uk">Дослідження</span><span class="network-en">Research</span><span class="network-crh">Tedqiqatlar</span></a>
+      <a data-network="atlas" href="https://atlas.promedia.report/crh/"><span class="network-uk">Атлас Медіа</span><span class="network-en">Media Atlas</span><span class="network-crh">Mediya Atlası</span></a>
+    </nav>
+  </footer>
+
+</main>
+
+<script src="../js/i18n.js?v=20261001-crh"></script>
+<script src="../js/data.js"></script>
+<script src="../js/university.js?v=20261001-crh"></script>
+<script defer src="https://news.promedia.report/js/promedia-memorial-popup.js"></script>
+</body>
+</html>

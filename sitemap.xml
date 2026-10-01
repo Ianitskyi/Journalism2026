@@ -5,24 +5,42 @@
     <loc>https://ratings.promedia.report/</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/" />
   </url>
   <url>
     <loc>https://ratings.promedia.report/en/</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/" />
+  </url>
+  <url>
+    <loc>https://ratings.promedia.report/crh/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/" />
   </url>
   <url>
     <loc>https://ratings.promedia.report/university.html</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/university.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/university.html" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/university.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/university.html" />
   </url>
   <url>
     <loc>https://ratings.promedia.report/en/university.html</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/university.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/university.html" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/university.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/university.html" />
+  </url>
+  <url>
+    <loc>https://ratings.promedia.report/crh/university.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ratings.promedia.report/university.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratings.promedia.report/en/university.html" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://ratings.promedia.report/crh/university.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ratings.promedia.report/university.html" />
   </url>
 </urlset>

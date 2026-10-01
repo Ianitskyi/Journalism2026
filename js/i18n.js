@@ -268,6 +268,136 @@ const I18N = {
         insufficientData: "Not enough historical data to analyze the trend."
       }
     }
+  },
+  crh: {
+    nav: {
+      promedia: "← ProMedia",
+      backToRating: "← Reytingke qaytmaq"
+    },
+    meta: {
+      indexTitle: "Ukraina jurnalistika fakülteleriniñ reytingi. «Jurnalistika»ğa kirüv",
+      indexDesc: "Ukraina jurnalistika fakülteleriniñ berilgen arzalar sayısı ve abituriyentlerniñ orta yarış balı boyunca reytingi. EDEBO malümatı.",
+      uniTitleSuffix: "Jurnalistika fakülteleri reytingi",
+      uniDefaultTitle: "Jurnalistika programmalarınıñ dinamikası — Ukraina jurnalistika fakülteleri reytingi",
+      uniDesc: "Jurnalistika fakülteti ya da programmasınıñ populârlik dinamikası: seneler boyunca orta yarış balı ve arzalar sayısı."
+    },
+    hero: {
+      eyebrow: "C7 «Jurnalistika» ihtisası, jurnalistika programmaları",
+      title: "Ukraina jurnalistika fakülteleriniñ reytingi",
+      lede: "Ali oquv yurtlarınıñ jurnalistika programmalarına berilgen arzalar ve abituriyentlerniñ orta yarış balı boyunca reytingi."
+    },
+    stats: {
+      submitted: "Berilgen arzalar",
+      count: "Reytingdeki fakülteler"
+    },
+    degree: {
+      bachelor: "Bakalavr",
+      master: "Magistr",
+      bachelorLabel: "bakalavr · kündüzki oquv",
+      masterLabel: "magistr · kündüzki oquv"
+    },
+    sort: {
+      label: "Sıralamaq",
+      score: "Orta bal boyunca",
+      applications: "Programmağa arzalar boyunca"
+    },
+    filter: {
+      priorityOnly: "Tek 1 ve 2 ögelik",
+      budgetOnly: "Tek byudjet"
+    },
+    search: {
+      placeholder: "Oquv yurtunı tapmaq…"
+    },
+    year: {
+      label: "Kirüv senesi",
+      today: "Bugün"
+    },
+    caption: {
+      final: "{year} senesi kirüv kampaniyasınıñ soñki malümatı. Ögelikke baqmadan jurnalistika programmalarına arzalar; eñ az {minApps} arza berilgen oquv yurtları.",
+      live: "{date} vaziyetine köre. Ögelikke baqmadan jurnalistika programmalarına arzalar; eñ az {minApps} arza berilgen oquv yurtları.",
+      finalPriority: "{year} senesi kirüv kampaniyasınıñ soñki malümatı. Jurnalistika programmalarına tek 1 ve 2 ögelikli arzalar; eñ az {minApps} arza berilgen oquv yurtları.",
+      livePriority: "{date} vaziyetine köre. Jurnalistika programmalarına tek 1 ve 2 ögelikli arzalar; eñ az {minApps} arza berilgen oquv yurtları.",
+      finalBudget: "{year} senesi kirüv kampaniyasınıñ soñki malümatı. Jurnalistika programmalarında tek byudjet yerleri (kontrakt yerlerisiz); eñ az {minApps} arza berilgen oquv yurtları.",
+      liveBudget: "{date} vaziyetine köre. Jurnalistika programmalarında tek byudjet yerleri (kontrakt yerlerisiz); eñ az {minApps} arza berilgen oquv yurtları.",
+      finalBudgetPriority: "{year} senesi kirüv kampaniyasınıñ soñki malümatı. Jurnalistika programmalarınıñ byudjet yerlerine (kontrakt yerlerisiz) tek 1 ve 2 ögelikli arzalar; eñ az {minApps} arza berilgen oquv yurtları.",
+      liveBudgetPriority: "{date} vaziyetine köre. Jurnalistika programmalarınıñ byudjet yerlerine (kontrakt yerlerisiz) tek 1 ve 2 ögelikli arzalar; eñ az {minApps} arza berilgen oquv yurtları."
+    },
+    table: {
+      institution: "Oquv yurtu",
+      score: "Orta bal",
+      applications: "Programmağa arzalar",
+      applicationsColumn: "Programmağa arzalar",
+      fullRanking: "Tolu reyting",
+      year: "Sene",
+      rank: "Yer"
+    },
+    systemChart: {
+      appsTitle: "Bir jurnalistika programmasına arzalar dinamikası ({from}–{to})",
+      appsTitlePriority: "Bir jurnalistika programmasına 1/2 ögelikli arzalar dinamikası ({from}–{to})",
+      appsTitleBudget: "Bir jurnalistika programmasına arzalar dinamikası — tek byudjet yerleri ({from}–{to})",
+      appsTitleBudgetPriority: "Bir jurnalistika programmasına 1/2 ögelikli arzalar dinamikası — tek byudjet yerleri ({from}–{to})",
+      scopeNote: "Bütün sistema boyunca malümat (reytingdeki bütün oquv yurtları)"
+    },
+    methodology: {
+      kicker: "Reyting aqqında",
+      title: "Metodologiya",
+      bodyHtml: "<article><h3>Neni ölçeymiz</h3><p>Er oquv yurtu içün «Jurnalistika» ihtisası boyunca (2021–2024 senelerinde 061 kodu, 2025 senesinden onıñ varisi C7) berilgen yarış tekliflerinden adında «jurnalistika» sözü olğan tasil programmalarını (er türlü şekilde — «Jurnalistika», «İqtisadiy jurnalistika», «Jurnalistika ve mediya kommunikatsiyaları» ve ilâhre) birleştiremiz. Bakalavr ve magistr malümatı ayrı kösterile.</p><p>İki köstergiç kösteremiz: bir böyle programmağa berilgen arzalarnıñ orta sayısı ve abituriyentlerniñ orta yarış balı.</p></article><article><h3>Reyting nasıl esaplana</h3><p>Oquv yurtu «Jurnalistika» ihtisası boyunca çoqusı bir qaç tasil programmasını bere — tek «Jurnalistika»nı degil, meselâ «Cemiyetnen bağlar» ya da «Mediya kommunikatsiyaları»nı da. Reyting tek adında «jurnalist…» olğan programmalarnı saya: eger oquv yurtunda böyle programma olmasa, o reytingke ümumen kirmey.</p><p>İki mustaqil sıralav bar: böyle bir programmağa orta arzalar sayısı ve orta yarış balı. Arzalar «jurnalist…» adlı programmalar sayısına bölüne, ki bir qaç böyle programması olğan oquv yurtu tek bir programması olğan oquv yurtundan aqsız üstünlik almasın. Bal — bu programmalar boyunca orta tartılğan qıymet, er birine berilgen arzalar sayısı boyunca tartıla.</p><p>Oquv yurtu cedvelge tek bu programmalarğa umumiy arzalar sayısı seviyege köre belgilengen eñ az miqdarğa yetkende kire. Bu pek kiçik saylamlardan kelip çıqqan tebeddüllerni sıñırlay.</p></article><article><h3>Raqamlarnı nasıl añlamalı</h3><p>Bir insan türlü oquv yurtlarına ya da programmalarğa bir qaç arza berip ola, bu sebepten «programmağa arzalar» — yegâne insanlar sayısı degil. Bu talapnı köstere, orta bal ise abituriyentlerniñ yarış profilini tarif ete. Bu soñunda oquvğa kirgen talebeler reytingi degil.</p><p>Reyting oquv keyfiyetini, şöhretni, işke yerleşüvni ya da programmanıñ qoşqan qıymetini ölçemey ve sebep-netice bağını belgilemey.</p></article><article><h3>Raqamlarnıñ reñkleri ne demek?</h3><p>Programmağa arzalar raqamları ayn oquv yurtunıñ keçken senedeki qıymetine köre boyala: yeşil — arzalar daa çoq, qırmızı — daa az. Reñksiz adiy metin raqam deñişmegenini ya da bu oquv yurtunıñ reytingdeki ilk senesi olğanını bildire — şimdilik qıyaslamağa bir şey yoq. Orta bal mahsus olaraq böyle boyalmay: onı esaplav formulası seneden-senege deñişti, bu sebepten bir oquv yurtunıñ öz balını seneler arasında doğrudan qıyaslamaq yañlış olur edi (aşağıda «Seneler arasında qıyaslav» bölügine baqıñız).</p></article><article><h3>Seneler arasında qıyaslav</h3><p>Keçken seneler içün kampaniyanıñ soñki malümatı qullanıla. 2026 senesi raqamları — kirüv kampaniyası devam etkende canlı halı, olarnı evelki seneler ile tek kampaniya bitken soñ qıyaslamalı.</p><p>Bal formulaları ve koeffitsiyentleri (kirüv qaideleri, arzalar sıñırları, programmalar strukturası, oquv şekilleri ve ihtisaslar tasnifi kibi) seneden-senege deñişti. Bu sebepten orta balnı bir sene içinde oquv yurtları arasında qıyaslamaq doğru, amma bir oquv yurtunıñ öz balını türlü seneler arasında qıyaslamaq doğru degil — «Seneler boyunca orta yarış balı» grafigi bu sebepten devamlı sızıq degil, ayrı sütünler köstere.</p></article><article><h3>Nege reytingde «klassik» jurnalistika programması olmağan oquv yurtları bar — ya da aksine, jurnalist azırlağanğa beñzegen bazıları yoq?</h3><p>Reyting ihtisas boyunca (2021–2024 senelerinde 061 kodu, 2025 senesinden C7) berilgen «jurnalist…» adlı programmalarğa arzalarnı saya — eki şart da bir vaqıtta olmalı. İhtisas — EDEBO-nıñ resmiy tasnifi, ve er oquv yurtu öz programmalarından hangisini onıñ altında bermesini özü qarar bere — programmanıñ adı ihtisasnıñ adına uyğun olmağa mecbur degil.</p><p>Bu eki qarşı vaziyet doğura. Oquv yurtu «Jurnalistika» ihtisası altında tek başqa adlı programmalarnı (meselâ, «Cemiyetnen bağlar», «Mediya kommunikatsiyaları») berip ola — o zaman onıñ programmalarından hiç biri süzgüçten keçmey ve oquv yurtu, resmen bu ihtisas boyunca mutehassıslar azırlasa da, bu reytingde ümumen yoq. Aksine, aqiqattan «Jurnalistika» adlı programmanı oquv yurtu bütünley başqa ihtisas altında berip ola — o zaman o da mında körünmey.</p><p>Misal olaraq — «Kiev-Mogila akademiyası» Milliy universiteti. 061/C7 ihtisası altında bergen bakalavr programması «Cemiyetnen bağlar» dep adlana — o «jurnalist…» süzgüçinden keçmey, bu sebepten akademiyanıñ bakalavriatı bu reytingde yoq. Magistr seviyesinde ayn ihtisasta ayrı «Jurnalistika» programması (Mogila jurnalistika mektebi) da bar — o reytingde bar.</p><p>Adında «jurnalist…» olmağan, amma maneviy taraftan ayn sanal mediya saasını qaplağan bir qaç programma içün qolnen istisna qoştıq: «Sanal mediya» (Taras Şevçenko adına Kiev milliy universiteti, magistratura), ve «Sanal mediya loyihalarını yaratuv» ile «Halqara mediya ve sanal kommunikatsiyalar» (ekisi de Borıs Grinçenko adına Kiev metropolitan universiteti, magistratura).</p></article><article><h3>«Tek 1 ve 2 ögelikli arzalarnı köstermek» deñiştirgiçi ne demek?</h3><p>Abituriyent bir vaqıtta bir qaç oquv yurtuna ve programmağa arza berip ola ve er birinde ögelikni belgiley — bu onıñ aqiqiy istegen saylavımı ya da yedek variantmı. Adeten reyting ögelikke baqmadan bütün berilgen arzalarnı saya, çünki bu umumiy talapnı köstere. Bu deñiştirgiç saylamnı tek 1 ya da 2 ögelikli arzalarğa qadar tarlay — abituriyentler eñ ziyade istegen oquv yurtları/programmalar.</p><p>Ögelik malümatı er yarış teklifiniñ abituriyentler reyting cedvelinden alına — vstup.edbo.gov.ua saytında ayn teklif saifesinde açıq olğan ayn cedvel. Deñiştirgiç açıq olğanda «Programmağa arzalar» ve «Orta bal» köstergiçleri ayn formula ile esaplana — tek daa tar arzalar toplumı boyunca.</p></article><article><h3>«Tek byudjet» deñiştirgiçi ne demek?</h3><p>EDEBO-nıñ er yarış teklifiniñ türü bar: «Açıq» — umummilliy açıq yarış vastasınen toldurılğan byudjet yeri; «Fiksirlengen» — programma içün evelden belgilengen yerler sayısı olğan byudjet yeri (2023 senesine qadar, magistratura içün açıq yarış daa olmağanda, bütün magistr byudjet yerleri böyle bölüngen edi); ya da «Byudjetsiz» — paralı, kontrakt yeri. Bu deñiştirgiç sayımdan tek kontrakt yerlerini çıqara — «Açıq» ve «Fiksirlengen» yerler ekisi de aqiqiy byudjet finanslaşuvı, bu sebepten ekisi de esapqa alına.</p><p>2021–2022 senelerindeki magistr programmaları içün ögelik belgilep arza berüv mehanizmi ümumen daa yoq edi — bu sebepten «Tek 1/2 ögelik» deñiştirgiçi açıq olğanda bu seneler raqamları süzgüçsiz kibi qala, sıfır kösterilmey.</p><p>Eki deñiştirgiç — ögelik ve byudjet — beraber açılıp olur.</p></article><article><h3>Orta bal nedir?</h3><p>Orta bal — Ukrainada «Jurnalistika» ihtisasına kirüvde qullanılğan tartılğan baldır. O MMT neticelerini (ukrain tili, Ukraina tarihı ya da matematika, ecnebiy til) Tasil nazirliginiñ koeffitsiyentleri ve oquv yurtunıñ saa ögelikleri ile birleştire.</p></article>"
+    },
+    empty: {
+      noDataDay: "Bu kün içün malümat yoq.",
+      uniNotFound: "Bu oquv yurtu tapılmadı.",
+      backToRating: "Reytingke qaytmaq →",
+      outOfRanking: "reytingden tış (arzalar eñ az miqdardan az)"
+    },
+    showAll: {
+      expand: "Bütün {n} oquv yurtunı köstermek →",
+      collapse: "Bükmek ↑"
+    },
+    legend: {
+      title: "Δ nasıl oqumalı",
+      up: "bir künde 2 yerge yükseldi",
+      down: "1 yerge tüşti",
+      new: "bugünki reytingde ilk kere"
+    },
+    footer: {
+      initiative: "Tesebbüs",
+      dataSourceHtml: "Malümat menbası: EDEBO (<a href=\"https://vstup.edbo.gov.ua\" target=\"_blank\" rel=\"noopener\">vstup.edbo.gov.ua</a>)."
+    },
+    institutionNotes: {
+      edbo87: "Bu oquv yurtu yañıdan teşkil etile: qabul etilgen talebeler oquvnı İ. P. Kotlârevskiy adına Harkiv milliy sanat universitetinde bitirip, diplomnı anda alacaqlar."
+    },
+    uni: {
+      eyebrow: "Populârlik dinamikası · «Jurnalistika» ihtisası",
+      bestRank: "Eñ yahşı yer",
+      currentRank: "Şimdiki yer",
+      currentScore: "Şimdiki bal",
+      chartTitle: "Seneler boyunca orta yarış balı",
+      scoreChartDisclaimer: "Bal formulası seneden-senege deñişti — oquv yurtlarını bir sene içinde qıyaslañız, bir oquv yurtunıñ öz balını türlü seneler arasında degil.",
+      appsChartTitle: "Seneler boyunca bir jurnalistika programmasına orta arzalar",
+      compareLabel: "Qıyaslamaq",
+      compareLabel2: "Ve daa",
+      compareNone: "— qıyaslamamaq —",
+      compareVs: "{a} — {b}",
+      compareVsMulti: "{a} — {b} ve {c}",
+      addCompare: "+ Daa bir qıyaslav qoşmaq",
+      removeCompare: "− Ekinci qıyaslavnı çıqarmaq",
+      subtitlePlain: "abituriyentlerniñ orta yarış balı",
+      appsSubtitlePlain: "bir jurnalistika programmasına orta arzalar",
+      admittedAverage: "Orta bal",
+      rankingByYear: "Seneler boyunca reyting",
+      noChartData: "Grafik qurmaq içün malümat yoq.",
+      chartAriaLabel: "Seneler boyunca orta yarış balı",
+      metricRank: "Yer ({year})",
+      analysis: {
+        appsUp: "Programmağa orta arzalar sayısı {pct}% arttı — {fromVal}-dan {toVal}-ğa qadar.",
+        appsDown: "Programmağa orta arzalar sayısı {pct}% azaldı — {fromVal}-dan {toVal}-ğa qadar.",
+        appsFlat: "Programmağa orta arzalar sayısı taqriben deñişmedi (~{value}).",
+        rankBetter: "Diger oquv yurtlarına köre reytingdeki yeri yahşılaştı — #{from}-dan #{to}-ğa qadar.",
+        rankWorse: "Diger oquv yurtlarına köre reytingdeki yeri fenalaştı — #{from}-dan #{to}-ğa qadar.",
+        rankSame: "Diger oquv yurtlarına köre reytingdeki yeri deñişmedi — #{value}.",
+        insufficientData: "Dinamikanı analiz etmek içün keçmiş malümat yeterli degil."
+      }
+    }
   }
 };
 
@@ -336,23 +466,37 @@ function loadSiteContent() {
     });
 }
 
+const SUPPORTED_LANGS = ["uk", "en", "crh"];
+
 function normalizeLang(lang) {
-  return lang === "en" ? "en" : "uk";
+  return SUPPORTED_LANGS.includes(lang) ? lang : "uk";
 }
+
+// Адреси сайтів мережі ПроМедіа для кожної мови; promedia.report не має
+// crh-версії, тож отримує українську адресу.
+const NETWORK_URLS = {
+  home: { uk: "https://promedia.report", en: "https://promedia.report/en", crh: "https://promedia.report" },
+  news: { uk: "https://news.promedia.report/", en: "https://news.promedia.report/?lang=en", crh: "https://news.promedia.report/?lang=crh" },
+  communities: { uk: "https://communities.promedia.report/", en: "https://communities.promedia.report/en/", crh: "https://communities.promedia.report/crh/" },
+  research: { uk: "https://research.promedia.report/", en: "https://research.promedia.report/en/", crh: "https://research.promedia.report/crh/" },
+  atlas: { uk: "https://atlas.promedia.report/", en: "https://atlas.promedia.report/en/", crh: "https://atlas.promedia.report/crh/" }
+};
+const NETWORK_ARIA = { uk: "Проєкти ПроМедіа", en: "ProMedia projects", crh: "ProMedia loyihaları" };
 
 function syncLangFromUrl() {
   try {
-    if (/^\/en(?:\/|$)/.test(window.location.pathname)) {
-      localStorage.setItem("site-lang", "en");
+    const pathLang = window.location.pathname.match(/^\/(en|crh)(?:\/|$)/);
+    if (pathLang) {
+      localStorage.setItem("site-lang", pathLang[1]);
       return;
     }
     const lang = new URLSearchParams(window.location.search).get("lang");
-    if (lang === "en" || lang === "uk") localStorage.setItem("site-lang", lang);
+    if (SUPPORTED_LANGS.includes(lang)) localStorage.setItem("site-lang", lang);
   } catch (_) {}
 }
 
 function getLang() {
-  return localStorage.getItem("site-lang") === "en" ? "en" : "uk";
+  return normalizeLang(localStorage.getItem("site-lang"));
 }
 
 function setLang(lang, options = {}) {
@@ -361,8 +505,8 @@ function setLang(lang, options = {}) {
 
   if (options.updateUrl && window.history && window.history.replaceState) {
     const url = new URL(window.location.href);
-    const path = url.pathname.replace(/^\/en(?=\/|$)/, "") || "/";
-    url.pathname = normalized === "en" ? `/en${path}` : path;
+    const path = url.pathname.replace(/^\/(en|crh)(?=\/|$)/, "") || "/";
+    url.pathname = normalized === "uk" ? path : `/${normalized}${path}`;
     url.searchParams.delete("lang");
     window.location.assign(url.toString());
   }
@@ -396,9 +540,26 @@ function typographicQuotes(value) {
   });
 }
 
-function tRaw(key) {
-  const dict = I18N[getLang()];
+function lookup(dict, key) {
   return key.split(".").reduce((o, k) => (o && o[k] != null ? o[k] : undefined), dict);
+}
+
+// Ключі, яких немає в crh-словнику, беруться з української.
+function tRaw(key) {
+  const value = lookup(I18N[getLang()], key);
+  return value != null ? value : lookup(I18N.uk, key);
+}
+
+// Посилання мережі ПроМедіа (data-network="news|communities|research|atlas")
+// і «← ПроМедіа» ведуть на версію сусіднього сайту тією самою мовою.
+function syncNetworkLinks() {
+  const lang = getLang();
+  document.querySelectorAll("a[data-network]").forEach((a) => {
+    const urls = NETWORK_URLS[a.dataset.network];
+    if (urls) a.setAttribute("href", urls[lang] || urls.uk);
+  });
+  document.querySelectorAll("a.home-btn").forEach((a) => a.setAttribute("href", NETWORK_URLS.home[lang]));
+  document.querySelectorAll("nav.network-nav, nav.network-footer").forEach((nav) => nav.setAttribute("aria-label", NETWORK_ARIA[lang]));
 }
 
 function t(key, vars) {
@@ -432,6 +593,7 @@ function applyStaticI18n() {
     const value = tRaw(el.dataset.i18nPlaceholder);
     if (value != null) el.setAttribute("placeholder", value);
   });
+  syncNetworkLinks();
 }
 
 function initLangToggle() {

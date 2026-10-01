@@ -134,6 +134,9 @@ a { color: inherit; }
 .network-en { display: none; }
 html[lang="en"] .network-uk { display: none; }
 html[lang="en"] .network-en { display: inline; }
+.network-crh { display: none; }
+html[lang="crh"] .network-uk { display: none; }
+html[lang="crh"] .network-crh { display: inline; }
 
 .network-footer {
   display: flex;
