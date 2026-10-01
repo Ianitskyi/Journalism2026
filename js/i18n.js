@@ -476,7 +476,7 @@ function normalizeLang(lang) {
 // crh-версії, тож отримує українську адресу.
 const NETWORK_URLS = {
   home: { uk: "https://promedia.report", en: "https://promedia.report/en", crh: "https://promedia.report" },
-  news: { uk: "https://news.promedia.report/", en: "https://news.promedia.report/?lang=en", crh: "https://news.promedia.report/?lang=crh" },
+  news: { uk: "https://news.promedia.report/", en: "https://news.promedia.report/en/", crh: "https://news.promedia.report/crh/" },
   communities: { uk: "https://communities.promedia.report/", en: "https://communities.promedia.report/en/", crh: "https://communities.promedia.report/crh/" },
   research: { uk: "https://research.promedia.report/", en: "https://research.promedia.report/en/", crh: "https://research.promedia.report/crh/" },
   atlas: { uk: "https://atlas.promedia.report/", en: "https://atlas.promedia.report/en/", crh: "https://atlas.promedia.report/crh/" }
@@ -490,10 +490,17 @@ function syncLangFromUrl() {
       localStorage.setItem("site-lang", pathLang[1]);
       return;
     }
-    const lang = new URLSearchParams(window.location.search).get("lang");
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+    // Старі адреси з ?lang=en|crh переводимо на шлях із префіксом.
+    if (lang === "en" || lang === "crh") {
+      params.delete("lang");
+      const search = params.toString() ? "?" + params.toString() : "";
+      window.location.replace(`/${lang}${window.location.pathname}${search}${window.location.hash}`);
+    }
     // Сторінки без мовного префікса — українські: інакше після відвідин
     // /en/ чи /crh/ збережена мова перемальовувала б українську адресу.
-    localStorage.setItem("site-lang", SUPPORTED_LANGS.includes(lang) ? lang : "uk");
+    localStorage.setItem("site-lang", "uk");
   } catch (_) {}
 }
 
