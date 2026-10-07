@@ -30,24 +30,12 @@
 </script>
 </head>
 <body data-root="../">
+<promedia-global-header></promedia-global-header>
 <script>localStorage.setItem('site-lang', 'crh'); document.documentElement.lang = 'crh';</script>
 
-<div class="utility-bar">
-  <a class="home-btn" href="https://promedia.report" data-i18n="nav.promedia">← ProMedia</a>
-  <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language / Мова">
-    <button class="lang-btn" data-lang="uk" type="button">UA</button>
-    <button class="lang-btn" data-lang="en" type="button">EN</button>
-    <button class="lang-btn" data-lang="crh" type="button">QT</button>
-  </div>
-</div>
 
-<nav class="network-nav" aria-label="ProMedia loyihaları">
-  <a data-network="news" class="network-link" href="https://news.promedia.report/crh/"><span class="network-uk">Новини</span><span class="network-en">News</span><span class="network-crh">Haberler</span></a>
-  <a data-network="communities" class="network-link" href="https://communities.promedia.report/crh/"><span class="network-uk">Карта спільнот</span><span class="network-en">Community Map</span><span class="network-crh">Cemaatlar haritası</span></a>
-  <a class="network-link active" href="./"><span class="network-uk">Рейтинг журфаків</span><span class="network-en">Journalism Schools Ranking</span><span class="network-crh">Jurnalistika fakülteleri reytingi</span></a>
-  <a data-network="research" class="network-link" href="https://research.promedia.report/crh/"><span class="network-uk">Дослідження</span><span class="network-en">Research</span><span class="network-crh">Tedqiqatlar</span></a>
-  <a data-network="atlas" class="network-link" href="https://atlas.promedia.report/crh/"><span class="network-uk">Атлас Медіа</span><span class="network-en">Media Atlas</span><span class="network-crh">Mediya Atlası</span></a>
-</nav>
+
+
 
 
 <section class="hero" id="top">
@@ -171,20 +159,7 @@
     <div class="methodology-grid" data-i18n-html="methodology.bodyHtml"></div>
   </section>
 
-  <footer class="site-footer">
-    <a class="footer-brand" href="https://promedia.report" target="_blank" rel="noopener">
-      <span data-i18n="footer.initiative">Ініціатива</span>
-      <img src="../img/promedia-wordmark.svg" alt="«ProMedia» İCT" class="footer-logo" />
-    </a>
-    <span data-i18n-html="footer.dataSourceHtml">Джерело даних (після підключення): ЄДЕБО (<a href="https://vstup.edbo.gov.ua" target="_blank" rel="noopener">vstup.edbo.gov.ua</a>).</span>
-    <nav class="network-footer" aria-label="ProMedia loyihaları">
-      <a data-network="news" href="https://news.promedia.report/crh/"><span class="network-uk">Новини</span><span class="network-en">News</span><span class="network-crh">Haberler</span></a>
-      <a data-network="communities" href="https://communities.promedia.report/crh/"><span class="network-uk">Карта спільнот</span><span class="network-en">Community Map</span><span class="network-crh">Cemaatlar haritası</span></a>
-      <a href="./"><span class="network-uk">Рейтинг журфаків</span><span class="network-en">Journalism Schools Ranking</span><span class="network-crh">Jurnalistika fakülteleri reytingi</span></a>
-      <a data-network="research" href="https://research.promedia.report/crh/"><span class="network-uk">Дослідження</span><span class="network-en">Research</span><span class="network-crh">Tedqiqatlar</span></a>
-      <a data-network="atlas" href="https://atlas.promedia.report/crh/"><span class="network-uk">Атлас Медіа</span><span class="network-en">Media Atlas</span><span class="network-crh">Mediya Atlası</span></a>
-    </nav>
-  </footer>
+  
 
 </main>
 
@@ -192,5 +167,7 @@
 <script src="../js/data.js"></script>
 <script src="../js/app.js?v=20261001-crh"></script>
 <script defer src="https://news.promedia.report/js/promedia-memorial-popup.js"></script>
+<promedia-global-footer></promedia-global-footer>
+<script defer src="https://news.promedia.report/js/promedia-global-shell.js"></script>
 </body>
 </html>
