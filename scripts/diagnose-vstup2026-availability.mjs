@@ -88,9 +88,18 @@ async function tryBase(base) {
   return true;
 }
 
+async function safeTryBase(base) {
+  try {
+    return await tryBase(base);
+  } catch (err) {
+    console.log(`  Помилка для ${base}: ${err.message}`);
+    return false;
+  }
+}
+
 async function main() {
-  const okArchive = await tryBase("https://vstup2026.edbo.gov.ua");
-  const okLive = await tryBase("https://vstup.edbo.gov.ua");
+  const okArchive = await safeTryBase("https://vstup2026.edbo.gov.ua");
+  const okLive = await safeTryBase("https://vstup.edbo.gov.ua");
   console.log(`\n\nПІДСУМОК: vstup2026 працює без Turnstile = ${okArchive}; vstup (живий) працює без Turnstile = ${okLive}`);
 }
 
