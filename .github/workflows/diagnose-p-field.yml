@@ -1,0 +1,21 @@
+name: Diagnose per-application budget/contract field (p)
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Перевіряє, чи
+# поле "p" у записах /offer-requests/ ("Б"/"К"?) позначає бюджет/контракт
+# індивідуально для кожної заяви незалежно від offer.ustn — потенційно
+# точніший і універсальний спосіб рахувати "лише бюджет" для будь-якого
+# року, включно з магістратурою 2021-2022.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-p-field.mjs
+        timeout-minutes: 10

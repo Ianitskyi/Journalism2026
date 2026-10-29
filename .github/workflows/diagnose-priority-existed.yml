@@ -1,0 +1,19 @@
+name: Diagnose whether priority (pa) existed for master 2021-2022
+
+# ТИМЧАСОВИЙ діагностичний workflow — нічого не комітить. Перевіряє, чи
+# "pa" (пріоритет заяви) колись ненульовий для магістратури 2021-2022,
+# порівняно з бакалавратом тих самих років і магістратурою пізніших років.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node scripts/diagnose-priority-existed.mjs
+        timeout-minutes: 15
