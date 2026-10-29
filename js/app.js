@@ -6,21 +6,16 @@ const state = {
   year: DEFAULT_YEAR,
   dateIndex: DB.byYear[DEFAULT_YEAR].dates.length - 1,
   expanded: false,
-  priorityOnly: false,
   budgetOnly: false
 };
 
-/* два незалежні перемикачі ("лише 1-2 пріоритет" і "лише бюджет —
-   відкритий конкурс, без пільг") комбінуються через суфікс назви поля:
-   "" / "P12" / "Open" / "OpenP12" — рядки даних уже містять усі 4
-   комбінації (applications<suffix>, applications<suffix>Total,
-   score<suffix>), рахуються в scripts/fetch-edbo-history.mjs. Той самий
-   суфікс мапиться на людський i18n-суфікс ("Budget"/"Priority") нижче. */
+/* Рейтинг завжди враховує заяви всіх пріоритетів. Єдиний додатковий зріз —
+   бюджетні конкурсні пропозиції ("Відкрита" і "Фіксована"). */
 function metricSuffix() {
-  return (state.budgetOnly ? "Open" : "") + (state.priorityOnly ? "P12" : "");
+  return state.budgetOnly ? "Open" : "";
 }
 
-const SUFFIX_TO_LABEL = { "": "", Open: "Budget", P12: "Priority", OpenP12: "BudgetPriority" };
+const SUFFIX_TO_LABEL = { "": "", Open: "Budget" };
 
 /* підміняє score/applications/applicationsTotal на відповідники обраної
    комбінації фільтрів — решта пайплайну (сортування, рендер, фарбування
@@ -177,9 +172,7 @@ function renderDateChips() {
 
 /* ---------- діаграми динаміки по системі в цілому (усі роки) ---------- */
 
-/* останній знімок конкретного року — для минулих років це єдиний
-   підсумковий знімок, для поточного (2026) — найсвіжіший оперативний
-   зріз, доки кампанія не завершена (деталі — у методології) */
+/* останній (нині єдиний підсумковий) знімок конкретного року */
 function yearSnapshot(year) {
   const yd = DB.byYear[year];
   return yd.snapshots[yd.dates[yd.dates.length - 1]];
@@ -291,23 +284,20 @@ function renderSystemCharts() {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
-  /* попередній (ще не фінальний) знімок не має розбивок «лише бюджет» /
-     «1-2 пріоритет» — ховаємо ці перемикачі й скидаємо їх, щоб рейтинг
-     показував усі заяви коректно */
+  /* Попередній знімок без бюджетної розбивки: ховаємо перемикач і
+     скидаємо його, щоб рейтинг показував усі заяви коректно. */
   const isPreliminary = !!snap.preliminary;
   const filtersRow = document.querySelector(".priority-row");
   if (filtersRow) filtersRow.style.display = isPreliminary ? "none" : "";
-  if (isPreliminary && (state.budgetOnly || state.priorityOnly)) {
+  if (isPreliminary && state.budgetOnly) {
     state.budgetOnly = false;
-    state.priorityOnly = false;
-    const pt = document.getElementById("priority-toggle-input"); if (pt) pt.checked = false;
     const bt = document.getElementById("budget-toggle-input"); if (bt) bt.checked = false;
   }
   const rawRows = withFilteredView(snap[state.degree]);
   const rows = sortedRows(rawRows, state.sortBy);
   const displayRows = [...rows, ...placeholderRows(rows, state.degree)];
   const uniRegistry = DB.allUniversitiesMeta();
-  const isFinal = state.year !== DB.currentYear;
+  const isFinal = !!snap.final || state.year !== DB.currentYear;
   const minApps = DB.minApplications[state.degree];
 
   const labelSuffix = SUFFIX_TO_LABEL[metricSuffix()];
@@ -413,17 +403,6 @@ function resyncIndicators() {
   syncIndicator(document.getElementById("sort-tabs-indicator"), document.querySelector("#sort-tabs .pill.active"));
 }
 
-function initPriorityToggle() {
-  const input = document.getElementById("priority-toggle-input");
-  if (!input) return;
-  input.addEventListener("change", () => {
-    state.priorityOnly = input.checked;
-    state.expanded = false;
-    render();
-    renderSystemCharts();
-  });
-}
-
 function initBudgetToggle() {
   const input = document.getElementById("budget-toggle-input");
   if (!input) return;
@@ -477,7 +456,6 @@ function initUniSearch() {
 function boot() {
   initTabs();
   initSortTabs();
-  initPriorityToggle();
   initBudgetToggle();
   initShowAll();
   initUniSearch();
