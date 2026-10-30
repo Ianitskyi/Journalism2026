@@ -17,7 +17,13 @@
       "applicationsOpen": 1040,
       "admittedOpen": 935,
       "scoreOpen": 175.1,
-      "rank": 1
+      "rank": 1,
+      "applicationsP12Total": 123,
+      "applicationsP12": 123,
+      "scoreP12": 189.4,
+      "applicationsOpenP12Total": 123,
+      "applicationsOpenP12": 123,
+      "scoreOpenP12": 189.4
     },
     {
       "id": "edbo155",
@@ -33,7 +39,13 @@
       "applicationsOpen": 86,
       "admittedOpen": 27,
       "scoreOpen": 171.3,
-      "rank": 2
+      "rank": 2,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 167.7,
+      "applicationsOpenP12Total": 18,
+      "applicationsOpenP12": 18,
+      "scoreOpenP12": 167.7
     },
     {
       "id": "vnu",
@@ -49,7 +61,13 @@
       "applicationsOpen": 441,
       "admittedOpen": 175,
       "scoreOpen": 168.7,
-      "rank": 3
+      "rank": 3,
+      "applicationsP12Total": 65,
+      "applicationsP12": 65,
+      "scoreP12": 174.4,
+      "applicationsOpenP12Total": 65,
+      "applicationsOpenP12": 65,
+      "scoreOpenP12": 174.4
     },
     {
       "id": "donnu",
@@ -65,7 +83,13 @@
       "applicationsOpen": 396,
       "admittedOpen": 103,
       "scoreOpen": 167.6,
-      "rank": 4
+      "rank": 4,
+      "applicationsP12Total": 33,
+      "applicationsP12": 33,
+      "scoreP12": 173.7,
+      "applicationsOpenP12Total": 33,
+      "applicationsOpenP12": 33,
+      "scoreOpenP12": 173.7
     },
     {
       "id": "edbo120",
@@ -81,7 +105,13 @@
       "applicationsOpen": 244,
       "admittedOpen": 240,
       "scoreOpen": 168.1,
-      "rank": 5
+      "rank": 5,
+      "applicationsP12Total": 35,
+      "applicationsP12": 35,
+      "scoreP12": 187.6,
+      "applicationsOpenP12Total": 35,
+      "applicationsOpenP12": 35,
+      "scoreOpenP12": 187.6
     },
     {
       "id": "edbo341",
@@ -97,7 +127,13 @@
       "applicationsOpen": 542,
       "admittedOpen": 176,
       "scoreOpen": 168.8,
-      "rank": 6
+      "rank": 6,
+      "applicationsP12Total": 46,
+      "applicationsP12": 46,
+      "scoreP12": 174.9,
+      "applicationsOpenP12Total": 46,
+      "applicationsOpenP12": 46,
+      "scoreOpenP12": 174.9
     },
     {
       "id": "edbo96",
@@ -113,7 +149,13 @@
       "applicationsOpen": 318,
       "admittedOpen": 100,
       "scoreOpen": 167,
-      "rank": 7
+      "rank": 7,
+      "applicationsP12Total": 31,
+      "applicationsP12": 31,
+      "scoreP12": 174.8,
+      "applicationsOpenP12Total": 31,
+      "applicationsOpenP12": 31,
+      "scoreOpenP12": 174.8
     },
     {
       "id": "edbo171",
@@ -129,7 +171,13 @@
       "applicationsOpen": 213,
       "admittedOpen": 70,
       "scoreOpen": 164.7,
-      "rank": 8
+      "rank": 8,
+      "applicationsP12Total": 27,
+      "applicationsP12": 27,
+      "scoreP12": 178.2,
+      "applicationsOpenP12Total": 27,
+      "applicationsOpenP12": 27,
+      "scoreOpenP12": 178.2
     },
     {
       "id": "lnu",
@@ -145,7 +193,13 @@
       "applicationsOpen": 2021,
       "admittedOpen": 1979,
       "scoreOpen": 164.9,
-      "rank": 9
+      "rank": 9,
+      "applicationsP12Total": 242,
+      "applicationsP12": 242,
+      "scoreP12": 188.4,
+      "applicationsOpenP12Total": 242,
+      "applicationsOpenP12": 242,
+      "scoreOpenP12": 188.4
     },
     {
       "id": "edbo265",
@@ -161,7 +215,13 @@
       "applicationsOpen": 215,
       "admittedOpen": 59,
       "scoreOpen": 164.7,
-      "rank": 10
+      "rank": 10,
+      "applicationsP12Total": 20,
+      "applicationsP12": 20,
+      "scoreP12": 173.3,
+      "applicationsOpenP12Total": 20,
+      "applicationsOpenP12": 20,
+      "scoreOpenP12": 173.3
     },
     {
       "id": "edbo192",
@@ -177,7 +237,13 @@
       "applicationsOpen": 382,
       "admittedOpen": 71,
       "scoreOpen": 166.8,
-      "rank": 11
+      "rank": 11,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 179.7,
+      "applicationsOpenP12Total": 18,
+      "applicationsOpenP12": 18,
+      "scoreOpenP12": 179.7
     },
     {
       "id": "edbo3",
@@ -193,7 +259,13 @@
       "applicationsOpen": 316,
       "admittedOpen": 98,
       "scoreOpen": 163,
-      "rank": 12
+      "rank": 12,
+      "applicationsP12Total": 36,
+      "applicationsP12": 36,
+      "scoreP12": 162.7,
+      "applicationsOpenP12Total": 36,
+      "applicationsOpenP12": 36,
+      "scoreOpenP12": 162.7
     },
     {
       "id": "edbo109",
@@ -209,7 +281,13 @@
       "applicationsOpen": 215,
       "admittedOpen": 86,
       "scoreOpen": 164.8,
-      "rank": 13
+      "rank": 13,
+      "applicationsP12Total": 45,
+      "applicationsP12": 22.5,
+      "scoreP12": 168.9,
+      "applicationsOpenP12Total": 45,
+      "applicationsOpenP12": 22.5,
+      "scoreOpenP12": 168.9
     },
     {
       "id": "karazin",
@@ -225,7 +303,13 @@
       "applicationsOpen": 970,
       "admittedOpen": 907,
       "scoreOpen": 162.8,
-      "rank": 14
+      "rank": 14,
+      "applicationsP12Total": 66,
+      "applicationsP12": 66,
+      "scoreP12": 179.7,
+      "applicationsOpenP12Total": 66,
+      "applicationsOpenP12": 66,
+      "scoreOpenP12": 179.7
     },
     {
       "id": "edbo97",
@@ -241,7 +325,13 @@
       "applicationsOpen": 1095,
       "admittedOpen": 1032,
       "scoreOpen": 162.3,
-      "rank": 15
+      "rank": 15,
+      "applicationsP12Total": 62,
+      "applicationsP12": 62,
+      "scoreP12": 184.9,
+      "applicationsOpenP12Total": 62,
+      "applicationsOpenP12": 62,
+      "scoreOpenP12": 184.9
     },
     {
       "id": "chnu",
@@ -257,7 +347,13 @@
       "applicationsOpen": 588,
       "admittedOpen": 574,
       "scoreOpen": 161.1,
-      "rank": 16
+      "rank": 16,
+      "applicationsP12Total": 59,
+      "applicationsP12": 59,
+      "scoreP12": 181.3,
+      "applicationsOpenP12Total": 59,
+      "applicationsOpenP12": 59,
+      "scoreOpenP12": 181.3
     },
     {
       "id": "sumdu",
@@ -273,7 +369,13 @@
       "applicationsOpen": 139.5,
       "admittedOpen": 276,
       "scoreOpen": 162.1,
-      "rank": 17
+      "rank": 17,
+      "applicationsP12Total": 31,
+      "applicationsP12": 15.5,
+      "scoreP12": 181.8,
+      "applicationsOpenP12Total": 31,
+      "applicationsOpenP12": 15.5,
+      "scoreOpenP12": 181.8
     },
     {
       "id": "edbo56",
@@ -289,7 +391,13 @@
       "applicationsOpen": 940.5,
       "admittedOpen": 1841,
       "scoreOpen": 161,
-      "rank": 18
+      "rank": 18,
+      "applicationsP12Total": 83,
+      "applicationsP12": 41.5,
+      "scoreP12": 184.5,
+      "applicationsOpenP12Total": 83,
+      "applicationsOpenP12": 41.5,
+      "scoreOpenP12": 184.5
     },
     {
       "id": "edbo167",
@@ -305,7 +413,13 @@
       "applicationsOpen": 492,
       "admittedOpen": 486,
       "scoreOpen": 160.6,
-      "rank": 19
+      "rank": 19,
+      "applicationsP12Total": 24,
+      "applicationsP12": 24,
+      "scoreP12": 181.1,
+      "applicationsOpenP12Total": 24,
+      "applicationsOpenP12": 24,
+      "scoreOpenP12": 181.1
     },
     {
       "id": "edbo5754",
@@ -321,7 +435,13 @@
       "applicationsOpen": 267,
       "admittedOpen": 68,
       "scoreOpen": 159.5,
-      "rank": 20
+      "rank": 20,
+      "applicationsP12Total": 11,
+      "applicationsP12": 11,
+      "scoreP12": 174.8,
+      "applicationsOpenP12Total": 11,
+      "applicationsOpenP12": 11,
+      "scoreOpenP12": 174.8
     },
     {
       "id": "mdu",
@@ -337,7 +457,13 @@
       "applicationsOpen": 70,
       "admittedOpen": 56,
       "scoreOpen": 158.4,
-      "rank": 21
+      "rank": 21,
+      "applicationsP12Total": 22,
+      "applicationsP12": 11,
+      "scoreP12": 169.5,
+      "applicationsOpenP12Total": 22,
+      "applicationsOpenP12": 11,
+      "scoreOpenP12": 169.5
     },
     {
       "id": "dnu",
@@ -353,7 +479,13 @@
       "applicationsOpen": 592,
       "admittedOpen": 113,
       "scoreOpen": 159.7,
-      "rank": 22
+      "rank": 22,
+      "applicationsP12Total": 31,
+      "applicationsP12": 31,
+      "scoreP12": 164.7,
+      "applicationsOpenP12Total": 31,
+      "applicationsOpenP12": 31,
+      "scoreOpenP12": 164.7
     },
     {
       "id": "edbo55",
@@ -369,7 +501,13 @@
       "applicationsOpen": 212,
       "admittedOpen": 209,
       "scoreOpen": 157.5,
-      "rank": 23
+      "rank": 23,
+      "applicationsP12Total": 40,
+      "applicationsP12": 40,
+      "scoreP12": 166.7,
+      "applicationsOpenP12Total": 40,
+      "applicationsOpenP12": 40,
+      "scoreOpenP12": 166.7
     },
     {
       "id": "edbo5780",
@@ -385,7 +523,13 @@
       "applicationsOpen": 195,
       "admittedOpen": 26,
       "scoreOpen": 156.4,
-      "rank": 24
+      "rank": 24,
+      "applicationsP12Total": 3,
+      "applicationsP12": 3,
+      "scoreP12": 162.5,
+      "applicationsOpenP12Total": 3,
+      "applicationsOpenP12": 3,
+      "scoreOpenP12": 162.5
     },
     {
       "id": "edbo308",
@@ -401,7 +545,13 @@
       "applicationsOpen": 1012,
       "admittedOpen": 958,
       "scoreOpen": 155.9,
-      "rank": 25
+      "rank": 25,
+      "applicationsP12Total": 59,
+      "applicationsP12": 59,
+      "scoreP12": 175.1,
+      "applicationsOpenP12Total": 59,
+      "applicationsOpenP12": 59,
+      "scoreOpenP12": 175.1
     },
     {
       "id": "edbo48",
@@ -417,7 +567,13 @@
       "applicationsOpen": 182,
       "admittedOpen": 176,
       "scoreOpen": 156.1,
-      "rank": 26
+      "rank": 26,
+      "applicationsP12Total": 24,
+      "applicationsP12": 24,
+      "scoreP12": 164.8,
+      "applicationsOpenP12Total": 24,
+      "applicationsOpenP12": 24,
+      "scoreOpenP12": 164.8
     },
     {
       "id": "onu",
@@ -433,7 +589,13 @@
       "applicationsOpen": 742,
       "admittedOpen": 733,
       "scoreOpen": 156,
-      "rank": 27
+      "rank": 27,
+      "applicationsP12Total": 52,
+      "applicationsP12": 52,
+      "scoreP12": 180.4,
+      "applicationsOpenP12Total": 52,
+      "applicationsOpenP12": 52,
+      "scoreOpenP12": 180.4
     },
     {
       "id": "edbo178",
@@ -449,7 +611,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 28
+      "rank": 28,
+      "applicationsP12Total": 210,
+      "applicationsP12": 210,
+      "scoreP12": 154.2,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo183",
@@ -465,7 +633,13 @@
       "applicationsOpen": 820.5,
       "admittedOpen": 1619,
       "scoreOpen": 154.7,
-      "rank": 29
+      "rank": 29,
+      "applicationsP12Total": 54,
+      "applicationsP12": 27,
+      "scoreP12": 174,
+      "applicationsOpenP12Total": 54,
+      "applicationsOpenP12": 27,
+      "scoreOpenP12": 174
     },
     {
       "id": "edbo9",
@@ -481,7 +655,13 @@
       "applicationsOpen": 179,
       "admittedOpen": 171,
       "scoreOpen": 153.7,
-      "rank": 30
+      "rank": 30,
+      "applicationsP12Total": 17,
+      "applicationsP12": 17,
+      "scoreP12": 171.6,
+      "applicationsOpenP12Total": 17,
+      "applicationsOpenP12": 17,
+      "scoreOpenP12": 171.6
     },
     {
       "id": "edbo252",
@@ -497,7 +677,13 @@
       "applicationsOpen": 662,
       "admittedOpen": 640,
       "scoreOpen": 153.1,
-      "rank": 31
+      "rank": 31,
+      "applicationsP12Total": 69,
+      "applicationsP12": 69,
+      "scoreP12": 163.7,
+      "applicationsOpenP12Total": 69,
+      "applicationsOpenP12": 69,
+      "scoreOpenP12": 163.7
     },
     {
       "id": "uzhnu",
@@ -513,7 +699,13 @@
       "applicationsOpen": 261,
       "admittedOpen": 255,
       "scoreOpen": 154.1,
-      "rank": 32
+      "rank": 32,
+      "applicationsP12Total": 28,
+      "applicationsP12": 28,
+      "scoreP12": 169.1,
+      "applicationsOpenP12Total": 28,
+      "applicationsOpenP12": 28,
+      "scoreOpenP12": 169.1
     },
     {
       "id": "cnu",
@@ -529,7 +721,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 33
+      "rank": 33,
+      "applicationsP12Total": 149,
+      "applicationsP12": 149,
+      "scoreP12": 151.9,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo892",
@@ -545,7 +743,13 @@
       "applicationsOpen": 659,
       "admittedOpen": 648,
       "scoreOpen": 152,
-      "rank": 34
+      "rank": 34,
+      "applicationsP12Total": 31,
+      "applicationsP12": 31,
+      "scoreP12": 166.1,
+      "applicationsOpenP12Total": 31,
+      "applicationsOpenP12": 31,
+      "scoreOpenP12": 166.1
     },
     {
       "id": "edbo87",
@@ -561,7 +765,13 @@
       "applicationsOpen": 254,
       "admittedOpen": 251,
       "scoreOpen": 150.9,
-      "rank": 35
+      "rank": 35,
+      "applicationsP12Total": 8,
+      "applicationsP12": 8,
+      "scoreP12": 174.9,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 174.9
     },
     {
       "id": "edbo193",
@@ -577,7 +787,13 @@
       "applicationsOpen": 120,
       "admittedOpen": 117,
       "scoreOpen": 152.2,
-      "rank": 36
+      "rank": 36,
+      "applicationsP12Total": 11,
+      "applicationsP12": 11,
+      "scoreP12": 167.7,
+      "applicationsOpenP12Total": 11,
+      "applicationsOpenP12": 11,
+      "scoreOpenP12": 167.7
     },
     {
       "id": "znu",
@@ -593,7 +809,13 @@
       "applicationsOpen": 415,
       "admittedOpen": 384,
       "scoreOpen": 150.9,
-      "rank": 37
+      "rank": 37,
+      "applicationsP12Total": 29,
+      "applicationsP12": 29,
+      "scoreP12": 168.3,
+      "applicationsOpenP12Total": 29,
+      "applicationsOpenP12": 29,
+      "scoreOpenP12": 168.3
     },
     {
       "id": "edbo1139",
@@ -609,7 +831,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 38
+      "rank": 38,
+      "applicationsP12Total": 226,
+      "applicationsP12": 226,
+      "scoreP12": 149.6,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo310",
@@ -625,7 +853,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 39
+      "rank": 39,
+      "applicationsP12Total": 562,
+      "applicationsP12": 562,
+      "scoreP12": 148.5,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo218",
@@ -641,7 +875,13 @@
       "applicationsOpen": 108,
       "admittedOpen": 33,
       "scoreOpen": 147.8,
-      "rank": 40
+      "rank": 40,
+      "applicationsP12Total": 8,
+      "applicationsP12": 8,
+      "scoreP12": 166.4,
+      "applicationsOpenP12Total": 8,
+      "applicationsOpenP12": 8,
+      "scoreOpenP12": 166.4
     },
     {
       "id": "edbo344",
@@ -657,7 +897,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 41
+      "rank": 41,
+      "applicationsP12Total": 406,
+      "applicationsP12": 406,
+      "scoreP12": 147.8,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "kneu",
@@ -673,7 +919,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 42
+      "rank": 42,
+      "applicationsP12Total": 634,
+      "applicationsP12": 634,
+      "scoreP12": 147.3,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo7",
@@ -689,7 +941,13 @@
       "applicationsOpen": 669,
       "admittedOpen": 661,
       "scoreOpen": 146.9,
-      "rank": 43
+      "rank": 43,
+      "applicationsP12Total": 21,
+      "applicationsP12": 21,
+      "scoreP12": 170.3,
+      "applicationsOpenP12Total": 21,
+      "applicationsOpenP12": 21,
+      "scoreOpenP12": 170.3
     },
     {
       "id": "edbo868",
@@ -705,7 +963,13 @@
       "applicationsOpen": 23,
       "admittedOpen": 7,
       "scoreOpen": 149.5,
-      "rank": 44
+      "rank": 44,
+      "applicationsP12Total": 1,
+      "applicationsP12": 1,
+      "scoreP12": 184.5,
+      "applicationsOpenP12Total": 1,
+      "applicationsOpenP12": 1,
+      "scoreOpenP12": 184.5
     },
     {
       "id": "edbo91",
@@ -721,7 +985,13 @@
       "applicationsOpen": 101.5,
       "admittedOpen": 36,
       "scoreOpen": 155.7,
-      "rank": 45
+      "rank": 45,
+      "applicationsP12Total": 9,
+      "applicationsP12": 4.5,
+      "scoreP12": 166.7,
+      "applicationsOpenP12Total": 9,
+      "applicationsOpenP12": 4.5,
+      "scoreOpenP12": 166.7
     },
     {
       "id": "edbo21",
@@ -737,7 +1007,13 @@
       "applicationsOpen": 117,
       "admittedOpen": 113,
       "scoreOpen": 146.4,
-      "rank": 46
+      "rank": 46,
+      "applicationsP12Total": 28,
+      "applicationsP12": 28,
+      "scoreP12": 158.6,
+      "applicationsOpenP12Total": 28,
+      "applicationsOpenP12": 28,
+      "scoreOpenP12": 158.6
     },
     {
       "id": "lnu-shev",
@@ -753,7 +1029,13 @@
       "applicationsOpen": 56,
       "admittedOpen": 56,
       "scoreOpen": 145.4,
-      "rank": 47
+      "rank": 47,
+      "applicationsP12Total": 22,
+      "applicationsP12": 22,
+      "scoreP12": 154.5,
+      "applicationsOpenP12Total": 22,
+      "applicationsOpenP12": 22,
+      "scoreOpenP12": 154.5
     },
     {
       "id": "edbo353",
@@ -769,7 +1051,13 @@
       "applicationsOpen": 124,
       "admittedOpen": 121,
       "scoreOpen": 147.9,
-      "rank": 48
+      "rank": 48,
+      "applicationsP12Total": 11,
+      "applicationsP12": 11,
+      "scoreP12": 166.8,
+      "applicationsOpenP12Total": 11,
+      "applicationsOpenP12": 11,
+      "scoreOpenP12": 166.8
     },
     {
       "id": "edbo249",
@@ -785,7 +1073,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 49
+      "rank": 49,
+      "applicationsP12Total": 621,
+      "applicationsP12": 621,
+      "scoreP12": 142.5,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo318",
@@ -801,7 +1095,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 50
+      "rank": 50,
+      "applicationsP12Total": 626,
+      "applicationsP12": 626,
+      "scoreP12": 141.8,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo216",
@@ -817,7 +1117,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 51
+      "rank": 51,
+      "applicationsP12Total": 130,
+      "applicationsP12": 130,
+      "scoreP12": 141.6,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo217",
@@ -833,7 +1139,13 @@
       "applicationsOpen": 92,
       "admittedOpen": 91,
       "scoreOpen": 144.3,
-      "rank": 52
+      "rank": 52,
+      "applicationsP12Total": 2,
+      "applicationsP12": 2,
+      "scoreP12": 166.6,
+      "applicationsOpenP12Total": 2,
+      "applicationsOpenP12": 2,
+      "scoreOpenP12": 166.6
     },
     {
       "id": "edbo3457",
@@ -849,7 +1161,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 53
+      "rank": 53,
+      "applicationsP12Total": 158,
+      "applicationsP12": 158,
+      "scoreP12": 139.2,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "cpu",
@@ -865,7 +1183,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 54
+      "rank": 54,
+      "applicationsP12Total": 38,
+      "applicationsP12": 38,
+      "scoreP12": 156.4,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo215",
@@ -881,7 +1205,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 55
+      "rank": 55,
+      "applicationsP12Total": 203,
+      "applicationsP12": 203,
+      "scoreP12": 136.2,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo1365",
@@ -897,7 +1227,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 56
+      "rank": 56,
+      "applicationsP12Total": 26,
+      "applicationsP12": 26,
+      "scoreP12": 134.1,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     }
   ],
   "master": [
@@ -915,7 +1251,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 1
+      "rank": 1,
+      "applicationsP12Total": 36,
+      "applicationsP12": 36,
+      "scoreP12": 192.8,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo91",
@@ -931,7 +1273,13 @@
       "applicationsOpen": 16,
       "admittedOpen": 7,
       "scoreOpen": 164.5,
-      "rank": 2
+      "rank": 2,
+      "applicationsP12Total": 33,
+      "applicationsP12": 33,
+      "scoreP12": 186.7,
+      "applicationsOpenP12Total": 16,
+      "applicationsOpenP12": 16,
+      "scoreOpenP12": 164.5
     },
     {
       "id": "vnu",
@@ -947,7 +1295,13 @@
       "applicationsOpen": 29,
       "admittedOpen": 11,
       "scoreOpen": 184.9,
-      "rank": 3
+      "rank": 3,
+      "applicationsP12Total": 30,
+      "applicationsP12": 30,
+      "scoreP12": 183.3,
+      "applicationsOpenP12Total": 29,
+      "applicationsOpenP12": 29,
+      "scoreOpenP12": 184.9
     },
     {
       "id": "karazin",
@@ -963,7 +1317,13 @@
       "applicationsOpen": 29,
       "admittedOpen": 23,
       "scoreOpen": 181.6,
-      "rank": 4
+      "rank": 4,
+      "applicationsP12Total": 106,
+      "applicationsP12": 53,
+      "scoreP12": 183.2,
+      "applicationsOpenP12Total": 58,
+      "applicationsOpenP12": 29,
+      "scoreOpenP12": 181.6
     },
     {
       "id": "edbo96",
@@ -979,7 +1339,13 @@
       "applicationsOpen": 14,
       "admittedOpen": 4,
       "scoreOpen": 190.3,
-      "rank": 5
+      "rank": 5,
+      "applicationsP12Total": 26,
+      "applicationsP12": 26,
+      "scoreP12": 180.1,
+      "applicationsOpenP12Total": 14,
+      "applicationsOpenP12": 14,
+      "scoreOpenP12": 190.3
     },
     {
       "id": "edbo87",
@@ -995,7 +1361,13 @@
       "applicationsOpen": 14,
       "admittedOpen": 10,
       "scoreOpen": 179.7,
-      "rank": 6
+      "rank": 6,
+      "applicationsP12Total": 20,
+      "applicationsP12": 20,
+      "scoreP12": 179.1,
+      "applicationsOpenP12Total": 14,
+      "applicationsOpenP12": 14,
+      "scoreOpenP12": 179.7
     },
     {
       "id": "edbo308",
@@ -1011,7 +1383,13 @@
       "applicationsOpen": 62,
       "admittedOpen": 33,
       "scoreOpen": 175,
-      "rank": 7
+      "rank": 7,
+      "applicationsP12Total": 62,
+      "applicationsP12": 62,
+      "scoreP12": 175,
+      "applicationsOpenP12Total": 62,
+      "applicationsOpenP12": 62,
+      "scoreOpenP12": 175
     },
     {
       "id": "chnu",
@@ -1027,7 +1405,13 @@
       "applicationsOpen": 14,
       "admittedOpen": 6,
       "scoreOpen": 180.2,
-      "rank": 8
+      "rank": 8,
+      "applicationsP12Total": 29,
+      "applicationsP12": 29,
+      "scoreP12": 173.8,
+      "applicationsOpenP12Total": 14,
+      "applicationsOpenP12": 14,
+      "scoreOpenP12": 180.2
     },
     {
       "id": "edbo109",
@@ -1043,7 +1427,13 @@
       "applicationsOpen": 18,
       "admittedOpen": 7,
       "scoreOpen": 172.5,
-      "rank": 9
+      "rank": 9,
+      "applicationsP12Total": 20,
+      "applicationsP12": 20,
+      "scoreP12": 173.5,
+      "applicationsOpenP12Total": 18,
+      "applicationsOpenP12": 18,
+      "scoreOpenP12": 172.5
     },
     {
       "id": "edbo3",
@@ -1059,7 +1449,13 @@
       "applicationsOpen": 10,
       "admittedOpen": 5,
       "scoreOpen": 177.9,
-      "rank": 10
+      "rank": 10,
+      "applicationsP12Total": 23,
+      "applicationsP12": 23,
+      "scoreP12": 173.2,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 177.9
     },
     {
       "id": "edbo892",
@@ -1075,7 +1471,13 @@
       "applicationsOpen": 13,
       "admittedOpen": 8,
       "scoreOpen": 171.8,
-      "rank": 11
+      "rank": 11,
+      "applicationsP12Total": 23,
+      "applicationsP12": 23,
+      "scoreP12": 171.4,
+      "applicationsOpenP12Total": 13,
+      "applicationsOpenP12": 13,
+      "scoreOpenP12": 171.8
     },
     {
       "id": "edbo183",
@@ -1091,7 +1493,13 @@
       "applicationsOpen": 52,
       "admittedOpen": 29,
       "scoreOpen": 170,
-      "rank": 12
+      "rank": 12,
+      "applicationsP12Total": 90,
+      "applicationsP12": 90,
+      "scoreP12": 169.1,
+      "applicationsOpenP12Total": 52,
+      "applicationsOpenP12": 52,
+      "scoreOpenP12": 170
     },
     {
       "id": "edbo97",
@@ -1107,7 +1515,13 @@
       "applicationsOpen": 35,
       "admittedOpen": 16,
       "scoreOpen": 170.5,
-      "rank": 13
+      "rank": 13,
+      "applicationsP12Total": 68,
+      "applicationsP12": 68,
+      "scoreP12": 167.7,
+      "applicationsOpenP12Total": 35,
+      "applicationsOpenP12": 35,
+      "scoreOpenP12": 170.5
     },
     {
       "id": "knu",
@@ -1123,7 +1537,13 @@
       "applicationsOpen": 35.7,
       "admittedOpen": 118,
       "scoreOpen": 166.4,
-      "rank": 14
+      "rank": 14,
+      "applicationsP12Total": 313,
+      "applicationsP12": 44.7,
+      "scoreP12": 166.6,
+      "applicationsOpenP12Total": 250,
+      "applicationsOpenP12": 35.7,
+      "scoreOpenP12": 166.4
     },
     {
       "id": "naukma",
@@ -1139,7 +1559,13 @@
       "applicationsOpen": 60,
       "admittedOpen": 27,
       "scoreOpen": 165,
-      "rank": 15
+      "rank": 15,
+      "applicationsP12Total": 60,
+      "applicationsP12": 60,
+      "scoreP12": 165,
+      "applicationsOpenP12Total": 60,
+      "applicationsOpenP12": 60,
+      "scoreOpenP12": 165
     },
     {
       "id": "uzhnu",
@@ -1155,7 +1581,13 @@
       "applicationsOpen": 10,
       "admittedOpen": 8,
       "scoreOpen": 162.6,
-      "rank": 16
+      "rank": 16,
+      "applicationsP12Total": 18,
+      "applicationsP12": 18,
+      "scoreP12": 164.4,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 162.6
     },
     {
       "id": "edbo192",
@@ -1171,7 +1603,13 @@
       "applicationsOpen": 26,
       "admittedOpen": 14,
       "scoreOpen": 170.3,
-      "rank": 17
+      "rank": 17,
+      "applicationsP12Total": 51,
+      "applicationsP12": 51,
+      "scoreP12": 164.1,
+      "applicationsOpenP12Total": 26,
+      "applicationsOpenP12": 26,
+      "scoreOpenP12": 170.3
     },
     {
       "id": "edbo341",
@@ -1187,7 +1625,13 @@
       "applicationsOpen": 35,
       "admittedOpen": 26,
       "scoreOpen": 163.2,
-      "rank": 18
+      "rank": 18,
+      "applicationsP12Total": 35,
+      "applicationsP12": 35,
+      "scoreP12": 163.2,
+      "applicationsOpenP12Total": 35,
+      "applicationsOpenP12": 35,
+      "scoreOpenP12": 163.2
     },
     {
       "id": "edbo310",
@@ -1203,7 +1647,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 19
+      "rank": 19,
+      "applicationsP12Total": 34,
+      "applicationsP12": 34,
+      "scoreP12": 161.4,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "sumdu",
@@ -1219,7 +1669,13 @@
       "applicationsOpen": 13,
       "admittedOpen": 11,
       "scoreOpen": 167.6,
-      "rank": 20
+      "rank": 20,
+      "applicationsP12Total": 26,
+      "applicationsP12": 26,
+      "scoreP12": 160.1,
+      "applicationsOpenP12Total": 13,
+      "applicationsOpenP12": 13,
+      "scoreOpenP12": 167.6
     },
     {
       "id": "mdu",
@@ -1235,7 +1691,13 @@
       "applicationsOpen": 15,
       "admittedOpen": 12,
       "scoreOpen": 156.2,
-      "rank": 21
+      "rank": 21,
+      "applicationsP12Total": 30,
+      "applicationsP12": 30,
+      "scoreP12": 159.8,
+      "applicationsOpenP12Total": 15,
+      "applicationsOpenP12": 15,
+      "scoreOpenP12": 156.2
     },
     {
       "id": "edbo120",
@@ -1251,7 +1713,13 @@
       "applicationsOpen": 10,
       "admittedOpen": 6,
       "scoreOpen": 161.5,
-      "rank": 22
+      "rank": 22,
+      "applicationsP12Total": 15,
+      "applicationsP12": 15,
+      "scoreP12": 157.2,
+      "applicationsOpenP12Total": 10,
+      "applicationsOpenP12": 10,
+      "scoreOpenP12": 161.5
     },
     {
       "id": "onu",
@@ -1267,7 +1735,13 @@
       "applicationsOpen": 17,
       "admittedOpen": 8,
       "scoreOpen": 158.1,
-      "rank": 23
+      "rank": 23,
+      "applicationsP12Total": 34,
+      "applicationsP12": 34,
+      "scoreP12": 154.6,
+      "applicationsOpenP12Total": 17,
+      "applicationsOpenP12": 17,
+      "scoreOpenP12": 158.1
     },
     {
       "id": "lnu",
@@ -1283,7 +1757,13 @@
       "applicationsOpen": 89,
       "admittedOpen": 58,
       "scoreOpen": 153.9,
-      "rank": 24
+      "rank": 24,
+      "applicationsP12Total": 148,
+      "applicationsP12": 148,
+      "scoreP12": 153.2,
+      "applicationsOpenP12Total": 89,
+      "applicationsOpenP12": 89,
+      "scoreOpenP12": 153.9
     },
     {
       "id": "znu",
@@ -1299,7 +1779,13 @@
       "applicationsOpen": 25,
       "admittedOpen": 10,
       "scoreOpen": 152,
-      "rank": 25
+      "rank": 25,
+      "applicationsP12Total": 61,
+      "applicationsP12": 61,
+      "scoreP12": 145,
+      "applicationsOpenP12Total": 25,
+      "applicationsOpenP12": 25,
+      "scoreOpenP12": 152
     },
     {
       "id": "edbo265",
@@ -1315,7 +1801,13 @@
       "applicationsOpen": 11,
       "admittedOpen": 4,
       "scoreOpen": 157.8,
-      "rank": 26
+      "rank": 26,
+      "applicationsP12Total": 21,
+      "applicationsP12": 21,
+      "scoreP12": 145,
+      "applicationsOpenP12Total": 11,
+      "applicationsOpenP12": 11,
+      "scoreOpenP12": 157.8
     },
     {
       "id": "edbo3457",
@@ -1331,7 +1823,13 @@
       "applicationsOpen": 0,
       "admittedOpen": 0,
       "scoreOpen": null,
-      "rank": 27
+      "rank": 27,
+      "applicationsP12Total": 17,
+      "applicationsP12": 17,
+      "scoreP12": 137.1,
+      "applicationsOpenP12Total": 0,
+      "applicationsOpenP12": 0,
+      "scoreOpenP12": null
     },
     {
       "id": "edbo56",
@@ -1347,7 +1845,13 @@
       "applicationsOpen": 73,
       "admittedOpen": 51,
       "scoreOpen": 137.1,
-      "rank": 28
+      "rank": 28,
+      "applicationsP12Total": 74,
+      "applicationsP12": 74,
+      "scoreP12": 136.6,
+      "applicationsOpenP12Total": 73,
+      "applicationsOpenP12": 73,
+      "scoreOpenP12": 137.1
     },
     {
       "id": "edbo252",
@@ -1363,7 +1867,13 @@
       "applicationsOpen": 13,
       "admittedOpen": 5,
       "scoreOpen": 125,
-      "rank": 29
+      "rank": 29,
+      "applicationsP12Total": 22,
+      "applicationsP12": 22,
+      "scoreP12": 125,
+      "applicationsOpenP12Total": 13,
+      "applicationsOpenP12": 13,
+      "scoreOpenP12": 125
     }
   ],
   "totalApplications": {
@@ -1376,6 +1886,14 @@
   },
   "totalApplicationsOpen": {
     "bachelor": 20874,
+    "master": 982
+  },
+  "totalApplicationsP12": {
+    "bachelor": 5644,
+    "master": 1525
+  },
+  "totalApplicationsOpenP12": {
+    "bachelor": 1655,
     "master": 982
   }
 }

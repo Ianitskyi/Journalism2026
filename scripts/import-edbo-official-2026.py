@@ -6,9 +6,10 @@ Usage:
 
 The workbook is the official response from the State Enterprise
 "Inforesurs". It contains one row per competitive offer. The importer keeps
-all priorities, combines study forms and offer types, and calculates the
-average score weighted by the number of applications admitted to the
-competition (not by all submitted applications).
+all applications as the default view, preserves a separate 1st/2nd-priority
+view, combines study forms and offer types, and calculates the main average
+score weighted by the number of applications admitted to the competition
+(not by all submitted applications).
 """
 
 from __future__ import annotations
@@ -100,10 +101,12 @@ def is_journalism(uid: int, program: str) -> bool:
 
 
 def add_offer(rec: dict, row: tuple) -> None:
-    uid, name, program, _offer_id, _degree, _form, offer_type, submitted, admitted, avg_score, _p12, _p12_score, enrolled_budget, enrolled_contract = row
+    uid, name, program, _offer_id, _degree, _form, offer_type, submitted, admitted, avg_score, p12, p12_score, enrolled_budget, enrolled_contract = row
     submitted = int(number(submitted))
     admitted = int(number(admitted))
     avg_score = number(avg_score)
+    p12 = int(number(p12))
+    p12_score = number(p12_score)
     is_budget = offer_type != "Небюджетна"
 
     rec["name"] = str(name).strip()
@@ -111,12 +114,16 @@ def add_offer(rec: dict, row: tuple) -> None:
     rec["applicationsTotal"] += submitted
     rec["admitted"] += admitted
     rec["weightedScore"] += avg_score * admitted
+    rec["applicationsP12Total"] += p12
+    rec["weightedScoreP12"] += p12_score * p12
     rec["enrolledBudget"] += int(number(enrolled_budget))
     rec["enrolledContract"] += int(number(enrolled_contract))
     if is_budget:
         rec["applicationsOpenTotal"] += submitted
         rec["admittedOpen"] += admitted
         rec["weightedScoreOpen"] += avg_score * admitted
+        rec["applicationsOpenP12Total"] += p12
+        rec["weightedScoreOpenP12"] += p12_score * p12
 
 
 def build_rows(grouped: dict, level: str) -> list[dict]:
@@ -130,6 +137,10 @@ def build_rows(grouped: dict, level: str) -> list[dict]:
         applications = round(rec["applicationsTotal"] / program_count, 1)
         applications_open = round(rec["applicationsOpenTotal"] / program_count, 1)
         score_open = round(rec["weightedScoreOpen"] / rec["admittedOpen"], 1) if rec["admittedOpen"] else None
+        applications_p12 = round(rec["applicationsP12Total"] / program_count, 1)
+        score_p12 = round(rec["weightedScoreP12"] / rec["applicationsP12Total"], 1) if rec["applicationsP12Total"] else None
+        applications_open_p12 = round(rec["applicationsOpenP12Total"] / program_count, 1)
+        score_open_p12 = round(rec["weightedScoreOpenP12"] / rec["applicationsOpenP12Total"], 1) if rec["applicationsOpenP12Total"] else None
         result.append({
             "id": slug or f"edbo{uid}",
             "name": NAME_OVERRIDE.get(uid, rec["name"]),
@@ -140,10 +151,16 @@ def build_rows(grouped: dict, level: str) -> list[dict]:
             "applicationsTotal": rec["applicationsTotal"],
             "programCount": program_count,
             "admitted": rec["admitted"],
+            "applicationsP12Total": rec["applicationsP12Total"],
+            "applicationsP12": applications_p12,
+            "scoreP12": score_p12,
             "applicationsOpenTotal": rec["applicationsOpenTotal"],
             "applicationsOpen": applications_open,
             "admittedOpen": rec["admittedOpen"],
             "scoreOpen": score_open,
+            "applicationsOpenP12Total": rec["applicationsOpenP12Total"],
+            "applicationsOpenP12": applications_open_p12,
+            "scoreOpenP12": score_open_p12,
             "enrolledBudget": rec["enrolledBudget"],
             "enrolledContract": rec["enrolledContract"],
         })
@@ -157,7 +174,9 @@ def empty_record() -> dict:
     return {
         "name": "", "programs": set(), "applicationsTotal": 0, "admitted": 0,
         "weightedScore": 0.0, "applicationsOpenTotal": 0, "admittedOpen": 0,
-        "weightedScoreOpen": 0.0, "enrolledBudget": 0, "enrolledContract": 0,
+        "weightedScoreOpen": 0.0, "applicationsP12Total": 0, "weightedScoreP12": 0.0,
+        "applicationsOpenP12Total": 0, "weightedScoreOpenP12": 0.0,
+        "enrolledBudget": 0, "enrolledContract": 0,
     }
 
 
@@ -219,6 +238,14 @@ def main() -> None:
         "totalApplicationsOpen": {
             "bachelor": sum(r["applicationsOpenTotal"] for r in bachelor),
             "master": sum(r["applicationsOpenTotal"] for r in master),
+        },
+        "totalApplicationsP12": {
+            "bachelor": sum(r["applicationsP12Total"] for r in bachelor),
+            "master": sum(r["applicationsP12Total"] for r in master),
+        },
+        "totalApplicationsOpenP12": {
+            "bachelor": sum(r["applicationsOpenP12Total"] for r in bachelor),
+            "master": sum(r["applicationsOpenP12Total"] for r in master),
         },
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
