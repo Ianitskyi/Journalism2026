@@ -178,6 +178,59 @@ async function postForm(base, path, data) {
   return resp.json();
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/* /offer-requests/ — недокументований ендпоінт, яким сама сторінка
+   /offer/<usid> підвантажує рейтинговий список вступників конкретної
+   пропозиції (Handlebars-шаблон офера посилається на нього через offer.js).
+   POST {id: usid, last: <кількість вже отриманих записів>} — пагінація
+   перевірена вручну (diagnose-offer-requests-pagination.mjs): last=0 дає
+   перші записи, наступний виклик з last=<скільки вже зібрано> дає
+   продовження, розмір сторінки НЕ фіксований (може бути і 100, і 775) —
+   орієнтуємось лише на порожню відповідь як ознаку кінця списку. Кожен
+   запис має "pa" — пріоритет заяви абітурієнта (1, 2, 3…) і "kv" —
+   індивідуальний конкурсний бал. Використовуємо це для підрахунку заяв
+   1-го та 2-го пріоритету окремо від загальної кількості.
+
+   Для магістратури 2021-2022 років "pa" дорівнює 0 для АБСОЛЮТНО кожної
+   заяви (перевірено diagnose-priority-existed.mjs: 0/107, 0/89, 0/85...) —
+   на відміну від бакалаврату тих самих років і магістратури 2023+, де
+   trapляються всі значення 0-5. Це означає, що механізму подачі заяв із
+   пріоритетом на магістратуру тоді ще не було, а не що дані відсутні —
+   anyPriority нижче фіксує, чи хоч колись зустрілось pa>0, щоб не плутати
+   "пріоритету не існувало" з "ніхто не потрапив у 1-2 пріоритет". */
+const PRIORITY_MAX = 2;
+const PRIORITY_PAGE_DELAY_MS = 150;
+const PRIORITY_MAX_PAGES = 60; // запобіжник: 60 сторінок з запасом покриє навіть найбільші пропозиції
+
+async function fetchOfferPriorityStats(base, usid) {
+  let last = 0;
+  let total = 0;
+  let p12Count = 0;
+  let p12ScoreSum = 0;
+  let anyPriority = false;
+  for (let page = 0; page < PRIORITY_MAX_PAGES; page++) {
+    const json = await postForm(base, "/offer-requests/", { id: String(usid), last: String(last) });
+    const batch = json.requests || [];
+    if (!batch.length) break;
+    for (const r of batch) {
+      total++;
+      const pa = Number(r.pa);
+      const kv = Number(r.kv);
+      if (pa > 0) anyPriority = true;
+      if (pa >= 1 && pa <= PRIORITY_MAX && Number.isFinite(kv)) {
+        p12Count++;
+        p12ScoreSum += kv;
+      }
+    }
+    last = total;
+    await sleep(PRIORITY_PAGE_DELAY_MS);
+  }
+  return { total, p12Count, p12ScoreSum, anyPriority };
+}
+
 async function fetchLevelData(base, level, year) {
   const uniResp = await postForm(base, "/offers-universities/", {
     qualification: QUALIFICATIONS[level],
@@ -241,7 +294,9 @@ async function fetchLevelData(base, level, year) {
     if (!byUid.has(uid)) {
       byUid.set(uid, {
         uid, name: offer.un, weightedScoreSum: 0, applicationsTotal: 0, admitted: 0, programNames: new Set(),
+        p12ApplicationsTotal: 0, p12ScoreSum: 0, anyPriority: false,
         openApplicationsTotal: 0, openAdmitted: 0, openWeightedScoreSum: 0,
+        openP12ApplicationsTotal: 0, openP12ScoreSum: 0
       });
     }
     const rec = byUid.get(uid);
@@ -259,6 +314,21 @@ async function fetchLevelData(base, level, year) {
       if (Number.isFinite(ka)) rec.openWeightedScoreSum += ka * a;
     }
 
+    try {
+      const priority = await fetchOfferPriorityStats(base, offer.usid);
+      rec.p12ApplicationsTotal += priority.p12Count;
+      rec.p12ScoreSum += priority.p12ScoreSum;
+      if (priority.anyPriority) rec.anyPriority = true;
+      if (isBudget) {
+        rec.openP12ApplicationsTotal += priority.p12Count;
+        rec.openP12ScoreSum += priority.p12ScoreSum;
+      }
+      if (priority.total !== t) {
+        log(`  ! usid=${offer.usid} (${offer.un}, ${offer.spn}): /offer-requests/ дав ${priority.total} записів, а st.c.t=${t}`);
+      }
+    } catch (err) {
+      log(`  ! не вдалось отримати заяви за пріоритетом для usid=${offer.usid} (${offer.un}): ${err.message}`);
+    }
   }
 
   const rows = [];
@@ -272,6 +342,13 @@ async function fetchLevelData(base, level, year) {
     const scoreOpen = rec.openAdmitted > 0 ? Math.round((rec.openWeightedScoreSum / rec.openAdmitted) * 10) / 10 : null;
     const applicationsOpen = Math.round((rec.openApplicationsTotal / programCount) * 10) / 10;
 
+    // Якщо для цього закладу/рівня/року пріоритет заяв ніколи не
+    // зустрічався (anyPriority=false — механізму пріоритету тоді не було,
+    // а не "ніхто не в 1-2 пріоритеті"), перемикач "лише 1-2 пріоритет"
+    // не повинен нічого змінювати — показуємо ті самі числа, що й без
+    // фільтра, замість хибного нуля.
+    const hasPriorityData = rec.anyPriority;
+
     rows.push({
       id: slug || `edbo${rec.uid}`,
       name: NAME_OVERRIDE[rec.uid] || rec.name,
@@ -282,10 +359,20 @@ async function fetchLevelData(base, level, year) {
       applicationsTotal: rec.applicationsTotal,
       programCount,
       admitted: rec.admitted,
+      applicationsP12Total: hasPriorityData ? rec.p12ApplicationsTotal : rec.applicationsTotal,
+      applicationsP12: hasPriorityData ? Math.round((rec.p12ApplicationsTotal / programCount) * 10) / 10 : applications,
+      scoreP12: hasPriorityData
+        ? (rec.p12ApplicationsTotal > 0 ? Math.round((rec.p12ScoreSum / rec.p12ApplicationsTotal) * 10) / 10 : null)
+        : score,
       applicationsOpenTotal: rec.openApplicationsTotal,
       applicationsOpen,
       admittedOpen: rec.openAdmitted,
-      scoreOpen
+      scoreOpen,
+      applicationsOpenP12Total: hasPriorityData ? rec.openP12ApplicationsTotal : rec.openApplicationsTotal,
+      applicationsOpenP12: hasPriorityData ? Math.round((rec.openP12ApplicationsTotal / programCount) * 10) / 10 : applicationsOpen,
+      scoreOpenP12: hasPriorityData
+        ? (rec.openP12ApplicationsTotal > 0 ? Math.round((rec.openP12ScoreSum / rec.openP12ApplicationsTotal) * 10) / 10 : null)
+        : scoreOpen
     });
   }
 
@@ -302,8 +389,16 @@ function sumAdmitted(rows) {
   return rows.reduce((s, r) => s + (r.admitted || 0), 0);
 }
 
+function sumAppsP12(rows) {
+  return rows.reduce((s, r) => s + (r.applicationsP12Total || 0), 0);
+}
+
 function sumAppsOpen(rows) {
   return rows.reduce((s, r) => s + (r.applicationsOpenTotal || 0), 0);
+}
+
+function sumAppsOpenP12(rows) {
+  return rows.reduce((s, r) => s + (r.applicationsOpenP12Total || 0), 0);
 }
 
 async function fetchYear(year) {
@@ -336,9 +431,17 @@ async function fetchYear(year) {
       bachelor: sumAdmitted(bachelor),
       master: sumAdmitted(master)
     },
+    totalApplicationsP12: {
+      bachelor: sumAppsP12(bachelor),
+      master: sumAppsP12(master)
+    },
     totalApplicationsOpen: {
       bachelor: sumAppsOpen(bachelor),
       master: sumAppsOpen(master)
+    },
+    totalApplicationsOpenP12: {
+      bachelor: sumAppsOpenP12(bachelor),
+      master: sumAppsOpenP12(master)
     }
   };
 }

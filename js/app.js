@@ -6,16 +6,18 @@ const state = {
   year: DEFAULT_YEAR,
   dateIndex: DB.byYear[DEFAULT_YEAR].dates.length - 1,
   expanded: false,
+  priorityOnly: false,
   budgetOnly: false
 };
 
-/* Рейтинг завжди враховує заяви всіх пріоритетів. Єдиний додатковий зріз —
-   бюджетні конкурсні пропозиції ("Відкрита" і "Фіксована"). */
+/* Обидва перемикачі вимкнені за замовчуванням, тому базовий рейтинг
+   показує всі заяви. За потреби користувач може окремо ввімкнути зріз
+   1–2 пріоритету та/або бюджетних конкурсних пропозицій. */
 function metricSuffix() {
-  return state.budgetOnly ? "Open" : "";
+  return (state.budgetOnly ? "Open" : "") + (state.priorityOnly ? "P12" : "");
 }
 
-const SUFFIX_TO_LABEL = { "": "", Open: "Budget" };
+const SUFFIX_TO_LABEL = { "": "", Open: "Budget", P12: "Priority", OpenP12: "BudgetPriority" };
 
 /* підміняє score/applications/applicationsTotal на відповідники обраної
    комбінації фільтрів — решта пайплайну (сортування, рендер, фарбування
@@ -285,13 +287,15 @@ function renderSystemCharts() {
 function render() {
   const yearData = activeYearData();
   const snap = currentSnapshot();
-  /* Попередній знімок без бюджетної розбивки: ховаємо перемикач і
-     скидаємо його, щоб рейтинг показував усі заяви коректно. */
+  /* Попередній знімок без додаткових розбивок: ховаємо перемикачі й
+     скидаємо їх, щоб рейтинг показував усі заяви коректно. */
   const isPreliminary = !!snap.preliminary;
   const filtersRow = document.querySelector(".priority-row");
   if (filtersRow) filtersRow.style.display = isPreliminary ? "none" : "";
-  if (isPreliminary && state.budgetOnly) {
+  if (isPreliminary && (state.budgetOnly || state.priorityOnly)) {
     state.budgetOnly = false;
+    state.priorityOnly = false;
+    const pt = document.getElementById("priority-toggle-input"); if (pt) pt.checked = false;
     const bt = document.getElementById("budget-toggle-input"); if (bt) bt.checked = false;
   }
   const rawRows = withFilteredView(snap[state.degree]);
@@ -404,6 +408,17 @@ function resyncIndicators() {
   syncIndicator(document.getElementById("sort-tabs-indicator"), document.querySelector("#sort-tabs .pill.active"));
 }
 
+function initPriorityToggle() {
+  const input = document.getElementById("priority-toggle-input");
+  if (!input) return;
+  input.addEventListener("change", () => {
+    state.priorityOnly = input.checked;
+    state.expanded = false;
+    render();
+    renderSystemCharts();
+  });
+}
+
 function initBudgetToggle() {
   const input = document.getElementById("budget-toggle-input");
   if (!input) return;
@@ -456,6 +471,7 @@ function initUniSearch() {
 function boot() {
   initTabs();
   initSortTabs();
+  initPriorityToggle();
   initBudgetToggle();
   initShowAll();
   initUniSearch();
