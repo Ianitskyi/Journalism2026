@@ -158,7 +158,7 @@ function rebuildLevel(snapshot, level) {
       });
     }
     const row = grouped.get(meta.id);
-    row.weightedScoreSum += Number(offer.averageScore) * Number(offer.applications);
+    row.weightedScoreSum += Number(offer.averageScore) * Number(offer.admitted);
     row.applicationsTotal += Number(offer.applications);
     row.admitted += Number(offer.admitted);
     row.programNames.add(offer.programName);
@@ -170,7 +170,7 @@ function rebuildLevel(snapshot, level) {
     short: row.short,
     hue: row.hue,
     _level: level,
-    score: round1(row.weightedScoreSum / row.applicationsTotal),
+    score: round1(row.weightedScoreSum / row.admitted),
     applications: round1(row.applicationsTotal / row.programNames.size),
     applicationsTotal: row.applicationsTotal,
     programCount: row.programNames.size,
