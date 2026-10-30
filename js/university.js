@@ -38,8 +38,8 @@ const INSTITUTION_LOGOS = {
 function findUniMeta(id) {
   const src = DB.allUniversitiesMeta().get(id);
   if (!src) return null;
-  const name = typographicQuotes(getLang() === "en" ? (src.nameEn || src.name) : src.name);
-  const short = getLang() === "en" ? (src.shortEn || src.short) : src.short;
+  const name = typographicQuotes(localizedUniName(src.name, src.nameEn));
+  const short = getLang() === "en" ? (src.shortEn || src.short) : getLang() === "crh" ? transliterateUk(src.short) : src.short;
   return { id, name, short, hue: src.hue, hasBachelor: !!src.hasBachelor, hasMaster: !!src.hasMaster };
 }
 

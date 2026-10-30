@@ -455,7 +455,7 @@ function normalizeLang(lang) {
 // crh-версії, тож отримує українську адресу.
 const NETWORK_URLS = {
   home: { uk: "https://promedia.report", en: "https://promedia.report/en", crh: "https://promedia.report" },
-  news: { uk: "https://news.promedia.report/", en: "https://news.promedia.report/?lang=en", crh: "https://news.promedia.report/?lang=crh" },
+  news: { uk: "https://news.promedia.report/", en: "https://news.promedia.report/en/", crh: "https://news.promedia.report/crh/" },
   communities: { uk: "https://communities.promedia.report/", en: "https://communities.promedia.report/en/", crh: "https://communities.promedia.report/crh/" },
   research: { uk: "https://research.promedia.report/", en: "https://research.promedia.report/en/", crh: "https://research.promedia.report/crh/" },
   atlas: { uk: "https://atlas.promedia.report/", en: "https://atlas.promedia.report/en/", crh: "https://atlas.promedia.report/crh/" }
@@ -469,8 +469,17 @@ function syncLangFromUrl() {
       localStorage.setItem("site-lang", pathLang[1]);
       return;
     }
-    const lang = new URLSearchParams(window.location.search).get("lang");
-    if (SUPPORTED_LANGS.includes(lang)) localStorage.setItem("site-lang", lang);
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+    // Старі адреси з ?lang=en|crh переводимо на шлях із префіксом.
+    if (lang === "en" || lang === "crh") {
+      params.delete("lang");
+      const search = params.toString() ? "?" + params.toString() : "";
+      window.location.replace(`/${lang}${window.location.pathname}${search}${window.location.hash}`);
+    }
+    // Сторінки без мовного префікса — українські: інакше після відвідин
+    // /en/ чи /crh/ збережена мова перемальовувала б українську адресу.
+    localStorage.setItem("site-lang", "uk");
   } catch (_) {}
 }
 
@@ -489,6 +498,35 @@ function setLang(lang, options = {}) {
     url.searchParams.delete("lang");
     window.location.assign(url.toString());
   }
+}
+
+// Латинська транслітерація українських назв (як у каталозі спільнот) — для
+// кримськотатарської версії, що пишеться латинкою: офіційні назви ЗВО
+// лишаються українськими, але читаються латиницею.
+const UK_LATIN = {
+  "А": "A", "Б": "B", "В": "V", "Г": "H", "Ґ": "G", "Д": "D", "Е": "E", "Є": "Ye",
+  "Ж": "Zh", "З": "Z", "И": "Y", "І": "I", "Ї": "Yi", "Й": "Y", "К": "K", "Л": "L",
+  "М": "M", "Н": "N", "О": "O", "П": "P", "Р": "R", "С": "S", "Т": "T", "У": "U",
+  "Ф": "F", "Х": "Kh", "Ц": "Ts", "Ч": "Ch", "Ш": "Sh", "Щ": "Shch", "Ь": "",
+  "Ю": "Yu", "Я": "Ya",
+  "а": "a", "б": "b", "в": "v", "г": "h", "ґ": "g", "д": "d", "е": "e", "є": "ie",
+  "ж": "zh", "з": "z", "и": "y", "і": "i", "ї": "i", "й": "i", "к": "k", "л": "l",
+  "м": "m", "н": "n", "о": "o", "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+  "ф": "f", "х": "kh", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "shch", "ь": "",
+  "ю": "iu", "я": "ia", "'": "", "’": "", "ʼ": ""
+};
+
+function transliterateUk(value) {
+  return String(value || "").replace(/[А-ЩЬЮЯҐЄІЇа-щьюяґєії'’ʼ]/g, (ch) => (ch in UK_LATIN ? UK_LATIN[ch] : ch));
+}
+
+// Назва закладу мовою сторінки: en — англійська (якщо є), crh — латинська
+// транслітерація української, uk — як є.
+function localizedUniName(name, nameEn) {
+  const lang = getLang();
+  if (lang === "en") return nameEn || name;
+  if (lang === "crh") return transliterateUk(name);
+  return name;
 }
 
 function localeTag() {
