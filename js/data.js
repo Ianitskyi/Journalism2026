@@ -205,11 +205,20 @@ BY_YEAR[CURRENT_YEAR] = { dates: SNAPSHOT_DATES, snapshots: SNAPSHOTS };
    попереджається в консолі. Після заміни розсилається подія
    "edbo-data-updated", щоб app.js/university.js могли перерендерити вже
    відкриту сторінку, якщо запит завершився вже після першого рендеру. */
+/* Шлях до кореня сайту: мовні версії (/en/, /crh/) задають data-root="../",
+   щоб data/*.json завантажувалися з кореня, а не з /en/data/ (404 → fallback). */
+function dataUrl(file) {
+  const root = typeof document !== "undefined" && document.body && document.body.dataset.root
+    ? document.body.dataset.root
+    : "";
+  return `${root}data/${file}`;
+}
+
 async function loadRealHistoricalData() {
   const results = await Promise.allSettled(
     PAST_YEARS.map(async (year) => {
       const date = `${year}-08-05`;
-      const resp = await fetch(`data/${date}.json`);
+      const resp = await fetch(dataUrl(`${date}.json`));
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const snap = await resp.json();
       return { year, snap };
@@ -240,7 +249,7 @@ loadRealHistoricalData();
    лишається детермінований fallback із buildSnapshots(). */
 async function loadRealCurrentData() {
   try {
-    const resp = await fetch(`data/${CURRENT_YEAR}-current.json`);
+    const resp = await fetch(dataUrl(`${CURRENT_YEAR}-current.json`));
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const snapshot = await resp.json();
     BY_YEAR[CURRENT_YEAR] = {
